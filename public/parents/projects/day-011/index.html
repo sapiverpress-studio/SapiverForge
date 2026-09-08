@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Family Soundboard | AI Inquisitive Parents</title>
+    <style>
+      :root {
+        --ink: #173b35;
+        --green: #07594b;
+        --gold: #d2aa54;
+        --cream: #fffaf0;
+        --mist: #e8f1eb;
+        --coral: #e77762;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: linear-gradient(145deg, #0a4d41, #183a34);
+        font: 16px/1.45 system-ui;
+        color: var(--ink);
+      }
+      main {
+        max-width: 760px;
+        margin: auto;
+        padding: 18px;
+      }
+      .card {
+        background: var(--cream);
+        border: 2px solid #d8bd79;
+        border-radius: 24px;
+        padding: 21px;
+        margin: 14px 0;
+        box-shadow: 0 14px 34px #0017;
+      }
+      h1,
+      h2,
+      p {
+        margin-top: 0;
+      }
+      .eyebrow {
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 850;
+        color: var(--green);
+      }
+      button,
+      input,
+      select {
+        font: inherit;
+        border-radius: 12px;
+        padding: 12px;
+        border: 1px solid #9baa9f;
+      }
+      button {
+        border: 0;
+        background: var(--green);
+        color: #fff;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      button.secondary {
+        background: #fff;
+        color: var(--green);
+        border: 2px solid var(--green);
+      }
+      button:focus-visible,
+      input:focus-visible,
+      select:focus-visible {
+        outline: 4px solid #f1c45d;
+        outline-offset: 2px;
+      }
+      .toolbar,
+      .row {
+        display: flex;
+        gap: 9px;
+        flex-wrap: wrap;
+      }
+      .toolbar > * {
+        flex: 1;
+      }
+      .tabs {
+        display: flex;
+        gap: 7px;
+        overflow: auto;
+        padding: 3px 0 12px;
+      }
+      .tabs button {
+        white-space: nowrap;
+        background: var(--mist);
+        color: var(--ink);
+      }
+      .tabs button.active {
+        background: var(--green);
+        color: #fff;
+      }
+      .board {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .tile {
+        min-height: 145px;
+        border-radius: 20px;
+        padding: 15px;
+        color: #173b35;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        position: relative;
+        box-shadow: inset 0 0 0 2px #173b3520;
+      }
+      .tile .emoji {
+        font-size: 2.5rem;
+        line-height: 1;
+      }
+      .tile .phrase {
+        font-size: 1.1rem;
+        font-weight: 850;
+      }
+      .tile .edit {
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        background: #fff9;
+        color: var(--ink);
+        padding: 5px 8px;
+      }
+      .empty {
+        grid-column: 1/-1;
+        padding: 30px;
+        text-align: center;
+        background: var(--mist);
+        border-radius: 18px;
+      }
+      .form {
+        display: grid;
+        gap: 11px;
+      }
+      .form .two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 11px;
+      }
+      .form label {
+        display: grid;
+        gap: 5px;
+        font-weight: 750;
+      }
+      .preview {
+        padding: 14px;
+        border-radius: 14px;
+        background: var(--mist);
+        font-weight: 800;
+      }
+      .notice {
+        min-height: 1.4em;
+        color: var(--green);
+        font-weight: 750;
+      }
+      .prompt {
+        background: #183d36;
+        color: #fff;
+      }
+      .prompt button {
+        background: var(--gold);
+        color: var(--ink);
+      }
+      .small {
+        font-size: 0.9rem;
+        color: #4d625d;
+      }
+      a {
+        color: inherit;
+      }
+      @media (max-width: 520px) {
+        .card {
+          padding: 17px;
+        }
+        .form .two {
+          grid-template-columns: 1fr;
+        }
+        .board {
+          gap: 9px;
+        }
+        .tile {
+          min-height: 128px;
+          padding: 11px;
+        }
+        .tile .phrase {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <p class="eyebrow">AI Inquisitive Parents · Day 011</p>
+        <h1>My Family Soundboard</h1>
+        <p>
+          Build big, personal buttons for the words and phrases your family
+          actually uses.
+        </p>
+        <div class="toolbar">
+          <select id="voice" aria-label="English voice">
+            <option>Loading English voices…</option></select
+          ><button class="secondary" id="starter">Load starter buttons</button>
+        </div>
+      </section>
+      <section class="card">
+        <div class="tabs" id="tabs" aria-label="Soundboard categories"></div>
+        <div class="board" id="board"></div>
+      </section>
+      <section class="card">
+        <h2 id="formTitle">Add a button</h2>
+        <form id="form" class="form">
+          <div class="two">
+            <label
+              >Button words<input
+                id="label"
+                maxlength="40"
+                required
+                placeholder="More time please" /></label
+            ><label
+              >Spoken phrase<input
+                id="spoken"
+                maxlength="100"
+                required
+                placeholder="Could I have more time, please?"
+            /></label>
+          </div>
+          <div class="two">
+            <label>Emoji<input id="emoji" maxlength="4" value="💬" /></label
+            ><label
+              >Category<input
+                id="category"
+                maxlength="22"
+                value="Everyday"
+                required
+            /></label>
+          </div>
+          <label
+            >Button colour<select id="colour">
+              <option value="#f4d27a">Warm gold</option>
+              <option value="#a8d8cb">Calm green</option>
+              <option value="#acd3f3">Sky blue</option>
+              <option value="#f2b5ad">Soft coral</option>
+              <option value="#d4c1ed">Gentle purple</option>
+            </select></label
+          >
+          <div class="preview" id="preview">💬 More time please</div>
+          <div class="row">
+            <button type="submit" id="save">Add button</button
+            ><button type="button" class="secondary" id="cancel" hidden>
+              Cancel edit</button
+            ><button type="button" id="delete" hidden>Delete button</button>
+          </div>
+        </form>
+        <p class="notice" id="notice" aria-live="polite"></p>
+        <p class="small">
+          Tap a soundboard button to hear it. Names, phrases and your voice
+          choice stay in this browser. Nothing is uploaded. Speech uses your
+          device’s built-in browser voices.
+        </p>
+      </section>
+      <section class="card prompt">
+        <h2>Build your own with AI</h2>
+        <p id="prompt">
+          Build me a mobile-friendly family soundboard in one standalone HTML
+          file. Let me create large buttons with an emoji, label, spoken phrase,
+          category and colour. Use the browser’s English speech voices, let me
+          edit and delete buttons, filter by category and save everything
+          locally.
+        </p>
+        <button id="copy">Copy this prompt</button>
+      </section>
+      <p style="color: white; text-align: center">
+        <a href="https://suite.sapiverpress.co.uk">Back to Sapiver Press</a>
+      </p>
+    </main>
+    <script>
+      (() => {
+        "use strict";
+        const $ = (s) => document.querySelector(s),
+          KEY = "aip-family-soundboard-v1";
+        let state = { tiles: [], voice: "" },
+          filter = "All",
+          editId = null,
+          voices = [];
+        try {
+          state = {
+            ...state,
+            ...JSON.parse(localStorage.getItem(KEY) || "{}"),
+          };
+        } catch {}
+        const save = () => localStorage.setItem(KEY, JSON.stringify(state));
+        const esc = (s) => String(s);
+        function loadVoices() {
+          voices = speechSynthesis
+            .getVoices()
+            .filter((v) => v.lang.toLowerCase().startsWith("en"));
+          const sel = $("#voice");
+          sel.replaceChildren(
+            ...voices.map((v) => {
+              const o = document.createElement("option");
+              o.value = v.voiceURI;
+              o.textContent = `${v.name} (${v.lang})`;
+              return o;
+            }),
+          );
+          if (!voices.length) {
+            sel.append(
+              Object.assign(document.createElement("option"), {
+                textContent: "Device default English voice",
+                value: "",
+              }),
+            );
+          }
+          sel.value = voices.some((v) => v.voiceURI === state.voice)
+            ? state.voice
+            : "";
+        }
+        speechSynthesis.onvoiceschanged = loadVoices;
+        loadVoices();
+        $("#voice").onchange = (e) => {
+          state.voice = e.target.value;
+          save();
+        };
+        function speak(text) {
+          speechSynthesis.cancel();
+          const u = new SpeechSynthesisUtterance(text);
+          u.rate = 1;
+          const v = voices.find((x) => x.voiceURI === state.voice);
+          if (v) u.voice = v;
+          speechSynthesis.speak(u);
+        }
+        function render() {
+          const cats = ["All", ...new Set(state.tiles.map((t) => t.category))];
+          if (!cats.includes(filter)) filter = "All";
+          $("#tabs").replaceChildren(
+            ...cats.map((c) => {
+              const b = document.createElement("button");
+              b.textContent = c;
+              b.className = c === filter ? "active" : "";
+              b.onclick = () => {
+                filter = c;
+                render();
+              };
+              return b;
+            }),
+          );
+          const shown = state.tiles.filter(
+            (t) => filter === "All" || t.category === filter,
+          );
+          const board = $("#board");
+          if (!shown.length) {
+            const e = document.createElement("div");
+            e.className = "empty";
+            e.textContent = state.tiles.length
+              ? "No buttons in this category yet."
+              : "Add your first button below, or load the starter set.";
+            board.replaceChildren(e);
+            return;
+          }
+          board.replaceChildren(
+            ...shown.map((t) => {
+              const b = document.createElement("button");
+              b.className = "tile";
+              b.style.background = t.colour;
+              b.setAttribute("aria-label", `Speak: ${t.spoken}`);
+              const em = document.createElement("span");
+              em.className = "emoji";
+              em.textContent = t.emoji;
+              const ph = document.createElement("span");
+              ph.className = "phrase";
+              ph.textContent = t.label;
+              const ed = document.createElement("span");
+              ed.className = "edit";
+              ed.textContent = "Edit";
+              ed.onclick = (e) => {
+                e.stopPropagation();
+                startEdit(t);
+              };
+              b.onclick = () => speak(t.spoken);
+              b.append(em, ph, ed);
+              return b;
+            }),
+          );
+        }
+        function startEdit(t) {
+          editId = t.id;
+          $("#formTitle").textContent = "Edit button";
+          $("#label").value = t.label;
+          $("#spoken").value = t.spoken;
+          $("#emoji").value = t.emoji;
+          $("#category").value = t.category;
+          $("#colour").value = t.colour;
+          $("#save").textContent = "Save changes";
+          $("#cancel").hidden = false;
+          $("#delete").hidden = false;
+          preview();
+          scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+        }
+        function resetForm() {
+          editId = null;
+          $("#form").reset();
+          $("#emoji").value = "💬";
+          $("#category").value = "Everyday";
+          $("#formTitle").textContent = "Add a button";
+          $("#save").textContent = "Add button";
+          $("#cancel").hidden = true;
+          $("#delete").hidden = true;
+          preview();
+        }
+        function preview() {
+          $("#preview").textContent =
+            ($("#emoji").value || "💬") +
+            " " +
+            ($("#label").value || "Your button");
+          $("#preview").style.background = $("#colour").value;
+        }
+        ["label", "emoji", "colour"].forEach(
+          (id) => ($("#" + id).oninput = preview),
+        );
+        $("#cancel").onclick = resetForm;
+        $("#delete").onclick = () => {
+          if (editId !== null) {
+            state.tiles = state.tiles.filter((t) => t.id !== editId);
+            save();
+            render();
+            resetForm();
+            $("#notice").textContent = "Button deleted.";
+          }
+        };
+        $("#form").onsubmit = (e) => {
+          e.preventDefault();
+          const wasEdit = editId !== null;
+          const item = {
+            id: editId || Date.now(),
+            label: esc($("#label").value.trim()),
+            spoken: esc($("#spoken").value.trim()),
+            emoji: esc($("#emoji").value.trim() || "💬"),
+            category: esc($("#category").value.trim()),
+            colour: $("#colour").value,
+          };
+          if (wasEdit) {
+            state.tiles = state.tiles.map((t) => (t.id === editId ? item : t));
+          } else state.tiles.push(item);
+          save();
+          render();
+          resetForm();
+          $("#notice").textContent = wasEdit
+            ? "Button updated."
+            : "Button added.";
+        };
+        $("#starter").onclick = () => {
+          const starter = [
+            [
+              "I need help",
+              "Could you help me, please?",
+              "🙋",
+              "Everyday",
+              "#f4d27a",
+            ],
+            [
+              "More time",
+              "Could I have more time, please?",
+              "⏳",
+              "Everyday",
+              "#a8d8cb",
+            ],
+            [
+              "Quiet please",
+              "Could we have some quiet, please?",
+              "🤫",
+              "Everyday",
+              "#acd3f3",
+            ],
+            [
+              "I’m hungry",
+              "I am hungry. Could I have something to eat?",
+              "🍎",
+              "Food",
+              "#f2b5ad",
+            ],
+            [
+              "Drink please",
+              "Could I have a drink, please?",
+              "🥤",
+              "Food",
+              "#d4c1ed",
+            ],
+            ["My turn", "Is it my turn, please?", "🙌", "Play", "#f4d27a"],
+          ];
+          const existing = new Set(
+            state.tiles.map((t) => t.label.toLowerCase()),
+          );
+          starter.forEach((x, i) => {
+            if (!existing.has(x[0].toLowerCase()))
+              state.tiles.push({
+                id: Date.now() + i,
+                label: x[0],
+                spoken: x[1],
+                emoji: x[2],
+                category: x[3],
+                colour: x[4],
+              });
+          });
+          save();
+          render();
+          $("#notice").textContent =
+            "Starter buttons loaded. Edit them to fit your family.";
+        };
+        $("#copy").onclick = async () => {
+          try {
+            await navigator.clipboard.writeText($("#prompt").textContent);
+            $("#copy").textContent = "Copied!";
+          } catch {
+            $("#copy").textContent = "Select and copy the prompt";
+          }
+        };
+        preview();
+        render();
+      })();
+    </script>
+  </body>
+</html>

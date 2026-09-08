@@ -2,9 +2,9 @@
 
 Today's briefing covers a record-breaking European AI funding round, shifts in AI acquisition strategies, and significant developments in semiconductor supply chain autonomy.
 
-## 1. Mistral AI secures €3B Series D at €21B valuation
+## 1. Mistral AI raises €3B at valuation above €21B
 
-**Confirmed:** Mistral AI has closed a €3 billion Series D funding round led by Samsung Electronics, pushing the company's valuation past €21 billion. The round includes participation from major global investors including Nvidia, BlackRock, and ASML.
+**Confirmed:** Mistral AI has closed a €3 billion Series D funding round at a valuation above €21 billion. The round was co-led by Samsung Electronics, Scaleup Europe Fund and PSG Equity, with participation from investors including Nvidia, BlackRock and ASML.
 
 **Why it matters:** This represents the largest private tech equity raise in European history, signaling robust investor appetite for regional AI infrastructure and model development.
 
@@ -12,21 +12,21 @@ Today's briefing covers a record-breaking European AI funding round, shifts in A
 
 **Source:** [Adam Satariano/New York Times](https://www.nytimes.com/2026/09/08/business/mistral-ai-fund-raising.html) · discovered via Techmeme · confidence 95%
 
-## 2. Anthropic terminates acquisition talks with Decart AI
+## 2. Anthropic reportedly ends Decart acquisition talks
 
-**Confirmed:** Anthropic has ended negotiations to acquire AI efficiency startup Decart for approximately $6 billion following the completion of due diligence.
+**Reported:** Bloomberg, citing people familiar with the matter, says Anthropic ended talks to acquire AI efficiency startup Decart for about $6 billion after conducting due diligence. Neither company publicly confirmed the decision.
 
-**Why it matters:** The collapse of this deal highlights the rigorous scrutiny currently applied to high-value AI infrastructure acquisitions, particularly those focused on inference and training cost reduction.
+**Why it matters:** If confirmed, the abandoned talks would illustrate how uncertain high-value AI infrastructure deals remain, particularly around companies focused on reducing inference and training costs.
 
-**Sapiver Forge interpretation:** While the acquisition did not proceed, the interest in Decart underscores the industry's intense focus on optimizing compute efficiency as a primary lever for long-term model profitability.
+**Sapiver Forge interpretation:** The reported interest in Decart underscores the industry's focus on compute efficiency as a potential lever for improving model economics.
 
 **Source:** [Bloomberg](https://www.bloomberg.com/news/articles/2026-09-08/anthropic-said-to-walk-away-from-6-billion-decart-acquisition) · discovered via Techmeme · confidence 85%
 
-## 3. Huawei deepens involvement in domestic lithography supply chain
+## 3. Huawei reportedly backs China's lithography supply chain
 
-**Confirmed:** Huawei is actively managing investments in Chinese lithography startups and facilitating technical testing of domestic immersion DUV equipment with major fabs like SMIC.
+**Reported:** The Financial Times, citing people familiar with the matter, says Huawei is investing in Chinese lithography suppliers and helping domestic equipment makers secure testing opportunities with fabs including SMIC. Huawei has denied formal affiliation with some companies linked to the effort.
 
-**Why it matters:** This move indicates a direct effort to bypass international export restrictions by fostering a localized semiconductor tool ecosystem.
+**Why it matters:** The reported activity suggests a push to reduce reliance on foreign chipmaking equipment as export restrictions constrain access to advanced tools.
 
 **Sapiver Forge interpretation:** Huawei's hands-on approach suggests that domestic hardware autonomy is a critical operational priority, though achieving commercial parity with established global suppliers remains a long-term technical challenge.
 

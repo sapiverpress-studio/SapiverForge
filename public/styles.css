@@ -1173,6 +1173,10 @@ ul { padding-left: 1.25rem; }
   background: #fff;
 }
 
+.daily-parent-project-no-poster {
+  grid-template-columns: 1fr;
+}
+
 .daily-parent-poster img {
   display: block;
   width: min(100%, 300px);

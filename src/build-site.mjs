@@ -366,7 +366,13 @@ function buildParents() {
   const dailyProjects = Array.isArray(dailyManifest.projects)
     ? dailyManifest.projects.filter((project) => project.status === "ready").sort((a, b) => Number(b.day) - Number(a.day))
     : [];
-  const dailyCards = dailyProjects.map((project, index) => `<article class="daily-parent-project${index === 0 ? " daily-parent-project-latest" : ""}">
+  const dailyCards = dailyProjects.map((project, index) => {
+    const posterPath = project.poster || project.poster_art || "";
+    const poster = posterPath
+      ? `<a class="daily-parent-poster" href="${escapeHtml(project.path)}" aria-label="Open ${escapeHtml(project.title)}"><img src="${escapeHtml(posterPath)}" alt="${escapeHtml(project.title)} project poster" width="1080" height="1920" loading="${index === 0 ? "eager" : "lazy"}"></a>`
+      : "";
+    return `<article class="daily-parent-project${index === 0 ? " daily-parent-project-latest" : ""}${posterPath ? "" : " daily-parent-project-no-poster"}">
+      ${poster}
       <div class="daily-parent-copy">
         <p class="product-kicker">${escapeHtml(project.category)} · Day ${String(project.day).padStart(3, "0")}${index === 0 ? " · Latest" : ""}</p>
         <h3><a href="${escapeHtml(project.path)}">${escapeHtml(project.title)}</a></h3>
@@ -374,7 +380,8 @@ function buildParents() {
         <ul class="parent-project-facts"><li>${escapeHtml(project.privacy)}</li><li>${escapeHtml(project.supervision)}</li></ul>
         <div class="report-actions"><a class="button" href="${escapeHtml(project.path)}">Try the web app</a></div>
       </div>
-    </article>`).join("");
+    </article>`;
+  }).join("");
   const dailySection = dailyProjects.length
     ? `<section class="parents-daily" aria-labelledby="parents-daily-title">
         <div class="parents-section-heading"><div><p class="eyebrow">A new build each day</p><h2 id="parents-daily-title">Daily family web-app ideas</h2></div><p>Each idea includes a working browser app. New projects appear here when the Daily Brief is published.</p></div>
@@ -399,7 +406,7 @@ function buildParents() {
 
   <section class="parents-intro" aria-labelledby="parents-intro-title">
     <p class="eyebrow">Projects, not prescriptions</p>
-    <h2 id="parents-intro-title">Seven different starting points</h2>
+    <h2 id="parents-intro-title">${dailyProjects.length} daily app ideas and more starting points</h2>
     <p>These are offered as suggestions and inspiration rather than products every family needs. Some are finished tools and some are working experiments. Each one began with a real interest or practical problem, then used AI to help turn the idea into something usable.</p>
   </section>
 

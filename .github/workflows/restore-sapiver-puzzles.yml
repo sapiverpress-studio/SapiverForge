@@ -1,0 +1,77 @@
+name: One-time Sapiver Puzzles restore
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ops/restore-sapiver-puzzles-2026-09-08.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sapiver-puzzles-one-time-restore
+  cancel-in-progress: false
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate puzzle build scripts
+        run: |
+          node --check src/build-puzzles.mjs
+          node --check test/puzzle-site-contract.mjs
+
+      - name: Install locked website dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Build complete suite with protected Sapiver Puzzles
+        env:
+          BLOG_BASE_URL: https://suite.sapiverpress.co.uk
+        run: |
+          node src/build-site.mjs
+          node src/publish-news-intelligence-site.mjs
+          node scripts/inject-news-intelligence-site.mjs
+          node src/build-puzzles.mjs
+          node test/puzzle-site-contract.mjs
+
+      - name: Persist generated puzzle entry points
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "sapiver-puzzles-restore"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/puzzles public/play public/_redirects public/index.html
+          if git diff --cached --quiet; then
+            echo "Generated puzzle entry points already current."
+          else
+            git commit -m "Publish restored Sapiver Puzzles [skip ci]"
+            for attempt in 1 2 3; do
+              if git push; then break; fi
+              git pull --rebase origin main
+            done
+          fi
+
+      - name: Deploy complete suite to existing Netlify production site
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: 47bda30e-4698-4cf5-bcd4-d59785e1f399
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${NETLIFY_AUTH_TOKEN:-}" || { echo "::error::Missing NETLIFY_AUTH_TOKEN repository secret."; exit 1; }
+          npx --yes netlify-cli@latest deploy \
+            --prod \
+            --no-build \
+            --dir=public \
+            --site="${NETLIFY_SITE_ID}" \
+            --auth="${NETLIFY_AUTH_TOKEN}" \
+            --message="Restore protected Sapiver Puzzles section"

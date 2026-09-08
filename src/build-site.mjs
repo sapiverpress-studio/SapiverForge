@@ -367,7 +367,7 @@ function buildParents() {
     ? dailyManifest.projects.filter((project) => project.status === "ready").sort((a, b) => Number(b.day) - Number(a.day))
     : [];
   const dailyCards = dailyProjects.map((project, index) => {
-    const posterPath = project.poster || project.poster_art || "";
+    const posterPath = project.card_image || "";
     const poster = posterPath
       ? `<a class="daily-parent-poster" href="${escapeHtml(project.path)}" aria-label="Open ${escapeHtml(project.title)}"><img src="${escapeHtml(posterPath)}" alt="${escapeHtml(project.title)} project poster" width="1080" height="1920" loading="${index === 0 ? "eager" : "lazy"}"></a>`
       : "";

@@ -47,8 +47,11 @@ const home = read("public/index.html");
 for (const item of config.puzzles) {
   assert(hub.includes(`/play/${item.slug}/`), `puzzle hub is missing ${item.slug}`);
   assert(player.includes(item.source), `player routing is missing source for ${item.slug}`);
+  assert(redirects.includes(`/puzzle-source/${item.slug}/* ${item.source}:splat 200`), `same-origin proxy is missing for ${item.slug}`);
 }
 assert(player.includes("sapiver_export"), "player must preserve the historic export bridge");
+assert(player.includes("sapiver-corporate-theme"), "player is missing the corporate game theme injection");
+assert(player.includes("#24574c") && player.includes("#b99b5e") && player.includes("#f4efe4"), "player is missing the current green, gold and cream brand palette");
 assert(redirects.includes("/play/* /play/game.html 200"), "historic /play/* rewrite is missing");
 assert(home.includes('href="/puzzles/"'), "homepage does not link to Sapiver Puzzles");
 assert(home.includes("SAPI_PUZZLES_START"), "homepage puzzle block is missing");

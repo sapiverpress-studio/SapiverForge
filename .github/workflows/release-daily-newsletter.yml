@@ -154,6 +154,8 @@ jobs:
           node src/build-site.mjs
           node src/publish-news-intelligence-site.mjs
           node scripts/inject-news-intelligence-site.mjs
+          node src/build-puzzles.mjs
+          node test/puzzle-site-contract.mjs
 
       - name: Commit website edition
         shell: bash
@@ -165,7 +167,11 @@ jobs:
                   public/daily-brief/intelligence \
                   public/daily-brief/index.html \
                   public/podcast \
-                  public/posts
+                  public/posts \
+                  public/puzzles \
+                  public/play \
+                  public/_redirects \
+                  public/index.html
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Publish Daily Brief ${NEWS_INTELLIGENCE_DATE} website edition [skip ci]"
           for attempt in 1 2 3; do
@@ -191,4 +197,4 @@ jobs:
             --dir=public \
             --site="${NETLIFY_SITE_ID}" \
             --auth="${NETLIFY_AUTH_TOKEN}" \
-            --message="Publish Daily Brief, Sapiver Learn and AI Inquisitive Parents"
+            --message="Publish Daily Brief, Sapiver Learn, AI Inquisitive Parents and Sapiver Puzzles"

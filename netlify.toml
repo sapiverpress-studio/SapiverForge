@@ -1,5 +1,5 @@
 [build]
-  command = "node src/build-site.mjs"
+  command = "node src/build-site.mjs && node src/build-puzzles.mjs && node test/puzzle-site-contract.mjs"
   publish = "public"
   functions = "netlify/functions"
 

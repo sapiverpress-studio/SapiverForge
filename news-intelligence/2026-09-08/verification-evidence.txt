@@ -1,71 +1,83 @@
-Here are the evidence notes for the candidates evaluated for the 2026-09-08 UK morning briefing.
+### Summary of Scope Classifications
+
+**OUT OF SCOPE Candidates:**
+* **Candidate [1]:** Jellyfin 12.0 release (open-source media server software).
+* **Candidate [2]:** Tristan Buckmaster paper on Navier-Stokes (pure mathematics).
+* **Candidate [3]:** Factoring RSA keys of a 1990s Certificate Authority (crypto history/blog post).
+* **Candidate [4]:** Personal security blog post ("We have a year to fix security everywhere").
+* **Candidate [8]:** LA Skyline urban development visualization.
+* **Candidate [12]:** TALA open-sourcing announcement (diagram engine layout tool).
+* **Candidate [16]:** Reuters news podcast roundup covering non-tech topics.
+* **Candidates [17] & [19]:** Amazon Prime Air cargo plane crash in Miami (aviation accident news).
 
 ---
 
-### **Strongest In-Scope Candidates Recommended for Publication**
+### In-Scope Candidate Evidence Notes
 
-#### **Candidate [3]: Mistral AI raises €3B Series D at €21B+ valuation**
-* **What is confirmed:** Mistral AI officially announced a €3 billion Series D funding round at a post-money valuation exceeding €21 billion (~$24 billion). The round was co-led by Samsung Electronics, Scaleup Europe Fund (managed by EQT) and PSG Equity. Additional investors include BlackRock, Luxembourg, ASML, Nvidia and Andreessen Horowitz. This represents the largest private tech equity fundraise in European history.
-* **Important caveats:** The company is utilizing funds to build out proprietary data center infrastructure and scale compute capacity alongside model R&D. Dollar-denominated valuation figures in secondary reporting vary slightly (~$24B) due to daily currency conversion rates.
-* **Suitable for publication today:** **Yes.** Major, fully confirmed enterprise AI and venture funding headline.
-
----
-
-#### **Candidate [11]: Anthropic walks away from $6B acquisition of Decart AI**
-* **What is confirmed:** Bloomberg reported that Anthropic terminated talks to acquire Israeli AI chip-efficiency startup Decart for approximately $6 billion following due diligence. Decart develops software aimed at reducing inference/training compute costs and improving semiconductor efficiency.
-* **Important caveats:** Story relies on unnamed sources familiar with the matter; both Anthropic and Decart declined formal comment. Reporting indicates the two companies may still pursue commercial or technical collaboration without an outright acquisition.
-* **Suitable for publication today:** **Yes.** Significant M&A update affecting AI infrastructure and pre-IPO deal flow.
+#### Candidates [0] & [13]: Mistral AI Raises €3B Series D at €21B Valuation
+* **Confirmed:** Mistral AI officially announced a €3 billion Series D funding round at a post-money valuation exceeding €21 billion ($24.4B). Samsung Electronics led the round, with Scaleup Europe Fund (managed by EQT) and PSG Equity co-leading. New backers include BlackRock, Advent, and the Grand Duchy of Luxembourg; existing backers including Nvidia and ASML participated. Capital will be used to expand frontier model research, compute capacity, and sovereign European data center infrastructure.
+* **Caveats:** Mistral’s valuation nearly doubled from €11.7 billion in September 2025 (Series C led by ASML). Reported targets to build up to 1 GW of European data center capacity by 2030 represent long-term infrastructure commitments.
+* **Publication Suitability:** **Yes.** Lead story for today's briefing.
 
 ---
 
-#### **Candidate [5]: Huawei investing in Chinese lithography suppliers to bypass export limits**
-* **What is confirmed:** The *Financial Times* reported that Huawei is taking a hands-on project management role in China's domestic semiconductor tool supply chain. Huawei is making direct and indirect investments in lithography startups—notably Yuliangsheng—and facilitating deals with major fabs like SMIC to test domestic immersion DUV equipment.
-* **Important caveats:** Based on anonymous industry and supply chain sources. Huawei has publicly denied formal corporate affiliation with entities like SiCarrier/Yuliangsheng, despite technical and team overlaps. Domestic DUV tools remain in early validation stages and are estimated to be several years away from high-yield commercial volume production parity with ASML.
-* **Suitable for publication today:** **Yes.** Important reporting on global semiconductor policy, supply chain isolation, and hardware innovation.
+#### Candidate [5]: China Targets 9,800 Eflops AI Compute Capacity by 2030
+* **Confirmed:** China’s Ministry of Industry and Information Technology (MIIT) released a 2026–2030 five-year plan targeting 9,800 eflops of intelligent compute capacity by 2030. The plan calls for 3.8 trillion yuan (~$532B) in cumulative IT infrastructure investment and sets targets for 100,000-card AI accelerator clusters. MIIT reported that China reached 2,185 eflops by the end of June 2026 (up 177% YoY) across 52 major computing facilities.
+* **Caveats:** Figures are government self-reported statistics and targets; compute capacity metrics ("eflops") can vary depending on precision levels (e.g., FP16 vs INT8).
+* **Publication Suitability:** **Yes.**
 
 ---
 
-#### **Candidate [13]: Grindr settles UK privacy lawsuit for £26 million**
-* **What is confirmed:** Grindr disclosed in SEC filings (Form 8-K) and formal announcements that it reached a £26 million (~$34–$35 million) settlement in a High Court group action lawsuit in England and Wales brought on behalf of ~12,000 UK users. The lawsuit alleged that prior to 2020, Grindr unlawfully shared sensitive user data—including HIV status and test dates—with third-party ad-tech platforms.
-* **Important caveats:** The settlement contains no admission or finding of liability by Grindr. Grindr emphasized that the claims cover pre-2020 practices under former owner Beijing Kunlun Tech. Payouts will occur in two £13 million tranches (December 2026 and March 2027).
-* **Suitable for publication today:** **Yes.** Highly relevant to UK tech regulation, data privacy compliance, and ad-tech liabilities.
+#### Candidate [6]: AI-Assisted Zero-Click "WeWorm" Flaw Patched by Tencent
+* **Confirmed:** Cybersecurity research firm Calif demonstrated an AI-developed zero-click worm ("WeWorm") targeting WeChat across iOS and Android. The exploit took advantage of a memory-corruption vulnerability in WeChat's VoIP stack. Tencent confirmed the vulnerability and deployed fixes across Android, iOS, and server infrastructure.
+* **Caveats:** Developed as a proof-of-concept in a controlled research setting; there is no indication that the worm was deployed maliciously in the wild.
+* **Publication Suitability:** **Yes.**
 
 ---
 
-#### **Candidate [4]: Arm debuts Neoverse CSS N4 semi-custom compute platform**
-* **What is confirmed:** Arm officially unveiled its Neoverse CSS N4 ("Ranger") semi-custom compute subsystem platform for cloud data centers. Fabricated on TSMC's 3nm N3P node, it supports between 8 and 128 Neoverse N4 cores per die at up to 3.8 GHz, featuring PCIe Gen 6/7, CXL 4.0, and DDR5/LPDDR6 support.
-* **Important caveats:** Performance claims (such as 2x socket performance and 1.25x performance-per-watt improvement over CSS N3) are based on Arm's internal architecture benchmarks. Timeline to customer silicon deployment will depend on cloud and chip-partner design cycles.
-* **Suitable for publication today:** **Yes.** Core semiconductor hardware release.
+#### Candidate [7]: ASML, TSMC, Samsung, and Intel Commit to High-NA EUV & 12-Inch Photomasks
+* **Confirmed:** ASML, TSMC, Samsung, and Intel announced a joint initiative to shift semiconductor lithography from 6-inch to 12-inch photomasks for High-NA EUV tools. Samsung announced plans to deploy High-NA EUV for DRAM memory production by 2028; TSMC committed to High-NA adoption for advanced nodes in 2030. The group targets a 12-inch mask pilot line by 2031 and production readiness by 2033. ASML projects that 12-inch masks will prevent stitching seam errors on large AI chips and boost machine throughput by up to 40%.
+* **Caveats:** Full production deployment of 12-inch photomasks is a long-term goal (2033) requiring extensive re-tooling across the supply chain. High-NA EUV tools carry a unit price of ~$400 million.
+* **Publication Suitability:** **Yes.**
 
 ---
 
-#### **Candidate [16]: Google-backed space startup Pixxel raises $100M Series C**
-* **What is confirmed:** Indian Earth-observation startup Pixxel announced a $100 million Series C funding round co-led by Temasek and Seraphim Space, with participation from Google, Radical Ventures, 360 ONE Asset, and IMM Investment. Total capital raised by the startup stands at $195 million.
-* **Important caveats:** The capital will fund Pixxel's expansion from hyperspectral hardware satellites into broader planetary software intelligence ("Aurora") and higher-resolution satellite constellations.
-* **Suitable for publication today:** **Yes.** Top-tier deep-tech and space tech venture capital story.
+#### Candidate [9]: DeepSeek Embarks on Senior Infrastructure Hiring Spree
+* **Confirmed:** South China Morning Post reported that Chinese AI lab DeepSeek is seeking to recruit ~150 senior backend and infrastructure engineers. The recruitment push is driven by server and compute bottlenecks caused by rapid user adoption and resource-intensive AI agent workloads.
+* **Caveats:** Based on SCMP coverage of open job postings and company announcements; numbers reflect hiring targets rather than completed hires.
+* **Publication Suitability:** **Yes.**
 
 ---
 
-#### **Candidate [17] / [18]: Huawei launches Mate XT 2 tri-fold smartphone**
-* **What is confirmed:** Huawei officially unveiled the Mate XT 2 Ultimate Design in China. The hardware features a redesigned inward-folding hinge, an integrated privacy display, and runs on Huawei's in-house Kirin 9050 Pro processor and HarmonyOS 7.
-* **Important caveats:** Initial launch and sales availability are focused on the Chinese market, priced around 19,999 yuan (~$2,980).
-* **Suitable for publication today:** **Yes.** Can be published as a concise consumer hardware update highlighting domestic silicon progress.
+#### Candidate [10]: Tech Hyperscalers Eye Argentina's Patagonia for Mega Data Centers
+* **Confirmed:** Reuters reported growing developer interest in Argentina's Patagonia region for mega data center developments. Key attractions include cold weather, land availability, renewable energy, and nearby natural gas from the Vaca Muerta shale formation. Local utility Pampa Energia confirmed early-stage studies for a 500 MW data center near Loma de la Lata.
+* **Caveats:** Projects remain in initial study and planning phases without finalized construction permits; potential land and resource conflicts exist with local Mapuche indigenous communities.
+* **Publication Suitability:** **Yes.**
 
 ---
 
-### **In-Scope Candidates Evaluated but Not Recommended Today**
-
-* **Candidate [12] (Stuxnet source code reconstruction on GitHub):** 
-  * *Status:* Confirmed that a public GitHub repository (`Sadpainy/Stuxnet`) contains a community reverse-engineered source code reconstruction of the 2010 Stuxnet worm under GPL v3.0.
-  * *Reason for exclusion:* This is an informal community upload/study project on GitHub rather than a new security vulnerability, zero-day threat, or enterprise release.
-* **Candidate [15] (Hunter Biden $LAPTOP memecoin launch):** 
-  * *Status:* Confirmed that Hunter Biden announced plans via X to launch a $LAPTOP memecoin on Coinbase's Base network.
-  * *Reason for exclusion:* Highly speculative political novelty asset with minimal underlying technology or enterprise digital business substance.
-* **Candidate [19] (Amazon Prime Air cargo plane crash in Miami):** 
-  * *Status:* Confirmed that a Boeing 767-300 cargo plane operated by 21 Air for Amazon Prime Air overran a runway at Miami International Airport on Sept 6, resulting in 5 fatalities.
-  * *Reason for exclusion:* While involving Amazon's logistics brand, this is a conventional commercial aviation accident under NTSB investigation rather than a core digital technology or technology policy story.
+#### Candidate [11]: Weird Gloop Reports "Google Jail" Indexing Issue for New Domains
+* **Confirmed:** Independent wiki host Weird Gloop published technical documentation explaining how post-2024 Google Search updates restrict indexing for brand-new web domains to only their main landing pages. The issue makes sub-page content unsearchable and forces hosts to deploy new wikis on subdomains of established parent domains as a workaround.
+* **Caveats:** Based on empirical observations and dataset tracking by a specific platform host, not an officially documented policy or confirmed technical bug report from Google.
+* **Publication Suitability:** **Yes** (suitable as an industry perspective item on search indexation).
 
 ---
 
-### **Out of Scope Candidates**
-The following candidates were marked or determined to be OUT OF SCOPE and are omitted from recommendations: **[0]** Jellyfin 12.0, **[1]** LA skyline visualization, **[2]** 1990s RSA CA key factoring blog post, **[6]** VMware/Broadcom VDDK blog, **[8]** Internet Archive fundraiser, **[9]** Caltech Mathathon, **[10]** TALA open-source release, **[14]** Robinhood Oura IPO underwriting role.
+#### Candidate [14]: Arm Unveils Neoverse CSS N4 Platform
+* **Confirmed:** Arm debuted its Neoverse CSS N4 ("Ranger") semi-custom compute subsystem platform built on TSMC's N3P process. It supports 8 to 128 cores per die at up to 3.8 GHz, delivering double the socket performance of Neoverse N3, 1.25x performance-per-watt, and up to 256MB L3 cache.
+* **Caveats:** Announcement covers intellectual property/design platform release; physical commercial chips and cloud deployment dates from partners remain to be detailed.
+* **Publication Suitability:** **Yes.**
+
+---
+
+#### Candidate [15]: Huawei Playing "Project Management" Role in Domestic DUV Lithography Push
+* **Confirmed:** Financial Times reported that Huawei is actively coordinating investments and trials across domestic Chinese semiconductor suppliers to replace foreign lithography equipment. Huawei is backing suppliers such as Yuliangsheng (a SiCarrier spinout) to co-develop Chinese-made DUV lithography equipment and facilitating trial deployments with semiconductor foundry SMIC.
+* **Caveats:** Based on anonymous source reporting in the FT; Huawei has previously denied direct corporate affiliation with SiCarrier. Domestic DUV equipment remains in early testing phases compared to ASML systems.
+* **Publication Suitability:** **Yes.**
+
+---
+
+#### Candidate [18]: Paper Claim: Discrete Diffusion for Lossless LLM Acceleration
+* **Confirmed:** Research paper posted on Hugging Face/arXiv (2609.04010) proposes a architecture combining autoregressive training with lightweight discrete diffusion weights to sample multiple LLM tokens in parallel without degrading generation accuracy [18].
+* **Caveats:** Un-peer-reviewed academic preprint. Claims reflect assertions made by paper authors without independent industry benchmarking or real-world production testing.
+* **Publication Suitability:** **Yes**, provided it is explicitly framed as an academic preprint research claim.

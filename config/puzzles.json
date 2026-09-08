@@ -12,112 +12,128 @@
       "name": "Kropki Sudoku",
       "sourceProject": "sapiver-press-kropki",
       "source": "https://sapiver-press-kropki.netlify.app/",
-      "aliases": ["kropki"]
+      "aliases": ["kropki"],
+      "description": "Use the black and white dots between cells to work out consecutive and double-value pairs."
     },
     {
       "slug": "hyper-sudoku",
       "name": "Hyper Sudoku",
       "sourceProject": "sapiver-press-hyper",
       "source": "https://sapiver-press-hyper.netlify.app/",
-      "aliases": ["hyper"]
+      "aliases": ["hyper"],
+      "description": "Classic Sudoku with four extra shaded regions that must also contain the digits 1 to 9."
     },
     {
       "slug": "anti-king-sudoku",
       "name": "Anti-King Sudoku",
       "sourceProject": "sapiver-press-anti-king",
       "source": "https://sapiver-press-anti-king.netlify.app/",
-      "aliases": ["anti-king"]
+      "aliases": ["anti-king"],
+      "description": "Solve the grid while making sure matching digits never touch diagonally like a king in chess."
     },
     {
       "slug": "anti-knight-sudoku",
       "name": "Anti-Knight Sudoku",
       "sourceProject": "sapiver-press-anti-knight",
       "source": "https://sapiver-press-anti-knight.netlify.app/",
-      "aliases": ["anti-knight"]
+      "aliases": ["anti-knight"],
+      "description": "Standard Sudoku with one extra rule: matching digits cannot be a knight's move apart."
     },
     {
       "slug": "non-consecutive-sudoku",
       "name": "Non-Consecutive Sudoku",
       "sourceProject": "sapiver-press-non-con",
       "source": "https://sapiver-press-non-con.netlify.app/",
-      "aliases": ["non-consecutive"]
+      "aliases": ["non-consecutive"],
+      "description": "Orthogonally adjacent cells cannot contain consecutive numbers, adding another layer of deduction."
     },
     {
       "slug": "odd-even-sudoku",
       "name": "Odds and Evens Sudoku",
       "sourceProject": "sapiver-press-odds-and-evens",
       "source": "https://sapiver-press-odds-and-evens.netlify.app/",
-      "aliases": ["odds-and-evens", "odd-even"]
+      "aliases": ["odds-and-evens", "odd-even"],
+      "description": "Use the marked odd and even cells alongside the normal Sudoku rules to complete the grid."
     },
     {
       "slug": "sudoku-x",
       "name": "Sudoku X",
       "sourceProject": "sapiver-sudoku-x",
       "source": "https://sapiver-sudoku-x.netlify.app/",
-      "aliases": []
+      "aliases": [],
+      "description": "Both main diagonals must contain the digits 1 to 9 as well as every row, column and box."
     },
     {
       "slug": "arrow-sudoku",
       "name": "Arrow Sudoku",
       "sourceProject": "sapiver-press-arrow",
       "source": "https://sapiver-press-arrow.netlify.app/",
-      "aliases": ["arrow"]
+      "aliases": ["arrow"],
+      "description": "Each circled digit equals the total of the digits running along its arrow."
     },
     {
       "slug": "german-whispers-sudoku",
       "name": "German Whispers Sudoku",
       "sourceProject": "sapiver-press-german-whisper",
       "source": "https://sapiver-press-german-whisper.netlify.app/",
-      "aliases": ["german-whisper", "german-whispers"]
+      "aliases": ["german-whisper", "german-whispers"],
+      "description": "Neighbouring digits along each whisper line must differ by at least five."
     },
     {
       "slug": "killer-sudoku",
       "name": "Killer Sudoku",
       "sourceProject": "sapiver-press-killer",
       "source": "https://sapiver-press-killer.netlify.app/",
-      "aliases": ["killer"]
+      "aliases": ["killer"],
+      "description": "Use the cage totals together with standard Sudoku logic to place every digit."
     },
     {
       "slug": "little-killer-sudoku",
       "name": "Little Killer Sudoku",
       "sourceProject": "sapiver-press-little-killer",
       "source": "https://sapiver-press-little-killer.netlify.app/",
-      "aliases": ["little-killer"]
+      "aliases": ["little-killer"],
+      "description": "Outside clues give diagonal sums, combining Sudoku logic with arithmetic deduction."
     },
     {
       "slug": "renban-sudoku",
       "name": "Renban Sudoku",
       "sourceProject": "sapiver-press-renban",
       "source": "https://sapiver-press-renban.netlify.app/",
-      "aliases": ["renban"]
+      "aliases": ["renban"],
+      "description": "Digits on each Renban line form a set of consecutive numbers in any order."
     },
     {
       "slug": "sandwich-sudoku",
       "name": "Sandwich Sudoku",
       "sourceProject": "sapiver-press-sandwich",
       "source": "https://sapiver-press-sandwich.netlify.app/",
-      "aliases": ["sandwich"]
+      "aliases": ["sandwich"],
+      "description": "Outside clues show the sum of the digits sitting between 1 and 9 in each row or column."
     },
     {
       "slug": "thermo-sudoku",
       "name": "Thermo Sudoku",
       "sourceProject": "sapiver-press-thermo",
       "source": "https://sapiver-press-thermo.netlify.app/",
-      "aliases": ["thermo"]
+      "aliases": ["thermo"],
+      "description": "Digits increase along every thermometer from the bulb towards the tip."
     },
     {
       "slug": "xv-sudoku",
       "name": "XV Sudoku",
       "sourceProject": "sapiver-press-xv",
       "source": "https://sapiver-press-xv.netlify.app/",
-      "aliases": ["xv"]
+      "aliases": ["xv"],
+      "description": "Use the V and X clues between neighbouring cells to identify pairs that total 5 or 10."
     },
     {
       "slug": "trigoku",
       "name": "Trigoku",
       "sourceProject": "sapiverpress-trigoku",
       "source": "https://sapiverpress-trigoku.netlify.app/",
-      "aliases": []
+      "aliases": [],
+      "description": "A Sapiver number puzzle with a fresh daily challenge and a different route to the solution."
     }
   ],
   "otherGames": [
@@ -126,7 +142,7 @@
       "name": "Sapiver Duel",
       "sourceProject": "sapiver-press-duel",
       "source": "https://sapiver-press-duel.netlify.app/",
-      "description": "Timeline duel game from the former Sapiver Press Games & Puzzles section."
+      "description": "Test your judgement in a quick timeline-based duel game."
     }
   ]
 }

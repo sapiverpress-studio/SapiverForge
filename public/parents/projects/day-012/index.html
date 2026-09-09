@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#124b40">
+  <title>My Routine Builder | AI Inquisitive Parents</title>
+  <style>
+    :root{--ink:#173b35;
+--green:#07594b;
+--gold:#d2aa54;
+--cream:#fffaf0;
+--mist:#e8f1eb;
+--coral:#e77762;
+--red:#a93636}*{box-sizing:border-box}body{margin:0;
+background:linear-gradient(145deg,#0a4d41,#183a34);
+font:16px/1.45 system-ui;
+color:var(--ink)}main{max-width:760px;
+margin:auto;
+padding:18px}.card{background:var(--cream);
+border:2px solid #d8bd79;
+border-radius:24px;
+padding:21px;
+margin:14px 0;
+box-shadow:0 14px 34px #0017}h1,h2,h3,p{margin-top:0}.eyebrow{font-size:.76rem;
+letter-spacing:.12em;
+text-transform:uppercase;
+font-weight:850;
+color:var(--green)}button,input,select{font:inherit;
+border-radius:12px;
+padding:12px;
+border:1px solid #9baa9f}button{border:0;
+background:var(--green);
+color:#fff;
+font-weight:800;
+cursor:pointer}button.secondary{background:#fff;
+color:var(--green);
+border:2px solid var(--green)}button.danger{background:#fff;
+color:var(--red);
+border:2px solid var(--red)}button:focus-visible,input:focus-visible,select:focus-visible{outline:4px solid #f1c45d;
+outline-offset:2px}.row,.toolbar{display:flex;
+gap:9px;
+flex-wrap:wrap}.toolbar>*{flex:1}.setup{display:grid;
+gap:12px}.setup label{display:grid;
+gap:5px;
+font-weight:750}.routines{display:flex;
+gap:8px;
+overflow:auto;
+padding:2px 0 12px}.routines button{white-space:nowrap;
+background:var(--mist);
+color:var(--ink)}.routines button.active{background:var(--green);
+color:#fff}.progress{height:12px;
+background:#d9e3dd;
+border-radius:20px;
+overflow:hidden}.progress span{display:block;
+height:100%;
+background:linear-gradient(90deg,var(--gold),var(--coral));
+transition:width .25s}.step{display:grid;
+grid-template-columns:auto 1fr auto;
+gap:12px;
+align-items:center;
+background:#fff;
+border:1px solid #dce1dc;
+border-radius:16px;
+padding:12px;
+margin:9px 0}.step.done{background:var(--mist)}.step .emoji{font-size:1.8rem}.step strong{display:block}.step small{color:#52645f}.tick{width:48px;
+height:48px;
+border-radius:50%;
+padding:0;
+font-size:1.3rem}.controls{display:grid;
+grid-template-columns:1fr 1fr;
+gap:9px}.timer{text-align:center;
+background:#173d36;
+color:white;
+border-radius:18px;
+padding:18px;
+margin:14px 0}.timer output{display:block;
+font-size:2.4rem;
+font-weight:900;
+letter-spacing:.04em}.form{display:grid;
+gap:10px}.form .three{display:grid;
+grid-template-columns:1fr 2fr 1fr;
+gap:9px}.notice{min-height:1.4em;
+color:var(--green);
+font-weight:750}.prompt{background:#183d36;
+color:#fff}.prompt button{background:var(--gold);
+color:var(--ink)}.small{font-size:.9rem;
+color:#4d625d}a{color:inherit}@media(max-width:540px){.card{padding:17px}.form .three{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.step{grid-template-columns:auto 1fr auto}}
+  </style>
+</head>
+<body><main>
+  <section class="card"><p class="eyebrow">AI Inquisitive Parents · Day 012</p><h1>My Routine Builder</h1><p>Create morning, bedtime or after-school routines that fit your child—and run each one step by step.</p><div class="routines" id="tabs" aria-label="Saved routines"></div><button class="secondary" id="newRoutine">Create another routine</button></section>
+  <section class="card setup" id="setup"><h2>Routine setup</h2><label>Routine name<input id="routineName" maxlength="40" placeholder="Sam's morning"></label><label>Who is it for? <input id="childName" maxlength="30" placeholder="Sam"></label><label>When is it used?<select id="kind"><option>Morning</option><option>Bedtime</option><option>After school</option><option>Getting ready</option><option>Custom</option></select></label><div class="row"><button id="saveRoutine">Save routine</button><button class="danger" id="deleteRoutine">Delete routine</button></div><p class="notice" id="setupNotice" aria-live="polite"></p></section>
+  <section class="card"><div class="row" style="justify-content:space-between;
+align-items:center"><div><p class="eyebrow" id="runKind">Routine</p><h2 id="runTitle">Your routine</h2></div><strong id="score">0 of 0</strong></div><div class="progress" aria-label="Routine progress"><span id="bar"></span></div><div id="steps"></div><div class="timer"><span>Current step timer</span><output id="clock">00:00</output><div class="controls"><button id="timerButton">Start timer</button><button class="secondary" id="resetTimer">Reset timer</button></div></div><div class="controls"><button id="resetChecks">Reset for next time</button><button class="secondary" id="finish">Finish routine</button></div><p class="notice" id="runNotice" aria-live="polite"></p></section>
+  <section class="card"><h2>Add a step</h2><form id="stepForm" class="form"><div class="three"><label>Icon<input id="icon" maxlength="4" value="⭐"></label><label>Step<input id="stepName" maxlength="50" required placeholder="Brush teeth"></label><label>Minutes<input id="minutes" type="number" min="0" max="60" value="2"></label></div><button type="submit">Add step</button></form><p class="small">Use the ↑ and ↓ buttons to put steps in the right order. A grown-up creates and checks each routine.</p></section>
+  <section class="card"><h2>Recent completions</h2><div id="history"></div><button class="danger" id="clearHistory">Clear history</button><p class="small">Routine names, steps and completion history stay in this browser. Nothing is uploaded and there is no account.</p></section>
+  <section class="card prompt"><h2>Build your own with AI</h2><p id="prompt">Build me a mobile-friendly family routine app in one standalone HTML file. Let me create several named routines for different children, add emoji steps with optional timers, reorder and tick off steps, show progress, reset a routine and keep a local completion history. Save everything in browser storage and do not send data anywhere.</p><button id="copy">Copy this prompt</button></section>
+  <p style="color:white;
+text-align:center"><a href="https://suite.sapiverpress.co.uk">Back to Sapiver Press</a></p>
+</main><script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),KEY='aip-routine-builder-v1';
+let state={routines:[],active:null,history:[]},timer=null,left=0,running=false;
+try{state={...state,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{}const uid=()=>Date.now()+Math.random(),save=()=>localStorage.setItem(KEY,JSON.stringify(state));
+function starter(){if(state.routines.length)return;
+const id=uid();
+state.routines=[{id,name:'Our morning',child:'Family',kind:'Morning',steps:[['👕','Get dressed',5],['🪥','Brush teeth',2],['🥣','Eat breakfast',10],['🎒','Pack your bag',3],['👟','Shoes on',2]].map((x,i)=>({id:uid()+i,icon:x[0],name:x[1],minutes:x[2],done:false}))}];
+state.active=id;
+save()}starter();
+function active(){return state.routines.find(r=>r.id===state.active)||state.routines[0]}function render(){const r=active();
+if(!r)return;
+state.active=r.id;
+$('#tabs').replaceChildren(...state.routines.map(x=>{const b=document.createElement('button');
+b.textContent=x.name;
+b.className=x.id===r.id?'active':'';
+b.onclick=()=>{stopTimer();
+state.active=x.id;
+save();
+render()};
+return b}));
+$('#routineName').value=r.name;
+$('#childName').value=r.child;
+$('#kind').value=r.kind;
+$('#runKind').textContent=r.kind+' routine';
+$('#runTitle').textContent=r.name+(r.child?' · '+r.child:'');
+const done=r.steps.filter(s=>s.done).length;
+$('#score').textContent=`${done} of ${r.steps.length}`;
+$('#bar').style.width=(r.steps.length?done/r.steps.length*100:0)+'%';
+$('#steps').replaceChildren(...r.steps.map((s,i)=>{const el=document.createElement('div');
+el.className='step'+(s.done?' done':'');
+const icon=document.createElement('span');
+icon.className='emoji';
+icon.textContent=s.icon;
+const words=document.createElement('div');
+const strong=document.createElement('strong');
+strong.textContent=s.name;
+const small=document.createElement('small');
+small.textContent=s.minutes?`${s.minutes} minute${s.minutes===1?'':'s'}`:'No timer';
+words.append(strong,small);
+const tools=document.createElement('div');
+tools.className='row';
+[['↑',()=>move(i,-1)],['↓',()=>move(i,1)],['✕',()=>remove(s.id)]].forEach(([t,f])=>{const b=document.createElement('button');
+b.className='secondary';
+b.textContent=t;
+b.setAttribute('aria-label',t==='✕'?'Delete step':t==='↑'?'Move step up':'Move step down');
+b.onclick=f;
+tools.append(b)});
+const tick=document.createElement('button');
+tick.className='tick';
+tick.textContent=s.done?'✓':'○';
+tick.setAttribute('aria-label',(s.done?'Mark incomplete: ':'Complete: ')+s.name);
+tick.onclick=()=>{s.done=!s.done;
+save();
+render()};
+el.append(icon,words,tools,tick);
+return el}));
+$('#history').replaceChildren(...(state.history.length?state.history.slice(0,8).map(h=>{const p=document.createElement('p');
+p.textContent=`✓ ${h.name} · ${h.when}`;
+return p}):[Object.assign(document.createElement('p'),{textContent:'No completed routines yet.'})]));}function move(i,d){const r=active(),j=i+d;
+if(j<0||j>=r.steps.length)return;
+[r.steps[i],r.steps[j]]=[r.steps[j],r.steps[i]];
+save();
+render()}function remove(id){const r=active();
+r.steps=r.steps.filter(s=>s.id!==id);
+save();
+render()}function stopTimer(){clearInterval(timer);
+timer=null;
+running=false;
+$('#timerButton').textContent='Start timer'}function paintClock(){const m=Math.floor(left/60),s=left%60;
+$('#clock').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')}$('#saveRoutine').onclick=()=>{const r=active();
+r.name=$('#routineName').value.trim()||'My routine';
+r.child=$('#childName').value.trim();
+r.kind=$('#kind').value;
+save();
+render();
+$('#setupNotice').textContent='Routine saved.'};
+$('#newRoutine').onclick=()=>{const id=uid();
+state.routines.push({id,name:'New routine',child:'',kind:'Custom',steps:[]});
+state.active=id;
+save();
+render();
+$('#routineName').focus()};
+$('#deleteRoutine').onclick=()=>{if(state.routines.length===1){$('#setupNotice').textContent='Keep one routine. Rename it instead.';
+return}state.routines=state.routines.filter(r=>r.id!==state.active);
+state.active=state.routines[0].id;
+save();
+render()};
+$('#stepForm').onsubmit=e=>{e.preventDefault();
+active().steps.push({id:uid(),icon:$('#icon').value.trim()||'⭐',name:$('#stepName').value.trim(),minutes:Number($('#minutes').value)||0,done:false});
+$('#stepName').value='';
+save();
+render()};
+$('#timerButton').onclick=()=>{if(running){stopTimer();
+return}if(!left){const next=active().steps.find(s=>!s.done);
+left=(next?.minutes||1)*60;
+paintClock()}running=true;
+$('#timerButton').textContent='Pause timer';
+timer=setInterval(()=>{left--;
+paintClock();
+if(left<=0){stopTimer();
+$('#runNotice').textContent='Time is up. Tick the step when it is complete.'}},1000)};
+$('#resetTimer').onclick=()=>{stopTimer();
+left=0;
+paintClock()};
+$('#resetChecks').onclick=()=>{active().steps.forEach(s=>s.done=false);
+stopTimer();
+left=0;
+paintClock();
+save();
+render();
+$('#runNotice').textContent='Ready for next time.'};
+$('#finish').onclick=()=>{const r=active();
+if(!r.steps.length||r.steps.some(s=>!s.done)){ $('#runNotice').textContent='Finish each step first.';
+return}state.history.unshift({name:r.name,when:new Date().toLocaleString()});
+state.history=state.history.slice(0,20);
+save();
+render();
+$('#runNotice').textContent='Routine complete — well done!'};
+$('#clearHistory').onclick=()=>{state.history=[];
+save();
+render()};
+$('#copy').onclick=async()=>{try{await navigator.clipboard.writeText($('#prompt').textContent);
+$('#copy').textContent='Copied!'}catch{$('#copy').textContent='Select and copy the prompt'}};
+paintClock();
+render()})();
+
+</script></body></html>

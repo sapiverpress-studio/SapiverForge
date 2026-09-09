@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Phase 1 checkpoint covering models, prompting, APIs, retrieval, agents, automation, security, evaluation, cost, reliability and privacy.">
+<title>Sapiver Learn — Day 20: Phase 1 Systems Checkpoint</title>
+<style>
+:root{--bg:#0f1115;--panel:#171a21;--panel-2:#1e232c;--text:#f3f5f7;--muted:#aeb7c2;--accent:#ff8a3d;--accent-soft:#3a2418;--good:#51c878;--bad:#ff6b6b;--border:#303744;--max:880px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+main{width:min(var(--max),calc(100% - 28px));margin:0 auto;padding:28px 0 60px}
+a{color:var(--accent)}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.brand{font-weight:700}.brand a{color:inherit;text-decoration:none}
+.pill{padding:5px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:.9rem}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:22px;margin:16px 0}
+h1,h2,h3{line-height:1.25}h1{font-size:clamp(1.9rem,5vw,3rem);margin:.2rem 0 1rem}h2{font-size:1.35rem;margin-top:0}
+p{margin:.75rem 0}.muted{color:var(--muted)}
+.callout{border-left:4px solid var(--accent);background:var(--accent-soft);padding:14px 16px;border-radius:10px;margin:18px 0}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;margin:18px 0 8px}
+button,select{border:1px solid var(--border);background:var(--panel-2);color:var(--text);padding:11px 15px;border-radius:10px;font-size:1rem}
+button{cursor:pointer}.primary{background:var(--accent);color:#1a120c;border-color:var(--accent);font-weight:700}
+.voice-wrap{display:flex;flex-direction:column;gap:4px;flex:1 1 260px}.voice-wrap label{color:var(--muted)}.voice-wrap select{width:100%}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:16px 0}
+.flow>div,.term{background:var(--panel-2);border:1px solid var(--border);border-radius:10px;padding:12px}
+.flow>div{text-align:center;display:flex;align-items:center;justify-content:center;min-height:78px}
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:10px}.term strong{display:block}
+.question{margin:20px 0;padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--panel-2)}
+.option{display:block;width:100%;text-align:left;margin:8px 0;background:#202632}
+.option.correct{border-color:var(--good);background:#163120}.option.wrong{border-color:var(--bad);background:#351c1c}
+.feedback{min-height:1.4em;margin-top:10px;font-weight:600}.resource-link{display:inline-block;margin-top:8px;font-weight:600;text-decoration:none}
+.score{font-size:1.15rem;font-weight:700}.progress-row{display:flex;flex-wrap:wrap;gap:10px 18px;color:var(--muted);margin:.5rem 0 1rem}
+.readiness{margin-top:12px;padding:12px;border-radius:10px;background:var(--panel-2);border:1px solid var(--border)}
+.speech-active{background:var(--accent-soft);outline:2px solid var(--accent);outline-offset:4px;border-radius:6px}
+::highlight(sapiver-reading){background-color:rgba(255,138,61,.38);color:var(--text)}
+footer{margin-top:28px;color:var(--muted);font-size:.92rem}
+@media(max-width:700px){.terms,.flow{grid-template-columns:1fr}.controls>button{flex:1 1 130px}.voice-wrap{flex-basis:100%}}
+</style>
+</head>
+<body><main>
+<div class="topbar"><div class="brand"><a href="../../">Sapiver Learn</a></div><div class="pill">Phase 1 · Day 20 · Systems Checkpoint</div></div>
+
+<section>
+<h1>Phase 1 systems checkpoint</h1>
+<p class="muted">Estimated learning time: 9–10 minutes.</p>
+<div class="controls">
+<button class="primary" id="playBtn">▶ Listen</button>
+<button id="pauseBtn">⏸ Pause</button>
+<button id="resumeBtn">▶ Resume</button>
+<button id="stopBtn">■ Stop</button>
+<div class="voice-wrap"><label for="voiceSelect">Voice</label><select id="voiceSelect"><option>Loading voices…</option></select></div>
+</div>
+<div id="audioStatus" class="muted">Ready to listen. Speed: 1.00×.</div>
+
+<div class="callout"><strong>Core mental model:</strong><br>An AI product is a system, not a model. Quality depends on how models, prompts, data, APIs, retrieval, tools, permissions, evaluation, cost controls, reliability patterns and privacy rules fit together. Phase 1 readiness means you can reason about those parts as one architecture rather than as isolated features.</div>
+</section>
+
+<section id="lesson">
+<div class="card"><h2>1. Start with the task, not the model</h2><p>The first question is not “Which model should I use?”. It is “What task must the system perform, what inputs does it receive, what output is acceptable, and what failures matter?”.</p><p>Once the task is clear, you can decide which parts are deterministic, which need retrieval, and which genuinely benefit from model judgement.</p></div>
+<div class="card"><h2>2. Models generate; software controls</h2><p>A language model predicts useful output from context. It does not automatically own your workflow.</p><p>Application code still decides when to call the model, which data to include, which tools are available, what actions are permitted and whether the result should be accepted.</p></div>
+<div class="card"><h2>3. Context quality matters</h2><p>Prompting, retrieval and state all shape the context the model sees.</p><p>Good context is relevant, structured and appropriately scoped. More context is not always better: irrelevant material can increase cost, latency and confusion.</p><p>RAG adds external evidence, but retrieved content remains input and must still be treated according to its trust level.</p></div>
+<div class="card"><h2>4. Tools and agents need boundaries</h2><p>An agent can choose among permitted tools and continue across several steps, but the surrounding system should keep permissions narrow and stopping conditions explicit.</p><p>High-impact actions can require human approval, and tool arguments should be validated before execution.</p></div>
+<div class="card"><h2>5. Reliability and security overlap</h2><p>Timeouts, retries, fallbacks and circuit breakers keep failures contained. Least privilege, secret handling and validation reduce the consequences of misuse or mistakes.</p><p>Both disciplines ask the same architectural question: if this component fails, what can it affect?</p></div>
+<div class="card"><h2>6. Evaluation turns judgement into evidence</h2><p>Before changing a prompt, model or workflow, define what success means and test against representative examples.</p><p>Separate retrieval failures, model failures and deterministic system failures so you fix the actual cause.</p><p>Regression tests protect behaviour that already works.</p></div>
+<div class="card"><h2>7. Cost and latency are design constraints</h2><p>Every model call, retrieval, retry and tool invocation adds work.</p><p>The correct target is not “use the cheapest model” or “use the best model”. It is “meet the evaluated quality threshold with acceptable cost and response time”.</p></div>
+<div class="card"><h2>8. Privacy begins before storage</h2><p>Data minimisation asks whether information needs to be collected at all.</p><p>Retention asks how long it should remain available. Memory should be purposeful, not an excuse to keep everything.</p><p>Logs, embeddings, backups and third-party services can all create additional copies that must be considered in the data lifecycle.</p></div>
+<div class="card"><h2>9. A strong architecture separates responsibilities</h2><p>Reliable systems keep important boundaries visible.</p><div class="flow"><div>Input</div><div>Deterministic rules</div><div>AI or retrieval step</div><div>Validation</div><div>Release or action</div></div><p>This separation makes systems easier to evaluate, secure, debug and change.</p><p>It also means a model can be replaced without redesigning every other part of the product.</p></div>
+<div class="card"><h2>Worked example: designing an AI support workflow</h2><p>A customer sends a support question. The system first validates the request and identifies the account deterministically.</p><p>Relevant product documents are retrieved. The model receives the question plus the approved evidence and drafts an answer.</p><p>The system checks whether the answer is supported, whether a tool action is requested and whether that action is within the agent's permissions.</p><p>Low-risk answers can be returned. High-impact actions can pause for approval. Failures can fall back to source passages or a human queue.</p><p>Evaluation then measures retrieval quality, answer quality, action accuracy, latency and cost separately.</p></div>
+<div class="card"><h2>Phase 1 readiness</h2><p>You are ready to move beyond foundations when you can look at an AI feature and explain where the model sits, where data comes from, what is deterministic, which permissions exist, what can fail, how quality is measured and how the system limits harm.</p><p>This checkpoint tests that system-level understanding rather than memorising definitions.</p></div>
+<div class="card"><h2>Key terms</h2><div class="terms">
+<div class="term"><strong>System boundary</strong>The separation between components, data, permissions or responsibilities.</div>
+<div class="term"><strong>Deterministic step</strong>A step whose outcome follows defined rules rather than probabilistic model judgement.</div>
+<div class="term"><strong>Context</strong>The information supplied to a model for the current task.</div>
+<div class="term"><strong>Grounding</strong>Connecting model output to supplied evidence.</div>
+<div class="term"><strong>Least privilege</strong>Granting only the access needed for a task.</div>
+<div class="term"><strong>Evaluation</strong>Measuring system performance against predefined criteria.</div>
+<div class="term"><strong>Graceful degradation</strong>Keeping reduced but useful functionality when full capability fails.</div>
+<div class="term"><strong>Data minimisation</strong>Collecting and processing only the data genuinely required.</div>
+</div></div>
+</section>
+
+<section class="card" id="quiz">
+<h2>Day 20 checkpoint</h2>
+<p class="muted">Ten questions. This checkpoint is designed to test whether the Phase 1 concepts work together as one mental model.</p>
+
+<div class="question" data-correct="C" data-explanation="Start from the task, constraints and failure conditions. Model choice comes later." data-resource=""><h3>1. What should normally be defined before choosing a model?</h3><button class="option" data-value="A">A. The model brand</button><button class="option" data-value="B">B. The maximum possible context window</button><button class="option" data-value="C">C. The task, acceptable output and important failure conditions</button><button class="option" data-value="D">D. The number of agents</button><div class="feedback"></div></div>
+<div class="question" data-correct="B" data-explanation="The model generates or selects outputs, while surrounding software controls tools, permissions, validation and execution." data-resource=""><h3>2. In a well-designed AI application, who should control real-world permissions?</h3><button class="option" data-value="A">A. The model itself</button><button class="option" data-value="B">B. The surrounding application and permission system</button><button class="option" data-value="C">C. The user's browser history</button><button class="option" data-value="D">D. The retrieval index alone</button><div class="feedback"></div></div>
+<div class="question" data-correct="D" data-explanation="Retrieved documents improve context but remain external input and may still be wrong, stale or malicious." data-resource=""><h3>3. What changes when a document is retrieved through RAG?</h3><button class="option" data-value="A">A. It automatically becomes trusted system instructions</button><button class="option" data-value="B">B. It becomes factually guaranteed</button><button class="option" data-value="C">C. It permanently updates the model weights</button><button class="option" data-value="D">D. It becomes available as context, but still needs normal trust and quality checks</button><div class="feedback"></div></div>
+<div class="question" data-correct="A" data-explanation="Fixed comparisons and business rules should normally remain deterministic because they are easier to test and more reliable." data-resource=""><h3>4. Which task should usually remain deterministic?</h3><button class="option" data-value="A">A. Checking whether a refund exceeds a fixed approval threshold</button><button class="option" data-value="B">B. Interpreting an ambiguous customer complaint</button><button class="option" data-value="C">C. Summarising a long report</button><button class="option" data-value="D">D. Drafting a natural-language response</button><div class="feedback"></div></div>
+<div class="question" data-correct="C" data-explanation="Least privilege limits blast radius by giving the agent only the capabilities necessary for its task." data-resource=""><h3>5. Why should an agent have narrow permissions?</h3><button class="option" data-value="A">A. To make prompts longer</button><button class="option" data-value="B">B. To force more retries</button><button class="option" data-value="C">C. To reduce the consequences of mistakes or compromise</button><button class="option" data-value="D">D. To remove the need for logging</button><div class="feedback"></div></div>
+<div class="question" data-correct="B" data-explanation="If the correct evidence never reached the model, retrieval or orchestration failed before generation did." data-resource=""><h3>6. The model gives a wrong answer because the relevant source was never retrieved. What failed first?</h3><button class="option" data-value="A">A. Speech synthesis</button><button class="option" data-value="B">B. Retrieval or orchestration</button><button class="option" data-value="C">C. Output styling</button><button class="option" data-value="D">D. Human approval</button><div class="feedback"></div></div>
+<div class="question" data-correct="D" data-explanation="The goal is to meet the required quality threshold with acceptable cost and latency, not maximise one dimension blindly." data-resource=""><h3>7. What is the best model-selection principle?</h3><button class="option" data-value="A">A. Always use the largest model</button><button class="option" data-value="B">B. Always use the cheapest model</button><button class="option" data-value="C">C. Always minimise output length regardless of usefulness</button><button class="option" data-value="D">D. Use the least costly and fastest option that still meets the evaluated quality requirement</button><div class="feedback"></div></div>
+<div class="question" data-correct="A" data-explanation="A fallback preserves useful behaviour when the preferred dependency or path fails." data-resource=""><h3>8. What is the purpose of a fallback?</h3><button class="option" data-value="A">A. Preserve safe, useful behaviour when the preferred path fails</button><button class="option" data-value="B">B. Hide all failures from monitoring</button><button class="option" data-value="C">C. Retry forever</button><button class="option" data-value="D">D. Increase model permissions</button><div class="feedback"></div></div>
+<div class="question" data-correct="C" data-explanation="Data minimisation asks whether the data needs to be collected or processed at all." data-resource=""><h3>9. What does data minimisation ask first?</h3><button class="option" data-value="A">A. How many backups should be created?</button><button class="option" data-value="B">B. Which model should memorise the data?</button><button class="option" data-value="C">C. Do we actually need this data for the task?</button><button class="option" data-value="D">D. How can we retain it forever?</button><div class="feedback"></div></div>
+<div class="question" data-correct="B" data-explanation="Phase 1 readiness is system-level reasoning: understanding model role, data flow, deterministic logic, permissions, failure modes and evaluation." data-resource=""><h3>10. Which statement best demonstrates Phase 1 readiness?</h3><button class="option" data-value="A">A. “I know which AI model is currently most popular.”</button><button class="option" data-value="B">B. “I can explain the model, data flow, rules, permissions, failure paths and evaluation plan for an AI feature.”</button><button class="option" data-value="C">C. “I can write a very long prompt.”</button><button class="option" data-value="D">D. “I avoid all deterministic code.”</button><div class="feedback"></div></div>
+
+<p class="score" id="score">Score: 0 / 10</p>
+<div class="progress-row"><span id="answeredStatus">Answered: 0 / 10</span><span id="bestStatus">Best: —</span><span id="attemptStatus">Completed attempts: 0</span></div>
+<div class="readiness" id="readiness">Complete all 10 questions to see your Phase 1 readiness result.</div>
+<button id="resetBtn">Reset quiz</button>
+</section>
+
+<section class="callout"><strong>Progression rule:</strong><br>A score of 8/10 or higher shows readiness to move beyond Phase 1 foundations. A lower score means the next lesson should remain in Phase 1 and target the weakest concepts before progression.</section>
+
+<footer>Sapiver Learn · Phase 1 · Day 20<br><a href="../../">← Back to Sapiver Learn</a></footer>
+</main>
+
+<script>
+(() => {
+const STORAGE_KEY='sapiverLearnDay020',VOICE_KEY='sapiverLearnVoice';
+const questions=[...document.querySelectorAll('.question')],scoreEl=document.getElementById('score'),answeredStatus=document.getElementById('answeredStatus'),bestStatus=document.getElementById('bestStatus'),attemptStatus=document.getElementById('attemptStatus'),readinessEl=document.getElementById('readiness');
+let state=new Map(),progress={completed:false,currentScore:0,lastScore:null,bestScore:null,attempts:0,answers:{}},storageAvailable=true,countedThisCompletion=false;
+
+function renderFeedback(q,ok){
+  const f=q.querySelector('.feedback');
+  if(ok){f.innerHTML='<span style="color:var(--good)">Correct.</span>';return}
+  f.innerHTML='<span style="color:var(--bad)">Not quite.</span> '+(q.dataset.explanation||'Review this concept and try again.');
+}
+function readProgress(){
+  try{
+    const raw=localStorage.getItem(STORAGE_KEY);
+    if(!raw)return;
+    progress=Object.assign(progress,JSON.parse(raw)||{});
+    Object.entries(progress.answers||{}).forEach(([i,a])=>{
+      const q=questions[Number(i)];
+      if(!q)return;
+      state.set(Number(i),a.correct===true);
+      const bs=[...q.querySelectorAll('.option')],chosen=bs.find(b=>b.dataset.value===a.value);
+      if(chosen){
+        chosen.classList.add(a.correct?'correct':'wrong');
+        if(!a.correct)bs.find(b=>b.dataset.value===q.dataset.correct)?.classList.add('correct');
+      }
+      renderFeedback(q,a.correct===true);
+    });
+    countedThisCompletion=Boolean(progress.completed&&Object.keys(progress.answers||{}).length===questions.length);
+  }catch(e){storageAvailable=false}
+}
+function saveProgress(){
+  if(!storageAvailable)return;
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(progress))}
+  catch(e){storageAvailable=false}
+}
+function updateScore(){
+  let correct=0;
+  state.forEach(v=>{if(v)correct++});
+  const answered=state.size;
+  progress.currentScore=correct;
+  progress.completed=answered===questions.length;
+  scoreEl.textContent=`Score: ${correct} / ${questions.length}`;
+  answeredStatus.textContent=`Answered: ${answered} / ${questions.length}`;
+
+  if(progress.completed&&!countedThisCompletion){
+    progress.attempts=Number(progress.attempts||0)+1;
+    progress.lastScore=correct;
+    progress.bestScore=progress.bestScore==null?correct:Math.max(Number(progress.bestScore),correct);
+    countedThisCompletion=true;
+  }
+
+  if(progress.completed){
+    readinessEl.innerHTML=correct>=8
+      ? '<strong style="color:var(--good)">Phase 1 readiness demonstrated.</strong> You can now progress beyond foundations.'
+      : '<strong style="color:var(--accent)">Remain in Phase 1.</strong> Review the questions you missed; the next lesson should target those weaker areas before progression.';
+  }else{
+    readinessEl.textContent='Complete all 10 questions to see your Phase 1 readiness result.';
+  }
+
+  bestStatus.textContent=progress.bestScore==null?'Best: —':`Best: ${progress.bestScore} / ${questions.length}`;
+  attemptStatus.textContent=`Completed attempts: ${Number(progress.attempts||0)}`;
+  saveProgress();
+}
+questions.forEach((q,index)=>q.querySelectorAll('.option').forEach(btn=>btn.addEventListener('click',()=>{
+  q.querySelectorAll('.option').forEach(b=>b.classList.remove('correct','wrong'));
+  const ok=btn.dataset.value===q.dataset.correct;
+  if(ok)btn.classList.add('correct');
+  else{
+    btn.classList.add('wrong');
+    q.querySelector(`.option[data-value="${q.dataset.correct}"]`)?.classList.add('correct');
+  }
+  state.set(index,ok);
+  progress.answers[index]={value:btn.dataset.value,correct:ok};
+  renderFeedback(q,ok);
+  updateScore();
+})));
+document.getElementById('resetBtn').onclick=()=>{
+  state=new Map();
+  progress.answers={};
+  progress.completed=false;
+  progress.currentScore=0;
+  countedThisCompletion=false;
+  questions.forEach(q=>{
+    q.querySelectorAll('.option').forEach(b=>b.classList.remove('correct','wrong'));
+    q.querySelector('.feedback').textContent='';
+  });
+  updateScore();
+};
+readProgress();
+updateScore();
+
+const root=document.getElementById('lesson'),status=document.getElementById('audioStatus'),voiceSelect=document.getElementById('voiceSelect'),reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let voices=[],voice=null,units=[],idx=0,stopped=true,paused=false,active=null,currentUtterance=null;
+
+function savedVoice(){try{return localStorage.getItem(VOICE_KEY)||''}catch(e){return ''}}
+function saveVoice(name){try{localStorage.setItem(VOICE_KEY,name)}catch(e){}}
+function populateVoices(){
+  if(!('speechSynthesis' in window))return;
+  voices=speechSynthesis.getVoices()
+    .filter(v=>/^en(?:-|_)/i.test(v.lang||''))
+    .sort((a,b)=>{const l=(a.lang||'').localeCompare(b.lang||'');return l||a.name.localeCompare(b.name)});
+  voiceSelect.innerHTML='';
+  if(!voices.length){
+    voiceSelect.innerHTML='<option value="">Browser default voice</option>';
+    voice=null;
+    return;
+  }
+  voices.forEach(v=>{
+    const o=document.createElement('option');
+    o.value=v.name;
+    o.textContent=`${v.name} (${v.lang})`;
+    voiceSelect.appendChild(o);
+  });
+  voice=voices.find(v=>v.name===savedVoice())||voices.find(v=>v.default)||voices[0];
+  voiceSelect.value=voice.name;
+}
+voiceSelect.onchange=()=>{
+  voice=voices.find(v=>v.name===voiceSelect.value)||null;
+  if(voice)saveVoice(voice.name);
+  status.textContent=`Voice: ${voice?voice.name:'browser default'}. Speed: 1.00×.`;
+};
+
+function segments(text){
+  const out=[];
+  if(window.Intl&&Intl.Segmenter){
+    for(const item of new Intl.Segmenter('en',{granularity:'sentence'}).segment(text)){
+      const raw=item.segment,lead=raw.length-raw.trimStart().length,trail=raw.length-raw.trimEnd().length,s=raw.trim();
+      if(s)out.push({text:s,start:item.index+lead,end:item.index+raw.length-trail});
+    }
+    return out;
+  }
+  const rx=/[^.!?]+(?:[.!?]+|$)/g;
+  let m;
+  while((m=rx.exec(text))!==null){
+    const raw=m[0],lead=raw.length-raw.trimStart().length,trail=raw.length-raw.trimEnd().length,s=raw.trim();
+    if(s)out.push({text:s,start:m.index+lead,end:m.index+raw.length-trail});
+  }
+  return out;
+}
+function textNodes(el){
+  const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),nodes=[];
+  let n;
+  while((n=w.nextNode()))nodes.push(n);
+  return nodes;
+}
+function makeRange(el,start,end){
+  let off=0,sn=null,so=0,en=null,eo=0;
+  for(const n of textNodes(el)){
+    const next=off+n.nodeValue.length;
+    if(sn===null&&start>=off&&start<=next){sn=n;so=Math.max(0,Math.min(n.nodeValue.length,start-off))}
+    if(en===null&&end>=off&&end<=next){en=n;eo=Math.max(0,Math.min(n.nodeValue.length,end-off));break}
+    off=next;
+  }
+  if(!sn||!en)return null;
+  const r=document.createRange();
+  r.setStart(sn,so);
+  r.setEnd(en,eo);
+  return r;
+}
+function clearHighlight(){
+  if(window.CSS&&CSS.highlights)CSS.highlights.delete('sapiver-reading');
+  if(active)active.classList.remove('speech-active');
+  active=null;
+}
+function highlight(u){
+  clearHighlight();
+  active=u.el;
+  if(window.CSS&&CSS.highlights&&window.Highlight&&u.range)CSS.highlights.set('sapiver-reading',new Highlight(u.range));
+  else u.el.classList.add('speech-active');
+  const r=u.el.getBoundingClientRect();
+  if(r.top<innerHeight*.18||r.bottom>innerHeight*.78){
+    u.el.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'center'});
+  }
+}
+function buildUnits(){
+  const out=[];
+  [...root.querySelectorAll('h2,p,.term,.flow>div')].forEach(el=>{
+    const text=el.textContent||'';
+    segments(text).forEach(s=>out.push({el,text:s.text,range:makeRange(el,s.start,s.end)}));
+  });
+  return out;
+}
+function speak(){
+  if(stopped)return;
+  if(idx>=units.length){
+    stopped=true;
+    paused=false;
+    clearHighlight();
+    status.textContent='Lesson audio finished.';
+    return;
+  }
+  const u=units[idx];
+  highlight(u);
+  currentUtterance=new SpeechSynthesisUtterance(u.text);
+  currentUtterance.rate=1.00;
+  if(voice){
+    currentUtterance.voice=voice;
+    currentUtterance.lang=voice.lang||'en';
+  }else currentUtterance.lang='en';
+  currentUtterance.onstart=()=>{
+    if(!stopped)status.textContent=`Playing… ${idx+1} of ${units.length} · 1.00×`;
+  };
+  currentUtterance.onend=()=>{
+    if(!stopped){idx++;speak()}
+  };
+  currentUtterance.onerror=event=>{
+    if(stopped||event.error==='interrupted'||event.error==='canceled')return;
+    stopped=true;
+    paused=false;
+    clearHighlight();
+    status.textContent='Audio playback could not continue.';
+  };
+  speechSynthesis.speak(currentUtterance);
+}
+document.getElementById('playBtn').onclick=()=>{
+  speechSynthesis.cancel();
+  clearHighlight();
+  units=buildUnits();
+  idx=0;
+  stopped=false;
+  paused=false;
+  setTimeout(speak,60);
+};
+document.getElementById('pauseBtn').onclick=()=>{
+  if(!stopped&&!paused){
+    speechSynthesis.pause();
+    paused=true;
+    status.textContent='Audio paused.';
+  }
+};
+document.getElementById('resumeBtn').onclick=()=>{
+  if(!stopped&&paused){
+    speechSynthesis.resume();
+    paused=false;
+    status.textContent=`Playing… ${idx+1} of ${units.length} · 1.00×`;
+  }
+};
+document.getElementById('stopBtn').onclick=()=>{
+  stopped=true;
+  paused=false;
+  speechSynthesis.cancel();
+  clearHighlight();
+  status.textContent='Audio stopped.';
+};
+if('speechSynthesis' in window){
+  populateVoices();
+  speechSynthesis.addEventListener('voiceschanged',populateVoices);
+}else{
+  status.textContent='Audio is unavailable in this browser.';
+  voiceSelect.disabled=true;
+}
+addEventListener('pagehide',()=>{
+  stopped=true;
+  if('speechSynthesis' in window)speechSynthesis.cancel();
+  clearHighlight();
+});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+Here are the evidence notes for the morning briefing of 2026-09-09:
+
+---
+
+### [0] OpenAI claims solution to Navier–Stokes Millennium Prize Problem
+* **Candidate:** [0]
+* **What is confirmed:** On September 8, 2026, OpenAI published a paper and formal Lean proof claiming that an unreleased internal AI system (utilizing ~10,000 autonomous agents over 88 hours) demonstrated a finite-time blowup/singularity in the 3D incompressible Navier–Stokes equations.
+* **Important caveats:** The 160+ page proof has been formalized in Lean but remains unverified by the broader mathematics community. The claim is accompanied by public controversy: NYU mathematician Tristan Buckmaster and Anthropic researcher Levent Alpöge raised concerns that OpenAI's system may have benefited from their unpublished research via Codex usage. OpenAI denied accessing unpublished data or user files.
+* **Suitable for publication today:** **YES.** Major technological and scientific milestone, with widespread coverage across science and tech media.
+
+---
+
+### [1] Google DeepMind releases AlphaGenome Atlas
+* **Candidate:** [1]
+* **What is confirmed:** Google DeepMind launched AlphaGenome Atlas, a free, 1-petabyte database providing precomputed molecular effect predictions for all ~9 billion possible single-nucleotide DNA variants in the human genome. It introduces the AlphaGenome Variant Impact (AVI) score to help researchers prioritize variants across coding and non-coding DNA.
+* **Important caveats:** Predictions are generated *in silico* by DeepMind's underlying AlphaGenome model and require downstream laboratory/clinical validation, though early collaborations with the Broad Institute and UK Biobank demonstrated positive diagnostic utility.
+* **Suitable for publication today:** **YES.** Significant release in AI applied to biological research and medicine.
+
+---
+
+### [2] Suno rolls out v6 AI music models trained with WMG and BMG
+* **Candidate:** [2]
+* **What is confirmed:** Suno officially launched its v6 series of AI music models (including v6, v6-wild, and v6-mini), trained under licensed catalog partnerships with Warner Music Group (WMG) and BMG. Suno will pay royalties to publishers/labels when their music and opt-in artist catalogs are utilized, and prompting won't allow unlicensed artist cloning.
+* **Important caveats:** Features such as audio downloads and full commercial usage rights are restricted to paid subscription tiers, and legacy models will be phased out.
+* **Suitable for publication today:** **YES.** Major commercial milestone in generative AI music and copyright resolution.
+
+---
+
+### [3] Meta debuts personal AI agent "Muse"
+* **Candidate:** [3]
+* **What is confirmed:** Meta released "Muse," a personal AI agent designed to execute multi-step real-world tasks (filling forms, managing calendars, booking travel, and tracking long-term goals) via a standalone app and WhatsApp integration. Meta launched paid subscription tiers ($20 to $100/month) alongside a free tier.
+* **Important caveats:** Available initially only to US users aged 18+. To mitigate prompt injection and data exposure risks when taking autonomous web actions, Meta runs each user session inside a dedicated virtual machine (VM) in its cloud.
+* **Suitable for publication today:** **YES.** Significant product release in the personal AI agent category.
+
+---
+
+### [6] Terence Tao warns of AI "non-renewably mining" open math problems
+* **Candidate:** [6]
+* **What is confirmed:** Fields Medalist Terence Tao posted on Mathstodon warning that autonomous AI systems deployed at scale threaten to "flatten" open research problems as soon as rumors of active research surface. He cautioned this dynamic could incentivize researchers to stop sharing work openly, undermining open scientific traditions.
+* **Important caveats:** Tao's statement represents expert commentary on academic incentives and AI methodology rather than a corporate product announcement or technical paper release.
+* **Suitable for publication today:** **YES (as secondary commentary/context alongside Candidate [0]).**
+
+---
+
+### [7] Google announces €13B+ AI infrastructure investment in Finland
+* **Candidate:** [7]
+* **What is confirmed:** Google announced plans to invest at least €13 billion ($15.1 billion) over 2027–2028 in Finnish digital/AI infrastructure. The expansion includes constructing three new data center sites in Kajaani, Muhos, and Vaala, expanding its Hamina facility, and securing a 22-year nuclear power purchase agreement (PPA) with Fortum to extend the Loviisa nuclear plant's operational life.
+* **Important caveats:** Capital expenditure spans a multi-year construction window (2027–2028) and remains subject to regional grid connection schedules.
+* **Suitable for publication today:** **YES.** Major infrastructure update representing Google's largest single investment commitment in Europe.
+
+---
+
+### [8] OpenAI releases ChatGPT Images 2.5
+* **Candidate:** [8]
+* **What is confirmed:** OpenAI launched ChatGPT Images 2.5 across ChatGPT and its developer API (`gpt-image-2.5-flare` and `sunburst`). Updates include up to 50% lower generation latency, improved subject preservation across edits, an in-app "Sketch" reference drawing tool, and structured prompt templates.
+* **Important caveats:** This is an incremental model iteration focused on speed, control, and consistency rather than a paradigm shift in underlying base architecture.
+* **Suitable for publication today:** **YES.** High consumer and developer relevance.
+
+---
+
+### [9] Anthropic excludes UK AISI from pre-release testing of Claude Mythos 5.1
+* **Candidate:** [9]
+* **What is confirmed:** The *Financial Times* reported that Anthropic declined to provide pre-release testing access for its specialized life-sciences and cybersecurity model, Claude Mythos 5.1, to the UK's AI Security Institute (AISI), restricting initial access exclusively to vetted US organizations. This is the first time Anthropic has excluded the UK agency prior to a model release.
+* **Important caveats:** Whitehall officials expressed concern that US tech firms are bowing to US administration protectionism and export controls. Anthropic declined to comment directly on the FT report but noted in launch documentation that it is working with the US government to expand partner access internationally.
+* **Suitable for publication today:** **YES.** Highly relevant regulatory and geopolitical story, particularly for a UK audience.
+
+---
+
+### [13] Apple expected to unveil foldable "iPhone Duo" starting at $2,000
+* **Candidate:** [13]
+* **What is confirmed:** Bloomberg's Mark Gurman reported ahead of Apple's September 9 "Surprise and shine" event that Apple's first foldable smartphone will be branded "iPhone Duo," featuring a starting price of roughly $2,000 for 256GB storage, Apple Pencil support, and sales beginning in October.
+* **Important caveats:** The details originate from Bloomberg scoops immediately prior to Apple's live presentation; final specifications, naming, and regional pricing will be confirmed during the keynote.
+* **Suitable for publication today:** **YES.** High consumer technology interest ahead of Apple's launch event.
+
+---
+
+### [14] Anthropic safety lead acknowledges >10% AI extinction risk
+* **Candidate:** [14]
+* **What is confirmed:** Evan Hubinger, Alignment Science lead at Anthropic, publicly stated on X that he personally estimates a >10% chance AI could cause human extinction within the next decade. He acknowledged that Anthropic does not yet have a plan to solve alignment for superintelligence and is "not clearly on track to". His comments came as pretraining researcher Jacob Coxon publicly resigned from Anthropic citing safety concerns.
+* **Important caveats:** Hubinger emphasized that this represents his personal probability estimate rather than an official corporate risk assessment, noting immediate existential risk from existing deployment models remains low.
+* **Suitable for publication today:** **YES.** Significant internal disclosure from a key lab executive amidst high-profile staff resignations.
+
+---
+
+### [15] US states begin rolling back data center tax breaks
+* **Candidate:** [15]
+* **What is confirmed:** The *Wall Street Journal* reported that over 10 US states (including Illinois, Ohio, New Jersey, and Washington) have frozen, paused, or proposed repealing sales tax exemptions and incentives previously granted to tech giants (Amazon, Meta, Google) for data center construction.
+* **Important caveats:** Legislative approaches vary by state: Ohio suspended new sales-tax applications after exemptions exceeded $1.5 billion, while others are introducing direct power consumption surcharges.
+* **Suitable for publication today:** **YES.** Important business and policy trend affecting the economics of the AI infrastructure buildout.
+
+---
+
+### Candidates Excluded / Out of Scope
+* **[4] NYU Navier-Stokes Statement (Tristan Buckmaster):** Merged as context into Candidate [0].
+* **[5] Malone Lam Crypto Racketeering Guilty Plea:** **OUT OF SCOPE** (general financial crime).
+* **[10] ADHD Coding Agent Skill Repo:** **OUT OF SCOPE / Low impact** (minor GitHub utility).
+* **[11] How to Build a Printer:** **OUT OF SCOPE** (personal DIY hardware blog).
+* **[12] CSRC Tightening Humanoid IPOs:** Marked **OUT OF SCOPE**.
+* **[16] China Exports Surge:** **OUT OF SCOPE** (general macroeconomic report).
+* **[17] Seattle Times/Newsday OpenAI Lawsuit:** Secondary updates on ongoing copyright litigation; lower priority than today's breaking releases.
+* **[18] Southeast Asia Clean-Tech Export Commentary:** **OUT OF SCOPE** (general trade commentary).
+* **[19] Houthi Attacks Oil Market (Italian Reuters):** **OUT OF SCOPE** (geopolitics/commodities).

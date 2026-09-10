@@ -91,31 +91,6 @@ jobs:
             : `Releasing current approved candidate ${candidate.slice(0, 12)}… for ${date}.`);
           NODE
 
-      - name: Send reviewed campaign through established Brevo list
-        if: steps.release.outputs.already_sent != 'true'
-        env:
-          BREVO_SEND_MODE: send
-          NEWSLETTER_APPROVED: 'true'
-          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
-          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
-        run: node src/send-daily-newsletter-brevo.mjs
-
-      - name: Persist Brevo send receipt immediately
-        if: steps.release.outputs.already_sent != 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "sapiver-forge-intelligence-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add "news-intelligence/${NEWS_INTELLIGENCE_DATE}/newsletter-metadata.json"
-          if ! git diff --cached --quiet; then
-            git commit -m "Record Daily Brief send ${NEWS_INTELLIGENCE_DATE} [skip ci]"
-            for attempt in 1 2 3; do
-              if git push; then break; fi
-              git pull --rebase origin main
-            done
-          fi
-
       - name: Install locked website dependencies
         run: npm ci --no-audit --no-fund
 
@@ -198,3 +173,28 @@ jobs:
             --site="${NETLIFY_SITE_ID}" \
             --auth="${NETLIFY_AUTH_TOKEN}" \
             --message="Publish Daily Brief, Sapiver Learn, AI Inquisitive Parents and Sapiver Puzzles"
+
+      - name: Send reviewed campaign through established Brevo list
+        if: steps.release.outputs.already_sent != 'true'
+        env:
+          BREVO_SEND_MODE: send
+          NEWSLETTER_APPROVED: 'true'
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+        run: node src/send-daily-newsletter-brevo.mjs
+
+      - name: Persist Brevo send receipt immediately
+        if: steps.release.outputs.already_sent != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "sapiver-forge-intelligence-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "news-intelligence/${NEWS_INTELLIGENCE_DATE}/newsletter-metadata.json"
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Daily Brief send ${NEWS_INTELLIGENCE_DATE} [skip ci]"
+            for attempt in 1 2 3; do
+              if git push; then break; fi
+              git pull --rebase origin main
+            done
+          fi

@@ -70,6 +70,7 @@ jobs:
         run: |
           node --check src/news-intelligence-sources.mjs
           node --check src/generate-news-intelligence.mjs
+          node --check src/daily-email-extras.mjs
           node --check src/send-daily-newsletter-brevo.mjs
           node --check src/brevo-list-resolver.mjs
           node --check src/brevo-campaign-errors.mjs

@@ -4,6 +4,7 @@ import path from "node:path";
 import { collectNewsSources } from "./news-intelligence-sources.mjs";
 import { generateGroundedEvidence, generateStructured } from "./gemini-provider.mjs";
 import { isEditoriallyRelevant, stripOurReadPrefix } from "./news-intelligence-editorial-rules.mjs";
+import { collectDailyEmailExtras, renderDailyEmailExtrasHtml } from "./daily-email-extras.mjs";
 
 const ROOT = process.cwd();
 const DATE = String(process.env.NEWS_INTELLIGENCE_DATE || new Intl.DateTimeFormat("sv-SE", {
@@ -12,6 +13,7 @@ const DATE = String(process.env.NEWS_INTELLIGENCE_DATE || new Intl.DateTimeForma
 const BASE = String(process.env.BLOG_BASE_URL || "https://suite.sapiverpress.co.uk").replace(/\/$/, "");
 const OUT = path.join(ROOT, "news-intelligence", DATE);
 const BRIDGE = path.join(ROOT, "bridge", "news-intelligence", "latest");
+const DAILY_EMAIL_EXTRAS = collectDailyEmailExtras({ root: ROOT, baseUrl: BASE });
 
 if (!/^\d{4}-\d{2}-\d{2}$/.test(DATE)) throw new Error("NEWS_INTELLIGENCE_DATE must use YYYY-MM-DD.");
 
@@ -250,8 +252,9 @@ function renderMarkdown(editorial) {
 }
 
 function renderNewsletterHtml(editorial) {
+  const extrasHtml = renderDailyEmailExtrasHtml(DAILY_EMAIL_EXTRAS);
   const storyHtml = editorial.stories.map((story, index) => `<section style="margin:0 0 28px;padding:0 0 24px;border-bottom:1px solid #d7dedb"><p style="margin:0 0 5px;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:#68756f">${esc(story.category)} · ${esc(story.source)}</p><h2 style="font-size:22px;line-height:1.25;margin:0 0 10px">${esc(story.headline)}</h2><p style="margin:0 0 10px"><strong>What happened:</strong> ${esc(story.confirmed_fact)}</p><p style="margin:0 0 10px"><strong>Why it matters:</strong> ${esc(story.why_it_matters)}</p><p style="margin:0 0 12px"><strong>Our read:</strong> ${esc(story.interpretation)}</p><p style="margin:0"><a href="${esc(story.url)}">Open original source ${index + 1}</a></p></section>`).join("");
-  return `<!doctype html><html><body style="margin:0;background:#f4f1e8;color:#10251f;font:16px/1.6 Arial,sans-serif"><main style="max-width:680px;margin:auto;background:#fff;padding:32px"><p style="text-transform:uppercase;letter-spacing:.12em;font-size:12px">Sapiver Forge Daily Brief · ${esc(DATE)}</p><h1 style="font-size:34px;line-height:1.1">${esc(editorial.publication_title)}</h1><p>${esc(editorial.intro)}</p><hr style="border:0;border-top:1px solid #d7dedb;margin:28px 0">${storyHtml}<section style="background:#f4f1e8;padding:20px;margin:26px 0"><h2 style="margin-top:0">Practical takeaway</h2><p>${esc(editorial.practical_takeaway)}</p><h3>What to watch next</h3><p>${esc(editorial.watch_next)}</p></section><p><a href="${BASE}/daily-brief/">Sapiver Forge Daily Brief archive</a> · <a href="${BASE}/podcast/">Weekly podcast</a></p><p><strong>Human-led. AI-empowered.</strong></p><p style="font-size:13px;color:#5b665f">Confirmed reporting and Sapiver Forge interpretation are labelled separately. You are receiving this because you subscribed to Sapiver Forge. <a href="{{ unsubscribe }}">Unsubscribe</a>.</p></main></body></html>`;
+  return `<!doctype html><html><body style="margin:0;background:#f4f1e8;color:#10251f;font:16px/1.6 Arial,sans-serif"><main style="max-width:680px;margin:auto;background:#fff;padding:32px"><p style="text-transform:uppercase;letter-spacing:.12em;font-size:12px">Sapiver Forge Daily Brief · ${esc(DATE)}</p><h1 style="font-size:34px;line-height:1.1">${esc(editorial.publication_title)}</h1><p>${esc(editorial.intro)}</p><hr style="border:0;border-top:1px solid #d7dedb;margin:28px 0">${storyHtml}${extrasHtml}<section style="background:#f4f1e8;padding:20px;margin:26px 0"><h2 style="margin-top:0">Practical takeaway</h2><p>${esc(editorial.practical_takeaway)}</p><h3>What to watch next</h3><p>${esc(editorial.watch_next)}</p></section><p><a href="${BASE}/daily-brief/">Sapiver Forge Daily Brief archive</a> · <a href="${BASE}/podcast/">Weekly podcast</a></p><p><strong>Human-led. AI-empowered.</strong></p><p style="font-size:13px;color:#5b665f">Confirmed reporting and Sapiver Forge interpretation are labelled separately. You are receiving this because you subscribed to Sapiver Forge. <a href="{{ unsubscribe }}">Unsubscribe</a>.</p></main></body></html>`;
 }
 
 function buildSocial(editorial) {
@@ -329,6 +332,7 @@ async function main() {
     stories: editorial.stories,
     practical_takeaway: editorial.practical_takeaway,
     watch_next: editorial.watch_next,
+    daily_email_extras: DAILY_EMAIL_EXTRAS,
     social
   };
   const manifest = { ...manifestCore, candidate_id: hashObject(manifestCore) };

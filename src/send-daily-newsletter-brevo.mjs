@@ -96,6 +96,26 @@ if (mode === "draft") {
   process.exit(0);
 }
 
+const updateResponse = await fetch(`https://api.brevo.com/v3/emailCampaigns/${campaignId}`, {
+  method: "PUT",
+  headers,
+  body: JSON.stringify({
+    name: `Sapiver Forge Daily Brief ${date}`,
+    subject: metadata.subject || `Sapiver Forge Daily Brief — ${date}`,
+    sender: { name: senderName, email: senderEmail },
+    htmlContent,
+    recipients: { listIds: [listId] }
+  })
+});
+const updateText = await updateResponse.text();
+if (!updateResponse.ok) throw new Error(`Brevo campaign update failed (${updateResponse.status}): ${updateText}`);
+Object.assign(metadata, {
+  campaign_updated_at: new Date().toISOString(),
+  candidate_id: metadata.candidate_id
+});
+fs.writeFileSync(metaPath, JSON.stringify(metadata, null, 2) + "\n");
+console.log(`Updated Brevo campaign ${campaignId} with the final repository newsletter HTML.`);
+
 const sendResponse = await fetch(`https://api.brevo.com/v3/emailCampaigns/${campaignId}/sendNow`, {
   method: "POST",
   headers

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#124b40">
+<title>Use-It-Soon Food Tracker | AI Inquisitive Parents</title>
+<style>
+:root{--ink:#173b35;
+--green:#07594b;
+--gold:#d2aa54;
+--cream:#fffaf0;
+--mist:#e8f1eb;
+--coral:#e77762;
+--red:#9b3030}*{box-sizing:border-box}body{margin:0;
+background:linear-gradient(145deg,#0a4d41,#183a34);
+font:16px/1.45 system-ui;
+color:var(--ink)}main{max-width:760px;
+margin:auto;
+padding:18px}.card{background:var(--cream);
+border:2px solid #d8bd79;
+border-radius:24px;
+padding:21px;
+margin:14px 0;
+box-shadow:0 14px 34px #0017}h1,h2,p{margin-top:0}.eyebrow{font-size:.76rem;
+letter-spacing:.12em;
+text-transform:uppercase;
+font-weight:850;
+color:var(--green)}button,input,select{font:inherit;
+border-radius:12px;
+padding:12px;
+border:1px solid #9baa9f}button{border:0;
+background:var(--green);
+color:white;
+font-weight:800;
+cursor:pointer}.secondary{background:white;
+color:var(--green);
+border:2px solid var(--green)}.danger{background:white;
+color:var(--red);
+border:2px solid var(--red)}button:focus-visible,input:focus-visible,select:focus-visible{outline:4px solid #f1c45d;
+outline-offset:2px}.form{display:grid;
+gap:11px}.grid{display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:10px}.form label{display:grid;
+gap:5px;
+font-weight:750}.row{display:flex;
+gap:9px;
+flex-wrap:wrap}.row>*{flex:1}.filters{display:flex;
+gap:8px;
+overflow:auto;
+padding:2px 0 14px}.filters button{white-space:nowrap;
+background:var(--mist);
+color:var(--ink)}.filters button.active{background:var(--green);
+color:white}.stats{display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:9px;
+margin:14px 0}.stat{text-align:center;
+background:var(--mist);
+padding:12px;
+border-radius:15px}.stat strong{display:block;
+font-size:1.5rem}.group{margin-top:18px}.item{display:grid;
+grid-template-columns:auto 1fr auto;
+align-items:center;
+gap:12px;
+background:white;
+border:1px solid #dce1dc;
+border-radius:16px;
+padding:13px;
+margin:9px 0}.item.today{border-left:8px solid var(--coral)}.item.soon{border-left:8px solid var(--gold)}.item.later{border-left:8px solid #70a587}.item .icon{font-size:1.9rem}.item strong,.item small{display:block}.item small{color:#52645f}.actions{display:flex;
+gap:6px}.actions button{padding:8px 10px}.empty{text-align:center;
+background:var(--mist);
+padding:24px;
+border-radius:16px}.notice{min-height:1.4em;
+color:var(--green);
+font-weight:750}.prompt{background:#183d36;
+color:white}.prompt button{background:var(--gold);
+color:var(--ink)}.small{font-size:.9rem;
+color:#4d625d}a{color:inherit}@media(max-width:560px){.card{padding:17px}.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr 1fr}.item{grid-template-columns:auto 1fr}.actions{grid-column:1/-1}.actions button{flex:1}}
+</style>
+</head>
+<body><main>
+<section class="card"><p class="eyebrow">AI Inquisitive Parents · Day 013</p><h1>Use-It-Soon Food Tracker</h1><p>Add food already at home and see what needs using first—without another account or subscription.</p><div class="stats"><div class="stat"><strong id="todayCount">0</strong>use today</div><div class="stat"><strong id="soonCount">0</strong>use soon</div><div class="stat"><strong id="totalCount">0</strong>total</div></div></section>
+<section class="card"><h2>Add food</h2><form id="form" class="form"><div class="grid"><label>Food item<input id="name" maxlength="50" required placeholder="Yoghurt"></label><label>Icon<input id="icon" maxlength="4" value="🥕"></label><label>Quantity<input id="qty" maxlength="20" placeholder="4 pots"></label></div><div class="grid"><label>Date type<select id="dateType"><option>Use by</option><option>Best before</option><option>Opened on</option><option>Use soon</option></select></label><label>Date<input id="date" type="date" required></label><label>Stored in<select id="place"><option>Fridge</option><option>Freezer</option><option>Cupboard</option><option>Fruit bowl</option><option>Other</option></select></label></div><button type="submit" id="saveButton">Add item</button><button type="button" class="secondary" id="cancel" hidden>Cancel edit</button></form><p class="notice" id="notice" aria-live="polite"></p><p class="small">Always follow the label and use your own judgement about food safety. This tracker does not determine whether food is safe to eat.</p></section>
+<section class="card"><h2>What to use first</h2><div class="filters" id="filters"></div><div id="list"></div></section>
+<section class="card"><h2>Privacy and control</h2><p>Food names and dates stay in this browser’s local storage. Nothing is uploaded. Clearing browser data can remove the list.</p><button class="danger" id="clear">Clear all items</button></section>
+<section class="card prompt"><h2>Build your own with AI</h2><p id="prompt">Build me a mobile-friendly food-date tracker in one standalone HTML file. Let me add food names, quantities, date types, dates, storage locations and emoji. Automatically sort items into use today, use soon and later, allow editing, marking used and filtering, and save everything locally in the browser. Include an accurate food-safety disclaimer.</p><button id="copy">Copy this prompt</button></section>
+<p style="color:white;
+text-align:center"><a href="https://suite.sapiverpress.co.uk">Back to Sapiver Press</a></p>
+</main><script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),KEY='aip-use-it-soon-v1';
+let items=[],editId=null,filter='All';
+try{items=JSON.parse(localStorage.getItem(KEY)||'[]')}catch{}const save=()=>localStorage.setItem(KEY,JSON.stringify(items));
+const days=d=>Math.ceil((new Date(d+'T23:59:59')-new Date())/86400000);
+const band=i=>{const n=days(i.date);
+return n<=0?'today':n<=3?'soon':'later'};
+const bandName={today:'Use today',soon:'Use soon',later:'Later'};
+function setDefault(){if(!$('#date').value){const d=new Date();
+d.setDate(d.getDate()+2);
+$('#date').value=d.toISOString().slice(0,10)}}function render(){items.sort((a,b)=>a.date.localeCompare(b.date));
+const counts={today:0,soon:0,later:0};
+items.forEach(i=>counts[band(i)]++);
+$('#todayCount').textContent=counts.today;
+$('#soonCount').textContent=counts.soon;
+$('#totalCount').textContent=items.length;
+const choices=['All','Fridge','Freezer','Cupboard','Fruit bowl','Other'];
+$('#filters').replaceChildren(...choices.map(x=>{const b=document.createElement('button');
+b.textContent=x;
+b.className=x===filter?'active':'';
+b.onclick=()=>{filter=x;
+render()};
+return b}));
+const shown=items.filter(i=>filter==='All'||i.place===filter),list=$('#list');
+if(!shown.length){const e=document.createElement('div');
+e.className='empty';
+e.textContent=items.length?'No items in this location.':'Add your first item above.';
+list.replaceChildren(e);
+return}list.replaceChildren(...['today','soon','later'].flatMap(group=>{const members=shown.filter(i=>band(i)===group);
+if(!members.length)return[];
+const section=document.createElement('section');
+section.className='group';
+const h=document.createElement('h3');
+h.textContent=bandName[group];
+section.append(h,...members.map(makeItem));
+return[section]}))}function makeItem(i){const el=document.createElement('article');
+el.className='item '+band(i);
+const icon=document.createElement('span');
+icon.className='icon';
+icon.textContent=i.icon||'🥕';
+const text=document.createElement('div');
+const strong=document.createElement('strong');
+strong.textContent=i.name+(i.qty?' · '+i.qty:'');
+const small=document.createElement('small');
+const remaining=days(i.date);
+small.textContent=`${i.dateType}: ${new Date(i.date+'T12:00:00').toLocaleDateString()} · ${i.place} · ${remaining<0?Math.abs(remaining)+' day(s) past':remaining===0?'today':remaining+' day(s)'}`;
+text.append(strong,small);
+const actions=document.createElement('div');
+actions.className='actions';
+const used=document.createElement('button');
+used.textContent='Used';
+used.onclick=()=>{items=items.filter(x=>x.id!==i.id);
+save();
+render()};
+const edit=document.createElement('button');
+edit.className='secondary';
+edit.textContent='Edit';
+edit.onclick=()=>startEdit(i);
+actions.append(used,edit);
+el.append(icon,text,actions);
+return el}function startEdit(i){editId=i.id;
+$('#name').value=i.name;
+$('#icon').value=i.icon;
+$('#qty').value=i.qty;
+$('#dateType').value=i.dateType;
+$('#date').value=i.date;
+$('#place').value=i.place;
+$('#saveButton').textContent='Save changes';
+$('#cancel').hidden=false;
+scrollTo({top:0,behavior:'smooth'})}function resetForm(){$('#form').reset();
+editId=null;
+$('#icon').value='🥕';
+$('#saveButton').textContent='Add item';
+$('#cancel').hidden=true;
+setDefault()}$('#form').onsubmit=e=>{e.preventDefault();
+const wasEdit=editId!==null;
+const item={id:editId||Date.now(),name:$('#name').value.trim(),icon:$('#icon').value.trim()||'🥕',qty:$('#qty').value.trim(),dateType:$('#dateType').value,date:$('#date').value,place:$('#place').value};
+if(editId)items=items.map(i=>i.id===editId?item:i);
+else items.push(item);
+save();
+resetForm();
+render();
+$('#notice').textContent=wasEdit?'Item updated.':'Item added.'};
+$('#cancel').onclick=resetForm;
+$('#clear').onclick=()=>{items=[];
+save();
+render();
+$('#notice').textContent='All items cleared.'};
+$('#copy').onclick=async()=>{try{await navigator.clipboard.writeText($('#prompt').textContent);
+$('#copy').textContent='Copied!'}catch{$('#copy').textContent='Select and copy the prompt'}};
+setDefault();
+render()})();
+
+</script></body></html>

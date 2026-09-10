@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Trace an AI request end to end through input validation, deterministic logic, retrieval, model calls, tool use, validation, release controls, observability and data handling.">
+<title>Sapiver Learn — Day 21: Tracing an AI Request End to End</title>
+<style>
+:root{--bg:#0f1115;--panel:#171a21;--panel-2:#1e232c;--text:#f3f5f7;--muted:#aeb7c2;--accent:#ff8a3d;--accent-soft:#3a2418;--good:#51c878;--bad:#ff6b6b;--border:#303744;--max:880px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+main{width:min(var(--max),calc(100% - 28px));margin:0 auto;padding:28px 0 60px}
+a{color:var(--accent)}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.brand{font-weight:700}.brand a{color:inherit;text-decoration:none}
+.pill{padding:5px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:.9rem}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:22px;margin:16px 0}
+h1,h2,h3{line-height:1.25}h1{font-size:clamp(1.9rem,5vw,3rem);margin:.2rem 0 1rem}h2{font-size:1.35rem;margin-top:0}h3{font-size:1.05rem}
+p{margin:.75rem 0}.muted{color:var(--muted)}
+.callout{border-left:4px solid var(--accent);background:var(--accent-soft);padding:14px 16px;border-radius:10px;margin:18px 0}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;margin:18px 0 8px}
+button,select{border:1px solid var(--border);background:var(--panel-2);color:var(--text);padding:11px 15px;border-radius:10px;font-size:1rem}
+button{cursor:pointer}.primary{background:var(--accent);color:#1a120c;border-color:var(--accent);font-weight:700}
+.voice-wrap{display:flex;flex-direction:column;gap:4px;flex:1 1 260px}.voice-wrap label{color:var(--muted)}.voice-wrap select{width:100%}
+.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:16px 0}
+.flow>div,.term{background:var(--panel-2);border:1px solid var(--border);border-radius:10px;padding:12px}
+.flow>div{text-align:center;display:flex;align-items:center;justify-content:center;min-height:78px}
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:10px}.term strong{display:block}
+.question{margin:20px 0;padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--panel-2)}
+.option{display:block;width:100%;text-align:left;margin:8px 0;background:#202632}
+.option.correct{border-color:var(--good);background:#163120}.option.wrong{border-color:var(--bad);background:#351c1c}
+.feedback{min-height:1.4em;margin-top:10px;font-weight:600}.resource-link{display:inline-block;margin-top:8px;font-weight:600;text-decoration:none}
+.score{font-size:1.15rem;font-weight:700}.progress-row{display:flex;flex-wrap:wrap;gap:10px 18px;color:var(--muted);margin:.5rem 0 1rem}
+.remediation{margin-top:12px;padding:12px;border:1px solid var(--border);border-radius:10px;background:var(--panel-2)}
+.speech-active{background:var(--accent-soft);outline:2px solid var(--accent);outline-offset:4px;border-radius:6px}
+::highlight(sapiver-reading){background-color:rgba(255,138,61,.38);color:var(--text)}
+footer{margin-top:28px;color:var(--muted);font-size:.92rem}
+@media(max-width:700px){.terms,.flow{grid-template-columns:1fr}.controls>button{flex:1 1 130px}.voice-wrap{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body><main>
+<div class="topbar"><div class="brand"><a href="../../">Sapiver Learn</a></div><div class="pill">Phase 1 · Day 21 · Request Tracing</div></div>
+
+<section>
+<h1>Tracing an AI request end to end</h1>
+<p class="muted">Estimated learning time: 8–10 minutes.</p>
+<div class="controls">
+<button class="primary" id="playBtn">▶ Listen</button>
+<button id="pauseBtn">⏸ Pause</button>
+<button id="resumeBtn">▶ Resume</button>
+<button id="stopBtn">■ Stop</button>
+<div class="voice-wrap"><label for="voiceSelect">Voice</label><select id="voiceSelect"><option value="">Loading voices…</option></select></div>
+</div>
+<div id="audioStatus" class="muted" aria-live="polite">Ready to listen. Speed: 1.00×.</div>
+<div class="callout"><strong>Core mental model:</strong><br>When an AI result is wrong, slow, expensive or unsafe, trace the request through the whole system instead of blaming the model first. At each boundary ask: what came in, what decision was made, what evidence or tool was used, what controls applied, and what left the boundary?</div>
+</section>
+
+<section id="lesson">
+<div class="card"><h2>1. Draw the request path before diagnosing it</h2><p>An AI feature usually contains more stages than the user can see.</p><p>A request may pass through authentication, input validation, deterministic rules, retrieval, a model call, tools, output validation, approval and storage before the user sees a result.</p><p>Tracing means following that path in order and identifying which component produced each important decision or transformation.</p></div>
+
+<div class="card"><h2>2. Start at the input and trust boundary</h2><p>Record what entered the system and where it came from.</p><p>User text, uploaded files, retrieved documents and third-party API responses have different trust properties. None should silently gain authority merely because a model can read them.</p><p>At this stage, check authentication, permissions, expected format and whether unnecessary personal data is being collected.</p></div>
+
+<div class="card"><h2>3. Identify deterministic decisions</h2><p>Some steps should have one predictable answer.</p><p>Examples include checking whether an account exists, comparing a refund amount with a fixed threshold, validating a date format or enforcing a permission rule.</p><p>If one of these steps fails, changing the model prompt is the wrong fix. The deterministic rule or its data needs attention.</p></div>
+
+<div class="card"><h2>4. Trace retrieval separately from generation</h2><p>For a RAG system, first inspect what the retrieval layer returned.</p><p>If the correct evidence never reached the model, the failure is upstream of generation. If the correct evidence was present but the answer misused it, the model, prompt or answer-validation stage needs investigation.</p><p>This separation turns a vague “AI got it wrong” report into a specific engineering diagnosis.</p></div>
+
+<div class="card"><h2>5. Make tool calls visible</h2><p>When an agent uses tools, record which tool was selected, which arguments were sent, what permissions applied and what the tool returned.</p><p>A model may choose the wrong tool, construct invalid arguments or correctly call a tool that itself returns bad data.</p><p>These are different failure modes and should not be collapsed into one model-quality score.</p></div>
+
+<div class="card"><h2>6. Validate before release or action</h2><p>The model's output is not automatically the final product.</p><p>Structured output can be checked against a schema. Claims can be checked against retrieved evidence. Proposed actions can be checked against business rules and permissions.</p><p>High-impact actions can stop at a human approval gate rather than executing immediately.</p></div>
+
+<div class="card"><h2>7. Trace latency and cost by stage</h2><p>End-to-end response time may include database calls, retrieval, several model calls, tool use and retries.</p><p>Record stage timings and usage separately so you can see what is actually expensive or slow.</p><p>A three-second delay caused by retrieval will not be fixed by choosing a faster model.</p></div>
+
+<div class="card"><h2>8. Record failure handling as part of the trace</h2><p>A reliable trace should show timeouts, retries, fallbacks and circuit-breaker decisions.</p><p>If the preferred model times out and the system falls back to source passages, that fallback is part of the successful system behaviour.</p><p>Observability should explain not only what failed, but also which recovery path ran afterward.</p></div>
+
+<div class="card"><h2>9. Finish with the data lifecycle</h2><p>The request is not necessarily finished when the response appears.</p><p>Ask what is stored afterward: conversation content, logs, tool results, embeddings, evaluation samples or analytics.</p><p>Each stored copy should have a purpose, an access policy and a retention rule. Tracing data flow therefore connects reliability and debugging with privacy.</p></div>
+
+<div class="card"><h2>Worked example: diagnosing a wrong leave-policy answer</h2>
+<p>An employee asks, “How much notice do I need to give for annual leave?” The assistant answers “two weeks”, but the current policy says four weeks.</p>
+<div class="flow"><div>Input accepted</div><div>User authorised</div><div>Policy retrieval</div><div>Model answer</div><div>Evidence check</div><div>Response released</div></div>
+<p>First inspect retrieval. If it returned an old two-week policy, the model may have used its supplied evidence correctly and the real fault is stale indexing or document filtering.</p>
+<p>If the current four-week policy was supplied but the model answered two weeks, inspect prompting and generation.</p>
+<p>If the draft correctly said four weeks but a later formatting or templating step changed the value, the failure happened after the model.</p>
+<p>The trace identifies the component to fix and creates a regression test for the same scenario.</p>
+</div>
+
+<div class="card"><h2>Why this matters</h2><p>Phase 1 introduced models, APIs, retrieval, agents, automation, security, evaluation, cost, reliability and privacy.</p><p>Request tracing is where those concepts become one practical diagnostic method.</p><p>If you can follow a request across boundaries and explain where decisions, evidence, permissions and failures occur, you are reasoning about the AI product as a system rather than a black box.</p></div>
+
+<div class="card"><h2>Key terms</h2><div class="terms">
+<div class="term"><strong>Trace</strong>A record of the important stages, decisions, calls and results in a request.</div>
+<div class="term"><strong>Span</strong>A timed unit of work inside a trace, such as retrieval or a model call.</div>
+<div class="term"><strong>Trust boundary</strong>A point where data or authority crosses between components with different trust levels.</div>
+<div class="term"><strong>Upstream failure</strong>A failure earlier in the request path that affects later stages.</div>
+<div class="term"><strong>Postcondition</strong>A condition that should be true after a step completes.</div>
+<div class="term"><strong>Observability</strong>The ability to understand system behaviour from traces, logs, metrics and related signals.</div>
+<div class="term"><strong>Regression test</strong>A test that checks whether a previously solved failure remains solved.</div>
+<div class="term"><strong>Data lifecycle</strong>The path data takes through collection, use, storage, access and deletion.</div>
+</div></div>
+</section>
+
+<section class="card" id="quiz">
+<h2>Day 21 knowledge check</h2>
+<p class="muted">Six questions. These are scenario-based because this lesson is consolidating Phase 1 system thinking.</p>
+
+<div class="question" data-correct="B" data-explanation="Tracing starts by identifying the full request path and the boundaries the request crosses." data-remediation="Review lesson 1 and sketch the stages between user input and final output.">
+<h3>1. A support assistant gives a wrong answer. What should you inspect first?</h3>
+<button class="option" data-value="A">A. Replace the model immediately</button>
+<button class="option" data-value="B">B. Trace the request path to locate the failing stage</button>
+<button class="option" data-value="C">C. Increase the prompt length</button>
+<button class="option" data-value="D">D. Add more retries to every step</button>
+<div class="feedback"></div></div>
+
+<div class="question" data-correct="C" data-explanation="If retrieval supplied stale evidence, the primary failure is in retrieval, indexing or document selection rather than generation." data-remediation="Review lesson 4 and separate evidence retrieval from answer generation.">
+<h3>2. A RAG assistant answers from an outdated policy because retrieval returned the old document. Where is the primary failure?</h3>
+<button class="option" data-value="A">A. Speech synthesis</button>
+<button class="option" data-value="B">B. Output styling</button>
+<button class="option" data-value="C">C. Retrieval or document selection</button>
+<button class="option" data-value="D">D. Human approval</button>
+<div class="feedback"></div></div>
+
+<div class="question" data-correct="A" data-explanation="Fixed permission rules belong in deterministic application controls, not in probabilistic model judgement." data-remediation="Review lesson 3 and identify which decisions should have one predictable answer.">
+<h3>3. Which decision should normally be deterministic?</h3>
+<button class="option" data-value="A">A. Whether the current user has permission to delete a record</button>
+<button class="option" data-value="B">B. How to summarise an ambiguous complaint</button>
+<button class="option" data-value="C">C. How to phrase a friendly explanation</button>
+<button class="option" data-value="D">D. Which themes appear in free-form feedback</button>
+<div class="feedback"></div></div>
+
+<div class="question" data-correct="D" data-explanation="A complete agent trace records the tool choice, arguments, permissions and returned result." data-remediation="Review lesson 5 and list the four things you need to inspect around a tool call.">
+<h3>4. What information is most useful when diagnosing an agent tool failure?</h3>
+<button class="option" data-value="A">A. Only the final model answer</button>
+<button class="option" data-value="B">B. Only the model name</button>
+<button class="option" data-value="C">C. Only how long the user waited</button>
+<button class="option" data-value="D">D. Tool selected, arguments, permissions and tool result</button>
+<div class="feedback"></div></div>
+
+<div class="question" data-correct="B" data-explanation="Stage-level timing shows which component is creating the delay, so optimisation targets the real bottleneck." data-remediation="Review lesson 7 and distinguish total latency from the latency of each stage.">
+<h3>5. Why record latency by stage?</h3>
+<button class="option" data-value="A">A. To prove the model is always the slowest component</button>
+<button class="option" data-value="B">B. To identify the actual bottleneck instead of guessing</button>
+<button class="option" data-value="C">C. To remove the need for evaluation</button>
+<button class="option" data-value="D">D. To guarantee a zero-latency response</button>
+<div class="feedback"></div></div>
+
+<div class="question" data-correct="C" data-explanation="A request trace should extend to data handling so stored copies have a purpose, access policy and retention rule." data-remediation="Review lesson 9 and identify every copy of request data that remains after the response.">
+<h3>6. What should you check after the response has been returned?</h3>
+<button class="option" data-value="A">A. Nothing; the request is finished</button>
+<button class="option" data-value="B">B. Whether the model can retain everything indefinitely</button>
+<button class="option" data-value="C">C. What data was stored, why, who can access it and how long it is retained</button>
+<button class="option" data-value="D">D. Only the page colour</button>
+<div class="feedback"></div></div>
+
+<p class="score" id="score">Score: 0 / 6</p>
+<div class="progress-row"><span id="answeredStatus">Answered: 0 / 6</span><span id="bestStatus">Best: —</span><span id="attemptStatus">Completed attempts: 0</span></div>
+<div class="remediation" id="remediation">Answer all six questions to see targeted remediation.</div>
+<button id="resetBtn">Reset quiz</button>
+</section>
+
+<section class="callout"><strong>Progression note:</strong><br>This lesson strengthens Phase 1 integration after the systems checkpoint. Progress beyond Phase 1 should follow demonstrated readiness, not simply the passage of another day.</section>
+
+<footer>Sapiver Learn · Phase 1 · Day 21<br><a href="../../">← Back to Sapiver Learn</a></footer>
+</main>
+
+<script>
+(() => {
+const STORAGE_KEY='sapiverLearnDay021';
+const VOICE_KEY='sapiverLearnVoice';
+const questions=[...document.querySelectorAll('.question')];
+const scoreEl=document.getElementById('score');
+const answeredStatus=document.getElementById('answeredStatus');
+const bestStatus=document.getElementById('bestStatus');
+const attemptStatus=document.getElementById('attemptStatus');
+const remediationEl=document.getElementById('remediation');
+
+let state=new Map();
+let progress={completion:false,currentScore:0,lastScore:null,bestScore:null,attempts:0,answers:{}};
+let storageAvailable=true;
+let countedThisCompletion=false;
+
+function renderFeedback(q,isCorrect){
+  const feedback=q.querySelector('.feedback');
+  if(isCorrect){
+    feedback.innerHTML='<span style="color:var(--good)">Correct.</span>';
+    return;
+  }
+  feedback.innerHTML='<span style="color:var(--bad)">Not quite.</span> '+q.dataset.explanation+
+    '<br><span class="muted">Remediation: '+q.dataset.remediation+'</span>';
+}
+function loadProgress(){
+  try{
+    const raw=localStorage.getItem(STORAGE_KEY);
+    if(!raw)return;
+    progress=Object.assign(progress,JSON.parse(raw)||{});
+    Object.entries(progress.answers||{}).forEach(([i,a])=>{
+      const q=questions[Number(i)];
+      if(!q)return;
+      state.set(Number(i),a.correct===true);
+      const buttons=[...q.querySelectorAll('.option')];
+      const chosen=buttons.find(b=>b.dataset.value===a.value);
+      if(chosen){
+        chosen.classList.add(a.correct?'correct':'wrong');
+        if(!a.correct){
+          buttons.find(b=>b.dataset.value===q.dataset.correct)?.classList.add('correct');
+        }
+      }
+      renderFeedback(q,a.correct===true);
+    });
+    countedThisCompletion=Boolean(progress.completion&&Object.keys(progress.answers||{}).length===questions.length);
+  }catch(e){storageAvailable=false}
+}
+function saveProgress(){
+  if(!storageAvailable)return;
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(progress))}
+  catch(e){storageAvailable=false}
+}
+function updateScore(){
+  let correct=0;
+  state.forEach(v=>{if(v)correct++});
+  const answered=state.size;
+  progress.currentScore=correct;
+  progress.completion=answered===questions.length;
+
+  scoreEl.textContent=`Score: ${correct} / ${questions.length}`;
+  answeredStatus.textContent=`Answered: ${answered} / ${questions.length}`;
+
+  if(progress.completion&&!countedThisCompletion){
+    progress.attempts=Number(progress.attempts||0)+1;
+    progress.lastScore=correct;
+    progress.bestScore=progress.bestScore==null?correct:Math.max(Number(progress.bestScore),correct);
+    countedThisCompletion=true;
+  }
+
+  if(progress.completion){
+    const missed=questions
+      .map((q,i)=>state.get(i)===false?q.dataset.remediation:null)
+      .filter(Boolean);
+    remediationEl.innerHTML=missed.length
+      ? '<strong>Targeted review:</strong> '+missed.join(' ')
+      : '<strong style="color:var(--good)">Strong result.</strong> You traced the Phase 1 system boundaries correctly across all six scenarios.';
+  }else{
+    remediationEl.textContent='Answer all six questions to see targeted remediation.';
+  }
+
+  bestStatus.textContent=progress.bestScore==null?'Best: —':`Best: ${progress.bestScore} / ${questions.length}`;
+  attemptStatus.textContent=`Completed attempts: ${Number(progress.attempts||0)}`;
+  saveProgress();
+}
+
+questions.forEach((q,index)=>{
+  q.querySelectorAll('.option').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      q.querySelectorAll('.option').forEach(b=>b.classList.remove('correct','wrong'));
+      const isCorrect=btn.dataset.value===q.dataset.correct;
+      if(isCorrect){
+        btn.classList.add('correct');
+      }else{
+        btn.classList.add('wrong');
+        q.querySelector(`.option[data-value="${q.dataset.correct}"]`)?.classList.add('correct');
+      }
+      state.set(index,isCorrect);
+      progress.answers[index]={value:btn.dataset.value,correct:isCorrect};
+      renderFeedback(q,isCorrect);
+      updateScore();
+    });
+  });
+});
+
+document.getElementById('resetBtn').addEventListener('click',()=>{
+  state=new Map();
+  progress.answers={};
+  progress.completion=false;
+  progress.currentScore=0;
+  countedThisCompletion=false;
+  questions.forEach(q=>{
+    q.querySelectorAll('.option').forEach(b=>b.classList.remove('correct','wrong'));
+    q.querySelector('.feedback').textContent='';
+  });
+  updateScore();
+});
+
+loadProgress();
+updateScore();
+
+const lessonRoot=document.getElementById('lesson');
+const audioStatus=document.getElementById('audioStatus');
+const voiceSelect=document.getElementById('voiceSelect');
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let englishVoices=[];
+let selectedVoice=null;
+let speechUnits=[];
+let currentSpeechIndex=0;
+let speechStopped=true;
+let speechPaused=false;
+let activeBlock=null;
+let currentUtterance=null;
+
+function getSavedVoice(){
+  try{return localStorage.getItem(VOICE_KEY)||''}
+  catch(e){return ''}
+}
+function saveVoice(name){
+  try{localStorage.setItem(VOICE_KEY,name)}
+  catch(e){}
+}
+function populateVoices(){
+  if(!('speechSynthesis' in window))return;
+  englishVoices=speechSynthesis.getVoices()
+    .filter(v=>/^en(?:-|_)/i.test(v.lang||''))
+    .sort((a,b)=>{
+      const byLang=(a.lang||'').localeCompare(b.lang||'');
+      return byLang||a.name.localeCompare(b.name);
+    });
+
+  voiceSelect.innerHTML='';
+  if(!englishVoices.length){
+    const option=document.createElement('option');
+    option.value='';
+    option.textContent='Browser default English voice';
+    voiceSelect.appendChild(option);
+    selectedVoice=null;
+    return;
+  }
+
+  englishVoices.forEach(v=>{
+    const option=document.createElement('option');
+    option.value=v.name;
+    option.textContent=`${v.name} (${v.lang})`;
+    voiceSelect.appendChild(option);
+  });
+
+  const saved=getSavedVoice();
+  selectedVoice=
+    englishVoices.find(v=>v.name===saved) ||
+    englishVoices.find(v=>v.default) ||
+    englishVoices[0];
+  voiceSelect.value=selectedVoice.name;
+}
+voiceSelect.addEventListener('change',()=>{
+  selectedVoice=englishVoices.find(v=>v.name===voiceSelect.value)||null;
+  if(selectedVoice)saveVoice(selectedVoice.name);
+  audioStatus.textContent=`Voice: ${selectedVoice?selectedVoice.name:'browser default'}. Speed: 1.00×.`;
+});
+
+function sentenceSegments(text){
+  const results=[];
+  if(window.Intl&&Intl.Segmenter){
+    for(const item of new Intl.Segmenter('en',{granularity:'sentence'}).segment(text)){
+      const raw=item.segment;
+      const leading=raw.length-raw.trimStart().length;
+      const trailing=raw.length-raw.trimEnd().length;
+      const spoken=raw.trim();
+      if(spoken){
+        results.push({
+          text:spoken,
+          start:item.index+leading,
+          end:item.index+raw.length-trailing
+        });
+      }
+    }
+    return results;
+  }
+
+  const pattern=/[^.!?]+(?:[.!?]+|$)/g;
+  let match;
+  while((match=pattern.exec(text))!==null){
+    const raw=match[0];
+    const leading=raw.length-raw.trimStart().length;
+    const trailing=raw.length-raw.trimEnd().length;
+    const spoken=raw.trim();
+    if(spoken){
+      results.push({
+        text:spoken,
+        start:match.index+leading,
+        end:match.index+raw.length-trailing
+      });
+    }
+  }
+  return results;
+}
+function textNodesFor(element){
+  const walker=document.createTreeWalker(element,NodeFilter.SHOW_TEXT);
+  const nodes=[];
+  let node;
+  while((node=walker.nextNode()))nodes.push(node);
+  return nodes;
+}
+function rangeForOffsets(element,start,end){
+  let offset=0,startNode=null,startOffset=0,endNode=null,endOffset=0;
+  for(const node of textNodesFor(element)){
+    const nextOffset=offset+node.nodeValue.length;
+    if(startNode===null&&start>=offset&&start<=nextOffset){
+      startNode=node;
+      startOffset=Math.max(0,Math.min(node.nodeValue.length,start-offset));
+    }
+    if(endNode===null&&end>=offset&&end<=nextOffset){
+      endNode=node;
+      endOffset=Math.max(0,Math.min(node.nodeValue.length,end-offset));
+      break;
+    }
+    offset=nextOffset;
+  }
+  if(!startNode||!endNode)return null;
+  const range=document.createRange();
+  range.setStart(startNode,startOffset);
+  range.setEnd(endNode,endOffset);
+  return range;
+}
+function buildSpeechUnits(){
+  const units=[];
+  [...lessonRoot.querySelectorAll('h2,p,.term,.flow>div')].forEach(block=>{
+    const text=block.textContent||'';
+    sentenceSegments(text).forEach(segment=>{
+      units.push({
+        text:segment.text,
+        block,
+        range:rangeForOffsets(block,segment.start,segment.end)
+      });
+    });
+  });
+  return units;
+}
+function clearReadingHighlight(){
+  if(window.CSS&&CSS.highlights)CSS.highlights.delete('sapiver-reading');
+  if(activeBlock)activeBlock.classList.remove('speech-active');
+  activeBlock=null;
+}
+function highlightSpeechUnit(unit){
+  clearReadingHighlight();
+  activeBlock=unit.block;
+
+  if(window.CSS&&CSS.highlights&&window.Highlight&&unit.range){
+    CSS.highlights.set('sapiver-reading',new Highlight(unit.range));
+  }else{
+    unit.block.classList.add('speech-active');
+  }
+
+  const rect=unit.block.getBoundingClientRect();
+  if(rect.top<window.innerHeight*.18||rect.bottom>window.innerHeight*.78){
+    unit.block.scrollIntoView({
+      behavior:reduceMotion?'auto':'smooth',
+      block:'center'
+    });
+  }
+}
+function speakCurrentUnit(){
+  if(speechStopped)return;
+  if(currentSpeechIndex>=speechUnits.length){
+    speechStopped=true;
+    speechPaused=false;
+    clearReadingHighlight();
+    audioStatus.textContent='Lesson audio finished.';
+    return;
+  }
+
+  const unit=speechUnits[currentSpeechIndex];
+  highlightSpeechUnit(unit);
+  currentUtterance=new SpeechSynthesisUtterance(unit.text);
+  currentUtterance.rate=1.00;
+
+  if(selectedVoice){
+    currentUtterance.voice=selectedVoice;
+    currentUtterance.lang=selectedVoice.lang||'en';
+  }else{
+    currentUtterance.lang='en';
+  }
+
+  currentUtterance.onstart=()=>{
+    if(!speechStopped){
+      audioStatus.textContent=`Playing… ${currentSpeechIndex+1} of ${speechUnits.length} · 1.00×`;
+    }
+  };
+  currentUtterance.onend=()=>{
+    if(!speechStopped){
+      currentSpeechIndex+=1;
+      speakCurrentUnit();
+    }
+  };
+  currentUtterance.onerror=event=>{
+    if(speechStopped||event.error==='interrupted'||event.error==='canceled')return;
+    speechStopped=true;
+    speechPaused=false;
+    clearReadingHighlight();
+    audioStatus.textContent='Audio playback could not continue.';
+  };
+
+  speechSynthesis.speak(currentUtterance);
+}
+function startLessonAudio(){
+  speechSynthesis.cancel();
+  clearReadingHighlight();
+  speechUnits=buildSpeechUnits();
+  currentSpeechIndex=0;
+  speechStopped=false;
+  speechPaused=false;
+
+  if(!speechUnits.length){
+    speechStopped=true;
+    audioStatus.textContent='No lesson text was available to read.';
+    return;
+  }
+  window.setTimeout(speakCurrentUnit,60);
+}
+function stopSpeech(message='Audio stopped.'){
+  speechStopped=true;
+  speechPaused=false;
+  if('speechSynthesis' in window)speechSynthesis.cancel();
+  clearReadingHighlight();
+  audioStatus.textContent=message;
+}
+
+if('speechSynthesis' in window){
+  populateVoices();
+  speechSynthesis.addEventListener('voiceschanged',populateVoices);
+
+  document.getElementById('playBtn').addEventListener('click',startLessonAudio);
+  document.getElementById('pauseBtn').addEventListener('click',()=>{
+    if(!speechStopped&&!speechPaused){
+      speechSynthesis.pause();
+      speechPaused=true;
+      audioStatus.textContent='Audio paused.';
+    }
+  });
+  document.getElementById('resumeBtn').addEventListener('click',()=>{
+    if(!speechStopped&&speechPaused){
+      speechSynthesis.resume();
+      speechPaused=false;
+      audioStatus.textContent=`Playing… ${currentSpeechIndex+1} of ${speechUnits.length} · 1.00×`;
+    }
+  });
+  document.getElementById('stopBtn').addEventListener('click',()=>stopSpeech());
+}else{
+  audioStatus.textContent='Audio is unavailable in this browser.';
+  ['playBtn','pauseBtn','resumeBtn','stopBtn'].forEach(id=>document.getElementById(id).disabled=true);
+  voiceSelect.disabled=true;
+}
+
+window.addEventListener('pagehide',()=>stopSpeech(''));
+window.addEventListener('beforeunload',()=>stopSpeech(''));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Create a personalised pretend shop and practise making exact totals with UK coins.">
+  <meta name="theme-color" content="#123f36">
+  <title>My Pocket Shop | AI Inquisitive Parents</title>
+  <style>
+    :root{--ink:#163c34;--green:#123f36;--cream:#fffaf0;--paper:#f3ead6;--gold:#d2aa55;--orange:#e86f3c;--red:#a23e35;--muted:#61716b;--line:#ded4bd}*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#e6efe9,#fbf4e6);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}main{width:min(920px,calc(100% - 24px));margin:auto;padding:18px 0 54px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px}.brand{font-weight:800}.brand a{color:inherit;text-decoration:none}.pill{font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.card{background:rgba(255,250,240,.96);border:1px solid var(--line);border-radius:20px;padding:clamp(17px,4vw,28px);margin:14px 0;box-shadow:0 12px 30px #173e3420}h1,h2,h3{line-height:1.16}h1{font-size:clamp(2rem,7vw,3.5rem);margin:.2rem 0 .7rem}h2{margin:.1rem 0 1rem}.eyebrow{color:#a2552f;text-transform:uppercase;letter-spacing:.11em;font-size:.78rem;font-weight:800}.muted{color:var(--muted)}button,input,select{font:inherit;border-radius:12px;border:1px solid #bfc9c3;padding:11px 13px}button{cursor:pointer;background:var(--green);color:white;border-color:var(--green);font-weight:750}button.secondary{background:white;color:var(--ink)}button.orange{background:var(--orange);border-color:var(--orange)}button.danger{background:white;color:var(--red);border-color:#d8aaa4}.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1 1 150px}label{display:grid;gap:5px;font-weight:700}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.tabs button{background:white;color:var(--ink)}.tabs button.active{background:var(--green);color:white}.shop{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px}.product{background:white;border:1px solid var(--line);border-radius:15px;padding:14px;text-align:left;color:var(--ink)}.product.selected{outline:3px solid var(--orange);background:#fff1e8}.emoji{font-size:2rem;display:block}.price{font-weight:800;color:#a2552f}.total{font-size:clamp(2rem,10vw,4.2rem);font-weight:900;margin:.2rem 0}.coins{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}.coin{width:66px;height:66px;border-radius:50%;padding:0;background:#d8b55d;color:#173e34;border:4px double #fff6d9;box-shadow:0 3px 0 #9b7935}.coin.silver{background:#cbd3d3}.coin.copper{background:#c77b50}.basket{background:var(--paper);border-radius:14px;padding:15px;margin:14px 0}.meter{height:12px;border-radius:999px;background:#d9dfda;overflow:hidden}.meter span{display:block;height:100%;background:var(--orange);width:0}.feedback{min-height:1.6em;font-weight:800}.good{color:#167043}.bad{color:var(--red)}.items{display:grid;gap:8px}.item{display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--line);padding:10px;border-radius:12px}.item span:nth-child(2){flex:1}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{background:var(--paper);border-radius:13px;padding:12px;text-align:center}.stat strong{font-size:1.5rem;display:block}details{border-top:1px solid var(--line);padding-top:14px;margin-top:16px}summary{cursor:pointer;font-weight:800}code{display:block;white-space:pre-wrap;background:#102b25;color:#f8f0dc;padding:15px;border-radius:13px;margin-top:10px}@media(max-width:580px){.stats{grid-template-columns:1fr}.coin{width:61px;height:61px}.top{align-items:flex-start}}
+  </style>
+</head>
+<body><main>
+  <div class="top"><div class="brand"><a href="https://suite.sapiverpress.co.uk">Sapiver Press</a></div><div class="pill">AI Inquisitive Parents · Day 014</div></div>
+  <section class="card"><p class="eyebrow">Build the version your child needs</p><h1>My Pocket Shop</h1><p>Turn the things your child likes into a quick game for recognising prices and making exact totals with UK coins.</p><div class="tabs"><button id="playTab" class="active">Play shop</button><button id="setupTab">Grown-up setup</button></div></section>
+
+  <section id="play" class="card">
+    <div class="stats"><div class="stat"><strong id="score">0</strong>score</div><div class="stat"><strong id="streak">0</strong>streak</div><div class="stat"><strong id="rounds">0</strong>rounds</div></div>
+    <p class="eyebrow" style="margin-top:20px">Choose the shopping</p><h2>Pick <span id="pickCount">2</span> items</h2>
+    <div id="shop" class="shop"></div>
+    <div class="basket"><strong>Your basket</strong><div id="basketText" class="muted">Nothing selected yet.</div><div class="total" id="basketTotal">£0.00</div></div>
+    <h2>Pay the exact amount</h2><div id="coins" class="coins"></div>
+    <p>You have paid: <strong id="paid">£0.00</strong></p><div class="meter"><span id="meter"></span></div>
+    <p id="feedback" class="feedback" aria-live="polite"></p>
+    <div class="row"><button id="check" class="orange">Check payment</button><button id="undo" class="secondary">Undo coin</button><button id="clear" class="secondary">Clear coins</button><button id="next" style="display:none">Next round</button></div>
+  </section>
+
+  <section id="setup" class="card" hidden>
+    <p class="eyebrow">Grown-up setup</p><h2>Make the shop personal</h2><p class="muted">Add familiar treats, toys, hobbies or household items. Choose how many products appear in each basket.</p>
+    <div class="row"><label>Items per basket<select id="difficulty"><option value="1">1 item</option><option value="2">2 items</option><option value="3">3 items</option><option value="4">4 items</option></select></label><label>Product name<input id="name" maxlength="24" placeholder="Football card"></label><label>Emoji<input id="icon" maxlength="4" placeholder="⚽"></label><label>Price in pence<input id="price" type="number" min="1" max="2000" step="1" placeholder="75"></label></div>
+    <div class="row" style="margin-top:12px"><button id="add">Add product</button><button id="starters" class="secondary">Restore starter shop</button></div>
+    <p id="setupFeedback" class="feedback" aria-live="polite"></p><div id="productList" class="items"></div>
+  </section>
+
+  <section class="card"><h2>Private by design</h2><p>Products, settings and scores are stored only in this browser using local storage. Nothing is uploaded, and clearing this browser’s site data removes it.</p>
+    <details><summary>Build your own with AI</summary><code>Build me a mobile-friendly pretend shop game as one standalone HTML file. Let a parent add custom products with names, emoji and prices in pence. Ask the child to select a set number of products, calculate the basket total and pay the exact amount using clickable UK coins. Include undo, clear, feedback, score and streak. Save products, difficulty and progress in local browser storage. Do not send data anywhere.</code></details>
+    <p><a href="https://suite.sapiverpress.co.uk">Return to Sapiver Press</a></p>
+  </section>
+</main>
+<script>
+const KEY='aip-pocket-shop-v1';
+const STARTERS=[{name:'Apple',icon:'🍎',price:35},{name:'Comic',icon:'📘',price:120},{name:'Juice',icon:'🧃',price:85},{name:'Sticker',icon:'⭐',price:25},{name:'Ball',icon:'⚽',price:175},{name:'Crayons',icon:'🖍️',price:95}];
+const COINS=[1,2,5,10,20,50,100,200];
+let state={products:STARTERS,difficulty:2,score:0,streak:0,rounds:0};let selected=[];let payment=[];let locked=false;
+try{state={...state,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{}
+function save(){localStorage.setItem(KEY,JSON.stringify(state))}function money(p){return `£${(p/100).toFixed(2)}`}
+const $=id=>document.getElementById(id);
+function renderShop(){const pool=[...state.products].sort(()=>Math.random()-.5).slice(0,Math.max(6,state.difficulty+2));$('shop').innerHTML=pool.map((p,i)=>`<button class="product" data-name="${encodeURIComponent(p.name)}" data-price="${p.price}" data-icon="${encodeURIComponent(p.icon)}"><span class="emoji">${p.icon}</span><strong>${p.name}</strong><br><span class="price">${money(p.price)}</span></button>`).join('');$('pickCount').textContent=state.difficulty;$('shop').querySelectorAll('button').forEach(b=>b.onclick=()=>toggleProduct(b));}
+function toggleProduct(b){if(locked)return;const name=decodeURIComponent(b.dataset.name);const existing=selected.findIndex(x=>x.name===name);if(existing>=0){selected.splice(existing,1);b.classList.remove('selected')}else if(selected.length<state.difficulty){selected.push({name,icon:decodeURIComponent(b.dataset.icon),price:+b.dataset.price});b.classList.add('selected')}updateBasket()}
+function updateBasket(){const total=selected.reduce((n,x)=>n+x.price,0);$('basketText').textContent=selected.length?selected.map(x=>`${x.icon} ${x.name}`).join(' · '):'Nothing selected yet.';$('basketTotal').textContent=money(total);updatePayment()}
+function updatePayment(){const paid=payment.reduce((a,b)=>a+b,0),total=selected.reduce((a,b)=>a+b.price,0);$('paid').textContent=money(paid);$('meter').style.width=`${Math.min(100,total?paid/total*100:0)}%`}
+function renderCoins(){$('coins').innerHTML=COINS.map(v=>`<button class="coin ${v<=2?'copper':v>=10&&v<100?'silver':''}" data-value="${v}" aria-label="Add ${v<100?v+' pence':money(v)}">${v<100?v+'p':money(v)}</button>`).join('');$('coins').querySelectorAll('button').forEach(b=>b.onclick=()=>{if(!locked&&selected.length===state.difficulty){payment.push(+b.dataset.value);updatePayment()}else if(!selected.length)$('feedback').textContent='Choose your shopping first.'})}
+function updateStats(){$('score').textContent=state.score;$('streak').textContent=state.streak;$('rounds').textContent=state.rounds}
+function newRound(){selected=[];payment=[];locked=false;$('feedback').textContent='';$('feedback').className='feedback';$('next').style.display='none';$('check').style.display='';renderShop();updateBasket()}
+$('check').onclick=()=>{if(selected.length!==state.difficulty){$('feedback').textContent=`Choose ${state.difficulty} item${state.difficulty===1?'':'s'} first.`;return}const total=selected.reduce((a,b)=>a+b.price,0),paid=payment.reduce((a,b)=>a+b,0);state.rounds++;locked=true;if(paid===total){state.score++;state.streak++;$('feedback').textContent='Exact payment — brilliant shopping!';$('feedback').className='feedback good'}else{state.streak=0;$('feedback').textContent=paid<total?`You need ${money(total-paid)} more.`:`That is ${money(paid-total)} too much. Try the round again.`;$('feedback').className='feedback bad';locked=false}save();updateStats();if(paid===total){$('next').style.display='';$('check').style.display='none'}};
+$('undo').onclick=()=>{if(!locked){payment.pop();updatePayment()}};$('clear').onclick=()=>{if(!locked){payment=[];updatePayment()}};$('next').onclick=newRound;
+function renderProducts(){$('productList').innerHTML=state.products.map((p,i)=>`<div class="item"><span>${p.icon}</span><span><strong>${p.name}</strong> · ${money(p.price)}</span><button class="danger" data-i="${i}">Delete</button></div>`).join('');$('productList').querySelectorAll('button').forEach(b=>b.onclick=()=>{if(state.products.length<=4){$('setupFeedback').textContent='Keep at least four products in the shop.';return}state.products.splice(+b.dataset.i,1);save();renderProducts();newRound()})}
+$('add').onclick=()=>{const name=$('name').value.trim(),icon=$('icon').value.trim()||'🛍️',price=Math.round(+$('price').value);if(!name||!Number.isFinite(price)||price<1||price>2000){$('setupFeedback').textContent='Add a name and a price between 1p and £20.';return}state.products.push({name,icon,price});save();$('name').value='';$('icon').value='';$('price').value='';$('setupFeedback').textContent=`Added ${name}.`;renderProducts();newRound()};
+$('starters').onclick=()=>{state.products=structuredClone(STARTERS);save();renderProducts();newRound()};$('difficulty').value=state.difficulty;$('difficulty').onchange=e=>{state.difficulty=+e.target.value;save();newRound()};
+function tab(play){$('play').hidden=!play;$('setup').hidden=play;$('playTab').classList.toggle('active',play);$('setupTab').classList.toggle('active',!play)}$('playTab').onclick=()=>tab(true);$('setupTab').onclick=()=>tab(false);
+renderCoins();renderProducts();updateStats();newRound();
+</script></body></html>

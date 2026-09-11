@@ -1,4 +1,4 @@
-# Sources for The Agentic Shift: Scaling, Sovereignty, and Silicon
+# Sources for The Agentic Shift: Scaling, Safety, and Sovereignty
 
 This episode synthesises verification-ready Sapiver Forge Daily Brief editions from 2026-09-05 to 2026-09-11.
 
@@ -26,8 +26,8 @@ This episode synthesises verification-ready Sapiver Forge Daily Brief editions f
 - 2026-09-10 — [Gian Volpicelli/Bloomberg: Anthropic gives EU cybersecurity agency ENISA testing access to Mythos 5 after months of talks that began in late May; ENISA still lacks access to Mythos 5.1 (Gian Volpicelli/Bloomberg)](https://www.bloomberg.com/news/articles/2026-09-10/anthropic-gives-eu-access-to-mythos-months-after-model-s-release)
 - 2026-09-10 — [Axios: Letter: the Senate disaster management subcommittee, led by Sen. Josh Hawley, is probing OpenAI's handling of the Hugging Face breach, calling it "reckless" (Axios)](https://www.axios.com/)
 - 2026-09-10 — [Reuters: Google va investir €13 mds dans des infrastructures IA en Finlande](https://www.reuters.com/fr/affaires/google-va-investir-13-mds-dans-des-infrastructures-ia-en-finlande-2026-09-09/)
+- 2026-09-11 — [Reuters: DOJ probes Nvidia's licensing deal with AI startup Groq, NYT reports](https://www.reuters.com/legal/litigation/us-doj-probes-nvidias-licensing-deal-with-ai-startup-groq-nyt-reports-2026-09-10/)
+- 2026-09-11 — [Bloomberg: Sources: Moonshot AI told investors it topped $1B ARR in August, up from $300M in June, driven by its Kimi K3 release; it aims to hit $2B ARR by the end of 2026 (Bloomberg)](https://www.bloomberg.com/news/articles/2026-09-11/china-ai-star-moonshot-eyes-2-billion-annualized-sales-in-2026)
 - 2026-09-11 — [developers.openai.com: OpenAI Agents API](https://developers.openai.com/api/docs/guides/agents-api/overview)
-- 2026-09-11 — [Ann Cao/South China Morning Post: Tencent-backed AI chipmaker Enflame's shares surged 188% in their Shanghai debut, giving Enflame a market cap of $26.3B, after raising ~$910M in an IPO (Ann Cao/South China Morning Post)](https://www.scmp.com/tech/tech-trends/article/3367124/enflame-shares-soar-188-shanghai-debut-nvidia-challenger-taps-investor-fever-ai)
-- 2026-09-11 — [Christian Terry/Click2Houston.com: A US judge finds TikTok liable for lying about its safety standards and exposing minors to inappropriate content, in a 2025 lawsuit filed by Texas AG Ken Paxton (Christian Terry/Click2Houston.com)](https://www.click2houston.com/news/local/2026/09/10/judge-finds-tiktok-liable-for-lying-about-safety-standards-in-texas-lawsuit/)
-- 2026-09-11 — [Jeff Mason/Bloomberg: President Trump rejects warnings of AI-driven human extinction, saying the US leads China by a year and will be "in a very bad position" if it doesn't win in AI (Jeff Mason/Bloomberg)](https://www.bloomberg.com/news/articles/2026-09-11/trump-rejects-warnings-that-ai-may-lead-to-human-extinction)
 - 2026-09-11 — [rustfoundation.org: Rust is tier-1 language at Microsoft](https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/)
+- 2026-09-11 — [Tiffany Hsu/New York Times: MIT launches the LLM Election Observatory, a dashboard tracking how nearly a dozen AI models tailor responses to political queries during the 2026 US midterms (Tiffany Hsu/New York Times)](https://www.nytimes.com/2026/09/10/business/media/ai-chatbots-election-misinformation.html?unlocked_article_code=1.AFE.ya1P.DrVmiCYOicde&smid=nytcore-ios-share)

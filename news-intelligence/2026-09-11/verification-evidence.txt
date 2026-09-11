@@ -1,78 +1,126 @@
-Here are the evidence verification notes for the September 11, 2026 UK morning briefing.
+Here is the evidence desk evaluation for the morning briefing candidates on **11 September 2026**.
 
 ---
 
-### **Candidate [0]: MIT launches the LLM Election Observatory**
-* **Confirmed:** MIT researchers have launched the *LLM Election Observatory*, a public dashboard tracking how nearly a dozen commercial and open AI models respond to political queries ahead of the 2026 US midterm elections.
-* **Important Caveats:** The platform measures prompt responses and tailoring behaviors, but does not measure downstream voter persuasion or real-world electoral impact.
-* **Publication Verdict:** **Suitable for publication today.** (High relevance to AI policy, election integrity, and platform governance).
+### **Out-of-Scope Candidates (Excluded)**
+* **[0] Lucumr blog post ("Astra for Coding")**: Personal technical commentary / opinion blog. *(Marked OUT OF SCOPE)*
+* **[3] Shopify framework transition**: Internal developer blog post on app architecture. *(Marked OUT OF SCOPE)*
+* **[9] Personal blog post ("Hands off my cables")**: Personal essay / lifestyle commentary. *(Marked OUT OF SCOPE)*
+* **[11] Cognition SWE-2 announcement**: Marked OUT OF SCOPE in briefing list. *(Marked OUT OF SCOPE)*
+* **[15] India Serious Fraud Office probe into Xiaomi**: Standard corporate tax/fraud regulatory action without direct tech/AI policy model connection. *(Marked OUT OF SCOPE)*
+* **[18] Brokerage S&P 500 forecasts**: Macro market financial forecasting. *(Marked OUT OF SCOPE)*
 
 ---
 
-### **Candidate [2]: Mathematician raises transparency concerns over OpenAI math models**
-* **Confirmed:** German mathematician Andreas Thom posted email exchanges on Mathstodon accusing OpenAI researchers of lacking transparency and potentially leveraging user prompt history/unpublished mathematical ideas in model development without proper attribution. This follows similar public complaints by NYU mathematician Tristan Buckmaster.
-* **Important Caveats:** These are social media allegations and open disputes within the academic community, not a formal lawsuit or adjudicated legal judgment. OpenAI researchers previously denied training on private user sessions in direct communications with Thom, though Thom contends the denial lacks verifiable audit trail data.
-* **Publication Verdict:** **Suitable for publication today.** (Strong discovery signal on AI research ethics, data provenance, and academic relations).
+### **In-Scope Candidates Evidence Notes**
+
+#### **Candidate [1]: Moonshot AI Revenues Top $1B ARR Driven by Kimi K3**
+* **Confirmed:** Bloomberg reports that Chinese AI lab Moonshot AI informed investors its Annual Recurring Revenue (ARR) surpassed **$1 billion in August 2026**, up from $300 million in June. The expansion was driven by rapid enterprise adoption of its **Kimi K3** 2.8-trillion-parameter open-weight model released in July 2026. Moonshot AI is targeting **$2 billion ARR** by year-end 2026.
+* **Important Caveats:** Figures originate from private investor communications reported via Bloomberg sources rather than public financial filings.
+* **Publication Today:** **Yes.** Highly relevant to AI business models and global open-weight competition.
 
 ---
 
-### **Candidate [5]: Microsoft elevates Rust to Tier-1 engineering status**
-* **Confirmed:** The Rust Foundation published a guest post by Microsoft engineering leadership confirming that Rust has been officially designated as a Tier-1 language at Microsoft, placing it alongside C++, C#, and TypeScript with standardized internal toolchains, compiler support, and security compliance pathways.
-* **Important Caveats:** This reflects internal developer infrastructure status and toolchain maturity across Microsoft’s software engineering organization, rather than a new external commercial product.
-* **Publication Verdict:** **Suitable for publication today.** (Relevant to enterprise software development, systems engineering, and language adoption).
+#### **Candidate [2]: US Court Dismisses LinkedIn Browser Extension Scanning Lawsuits**
+* **Confirmed:** US District Judge Vince Chhabria (N.D. Cal.) granted LinkedIn's motion to dismiss two proposed privacy class actions (*Ganan v. LinkedIn* and *Farrell v. LinkedIn*) regarding "BrowserGate" allegations that LinkedIn scanned Chrome extensions. The judge ruled that the plaintiffs lacked Article III standing because neither alleged that sensitive private extension data was actually extracted or transmitted to LinkedIn.
+* **Important Caveats:** The dismissal was decided on legal standing grounds rather than a final factual ruling on client-side telemetry practices; plaintiffs retain options to appeal or amend pleadings.
+* **Publication Today:** **Yes.** Important precedent regarding SaaS platform telemetry and browser scanning litigation.
 
 ---
 
-### **Candidate [9]: President Trump dismisses AI extinction warnings, citing competition with China**
-* **Confirmed:** Speaking to reporters in Dallas, US President Donald Trump rejected warnings from AI safety researchers that advanced artificial intelligence could pose an existential threat to humanity. Trump stated that his primary concern is ensuring the US maintains its estimated one-year lead over China in AI development.
-* **Important Caveats:** The remarks were informal Q&A statements following public warnings and high-profile resignations by safety researchers at Anthropic. They do not represent a new formal executive order or statutory policy change.
-* **Publication Verdict:** **Suitable for publication today.** (High relevance to AI governance, executive policy, and US-China tech geopolitics).
+#### **Candidate [4]: Researcher Concerns Over OpenAI and Unpublished Mathematics**
+* **Confirmed:** Social media posts on Mathstodon and X by academic mathematicians raised concerns regarding whether unpublished math papers or proofs uploaded to OpenAI models could be used for training or evaluation without attribution [4].
+* **Important Caveats:** **Unverified community claim.** There is no corroborating evidence, official OpenAI statement, formal academic audit, or court filing substantiating systematic unauthorized intake [4].
+* **Publication Today:** **No.** Suitable only as background context for academic sentiment regarding AI platform terms, but not as a confirmed breaking news story [4].
 
 ---
 
-### **Candidate [10]: Tencent-backed AI chipmaker Enflame surges 188% in Shanghai debut**
-* **Confirmed:** Shanghai Enflame Technology made its public trading debut on Shanghai’s STAR Market on September 11, 2026, opening 188% above its offer price. The company raised ~6.12 billion yuan ($912 million) in its IPO, giving it a market capitalisation of approximately $26.3 billion (176–185 billion yuan).
-* **Important Caveats:** Enflame faces heavy customer concentration risk, with prospectus filings showing major shareholder Tencent accounted for over 80% of its 2025 revenue. The company also operates under tight US semiconductor export restrictions.
-* **Publication Verdict:** **Suitable for publication today.** (Major financial story in AI semiconductors, Chinese capital markets, and hardware self-reliance).
+#### **Candidate [5]: Ayar Labs Raises $150M Extension to Series E Round**
+* **Confirmed:** Silicon Valley optical interconnect startup Ayar Labs announced a $150 million extension to its Series E funding, bringing total primary capital raised in 2026 to $650 million at a valuation exceeding $5 billion. Backers include Wiwynn, Nvidia, AMD, and MediaTek. Funds will support high-volume manufacturing readiness and expand engineering at its new Bengaluru design center in India ahead of target 2027/2028 customer deployments.
+* **Important Caveats:** Commercial optical chip co-packaging remains in qualification phases with full volume ramps expected around 2028.
+* **Publication Today:** **Yes.** Strong news for hardware, silicon interconnects, and AI data center scale-out.
 
 ---
 
-### **Candidate [11]: OpenAI launches Agents API in public beta**
-* **Confirmed:** OpenAI launched its managed *Agents API* in public beta, providing developers direct API access to its managed Codex harness. The API handles long-running session state, automatic context compaction, subagent orchestration, hosted or self-hosted execution sandboxes, and Model Context Protocol (MCP) integrations.
-* **Important Caveats:** The public beta is currently restricted to US data residency and does not currently offer zero data retention (ZDR) options.
-* **Publication Verdict:** **Suitable for publication today.** (Core technical news for developer infrastructure, AI agents, and cloud platforms).
+#### **Candidate [6]: NASA Spinoff Satellite Image Enhancement Technique**
+* **Confirmed:** A NASA Spinoff feature details the Decorrelation Stretch image enhancement technique, originally created for planetary exploration, being used to reveal ancient rock art and hidden details in satellite images [6].
+* **Important Caveats:** **Lacks recency.** The underlying report is a re-surfaced 2025 educational background publication rather than breaking research or a new product launch [6].
+* **Publication Today:** **No.** Out of scope for a daily news briefing due to lack of recency [6].
 
 ---
 
-### **Candidate [13]: Texas judge finds TikTok liable for misleading child safety claims**
-* **Confirmed:** A Texas District Judge ruled on September 10, 2026, that TikTok violated state consumer protection laws by misleading parents and users regarding its child safety measures and the effectiveness of its "Restricted Mode" content filter. 
-* **Important Caveats:** The order establishes legal liability on summary judgment; financial penalties, statutory damages, and potential injunctive relief will be decided in a separate trial phase scheduled for next month. TikTok is expected to appeal the ruling.
-* **Publication Verdict:** **Suitable for publication today.** (Significant legal precedent for state-level social media regulation and minor safety enforcement).
+#### **Candidate [7]: Garry Tan Says Regulators Should "Do Nothing" About AI Distillation**
+* **Confirmed:** Y Combinator CEO Garry Tan stated in a CNBC interview at YC Demo Day that regulators should "do nothing" to restrict Chinese companies using model distillation techniques on US frontier models. He argued policymakers should focus on immediate cybersecurity/biosecurity risks while preserving market pricing premiums for frontier providers.
+* **Important Caveats:** Represents commentary/policy opinion from an accelerator executive, not formal regulatory or legislative action.
+* **Publication Today:** **Yes.** Notable contribution to the ongoing policy debate over open weights, IP enforcement, and AI model distillation.
 
 ---
 
-### **Candidate [15]: Apple CEO John Ternus and Greg Joswiak detail hardware & foldable strategy**
-* **Confirmed:** In an interview with *Tom's Guide* and *TechRadar* following Apple's fall hardware event, newly appointed Apple CEO John Ternus and Marketing SVP Greg Joswiak discussed the design choices behind the $1,999 foldable iPhone Duo, including crease reduction tech, nano-texture glass, and iOS 27 adaptations.
-* **Important Caveats:** The interview is vendor-driven product commentary following an Apple press event.
-* **Publication Verdict:** **Suitable for publication today.** (Relevant as executive strategic commentary following Apple's entry into the foldable hardware segment).
+#### **Candidate [8]: Microsoft Elevates Rust to Internal Tier-1 Language Status**
+* **Confirmed:** Microsoft has officially designated Rust as a "Tier-1" programming language for internal engineering alongside C++, C#, and TypeScript. A post published via the Rust Foundation details Microsoft's deployment of `rustc_codegen_utc`—a custom compiler backend connecting Rust directly to MSVC for kernel, driver, and enterprise Windows workloads.
+* **Important Caveats:** Relates to Microsoft's internal software engineering standards and tooling infrastructure rather than a public developer product announcement.
+* **Publication Today:** **Yes.** Significant milestone for enterprise systems engineering and memory-safe language adoption.
 
 ---
 
-### **Candidate [17]: Oklahoma judge cited fake AI-generated case law in court ruling**
-* **Confirmed:** Reuters reported that a local prosecutor flagged a judicial ruling by an Oklahoma state court judge after discovering that citations in the document were false and generated by AI software.
-* **Important Caveats:** Represents an isolated state judicial matter, though it serves as a concrete data point in ongoing legal debates over court generative AI usage rules.
-* **Publication Verdict:** **Suitable for publication today.** (Good concise brief item on operational risks of generative AI in legal proceedings).
+#### **Candidate [10]: Polymarket Appoints Former Amazon Executive Warren Jenson as First CFO**
+* **Confirmed:** Prediction platform Polymarket hired veteran finance executive Warren Jenson (former CFO at Amazon, EA, Delta Air Lines, and Nielsen) as its first Chief Financial Officer. The hire comes as Polymarket expands its CFTC-regulated U.S. exchange platform.
+* **Important Caveats:** Standard executive appointment, though strategically significant amid intense market competition with US rival Kalshi.
+* **Publication Today:** **Yes.** Relevant business item for prediction markets and fintech regulation.
 
 ---
 
-### **Out-of-Scope / Non-Recommended Candidates:**
-* **Candidate [1] (Shopify Native Stack):** Out of scope per prompt guidelines.
-* **Candidate [3] (T-Mobile Carrier Promotion):** Out of scope commercial carrier offer.
-* **Candidate [4] (NASA Spinoff 2025):** Dated background material from 2025; not breaking news.
-* **Candidate [6] (Opinion/Cables Blog):** Out of scope personal essay.
-* **Candidate [7] (Xiaomi SFO Probe):** Out of scope per prompt guidelines.
-* **Candidate [8] (Cognition SWE-2):** Out of scope per prompt guidelines.
-* **Candidate [12] (PlanetScale Neki):** Out of scope per prompt guidelines.
-* **Candidate [14] (Kalshi Single-Stock Futures):** Out of scope per prompt guidelines.
-* **Candidate [18] (Hugging Face EvoSafeHarness):** Uncorroborated pre-print research claim; lower priority compared to major API and earnings news.
-* **Candidate [19] (Reuters Spanish Apple Duo):** Duplicate coverage of Candidate [15].
+#### **Candidate [12]: OpenAI Documentation Details New Agents API**
+* **Confirmed:** OpenAI updated developer documentation on `developers.openai.com` introducing its **Agents API**. The managed API runs agentic workflows on the Codex harness, offering managed session states, sandboxed code execution environments, and Model Context Protocol (MCP) server support.
+* **Important Caveats:** Refers to active developer platform documentation and feature rollouts.
+* **Publication Today:** **Yes.** High relevance for AI developers and agentic software deployment.
+
+---
+
+#### **Candidate [13]: TikTok Rejects Meta Ads Urging Joint Settlement of Youth Safety Lawsuits**
+* **Confirmed:** Axios reports that TikTok rejected paid advertising campaigns submitted by Meta that urged TikTok and peer platforms to join Meta in settling landmark state attorneys general child safety litigation.
+* **Important Caveats:** Based on sources familiar with ad review decisions; Meta's overall multi-billion-dollar proposed settlement framework remains subject to final state approvals.
+* **Publication Today:** **Yes.** High relevance for tech regulation, platform litigation, and ad policy friction.
+
+---
+
+#### **Candidate [14]: MIT Launches LLM Election Observatory Dashboard**
+* **Confirmed:** Researchers at MIT (CSAIL/Sloan/LIDS) launched the public **LLM Election Observatory** dashboard, tracking how ~12 leading AI models respond to political queries during the 2026 US midterm elections.
+* **Important Caveats:** Academic oversight initiative rather than a commercial product.
+* **Publication Today:** **Yes.** Excellent fit for technology governance, political AI monitoring, and model evaluation research.
+
+---
+
+#### **Candidate [16]: Ultraviolette Plans $82M Electric Motorcycle Plant in India**
+* **Confirmed:** Indian EV startup Ultraviolette Automotive announced plans to invest ₹779 crore ($81.9 million) in a new factory in Hosur, Tamil Nadu, expanding manufacturing capacity up to 500,000 units annually.
+* **Important Caveats:** Regional clean-transport hardware manufacturing story.
+* **Publication Today:** **Secondary / Conditional.** Valid for EV hardware coverage, but lower priority compared to core AI/tech policy news.
+
+---
+
+#### **Candidate [17]: Apple Details iPhone Duo Foldable Design and Strategy**
+* **Confirmed:** Apple introduced its first foldable smartphone, the **iPhone Duo**, with CEO John Ternus and marketing SVP Greg Joswiak providing details on its nano-texture display design, crease reduction techniques, and iOS 27 foldable features.
+* **Important Caveats:** Consumer hardware launch story, though representing a major shift in Apple's mobile hardware strategy under new executive leadership.
+* **Publication Today:** **Yes.** Major consumer hardware announcement.
+
+---
+
+#### **Candidate [19]: US DOJ Probes Nvidia's $17B Licensing Deal with Groq**
+* **Confirmed:** The US Department of Justice opened an antitrust inquiry into whether Nvidia's $17 billion licensing deal with AI chip startup Groq (combining a non-exclusive license with hiring key leadership) was structured to evade formal merger review.
+* **Important Caveats:** Preliminary civil investigation and request for information; no formal lawsuit or antitrust finding has been filed.
+* **Publication Today:** **Yes.** Top-tier story for AI chip competition, antitrust enforcement, and tech regulation.
+
+---
+
+### **Recommended Publication Order for Today's Briefing**
+1. **[19] DOJ Antitrust Probe into Nvidia–Groq Deal** *(Top Tech Regulation)*
+2. **[1] Moonshot AI Revenue Tops $1B ARR via Kimi K3** *(Top AI Business/Open Weights)*
+3. **[5] Ayar Labs $150M Optical Chip Funding Extension** *(AI Hardware Infrastructure)*
+4. **[12] OpenAI Releases Agents API Documentation** *(AI Developer Platform)*
+5. **[8] Microsoft Elevates Rust to Tier-1 Internal Status** *(Enterprise Engineering)*
+6. **[13] TikTok Rejects Meta's Settlement Pressure Ads** *(Platform Regulation)*
+7. **[14] MIT Launches LLM Election Observatory** *(AI Integrity & Research)*
+8. **[7] YC's Garry Tan on AI Distillation & Regulation** *(Industry Commentary)*
+9. **[2] Court Dismisses LinkedIn Browser Scanning Lawsuits** *(Tech Privacy Law)*
+10. **[17] Apple iPhone Duo Foldable Executive Details** *(Hardware)*
+11. **[10] Polymarket Names Warren Jenson as First CFO** *(Fintech)*

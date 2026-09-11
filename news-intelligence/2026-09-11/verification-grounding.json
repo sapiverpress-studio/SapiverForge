@@ -1,205 +1,263 @@
 {
   "searchEntryPoint": {
-    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22John+Ternus%22+%22iPhone+Duo%22+%22Tom%27s+Guide%22+Mark+Spoonauer&client=app-vertex-grounding&safesearch=active\">&quot;John Ternus&quot; &quot;iPhone Duo&quot; &quot;Tom&#39;s Guide&quot; Mark Spoonauer</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Trump+AI+human+extinction+China+lead+Bloomberg+2026&client=app-vertex-grounding&safesearch=active\">Trump AI human extinction China lead Bloomberg 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Rust+is+tier-1+language+at+Microsoft%22+rustfoundation+2026&client=app-vertex-grounding&safesearch=active\">&quot;Rust is tier-1 language at Microsoft&quot; rustfoundation 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=MIT+LLM+Election+Observatory+NYT+Tiffany+Hsu+2026&client=app-vertex-grounding&safesearch=active\">MIT LLM Election Observatory NYT Tiffany Hsu 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22andreasthom%22+%22OpenAI%22+%22mathstodon%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;andreasthom&quot; &quot;OpenAI&quot; &quot;mathstodon&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=TikTok+Texas+lawsuit+judge+liable+safety+standards+2026&client=app-vertex-grounding&safesearch=active\">TikTok Texas lawsuit judge liable safety standards 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22OpenAI%22+%22Agents+API%22+%22developers.openai.com%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;OpenAI&quot; &quot;Agents API&quot; &quot;developers.openai.com&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Enflame+Shanghai+debut+IPO+Tencent+SCMP+2026&client=app-vertex-grounding&safesearch=active\">Enflame Shanghai debut IPO Tencent SCMP 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Oklahoma+judge+used+AI+in+ruling+that+contained+false+citations%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Oklahoma judge used AI in ruling that contained false citations&quot; 2026</a>\n  </div>\n</div>"
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=iPhone+Duo+foldable+Apple+John+Ternus+Greg+Joswiak&client=app-vertex-grounding&safesearch=active\">iPhone Duo foldable Apple John Ternus Greg Joswiak</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Rust+tier+1+language+at+Microsoft+rustfoundation+org&client=app-vertex-grounding&safesearch=active\">Rust tier 1 language at Microsoft rustfoundation org</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Ayar+Labs+150+million+Series+E+Reuters&client=app-vertex-grounding&safesearch=active\">Ayar Labs 150 million Series E Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Moonshot+AI+ARR+1B+Kimi+K3+Bloomberg&client=app-vertex-grounding&safesearch=active\">Moonshot AI ARR 1B Kimi K3 Bloomberg</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=LinkedIn+browser+extensions+lawsuit+dismissed+2026&client=app-vertex-grounding&safesearch=active\">LinkedIn browser extensions lawsuit dismissed 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Polymarket+Warren+Jenson+CFO+WSJ&client=app-vertex-grounding&safesearch=active\">Polymarket Warren Jenson CFO WSJ</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=OpenAI+Agents+API+documentation+developers.openai.com&client=app-vertex-grounding&safesearch=active\">OpenAI Agents API documentation developers.openai.com</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Garry+Tan+Y+Combinator+China+distillation+CNBC&client=app-vertex-grounding&safesearch=active\">Garry Tan Y Combinator China distillation CNBC</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Ultraviolette+82+million+plant+Reuters&client=app-vertex-grounding&safesearch=active\">Ultraviolette 82 million plant Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=DOJ+probes+Nvidia+licensing+deal+with+Groq+Reuters+NYT&client=app-vertex-grounding&safesearch=active\">DOJ probes Nvidia licensing deal with Groq Reuters NYT</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=MIT+LLM+Election+Observatory+New+York+Times&client=app-vertex-grounding&safesearch=active\">MIT LLM Election Observatory New York Times</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=TikTok+rejects+Meta+ads+child+safety+lawsuit+Axios&client=app-vertex-grounding&safesearch=active\">TikTok rejects Meta ads child safety lawsuit Axios</a>\n  </div>\n</div>"
   },
   "groundingChunks": [
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1lMcU7f5QQ9wVYxhY923NLjhQwhlz3259eO-or59CevvbBg924IFTKvilPhcCEZaHsIjtE8swrGAc0xR_wb6TZ_jXOt39UYlMBGJ3S0ghFfQZKXmKz0s=",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9CHUu4wzyOAsag0KjQzMyR3bc8kp-mCOisPbtP8-a2E8wjN3G_cNKgItOC-DLJlm76IraIn_S97OtHtr4JS3NqQsjFs1lp3xLJ5tdkOpMtZKhmNsmYL_W7MXf0fmsP46gjO_rr5or_YsgUYUGB3sv6kgNd8vXvNcVBeIYnkbJJ86yV1kVDgSOCXnN9bs2K3r_Qmq5",
+        "title": "tipranks.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdsGntCY3zYGkpBZbFO4J5pTwHPuNPujIsQtLoWaf-Kh1U6GgUBDcEEW-hiLOErEMF9_kE-ptBvC69ChL9cvKQuIsMIesb1HJsU1ekS2R0i7lNUPvVFBv8",
         "title": "techmeme.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrBAZr3GML5hp1BuZidnV91yqRhWjxbYgLpaKc6_MNHhLQmnazOpSb27bI9m8Smq_xj_BDF5F8BfxBm8_BF6VotZy7v9fSRDLxFyIMzS2WGlP7usjgGqEunyAmCqObMWiGr_WHLTCzlljsjfU=",
-        "title": "mathstodon.xyz"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZ1oB_ojQJ9PstmiWaUZhLNttTLARdlc19iY1NpO6J19R04F1d5QSa8dHxzmBqk0HzyjQNwP0Vrmq_GZ2iVrcAYbt5y6ZzbP2XTrtdO3El3uoPWADFhHEKxDW5rW08mJssWxIdF6HT8zKymEg=",
-        "title": "mathstodon.xyz"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpeqtI8yLF3anhS33_ThZSlSj6NUlfAGC0hPFWvBZ3nR4-v91rkNSXCAt1VhtoUvQgRDmxC_j7X5Q6ZeU41EDQzoL7rX3Q6Q45bC_deCr-A5HIqr7bOy--9RuojN0gIqHeIL6LyWC4_xOhdOo=",
-        "title": "mathstodon.xyz"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFiJc93r-at10ftMlfZWB0zzSAw8rlijjIZ2z9biGBpcvHsLzWyOmMw27EAtOpLNPlHWVH1Tf3CLqOaIvUMVYwvGGljYnushNULqn0azZv1VBts_ro1_pPuR8lZkN0L2diLmqAtpIlQInpkZ15oRvRRNWvob3a1sgB05QLnssYeQeuRhFDW4gAbH7t9WyU4zXHbj7SIYFrwfJ2srczjLYlY_1r7chIF8gA1CZhr8Mo0xZhU6yWrS4rleyrJrn3oZg==",
-        "title": "notebookcheck.net"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF12I_T0m0ZI5SE11XzPwdZCvNkMsc-Go8n_vI8FgeNLtY6eWuN6YxfoSRbkYUs1v68g6Pcac3iMc8eWsQPolek2Yce7pArlq6qVDqaRqCR0nA8jK5DJWEqxfUtqDdilNF8uhFxpuE3m2Q-C-Gkn2QP2A==",
-        "title": "ai-tldr.dev"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGU3vUwZBHJYYrgPEITgfd0Mm1pObyr6onAny2Mlh3aXcQ_wm4bP4sM7lga3maZIEnO9AwZJtlbyFA46gPu59r3k3dPCiEK__Wb-Igl9sPK9y6s5AE5xfimgIcPlIc6knRFpPeL49tBriY1ItBJpTnYMYNFNFzk4z53gHicvLFg7ss79cVyCEs=",
-        "title": "rustfoundation.org"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHApZ8YtmBJAY7cxmqkSR7HzUaum0iznQ0a1gpOCUCh234yiDUUrHUuqhCm2hrU3M8BZHwzeZ1jwfnNg8L03a9Hki1ynNWco0fTpoaZ4El2olakpiiYFpPoZBAnWWKUWgzk8fbbHEzsPyze3ErUjpBUh3y3vgBQ-K8JhUwrLovrrh3R",
-        "title": "daily.dev"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoP81IXQsqtD17f1z5_eIG9cWxVKpP1__-lq-DyMdd4Y5pXyI7YWyUjgiaTUvq13LuGsxfBnFeBs0SIQ6xiPxnPvNvHjdQVQRlrh2dwAifFAqDagoX3x2znSBM801SldCirWkWNHOsyYWVngOA-aAPtNWR7_-CRrD0xOgZQnLDeh4QQWql58vuD9g=",
-        "title": "seekingalpha.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_dnv1cA1Q9NJpnYmsRetAXwBwBs071GkkStDQe24--MQqommdZcQ3nOn5JOgKpWrpzqQZPigw8KuiOUdqM2EeAC37UeBYlcBJ0qaAkIjSbA6So5qXyJM=",
-        "title": "techmeme.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNfD1P8exCx9Dni7d2qPZmF-UzUTIYgMO3in-DR4DRIGuhLET4Y_j1BqopUSgkQaS3jsDsMKWrzBKXlQxe9gK1uMvkXinCdfol7e4BrDDdAaUYGhfp3TRxZIbRIqn4Dk4tx0TC1Akobm_MtsCDlxIfrKDYhehMCokoZ5jD4FvgBYhC6YpQpWoNUX3Y7m2QVCGt",
-        "title": "theguardian.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCFse8xB2dY6PIkN-jKG66XSbEj-lIh6sxV5PWsrCdKliy-aCZ7ZM01LGbhZ75OtSRHGIELJchE9JoDT0R6NgYzShnvfRVlcqrTEWkp-bXPSxUwy9N7B1LKl9IqK9cJVJ48M07q7hBdo_wW3-XOVtNCneWcWbuEbrnsd-ZhO7q5oWUz1-NtsBTDc-GVWToH61o59yur0SZbrqHTzXqnpC_mVIS7yHWTPMM_mpEtQbOfRvIZ8D_wIH4BHux",
-        "title": "scmp.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqncBThTYhFgNOpzBy4mX2cj-iNs_-lBWkOtGU58pIHfRy3nQcuhdFY0VMoNwldSAkKc5DHK8fKYUZg_wLYnav3M0W-6cpZzIk3FK_7UYUGXXg6_wT9YeGtAYgkdnIuH9HxbcQQ1YA4Luc1ijbugCTxmJZrTLVCtMjY7yDD5S36WnR9_CjBuiLwyZze2mgV9EFrCyc6X4Zaj_Hpw==",
-        "title": "whbl.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzS0yHp8RLcxOv4fDKtDVHVoSLtmnxicYDObFL3nSgr-bWEVUFCXeKQ0YfskNieqc9bgPo8eTavMUn6pkxcXNgzH5prqrQm8Wtw-zLKUm-PO89RxsmW_8dGH8325kXk0MfeDdfYRZSjZ5dNa2r5qMoaKeWgIGIPJW0B56mqmkXJU8Vm6tMnqFr5XzrjFSb6AGHSRfErhFljEyTWQ==",
-        "title": "whtc.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYg13xMw8sj49EzztvajpaHG9CrfPHgj7u5mb4pr4jjWsXeCtMyUporqbn6jw_n1MLRavec2OHx-Ed1xbun6G3fvuklfkEe_6cgl4PmxYxbP2XNB23mVzczBK-sSLNRRu4GmlSw7-UjtphzUgc93xx6CmMmAAHbAU7OfFq8NoU0wYg96ofJV9LTEG5K1tpF2Cq_3gGR32u7FcBbjgQqsnO1dKta7nHJG-YLxoGdA==",
-        "title": "scmp.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMNwZcN5Z3KzulaBiVi6CiHQ-Toe2w4T5NN9tuJXVGZMjVgaHa7cHiC3qYeB6aY_tEP_oWDeFBGaHpty-uUwULa4Ia0qjEMOrRhldzzcCOf9wOGjeqlYDI-QY=",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDjCNZUeI2gjHuY0Nr69NupOgRYl9xByMZQ37D3mO9RxZNOZ6LxeGbjbNhkdwAPvIUT6bpeagAsZtlgUQYu7fyXzFGEfW4vVpOgRI0UvldTWB_NS2eSCA1k6Tvv6qO",
         "title": "wikipedia.org"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaIYQN8O40QMrdaQTDCKJg81PmTYIYH5Nx_X39WwkF1QcK2jX-i7Lf-eEpMOdXW9tFdNE5x2NwzfzTC6ffAOg-a5uAxUwpplVL6qhAMQP1wQ8cNEecB5kOlD4OIshddjarNonCQA==",
-        "title": "ai-tldr.dev"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoXm9RaZz-agHgnMhFXsRrboEPqTCVdcKUsRYrue00d7rxuPCxW1bRErWlwsGG6yaMOj9eV90G1_WLskj9TiWcHTdeQD_AafKi0vmDwFplGAr6dd4ZQh8gSa56WnF4snxHaFxZpltJvQLtOnsgCCy7lHMGj92NmIXYCVtlPve2cIjoAJM3v8zuwuRzf5ZOocfqYgBoEb52f51u__le-MwJs6J70OhKXx4VWShivVlkgA==",
+        "title": "caixinglobal.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF89gpj15u9DMg2rljkHV86wV1uCHyhjajK7qZ37eb1xcCcNv7IxSVAqW9zrxd1lREK4hPzDnOoAyxOMXP-YuM_4WSrJbe7PlEtIodztaQAGIlC09xhr19EwKbiBjVePZR5rNhLpO64Fgakgt5ThjJp41hd1s7j3C0zefhgyMpp9YaWVuQj8FE7XEnB6qQ1VXXmG-e-Ga6MWoV3fQ==",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIki5RKC-xHqHcRq50t1hGZf9JAV_4xdLz_3X_x0pN3_vgpET4KEwm5de1SWojCQUmAII9Yidm9e4LNrehznlac1Bc29nQ6SItoC92sRgY8JmTSFe64RDO1X1l3aXo-0w8i7ygiXWdIdC2iyMEB1GCYalNasjoINrvxxvg7GeeNk6HWJ38VtGJICzEL4Az0tOzxx5raGD15CSmQF-x2CM5Jlw=",
+        "title": "mediapost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEs1iD3ndYd_-FQOzYv3G5hwhM3e3UrAn43a7mwOF9j0JpmltHBxNARqjOgsWlWzaVqDoAcMlLk-Tdz6iFajmrpWHHxT7rCcAKloT_DKfrFL508IRtBqwNk9JLTl0pUdVd5PU8MAyi_FzcmLhKqxatAcopX5ncX1j2sv34KiDKqFDkskyxAdD7d",
+        "title": "johncircleassociate.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3O3yuO_h_qtnlNsC_M2oK2esiRJ4Znuk9ZxCYnSDFexpkzKxQ2aZ0I64GXES-1fNNBmD4N-pDTbSKOgNNkzEJh3MDbC3kG4ArUI80KOPhwEtihbHlwCvhMziNttCCLRqGVcAqHveL4tCdEyWI0gEUgmaDSXhn4avHHZGRQxdbT_vGd4izh2riwBzr-G8gXmfDAQ==",
+        "title": "ppc.land"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEutXWGokT4PiPUOluIqqG7cqJ2HAO4JOqQzo49sjyuK0e1gJvJpu8AEIbbFXaMLvsNp4nErIQU6PVIZ_-BPvQmpTZNy5VMkM6vI86ccCh1YgBawOhW3H4OZ9wLLRDfhMt4TBpS3vG3Y9DUz5wqYWGMrEImkYpYfBkfHOgA3c_zjIWJ_WSKEPCZHdhHJZFKpS7cfpQGZv-WkmglcjOO3-NO7Y9JG0BZKy-KwouooA-iKPI=",
+        "title": "siliconangle.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJKqELuhd_7zS7d9Kd63Exe-JGaXCj9B8lb6yNCxgoVuhZ-5S2pBdjYty3mCT0wSlYGhNfIeHgqpdCUWdrXKAmBxtZmdS1dzasdj694dlv0sxoQjiPSi4DbvnOqiIA-VMnPj310rX7uzT3FTwgmIzyrD-Le4bsgLMFD5GPG6QaShJ8Frp0Lkk80gx5",
+        "title": "dealroom.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErz1EBusZSjDe0w_q7zh_GFleOdrrfM03RZjrlYmZvExBHOZ6ONtAmtCItCOIcboOeV-XosQ8gTZ_WXonkH0MdvXah22707_y0vxk8HhTz-qzltvxL2WWwQMFEXCkPw950bBf5EpFEt5e_KRYZLaoPcGGk_rzeBCDIFLNUTy74KkDee14A4HeOvuDwN-NnkNFbpKNCQXm7DsHlsF5Xbvn9SopD1NRHvw==",
+        "title": "electronicsforyou.biz"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFE0OFryE3WMDpOivdHjqhADjRaabGzbAwqVeIeeBg7NR8GeKQh6fqIauyyEVjOVPtxT_ZEOmIvLyyO6dckSYXMTikKV0VVPkn_hstHr0hsCl8i8Wc5Xnw=",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5iXXW0DNJtO-j8vqF23zhC_Ha7wPJLMTlWcaHkWYwDRD3AMDNbVULqkLu7wypxxicdJWCADe5uAZ90sIWNOLnq5u4U40UqM5uY4IMRBRz8q4JGDfs52o3b7YCSFRHKb25mo2SQwC3QwT7ea2JlUPvJMfwP_jyo-fGZb56MKKUqAX-0ehyZeDZ4ARX7jc6OIM6xBTYnfGQis2r",
+        "title": "superpowerdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG_QRiuqsV2HOfZuB2glF5KYmUURjtvGu87ozvYJuKFAc6KZqISkcZ1XFB9IV0PD1BUoCWVWaC4ll6xnu_BsMRXues5kBTNO0Buq0O2a2y-bp7j4f91cKOXN0dwQYUKxeuC3n0Cxu5OkRaWA==",
+        "title": "binance.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSmeA0c0-Gl-UmOSevEv-2MNjL-_XFXa6IekuAPfjw_Ir4X5ZxfUpiSbTwElbOh6916-EbL94oj1hBccqQ4EL4P4ANzz7vGHGDW1r8PXHLFQAjoUR4Tgp21KA6X-NPKiW-l7eAbz4n-_44mFHo05WOGVxeDtFyB-sUhT7_PzDiCBwwueynC3WnKg2Ve8_g_2fNGsX7tZBtolu_5uUPIiZjyjFjPryU09kA3BEWLFoDT9YqwvyvYgy4vw==",
+        "title": "ua.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwzn6hxSHahJZJjNIOTCJgOxORFYIjQgonN0IIiaUWZXiN_Ri5JcEtIZ0wIcNoygHLtonQg14s-HmQSYvVWSDTkgHG9ZdIKBqloQ7yz8ekSCK-iiB0sd767-nXx3hIw9yPqdROX7S6yaXL9QemTQHGWRo3drnRiz_RAQLHlNY9wVpzgusJrA==",
+        "title": "rustfoundation.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFI3XP-2gH_fZ38vKXMRMvWKD3SxcsoZXI1u44c89kwIDB_RDuZBAAxxUvWSqnqhpgpLCuNd0c4lWsj7oqEzkv-6MDBvCMiayexUv9FNr2TPbdMdAEriSp-Du9-kf7WlOluipohyT04ehXZgcjUSXfbI9p3oozW24HfMo4SuEDljvy1-AGtbF0=",
+        "title": "analyticsindiamag.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlXfxXuIyN_lN84NggIuENeH3sQVyvOAC4JdKCxe1ONCtmgWRJlrlCvFFlBghsEkQDWF5NvMXcEjfc8hmZ3xMqUDaNm7Qq-RDIN6DJapK87rxwN2VJEWnfnZECmcquqR1qdlW2KGUZWL3Tx193DYpzDF825AxgUwJZ6OkWTM5WNxsnWsmcQQ==",
+        "title": "daily.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGA0RVfafQy9GJl_Tg5XZTDgvaENlg-3y4XTTB72fMRbK6LGGyo86uOjGFGroT3E84JvPOna7vwzJxAF2qde_dnTlW9ALS-vP8-cPpNVBmkucwmD9BIXpD_tCTsAndlDB0bJSFnlwAqCJIVMKIF",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSq9v0jw86jISDXkmroUCLB90CAktRAFsIvry-zedq66m_1YOL9Dwd-5QS_jgvP9xc3uCc2iz7lJehbmk-yFXUuJmEo9Q_3EUrB5Ct7uWwN8x3Xx6FAqpR5xGYxV2QBw7cbIOyDITrNZQWqIqxKHC4P0svS8xNcgNDluAtcH31vY4gHA-6lh3PQ6HkfVV8pdnRKLDHfAHx1xYC0Es=",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2k_q8oP-HWx_cxCcHI6BpTBtNXYc5eeFUQcJh39vNNZNH6Put280FQlG4V5PVFNVbd6vtkvnv0QCmLur23G-AAbHqDYTFEq65qwFKUJ_ySdYRHJ3WUoRKBzKwQcuNCCM6__y7qbkssZM=",
+        "title": "openai.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiMV94bsdQ21euWPp8lg9AHnpYo9A6cuFUccZVa1yGdvIzA9Z3Xz17NDGcwv9ZxAS9_mmJHUW5DAapgChJ8OE9Y4Sm0PdkcpjyVqBYV-HmHOJPCMhNBCAx5UwrB4_DnZFVPr-Tfl-DRaYFYi5Dy7w0zxe9HukD",
+        "title": "openai.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-qnpFSvyPS0uRQCbk7b_QXBWUvNcgWghvolWQkt27J7-Wo90_O_CB6t8VneHKg2sBPTo03c3vv8yDwMYi4E1eYOEBfhWklTp3HizQHuT_YuP6dn1L72QC4LMzd1HKjpVQ25P4AOtwLPhlNHMiVp9jUD37nybrBBnbFVlYKJN_2g==",
+        "title": "axios.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_FkEiOPiyTc16Kw1RQHo3Vd6YdDL3Z6C9Cy31wNz94aWUxA4nA9fIgj4Gp8MXuwJ_xeES27X-vYAOfCnjWLNQmXh37WnC6QBRh0unTld5tjwVx3C3gL4J5OlIY2k3nTAAd4P8oWA5JHzeFHR96IdPFX9Bb7imfie4V3LFK2GGmv0kgL6hOY9C0JI3HoR9jpQwt64wdZl7LrtSqKu5",
         "title": "aiweekly.co"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7Lto3zLvh8h9Vvjl4dBHzw_v08b4U2Zs6aPULQ0-PSjLWUNsfvSUcGnjAhi-fmddqo_Z0oOC_rKLSQHzydK3jwVb0NqypTKTVyINPC0A0SPtiHUo0k2plZXDL9BsEDLnkVdrKoQr2TnJPUdznbAK8Gd0=",
-        "title": "gigazine.net"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXqtzej-GH1G7opmd1IlaVjy3U2d9Olr6oy0sZzC42n-fTBBed5V4FckOQvMCov3LZHHV5nGsK1NlS1Lm6cdcJ9NBcTqHI8jzMLJePHq_QO66tUVay5-14Qbl_vI1HEsXqkULA8CgfiQ6b5Y5M-DRYOXogxawb9P5_i7IWkrVRZ3-nHO-tdF63yRG9N115VV8=",
+        "title": "mit.edu"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIYBbhU1kZVcZ_PjsrinZ7byw8MsQvgrVQh9KqnibReZqvGO-ALh02gXbdwpermyAKkUvkSVnrx2B9zg9LeNjom6mjzMgssXVPCiyYSqAtT3UE4LGcQWpZTcYVWsr-g4znhQ1xPT1dZ4YGaWx2zbzwDAGmerX4eA==",
-        "title": "openai.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHe5lN61yI1IYjI8AW9fwe2PieNJ5eWj6SzBb6HJ37vJEu-xedOACb8pmCwp11IbmO5Cx0I9r5D-YohOyWNaYYBQTOQDxnnKA_dswgyzuHEmAZrAwPc5go=",
+        "title": "techmeme.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqTVpzPgA6aFBU0pc0fIN-Iqb0rZF1a-dvXJNO_51xfKJF0Wglwqf9UvL5jfM8INbjha8BEi3Wlg2VWu6yQg7-p-AvbPoniLjje5CpFcAfMwrDENTzVQXWFyGpqTTuHkbjsfTDjg4a94lR",
-        "title": "openai.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHG9SR0H8v3Q5cGsCinnNsmmzqPWjMhzADQRoHBnrq_ebt74T92s8nsGlABBBLXNRVvETsI4zKQnUlEIKQYlosts4jOCT1aPQQQsT52FkMQRhk06grDMY33rR31EAIIGEA-vZMg-3lX1JnTVlFVdkSxElsV2wKGRG20MABmNMgSsdYZHqH9RUPV3VAXqWwmXdh-aXMLzmBmSY5z1r2LAHTXlzMRt5RN6VcH_rAE_pRRpqxC0LUe2VSf_PMaQXNT-fGBIA==",
+        "title": "indiatimes.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxNJsP_UKNjLGe2B3hFRzvVqhNE6rq1wUXuT5VVgD3QgA0JW36tbtVLWdI3iUXyOp17U8CJeQS8UaRAQYSHa8NuOMHNPBG2LwX8quLgN9Ld7SKSbCemX8eDHi0eXvUy5GV1m_JNr__30yn",
-        "title": "natlawreview.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbh4Slfqgy4jrfD5VAnUFlO9LhdrG18QjnAjo-hbGfV9T5KKeglBLlwzjCSZQqGSOQ9rss7gXnA_eGPPWcWh4NiBOUXIOzjubZhbHrqxGPo6tYMR-qdt3HmhYbItCgbiBmSrKjB1Ru9F5I4D0-rF7ZGhpT0rmGmOHYZBaZyp5j3km8LmwfxjoM2UlLYIRVWJLVyaEyEePfVyZksw==",
+        "title": "9to5mac.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFktsRQuaOi9qI6VjZLfSLgzakaVHdt2cW0Rs0o22kvJvJvamuvbrt0SErxjeFY0DTVuAYItxJxpmiG_xXU4YaRPHCTKsYlLakmjAzdmpqLzaGjMnqSNv25WCnuhGnmkrqLcEfa06xbDYejFuYhjXUA5tLwGOGI69a0xWDvnGmi8mP4YWqEoH0tBGegw1tB",
-        "title": "ground.news"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFEalgU2clNemPFYsg8hQqPxftxfkyDdF33eL8zpI96zGlmw9AgCIX631lY2lnntZEgOXazFrh_hT_tFMmdiEnHwrKSq9ISHFX2-zX_MDLfkR19Ox71Keh0TrSWeNF5kng",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE70PrKXAKWveMWtU3i8YMf21ZB0LB8tStFht3E6l5smEAc4XWr2PkRaXSPGlaTJp4MC5rv4R125Ic3T_vldRMen6ZX5WQWdPJOnn2QlgNIei1a1GA5AxKY8OsEWVRBb_c=",
         "title": "youtube.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAjoW0YU4ZZvo6jCYAMmwuSjiA2NTBoaFPO9cSSZvpPXwvdJdON-dtuDkzgdwMGrkudd3W8CXeIwnJQMAzfelxEiqOnzrB7VJebNlnBMwx3rApS0mEgJ12ZGrxHNY3nV-9XQrOFThLo_09IjiWlHAnykrO1CDEsUiasQrhfRZ8DfuusbKvD2Lb7UCk5D_wtdjzse-BVoAQpdvhkDQuaqB2s4Y2app3hT8=",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3ww9lXFKEwgMncO3H8jne9fVcIxicRvIaxANdwrpfplOtrtshM5TQD9OAA2TVPHEE5cw0-mVvxkixJUN9Z5YgwihpXYl87E4v-BXYwRneQxO9izuU8q1hmDWkPTbBQbekQJnDsTiYAB6-ZKodpZbGr6CXuXrthGw4tJXcu4jQZRYXxuF6GAeeAOFBTscD6wTuG8QCIpOINEWhV8Z3fAwSRz5LEOsU8Q==",
         "title": "tomsguide.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFM4CBFhZdrGvyH77RO9jBvnmmbq-CM3DHbf6o-4qQB7FezWBm6iG1jigjpGOdbYSBclbjg33KLx5OxUK6PaFfE8uOHkRj5MjC-dI_u-iK3mET1lQGAxo2HUaFfer_mGbfkSATpTjYSSTpZ9GcdxFm7IjVMHKxfJEBWW5Pa4UfZ3uObc_rtG_DYoGRKdrmtdLJXGdMBGZPa5CIDfI1i39GY3EKBQ_BYDDqN13lSdKAlk3Kr242nyfshNc0nvEK75h559K4aLUKO7YTWxRoO5m_Y5f71tbkLcbVwM-cmDaBe8wqaDH6OVldJTaEJDggNKzxxGLA3t1AlNMKv6I-44V8X58AgPb8=",
-        "title": "techradar.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNOwlhWZxcHWnZ_FrvgE2z95-OeTzFvpvclzxZlpQxWsOCCfPj7kyp5yEw_FNhtsOeeqFmfGKsjomDurNpb6koZOgFfYklY2eb1H1wlAww5sWAjF2zQfz8kAoTVsP8UmglT5buU-rBmsZ7ePeZMI5J1pkGXuxNzfYnSMWmSnUxn9p6yIxg_wsJZjsd3DH_FAqSB_QXz_fKSigx8Ho=",
+        "title": "cxodigitalpulse.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlba-9R1eZyrWQQLlLpiD9OtXfNwPw-sMAbRcGjiQL8Dd6v9TXDLxq21o8MEae2f89uanQVDP0nzYNYaC0TwrH9RLv_UWEVp1v2cd1KcT6RNiKZwZ4MbJKykYAOPMv2iYUWr1fd6pd0JsD0_mqcYKc2VoEHiFcCfoWHD8BJsgZL4coKqOIie4c8cLnNRXgG2ILRt21QrnGfXw0bFp2yjd1F2DL",
-        "title": "tomsguide.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGowi3fIx8r0LN2020jKVOF-bt2u2eGFkcoms0caYnKJ1cGyHXr1w5qAo0Y5YD_kDheHsBen82WTJRhDvc4hBsqtLMaAnRmVNMmTm7ghggmBVHVodx0f_W1yE8V6pqsHelV3p_uQowhINtEx4CfZHe2S-nD28aaApqIsxNOsf9cLq09deFPe9R0ad2Qd-tk2m5PV2wTkbUjD0KQilRg8rPoVvlJT2f2pLekU8R2H61MIaPWhA==",
+        "title": "investing.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFf20XOhNBGu7mdPaFc5uVEQM4Tvgq-0Das9IKxWaeNv7MEjml2Mt1SR0GRuDTeoOcfrDg2VxVrPByiCOioKujokmo6DdzsxPnKx6Xs85yd7o2mQlrJvtgygFRvV8IaiRSx-WhVuKtUut7N2mOlQmTOb3RtcuRfpeZ9G8wbUd5ZmxNUOjwfh2GlxBJHKVNTg1S4Lx7PLuUHfVsfLq-WDLlj0FbuRKCoOvsOWeH345SH_lSKMIM_Pfq0UvklRRbHTBmLvg0wHn8vGnFFD0Q=",
-        "title": "tradingview.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKxhgIXK480pSId3YDgpuFL1PScGar-UDDUUvIZJd8Kljb0GDQm_bHKbn5isKGmmMX0jmgz0KXE3aVyRfq-qesEC0wBJMrEzJ5kXkqufumAKzUPOh7g4uc3gjhGI6GEvx7OywOo5znfeCYF3Q_yTdOS5Ys412JwKd-Ber31bEPfAUeprpTVOwK_9NBXRKu-XKJQh-d0JcuFuHL4tWdtDUVtQa_KJnfyZgeJWcdPcQHSIH7jqk8qHoxmjQW7TBGm7W_yg==",
+        "title": "indiatimes.com"
       }
     }
   ],
   "groundingSupports": [
     {
       "segment": {
-        "startIndex": 95,
-        "endIndex": 383,
-        "text": "### **Candidate [0]: MIT launches the LLM Election Observatory**\n* **Confirmed:** MIT researchers have launched the *LLM Election Observatory*, a public dashboard tracking how nearly a dozen commercial and open AI models respond to political queries ahead of the 2026 US midterm elections"
+        "startIndex": 927,
+        "endIndex": 1192,
+        "text": "#### **Candidate [1]: Moonshot AI Revenues Top $1B ARR Driven by Kimi K3**\n* **Confirmed:** Bloomberg reports that Chinese AI lab Moonshot AI informed investors its Annual Recurring Revenue (ARR) surpassed **$1 billion in August 2026**, up from $300 million in June"
       },
       "groundingChunkIndices": [
-        0
+        0,
+        1
       ]
     },
     {
       "segment": {
-        "startIndex": 700,
-        "endIndex": 877,
-        "text": "### **Candidate [2]: Mathematician raises transparency concerns over OpenAI math models**\n* **Confirmed:** German mathematician Andreas Thom posted email exchanges on Mathstodon"
+        "startIndex": 1194,
+        "endIndex": 1329,
+        "text": "The expansion was driven by rapid enterprise adoption of its **Kimi K3** 2.8-trillion-parameter open-weight model released in July 2026"
       },
       "groundingChunkIndices": [
-        1,
+        0,
         2,
         3
       ]
     },
     {
       "segment": {
-        "startIndex": 700,
-        "endIndex": 1055,
-        "text": "### **Candidate [2]: Mathematician raises transparency concerns over OpenAI math models**\n* **Confirmed:** German mathematician Andreas Thom posted email exchanges on Mathstodon accusing OpenAI researchers of lacking transparency and potentially leveraging user prompt history/unpublished mathematical ideas in model development without proper attribution"
+        "startIndex": 1331,
+        "endIndex": 1391,
+        "text": "Moonshot AI is targeting **$2 billion ARR** by year-end 2026"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1393,
+        "endIndex": 1540,
+        "text": "* **Important Caveats:** Figures originate from private investor communications reported via Bloomberg sources rather than public financial filings"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1573,
+        "endIndex": 1648,
+        "text": "** Highly relevant to AI business models and global open-weight competition"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1915,
+        "endIndex": 2001,
+        "text": "LinkedIn*) regarding \"BrowserGate\" allegations that LinkedIn scanned Chrome extensions"
       },
       "groundingChunkIndices": [
         4,
@@ -208,20 +266,9 @@
     },
     {
       "segment": {
-        "startIndex": 1057,
-        "endIndex": 1135,
-        "text": "This follows similar public complaints by NYU mathematician Tristan Buckmaster"
-      },
-      "groundingChunkIndices": [
-        1,
-        4
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1137,
-        "endIndex": 1296,
-        "text": "* **Important Caveats:** These are social media allegations and open disputes within the academic community, not a formal lawsuit or adjudicated legal judgment"
+        "startIndex": 2003,
+        "endIndex": 2178,
+        "text": "The judge ruled that the plaintiffs lacked Article III standing because neither alleged that sensitive private extension data was actually extracted or transmitted to LinkedIn"
       },
       "groundingChunkIndices": [
         4
@@ -229,51 +276,43 @@
     },
     {
       "segment": {
-        "startIndex": 1298,
-        "endIndex": 1470,
-        "text": "OpenAI researchers previously denied training on private user sessions in direct communications with Thom, though Thom contends the denial lacks verifiable audit trail data"
+        "startIndex": 2180,
+        "endIndex": 2382,
+        "text": "* **Important Caveats:** The dismissal was decided on legal standing grounds rather than a final factual ruling on client-side telemetry practices; plaintiffs retain options to appeal or amend pleadings"
       },
       "groundingChunkIndices": [
-        2,
-        5
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1631,
-        "endIndex": 2024,
-        "text": "### **Candidate [5]: Microsoft elevates Rust to Tier-1 engineering status**\n* **Confirmed:** The Rust Foundation published a guest post by Microsoft engineering leadership confirming that Rust has been officially designated as a Tier-1 language at Microsoft, placing it alongside C++, C#, and TypeScript with standardized internal toolchains, compiler support, and security compliance pathways"
-      },
-      "groundingChunkIndices": [
-        6,
-        7
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 2026,
-        "endIndex": 2230,
-        "text": "* **Important Caveats:** This reflects internal developer infrastructure status and toolchain maturity across Microsoft’s software engineering organization, rather than a new external commercial product"
-      },
-      "groundingChunkIndices": [
+        4,
         6
       ]
     },
     {
       "segment": {
-        "startIndex": 2392,
-        "endIndex": 2698,
-        "text": "### **Candidate [9]: President Trump dismisses AI extinction warnings, citing competition with China**\n* **Confirmed:** Speaking to reporters in Dallas, US President Donald Trump rejected warnings from AI safety researchers that advanced artificial intelligence could pose an existential threat to humanity"
+        "startIndex": 2415,
+        "endIndex": 2503,
+        "text": "** Important precedent regarding SaaS platform telemetry and browser scanning litigation"
       },
       "groundingChunkIndices": [
-        8
+        4,
+        5
       ]
     },
     {
       "segment": {
-        "startIndex": 2700,
-        "endIndex": 2823,
-        "text": "Trump stated that his primary concern is ensuring the US maintains its estimated one-year lead over China in AI development"
+        "startIndex": 3223,
+        "endIndex": 3526,
+        "text": "#### **Candidate [5]: Ayar Labs Raises $150M Extension to Series E Round**\n* **Confirmed:** Silicon Valley optical interconnect startup Ayar Labs announced a $150 million extension to its Series E funding, bringing total primary capital raised in 2026 to $650 million at a valuation exceeding $5 billion"
+      },
+      "groundingChunkIndices": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3528,
+        "endIndex": 3577,
+        "text": "Backers include Wiwynn, Nvidia, AMD, and MediaTek"
       },
       "groundingChunkIndices": [
         8,
@@ -282,20 +321,44 @@
     },
     {
       "segment": {
-        "startIndex": 2825,
-        "endIndex": 2981,
-        "text": "* **Important Caveats:** The remarks were informal Q&A statements following public warnings and high-profile resignations by safety researchers at Anthropic"
+        "startIndex": 3579,
+        "endIndex": 3747,
+        "text": "Funds will support high-volume manufacturing readiness and expand engineering at its new Bengaluru design center in India ahead of target 2027/2028 customer deployments"
       },
       "groundingChunkIndices": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3749,
+        "endIndex": 3886,
+        "text": "* **Important Caveats:** Commercial optical chip co-packaging remains in qualification phases with full volume ramps expected around 2028"
+      },
+      "groundingChunkIndices": [
+        7,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3919,
+        "endIndex": 3999,
+        "text": "** Strong news for hardware, silicon interconnects, and AI data center scale-out"
+      },
+      "groundingChunkIndices": [
+        7,
         8,
         10
       ]
     },
     {
       "segment": {
-        "startIndex": 3215,
-        "endIndex": 3465,
-        "text": "### **Candidate [10]: Tencent-backed AI chipmaker Enflame surges 188% in Shanghai debut**\n* **Confirmed:** Shanghai Enflame Technology made its public trading debut on Shanghai’s STAR Market on September 11, 2026, opening 188% above its offer price"
+        "startIndex": 4601,
+        "endIndex": 4902,
+        "text": "#### **Candidate [7]: Garry Tan Says Regulators Should \"Do Nothing\" About AI Distillation**\n* **Confirmed:** Y Combinator CEO Garry Tan stated in a CNBC interview at YC Demo Day that regulators should \"do nothing\" to restrict Chinese companies using model distillation techniques on US frontier models"
       },
       "groundingChunkIndices": [
         11,
@@ -305,9 +368,31 @@
     },
     {
       "segment": {
-        "startIndex": 3467,
-        "endIndex": 3621,
-        "text": "The company raised ~6.12 billion yuan ($912 million) in its IPO, giving it a market capitalisation of approximately $26.3 billion (176–185 billion yuan)"
+        "startIndex": 4904,
+        "endIndex": 5048,
+        "text": "He argued policymakers should focus on immediate cybersecurity/biosecurity risks while preserving market pricing premiums for frontier providers"
+      },
+      "groundingChunkIndices": [
+        11,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5050,
+        "endIndex": 5186,
+        "text": "* **Important Caveats:** Represents commentary/policy opinion from an accelerator executive, not formal regulatory or legislative action"
+      },
+      "groundingChunkIndices": [
+        11,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5219,
+        "endIndex": 5332,
+        "text": "** Notable contribution to the ongoing policy debate over open weights, IP enforcement, and AI model distillation"
       },
       "groundingChunkIndices": [
         11,
@@ -317,76 +402,142 @@
     },
     {
       "segment": {
-        "startIndex": 3623,
-        "endIndex": 3797,
-        "text": "* **Important Caveats:** Enflame faces heavy customer concentration risk, with prospectus filings showing major shareholder Tencent accounted for over 80% of its 2025 revenue"
+        "startIndex": 5340,
+        "endIndex": 5574,
+        "text": "#### **Candidate [8]: Microsoft Elevates Rust to Internal Tier-1 Language Status**\n* **Confirmed:** Microsoft has officially designated Rust as a \"Tier-1\" programming language for internal engineering alongside C++, C#, and TypeScript"
       },
       "groundingChunkIndices": [
-        13
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 3799,
-        "endIndex": 3873,
-        "text": "The company also operates under tight US semiconductor export restrictions"
-      },
-      "groundingChunkIndices": [
-        11,
         14,
         15
       ]
     },
     {
       "segment": {
-        "startIndex": 4043,
-        "endIndex": 4250,
-        "text": "### **Candidate [11]: OpenAI launches Agents API in public beta**\n* **Confirmed:** OpenAI launched its managed *Agents API* in public beta, providing developers direct API access to its managed Codex harness"
+        "startIndex": 5576,
+        "endIndex": 5784,
+        "text": "A post published via the Rust Foundation details Microsoft's deployment of `rustc_codegen_utc`—a custom compiler backend connecting Rust directly to MSVC for kernel, driver, and enterprise Windows workloads"
       },
       "groundingChunkIndices": [
+        14,
         16,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5786,
+        "endIndex": 5952,
+        "text": "* **Important Caveats:** Relates to Microsoft's internal software engineering standards and tooling infrastructure rather than a public developer product announcement"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5985,
+        "endIndex": 6078,
+        "text": "** Significant milestone for enterprise systems engineering and memory-safe language adoption"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6086,
+        "endIndex": 6369,
+        "text": "#### **Candidate [10]: Polymarket Appoints Former Amazon Executive Warren Jenson as First CFO**\n* **Confirmed:** Prediction platform Polymarket hired veteran finance executive Warren Jenson (former CFO at Amazon, EA, Delta Air Lines, and Nielsen) as its first Chief Financial Officer"
+      },
+      "groundingChunkIndices": [
         17,
         18
       ]
     },
     {
       "segment": {
-        "startIndex": 4252,
-        "endIndex": 4438,
-        "text": "The API handles long-running session state, automatic context compaction, subagent orchestration, hosted or self-hosted execution sandboxes, and Model Context Protocol (MCP) integrations"
+        "startIndex": 6371,
+        "endIndex": 6449,
+        "text": "The hire comes as Polymarket expands its CFTC-regulated U.S. exchange platform"
+      },
+      "groundingChunkIndices": [
+        17,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6451,
+        "endIndex": 6593,
+        "text": "* **Important Caveats:** Standard executive appointment, though strategically significant amid intense market competition with US rival Kalshi"
+      },
+      "groundingChunkIndices": [
+        17,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6626,
+        "endIndex": 6697,
+        "text": "** Relevant business item for prediction markets and fintech regulation"
+      },
+      "groundingChunkIndices": [
+        17,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6705,
+        "endIndex": 6887,
+        "text": "#### **Candidate [12]: OpenAI Documentation Details New Agents API**\n* **Confirmed:** OpenAI updated developer documentation on `developers.openai.com` introducing its **Agents API**"
       },
       "groundingChunkIndices": [
         19,
-        20,
-        16
+        20
       ]
     },
     {
       "segment": {
-        "startIndex": 4440,
-        "endIndex": 4588,
-        "text": "* **Important Caveats:** The public beta is currently restricted to US data residency and does not currently offer zero data retention (ZDR) options"
+        "startIndex": 6889,
+        "endIndex": 7069,
+        "text": "The managed API runs agentic workflows on the Codex harness, offering managed session states, sandboxed code execution environments, and Model Context Protocol (MCP) server support"
       },
       "groundingChunkIndices": [
-        16
+        19,
+        20
       ]
     },
     {
       "segment": {
-        "startIndex": 4743,
-        "endIndex": 5084,
-        "text": "### **Candidate [13]: Texas judge finds TikTok liable for misleading child safety claims**\n* **Confirmed:** A Texas District Judge ruled on September 10, 2026, that TikTok violated state consumer protection laws by misleading parents and users regarding its child safety measures and the effectiveness of its \"Restricted Mode\" content filter"
+        "startIndex": 7071,
+        "endIndex": 7166,
+        "text": "* **Important Caveats:** Refers to active developer platform documentation and feature rollouts"
       },
       "groundingChunkIndices": [
-        21,
-        22
+        19,
+        20
       ]
     },
     {
       "segment": {
-        "startIndex": 5087,
-        "endIndex": 5309,
-        "text": "* **Important Caveats:** The order establishes legal liability on summary judgment; financial penalties, statutory damages, and potential injunctive relief will be decided in a separate trial phase scheduled for next month"
+        "startIndex": 7199,
+        "endIndex": 7266,
+        "text": "** High relevance for AI developers and agentic software deployment"
+      },
+      "groundingChunkIndices": [
+        19,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7274,
+        "endIndex": 7587,
+        "text": "#### **Candidate [13]: TikTok Rejects Meta Ads Urging Joint Settlement of Youth Safety Lawsuits**\n* **Confirmed:** Axios reports that TikTok rejected paid advertising campaigns submitted by Meta that urged TikTok and peer platforms to join Meta in settling landmark state attorneys general child safety litigation"
       },
       "groundingChunkIndices": [
         21
@@ -394,9 +545,9 @@
     },
     {
       "segment": {
-        "startIndex": 5311,
-        "endIndex": 5350,
-        "text": "TikTok is expected to appeal the ruling"
+        "startIndex": 7589,
+        "endIndex": 7772,
+        "text": "* **Important Caveats:** Based on sources familiar with ad review decisions; Meta's overall multi-billion-dollar proposed settlement framework remains subject to final state approvals"
       },
       "groundingChunkIndices": [
         21
@@ -404,48 +555,278 @@
     },
     {
       "segment": {
-        "startIndex": 5521,
-        "endIndex": 5939,
-        "text": "### **Candidate [15]: Apple CEO John Ternus and Greg Joswiak detail hardware & foldable strategy**\n* **Confirmed:** In an interview with *Tom's Guide* and *TechRadar* following Apple's fall hardware event, newly appointed Apple CEO John Ternus and Marketing SVP Greg Joswiak discussed the design choices behind the $1,999 foldable iPhone Duo, including crease reduction tech, nano-texture glass, and iOS 27 adaptations"
+        "startIndex": 7805,
+        "endIndex": 7887,
+        "text": "** High relevance for tech regulation, platform litigation, and ad policy friction"
       },
       "groundingChunkIndices": [
-        23,
-        24,
-        25,
-        26
+        21
       ]
     },
     {
       "segment": {
-        "startIndex": 5941,
-        "endIndex": 6046,
-        "text": "* **Important Caveats:** The interview is vendor-driven product commentary following an Apple press event"
+        "startIndex": 7895,
+        "endIndex": 8183,
+        "text": "#### **Candidate [14]: MIT Launches LLM Election Observatory Dashboard**\n* **Confirmed:** Researchers at MIT (CSAIL/Sloan/LIDS) launched the public **LLM Election Observatory** dashboard, tracking how ~12 leading AI models respond to political queries during the 2026 US midterm elections"
       },
       "groundingChunkIndices": [
-        23,
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8185,
+        "endIndex": 8272,
+        "text": "* **Important Caveats:** Academic oversight initiative rather than a commercial product"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8305,
+        "endIndex": 8403,
+        "text": "** Excellent fit for technology governance, political AI monitoring, and model evaluation research"
+      },
+      "groundingChunkIndices": [
+        22,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8411,
+        "endIndex": 8711,
+        "text": "#### **Candidate [16]: Ultraviolette Plans $82M Electric Motorcycle Plant in India**\n* **Confirmed:** Indian EV startup Ultraviolette Automotive announced plans to invest ₹779 crore ($81.9 million) in a new factory in Hosur, Tamil Nadu, expanding manufacturing capacity up to 500,000 units annually"
+      },
+      "groundingChunkIndices": [
         25
       ]
     },
     {
       "segment": {
-        "startIndex": 6222,
-        "endIndex": 6515,
-        "text": "### **Candidate [17]: Oklahoma judge cited fake AI-generated case law in court ruling**\n* **Confirmed:** Reuters reported that a local prosecutor flagged a judicial ruling by an Oklahoma state court judge after discovering that citations in the document were false and generated by AI software"
+        "startIndex": 8713,
+        "endIndex": 8791,
+        "text": "* **Important Caveats:** Regional clean-transport hardware manufacturing story"
       },
       "groundingChunkIndices": [
-        27
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8844,
+        "endIndex": 8934,
+        "text": "** Valid for EV hardware coverage, but lower priority compared to core AI/tech policy news"
+      },
+      "groundingChunkIndices": [
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8942,
+        "endIndex": 9269,
+        "text": "#### **Candidate [17]: Apple Details iPhone Duo Foldable Design and Strategy**\n* **Confirmed:** Apple introduced its first foldable smartphone, the **iPhone Duo**, with CEO John Ternus and marketing SVP Greg Joswiak providing details on its nano-texture display design, crease reduction techniques, and iOS 27 foldable features"
+      },
+      "groundingChunkIndices": [
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9271,
+        "endIndex": 9428,
+        "text": "* **Important Caveats:** Consumer hardware launch story, though representing a major shift in Apple's mobile hardware strategy under new executive leadership"
+      },
+      "groundingChunkIndices": [
+        26,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9461,
+        "endIndex": 9500,
+        "text": "** Major consumer hardware announcement"
+      },
+      "groundingChunkIndices": [
+        26,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9508,
+        "endIndex": 9842,
+        "text": "#### **Candidate [19]: US DOJ Probes Nvidia's $17B Licensing Deal with Groq**\n* **Confirmed:** The US Department of Justice opened an antitrust inquiry into whether Nvidia's $17 billion licensing deal with AI chip startup Groq (combining a non-exclusive license with hiring key leadership) was structured to evade formal merger review"
+      },
+      "groundingChunkIndices": [
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9844,
+        "endIndex": 9983,
+        "text": "* **Important Caveats:** Preliminary civil investigation and request for information; no formal lawsuit or antitrust finding has been filed"
+      },
+      "groundingChunkIndices": [
+        29,
+        31
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10016,
+        "endIndex": 10101,
+        "text": "** Top-tier story for AI chip competition, antitrust enforcement, and tech regulation"
+      },
+      "groundingChunkIndices": [
+        29,
+        31
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10171,
+        "endIndex": 10247,
+        "text": "**[19] DOJ Antitrust Probe into Nvidia–Groq Deal** *(Top Tech Regulation)*"
+      },
+      "groundingChunkIndices": [
+        29,
+        31
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10251,
+        "endIndex": 10336,
+        "text": "**[1] Moonshot AI Revenue Tops $1B ARR via Kimi K3** *(Top AI Business/Open Weights)*"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10340,
+        "endIndex": 10425,
+        "text": "**[5] Ayar Labs $150M Optical Chip Funding Extension** *(AI Hardware Infrastructure)*"
+      },
+      "groundingChunkIndices": [
+        7,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10429,
+        "endIndex": 10504,
+        "text": "**[12] OpenAI Releases Agents API Documentation** *(AI Developer Platform)*"
+      },
+      "groundingChunkIndices": [
+        19,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10508,
+        "endIndex": 10592,
+        "text": "**[8] Microsoft Elevates Rust to Tier-1 Internal Status** *(Enterprise Engineering)*"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10596,
+        "endIndex": 10674,
+        "text": "**[13] TikTok Rejects Meta's Settlement Pressure Ads** *(Platform Regulation)*"
+      },
+      "groundingChunkIndices": [
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10678,
+        "endIndex": 10752,
+        "text": "**[14] MIT Launches LLM Election Observatory** *(AI Integrity & Research)*"
+      },
+      "groundingChunkIndices": [
+        22,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10756,
+        "endIndex": 10834,
+        "text": "**[7] YC's Garry Tan on AI Distillation & Regulation** *(Industry Commentary)*"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10838,
+        "endIndex": 10917,
+        "text": "**[2] Court Dismisses LinkedIn Browser Scanning Lawsuits** *(Tech Privacy Law)*"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10922,
+        "endIndex": 10987,
+        "text": "**[17] Apple iPhone Duo Foldable Executive Details** *(Hardware)*"
+      },
+      "groundingChunkIndices": [
+        26,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10992,
+        "endIndex": 11056,
+        "text": "**[10] Polymarket Names Warren Jenson as First CFO** *(Fintech)*"
+      },
+      "groundingChunkIndices": [
+        17,
+        18
       ]
     }
   ],
   "webSearchQueries": [
-    "\"John Ternus\" \"iPhone Duo\" \"Tom's Guide\" Mark Spoonauer",
-    "Trump AI human extinction China lead Bloomberg 2026",
-    "\"Rust is tier-1 language at Microsoft\" rustfoundation 2026",
-    "MIT LLM Election Observatory NYT Tiffany Hsu 2026",
-    "\"andreasthom\" \"OpenAI\" \"mathstodon\" 2026",
-    "TikTok Texas lawsuit judge liable safety standards 2026",
-    "\"OpenAI\" \"Agents API\" \"developers.openai.com\" 2026",
-    "Enflame Shanghai debut IPO Tencent SCMP 2026",
-    "\"Oklahoma judge used AI in ruling that contained false citations\" 2026"
+    "iPhone Duo foldable Apple John Ternus Greg Joswiak",
+    "Rust tier 1 language at Microsoft rustfoundation org",
+    "Ayar Labs 150 million Series E Reuters",
+    "Moonshot AI ARR 1B Kimi K3 Bloomberg",
+    "LinkedIn browser extensions lawsuit dismissed 2026",
+    "Polymarket Warren Jenson CFO WSJ",
+    "OpenAI Agents API documentation developers.openai.com",
+    "Garry Tan Y Combinator China distillation CNBC",
+    "Ultraviolette 82 million plant Reuters",
+    "DOJ probes Nvidia licensing deal with Groq Reuters NYT",
+    "MIT LLM Election Observatory New York Times",
+    "TikTok rejects Meta ads child safety lawsuit Axios"
   ]
 }

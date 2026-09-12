@@ -21,6 +21,22 @@ const esc = (value) => String(value ?? "")
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
   .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 const clean = (value) => String(value ?? "").replace(/\s+/g, " ").trim();
+const firstSentence = (value) => clean(value).match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() || clean(value);
+const limitWords = (value, maximum) => {
+  const words = clean(value).split(" ").filter(Boolean);
+  return words.length <= maximum ? words.join(" ") : `${words.slice(0, maximum).join(" ").replace(/[,:;.!?]+$/, "")}…`;
+};
+const publicationUrl = (value) => {
+  try {
+    const url = new URL(String(value || ""));
+    for (const key of [...url.searchParams.keys()]) {
+      if (/^(?:accessToken|token|utm_.+|fbclid|gclid)$/i.test(key)) url.searchParams.delete(key);
+    }
+    return url.toString();
+  } catch {
+    return String(value || "");
+  }
+};
 const ensure = (dir) => fs.mkdirSync(dir, { recursive: true });
 const write = (dir, name, content) => {
   ensure(dir);
@@ -39,7 +55,8 @@ function cautiousEditorialText(value) {
     .replace(/\bwill inevitably\b/gi, "could")
     .replace(/\bis certain to\b/gi, "could")
     .replace(/\bensuring\b/gi, "potentially helping to keep")
-    .replace(/\bguarantees?\b/gi, "could support");
+    .replace(/\bguarantees?\b/gi, "could support")
+    .replace(/\b(?:the\s+)?legal liability(?:\s+for[^.]{0,100})?\s+rests with\s+(?:the\s+)?(?:individual\s+)?users?\b/gi, "individual users could face legal exposure");
 }
 
 function candidateLines(candidates) {
@@ -115,6 +132,8 @@ async function createEditorialOutput(sourceBundle) {
       "Do not describe a model as excluded when evidence only shows that it is absent; check whether other models are already present.",
       "Describe temporary pauses, staff reallocations and operational responses with their stated scope and duration.",
       "Do not attribute motive, strategy, intention or inevitability unless the evidence explicitly supports it.",
+      "Do not state that legal liability rests with a person or group unless a court or authoritative legal source has established that outcome. For unresolved legal questions, say they could face legal exposure.",
+      "For alleged security incidents, attribute disputed actions to the reporting or researchers and preserve the affected organisation's response. Prefer a Reuters or affected-organisation candidate when it reports the same incident directly.",
       "Do not invent a fixed future time horizon. Avoid deterministic language such as 'will dictate', 'will force', 'ensuring' or 'guarantees'. Use may, could, suggests or would depend on where appropriate.",
       "Select a broad mix rather than five versions of the same AI story.",
       "Prefer consequential developments over novelty. Avoid hype, clickbait and investment advice.",
@@ -133,19 +152,19 @@ async function createEditorialOutput(sourceBundle) {
     const confidence = Math.max(0, Math.min(1, Number(story.confidence || 0)));
     if (confidence < 0.72) continue;
     seen.add(index);
-    const finalUrl = candidate.direct_source_url || candidate.url;
+    const finalUrl = publicationUrl(candidate.direct_source_url || candidate.url);
     mapped.push({
       category: clean(story.category || "worth-knowing"),
       headline: clean(story.headline || candidate.title),
       confirmed_fact: clean(story.confirmed_fact),
-      why_it_matters: clean(story.why_it_matters),
+      why_it_matters: cautiousEditorialText(story.why_it_matters),
       interpretation: cautiousEditorialText(stripOurReadPrefix(story.interpretation)),
       confidence,
       source: clean(candidate.publisher || candidate.source),
       discovered_via: candidate.source,
       source_title: candidate.title,
       url: finalUrl,
-      discovery_url: candidate.discovery_url || candidate.url,
+      discovery_url: publicationUrl(candidate.discovery_url || candidate.url),
       link_quality: candidate.link_quality || (candidate.direct_source_url ? "original" : "unknown"),
       published_at: candidate.published_at || null,
       discovery_score: candidate.score
@@ -202,7 +221,8 @@ function findEditorialLanguageWarnings(editorial) {
   const warnings = [];
   const patterns = [
     [/(?:\bwill dictate\b|\bwill determine\b|\bwill force\b|\bwill inevitably\b)/i, "deterministic future language"],
-    [/(?:\bensuring\b|\bguarantees?\b)/i, "unsupported certainty or motive language"]
+    [/(?:\bensuring\b|\bguarantees?\b)/i, "unsupported certainty or motive language"],
+    [/\blegal liability\b[^.]{0,140}\brests with\b/i, "categorical unresolved legal-liability language"]
   ];
   const fields = [
     ["practical takeaway", editorial.practical_takeaway],
@@ -260,6 +280,8 @@ function renderNewsletterHtml(editorial) {
 function buildSocial(editorial) {
   const lead = editorial.stories[0];
   const link = `${BASE}/daily-brief/`;
+  const spokenCore = lead ? `${lead.headline}. ${firstSentence(lead.confirmed_fact)}` : "";
+  const spokenScript = lead ? `${limitWords(spokenCore, 32)} Read the Sapiver Forge Daily Brief.` : "";
   return {
     date: DATE,
     lead_headline: lead?.headline || editorial.publication_title,
@@ -267,7 +289,7 @@ function buildSocial(editorial) {
     pinterest_title: lead?.headline || editorial.publication_title,
     pinterest_description: lead ? `${lead.why_it_matters}\n\nRead today's Sapiver Forge Daily Brief: ${link}` : "",
     tiktok_caption: lead ? `${lead.headline}. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business` : "",
-    spoken_script: lead ? `${lead.headline}. ${lead.confirmed_fact} Why it matters: ${lead.why_it_matters} That's one of today's stories in the Sapiver Forge Daily Brief.` : ""
+    spoken_script: spokenScript
   };
 }
 

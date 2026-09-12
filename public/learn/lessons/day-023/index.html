@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn how to design explicit release gates around AI outputs using validation, confidence signals, policy rules, evidence checks and human approval.">
+<title>Sapiver Learn — Day 23: Designing Release Gates for AI Outputs</title>
+<style>
+:root{--bg:#0f1115;--panel:#171a21;--panel-2:#1e232c;--text:#f3f5f7;--muted:#aeb7c2;--accent:#ff8a3d;--accent-soft:#3a2418;--good:#51c878;--bad:#ff6b6b;--border:#303744;--max:880px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+main{width:min(var(--max),calc(100% - 28px));margin:0 auto;padding:28px 0 60px}
+a{color:var(--accent)}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.brand{font-weight:700}.brand a{color:inherit;text-decoration:none}
+.pill{padding:5px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:.9rem}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:22px;margin:16px 0}
+h1,h2,h3{line-height:1.25}h1{font-size:clamp(1.9rem,5vw,3rem);margin:.2rem 0 1rem}h2{font-size:1.35rem;margin-top:0}
+p{margin:.75rem 0}.muted{color:var(--muted)}
+.callout{border-left:4px solid var(--accent);background:var(--accent-soft);padding:14px 16px;border-radius:10px;margin:18px 0}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;margin:18px 0 8px}
+button,select{border:1px solid var(--border);background:var(--panel-2);color:var(--text);padding:11px 15px;border-radius:10px;font-size:1rem}
+button{cursor:pointer}.primary{background:var(--accent);color:#1a120c;border-color:var(--accent);font-weight:700}
+.voice-wrap{display:flex;flex-direction:column;gap:4px;flex:1 1 260px}.voice-wrap label{color:var(--muted)}.voice-wrap select{width:100%}
+.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:16px 0}
+.flow>div,.term{background:var(--panel-2);border:1px solid var(--border);border-radius:10px;padding:12px}
+.flow>div{text-align:center;display:flex;align-items:center;justify-content:center;min-height:78px}
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:10px}.term strong{display:block}
+.question{margin:20px 0;padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--panel-2)}
+.option{display:block;width:100%;text-align:left;margin:8px 0;background:#202632}
+.option.correct{border-color:var(--good);background:#163120}.option.wrong{border-color:var(--bad);background:#351c1c}
+.feedback{min-height:1.4em;margin-top:10px;font-weight:600}
+.score{font-size:1.15rem;font-weight:700}.progress-row{display:flex;flex-wrap:wrap;gap:10px 18px;color:var(--muted);margin:.5rem 0 1rem}
+.remediation{margin-top:12px;padding:12px;border:1px solid var(--border);border-radius:10px;background:var(--panel-2)}
+.speech-active{background:var(--accent-soft);outline:2px solid var(--accent);outline-offset:4px;border-radius:6px}
+::highlight(sapiver-reading){background-color:rgba(255,138,61,.38);color:var(--text)}
+footer{margin-top:28px;color:var(--muted);font-size:.92rem}
+@media(max-width:700px){.terms,.flow{grid-template-columns:1fr}.controls>button{flex:1 1 130px}.voice-wrap{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body><main>
+<div class="topbar"><div class="brand"><a href="../../">Sapiver Learn</a></div><div class="pill">Phase 1 · Day 23 · Release Gates</div></div>
+
+<section>
+<h1>Designing release gates for AI outputs</h1>
+<p class="muted">Estimated learning time: 8–10 minutes.</p>
+<div class="controls">
+<button class="primary" id="playBtn">▶ Listen</button>
+<button id="pauseBtn">⏸ Pause</button>
+<button id="resumeBtn">▶ Resume</button>
+<button id="stopBtn">■ Stop</button>
+<div class="voice-wrap"><label for="voiceSelect">Voice</label><select id="voiceSelect"><option value="">Loading voices…</option></select></div>
+</div>
+<div id="audioStatus" class="muted" aria-live="polite">Ready to listen. Speed: 1.00×.</div>
+
+<div class="callout"><strong>Core mental model:</strong><br>An AI result should not be released merely because the model produced it. A release gate checks whether the output satisfies explicit conditions before it reaches a user, changes data or triggers a real-world action. The higher the consequence, the stronger the gate should be.</div>
+</section>
+
+<section id="lesson">
+<div class="card"><h2>1. Generation and release are separate decisions</h2><p>The model's job is to produce a candidate output. The system's job is to decide whether that candidate is acceptable.</p><p>This separation matters because model output can be incomplete, unsupported, malformed or unsafe even when it sounds confident.</p><p>Release should therefore be a distinct step with its own rules.</p></div>
+
+<div class="card"><h2>2. A gate needs explicit pass conditions</h2><p>A <strong>release gate</strong> is useful only when its conditions are defined in advance.</p><p>Examples include: required fields are present, cited evidence exists, confidence signals exceed a threshold, a policy rule passes, or a named person has approved the action.</p><p>“Looks fine” is not a dependable gate.</p></div>
+
+<div class="card"><h2>3. Use deterministic checks where possible</h2><p>Many release checks should be ordinary software rules.</p><p>A JSON object can be validated against a schema. A date can be checked for valid format. A refund amount can be compared with an approval threshold. A URL can be checked against an allow-list.</p><p>These checks are predictable, testable and cheaper than asking another model to decide everything.</p></div>
+
+<div class="card"><h2>4. Evidence gates reduce unsupported claims</h2><p>For grounded answers, a gate can require the output to be supported by retrieved evidence.</p><p>The system might check that a source was retrieved, that required fields came from that source, or that unsupported claims trigger escalation instead of release.</p><p>This does not guarantee truth, but it reduces the chance of releasing an answer with no evidence trail.</p></div>
+
+<div class="card"><h2>5. Confidence signals are inputs, not authority</h2><p>A confidence score can help route decisions, but it should not automatically become permission to act.</p><p>Some models do not provide well-calibrated confidence, and a high score can still be wrong.</p><p>Use confidence alongside evidence quality, policy rules, task risk and evaluation results.</p></div>
+
+<div class="card"><h2>6. Risk should determine the strength of the gate</h2><p>A low-risk writing suggestion may only need formatting checks. A financial action may need deterministic validation plus human approval.</p><p>The stronger the consequence, the less sensible it is to let one probabilistic signal make the final decision.</p><p>Think in terms of reversibility, financial impact, privacy exposure and external visibility.</p></div>
+
+<div class="card"><h2>7. Human approval should be specific</h2><p>A human gate works best when the reviewer can see exactly what is being approved.</p><p>Show the proposed action, the evidence, important uncertainty and the effect of approval.</p><p>A vague button labelled “Approve AI result” creates weak accountability because the reviewer cannot easily judge the real consequence.</p></div>
+
+<div class="card"><h2>8. Failed gates need explicit routes</h2><p>A failed gate should not leave the workflow in an undefined state.</p><p>Possible routes include retrying a safe step, requesting more information, falling back to source material, sending the case to human review or stopping the workflow.</p><p>Design the failure path before production rather than improvising it after an incident.</p></div>
+
+<div class="card"><h2>9. Gates should be evaluated too</h2><p>A gate can be too weak and release bad outputs, or too strict and block useful ones.</p><p>Evaluation should therefore measure false passes and false blocks.</p><p>Production failures from Day 22 should become tests for the gate itself so the control improves over time.</p></div>
+
+<div class="card"><h2>Worked example: approving an AI-generated refund decision</h2>
+<p>A support workflow receives a refund request and an AI component classifies the reason and drafts a recommendation.</p>
+<div class="flow"><div>Request received</div><div>Order verified</div><div>AI recommendation</div><div>Policy checks</div><div>Approval gate</div><div>Refund or escalate</div></div>
+<p>The model does not issue the refund directly. Deterministic code verifies the order, checks the refund window and compares the amount with the approval threshold.</p>
+<p>If required evidence is missing, the gate fails and requests more information. If the amount is high, the case goes to a named reviewer.</p>
+<p>Only after the required checks pass does the payment action become available.</p>
+</div>
+
+<div class="card"><h2>Why this matters</h2><p>Phase 1 has shown that AI systems are made of models, rules, data, tools and controls.</p><p>Release gates turn those controls into a clear decision point between “the AI produced something” and “the system allowed something to happen”.</p><p>That distinction is one of the most important foundations for building trustworthy AI-enabled workflows.</p></div>
+
+<div class="card"><h2>Key terms</h2><div class="terms">
+<div class="term"><strong>Release gate</strong>A control that checks whether an output or action meets required conditions before release.</div>
+<div class="term"><strong>Pass condition</strong>An explicit requirement that must be satisfied for a gate to succeed.</div>
+<div class="term"><strong>Schema validation</strong>Checking whether structured data matches an expected format and set of constraints.</div>
+<div class="term"><strong>Evidence gate</strong>A check requiring sufficient supporting evidence before release.</div>
+<div class="term"><strong>False pass</strong>A bad output incorrectly allowed through a gate.</div>
+<div class="term"><strong>False block</strong>A good output incorrectly stopped by a gate.</div>
+<div class="term"><strong>Escalation</strong>Routing a case to a stronger control, often human review.</div>
+<div class="term"><strong>Reversibility</strong>How easily an action can be undone after it occurs.</div>
+</div></div>
+</section>
+
+<section class="card" id="quiz">
+<h2>Day 23 knowledge check</h2>
+<p class="muted">Six questions. Your progress is saved in this browser when storage is available.</p>
+
+<div class="question" data-correct="B" data-explanation="Generation creates a candidate output; release is a separate system decision about whether it is acceptable." data-remediation="Review lesson 1 and separate model generation from application release.">
+<h3>1. What is the key difference between generation and release?</h3>
+<button class="option" data-value="A">A. There is no difference</button>
+<button class="option" data-value="B">B. Generation produces a candidate; release decides whether it may be used</button>
+<button class="option" data-value="C">C. Release always requires another model</button>
+<button class="option" data-value="D">D. Generation happens only after human approval</button>
+<div class="feedback"></div></div>
+
+<div class="question" data-correct="C" data-explanation="A release gate needs predefined, testable pass conditions rather than vague judgement." data-remediation="Review lesson 2 and identify the explicit conditions that must be true before release.">
+<h3>2. What makes a release gate dependable?</h3>
+<button class="option" data-value="A">A. A model saying “I am confident”</button>
+<button class="option" data-value="B">B. A reviewer saying “looks fine” with no criteria</button>
+<button class="option" data-value="C">C. Explicit pass conditions defined before the decision</button>
+<button class="option" data-value="D">D. The output being long</button>
+<div class="feedback"></div></div>
+
+<div class="question" data-correct="A" data-explanation="Fixed rules such as amount thresholds are better handled with deterministic software checks." data-remediation="Review lesson 3 and separate predictable rules from probabilistic judgement.">
+<h3>3. Which release check should normally be deterministic?</h3>
+<button class="option" data-value="A">A. Whether a refund amount exceeds a fixed £1,000 approval threshold</button>
+<button class="option" data-value="B">B. Whether a complaint sounds frustrated</button>
+<button class="option" data-value="C">C. Whether a summary is elegantly written</button>
+<button class="option" data-value="D">D. Whether a draft feels natural</button>
+<div class="feedback"></div></div>
+
+<div class="question" data-correct="D" data-explanation="Confidence should be combined with evidence quality, policy and task risk rather than treated as permission by itself." data-remediation="Review lesson 5 and remember that confidence is one signal, not authority.">
+<h3>4. How should an AI confidence signal be used?</h3>
+<button class="option" data-value="A">A. As automatic permission to act</button>
+<button class="option" data-value="B">B. As proof that the answer is correct</button>
+<button class="option" data-value="C">C. As a replacement for evidence</button>
+<button class="option" data-value="D">D. As one input alongside evidence, policy and risk</button>
+<div class="feedback"></div></div>
+
+<div class="question" data-correct="B" data-explanation="Higher-impact and less reversible actions justify stronger controls and often human approval." data-remediation="Review lesson 6 and compare reversibility, impact and visibility.">
+<h3>5. Which action needs the strongest gate?</h3>
+<button class="option" data-value="A">A. Suggesting a headline alternative</button>
+<button class="option" data-value="B">B. Issuing a high-value refund to a customer</button>
+<button class="option" data-value="C">C. Reformatting a paragraph</button>
+<button class="option" data-value="D">D. Sorting internal notes by topic</button>
+<div class="feedback"></div></div>
+
+<div class="question" data-correct="C" data-explanation="A failed gate needs a defined route such as more information, fallback, escalation or stop." data-remediation="Review lesson 8 and define what the workflow should do when release conditions are not met.">
+<h3>6. What should happen when a release gate fails?</h3>
+<button class="option" data-value="A">A. Release the output anyway</button>
+<button class="option" data-value="B">B. Delete all logs</button>
+<button class="option" data-value="C">C. Follow a predefined failure route such as escalation, fallback or stop</button>
+<button class="option" data-value="D">D. Give the model broader permissions</button>
+<div class="feedback"></div></div>
+
+<p class="score" id="score">Score: 0 / 6</p>
+<div class="progress-row"><span id="answeredStatus">Answered: 0 / 6</span><span id="bestStatus">Best: —</span><span id="attemptStatus">Completed attempts: 0</span></div>
+<div class="remediation" id="remediation">Answer all six questions to see targeted remediation.</div>
+<button id="resetBtn">Reset quiz</button>
+</section>
+
+<section class="callout"><strong>Progression note:</strong><br>Phase 1 continues until readiness is demonstrated. Release gates connect the earlier lessons on evaluation, security, reliability and human control into one explicit decision point.</section>
+
+<footer>Sapiver Learn · Phase 1 · Day 23<br><a href="../../">← Back to Sapiver Learn</a></footer>
+</main>
+
+<script>
+(() => {
+const STORAGE_KEY='sapiverLearnDay023';
+const VOICE_KEY='sapiverLearnVoice';
+const questions=[...document.querySelectorAll('.question')];
+const scoreEl=document.getElementById('score');
+const answeredStatus=document.getElementById('answeredStatus');
+const bestStatus=document.getElementById('bestStatus');
+const attemptStatus=document.getElementById('attemptStatus');
+const remediationEl=document.getElementById('remediation');
+
+let state=new Map();
+let progress={completion:false,currentScore:0,lastScore:null,bestScore:null,attempts:0,answers:{}};
+let storageAvailable=true;
+let countedThisCompletion=false;
+
+function renderFeedback(q,isCorrect){
+  const feedback=q.querySelector('.feedback');
+  if(isCorrect){
+    feedback.innerHTML='<span style="color:var(--good)">Correct.</span>';
+    return;
+  }
+  feedback.innerHTML='<span style="color:var(--bad)">Not quite.</span> '+q.dataset.explanation+
+    '<br><span class="muted">Remediation: '+q.dataset.remediation+'</span>';
+}
+function loadProgress(){
+  try{
+    const raw=localStorage.getItem(STORAGE_KEY);
+    if(!raw)return;
+    progress=Object.assign(progress,JSON.parse(raw)||{});
+    Object.entries(progress.answers||{}).forEach(([i,a])=>{
+      const q=questions[Number(i)];
+      if(!q)return;
+      state.set(Number(i),a.correct===true);
+      const buttons=[...q.querySelectorAll('.option')];
+      const chosen=buttons.find(b=>b.dataset.value===a.value);
+      if(chosen){
+        chosen.classList.add(a.correct?'correct':'wrong');
+        if(!a.correct)buttons.find(b=>b.dataset.value===q.dataset.correct)?.classList.add('correct');
+      }
+      renderFeedback(q,a.correct===true);
+    });
+    countedThisCompletion=Boolean(progress.completion&&Object.keys(progress.answers||{}).length===questions.length);
+  }catch(e){storageAvailable=false}
+}
+function saveProgress(){
+  if(!storageAvailable)return;
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(progress))}
+  catch(e){storageAvailable=false}
+}
+function updateScore(){
+  let correct=0;
+  state.forEach(v=>{if(v)correct++});
+  const answered=state.size;
+  progress.currentScore=correct;
+  progress.completion=answered===questions.length;
+  scoreEl.textContent=`Score: ${correct} / ${questions.length}`;
+  answeredStatus.textContent=`Answered: ${answered} / ${questions.length}`;
+
+  if(progress.completion&&!countedThisCompletion){
+    progress.attempts=Number(progress.attempts||0)+1;
+    progress.lastScore=correct;
+    progress.bestScore=progress.bestScore==null?correct:Math.max(Number(progress.bestScore),correct);
+    countedThisCompletion=true;
+  }
+
+  if(progress.completion){
+    const missed=questions.map((q,i)=>state.get(i)===false?q.dataset.remediation:null).filter(Boolean);
+    remediationEl.innerHTML=missed.length
+      ? '<strong>Targeted review:</strong> '+missed.join(' ')
+      : '<strong style="color:var(--good)">Strong result.</strong> You correctly separated AI generation from controlled release.';
+  }else{
+    remediationEl.textContent='Answer all six questions to see targeted remediation.';
+  }
+
+  bestStatus.textContent=progress.bestScore==null?'Best: —':`Best: ${progress.bestScore} / ${questions.length}`;
+  attemptStatus.textContent=`Completed attempts: ${Number(progress.attempts||0)}`;
+  saveProgress();
+}
+
+questions.forEach((q,index)=>{
+  q.querySelectorAll('.option').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      q.querySelectorAll('.option').forEach(b=>b.classList.remove('correct','wrong'));
+      const isCorrect=btn.dataset.value===q.dataset.correct;
+      if(isCorrect){
+        btn.classList.add('correct');
+      }else{
+        btn.classList.add('wrong');
+        q.querySelector(`.option[data-value="${q.dataset.correct}"]`)?.classList.add('correct');
+      }
+      state.set(index,isCorrect);
+      progress.answers[index]={value:btn.dataset.value,correct:isCorrect};
+      renderFeedback(q,isCorrect);
+      updateScore();
+    });
+  });
+});
+
+document.getElementById('resetBtn').addEventListener('click',()=>{
+  state=new Map();
+  progress.answers={};
+  progress.completion=false;
+  progress.currentScore=0;
+  countedThisCompletion=false;
+  questions.forEach(q=>{
+    q.querySelectorAll('.option').forEach(b=>b.classList.remove('correct','wrong'));
+    q.querySelector('.feedback').textContent='';
+  });
+  updateScore();
+});
+
+loadProgress();
+updateScore();
+
+const lessonRoot=document.getElementById('lesson');
+const audioStatus=document.getElementById('audioStatus');
+const voiceSelect=document.getElementById('voiceSelect');
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let englishVoices=[];
+let selectedVoice=null;
+let speechUnits=[];
+let currentSpeechIndex=0;
+let speechStopped=true;
+let speechPaused=false;
+let activeBlock=null;
+let currentUtterance=null;
+
+function getSavedVoice(){try{return localStorage.getItem(VOICE_KEY)||''}catch(e){return ''}}
+function saveVoice(name){try{localStorage.setItem(VOICE_KEY,name)}catch(e){}}
+function populateVoices(){
+  if(!('speechSynthesis' in window))return;
+  englishVoices=speechSynthesis.getVoices()
+    .filter(v=>/^en(?:-|_)/i.test(v.lang||''))
+    .sort((a,b)=>{
+      const byLang=(a.lang||'').localeCompare(b.lang||'');
+      return byLang||a.name.localeCompare(b.name);
+    });
+
+  voiceSelect.innerHTML='';
+  if(!englishVoices.length){
+    const option=document.createElement('option');
+    option.value='';
+    option.textContent='Browser default English voice';
+    voiceSelect.appendChild(option);
+    selectedVoice=null;
+    return;
+  }
+
+  englishVoices.forEach(v=>{
+    const option=document.createElement('option');
+    option.value=v.name;
+    option.textContent=`${v.name} (${v.lang})`;
+    voiceSelect.appendChild(option);
+  });
+
+  const saved=getSavedVoice();
+  selectedVoice=englishVoices.find(v=>v.name===saved)||englishVoices.find(v=>v.default)||englishVoices[0];
+  voiceSelect.value=selectedVoice.name;
+}
+voiceSelect.addEventListener('change',()=>{
+  selectedVoice=englishVoices.find(v=>v.name===voiceSelect.value)||null;
+  if(selectedVoice)saveVoice(selectedVoice.name);
+  audioStatus.textContent=`Voice: ${selectedVoice?selectedVoice.name:'browser default'}. Speed: 1.00×.`;
+});
+
+function sentenceSegments(text){
+  const results=[];
+  if(window.Intl&&Intl.Segmenter){
+    for(const item of new Intl.Segmenter('en',{granularity:'sentence'}).segment(text)){
+      const raw=item.segment;
+      const leading=raw.length-raw.trimStart().length;
+      const trailing=raw.length-raw.trimEnd().length;
+      const spoken=raw.trim();
+      if(spoken)results.push({text:spoken,start:item.index+leading,end:item.index+raw.length-trailing});
+    }
+    return results;
+  }
+  const pattern=/[^.!?]+(?:[.!?]+|$)/g;
+  let match;
+  while((match=pattern.exec(text))!==null){
+    const raw=match[0];
+    const leading=raw.length-raw.trimStart().length;
+    const trailing=raw.length-raw.trimEnd().length;
+    const spoken=raw.trim();
+    if(spoken)results.push({text:spoken,start:match.index+leading,end:match.index+raw.length-trailing});
+  }
+  return results;
+}
+function textNodesFor(element){
+  const walker=document.createTreeWalker(element,NodeFilter.SHOW_TEXT);
+  const nodes=[];
+  let node;
+  while((node=walker.nextNode()))nodes.push(node);
+  return nodes;
+}
+function rangeForOffsets(element,start,end){
+  let offset=0,startNode=null,startOffset=0,endNode=null,endOffset=0;
+  for(const node of textNodesFor(element)){
+    const nextOffset=offset+node.nodeValue.length;
+    if(startNode===null&&start>=offset&&start<=nextOffset){
+      startNode=node;
+      startOffset=Math.max(0,Math.min(node.nodeValue.length,start-offset));
+    }
+    if(endNode===null&&end>=offset&&end<=nextOffset){
+      endNode=node;
+      endOffset=Math.max(0,Math.min(node.nodeValue.length,end-offset));
+      break;
+    }
+    offset=nextOffset;
+  }
+  if(!startNode||!endNode)return null;
+  const range=document.createRange();
+  range.setStart(startNode,startOffset);
+  range.setEnd(endNode,endOffset);
+  return range;
+}
+function buildSpeechUnits(){
+  const units=[];
+  [...lessonRoot.querySelectorAll('h2,p,.term,.flow>div')].forEach(block=>{
+    const text=block.textContent||'';
+    sentenceSegments(text).forEach(segment=>{
+      units.push({text:segment.text,block,range:rangeForOffsets(block,segment.start,segment.end)});
+    });
+  });
+  return units;
+}
+function clearReadingHighlight(){
+  if(window.CSS&&CSS.highlights)CSS.highlights.delete('sapiver-reading');
+  if(activeBlock)activeBlock.classList.remove('speech-active');
+  activeBlock=null;
+}
+function highlightSpeechUnit(unit){
+  clearReadingHighlight();
+  activeBlock=unit.block;
+  if(window.CSS&&CSS.highlights&&window.Highlight&&unit.range){
+    CSS.highlights.set('sapiver-reading',new Highlight(unit.range));
+  }else{
+    unit.block.classList.add('speech-active');
+  }
+
+  const rect=unit.block.getBoundingClientRect();
+  if(rect.top<window.innerHeight*.18||rect.bottom>window.innerHeight*.78){
+    unit.block.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'center'});
+  }
+}
+function speakCurrentUnit(){
+  if(speechStopped)return;
+  if(currentSpeechIndex>=speechUnits.length){
+    speechStopped=true;
+    speechPaused=false;
+    clearReadingHighlight();
+    audioStatus.textContent='Lesson audio finished.';
+    return;
+  }
+
+  const unit=speechUnits[currentSpeechIndex];
+  highlightSpeechUnit(unit);
+  currentUtterance=new SpeechSynthesisUtterance(unit.text);
+  currentUtterance.rate=1.00;
+
+  if(selectedVoice){
+    currentUtterance.voice=selectedVoice;
+    currentUtterance.lang=selectedVoice.lang||'en';
+  }else{
+    currentUtterance.lang='en';
+  }
+
+  currentUtterance.onstart=()=>{
+    if(!speechStopped){
+      audioStatus.textContent=`Playing… ${currentSpeechIndex+1} of ${speechUnits.length} · 1.00×`;
+    }
+  };
+  currentUtterance.onend=()=>{
+    if(!speechStopped){
+      currentSpeechIndex+=1;
+      speakCurrentUnit();
+    }
+  };
+  currentUtterance.onerror=event=>{
+    if(speechStopped||event.error==='interrupted'||event.error==='canceled')return;
+    speechStopped=true;
+    speechPaused=false;
+    clearReadingHighlight();
+    audioStatus.textContent='Audio playback could not continue.';
+  };
+
+  speechSynthesis.speak(currentUtterance);
+}
+function startLessonAudio(){
+  speechSynthesis.cancel();
+  clearReadingHighlight();
+  speechUnits=buildSpeechUnits();
+  currentSpeechIndex=0;
+  speechStopped=false;
+  speechPaused=false;
+  if(!speechUnits.length){
+    speechStopped=true;
+    audioStatus.textContent='No lesson text was available to read.';
+    return;
+  }
+  window.setTimeout(speakCurrentUnit,60);
+}
+function stopSpeech(message='Audio stopped.'){
+  speechStopped=true;
+  speechPaused=false;
+  if('speechSynthesis' in window)speechSynthesis.cancel();
+  clearReadingHighlight();
+  audioStatus.textContent=message;
+}
+
+if('speechSynthesis' in window){
+  populateVoices();
+  speechSynthesis.addEventListener('voiceschanged',populateVoices);
+  document.getElementById('playBtn').addEventListener('click',startLessonAudio);
+  document.getElementById('pauseBtn').addEventListener('click',()=>{
+    if(!speechStopped&&!speechPaused){
+      speechSynthesis.pause();
+      speechPaused=true;
+      audioStatus.textContent='Audio paused.';
+    }
+  });
+  document.getElementById('resumeBtn').addEventListener('click',()=>{
+    if(!speechStopped&&speechPaused){
+      speechSynthesis.resume();
+      speechPaused=false;
+      audioStatus.textContent=`Playing… ${currentSpeechIndex+1} of ${speechUnits.length} · 1.00×`;
+    }
+  });
+  document.getElementById('stopBtn').addEventListener('click',()=>stopSpeech());
+}else{
+  audioStatus.textContent='Audio is unavailable in this browser.';
+  ['playBtn','pauseBtn','resumeBtn','stopBtn'].forEach(id=>document.getElementById(id).disabled=true);
+  voiceSelect.disabled=true;
+}
+
+window.addEventListener('pagehide',()=>stopSpeech(''));
+window.addEventListener('beforeunload',()=>stopSpeech(''));
+})();
+</script>
+</body>
+</html>

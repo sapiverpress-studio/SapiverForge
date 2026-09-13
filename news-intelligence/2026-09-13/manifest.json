@@ -60,14 +60,14 @@
   "quality_warnings": [],
   "release_blockers": [],
   "newsletter_subject": "Sapiver Forge Daily Brief — 2026-09-13",
-  "overall_confidence": 0.85,
+  "overall_confidence": 0.84,
   "stories": [
     {
       "category": "lead",
       "headline": "OpenAI Rules Out 2026 IPO Citing Safety Concerns",
       "confirmed_fact": "OpenAI CEO Sam Altman confirmed the company will not pursue an IPO in 2026, stating that current safety considerations make a public offering ill-advised.",
-      "why_it_matters": "The decision signals that internal governance and safety risk management remain the primary focus for the lab, delaying potential liquidity for investors.",
-      "interpretation": "The move suggests that OpenAI is prioritising the management of systemic AI risks over the immediate financial pressures typically associated with public markets.",
+      "why_it_matters": "Altman's comments link the IPO timing to current safety and alignment concerns, while leaving any future listing date unresolved.",
+      "interpretation": "The comments suggest OpenAI wants room to make safety-related decisions without the immediate pressures associated with public markets.",
       "confidence": 0.95,
       "source": "Jason Ma/Fortune",
       "discovered_via": "Techmeme",
@@ -81,9 +81,9 @@
     {
       "category": "technology",
       "headline": "California Enacts Strict Curbs on AI Chatbot Toys and Social Media",
-      "confirmed_fact": "California has passed legislation banning AI companion chatbots in toys and prohibiting behaviorally addictive features on social media platforms for users under 16.",
+      "confirmed_fact": "California Governor Gavin Newsom signed legislation banning AI companion chatbots in toys and prohibiting behaviourally addictive features on social media platforms for users under 16.",
       "why_it_matters": "This legislation sets a significant regulatory precedent for how AI-integrated consumer products and digital platforms are designed for minors.",
-      "interpretation": "The law reflects a growing legislative trend to treat AI-driven features in consumer goods as a potential safety risk, likely triggering industry-wide legal challenges.",
+      "interpretation": "The package shows California treating AI-driven features in products used by children as a potential safety risk, and it may prompt legal challenges from technology trade groups.",
       "confidence": 0.9,
       "source": "Reuters",
       "discovered_via": "Reuters",
@@ -95,11 +95,11 @@
       "discovery_score": 6.55
     },
     {
-      "category": "business",
-      "headline": "UK Police Report Surge in AI-Generated Deepfake Crimes",
-      "confirmed_fact": "Data from 20 police forces in England and Wales shows 163 recorded offenses involving AI-generated deepfakes and 'nudify' content up to July 2026, a sixteen-fold increase since 2023.",
-      "why_it_matters": "The rapid rise in these specific offenses highlights the increasing challenge for law enforcement in addressing AI-enabled online harms.",
-      "interpretation": "The data suggests that the accessibility of generative AI tools is directly correlating with an increase in targeted digital abuse, necessitating updated policy responses.",
+      "category": "technology",
+      "headline": "Partial Police Data Shows Rise in Recorded AI Deepfake Offences",
+      "confirmed_fact": "Freedom of Information responses from 20 police forces in England and Wales recorded 163 offences containing terms including 'AI-generated', 'deepfake' and 'nudify' up to July 2026, compared with 10 across the same forces in 2023.",
+      "why_it_matters": "The partial figures show that participating police forces are recording substantially more incidents involving AI-related abuse than in 2023.",
+      "interpretation": "The figures do not establish whether the rise reflects more offending, improved identification and recording, or a combination of both.",
       "confidence": 0.85,
       "source": "Mark Tovey/Telegraph",
       "discovered_via": "Techmeme",
@@ -112,10 +112,10 @@
     },
     {
       "category": "technology",
-      "headline": "UAE Redesigns AI Data Center Infrastructure Following Regional Strikes",
-      "confirmed_fact": "The UAE is shifting its 5-gigawatt AI data center project from a single campus to a decentralized network of hardened, underground facilities with dedicated air defenses.",
-      "why_it_matters": "This pivot demonstrates how geopolitical instability is forcing a rethink of critical AI infrastructure, moving away from centralized, vulnerable hubs.",
-      "interpretation": "The redesign indicates that AI compute capacity is increasingly being treated as a strategic national security asset, requiring physical protection against regional threats.",
+      "headline": "Reuters Reports UAE Rethink of AI Data Centre Infrastructure",
+      "confirmed_fact": "Reuters reports, citing six people familiar with the plans, that the UAE is considering shifting its 5-gigawatt AI data centre project from one campus to a distributed network that could include hardened underground facilities and dedicated air defences.",
+      "why_it_matters": "The reported proposals show how recent regional attacks have prompted officials to reconsider the physical resilience of critical AI infrastructure.",
+      "interpretation": "If implemented, the redesign would show AI computing capacity being treated as strategic infrastructure requiring protection from physical threats.",
       "confidence": 0.8,
       "source": "Reuters",
       "discovered_via": "Reuters",
@@ -129,9 +129,9 @@
     {
       "category": "research",
       "headline": "Specific Labs Launches Real-SWE Benchmark for Enterprise Code",
-      "confirmed_fact": "Specific Labs has released Real-SWE, a benchmark that evaluates AI coding agents using private enterprise codebases to prevent training set memorization.",
-      "why_it_matters": "By moving away from public GitHub repositories, this benchmark aims to provide a more accurate assessment of how AI models perform on real-world, proprietary software tasks.",
-      "interpretation": "This development reflects an industry shift toward more rigorous, out-of-distribution testing to validate the practical utility of AI agents in professional engineering environments.",
+      "confirmed_fact": "Specific Labs has released Real-SWE, a benchmark that evaluates AI coding agents on licensed private enterprise codebases with the aim of reducing training-set memorisation and benchmark contamination.",
+      "why_it_matters": "Using private codebases aims to test performance on less familiar software, but the benchmark's methodology and results still require independent scrutiny.",
+      "interpretation": "The release is one attempt to make coding-agent evaluation more representative of proprietary engineering work; it does not yet establish an industry-wide change.",
       "confidence": 0.75,
       "source": "withspecific.com",
       "discovered_via": "Hacker News",
@@ -143,8 +143,8 @@
       "discovery_score": 7.92
     }
   ],
-  "practical_takeaway": "Organisations should prepare for a more fragmented regulatory environment regarding AI safety and child protection, while also considering the physical security of their critical digital infrastructure as geopolitical risks evolve.",
-  "watch_next": "Monitor the anticipated legal challenges from tech trade associations against California's new AI and social media laws, as these will likely shape future compliance requirements.",
+  "practical_takeaway": "Organisations working with children, sensitive AI systems or critical digital infrastructure should track relevant regulatory changes and test whether their existing safeguards match the risks they actually face.",
+  "watch_next": "Monitor legal challenges to California's new AI and social media laws, as their outcomes could shape future compliance requirements.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 024",
@@ -163,11 +163,11 @@
   "social": {
     "date": "2026-09-13",
     "lead_headline": "OpenAI Rules Out 2026 IPO Citing Safety Concerns",
-    "facebook_post": "OpenAI Rules Out 2026 IPO Citing Safety Concerns\n\nThe decision signals that internal governance and safety risk management remain the primary focus for the lab, delaying potential liquidity for investors.\n\nToday's Sapiver Forge Daily Brief covers 5 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "facebook_post": "OpenAI Rules Out 2026 IPO Citing Safety Concerns\n\nAltman's comments link the IPO timing to current safety and alignment concerns, while leaving any future listing date unresolved.\n\nToday's Sapiver Forge Daily Brief covers 5 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
     "pinterest_title": "OpenAI Rules Out 2026 IPO Citing Safety Concerns",
-    "pinterest_description": "The decision signals that internal governance and safety risk management remain the primary focus for the lab, delaying potential liquidity for investors.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_description": "Altman's comments link the IPO timing to current safety and alignment concerns, while leaving any future listing date unresolved.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
     "tiktok_caption": "OpenAI Rules Out 2026 IPO Citing Safety Concerns. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "OpenAI Rules Out 2026 IPO Citing Safety Concerns. OpenAI CEO Sam Altman confirmed the company will not pursue an IPO in 2026, stating that current safety considerations make a public offering ill-advised. Read the Sapiver Forge Daily Brief."
+    "spoken_script": "OpenAI will not pursue an IPO in 2026. Sam Altman linked the timing to current safety and alignment concerns but gave no new listing date. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "8080e4f6ed1b987620d72ffb39ac1b5b64a33e197f2da8ed1d5b5c3b9131705f"
+  "candidate_id": "74da0fed14f13743b5ded53007bf053378835970efdc8a70a694714e24b68ebb"
 }

@@ -37,6 +37,16 @@ const publicationUrl = (value) => {
     return String(value || "");
   }
 };
+const lowerInitial = (value) => clean(value).replace(/^([A-Z])(?=[a-z])/, (letter) => letter.toLowerCase());
+const attributedConfirmedFact = (value, candidate) => {
+  const text = clean(value);
+  if (!/sources say/i.test(String(candidate?.title || "")) || /\b(?:according to|reported?|reports?|sources?)\b/i.test(text)) return text;
+  const publisher = clean(candidate?.publisher || candidate?.source || "The source");
+  return `${publisher} reports, citing people familiar with the matter, that ${lowerInitial(text)}`;
+};
+const cautiousConfirmedText = (value) => clean(value)
+  .replace(/\bto (?:prevent|eliminate) training(?:-| )set memori[sz]ation\b/gi, "to reduce the risk of training-set memorisation")
+  .replace(/\bto eliminate benchmark contamination\b/gi, "to reduce benchmark contamination");
 const ensure = (dir) => fs.mkdirSync(dir, { recursive: true });
 const write = (dir, name, content) => {
   ensure(dir);
@@ -56,6 +66,12 @@ function cautiousEditorialText(value) {
     .replace(/\bis certain to\b/gi, "could")
     .replace(/\bensuring\b/gi, "potentially helping to keep")
     .replace(/\bguarantees?\b/gi, "could support")
+    .replace(/\bremain the primary focus\b/gi, "are influencing current decisions")
+    .replace(/\bis directly correlating with\b/gi, "has coincided with")
+    .replace(/\bnecessitating\b/gi, "which may require")
+    .replace(/\bis forcing\b/gi, "is prompting")
+    .replace(/\blikely triggering\b/gi, "and may prompt")
+    .replace(/\breflects an industry shift toward\b/gi, "reflects an effort to move toward")
     .replace(/\b(?:the\s+)?legal liability(?:\s+for[^.]{0,100})?\s+rests with\s+(?:the\s+)?(?:individual\s+)?users?\b/gi, "individual users could face legal exposure");
 }
 
@@ -134,6 +150,10 @@ async function createEditorialOutput(sourceBundle) {
       "Do not attribute motive, strategy, intention or inevitability unless the evidence explicitly supports it.",
       "Do not state that legal liability rests with a person or group unless a court or authoritative legal source has established that outcome. For unresolved legal questions, say they could face legal exposure.",
       "For alleged security incidents, attribute disputed actions to the reporting or researchers and preserve the affected organisation's response. Prefer a Reuters or affected-organisation candidate when it reports the same incident directly.",
+      "Do not infer causation from rising counts, correlations, partial datasets or keyword searches. State alternative explanations and dataset limitations where material.",
+      "When a report relies on anonymous or unnamed sources, attribute the claim in the confirmed fact and do not present a proposed change as an official decision.",
+      "Describe a company's stated benchmark purpose as an aim, not a guaranteed outcome. Use 'reduce the risk' rather than 'prevent' or 'eliminate' memorisation or contamination.",
+      "One company or product launch does not establish an industry-wide shift. Describe it as one effort unless broader evidence is supplied.",
       "Do not invent a fixed future time horizon. Avoid deterministic language such as 'will dictate', 'will force', 'ensuring' or 'guarantees'. Use may, could, suggests or would depend on where appropriate.",
       "Select a broad mix rather than five versions of the same AI story.",
       "Prefer consequential developments over novelty. Avoid hype, clickbait and investment advice.",
@@ -156,7 +176,7 @@ async function createEditorialOutput(sourceBundle) {
     mapped.push({
       category: clean(story.category || "worth-knowing"),
       headline: clean(story.headline || candidate.title),
-      confirmed_fact: clean(story.confirmed_fact),
+      confirmed_fact: cautiousConfirmedText(attributedConfirmedFact(story.confirmed_fact, candidate)),
       why_it_matters: cautiousEditorialText(story.why_it_matters),
       interpretation: cautiousEditorialText(stripOurReadPrefix(story.interpretation)),
       confidence,
@@ -222,7 +242,10 @@ function findEditorialLanguageWarnings(editorial) {
   const patterns = [
     [/(?:\bwill dictate\b|\bwill determine\b|\bwill force\b|\bwill inevitably\b)/i, "deterministic future language"],
     [/(?:\bensuring\b|\bguarantees?\b)/i, "unsupported certainty or motive language"],
-    [/\blegal liability\b[^.]{0,140}\brests with\b/i, "categorical unresolved legal-liability language"]
+    [/\blegal liability\b[^.]{0,140}\brests with\b/i, "categorical unresolved legal-liability language"],
+    [/\b(?:directly correlating|necessitating|is forcing)\b/i, "unsupported causal language"],
+    [/\breflects an industry shift\b/i, "industry-wide conclusion from limited evidence"],
+    [/\bto (?:prevent|eliminate) training(?:-| )set memori[sz]ation\b/i, "guaranteed benchmark outcome"]
   ];
   const fields = [
     ["practical takeaway", editorial.practical_takeaway],

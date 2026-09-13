@@ -1,0 +1,447 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Bending+Spoons%22+%22Jonathan+Weil%22+WSJ+2026&client=app-vertex-grounding&safesearch=active\">&quot;Bending Spoons&quot; &quot;Jonathan Weil&quot; WSJ 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Telegraph%22+%22163+crimes%22+OR+%22nudify%22+%22England+and+Wales%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Telegraph&quot; &quot;163 crimes&quot; OR &quot;nudify&quot; &quot;England and Wales&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Bitcoin+mining%22+%22AI+data+centers%22+%22Trump%22+Bloomberg+2026&client=app-vertex-grounding&safesearch=active\">&quot;Bitcoin mining&quot; &quot;AI data centers&quot; &quot;Trump&quot; Bloomberg 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Perry+Weather%22+%22110M%22+OR+%22Silversmith%22&client=app-vertex-grounding&safesearch=active\">&quot;Perry Weather&quot; &quot;110M&quot; OR &quot;Silversmith&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Kioxia%22+%22US+listing%22+%22AI+spotlight%22+Voya+Thomas+Reuters+2026&client=app-vertex-grounding&safesearch=active\">&quot;Kioxia&quot; &quot;US listing&quot; &quot;AI spotlight&quot; Voya Thomas Reuters 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Sam+Altman%22+%22given+everything+happening+with+safety%22+%22ill-advised+moment+to+go+public%22+Fortune+2026&client=app-vertex-grounding&safesearch=active\">&quot;Sam Altman&quot; &quot;given everything happening with safety&quot; &quot;ill-advised moment to go public&quot; Fortune 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22California+enacts+new+curbs+on+social+media+for+children%22+Reuters+2026&client=app-vertex-grounding&safesearch=active\">&quot;California enacts new curbs on social media for children&quot; Reuters 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22C2+modem%22+%22iPhone+18%22+OR+%22Numerama%22+MacRumors&client=app-vertex-grounding&safesearch=active\">&quot;C2 modem&quot; &quot;iPhone 18&quot; OR &quot;Numerama&quot; MacRumors</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Real-SWE%22+%22withspecific.com%22+OR+%22benchmarking+AI+models+on+private%22&client=app-vertex-grounding&safesearch=active\">&quot;Real-SWE&quot; &quot;withspecific.com&quot; OR &quot;benchmarking AI models on private&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22UAE+revises+AI+data+center+plan%22+%22Iranian+attacks%22+Reuters+2026&client=app-vertex-grounding&safesearch=active\">&quot;UAE revises AI data center plan&quot; &quot;Iranian attacks&quot; Reuters 2026</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHu4cnlIt7IWbKSBBjlIPpsnQCDsgRGXWoRgh67x5mZFIJzw4zsNeezAHxzcN6hM7NUsDHKaeNqPDtO_bKIZ665yeoOJatQbn-7sMxLhtlEHgKHkKnfHM6dP68SxSYfDAv2yaWmoBDh1JahbvQ2EZd1PNZ-8AuN2BtkQ2sN0zhv5EmK3qO-JrCsXnh1PQaRV8v13oO1KAA1GL4n69S_wlBUyDVcyfvvbBuATFU7iA==",
+        "title": "morningstar.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBDoL9YjFc9U1g63sTtoxqbfZZLrC0QYI3s9-FbjkbXJ6R0dZjKSc6etxeQOZTESA52F9mtf7AP9pkfBoN66IDv92j30SalEcQv0nytXWjxcRHMAqeSj5J08_OLOx6av9rL18ZQlTzsRUX27UJVv1e-iW2",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe3QXZ2reWiZEu3Jd3s51hTzyy1DqZ4vSXURUxugERoILxTqdm6ZykudlU_N1Zw5D7-_T0yfsCvwzx-BYfzSGf7zK29cB9q2mWvJbon6iKxE5NiPmwEkdEBjoj88rZYRYqxrzf7Fv4uEqI9IQdTHuYcO3yfVDRX_gY_P2R6Un1roklUDNsnNF3xRxMXZT21zM2hdVwfv_dHqGKuM9n1slcsjhVMogIB8UW59jvL9UbTPoaYmQFgpqybOmQEjfpr4vB2Gch8u7U6Q==",
+        "title": "newscord.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-ScDRPTOR3s_gKeDcA-gBFmuq_Tbuw9bYFW2sYSeReG1KnUj5BBpqlfSxuo4VN7jMXCB9_-iU20iybJMl3053wilfzzupgtScMCFEDgezoUCWhL1ukyJ6c7HBVWn6gJpUxW4lduIo1uxKC4_yjqt5TnNr8AOIB24fFYQVabiBUwXXIB3wwI82xA==",
+        "title": "seekingalpha.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXjhCC5StSWiu4zbDdDJ7BCTssVGyvAgUUnveVCyhbeeRHtMJ5CP8HKBwwb6io3cTetRjR_4skLT8kVKaqkEc0UVyohrhXrDnamuKpg7ayeysfztKQ6i9xasAtLXwTO1hq2RhJfZUMnhtFBQr6UzJbVc9TdhRFEMlmaYBeODTq3VrH-hrvtCKDknHqnKO3UdmCDW2B7nmudtUOCK6Zf9JDuYn_ubm6kiORK3hyeA==",
+        "title": "internazionale.it"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFplZizYpNpkvwwAP1dJWB8_gEaun7bUTdHgbMLpZXiCPxLybrh-m_Y3SRW3OzRyFsIV3y1NBWerihHJ8_fgscePj9g8FfnDesK9keWUxkIlugULkre3xinpaW2TDwGrgKHbPMSyeq6FKNKOp-VcrAhbFf-ZTy-g8qMvxoyRB8apo0LkGQV-mCA5-Nb",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBcfA3OrTjFyJOC_PXajCrMgvHvjXPOkFwwsLWmk9ccrDpnSQpACNC56pCkrzKFJV6TuDfIljOjx32urg2Ub2J0coJjQpXM6QpCTqtSTmhi5f1uOrX0Xo1h4wDL8vTk0BgC7iYOXzxeURCDygUJG1NIiPhp15oTGE0K5Z3s2pLa8viETlK5tWCADN2LUa9Q-Eth24FMPfHef7ckiF9_J4WaO6E8NvpnNeSP10oJue5EXxCS7RwkBIooVnBHM6IuNvS",
+        "title": "internazionale.it"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXNpCJDj-PNoijfyLylgjYzo9H-_ZJLP5U4RtPbqhC0arjuCFOn3RmAM2yMoLJI_ZxFKPG9JIe82hqlOsOJOhRukb2hzzqAUsGuW-2nqRJ3sk7DdSp69pdajsUKJ5bxQZu_7R2qN751JyHErrP5foW0BRlY9HnBkQ5Qn2X7y8CUOkOSh5FUcq4SODpxtpvOeL8DcU4hn0Dy1A3SZ1urPHdqEZlASt40pjsj8PU05x4fBo=",
+        "title": "lbcgroup.tv"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqRosgYeH626NxqHDCtk3I0s1ztytvlt0Vr77MhvYY07AEjE36ufsSa0XL-Z7OY5E1u4GP98ACFIQi5FXHvcarEzPuBvezq8-j5efZvi-g9Ahp914RIQV7kNHUWt1xUHYaw0jT0WDBTZpNl7pUf_DICJQhxeeqtQn3P-TIct9CRA==",
+        "title": "macrumors.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEf_inKsjo311v8mw-yrJZ9b0axm2yUzvwUYm6eBnwG9aLHCl84lapsrHAKVMKjZfeXhM7-qX4B_H8XxBgHNnFyuPydWyzQeSEh433cs5hDiH_XXtPk-tj39zznAxw7st87lBmT6oipw3a3GQDFSk4rTZyriX8S4MZmc_duoXuuA7EJrvNdlbGx2mBQJua5fwZ7LcitcLgqjxwwr2r9vg==",
+        "title": "macrumors.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLWOhQV5f3M4CyWAvt-cQgmylDu3J4ekO1g62vBdEWUHDL4okIugGPmNUIY11anMPbWdIenkSt43W7tIg5u8qowO-WAMe9J633be-cEJKapc5vLKvG7QgBrWK1ZceMiMFgDro0F3b6v4aVOXiO5X3qITYCWl-f155TOg==",
+        "title": "shashi.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPa5W2551FfICw4ODEUnv2DUSFq7lVtPOimJLp4sfIGXebSxWCSHHfth1hI2w8NQOhkyiKc2S23LRos1mbvTd0siUERbSUTiNCYetSEMsmITl6sumwlzt0zwf-_my6ZSgZVLGu0E9fqk7LDSArtOOdVwH1wIxXygo3RO_KQBnh88UPSCJIQ9an663i4xL4q5-ihyVo7AKihqrdLA==",
+        "title": "milanofinanza.it"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtYZQaY2vhRoJjdSEKA9u4GHdmIURcmt7p97HRO38Ih1zj6GAQEqysQE3MgcdX0h9qWLZ6bdOsiVUd1eqRCaqKfvUjDmWZNd6i1FIXFy4DPBnKpgywXhXyuKAlsrO3QDT7DS_9rPrimAHKxSPzKKCi9UlwiEOwC-9KhWWIzbCoTb2eTeAQye5TosgHM2a6Xr-l31C48GG_RBg2nKwuV1LoSQ6u",
+        "title": "bakerbotts.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHE3tM9mqGDIy9F8ROwl37p23M69Ob5f-QFZx0Ha5ZsK_8qxmdZj4DFqi2g4BoZnqiJgUkJP-ELGjHed1bqk3YWhsrxxPqWkA-kAOVEFZ3VsYEMdyQMAqIAJokRicpTgSqglvI-NesrW6xwUJQG1QylqOWly_zqcFLAJ-wQqX_J57towVeGscLR1R623ENZRPj51wp49x-kyCXMfruDmg==",
+        "title": "dealroom.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmOwYYZb_1D0se-gMCIN1nrktwsmzQ0v8NwSgX5sfn2c0H4aIyDpy53_X5QlnvVEokTZL_ZzHwcDgj_Ir5SEIYjabdfVxChDoOiOI0uowdeZPA6_eIyS1q1aJoNpP7pSyLkqJ8Z3g5u4hfaSgBX_07-voF0Z3K4mw7GjrAl9MX_kLHzxc=",
+        "title": "globalstartupsinsights.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeh289tZYT09xHeCGlyWgPcRyXs92S1b8YhOtjHEfQzsNWKUAvEL4hVPcuhk_dks083iFNOkJ4NjQjfqG1uMh6ePdYJmcmYsBjBwI2LXDwf6V5Jh8rd749jZbsbR552E_SCEqo5DU8wNG6zhzRx72rZ5oPaZB1wOKz-flZsv0c4drhomLlx9W5HmCrlauYwlw73cdWA-N3whC-Eu1OwA==",
+        "title": "ycombinator.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZdSovNoGRG9x1kZ0V_z5gQ4highQqyf1yQOKLEr2rsRopePbTUGkcSKQOMdBo9U4i5RyM3lWX1ZY7sJZ-nDsa3Kq_VTv5A9AjP24mCSYj_iZzpu9fUXzML9_0DsKD5LH5yiLt8g1j5qEo_J8y814Am9pVfcgDN5u61URGg_nFloGk5JPIGap1WThgTnr0fQ==",
+        "title": "explainx.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYQfxpnNNWLq5v3tbfbW78-B8uHWGyftUUl6k1AvC2wBbWI8UAl2B3sY3BDLwiXL5ygTWDXj-whF6CiHXOLs32NApMStV5OPGlaFJlxJaohpqKTJAlugd2r6dQXS3OhP1wfFuhNjwlDiwRj7uXXZL5h2Yy02sruoaLylxX3C8UEDPjL7p7N0ymfb9H1ERn-_0Qgjapo6xNdG4PL1ilK-_6Eqvd3Q90oA==",
+        "title": "superpowerdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3q-3BNUy5yPVNIpzkios3yoyTR-au9KT4CREiYJft3ZixNmj2HwsaSPgqBva7LBwdDFy-qEu2ihfkvg6NzoJ61UJ4P_ruxrQpDQfYmeDV6_wTHChTFHRq-H7weSXNyMYJAVc=",
+        "title": "webull.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUDXs5-aPJygFY3kcnKrvFFXrk2SSuvvbpGh9qaD12Awp7a2of3vWaBZqdiwiZ4gZ3rlo63ccVFFObQRRvc_YvJncN9tKOmiCHIf8khnpgTt5w_NLWFLjNqA==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_O8a4sVEOwXAQ_PzbtnDx6eYC-ZllI9w9Af0H3rOVxa-wcyrr2LnkABEA9G-dUKzCFCLoHfGXM9DlmfpP3dBm8Q2mXx5QLLvHfPWrV5Pg1bRo0l-z9tbiRMGR1NGmGPq86pXu5BBY2tPwVcEKvjpSJ049LKVYgEmMorwbzmwp_8epttgr0Txf_Po3bUjd24mEGvLpy1xw3yncnybQwtVmto6o44hEK31bXRdemGIirOC3XtJDa0Tyd5YvZyAPRXKyn8p23mcrOVLi2cS8oFuaJQq2yw==",
+        "title": "economictimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeiqIhGVxcCz57tOPrq1vtr-j8v7JO-Z4drGvWVTNhoZdenQN1AENNKyZLrmEAWgwn1xaizhtwlH7nnGmMoUSafftn-2w6UUIa6hQ6KqQS7K7CJlvvMNSWX5i-rEOUD8liBStLrUYs00_Alo25rYrlpxR1pZhf3NtlMCpbkWnZvqZYuXPTsuVd_gCTLivAl9HcMufwO3NrOlbAScKi-B_sLCwnVU3Mc-6MgMRFVTOpvKB77XWPK7Dc0qe8NAaPwKfm8V5HyywOQ9ArIVO9gmcGqvFu1kC0PKxYsIApAQ==",
+        "title": "indiatimes.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 414,
+        "endIndex": 653,
+        "text": "#### **[14] Sam Altman confirms OpenAI will not go public in 2026, citing AI safety**\n* **What is confirmed:** In a *Fortune* interview published 12 September 2026, OpenAI CEO Sam Altman confirmed that OpenAI will not pursue an IPO in 2026"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 655,
+        "endIndex": 815,
+        "text": "Altman explicitly stated, *\"Given everything happening with safety, right now would be an ill-advised moment to go public, and we don't feel pressure on that.\"*"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 655,
+        "endIndex": 970,
+        "text": "Altman explicitly stated, *\"Given everything happening with safety, right now would be an ill-advised moment to go public, and we don't feel pressure on that.\"* He also indicated that major AI labs are in ongoing discussions regarding potential joint commitments to pace model development and address systemic risks"
+      },
+      "groundingChunkIndices": [
+        2,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 972,
+        "endIndex": 1058,
+        "text": "* **Important caveats:** Altman did not commit to a revised target date (such as 2027)"
+      },
+      "groundingChunkIndices": [
+        2,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1060,
+        "endIndex": 1185,
+        "text": "Financial advisers had previously discussed a target valuation near $1 trillion, but no formal SEC filings had been submitted"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1305,
+        "endIndex": 1563,
+        "text": "#### **[17] California enacts strict new curbs on social media and AI chatbot toys for minors**\n* **What is confirmed:** California Governor Gavin Newsom signed a 13-bill legislative package into law on 10 September 2026 (reported by Reuters on 11 September)"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1565,
+        "endIndex": 1840,
+        "text": "Key provisions include prohibiting platforms from exposing children under 16 to behaviorally addictive features (e.g., infinite scroll, autoplay), banning toys containing AI companion chatbots, and expanding criminal sanctions against AI-generated child sexual abuse material"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2083,
+        "endIndex": 2426,
+        "text": "#### **[11] Police forces in England & Wales log 163 AI deepfake and \"nudify\" crimes**\n* **What is confirmed:** Freedom of Information data reported by *The Telegraph* on 12 September 2026 reveals that 20 police forces in England and Wales recorded 163 offenses containing keywords like \"AI-generated\", \"deepfake\", and \"nudify\" up to July 2026"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2428,
+        "endIndex": 2516,
+        "text": "This marks a sixteen-fold surge from 10 recorded offenses across the same forces in 2023"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2518,
+        "endIndex": 2693,
+        "text": "* **Important caveats:** The statistics reflect responses from 20 regional police forces rather than a complete national tally across all 43 police forces in England and Wales"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2833,
+        "endIndex": 3090,
+        "text": "#### **[19] UAE revises 5-gigawatt AI data center plan following regional attacks**\n* **What is confirmed:** A Reuters exclusive published 11 September 2026 confirms that the United Arab Emirates is redesigning its flagship 5-gigawatt AI data center project"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3092,
+        "endIndex": 3347,
+        "text": "Originally planned as a single 10-square-mile campus in Abu Dhabi, officials are shifting to a decentralized network of facilities across the UAE, incorporating hardened underground sites and dedicated air defenses following regional drone/missile strikes"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3349,
+        "endIndex": 3528,
+        "text": "* **Important caveats:** Based on disclosures from six sources familiar with the matter; UAE government representatives have not issued an official press statement on the redesign"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3672,
+        "endIndex": 3900,
+        "text": "#### **[6] Apple spec sheets reveal C2 modem distribution split across iPhone 18 Pro models**\n* **What is confirmed:** Apple updated its official technical specification pages on 12 September 2026 following product announcements"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3902,
+        "endIndex": 4092,
+        "text": "The documentation shows Apple's custom-designed C2 cellular modem is included in the foldable iPhone Duo and iPhone 18 Pro worldwide, as well as international models of the iPhone 18 Pro Max"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4094,
+        "endIndex": 4191,
+        "text": "However, the US variant of the iPhone 18 Pro Max retains a Qualcomm modem (likely Snapdragon X85)"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4193,
+        "endIndex": 4410,
+        "text": "* **Important caveats:** Apple has not publicly commented on why the US iPhone 18 Pro Max retains Qualcomm silicon, though analysts attribute it to legacy supply contract commitments or mmWave architecture adjustments"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4536,
+        "endIndex": 4845,
+        "text": "#### **[13] Wall Street Journal analysis scrutinizes Bending Spoons' financial metrics and roll-up strategy**\n* **What is confirmed:** WSJ published a financial analysis on 11 September 2026 detailing the business model of Milan-based software acquirer Bending Spoons following its $1.355B acquisition of Miro"
+      },
+      "groundingChunkIndices": [
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4847,
+        "endIndex": 5072,
+        "text": "The analysis highlights Bending Spoons' heavy reliance on post-acquisition price hikes (e.g., StreamYard, Evernote) and non-standard accounting metrics (such as heavy amortization add-backs) to justify high earnings multiples"
+      },
+      "groundingChunkIndices": [
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5327,
+        "endIndex": 5638,
+        "text": "#### **[4] Perry Weather raises $110M Series C led by Silversmith Capital Partners**\n* **What is confirmed:** Dallas-based weather safety and operations platform Perry Weather closed a $110 million Series C growth investment led by Silversmith Capital Partners, with continued participation from Arthur Ventures"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5640,
+        "endIndex": 5746,
+        "text": "The company plans to expand its AI hyperlocal forecasting capabilities and add 50+ roles in Dallas by 2027"
+      },
+      "groundingChunkIndices": [
+        12,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5748,
+        "endIndex": 5898,
+        "text": "* **Important caveats:** The capital injection was formally announced on 9 September 2026 before circulating on tech funding trackers over the weekend"
+      },
+      "groundingChunkIndices": [
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5993,
+        "endIndex": 6349,
+        "text": "#### **[8] Specific Labs releases Real-SWE benchmark for private enterprise codebases**\n* **What is confirmed:** Specific Labs (YC F25) announced Real-SWE on 10 September 2026, a benchmark evaluating AI coding agents on licensed, out-of-distribution private enterprise codebases rather than public GitHub repositories to eliminate training set memorization"
+      },
+      "groundingChunkIndices": [
+        15,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6351,
+        "endIndex": 6571,
+        "text": "* **Important caveats:** Benchmark methodology, task execution, and model evaluation metrics are reported directly by Specific Labs; independent third-party replication across all frontier model providers remains ongoing"
+      },
+      "groundingChunkIndices": [
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6707,
+        "endIndex": 7038,
+        "text": "#### **[15] US Bitcoin miners pivot capacity to AI data centers, impacting federal mining strategy**\n* **What is confirmed:** Bloomberg reporting (Sept 9–12, 2026) highlights that US-listed Bitcoin mining operators are rapidly reallocating power capacity and infrastructure toward AI high-performance computing (HPC) data centers"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7040,
+        "endIndex": 7188,
+        "text": "Computing power dedicated to US Bitcoin mining fell 18% from October 2025 levels, causing hash rate share to shift back toward overseas mining pools"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7190,
+        "endIndex": 7334,
+        "text": "* **Important caveats:** The trend is driven by post-halving crypto economics and AI compute demand; market impacts vary among individual miners"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7462,
+        "endIndex": 7919,
+        "text": "#### **[18] Voya fund manager notes US listing could put Japan's Kioxia in global AI investment spotlight**\n* **What is confirmed:** In an interview published 11 September 2026 by Reuters, Sebastian Thomas, lead manager of Voya Investments' $14B AI fund, stated that Kioxia's plan to list American Depositary Shares (ADS) in the US would overcome liquidity barriers that currently prevent large global AI funds from investing directly in Japanese chipmakers"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Bending Spoons\" \"Jonathan Weil\" WSJ 2026",
+    "\"Telegraph\" \"163 crimes\" OR \"nudify\" \"England and Wales\" 2026",
+    "\"Bitcoin mining\" \"AI data centers\" \"Trump\" Bloomberg 2026",
+    "\"Perry Weather\" \"110M\" OR \"Silversmith\"",
+    "\"Kioxia\" \"US listing\" \"AI spotlight\" Voya Thomas Reuters 2026",
+    "\"Sam Altman\" \"given everything happening with safety\" \"ill-advised moment to go public\" Fortune 2026",
+    "\"California enacts new curbs on social media for children\" Reuters 2026",
+    "\"C2 modem\" \"iPhone 18\" OR \"Numerama\" MacRumors",
+    "\"Real-SWE\" \"withspecific.com\" OR \"benchmarking AI models on private\"",
+    "\"UAE revises AI data center plan\" \"Iranian attacks\" Reuters 2026"
+  ]
+}

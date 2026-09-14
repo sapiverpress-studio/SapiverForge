@@ -116,6 +116,7 @@ jobs:
 
       - name: Generate ElevenLabs audio, podcast video and vertical Short
         if: steps.release.outputs.has_daily_podcast == 'true'
+        continue-on-error: true
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
@@ -147,11 +148,11 @@ jobs:
         if: steps.release.outputs.has_weekly_podcast == 'true'
         continue-on-error: true
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_TTS_MODEL: gemini-2.5-flash-preview-tts
-          GEMINI_TTS_VOICE: Charon
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_MODEL_ID: ${{ secrets.ELEVENLABS_MODEL_ID }}
           INPUT_PATH: ${{ env.PODCAST_REPORT_DIR }}/COPY_PASTE_INTO_ELEVENLABS.txt
-          OUTPUT_PATH: ${{ runner.temp }}/sapiver-forge-weekly.wav
+          OUTPUT_PATH: ${{ runner.temp }}/sapiver-forge-weekly.mp3
         shell: bash
         run: |
           set -euo pipefail
@@ -159,9 +160,7 @@ jobs:
             echo "Weekly podcast ${PODCAST_SLUG} is already published; skipping generation."
             exit 0
           fi
-          node scripts/generate-gemini-podcast-wav.mjs
-          command -v ffmpeg >/dev/null || { echo "::error::ffmpeg is unavailable on this runner."; exit 1; }
-          ffmpeg -hide_banner -loglevel error -y -i "${OUTPUT_PATH}" -codec:a libmp3lame -b:a 128k "${RUNNER_TEMP}/sapiver-forge-weekly.mp3"
+          node scripts/generate-elevenlabs-mp3.mjs
           SOURCE_MP3="${RUNNER_TEMP}/sapiver-forge-weekly.mp3" \
           METADATA_PATH="${PODCAST_REPORT_DIR}/episode-metadata.json" \
           EPISODE_SLUG="${PODCAST_SLUG}" \
@@ -224,6 +223,7 @@ jobs:
             --message="Publish Daily Brief, Sapiver Learn, AI Inquisitive Parents and Sapiver Puzzles"
 
       - name: Publish approved Daily Brief to Facebook and Pinterest
+        continue-on-error: true
         env:
           DAILY_BRIEF_MANIFEST: news-intelligence/${{ steps.release.outputs.date }}/manifest.json
           DISTRIBUTION_RECEIPT_PATH: reports/daily-intelligence/${{ steps.release.outputs.date }}/social-distribution.json

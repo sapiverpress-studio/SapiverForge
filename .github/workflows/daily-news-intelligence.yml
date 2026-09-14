@@ -8,7 +8,7 @@ on:
         required: false
         type: string
   schedule:
-    - cron: '10 6 * * 1-5'
+    - cron: '10 6 * * *'
   pull_request:
     branches: [main]
     paths:
@@ -22,6 +22,9 @@ on:
       - 'scripts/sync-netlify-subscribers-to-brevo.mjs'
       - 'src/generate-weekly-intelligence-podcast.mjs'
       - 'src/generate-daily-intelligence-podcast.mjs'
+      - 'scripts/generate-elevenlabs-mp3.mjs'
+      - 'scripts/generate-daily-short-video.mjs'
+      - 'scripts/post-daily-brief-social.mjs'
       - 'scripts/generate-gemini-podcast-wav.mjs'
       - 'scripts/publish-podcast-feed.mjs'
       - 'test/news-intelligence-sources-contract.mjs'

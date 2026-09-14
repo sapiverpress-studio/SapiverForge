@@ -40,9 +40,16 @@ const publicationUrl = (value) => {
 const lowerInitial = (value) => clean(value).replace(/^([A-Z])(?=[a-z])/, (letter) => letter.toLowerCase());
 const attributedConfirmedFact = (value, candidate) => {
   const text = clean(value);
-  if (!/sources say/i.test(String(candidate?.title || "")) || /\b(?:according to|reported?|reports?|sources?)\b/i.test(text)) return text;
+  const sourceTitle = String(candidate?.title || "");
+  const needsAttribution = /(?:sources? say|source:|person familiar|current and former officials|according to (?:people|sources|officials))/i.test(sourceTitle);
+  if (!needsAttribution || /\b(?:according to|reported?|reports?|sources?|officials?)\b/i.test(text)) return text;
   const publisher = clean(candidate?.publisher || candidate?.source || "The source");
-  return `${publisher} reports, citing people familiar with the matter, that ${lowerInitial(text)}`;
+  const attribution = /current and former officials/i.test(sourceTitle)
+    ? "current and former officials"
+    : /(?:source:|person familiar)/i.test(sourceTitle)
+      ? "a person familiar with the matter"
+      : "people familiar with the matter";
+  return `${publisher} reports, citing ${attribution}, that ${lowerInitial(text)}`;
 };
 const cautiousConfirmedText = (value) => clean(value)
   .replace(/\bto (?:prevent|eliminate) training(?:-| )set memori[sz]ation\b/gi, "to reduce the risk of training-set memorisation")
@@ -72,6 +79,8 @@ function cautiousEditorialText(value) {
     .replace(/\bis forcing\b/gi, "is prompting")
     .replace(/\blikely triggering\b/gi, "and may prompt")
     .replace(/\breflects an industry shift toward\b/gi, "reflects an effort to move toward")
+    .replace(/\bBeijing likely perceives\b/gi, "The Global Times editorial presents")
+    .replace(/\bremains the primary indicator\b/gi, "may provide one indicator")
     .replace(/\b(?:the\s+)?legal liability(?:\s+for[^.]{0,100})?\s+rests with\s+(?:the\s+)?(?:individual\s+)?users?\b/gi, "individual users could face legal exposure");
 }
 
@@ -154,6 +163,9 @@ async function createEditorialOutput(sourceBundle) {
       "When a report relies on anonymous or unnamed sources, attribute the claim in the confirmed fact and do not present a proposed change as an official decision.",
       "Describe a company's stated benchmark purpose as an aim, not a guaranteed outcome. Use 'reduce the risk' rather than 'prevent' or 'eliminate' memorisation or contamination.",
       "One company or product launch does not establish an industry-wide shift. Describe it as one effort unless broader evidence is supplied.",
+      "A state-backed newspaper editorial is not automatically the position of a government or an entire country. Attribute the view to the named publication unless official policy evidence is supplied.",
+      "Do not infer that a government reorganisation is intended to counter competitors unless the sourced reporting explicitly establishes that purpose.",
+      "Do not call any single measure the primary indicator of an industry's direction. Present investment, deployment and governance actions as separate forms of evidence.",
       "Do not invent a fixed future time horizon. Avoid deterministic language such as 'will dictate', 'will force', 'ensuring' or 'guarantees'. Use may, could, suggests or would depend on where appropriate.",
       "Select a broad mix rather than five versions of the same AI story.",
       "Prefer consequential developments over novelty. Avoid hype, clickbait and investment advice.",
@@ -245,7 +257,10 @@ function findEditorialLanguageWarnings(editorial) {
     [/\blegal liability\b[^.]{0,140}\brests with\b/i, "categorical unresolved legal-liability language"],
     [/\b(?:directly correlating|necessitating|is forcing)\b/i, "unsupported causal language"],
     [/\breflects an industry shift\b/i, "industry-wide conclusion from limited evidence"],
-    [/\bto (?:prevent|eliminate) training(?:-| )set memori[sz]ation\b/i, "guaranteed benchmark outcome"]
+    [/\bto (?:prevent|eliminate) training(?:-| )set memori[sz]ation\b/i, "guaranteed benchmark outcome"],
+    [/\bBeijing likely perceives\b/i, "government position inferred from state-media commentary"],
+    [/\bremains the primary indicator\b/i, "categorical indicator claim"],
+    [/\blikely to counter perceived threats\b/i, "unsupported government motive"]
   ];
   const fields = [
     ["practical takeaway", editorial.practical_takeaway],

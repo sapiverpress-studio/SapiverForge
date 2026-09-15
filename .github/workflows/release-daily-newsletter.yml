@@ -133,8 +133,15 @@ jobs:
           SHORT_MP4="${RUNNER_TEMP}/sapiver-forge-short.mp4"
           INPUT_PATH="${DAILY_PODCAST_REPORT_DIR}/COPY_PASTE_INTO_ELEVENLABS.txt" OUTPUT_PATH="$PODCAST_MP3" node scripts/generate-elevenlabs-mp3.mjs
           INPUT_PATH="${DAILY_PODCAST_REPORT_DIR}/short-script.txt" OUTPUT_PATH="$SHORT_MP3" node scripts/generate-elevenlabs-mp3.mjs
-          bash scripts/generate-podcast-mp4.sh "$PODCAST_MP3" "$PODCAST_MP4" public/podcast/sapiver-forge-ai-briefing-cover-v1.png
-          SHORT_AUDIO_PATH="$SHORT_MP3" SHORT_VIDEO_PATH="$SHORT_MP4" SHORT_COVER_PATH="public/podcast/sapiver-forge-ai-briefing-cover-v1.png" node scripts/generate-daily-short-video.mjs
+          ISLA_INDEX="$(( (10#$(date -d "$NEWS_INTELLIGENCE_DATE" +%j) - 1) % 6 + 1 ))"
+          PODCAST_BACKGROUND="$(printf 'public/podcast/isla/16x9/isla-%02d-' "$ISLA_INDEX")"
+          PODCAST_BACKGROUND="$(find public/podcast/isla/16x9 -maxdepth 1 -type f -name "$(basename "$PODCAST_BACKGROUND")*.png" -print -quit)"
+          SHORT_BACKGROUND="$(printf 'public/podcast/isla/9x16/isla-%02d-' "$ISLA_INDEX")"
+          SHORT_BACKGROUND="$(find public/podcast/isla/9x16 -maxdepth 1 -type f -name "$(basename "$SHORT_BACKGROUND")*.png" -print -quit)"
+          [ -s "$PODCAST_BACKGROUND" ] && [ -s "$SHORT_BACKGROUND" ] || { echo "Approved Isla background pair is missing." >&2; exit 1; }
+          echo "Using approved Isla pair $ISLA_INDEX for $NEWS_INTELLIGENCE_DATE"
+          bash scripts/generate-podcast-mp4.sh "$PODCAST_MP3" "$PODCAST_MP4" public/podcast/sapiver-forge-ai-briefing-cover-v1.png "$PODCAST_BACKGROUND"
+          SHORT_AUDIO_PATH="$SHORT_MP3" SHORT_VIDEO_PATH="$SHORT_MP4" SHORT_COVER_PATH="$SHORT_BACKGROUND" node scripts/generate-daily-short-video.mjs
           SOURCE_MP3="$PODCAST_MP3" SOURCE_MP4="$PODCAST_MP4" METADATA_PATH="${DAILY_PODCAST_REPORT_DIR}/episode-metadata.json" EPISODE_SLUG="${DAILY_PODCAST_SLUG}" PODCAST_KIND="daily detailed story" PODCAST_BASE_URL="https://suite.sapiverpress.co.uk" node scripts/publish-podcast-feed.mjs
           if [ ! -s "${DAILY_PODCAST_REPORT_DIR}/youtube-upload.json" ]; then
             TITLE="$(node -p "require('./${DAILY_PODCAST_REPORT_DIR}/episode-metadata.json').short.title")"

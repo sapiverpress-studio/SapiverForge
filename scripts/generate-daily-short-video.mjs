@@ -9,15 +9,16 @@ for (const file of [audio, cover]) if (!fs.existsSync(file)) throw new Error(`Mi
 
 fs.mkdirSync(new URL(".", `file://${output.startsWith("/") ? "" : process.cwd() + "/"}${output}`).pathname, { recursive: true });
 
-// Keep the Daily Brief Short renderer deliberately simple and deterministic.
-// Use the approved Isla still for the full audio duration instead of the
-// zoompan animation that stalled in GitHub Actions.
+// Decode the approved still once, then clone that decoded frame for the audio
+// duration. Repeatedly looping the PNG input caused FFmpeg parser-buffer
+// failures on GitHub-hosted runners even after zoompan was removed.
 const result = spawnSync("ffmpeg", [
   "-hide_banner", "-loglevel", "error", "-y",
-  "-loop", "1", "-framerate", "30", "-i", cover,
+  "-i", cover,
   "-i", audio,
-  "-vf", "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,format=yuv420p",
-  "-map", "0:v", "-map", "1:a",
+  "-filter_complex",
+  "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,tpad=stop_mode=clone:stop_duration=3600,format=yuv420p[v]",
+  "-map", "[v]", "-map", "1:a",
   "-c:v", "libx264", "-preset", "veryfast", "-crf", "25", "-tune", "stillimage",
   "-c:a", "aac", "-b:a", "128k", "-ar", "44100",
   "-movflags", "+faststart", "-shortest", output

@@ -114,16 +114,17 @@ jobs:
       - name: Install locked website dependencies
         run: npm ci --no-audit --no-fund
 
+      - name: Install media renderer
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+
       - name: Generate ElevenLabs audio, podcast video and vertical Short
+        id: daily_media
         if: steps.release.outputs.has_daily_podcast == 'true'
         continue-on-error: true
         env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLAB_API || secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
           ELEVENLABS_MODEL_ID: ${{ secrets.ELEVENLABS_MODEL_ID }}
-          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
-          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
-          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         shell: bash
         run: |
           set -euo pipefail
@@ -143,19 +144,14 @@ jobs:
           bash scripts/generate-podcast-mp4.sh "$PODCAST_MP3" "$PODCAST_MP4" public/podcast/sapiver-forge-ai-briefing-cover-v1.png "$PODCAST_BACKGROUND"
           SHORT_AUDIO_PATH="$SHORT_MP3" SHORT_VIDEO_PATH="$SHORT_MP4" SHORT_COVER_PATH="$SHORT_BACKGROUND" node scripts/generate-daily-short-video.mjs
           SOURCE_MP3="$PODCAST_MP3" SOURCE_MP4="$PODCAST_MP4" METADATA_PATH="${DAILY_PODCAST_REPORT_DIR}/episode-metadata.json" EPISODE_SLUG="${DAILY_PODCAST_SLUG}" PODCAST_KIND="daily detailed story" PODCAST_BASE_URL="https://suite.sapiverpress.co.uk" node scripts/publish-podcast-feed.mjs
-          if [ ! -s "${DAILY_PODCAST_REPORT_DIR}/youtube-upload.json" ]; then
-            TITLE="$(node -p "require('./${DAILY_PODCAST_REPORT_DIR}/episode-metadata.json').short.title")"
-            DESCRIPTION="$(node -p "require('./${DAILY_PODCAST_REPORT_DIR}/episode-metadata.json').short.description.replace(/\\s+/g,' ')")"
-            VIDEO_PATH="$SHORT_MP4" TITLE="$TITLE" DESCRIPTION="$DESCRIPTION" PRIVACY_STATUS="public" node src/upload-youtube-short.mjs | tee "${DAILY_PODCAST_REPORT_DIR}/youtube-upload.json"
-          else
-            echo "YouTube Short receipt already exists; skipping duplicate upload."
-          fi
+          cp "$SHORT_MP4" "public/podcast/episodes/${DAILY_PODCAST_SLUG}-short.mp4"
 
       - name: Generate and publish the approved Friday recap podcast
+        id: weekly_media
         if: steps.release.outputs.has_weekly_podcast == 'true'
         continue-on-error: true
         env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLAB_API || secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
           ELEVENLABS_MODEL_ID: ${{ secrets.ELEVENLABS_MODEL_ID }}
           INPUT_PATH: ${{ env.PODCAST_REPORT_DIR }}/COPY_PASTE_INTO_ELEVENLABS.txt
@@ -229,24 +225,6 @@ jobs:
             --auth="${NETLIFY_AUTH_TOKEN}" \
             --message="Publish Daily Brief, Sapiver Learn, AI Inquisitive Parents and Sapiver Puzzles"
 
-      - name: Publish approved Daily Brief to Facebook and Pinterest
-        continue-on-error: true
-        env:
-          DAILY_BRIEF_MANIFEST: news-intelligence/${{ steps.release.outputs.date }}/manifest.json
-          DISTRIBUTION_RECEIPT_PATH: reports/daily-intelligence/${{ steps.release.outputs.date }}/social-distribution.json
-          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
-          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
-          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
-          # Prefer the refresh-token route so an expired static token cannot block publishing.
-          PINTEREST_REFRESH_TOKEN: ${{ secrets.PINTEREST_REFRESH_TOKEN }}
-          PINTEREST_CLIENT_ID: ${{ secrets.PINTEREST_CLIENT_ID }}
-          PINTEREST_CLIENT_SECRET: ${{ secrets.PINTEREST_CLIENT_SECRET }}
-          PINTEREST_APP_ID: ${{ secrets.PINTEREST_APP_ID }}
-          PINTEREST_APP_SECRET: ${{ secrets.PINTEREST_APP_SECRET }}
-          PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
-        run: node scripts/post-daily-brief-social.mjs
-
       - name: Send reviewed campaign through established Brevo list
         if: steps.release.outputs.already_sent != 'true'
         env:
@@ -287,3 +265,31 @@ jobs:
             git pull --rebase origin main
           done
           git push
+
+
+      - name: Dispatch approved social edition to comic repository
+        id: social_bridge
+        env:
+          GH_TOKEN: ${{ secrets.CROSS_REPO_GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "$GH_TOKEN" || { echo "::error::CROSS_REPO_GITHUB_TOKEN is unavailable."; exit 1; }
+          gh workflow run daily-brief-social-bridge.yml \
+            --repo sapiverpress-studio/SapiverPress_comic_public --ref main \
+            -f edition_date="$NEWS_INTELLIGENCE_DATE" \
+            -f source_sha="$(git rev-parse HEAD)" \
+            -f candidate_id="$NEWS_INTELLIGENCE_CANDIDATE_ID" -f confirm=SEND
+          echo 'Social handoff accepted. Check [comic repository social runs](https://github.com/sapiverpress-studio/SapiverPress_comic_public/actions/workflows/daily-brief-social-bridge.yml) for individual posting results.' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Report incomplete media or bridge release
+        if: always() && steps.release.outcome == 'success'
+        env:
+          DAILY_RESULT: ${{ steps.daily_media.outcome }}
+          WEEKLY_RESULT: ${{ steps.weekly_media.outcome }}
+          BRIDGE_RESULT: ${{ steps.social_bridge.outcome }}
+        run: |
+          printf 'Daily media: %s\nFriday media: %s\nSocial handoff: %s\n' "$DAILY_RESULT" "$WEEKLY_RESULT" "$BRIDGE_RESULT" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$DAILY_RESULT" = failure ] || [ "$WEEKLY_RESULT" = failure ] || [ "$BRIDGE_RESULT" != success ]; then
+            echo '::error::Release is incomplete. Check media and social handoff results before retrying.'
+            exit 1
+          fi

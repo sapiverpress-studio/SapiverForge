@@ -57,6 +57,8 @@ async function main() {
     system: [
       "You write Sapiver Forge's daily detailed-story podcast for practical UK listeners.",
       "Use only the supplied verified Daily Brief material. Separate confirmed facts from Sapiver Forge interpretation.",
+      "Do not introduce named models, providers, partners, technical dependencies, availability conditions or capabilities that are absent from the supplied confirmed fact.",
+      "If the source material does not establish a detail, state the uncertainty or omit it; never fill gaps from general knowledge.",
       "Explain the story naturally, avoid hype and advice, and never include raw URLs or stage directions in narration."
     ],
     prompt: `Create one focused daily podcast episode about the lead story below.

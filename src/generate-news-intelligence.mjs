@@ -166,6 +166,9 @@ async function createEditorialOutput(sourceBundle) {
       "A state-backed newspaper editorial is not automatically the position of a government or an entire country. Attribute the view to the named publication unless official policy evidence is supplied.",
       "Do not infer that a government reorganisation is intended to counter competitors unless the sourced reporting explicitly establishes that purpose.",
       "Do not call any single measure the primary indicator of an industry's direction. Present investment, deployment and governance actions as separate forms of evidence.",
+      "Do not add a named model, provider, partner or technical dependency unless the verification evidence or original source explicitly confirms that relationship.",
+      "When a first-person blog uses language such as 'I guess', 'it seems' or 'it looks like', preserve that uncertainty and never promote the author's attribution into a confirmed fact.",
+      "A social profile or publisher homepage is not an adequate publication link for a specific claim. Use the exact post or article URL, or drop the story.",
       "Do not invent a fixed future time horizon. Avoid deterministic language such as 'will dictate', 'will force', 'ensuring' or 'guarantees'. Use may, could, suggests or would depend on where appropriate.",
       "Select a broad mix rather than five versions of the same AI story.",
       "Prefer consequential developments over novelty. Avoid hype, clickbait and investment advice.",
@@ -294,6 +297,16 @@ function qualityState(result, editorial, sourceBundle) {
   if (fallbackLinks.length) {
     warnings.push(`${fallbackLinks.length} selected stor${fallbackLinks.length === 1 ? "y uses" : "ies use"} a discovery fallback link because no direct publisher URL was resolved.`);
   }
+  const weakPublicationLinks = editorial.stories.filter((story) => {
+    try {
+      const url = new URL(story.url);
+      const parts = url.pathname.split("/").filter(Boolean);
+      return parts.length === 0 || ((url.hostname === "x.com" || url.hostname === "twitter.com") && parts.length < 3);
+    } catch {
+      return true;
+    }
+  });
+  if (weakPublicationLinks.length) blockers.push(`${weakPublicationLinks.length} selected stor${weakPublicationLinks.length === 1 ? "y has" : "ies have"} only a homepage, profile or invalid publication link.`);
   warnings.push(...findEditorialLanguageWarnings(editorial));
 
   const ready = blockers.length === 0;

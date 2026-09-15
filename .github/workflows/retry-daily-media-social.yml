@@ -1,0 +1,221 @@
+name: Retry Daily Brief Media + Socials (No Netlify)
+
+on:
+  workflow_dispatch:
+    inputs:
+      edition_date:
+        description: Optional Daily Brief date (YYYY-MM-DD). Leave blank for today in Europe/London.
+        required: false
+        type: string
+      confirm:
+        description: Type RETRY to regenerate missing media and retry social publishing without a Netlify deploy
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sapiver-forge-daily-media-social-retry
+  cancel-in-progress: false
+
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate retry request and released candidate
+        id: release
+        shell: bash
+        env:
+          DATE: ${{ inputs.edition_date }}
+          CONFIRM: ${{ inputs.confirm }}
+        run: |
+          set -euo pipefail
+          [ "$CONFIRM" = "RETRY" ] || { echo "Confirmation must be exactly RETRY" >&2; exit 1; }
+          DATE="${DATE:-$(TZ=Europe/London date +%F)}"
+          export DATE
+          echo "$DATE" | grep -Eq '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
+          node <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const date = process.env.DATE;
+          const manifestPath = `news-intelligence/${date}/manifest.json`;
+          const siteReleasePath = `news-intelligence/${date}/site-release.json`;
+          if (!fs.existsSync(manifestPath)) throw new Error(`No Daily Brief candidate exists for ${date}.`);
+          if (!fs.existsSync(siteReleasePath)) throw new Error(`No released website candidate exists for ${date}; use the normal Publish and Deploy workflow instead.`);
+          const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+          const siteRelease = JSON.parse(fs.readFileSync(siteReleasePath, 'utf8'));
+          const candidate = String(manifest.candidate_id || '').trim();
+          if (!candidate || siteRelease.candidate_id !== candidate) throw new Error('Released candidate does not match the current manifest; refusing retry.');
+          if (manifest.newsletter_ready_for_human_approval !== true) throw new Error('Current candidate is not verification-ready.');
+          fs.appendFileSync(process.env.GITHUB_ENV, `NEWS_INTELLIGENCE_DATE=${date}\nNEWS_INTELLIGENCE_CANDIDATE_ID=${candidate}\n`);
+
+          const dailyDir = `reports/daily-intelligence/${date}`;
+          const dailyManifestPath = `${dailyDir}/candidate-manifest.json`;
+          if (!fs.existsSync(dailyManifestPath)) throw new Error(`Detailed daily story candidate is missing for ${date}.`);
+          const dailyManifest = JSON.parse(fs.readFileSync(dailyManifestPath, 'utf8'));
+          if (dailyManifest.type !== 'sapiver_forge_daily_detailed_story' || dailyManifest.date !== date) throw new Error('Daily story candidate metadata is inconsistent.');
+          for (const [name, expected] of Object.entries(dailyManifest.file_hashes || {})) {
+            const file = `${dailyDir}/${name}`;
+            if (!fs.existsSync(file)) throw new Error(`Daily story candidate file missing: ${name}`);
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) throw new Error(`Daily story candidate hash mismatch: ${name}`);
+          }
+          const dailyMeta = JSON.parse(fs.readFileSync(`${dailyDir}/episode-metadata.json`, 'utf8'));
+          const dailySlug = String(dailyMeta.slug || '').trim();
+          if (!/^[a-z0-9][a-z0-9-]*$/i.test(dailySlug)) throw new Error('Daily story candidate has an unsafe slug.');
+          fs.appendFileSync(process.env.GITHUB_ENV, `DAILY_PODCAST_REPORT_DIR=${dailyDir}\nDAILY_PODCAST_SLUG=${dailySlug}\n`);
+
+          const weeklyDir = `reports/weekly-intelligence/${date}`;
+          const weeklyManifestPath = `${weeklyDir}/candidate-manifest.json`;
+          let hasWeeklyPodcast = false;
+          if (fs.existsSync(weeklyManifestPath)) {
+            const weeklyManifest = JSON.parse(fs.readFileSync(weeklyManifestPath, 'utf8'));
+            if (weeklyManifest.type !== 'sapiver_forge_weekly_intelligence_podcast' || weeklyManifest.week_end !== date) throw new Error('Weekly podcast candidate metadata is inconsistent.');
+            for (const [name, expected] of Object.entries(weeklyManifest.file_hashes || {})) {
+              const file = `${weeklyDir}/${name}`;
+              if (!fs.existsSync(file)) throw new Error(`Weekly podcast candidate file missing: ${name}`);
+              const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+              if (actual !== expected) throw new Error(`Weekly podcast candidate hash mismatch: ${name}`);
+            }
+            const weeklyMeta = JSON.parse(fs.readFileSync(`${weeklyDir}/episode-metadata.json`, 'utf8'));
+            const weeklySlug = String(weeklyMeta.slug || '').trim();
+            if (!/^[a-z0-9][a-z0-9-]*$/i.test(weeklySlug)) throw new Error('Weekly podcast candidate has an unsafe slug.');
+            hasWeeklyPodcast = true;
+            fs.appendFileSync(process.env.GITHUB_ENV, `PODCAST_REPORT_DIR=${weeklyDir}\nPODCAST_SLUG=${weeklySlug}\n`);
+          }
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `date=${date}\ncandidate_id=${candidate}\nhas_weekly_podcast=${hasWeeklyPodcast}\n`);
+          console.log(`Retrying released candidate ${candidate.slice(0, 12)}… without a Netlify deploy.`);
+          NODE
+
+      - name: Syntax checks
+        run: |
+          node --check scripts/generate-elevenlabs-mp3.mjs
+          node --check scripts/generate-daily-short-video.mjs
+          node --check scripts/publish-podcast-feed.mjs
+          node --check scripts/run-daily-social-bridge.mjs
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Install media renderer
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+
+      - name: Smoke test vertical Short renderer
+        shell: bash
+        run: |
+          set -euo pipefail
+          TEST_AUDIO="${RUNNER_TEMP}/short-render-smoke.wav"
+          TEST_VIDEO="${RUNNER_TEMP}/short-render-smoke.mp4"
+          ffmpeg -hide_banner -loglevel error -y -f lavfi -i "sine=frequency=440:duration=1" -c:a pcm_s16le "$TEST_AUDIO"
+          SHORT_AUDIO_PATH="$TEST_AUDIO" \
+          SHORT_VIDEO_PATH="$TEST_VIDEO" \
+          SHORT_COVER_PATH="public/podcast/isla/9x16/isla-01-cover.png" \
+            node scripts/generate-daily-short-video.mjs
+          test -s "$TEST_VIDEO"
+
+      - name: Regenerate only missing daily media
+        id: daily_media
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLAB_API || secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_MODEL_ID: ${{ secrets.ELEVENLABS_MODEL_ID }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          PUBLISHED_MP3="public/podcast/episodes/${DAILY_PODCAST_SLUG}.mp3"
+          PUBLISHED_MP4="public/podcast/episodes/${DAILY_PODCAST_SLUG}.mp4"
+          PUBLISHED_SHORT="public/podcast/episodes/${DAILY_PODCAST_SLUG}-short.mp4"
+          ISLA_INDEX="$(( (10#$(date -d "$NEWS_INTELLIGENCE_DATE" +%j) - 1) % 6 + 1 ))"
+          PODCAST_BACKGROUND="$(printf 'public/podcast/isla/16x9/isla-%02d-' "$ISLA_INDEX")"
+          PODCAST_BACKGROUND="$(find public/podcast/isla/16x9 -maxdepth 1 -type f -name "$(basename "$PODCAST_BACKGROUND")*.png" -print -quit)"
+          SHORT_BACKGROUND="$(printf 'public/podcast/isla/9x16/isla-%02d-' "$ISLA_INDEX")"
+          SHORT_BACKGROUND="$(find public/podcast/isla/9x16 -maxdepth 1 -type f -name "$(basename "$SHORT_BACKGROUND")*.png" -print -quit)"
+          [ -s "$PODCAST_BACKGROUND" ] && [ -s "$SHORT_BACKGROUND" ] || { echo "Approved Isla background pair is missing." >&2; exit 1; }
+
+          if [ ! -s "$PUBLISHED_MP3" ] || [ ! -s "$PUBLISHED_MP4" ]; then
+            PODCAST_MP3="${RUNNER_TEMP}/sapiver-forge-daily.mp3"
+            PODCAST_MP4="${RUNNER_TEMP}/sapiver-forge-daily.mp4"
+            INPUT_PATH="${DAILY_PODCAST_REPORT_DIR}/COPY_PASTE_INTO_ELEVENLABS.txt" OUTPUT_PATH="$PODCAST_MP3" node scripts/generate-elevenlabs-mp3.mjs
+            bash scripts/generate-podcast-mp4.sh "$PODCAST_MP3" "$PODCAST_MP4" public/podcast/sapiver-forge-ai-briefing-cover-v1.png "$PODCAST_BACKGROUND"
+            SOURCE_MP3="$PODCAST_MP3" SOURCE_MP4="$PODCAST_MP4" METADATA_PATH="${DAILY_PODCAST_REPORT_DIR}/episode-metadata.json" EPISODE_SLUG="${DAILY_PODCAST_SLUG}" PODCAST_KIND="daily detailed story" PODCAST_BASE_URL="https://suite.sapiverpress.co.uk" node scripts/publish-podcast-feed.mjs
+          else
+            echo "Full daily podcast media already exists; reusing it."
+          fi
+
+          if [ ! -s "$PUBLISHED_SHORT" ]; then
+            SHORT_MP3="${RUNNER_TEMP}/sapiver-forge-short.mp3"
+            SHORT_MP4="${RUNNER_TEMP}/sapiver-forge-short.mp4"
+            INPUT_PATH="${DAILY_PODCAST_REPORT_DIR}/short-script.txt" OUTPUT_PATH="$SHORT_MP3" node scripts/generate-elevenlabs-mp3.mjs
+            SHORT_AUDIO_PATH="$SHORT_MP3" SHORT_VIDEO_PATH="$SHORT_MP4" SHORT_COVER_PATH="$SHORT_BACKGROUND" node scripts/generate-daily-short-video.mjs
+            cp "$SHORT_MP4" "$PUBLISHED_SHORT"
+          else
+            echo "Daily vertical Short already exists; reusing it."
+          fi
+
+          test -s "$PUBLISHED_MP3"
+          test -s "$PUBLISHED_MP4"
+          test -s "$PUBLISHED_SHORT"
+
+      - name: Regenerate missing Friday recap if required
+        id: weekly_media
+        if: steps.release.outputs.has_weekly_podcast == 'true'
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLAB_API || secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_MODEL_ID: ${{ secrets.ELEVENLABS_MODEL_ID }}
+          INPUT_PATH: ${{ env.PODCAST_REPORT_DIR }}/COPY_PASTE_INTO_ELEVENLABS.txt
+          OUTPUT_PATH: ${{ runner.temp }}/sapiver-forge-weekly.mp3
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -s "public/podcast/episodes/${PODCAST_SLUG}.mp3" ]; then
+            echo "Weekly podcast ${PODCAST_SLUG} already exists; reusing it."
+            exit 0
+          fi
+          node scripts/generate-elevenlabs-mp3.mjs
+          SOURCE_MP3="${RUNNER_TEMP}/sapiver-forge-weekly.mp3" \
+          METADATA_PATH="${PODCAST_REPORT_DIR}/episode-metadata.json" \
+          EPISODE_SLUG="${PODCAST_SLUG}" \
+          PODCAST_KIND="weekly recap" \
+          PODCAST_BASE_URL="https://suite.sapiverpress.co.uk" \
+            node scripts/publish-podcast-feed.mjs
+          mkdir -p public/posts
+          cp "${PODCAST_REPORT_DIR}/weekly-article.html" "public/posts/${PODCAST_SLUG}.html"
+
+      - name: Persist regenerated media before social handoff
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "sapiver-forge-intelligence-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "reports/daily-intelligence/${NEWS_INTELLIGENCE_DATE}" public/podcast public/posts || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Retry Daily Brief media ${NEWS_INTELLIGENCE_DATE} [skip ci]"
+            for attempt in 1 2 3; do
+              if git push; then break; fi
+              git pull --rebase origin main
+            done
+          fi
+
+      - name: Dispatch approved social edition to comic repository
+        id: social_bridge
+        env:
+          GH_TOKEN: ${{ secrets.CROSS_REPO_GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GH_TOKEN" || { echo "::error::CROSS_REPO_GITHUB_TOKEN is unavailable."; exit 1; }
+          gh workflow run daily-brief-social-bridge.yml \
+            --repo sapiverpress-studio/SapiverPress_comic_public --ref main \
+            -f edition_date="$NEWS_INTELLIGENCE_DATE" \
+            -f source_sha="$(git rev-parse HEAD)" \
+            -f candidate_id="$NEWS_INTELLIGENCE_CANDIDATE_ID" -f confirm=SEND
+          echo 'Media/social retry completed without a Netlify production deploy.' >> "$GITHUB_STEP_SUMMARY"

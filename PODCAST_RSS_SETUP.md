@@ -2,11 +2,11 @@
 
 Public feed:
 
-https://sapiverforge-daily-brief.netlify.app/podcast/feed.xml
+https://suite.sapiverpress.co.uk/podcast/feed.xml
 
 Public podcast page:
 
-https://sapiverforge-daily-brief.netlify.app/podcast/
+https://suite.sapiverpress.co.uk/podcast/
 
 ## Before submitting the feed
 

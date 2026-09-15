@@ -4,7 +4,7 @@ import path from "node:path";
 const ROOT = process.cwd();
 const requestedBase = String(process.env.PODCAST_BASE_URL || "").replace(/\/$/, "");
 const LEGACY_BASE = "https://sapiverforge-daily-brief.netlify.app";
-const SAPIVER_FORGE_BASE = "https://sapiverforge-daily-brief.netlify.app";
+const SAPIVER_FORGE_BASE = "https://suite.sapiverpress.co.uk";
 const BASE = !requestedBase || requestedBase === LEGACY_BASE ? SAPIVER_FORGE_BASE : requestedBase;
 const sourceMp3 = process.env.SOURCE_MP3;
 const sourceMp4 = process.env.SOURCE_MP4;
@@ -151,7 +151,7 @@ const feed = `<?xml version="1.0" encoding="UTF-8"?>
     <link>${BASE}/podcast/</link>
     <description>AI news is noisy. Sapiver Forge explains what changed, who is adopting it, why it matters and what is worth testing next.</description>
     <language>en-gb</language>
-    <managingEditor>clearforge@sapiverpress.co.uk (Sapiver Forge)</managingEditor>
+    <managingEditor>support@sapiverpress.co.uk (Sapiver Forge)</managingEditor>
     <copyright>Sapiver Forge by Sapiver Press</copyright>
     <generator>Sapiver Forge hosted podcast feed</generator>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
@@ -159,7 +159,7 @@ const feed = `<?xml version="1.0" encoding="UTF-8"?>
     <itunes:author>Sapiver Forge</itunes:author>
     <itunes:owner>
       <itunes:name>Sapiver Forge</itunes:name>
-      <itunes:email>clearforge@sapiverpress.co.uk</itunes:email>
+      <itunes:email>support@sapiverpress.co.uk</itunes:email>
     </itunes:owner>
     <itunes:summary>Human-led, practical AI learning without the hype. Weekly briefings, practical learning editions and focused research into real-world AI adoption.</itunes:summary>
     <itunes:type>episodic</itunes:type>

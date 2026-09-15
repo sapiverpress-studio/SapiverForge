@@ -56,6 +56,7 @@ jobs:
           echo "Publishing Daily Brief date: $DATE"
           node <<'NODE'
           const fs = require('fs');
+          const crypto = require('crypto');
           const date = process.env.DATE;
           const manifestPath = `news-intelligence/${date}/manifest.json`;
           const metaPath = `news-intelligence/${date}/newsletter-metadata.json`;
@@ -68,11 +69,18 @@ jobs:
           if (manifest.newsletter_ready_for_human_approval !== true) throw new Error('This candidate is not verification-ready.');
           if (Number(manifest.overall_confidence || 0) < 0.78) throw new Error('Candidate is below the release confidence threshold.');
           fs.appendFileSync(process.env.GITHUB_ENV, `NEWS_INTELLIGENCE_DATE=${date}\nNEWS_INTELLIGENCE_CANDIDATE_ID=${candidate}\n`);
+
           const alreadySent = meta.status === 'sent' && Boolean(meta.sent_at);
+          const deployReceiptPath = `news-intelligence/${date}/netlify-release.json`;
+          let alreadyDeployed = false;
+          if (fs.existsSync(deployReceiptPath)) {
+            const receipt = JSON.parse(fs.readFileSync(deployReceiptPath, 'utf8'));
+            alreadyDeployed = receipt.status === 'deployed' && receipt.candidate_id === candidate;
+          }
+
           const weeklyDir = `reports/weekly-intelligence/${date}`;
           const weeklyManifestPath = `${weeklyDir}/candidate-manifest.json`;
           let hasWeeklyPodcast = false;
-          let weeklySlug = '';
           if (fs.existsSync(weeklyManifestPath)) {
             const weeklyManifest = JSON.parse(fs.readFileSync(weeklyManifestPath, 'utf8'));
             if (weeklyManifest.type !== 'sapiver_forge_weekly_intelligence_podcast') throw new Error('Unexpected weekly podcast candidate type.');
@@ -80,15 +88,16 @@ jobs:
             for (const [name, expected] of Object.entries(weeklyManifest.file_hashes || {})) {
               const file = `${weeklyDir}/${name}`;
               if (!fs.existsSync(file)) throw new Error(`Weekly podcast candidate file missing: ${name}`);
-              const actual = require('crypto').createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+              const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
               if (actual !== expected) throw new Error(`Weekly podcast candidate hash mismatch: ${name}`);
             }
             const weeklyMeta = JSON.parse(fs.readFileSync(`${weeklyDir}/episode-metadata.json`, 'utf8'));
-            weeklySlug = String(weeklyMeta.slug || '').trim();
+            const weeklySlug = String(weeklyMeta.slug || '').trim();
             if (!/^[a-z0-9][a-z0-9-]*$/i.test(weeklySlug)) throw new Error('Weekly podcast candidate has an unsafe slug.');
             hasWeeklyPodcast = true;
             fs.appendFileSync(process.env.GITHUB_ENV, `PODCAST_REPORT_DIR=${weeklyDir}\nPODCAST_SLUG=${weeklySlug}\n`);
           }
+
           const dailyDir = `reports/daily-intelligence/${date}`;
           const dailyManifestPath = `${dailyDir}/candidate-manifest.json`;
           if (!fs.existsSync(dailyManifestPath)) throw new Error(`Detailed daily story candidate is missing for ${date}.`);
@@ -98,17 +107,18 @@ jobs:
           for (const [name, expected] of Object.entries(dailyManifest.file_hashes || {})) {
             const file = `${dailyDir}/${name}`;
             if (!fs.existsSync(file)) throw new Error(`Daily story candidate file missing: ${name}`);
-            const actual = require('crypto').createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
             if (actual !== expected) throw new Error(`Daily story candidate hash mismatch: ${name}`);
           }
           const dailyMeta = JSON.parse(fs.readFileSync(`${dailyDir}/episode-metadata.json`, 'utf8'));
           const dailySlug = String(dailyMeta.slug || '').trim();
           if (!/^[a-z0-9][a-z0-9-]*$/i.test(dailySlug)) throw new Error('Daily story candidate has an unsafe slug.');
           fs.appendFileSync(process.env.GITHUB_ENV, `DAILY_PODCAST_REPORT_DIR=${dailyDir}\nDAILY_PODCAST_SLUG=${dailySlug}\n`);
-          fs.appendFileSync(process.env.GITHUB_OUTPUT, `date=${date}\ncandidate_id=${candidate}\nalready_sent=${alreadySent}\nhas_daily_podcast=true\nhas_weekly_podcast=${hasWeeklyPodcast}\n`);
-          console.log(alreadySent
-            ? `Campaign for ${date} was already sent; continuing with the website deploy only.`
-            : `Releasing current approved candidate ${candidate.slice(0, 12)}… for ${date}.`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,
+            `date=${date}\ncandidate_id=${candidate}\nalready_sent=${alreadySent}\nalready_deployed=${alreadyDeployed}\nhas_daily_podcast=true\nhas_weekly_podcast=${hasWeeklyPodcast}\n`);
+          console.log(alreadyDeployed
+            ? `Candidate ${candidate.slice(0, 12)}… already has a successful Netlify production receipt; this run will not create another production deploy.`
+            : `Candidate ${candidate.slice(0, 12)}… has not yet recorded a successful Netlify production deploy.`);
           NODE
 
       - name: Install locked website dependencies
@@ -117,10 +127,22 @@ jobs:
       - name: Install media renderer
         run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
 
+      - name: Smoke test vertical Short renderer
+        shell: bash
+        run: |
+          set -euo pipefail
+          TEST_AUDIO="${RUNNER_TEMP}/short-render-smoke.wav"
+          TEST_VIDEO="${RUNNER_TEMP}/short-render-smoke.mp4"
+          ffmpeg -hide_banner -loglevel error -y -f lavfi -i "sine=frequency=440:duration=1" -c:a pcm_s16le "$TEST_AUDIO"
+          SHORT_AUDIO_PATH="$TEST_AUDIO" \
+          SHORT_VIDEO_PATH="$TEST_VIDEO" \
+          SHORT_COVER_PATH="public/podcast/isla/9x16/isla-01-cover.png" \
+            node scripts/generate-daily-short-video.mjs
+          test -s "$TEST_VIDEO"
+
       - name: Generate ElevenLabs audio, podcast video and vertical Short
         id: daily_media
         if: steps.release.outputs.has_daily_podcast == 'true'
-        continue-on-error: true
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLAB_API || secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
@@ -128,6 +150,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          PUBLISHED_MP3="public/podcast/episodes/${DAILY_PODCAST_SLUG}.mp3"
+          PUBLISHED_MP4="public/podcast/episodes/${DAILY_PODCAST_SLUG}.mp4"
+          PUBLISHED_SHORT="public/podcast/episodes/${DAILY_PODCAST_SLUG}-short.mp4"
+          if [ -s "$PUBLISHED_MP3" ] && [ -s "$PUBLISHED_MP4" ] && [ -s "$PUBLISHED_SHORT" ]; then
+            echo "Daily media for ${DAILY_PODCAST_SLUG} already exists; reusing it."
+            exit 0
+          fi
+
           PODCAST_MP3="${RUNNER_TEMP}/sapiver-forge-daily.mp3"
           PODCAST_MP4="${RUNNER_TEMP}/sapiver-forge-daily.mp4"
           SHORT_MP3="${RUNNER_TEMP}/sapiver-forge-short.mp3"
@@ -144,12 +174,11 @@ jobs:
           bash scripts/generate-podcast-mp4.sh "$PODCAST_MP3" "$PODCAST_MP4" public/podcast/sapiver-forge-ai-briefing-cover-v1.png "$PODCAST_BACKGROUND"
           SHORT_AUDIO_PATH="$SHORT_MP3" SHORT_VIDEO_PATH="$SHORT_MP4" SHORT_COVER_PATH="$SHORT_BACKGROUND" node scripts/generate-daily-short-video.mjs
           SOURCE_MP3="$PODCAST_MP3" SOURCE_MP4="$PODCAST_MP4" METADATA_PATH="${DAILY_PODCAST_REPORT_DIR}/episode-metadata.json" EPISODE_SLUG="${DAILY_PODCAST_SLUG}" PODCAST_KIND="daily detailed story" PODCAST_BASE_URL="https://suite.sapiverpress.co.uk" node scripts/publish-podcast-feed.mjs
-          cp "$SHORT_MP4" "public/podcast/episodes/${DAILY_PODCAST_SLUG}-short.mp4"
+          cp "$SHORT_MP4" "$PUBLISHED_SHORT"
 
       - name: Generate and publish the approved Friday recap podcast
         id: weekly_media
         if: steps.release.outputs.has_weekly_podcast == 'true'
-        continue-on-error: true
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLAB_API || secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
@@ -207,6 +236,8 @@ jobs:
           git push
 
       - name: Deploy the complete website to Netlify production
+        id: netlify_deploy
+        if: steps.release.outputs.already_deployed != 'true'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: 47bda30e-4698-4cf5-bcd4-d59785e1f399
@@ -224,6 +255,37 @@ jobs:
             --site="${NETLIFY_SITE_ID}" \
             --auth="${NETLIFY_AUTH_TOKEN}" \
             --message="Publish Daily Brief, Sapiver Learn, AI Inquisitive Parents and Sapiver Puzzles"
+
+      - name: Record successful Netlify production deploy
+        if: steps.netlify_deploy.outcome == 'success' && steps.release.outputs.already_deployed != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          RECEIPT="news-intelligence/${NEWS_INTELLIGENCE_DATE}/netlify-release.json"
+          export RECEIPT
+          node <<'NODE'
+          const fs = require('fs');
+          const path = process.env.RECEIPT;
+          const receipt = {
+            schema_version: 1,
+            status: 'deployed',
+            date: process.env.NEWS_INTELLIGENCE_DATE,
+            candidate_id: process.env.NEWS_INTELLIGENCE_CANDIDATE_ID,
+            site_id: '47bda30e-4698-4cf5-bcd4-d59785e1f399',
+            deployed_at: new Date().toISOString(),
+            source_sha: process.env.GITHUB_SHA
+          };
+          fs.writeFileSync(path, JSON.stringify(receipt, null, 2) + '\n');
+          NODE
+          git config user.name "sapiver-forge-intelligence-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "$RECEIPT"
+          git commit -m "Record Netlify release ${NEWS_INTELLIGENCE_DATE} [skip ci]"
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            git pull --rebase origin main
+          done
+          git push
 
       - name: Send reviewed campaign through established Brevo list
         if: steps.release.outputs.already_sent != 'true'
@@ -266,7 +328,6 @@ jobs:
           done
           git push
 
-
       - name: Dispatch approved social edition to comic repository
         id: social_bridge
         env:
@@ -279,7 +340,7 @@ jobs:
             -f edition_date="$NEWS_INTELLIGENCE_DATE" \
             -f source_sha="$(git rev-parse HEAD)" \
             -f candidate_id="$NEWS_INTELLIGENCE_CANDIDATE_ID" -f confirm=SEND
-          echo 'Social handoff accepted. Check [comic repository social runs](https://github.com/sapiverpress-studio/SapiverPress_comic_public/actions/workflows/daily-brief-social-bridge.yml) for individual posting results.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Social handoff accepted. Check the comic repository social workflow for individual posting results.' >> "$GITHUB_STEP_SUMMARY"
 
       - name: Report incomplete media or bridge release
         if: always() && steps.release.outcome == 'success'
@@ -287,9 +348,24 @@ jobs:
           DAILY_RESULT: ${{ steps.daily_media.outcome }}
           WEEKLY_RESULT: ${{ steps.weekly_media.outcome }}
           BRIDGE_RESULT: ${{ steps.social_bridge.outcome }}
+          DEPLOY_RESULT: ${{ steps.netlify_deploy.outcome }}
+          ALREADY_DEPLOYED: ${{ steps.release.outputs.already_deployed }}
         run: |
-          printf 'Daily media: %s\nFriday media: %s\nSocial handoff: %s\n' "$DAILY_RESULT" "$WEEKLY_RESULT" "$BRIDGE_RESULT" >> "$GITHUB_STEP_SUMMARY"
-          if [ "$DAILY_RESULT" = failure ] || [ "$WEEKLY_RESULT" = failure ] || [ "$BRIDGE_RESULT" != success ]; then
-            echo '::error::Release is incomplete. Check media and social handoff results before retrying.'
+          printf 'Daily media: %s\nFriday media: %s\nNetlify deploy: %s\nAlready deployed: %s\nSocial handoff: %s\n' \
+            "$DAILY_RESULT" "$WEEKLY_RESULT" "$DEPLOY_RESULT" "$ALREADY_DEPLOYED" "$BRIDGE_RESULT" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$DAILY_RESULT" != success ]; then
+            echo '::error::Daily media did not complete; no production deploy should be attempted.'
+            exit 1
+          fi
+          if [ "$WEEKLY_RESULT" = failure ] || [ "$WEEKLY_RESULT" = cancelled ]; then
+            echo '::error::Friday media did not complete.'
+            exit 1
+          fi
+          if [ "$ALREADY_DEPLOYED" != true ] && [ "$DEPLOY_RESULT" != success ]; then
+            echo '::error::Required Netlify production deploy did not complete.'
+            exit 1
+          fi
+          if [ "$BRIDGE_RESULT" != success ]; then
+            echo '::error::Social handoff did not complete. Use the no-Netlify retry workflow rather than rerunning this release.'
             exit 1
           fi

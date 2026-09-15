@@ -45,8 +45,22 @@ async function postFacebook() {
 async function postPinterest() {
   if (receipt.pinterest?.id) return receipt.pinterest;
   const token = await pinterestToken();
-  const boardId = first(process.env.PINTEREST_BOARD_ID);
-  if (!boardId) throw new Error("PINTEREST_BOARD_ID is missing.");
+  let boardId = first(process.env.PINTEREST_BOARD_ID);
+  if (!boardId) {
+    const wanted = first(process.env.PINTEREST_BOARD_NAME, "Sapiver Forge").toLowerCase();
+    const matches = [];
+    let bookmark = "";
+    do {
+      const url = new URL("https://api.pinterest.com/v5/boards");
+      url.searchParams.set("page_size", "100");
+      if (bookmark) url.searchParams.set("bookmark", bookmark);
+      const data = await jsonFetch(url, { headers: { Authorization: `Bearer ${token}` } });
+      matches.push(...(data.items || []).filter(b => String(b.name || "").trim().toLowerCase() === wanted));
+      bookmark = data.bookmark || "";
+    } while (bookmark);
+    if (matches.length !== 1) throw new Error("Set PINTEREST_BOARD_ID: no unique existing Sapiver Forge board was found.");
+    boardId = matches[0].id;
+  }
   const data = await jsonFetch("https://api.pinterest.com/v5/pins", {
     method: "POST",
     headers: { Authorization: `Bearer ${token}`, "content-type": "application/json" },
@@ -61,10 +75,16 @@ async function postPinterest() {
   return { id: data.id, published_at: new Date().toISOString() };
 }
 
-const results = await Promise.allSettled([postFacebook(), postPinterest()]);
-if (results[0].status === "fulfilled") receipt.facebook = results[0].value; else receipt.facebook_error = results[0].reason.message;
-if (results[1].status === "fulfilled") receipt.pinterest = results[1].value; else receipt.pinterest_error = results[1].reason.message;
-receipt.updated_at = new Date().toISOString();
-fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2) + "\n");
+// Save each channel immediately and retain IDs when another channel fails.
+for (const [channel, post] of [["facebook", postFacebook], ["pinterest", postPinterest]]) {
+  try {
+    receipt[channel] = await post();
+    delete receipt[`${channel}_error`];
+  } catch (error) {
+    receipt[`${channel}_error`] = error.message;
+  }
+  receipt.updated_at = new Date().toISOString();
+  fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2) + "\n");
+}
 console.log(JSON.stringify(receipt, null, 2));
 if (!receipt.facebook?.id || !receipt.pinterest?.id) process.exitCode = 1;

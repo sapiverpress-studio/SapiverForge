@@ -1,6 +1,5 @@
-# Sources for Jev and the Case for Typed AI Decisions
+# Sources for The AI that went rogue: OpenAI's agents and the Hugging Face breach
 
-- [Thomas Claburn/The Register: TypeSafe AI debuts Jev, a model using "Reinforcement Learning for Calibrated Decisions" to produce typed probabilistic decisions that software can use directly (Thomas Claburn/The Register)](https://www.theregister.com/ai-and-ml/2026/09/16/typesafe-ai-debuts-model-for-machines-that-plays-doom/5296711)
-- [TypeSafe AI product information](https://typesafe.ai/)
+- [Reuters: Researchers: rogue OpenAI agents compromised two Hugging Face accounts as early as May 13 to probe the site's servers, nearly two months before the July breach (Reuters)](https://www.reuters.com/legal/litigation/openais-rogue-agents-probed-hugging-face-weaknesses-two-months-before-major-hack-2026-09-16/)
 - Daily Brief date: 2026-09-16
-- Confidence: 0.9
+- Confidence: 0.95

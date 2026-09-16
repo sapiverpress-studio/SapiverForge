@@ -14,6 +14,7 @@ on:
     paths:
       - '.github/workflows/daily-news-intelligence.yml'
       - '.github/workflows/release-daily-newsletter.yml'
+      - 'editorial/isla-character.md'
       - 'src/news-intelligence-sources.mjs'
       - 'src/generate-news-intelligence.mjs'
       - 'src/send-daily-newsletter-brevo.mjs'
@@ -72,6 +73,7 @@ jobs:
 
       - name: Syntax checks
         run: |
+          test -s editorial/isla-character.md
           node --check src/news-intelligence-sources.mjs
           node --check src/generate-news-intelligence.mjs
           node --check src/daily-email-extras.mjs
@@ -103,6 +105,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           BLOG_BASE_URL: https://suite.sapiverpress.co.uk
+          SAPIVER_EDITORIAL_CHARACTER_FILE: editorial/isla-character.md
         run: node src/generate-news-intelligence.mjs
 
       - name: Validate intelligence contract
@@ -150,6 +153,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PODCAST_DATE: ${{ steps.edition.outputs.date }}
           BLOG_BASE_URL: https://suite.sapiverpress.co.uk
+          SAPIVER_EDITORIAL_CHARACTER_FILE: editorial/isla-character.md
         run: node src/generate-daily-intelligence-podcast.mjs
 
       - name: Build Friday podcast candidate from this week's verified briefs
@@ -160,6 +164,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PODCAST_WEEK_END: ${{ steps.edition.outputs.date }}
           BLOG_BASE_URL: https://suite.sapiverpress.co.uk
+          SAPIVER_EDITORIAL_CHARACTER_FILE: editorial/isla-character.md
         run: node src/generate-weekly-intelligence-podcast.mjs
 
       - name: Commit daily intelligence and bridge

@@ -1,0 +1,524 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Reuters%22+%22human+extinction%22+Anthropic+researchers+%22lawmakers%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Reuters&quot; &quot;human extinction&quot; Anthropic researchers &quot;lawmakers&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22US+senators+weigh+requiring+AI+giants+to+commit+to+preventing+catastrophe%22+Reuters+2026&client=app-vertex-grounding&safesearch=active\">&quot;US senators weigh requiring AI giants to commit to preventing catastrophe&quot; Reuters 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22OpenAI%22+%221.2T%22+%221.5T%22+valuation+New+York+Times+2026&client=app-vertex-grounding&safesearch=active\">&quot;OpenAI&quot; &quot;1.2T&quot; &quot;1.5T&quot; valuation New York Times 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22TypeSafe+AI%22+%22Jev%22+%22System+One%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;TypeSafe AI&quot; &quot;Jev&quot; &quot;System One&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Gemini+3.8+Live%22+blog.google+2026&client=app-vertex-grounding&safesearch=active\">&quot;Gemini 3.8 Live&quot; blog.google 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22SemiAnalysis%22+moratoriums+2.3+GW+data+center+2026&client=app-vertex-grounding&safesearch=active\">&quot;SemiAnalysis&quot; moratoriums 2.3 GW data center 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Zuckerberg%22+%22Muse%22+safety+Bloomberg+2026&client=app-vertex-grounding&safesearch=active\">&quot;Zuckerberg&quot; &quot;Muse&quot; safety Bloomberg 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Instinct%22+%22%2410B%22+valuation+%22The+Information%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Instinct&quot; &quot;$10B&quot; valuation &quot;The Information&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Morgan+%26+Morgan%22+%22%241+billion%22+AI+investment+Reuters+2026&client=app-vertex-grounding&safesearch=active\">&quot;Morgan &amp; Morgan&quot; &quot;$1 billion&quot; AI investment Reuters 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Google%22+%22fly+brain%22+%22404+Media%22+Doom+2026&client=app-vertex-grounding&safesearch=active\">&quot;Google&quot; &quot;fly brain&quot; &quot;404 Media&quot; Doom 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22NBC+News%22+%22Kevin+Collier%22+%22cybersecurity+experts%22+AI+leaders+2026&client=app-vertex-grounding&safesearch=active\">&quot;NBC News&quot; &quot;Kevin Collier&quot; &quot;cybersecurity experts&quot; AI leaders 2026</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo1YL97SvMG7acecVjJUSxRRgERJGOeMwWVX7G_PDa1TxJIx4pAWPj7jO4DR5Q7MVg8RXqibsc58IrEORut5r3Qt4FIIQ8Ulm_qBZdFIL764uZnu1I55aUWDN4VQoc4KZ9ctb4NMon1EUFku7ajdi7nrJWjg==",
+        "title": "typesafe.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2zmBMKSMMnz1UuLS8XAVH9_LirsNurjbnRXWalKvSDDA3bUH3rOJSF9oxJln_Q9XzexKbZbu0nyJyidCh8nE0Hm1Fa5TmsbxyRyALtO0aDkcVXkfZ9gsELU5FNuFHlE0-GmyNtsoP2qahRxZX8Gk=",
+        "title": "gigazine.net"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkjwupZHJojocNXZE1swhs9vsJVCOhO8FQjXO1WG-5vHIqWgYhdgdsRGxusHlTivKUvkeCih6kGncQvB78w69e8tJQLxHGcY3LsI9qLI72VmROki4SXF39Upr4vwJw-Nx9bOb8qfyPsxT9TlD7rIWPa5bi_aPSVSsO6_Aefe8aHyBHheBSxQ==",
+        "title": "modemguides.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBTc5sR9x7hrtvN09wnHHOb6_obPPfR65aXMEJyg_9xu7tZj0RoRmod57c-x7ukpMVL0BAvT_u0wmKx4HNYRxTkhurUzuq90K55A3GTqqEhuOTAIRvp97H6UoxSz-PWsZT4RO2-886m2Q4Rl55d_OpPCbm_EHVqlg3LCAWZWct5ZXQb9_x8ukiV0G6xq-AgqhWh666umGi5yque1uwYXS_FxdaDw==",
+        "title": "daily.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe3jRFvy_KFMcEyFccDuPXQLQbF39sgT1jftZ0DT2-wgtJDF95EgQSy4W3OSxvl06M0UBpi46fie_uUqseFSmeIyXrxseayVKIEeru3OdZ2PLrJC4371oW",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENBZG2M9UrcUdXRXsBnXGlVE4vYtCu32nh2TB5IU0JqF_Pe_w4NtqeMePTCCtTkdwRzv_bXH-tWO5FC0mLHFT84KF4Aoq2Ed9-a2th_d45FGseOLHY7QT740noqW4GHS4eBpQ=",
+        "title": "ycombinator.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEb3gIkmjhUR1JhekIuGMEzyZMpx8hn64b2LhORzKg-OI-4ueDzUispafCnoOnBV4Kn7WApDabFiaGyJgkDZqDdU4Y39qoidXECTqcm28n1yK2pVn2Poyou",
+        "title": "shelfcritter.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtO8aT0a_6Wha-sKg4Tapyj1A7gLDNPlGX4SaQXiRETjmCHO6UcorxSAo9__UrfUnzCFAfgqw8NUJDcXwhTnSmSwywm-Rjp8CIZ1xAyeLTZCbPKrMyEQh2qODGwFF_5bg_jFEm2TizVcLncz0hQ3f6MMSuXw5y8vWPe3A_kLXGOsEvjrcLOCjezLb4d9x-pYOlKPOieRc-TGtMvvldoxWrN0jtU4DPoCnvN37r5JuJRA==",
+        "title": "blog.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHd-IfMWYtBKf1-SXSBoAYVNMFGp9niXq2_lCNK-0RZYGD7PckYc8UwHQFPOHWBWKzw2FiCpgjP8qCQqq21cyiRtRcsIY-9Rs3eMGPbUcF0O5gACr3XMASJX-ehrQ-cZQejus268TxD0Tgkbm4zOBJ2FbX-lQFeCOD0ZWD7xuoWGjcyzB3gWNigZsN8mtVTTbXKhOduNBx_kJ77Iaad9yZMa2UkvV3aQh8=",
+        "title": "blog.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJAvhqdFjUr9NjH3tYiL8gOQaeE_czafASosOYqhkfpnD6etJ1P71AjD8h1Xel4uWzwscqW5Tk2tvZrtW2Bjhl8PQCGttFL_5PClfQvAFvQdVM_NL41iVn_owk25CO26bUH8GFfRJooNR94eB2pIWeo0m_vAMw2NJ6048a1Fs6puUZi70=",
+        "title": "google.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZOfGixEqRWgWtD4IZz9HJRn5JU6teTo0vRNBGPmoGC8m-ZgDiwsRFwmZrpbGV6lYn8mRZKQ1D-OakubaPRgo0tZ57yiPS6PjVU92Z881XMncomirOAukGBjiql__pi2q4f1k5fvvIeDKx8JKU3H6zhL-n-k1k51hQ1t4=",
+        "title": "seroundtable.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ5o4sbP3bxN_oHDegrrXijFX2Fauf8c4G858JZv__xlEEABzdTE7-3gLQBQwRoN-mTi47UZvWvmt-CW5yjbLPM3fDPlsJ0OEfLvlaIPyQ3HMhve-z9U54HLuvpG-qI5cJ2HvIfK-79fdZcVq_0GeXIyMNALVFahdpX8TEeOPMbib1WalQzZo0j9dWFFXFqyLuim1hjt4qNQ==",
+        "title": "phemex.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLQ0e_9dn3jmqO4z3bsJS3Quyrr4ZL2Ye73jQlinYFTqvWRx0i6Y9bM6JGRn9DlVsD_JeM02ercstioRwZkNTq506T526ds2pXqSebc2fu4_yYwx81MV6KGA==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3eO7OQzD5PL60XGnsDzGVX2o6KRKqaf4CNBABjSdb_xcTpVTK2-nYipnTMsoKzgfn4pVjuNElxaItALVyl2grzy5m4Di6hcjkZvVW78Oc1Guyy8kGbNnD2uFgKBlS9MbTma8=",
+        "title": "valueaddvc.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFYKxx8BYBNasT50HGTsEL-uk50IhFxDWTUgfyMyvh4Q_gQ16_FWRwqb-Rii4SwJQOGloVt8EutgSuyG8U4_8-HTD3fCRZkzRoH4tfscVcG8fRXOOOOFEpYceLcOpBJlgF-ap44yhp15gl8eTFIG6kjp_69p6Ghb6eW6giR2m24CFB55gsyw==",
+        "title": "valueaddvc.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwViyFlwG4hgRFc8HY0aMzxGx-OHUWQHkTBhBhtvAPgmdEepvFpKVHNn3WI1bEAkIUOe4nZMt3-jElbaRDG7-jCCRLv8DaEyn1l_fGtUuvSIqcOndUaCGFx9F7kNOXprwy1XWUjVmJpUHylW3okSnMYKqF9txmP8hfC7Lu9nGh4A==",
+        "title": "semianalysis.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBasSSbYtoQdPdCoiC2Zmw0d13WMP0a7UzwL4oo8-gIlORS2el_8Qp1Z0olXSZS3F4hgrveMHBcGx_eCH-APcyeCUeq__fVwK6o7trnXR6RDP9wZz3tkQjSTnswVnj5EW7ceeaQxgJB7CqrVQ7kB_HaiGvSMUT_jYQja32kj5TkMzYrOPHS1oVhB0cHkZPxTm3",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFA_VKUpPVRUpRbGc_3bYd-19Dbu5wU_OkJmIr_aIFpXkD5Ck8r5-nrKcLtUJBrT5mMaF797F4hcwrQlux-Qlk3lRY1OLGJ5uJstJpwSvo2KW3sIIP48ixuiyr39P4cnxDf3vIPG3cw4MKBIfyoh8_JHVJgJs32uVCgfsHvfHjnPPaxkX9QfrT5QPsvaS6pfcOyOG4PWr0IlO1VzLO9MH2n",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdNeV602sHjhcyq7vYWRThGsC_HuuvfPzGnKVBKEO7meR1BcFLI3tn2tQP6KliHwApf8sSyV2FiUIXcWHcawHnlHXiv7KC_5ODRfPzYEQQFzMzZTzR9Jxt91y7kNfu",
+        "title": "longbridge.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbJO5EbXEeLK02Mbas7AcAE2PCOAOHB57G3ISTMGG4RWIHor_oSkVNple8ZW5uwM66jNiLYxcZYy27o4VP6atw5havwdonTE35CPh-0R6uGuf3Jw31wJz5wmXzEjyl9FCMZQThXVINnlr5MCgISZsvYh9nusdS3HI1TjYfUWKMV0vXPHviMMUg-1YlSW8Xk09_",
+        "title": "insider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa6v9bIYS6kINtvrIGKY2UDA-7mKOLiSVIvJVcazvJ4HhAXazf4EE8TWorddbJh5e_NXL39TEMX_PVSVGQMzwNCpLG6-PT9xGFqPU2SZsHVsgY7HRd4zTH-jeaBRmQ6QVJBVsa7u4ERDSW_XBcymF5TklJxvDLd3pog-IzRBlXf6SYl_Pft6PjaFogjl8BmilGytLMZ_6xwV_A4ZgW3xPOpKYVPCsPJnwdyn__-nHRnYTICUk=",
+        "title": "thestar.com.my"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGyfuKsxkMWkSeh0G7ygUryD1AKfpCIHUWgwj67emV7358o6ojNZEAHwoG7DuIbtw1Zyy11k-LOGPZnFIQWUyhYuRDel-gFDyM1u_9rxxifxgtk2bc-ZGN9hQXMKWDgsfflQDCcHAUSXlK5w6I5DxYrKDXExehsdzPxadUBuP80w==",
+        "title": "insidetelecom.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEu-nXVhTomzcLeb_IyfNN1AkTRNfbJLmgdU_XyGGjoz4QVKZIujka3FHjkF_kIdhUpQBR9kylcHirdAXYttK2GU8-9qnSKChP3FPEAVXyhwzqNveRoUchYlHKD4A9_zwkQoCy9R45OeKmN_bYzO7u-JGHp-8dx4STOeZGVFhrU4oqgZHVBLOFjlz3ebFWzrr2T4vzlrPExjV9UJF4tw7bQvAO9_4cfJ9FBG9loZmbtN_bKnWYGaz7i",
+        "title": "washingtonpost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOJD6KoRKFR8m_C8vSemZp2Qn0fs575pxreHDhxpK-pY8j_ZQXAB6gmovsRmiTYj_uCNz7it2Je2FbsxUvlJGaIhVQ1wMrC05gxzZU6by5n2gdV1ByYtWsE3_-NidRqKbsudrJJYGVi7GYMVNorg25n-DOS61oe4DKv3aMsfpI1QNLb2XlpXhY5ouIAHZkFn9zojxiuirXkeTeNWh9JFDXh2LaPGrCAIFhtzoYHVQjoqMIiXtnPdq6qAnxV3cCJ9RW1m7i6WY=",
+        "title": "bworldonline.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEucdXJXC8KWxd50XDkZf4AMFMlSznXSsprQxzHJF28n96ZWeA8_c1OzNIEgmXHm2_PkvHPsT8WPqIyIGC5cSeD-OD8Nh4ULTprdRBR8GF6XxWVcVxcBDbgzsOB3cC1ooF5ikwuxvtvVOB7ii_n38lnL7tvxlB3CgLRNl4PxHyj2osxbXVl8YKirIW9Nqm6u5aYSlZrCtkd",
+        "title": "artificiallawyer.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHy5wsMouaZkGojapAljw5XBomFXdjVQRD2sX8cDYwfF1j9SwCUU28vWWeLpQIrYCPH_xwwHegD8OelI6pLXC1OeBB-t18DA4wK3bpkwDZURNo1JeHgmkFWkLJTFILzfGm2XQ2A0mS-4FkJCt4JD4KDt-K4W9yAPvR_riP9d0YTEgmsqeS3NxOXol2Nept7H3Sh9kJhZTY9kgQSsyhKSZDbs2VI0CJDVckryfD8RvTG0mOLZW1OsAkM_vhfY8Ozj2UlcknGLMcC_jVzUE0kB0deLXABE1WRA1c4tRGU7CZTd86LKnRSiW9pB9-6srbWK-g2QTdY",
+        "title": "westlaw.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXuKkLJDVD19_ZL7E2Ji02Rp1OD4exL4rZhfS5Kgz1Vzdv3tEmiOE8wyP1mFsBvpUM1xiQoJUE92ddo4psqfBYa8yHb4zo3OoVp8y9oqClEj21OvZyhUy-d-GTprhOPi8obbARNwb_Fwv9-H9joDByQUTDkY2phtXs",
+        "title": "fourweekmba.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtjI3qEjk6BYF_sOA2fhLAcHdbfakSq4d1WJk7mlVeTNkBBL4S8bHxTDNgcsWqUtXphzaFKvbsh3sR0oKNpCcg1OojAm8oDxixW8pTmsZqYztGwib1qWX8pXizkQOWtyGs3vZNWoXLWCgGZXCSKbKkOyO2EJmz80UA5nx9C4M=",
+        "title": "404media.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGK3RJwvnuUmIf9vCWIR5kbKifsYuBTYz0GcceZJEsoEISYraR-pigaG3NGqBG2IbAdgFIV0CCeHghBIMUOIsfCH5945YXwaJ45C2e5RG902Nzcq_S6XG45U0m_gGqrD7vFQ4yqAJ-zYlffK0Qmn2OiZv_xvN-pW3O_AbcSz3Z6h_wVmT1scv1K8Zs=",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_plxEqVD8COznCnVxR_PspcKvv0n_iblZ_WF2akH-F5w2gaaqWp181KIX8J-j8AfmEpYz8N4AmfOxICnC3y63AIGAxaM_Fa-huT_rdWQyNB4zyIAEXicr1GPnR1MJKbn7Qqh7eKqq3qhyp0fCx1qkVlIwImQrr-v2XmpE2ucAJyJJgMX0OFY-lX7oqwD2DzzqBbXvH2s0Pg==",
+        "title": "superpowerdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFD98ALh_o1E8CmoyfMpslUYxFCueoucut8K8-RDQdy3gl8nEstKfOXSq5q6fykEqhMTRN6VFuFhxR9LttO7txxMFV1mx6TR_MAnZDJAvbs-6TjIb8afwhFmw==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKXEEcru8M6dB3paxFrufPl7tkurEl0jrSVj7l17ivWv5Om8V4j9U4ipzjGxYFYrRBc6vCq0wAIj36ekQ3iRAq09YR30M2Se1Zf9QR2LJAOpbezc2X_loM",
+        "title": "techmeme.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 564,
+        "endIndex": 756,
+        "text": "#### Candidates `[1]` & `[3]`: TypeSafe AI Launches \"System One\" Model Jev\n* **Confirmed:** TypeSafe AI announced its new model architecture series \"System One Models\" and its debut model, Jev"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 758,
+        "endIndex": 915,
+        "text": "Unlike standard generative LLMs, Jev bypasses text generation to produce direct, typed probabilistic decisions and confidence scores for software integration"
+      },
+      "groundingChunkIndices": [
+        2,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 917,
+        "endIndex": 955,
+        "text": "The company has raised $40M in funding"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 957,
+        "endIndex": 1044,
+        "text": "* **Caveats:** Jev is closed-weight and available only via an early-access waitlist API"
+      },
+      "groundingChunkIndices": [
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1046,
+        "endIndex": 1231,
+        "text": "The claim of \"0% structural hallucination\" refers strictly to schema adherence (it cannot return malformed JSON or invalid types), but its output values can still be factually incorrect"
+      },
+      "groundingChunkIndices": [
+        2,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1384,
+        "endIndex": 1613,
+        "text": "#### Candidate `[2]`: OpenAI Funding Negotiations Target $1.5T Valuation Floor\n* **Confirmed:** The *New York Times* (Sri Muppidi) reported that investors recently approached OpenAI with a funding proposal valued at $1.2 trillion"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1615,
+        "endIndex": 1711,
+        "text": "OpenAI leadership indicated it believes the company's valuation should be at least $1.5 trillion"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2010,
+        "endIndex": 2209,
+        "text": "#### Candidate `[9]`: Google Releases Gemini 3.8 Live & Live Extended Thinking\n* **Confirmed:** Google DeepMind published an official release announcing Gemini 3.8 Live and 3.8 Live Extended Thinking"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2211,
+        "endIndex": 2326,
+        "text": "The models feature real-time speech-to-speech interaction with asynchronous background reasoning and tool execution"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2328,
+        "endIndex": 2409,
+        "text": "They are integrated into the Gemini API, Google AI Studio, and Google Search Live"
+      },
+      "groundingChunkIndices": [
+        8,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2411,
+        "endIndex": 2556,
+        "text": "* **Caveats:** Benchmark claims (such as Artificial Analysis leaderboard rankings) originate from vendor release notes and early testing datasets"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2664,
+        "endIndex": 2940,
+        "text": "#### Candidate `[11]`: AI Assistant Startup Instinct Seeks $1B at $10B Valuation\n* **Confirmed:** *The Information* (Valida Pau) reported that personal AI assistant startup Instinct (Spear Street Technology) is in talks to raise up to $1 billion at a valuation of ~$10 billion"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2942,
+        "endIndex": 2992,
+        "text": "Sequoia Capital and Benchmark are in talks to lead"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2994,
+        "endIndex": 3097,
+        "text": "* **Caveats:** Instinct raised a $250M Series B at a $2.25B pre-money valuation less than a month prior"
+      },
+      "groundingChunkIndices": [
+        11,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3099,
+        "endIndex": 3233,
+        "text": "The massive valuation jump is driven largely by compute infrastructure costs for its free invite-only tier rather than revenue metrics"
+      },
+      "groundingChunkIndices": [
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3235,
+        "endIndex": 3276,
+        "text": "The round is unclosed and terms may shift"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3427,
+        "endIndex": 3754,
+        "text": "#### Candidate `[12]`: SemiAnalysis Data Center Moratorium Impact Report\n* **Confirmed:** SemiAnalysis published an empirical breakdown showing that despite over 300 local moratoriums and state-level restrictions across the US, only ~2.3 GW of planned data center IT capacity nationwide is directly delayed at the project level"
+      },
+      "groundingChunkIndices": [
+        15,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3756,
+        "endIndex": 3908,
+        "text": "* **Caveats:** Findings depend on SemiAnalysis's proprietary data center pipeline model and their specific criteria for binding parcel-level moratoriums"
+      },
+      "groundingChunkIndices": [
+        15,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4106,
+        "endIndex": 4487,
+        "text": "#### Candidates `[14]`, `[17]` & `[18]`: Escalating US AI Safety Policy Debate & Voluntary Slowdowns\n* **Confirmed:** \n  * Mark Zuckerberg posted on X (amplified by *Bloomberg*) stating Meta delayed shipping its personal AI agent \"Muse\" by several months to perform safety checks, while rejecting calls for mandatory industry-wide slowdowns in favor of independent model evaluators"
+      },
+      "groundingChunkIndices": [
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4491,
+        "endIndex": 4665,
+        "text": "* US Senate negotiators (Thune, Cruz, Klobuchar) are drafting legislation that would impose a statutory \"duty of care\" on frontier AI developers to prevent catastrophic risks"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4669,
+        "endIndex": 4810,
+        "text": "* Legislative moves follow public warnings and resignations by Anthropic researchers (Jacob Coxon, Evan Hubinger) regarding existential risks"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4812,
+        "endIndex": 4985,
+        "text": "* **Caveats:** The Senate proposal faces steep opposition and low probability of enactment, as President Donald Trump indicated existing executive authorities are sufficient"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5177,
+        "endIndex": 5496,
+        "text": "#### Candidate `[16]`: Morgan & Morgan Commits $1B to AI and Law Tech\n* **Confirmed:** Reuters reported that US personal injury firm Morgan & Morgan has committed to spending $1 billion on AI and legal technology over the next 10 years and plans to commercialize its internal MX2 AI platform to other firms by late 2027"
+      },
+      "groundingChunkIndices": [
+        24,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5498,
+        "endIndex": 5678,
+        "text": "* **Caveats:** The $1 billion figure is spread over a decade (~$100M/year), representing roughly 4% of the firm's $2.4B annual revenues, rather than a single upfront venture outlay"
+      },
+      "groundingChunkIndices": [
+        24,
+        26
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5982,
+        "endIndex": 6083,
+        "text": "0, the first complete central nervous system connectome of an adult male fruit fly (~166,000 neurons)"
+      },
+      "groundingChunkIndices": [
+        27,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6085,
+        "endIndex": 6256,
+        "text": "*404 Media* documented widespread viral open-source projects using the connectome simulation to control virtual agents in *Doom*, *Minecraft*, and financial trading models"
+      },
+      "groundingChunkIndices": [
+        27,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6258,
+        "endIndex": 6323,
+        "text": "* **Caveats:** The core dataset was released earlier in September"
+      },
+      "groundingChunkIndices": [
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6381,
+        "endIndex": 6491,
+        "text": "The viral implementations are experimental digital simulations rather than peer-reviewed neuroscience findings"
+      },
+      "groundingChunkIndices": [
+        29
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6646,
+        "endIndex": 6983,
+        "text": "#### Candidate `[8]`: Cybersecurity Experts Challenge AI Leaders' Hacking Doom Scenarios\n* **Confirmed:** NBC News (Kevin Collier) reported that senior cybersecurity researchers view apocalyptic predictions by AI lab leaders regarding automated zero-day hacking as technically incoherent and misaligned with real-world defensive dynamics"
+      },
+      "groundingChunkIndices": [
+        30,
+        31
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Reuters\" \"human extinction\" Anthropic researchers \"lawmakers\" 2026",
+    "\"US senators weigh requiring AI giants to commit to preventing catastrophe\" Reuters 2026",
+    "\"OpenAI\" \"1.2T\" \"1.5T\" valuation New York Times 2026",
+    "\"TypeSafe AI\" \"Jev\" \"System One\" 2026",
+    "\"Gemini 3.8 Live\" blog.google 2026",
+    "\"SemiAnalysis\" moratoriums 2.3 GW data center 2026",
+    "\"Zuckerberg\" \"Muse\" safety Bloomberg 2026",
+    "\"Instinct\" \"$10B\" valuation \"The Information\" 2026",
+    "\"Morgan & Morgan\" \"$1 billion\" AI investment Reuters 2026",
+    "\"Google\" \"fly brain\" \"404 Media\" Doom 2026",
+    "\"NBC News\" \"Kevin Collier\" \"cybersecurity experts\" AI leaders 2026"
+  ]
+}

@@ -1,0 +1,79 @@
+### Overview of Selection & Scope
+
+* **Out of Scope Candidates:** `[0]`, `[4]`, `[6]`, `[7]`, `[10]`, `[13]`. These focus on consumer DIY hardware, general web archive operational updates, general political surveillance essays, travel essays, infrastructure sabotage, and general consumer advocacy, lacking direct material connection to Sapiver Forge's core coverage.
+* **In-Scope Candidates Reviewed:** `[1]`, `[2]`, `[3]`, `[5]`, `[8]`, `[9]`, `[11]`, `[12]`, `[14]`, `[15]`, `[16]`, `[17]`, `[18]`, `[19]`.
+
+---
+
+### Evidence Notes for Top In-Scope Candidates
+
+#### Candidates `[1]` & `[3]`: TypeSafe AI Launches "System One" Model Jev
+* **Confirmed:** TypeSafe AI announced its new model architecture series "System One Models" and its debut model, Jev. Unlike standard generative LLMs, Jev bypasses text generation to produce direct, typed probabilistic decisions and confidence scores for software integration. The company has raised $40M in funding.
+* **Caveats:** Jev is closed-weight and available only via an early-access waitlist API. The claim of "0% structural hallucination" refers strictly to schema adherence (it cannot return malformed JSON or invalid types), but its output values can still be factually incorrect.
+* **Suitability for Publication:** **Suitable for publication today.** High reader interest for backend engineering and AI architectural shifts.
+
+---
+
+#### Candidate `[2]`: OpenAI Funding Negotiations Target $1.5T Valuation Floor
+* **Confirmed:** The *New York Times* (Sri Muppidi) reported that investors recently approached OpenAI with a funding proposal valued at $1.2 trillion. OpenAI leadership indicated it believes the company's valuation should be at least $1.5 trillion.
+* **Caveats:** Based on anonymous sources close to negotiations; no formal term sheet or round closing has been officially announced by OpenAI.
+* **Suitability for Publication:** **Suitable for publication today.** Significant financial intelligence regarding frontier AI capital structure.
+
+---
+
+#### Candidate `[9]`: Google Releases Gemini 3.8 Live & Live Extended Thinking
+* **Confirmed:** Google DeepMind published an official release announcing Gemini 3.8 Live and 3.8 Live Extended Thinking. The models feature real-time speech-to-speech interaction with asynchronous background reasoning and tool execution. They are integrated into the Gemini API, Google AI Studio, and Google Search Live.
+* **Caveats:** Benchmark claims (such as Artificial Analysis leaderboard rankings) originate from vendor release notes and early testing datasets.
+* **Suitability for Publication:** **Suitable for publication today.** Primary vendor release note.
+
+---
+
+#### Candidate `[11]`: AI Assistant Startup Instinct Seeks $1B at $10B Valuation
+* **Confirmed:** *The Information* (Valida Pau) reported that personal AI assistant startup Instinct (Spear Street Technology) is in talks to raise up to $1 billion at a valuation of ~$10 billion. Sequoia Capital and Benchmark are in talks to lead.
+* **Caveats:** Instinct raised a $250M Series B at a $2.25B pre-money valuation less than a month prior. The massive valuation jump is driven largely by compute infrastructure costs for its free invite-only tier rather than revenue metrics. The round is unclosed and terms may shift.
+* **Suitability for Publication:** **Suitable for publication today.** Highlights compute crunch pressures on fast-growing consumer AI agents.
+
+---
+
+#### Candidate `[12]`: SemiAnalysis Data Center Moratorium Impact Report
+* **Confirmed:** SemiAnalysis published an empirical breakdown showing that despite over 300 local moratoriums and state-level restrictions across the US, only ~2.3 GW of planned data center IT capacity nationwide is directly delayed at the project level.
+* **Caveats:** Findings depend on SemiAnalysis's proprietary data center pipeline model and their specific criteria for binding parcel-level moratoriums.
+* **Suitability for Publication:** **Suitable for publication today.** Valuable counter-narrative analysis against general public sector hype surrounding data center power grid bottlenecks.
+
+---
+
+#### Candidates `[14]`, `[17]` & `[18]`: Escalating US AI Safety Policy Debate & Voluntary Slowdowns
+* **Confirmed:** 
+  * Mark Zuckerberg posted on X (amplified by *Bloomberg*) stating Meta delayed shipping its personal AI agent "Muse" by several months to perform safety checks, while rejecting calls for mandatory industry-wide slowdowns in favor of independent model evaluators.
+  * US Senate negotiators (Thune, Cruz, Klobuchar) are drafting legislation that would impose a statutory "duty of care" on frontier AI developers to prevent catastrophic risks.
+  * Legislative moves follow public warnings and resignations by Anthropic researchers (Jacob Coxon, Evan Hubinger) regarding existential risks.
+* **Caveats:** The Senate proposal faces steep opposition and low probability of enactment, as President Donald Trump indicated existing executive authorities are sufficient.
+* **Suitability for Publication:** **Suitable for publication today.** Strong candidate when grouped as a major thematic package on frontier AI regulation and voluntary safety delays.
+
+---
+
+#### Candidate `[16]`: Morgan & Morgan Commits $1B to AI and Law Tech
+* **Confirmed:** Reuters reported that US personal injury firm Morgan & Morgan has committed to spending $1 billion on AI and legal technology over the next 10 years and plans to commercialize its internal MX2 AI platform to other firms by late 2027.
+* **Caveats:** The $1 billion figure is spread over a decade (~$100M/year), representing roughly 4% of the firm's $2.4B annual revenues, rather than a single upfront venture outlay.
+* **Suitability for Publication:** **Suitable for publication today.** Concrete commercial deployment case study in enterprise legal tech.
+
+---
+
+#### Candidate `[5]`: Digital Male Fruit Fly Connectome (MaleCNS v1.0)
+* **Confirmed:** Google Research and HHMI Janelia Research Campus released MaleCNS v1.0, the first complete central nervous system connectome of an adult male fruit fly (~166,000 neurons). *404 Media* documented widespread viral open-source projects using the connectome simulation to control virtual agents in *Doom*, *Minecraft*, and financial trading models.
+* **Caveats:** The core dataset was released earlier in September; the *404 Media* story covers community modder activity. The viral implementations are experimental digital simulations rather than peer-reviewed neuroscience findings.
+* **Suitability for Publication:** **Suitable for publication today.** Good secondary feature item for AI research and computational neuroscience.
+
+---
+
+#### Candidate `[8]`: Cybersecurity Experts Challenge AI Leaders' Hacking Doom Scenarios
+* **Confirmed:** NBC News (Kevin Collier) reported that senior cybersecurity researchers view apocalyptic predictions by AI lab leaders regarding automated zero-day hacking as technically incoherent and misaligned with real-world defensive dynamics.
+* **Caveats:** Analytical piece reflecting an ongoing debate between theoretical AI safety researchers and practical cybersecurity practitioners.
+* **Suitability for Publication:** **Suitable for publication today.** Useful counterweight to legislative AI threat narratives.
+
+---
+
+#### Candidate `[19]`: Hugging Face / arXiv Paper on Recursive Self-Improvement
+* **Confirmed:** Research paper *The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement* was published on arXiv / Hugging Face (2609.11873) introducing the Headroom-Closed Index (HCI) and a multi-stage autonomy framework [19].
+* **Caveats:** Paper claims represent conceptual roadmaps and theoretical proposals from the authors without independent empirical verification.
+* **Suitability for Publication:** **Marginal / Hold.** Better suited for specialized research digests rather than top-line morning news unless paired with practical RSI system announcements.

@@ -163,6 +163,8 @@ async function createEditorialOutput(sourceBundle) {
       "When a report relies on anonymous or unnamed sources, attribute the claim in the confirmed fact and do not present a proposed change as an official decision.",
       "Describe a company's stated benchmark purpose as an aim, not a guaranteed outcome. Use 'reduce the risk' rather than 'prevent' or 'eliminate' memorisation or contamination.",
       "One company or product launch does not establish an industry-wide shift. Describe it as one effort unless broader evidence is supplied.",
+      "Treat performance, cost, reliability and safety statements from a vendor as company claims unless independent evidence supports them. Early access and closed-weight products must not be described as proven or high-reliability.",
+      "Do not generalise a narrow metric beyond what it measures. In particular, delays directly caused by moratoriums do not establish the scale of grid, power, equipment, construction or other infrastructure constraints.",
       "A state-backed newspaper editorial is not automatically the position of a government or an entire country. Attribute the view to the named publication unless official policy evidence is supplied.",
       "Do not infer that a government reorganisation is intended to counter competitors unless the sourced reporting explicitly establishes that purpose.",
       "Do not call any single measure the primary indicator of an industry's direction. Present investment, deployment and governance actions as separate forms of evidence.",
@@ -332,7 +334,10 @@ function buildSocial(editorial) {
   const lead = editorial.stories[0];
   const link = `${BASE}/daily-brief/`;
   const spokenCore = lead ? `${lead.headline}. ${firstSentence(lead.confirmed_fact)}` : "";
-  const spokenScript = lead ? `${limitWords(spokenCore, 32)} Read the Sapiver Forge Daily Brief.` : "";
+  const spokenLead = lead && spokenCore.split(/\s+/).length > 32
+    ? `${lead.headline}. ${limitWords(firstSentence(lead.confirmed_fact), 18).replace(/…$/, ".")}`
+    : spokenCore;
+  const spokenScript = lead ? `${spokenLead} Read the Sapiver Forge Daily Brief.` : "";
   return {
     date: DATE,
     lead_headline: lead?.headline || editorial.publication_title,

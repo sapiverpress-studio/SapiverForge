@@ -57,13 +57,15 @@ async function main() {
     system: [
       "You write Sapiver Forge's daily detailed-story podcast for practical UK listeners.",
       "Use only the supplied verified Daily Brief material. Separate confirmed facts from Sapiver Forge interpretation.",
+      "The podcast is strictly about the lead story. Never import facts, recommendations, examples or conclusions from another story in the Daily Brief.",
+      "Treat vendor performance, cost, reliability and safety statements as vendor claims unless the supplied lead material says they were independently verified.",
       "Do not introduce named models, providers, partners, technical dependencies, availability conditions or capabilities that are absent from the supplied confirmed fact.",
       "If the source material does not establish a detail, state the uncertainty or omit it; never fill gaps from general knowledge.",
       "Explain the story naturally, avoid hype and advice, and never include raw URLs or stage directions in narration."
     ],
     prompt: `Create one focused daily podcast episode about the lead story below.
 
-Target 4-7 minutes and 550-950 spoken words. Cover what happened, essential context, why it matters, what remains uncertain, one practical implication, and what to watch next. Do not turn this into a list of all today's stories. Do not advertise products.
+Target 4-7 minutes and 550-950 spoken words. Cover what happened, essential context, why it matters, what remains uncertain, one practical implication, and what to watch next. Use only the lead-story fields below. Do not turn this into a list of all today's stories. Do not advertise products.
 
 DATE: ${DATE}
 HEADLINE: ${story.headline}
@@ -74,8 +76,7 @@ SOURCE: ${story.source}
 SOURCE TITLE: ${story.source_title || story.headline}
 PUBLISHED: ${story.published_at || "unknown"}
 CONFIDENCE: ${story.confidence}
-DAILY PRACTICAL TAKEAWAY: ${manifest.practical_takeaway}
-WATCH NEXT: ${manifest.watch_next}`,
+Derive the practical implication and what-to-watch section only from this lead story.`,
     schema
   });
 

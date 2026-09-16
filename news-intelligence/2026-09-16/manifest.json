@@ -60,15 +60,15 @@
   "quality_warnings": [],
   "release_blockers": [],
   "newsletter_subject": "Sapiver Forge Daily Brief — 2026-09-16",
-  "overall_confidence": 0.89,
+  "overall_confidence": 0.88,
   "stories": [
     {
       "category": "lead",
-      "headline": "TypeSafe AI Launches 'Jev' Model for Probabilistic Software Integration",
-      "confirmed_fact": "TypeSafe AI has debuted 'Jev', a new model architecture that bypasses text generation to output typed probabilistic decisions and confidence scores for direct software integration. The model is closed-weight and currently available via an early-access waitlist.",
-      "why_it_matters": "By focusing on schema adherence rather than natural language generation, Jev aims to reduce structural errors in automated decision-making pipelines, though it remains susceptible to factual inaccuracies in its output values.",
-      "interpretation": "This represents a shift toward specialized, machine-readable AI outputs designed for backend systems, moving away from the conversational paradigm that dominates current LLM development.",
-      "confidence": 0.95,
+      "headline": "TypeSafe AI Introduces Jev for Typed Software Decisions",
+      "confirmed_fact": "TypeSafe AI has introduced Jev, a closed-weight model available through early access. The company says Jev accepts structured questions and returns typed decisions with probability distributions and confidence scores for software to use directly.",
+      "why_it_matters": "Typed outputs could reduce the need to parse natural-language responses before software acts on them. TypeSafe's speed, cost and reliability claims have not yet been independently established.",
+      "interpretation": "Jev may be useful for narrow automation tasks where output structure matters, but its early-access status means there is not yet enough public evidence to judge its accuracy or operational reliability.",
+      "confidence": 0.9,
       "source": "Thomas Claburn/The Register",
       "discovered_via": "Techmeme",
       "source_title": "TypeSafe AI debuts Jev, a model using \"Reinforcement Learning for Calibrated Decisions\" to produce typed probabilistic decisions that software can use directly (Thomas Claburn/The Register)",
@@ -80,11 +80,11 @@
     },
     {
       "category": "business",
-      "headline": "Morgan & Morgan Commits $1 Billion to AI Legal Tech",
-      "confirmed_fact": "US law firm Morgan & Morgan has announced a $1 billion, 10-year investment in AI and legal technology, with plans to commercialize its internal 'MX2' AI platform to other firms by late 2027.",
-      "why_it_matters": "This long-term capital commitment highlights the transition of AI from experimental internal tooling to a potential revenue-generating product for professional services firms.",
-      "interpretation": "The firm is positioning its internal operational efficiency gains as a scalable software product, suggesting a broader trend of domain-specific AI platforms emerging from high-volume professional sectors.",
-      "confidence": 0.85,
+      "headline": "Morgan & Morgan Commits $1 Billion to AI and Technology",
+      "confirmed_fact": "Morgan & Morgan says it will invest at least $1 billion in AI and technology over the next decade and plans to offer its MX2 platform to other law firms by the end of 2027. Reuters also reports that two of the firm's lawyers were previously sanctioned over AI-generated fake citations; the firm says it has since strengthened training and review processes.",
+      "why_it_matters": "The announcement shows both the scale of legal-sector AI investment and the need for human verification when generated material affects court filings or client work.",
+      "interpretation": "Turning MX2 into a product could create a new revenue stream, but adoption will depend on demonstrated accuracy, security and governance rather than investment size alone.",
+      "confidence": 0.9,
       "source": "Reuters",
       "discovered_via": "Reuters",
       "source_title": "Law firm Morgan & Morgan touts $1 billion AI investment, plans to sell platform to other firms",
@@ -96,11 +96,11 @@
     },
     {
       "category": "technology",
-      "headline": "Empirical Data Shows Limited Impact of Local Data Center Moratoriums",
-      "confirmed_fact": "SemiAnalysis reports that despite over 300 local moratoriums and state-level restrictions across the US, only approximately 2.3 GW of planned data center IT capacity is currently delayed at the project level.",
-      "why_it_matters": "The data suggests that public-sector grid bottlenecks may be less widespread than general industry discourse implies, providing a more nuanced view of infrastructure scaling challenges.",
-      "interpretation": "The findings indicate that while regulatory friction is highly visible, it has not yet become a systemic barrier to the majority of planned data center capacity expansion.",
-      "confidence": 0.88,
+      "headline": "SemiAnalysis Estimates 2.3 GW Delayed by Data-Centre Moratoriums",
+      "confirmed_fact": "SemiAnalysis estimates that local moratoriums and New York's executive order have directly delayed about 2.3 GW of planned US data-centre capacity. The estimate covers policy delays that the firm could tie to individual projects; it does not measure every grid, power, equipment or construction constraint.",
+      "why_it_matters": "The analysis shows why the number of restrictions is a poor proxy for delayed capacity and why project-level evidence is needed to assess policy effects.",
+      "interpretation": "The finding suggests that the direct effect of the mapped moratoriums is narrower than headline counts imply, but it does not establish that the wider US data-centre buildout is free of infrastructure constraints.",
+      "confidence": 0.86,
       "source": "SemiAnalysis",
       "discovered_via": "Techmeme",
       "source_title": "Analysis: only ~2.3 GW of planned data center capacity is delayed by direct project-level policies like local moratoriums and New York's data center EO (SemiAnalysis)",
@@ -111,8 +111,8 @@
       "discovery_score": 7.525
     }
   ],
-  "practical_takeaway": "For enterprise leaders, the focus is shifting from general-purpose conversational AI to specialized, high-reliability models like Jev that integrate directly into software stacks. Meanwhile, infrastructure planning should rely on granular project-level data rather than broad regulatory headlines, as the actual impact of local moratoriums on capacity remains limited.",
-  "watch_next": "Monitor the performance of early-access integrations using Jev to see if the promised reduction in structural errors translates into measurable improvements in automated decision-making reliability.",
+  "practical_takeaway": "Treat new-model performance claims as hypotheses until independent testing is available. For operational decisions, verify AI-generated work and distinguish delays caused by moratoriums from wider grid, power, equipment and construction constraints.",
+  "watch_next": "Watch for independent Jev evaluations, details of Morgan & Morgan's review controls as MX2 approaches external release, and further project-level evidence on which data-centre constraints actually alter delivery dates.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 027",
@@ -130,12 +130,13 @@
   },
   "social": {
     "date": "2026-09-16",
-    "lead_headline": "TypeSafe AI Launches 'Jev' Model for Probabilistic Software Integration",
-    "facebook_post": "TypeSafe AI Launches 'Jev' Model for Probabilistic Software Integration\n\nBy focusing on schema adherence rather than natural language generation, Jev aims to reduce structural errors in automated decision-making pipelines, though it remains susceptible to factual inaccuracies in its output values.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "TypeSafe AI Launches 'Jev' Model for Probabilistic Software Integration",
-    "pinterest_description": "By focusing on schema adherence rather than natural language generation, Jev aims to reduce structural errors in automated decision-making pipelines, though it remains susceptible to factual inaccuracies in its output values.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "TypeSafe AI Launches 'Jev' Model for Probabilistic Software Integration. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "TypeSafe AI Launches 'Jev' Model for Probabilistic Software Integration. TypeSafe AI has debuted 'Jev', a new model architecture that bypasses text generation to output typed probabilistic decisions and confidence scores for direct… Read the Sapiver Forge Daily Brief."
+    "lead_headline": "TypeSafe AI Introduces Jev for Typed Software Decisions",
+    "facebook_post": "TypeSafe AI Introduces Jev for Typed Software Decisions\n\nTyped outputs could reduce the need to parse natural-language responses before software acts on them. TypeSafe's speed, cost and reliability claims have not yet been independently established.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "TypeSafe AI Introduces Jev for Typed Software Decisions",
+    "pinterest_description": "Typed outputs could reduce the need to parse natural-language responses before software acts on them. TypeSafe's speed, cost and reliability claims have not yet been independently established.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "TypeSafe AI Introduces Jev for Typed Software Decisions. Today's Sapiver Forge Daily Brief separates verified facts from company claims. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "TypeSafe AI has introduced Jev, an early-access model that returns typed decisions, probabilities and confidence scores for software. Its performance claims still need independent testing. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "e554b0ebcd365e33308e9724abfa17b429e2754ea53cdda2787aaa12a5c10a55"
+  "intro": "Today's brief covers a new model designed to return typed decisions to software, a major legal-sector AI investment and a project-level analysis of US data-centre moratoriums.",
+  "candidate_id": "88c8318e317dbda548e9c9da9687f8c4b758856910028f764c1aa0333a050aee"
 }

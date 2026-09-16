@@ -35,8 +35,6 @@ function resolvePinterestImage() {
   return `https://suite.sapiverpress.co.uk/podcast/isla/9x16/${encodeURIComponent(matches[0])}`;
 }
 
-const pinImage = resolvePinterestImage();
-
 async function jsonFetch(url, options) {
   const response = await fetch(url, options);
   const text = await response.text();
@@ -77,6 +75,7 @@ async function postFacebook() {
 }
 async function postPinterest() {
   if (receipt.pinterest?.id) return receipt.pinterest;
+  const pinImage = resolvePinterestImage();
   const token = await pinterestToken();
   let boardId = first(process.env.PINTEREST_BOARD_ID);
   if (!boardId) {

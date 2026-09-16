@@ -6,7 +6,17 @@ if (!manifestPath || !receiptPath) throw new Error("DAILY_BRIEF_MANIFEST and DIS
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
 const social = manifest.social || {};
 const pageUrl = `https://suite.sapiverpress.co.uk/daily-brief/intelligence/${manifest.date}/`;
-const pinImage = process.env.PINTEREST_IMAGE_URL || "https://suite.sapiverpress.co.uk/podcast/sapiver-forge-ai-briefing-cover-v1.png";
+const pinImage = first(
+  process.env.PINTEREST_IMAGE_URL,
+  social.pinterest_image_url,
+  social.instagram_image_url,
+  social.social_image_url,
+  manifest.pinterest_image_url,
+  manifest.social_image_url,
+  `https://suite.sapiverpress.co.uk/daily-brief/intelligence/${manifest.date}/social.png`,
+  `https://suite.sapiverpress.co.uk/daily-brief/intelligence/${manifest.date}/poster.png`,
+  "https://suite.sapiverpress.co.uk/podcast/sapiver-forge-ai-briefing-cover-v1.png"
+);
 const receipt = fs.existsSync(receiptPath) ? JSON.parse(fs.readFileSync(receiptPath, "utf8")) : { date: manifest.date };
 
 function first(...values) { return values.map((value) => String(value || "").trim()).find(Boolean) || ""; }
@@ -78,7 +88,7 @@ async function postPinterest() {
       media_source: { source_type: "image_url", url: pinImage, is_standard: true }
     })
   });
-  return { id: data.id, published_at: new Date().toISOString() };
+  return { id: data.id, published_at: new Date().toISOString(), image_url: pinImage };
 }
 
 // Save each channel immediately and retain IDs when another channel fails.

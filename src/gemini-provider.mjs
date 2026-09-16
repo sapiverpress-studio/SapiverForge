@@ -1,3 +1,6 @@
+import fs from "node:fs";
+import path from "node:path";
+
 const API_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
 const INTERACTIONS_URL = "https://generativelanguage.googleapis.com/v1beta/interactions";
 
@@ -5,6 +8,25 @@ function apiKey() {
   const key = process.env.GEMINI_API_KEY;
   if (!key) throw new Error("GEMINI_API_KEY is required.");
   return key;
+}
+
+function editorialSystemText(system) {
+  const base = Array.isArray(system) ? system.join("\n\n") : String(system || "");
+  const characterFile = String(process.env.SAPIVER_EDITORIAL_CHARACTER_FILE || "").trim();
+  if (!characterFile) return base;
+
+  const resolved = path.isAbsolute(characterFile)
+    ? characterFile
+    : path.resolve(process.cwd(), characterFile);
+  let character;
+  try {
+    character = fs.readFileSync(resolved, "utf8").trim();
+  } catch (error) {
+    throw new Error(`Editorial character file could not be read: ${characterFile} (${error.message})`);
+  }
+  if (!character) throw new Error(`Editorial character file is empty: ${characterFile}`);
+
+  return `${base}\n\nEDITORIAL CHARACTER LAYER\nThe following character instructions apply to reader-facing writing only. The original factual, verification, safety, editorial-scope, schema and output constraints above always take priority. Never change or invent a fact to satisfy the character.\n\n${character}`;
 }
 
 class GeminiRequestError extends Error {
@@ -89,7 +111,7 @@ function interactionMedia(result, type) {
 
 export async function generateStructured({ system, prompt, schema, model = process.env.GEMINI_TEXT_MODEL || "gemini-3.1-flash-lite" }) {
   const result = await withModelFallback(model, ["gemini-3.1-flash-lite", "gemini-3.6-flash"], (selectedModel) => callGemini(selectedModel, {
-    systemInstruction: { parts: [{ text: Array.isArray(system) ? system.join("\n\n") : system }] },
+    systemInstruction: { parts: [{ text: editorialSystemText(system) }] },
     contents: [{ role: "user", parts: [{ text: prompt }] }],
     generationConfig: {
       responseMimeType: "application/json",
@@ -119,7 +141,7 @@ export async function generateGroundedEvidence({ system, prompt, model = process
 
 export async function generateText({ system, prompt, model = process.env.GEMINI_TEXT_MODEL || "gemini-3.1-flash-lite" }) {
   const result = await withModelFallback(model, ["gemini-3.1-flash-lite", "gemini-3.6-flash"], (selectedModel) => callGemini(selectedModel, {
-    systemInstruction: { parts: [{ text: Array.isArray(system) ? system.join("\n\n") : system }] },
+    systemInstruction: { parts: [{ text: editorialSystemText(system) }] },
     contents: [{ role: "user", parts: [{ text: prompt }] }],
     generationConfig: { temperature: 0.2 }
   }));

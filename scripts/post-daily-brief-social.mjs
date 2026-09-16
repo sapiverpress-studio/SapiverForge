@@ -6,10 +6,37 @@ if (!manifestPath || !receiptPath) throw new Error("DAILY_BRIEF_MANIFEST and DIS
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
 const social = manifest.social || {};
 const pageUrl = `https://suite.sapiverpress.co.uk/daily-brief/intelligence/${manifest.date}/`;
-const pinImage = process.env.PINTEREST_IMAGE_URL || "https://suite.sapiverpress.co.uk/podcast/sapiver-forge-ai-briefing-cover-v1.png";
 const receipt = fs.existsSync(receiptPath) ? JSON.parse(fs.readFileSync(receiptPath, "utf8")) : { date: manifest.date };
 
 function first(...values) { return values.map((value) => String(value || "").trim()).find(Boolean) || ""; }
+
+function resolvePinterestImage() {
+  const explicit = first(process.env.PINTEREST_IMAGE_URL);
+  if (explicit) return explicit;
+
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(manifest.date || ""))) throw new Error("Daily Brief date is invalid; cannot select Pinterest artwork.");
+  const date = new Date(`${manifest.date}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) throw new Error("Daily Brief date is invalid; cannot select Pinterest artwork.");
+
+  const start = Date.UTC(date.getUTCFullYear(), 0, 1);
+  const current = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());
+  const dayOfYear = Math.floor((current - start) / 86400000) + 1;
+  const index = ((dayOfYear - 1) % 6) + 1;
+  const dir = "public/podcast/isla/9x16";
+  const prefix = `isla-${String(index).padStart(2, "0")}-`;
+  const matches = fs.readdirSync(dir, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.startsWith(prefix) && entry.name.toLowerCase().endsWith(".png"))
+    .map((entry) => entry.name)
+    .sort();
+
+  if (matches.length !== 1) {
+    throw new Error(`Expected exactly one approved Isla Pinterest image for rotation ${index}; found ${matches.length}.`);
+  }
+  return `https://suite.sapiverpress.co.uk/podcast/isla/9x16/${encodeURIComponent(matches[0])}`;
+}
+
+const pinImage = resolvePinterestImage();
+
 async function jsonFetch(url, options) {
   const response = await fetch(url, options);
   const text = await response.text();
@@ -78,7 +105,7 @@ async function postPinterest() {
       media_source: { source_type: "image_url", url: pinImage, is_standard: true }
     })
   });
-  return { id: data.id, published_at: new Date().toISOString() };
+  return { id: data.id, published_at: new Date().toISOString(), image_url: pinImage };
 }
 
 // Save each channel immediately and retain IDs when another channel fails.

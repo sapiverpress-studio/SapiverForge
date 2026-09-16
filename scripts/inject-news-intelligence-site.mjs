@@ -34,6 +34,10 @@ function walk(dir) {
 
 for (const file of walk(publicDir)) patchWording(file);
 
+// Keep the public site focused on Sapiver Press, useful publishing and trust-first
+// discovery. This post-build step removes the former Gate storefront presentation.
+await import("./apply-trust-first-site.mjs");
+
 if (!fs.existsSync(editionsPath)) {
   console.log("No approved Daily Brief intelligence editions are published yet; wording patch complete.");
   process.exit(0);

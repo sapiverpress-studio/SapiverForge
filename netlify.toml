@@ -2,6 +2,9 @@
   command = "node src/build-site.mjs && node src/build-puzzles.mjs && node test/puzzle-site-contract.mjs"
   publish = "public"
   functions = "netlify/functions"
+  # Repository pushes should only update GitHub. Production is released explicitly
+  # by the manual Netlify CLI deployment workflow.
+  ignore = "exit 0"
 
 [build.environment]
   NODE_VERSION = "24"

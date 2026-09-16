@@ -23,12 +23,18 @@ async function pinterestToken() {
   const refresh = first(process.env.PINTEREST_REFRESH_TOKEN);
   const id = first(process.env.PINTEREST_CLIENT_ID, process.env.PINTEREST_APP_ID);
   const secret = first(process.env.PINTEREST_CLIENT_SECRET, process.env.PINTEREST_APP_SECRET);
+  const refreshOut = first(process.env.PINTEREST_REFRESH_TOKEN_OUT);
   if (!refresh || !id || !secret) throw new Error("Pinterest credentials are incomplete.");
   const data = await jsonFetch("https://api.pinterest.com/v5/oauth/token", {
     method: "POST",
     headers: { Authorization: `Basic ${Buffer.from(`${id}:${secret}`).toString("base64")}`, "content-type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams({ grant_type: "refresh_token", refresh_token: refresh })
   });
+  if (!data.access_token) throw new Error("Pinterest refresh returned no access_token.");
+  if (refreshOut) {
+    if (!data.refresh_token) throw new Error("Pinterest continuous refresh returned no replacement refresh_token; refusing to continue without safe rotation.");
+    fs.writeFileSync(refreshOut, `${data.refresh_token}\n`, { mode: 0o600 });
+  }
   return data.access_token;
 }
 async function postFacebook() {

@@ -1,0 +1,116 @@
+name: Recover Podcast 2026-09-17
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/recover-podcast-2026-09-17.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recover-podcast-2026-09-17
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate existing approved podcast media
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check scripts/publish-podcast-feed.mjs
+          test -s reports/daily-intelligence/2026-09-17/episode-metadata.json
+          test -s public/podcast/episodes/2026-09-17-daily-intelligence.mp3
+          test -s public/podcast/episodes/2026-09-17-daily-intelligence.mp4
+          test -s public/podcast/episodes/2026-09-17-daily-intelligence-short.mp4
+
+      - name: Rebuild podcast feed and episode page from existing media
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp public/podcast/episodes/2026-09-17-daily-intelligence.mp3 "${RUNNER_TEMP}/podcast-existing.mp3"
+          cp public/podcast/episodes/2026-09-17-daily-intelligence.mp4 "${RUNNER_TEMP}/podcast-existing.mp4"
+          SOURCE_MP3="${RUNNER_TEMP}/podcast-existing.mp3" \
+          SOURCE_MP4="${RUNNER_TEMP}/podcast-existing.mp4" \
+          METADATA_PATH="reports/daily-intelligence/2026-09-17/episode-metadata.json" \
+          EPISODE_SLUG="2026-09-17-daily-intelligence" \
+          PODCAST_KIND="daily detailed story" \
+          PODCAST_BASE_URL="https://suite.sapiverpress.co.uk" \
+            node scripts/publish-podcast-feed.mjs
+
+          grep -q 'https://suite.sapiverpress.co.uk/daily-brief/intelligence/2026-09-17/' public/podcast/feed.xml
+          grep -q 'https://suite.sapiverpress.co.uk/daily-brief/intelligence/2026-09-17/' public/podcast/episodes/2026-09-17-daily-intelligence.html
+          if grep -q '/posts/2026-09-17-daily-intelligence.html' public/podcast/feed.xml public/podcast/episodes/2026-09-17-daily-intelligence.html; then
+            echo '::error::Podcast recovery still contains the old broken article link.'
+            exit 1
+          fi
+
+      - name: Persist corrected podcast discovery files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "sapiver-forge-intelligence-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/podcast
+          if ! git diff --cached --quiet; then
+            git commit -m "Repair podcast feed and episode links 2026-09-17 [skip ci]"
+            for attempt in 1 2 3; do
+              if git push; then break; fi
+              git pull --rebase origin main
+            done
+          fi
+
+      - name: Deploy corrected current site to Netlify production
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: 47bda30e-4698-4cf5-bcd4-d59785e1f399
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${NETLIFY_AUTH_TOKEN:-}" || { echo '::error::Missing NETLIFY_AUTH_TOKEN.'; exit 1; }
+          npx --yes netlify-cli@27.5.2 deploy \
+            --prod \
+            --no-build \
+            --dir=public \
+            --site="${NETLIFY_SITE_ID}" \
+            --auth="${NETLIFY_AUTH_TOKEN}" \
+            --message="Recover Daily Brief and podcast 2026-09-17"
+
+      - name: Record recovered production deploy
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('fs');
+          const manifest = JSON.parse(fs.readFileSync('news-intelligence/2026-09-17/manifest.json', 'utf8'));
+          const receipt = {
+            schema_version: 1,
+            status: 'deployed',
+            date: '2026-09-17',
+            candidate_id: manifest.candidate_id,
+            site_id: '47bda30e-4698-4cf5-bcd4-d59785e1f399',
+            deployed_at: new Date().toISOString(),
+            recovery: 'podcast-and-site'
+          };
+          fs.writeFileSync('news-intelligence/2026-09-17/netlify-release.json', JSON.stringify(receipt, null, 2) + '\n');
+          NODE
+          git config user.name "sapiver-forge-intelligence-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add news-intelligence/2026-09-17/netlify-release.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record recovered Netlify release 2026-09-17 [skip ci]"
+            for attempt in 1 2 3; do
+              if git push; then break; fi
+              git pull --rebase origin main
+            done
+          fi

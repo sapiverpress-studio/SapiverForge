@@ -154,7 +154,12 @@ jobs:
           PUBLISHED_MP4="public/podcast/episodes/${DAILY_PODCAST_SLUG}.mp4"
           PUBLISHED_SHORT="public/podcast/episodes/${DAILY_PODCAST_SLUG}-short.mp4"
           if [ -s "$PUBLISHED_MP3" ] && [ -s "$PUBLISHED_MP4" ] && [ -s "$PUBLISHED_SHORT" ]; then
-            echo "Daily media for ${DAILY_PODCAST_SLUG} already exists; reusing it."
+            echo "Daily media for ${DAILY_PODCAST_SLUG} already exists; rebuilding podcast discovery files without regenerating ElevenLabs media."
+            REUSE_MP3="${RUNNER_TEMP}/sapiver-forge-daily-existing.mp3"
+            REUSE_MP4="${RUNNER_TEMP}/sapiver-forge-daily-existing.mp4"
+            cp "$PUBLISHED_MP3" "$REUSE_MP3"
+            cp "$PUBLISHED_MP4" "$REUSE_MP4"
+            SOURCE_MP3="$REUSE_MP3" SOURCE_MP4="$REUSE_MP4" METADATA_PATH="${DAILY_PODCAST_REPORT_DIR}/episode-metadata.json" EPISODE_SLUG="${DAILY_PODCAST_SLUG}" PODCAST_KIND="daily detailed story" PODCAST_BASE_URL="https://suite.sapiverpress.co.uk" node scripts/publish-podcast-feed.mjs
             exit 0
           fi
 
@@ -248,7 +253,7 @@ jobs:
             echo "::error::Missing NETLIFY_AUTH_TOKEN repository secret."
             exit 1
           fi
-          npx --yes netlify-cli@latest deploy \
+          npx --yes netlify-cli@27.5.2 deploy \
             --prod \
             --no-build \
             --dir=public \

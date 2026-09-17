@@ -2,9 +2,9 @@
 
 The intersection of high-stakes diplomacy, regulatory friction, and eye-watering valuations is getting crowded. Today, we look at the shifting landscape of AI governance and the latest moves from the industry's biggest players.
 
-## 1. Tech Leaders Successfully Stall AI Oversight Proposal
+## 1. Tech Leaders Reportedly Help Stall AI Oversight Proposal
 
-**Confirmed:** Mark Zuckerberg, Jensen Huang, and Elon Musk engaged directly with President Trump to stall a proposed federal AI oversight framework that would have introduced FINRA-style testing for frontier models.
+**Confirmed:** The Wall Street Journal reports, citing people familiar with the matter, that Mark Zuckerberg, Jensen Huang and Elon Musk spoke directly with President Trump as a proposed federal AI oversight framework lost momentum. The proposal would have introduced FINRA-style testing for frontier models.
 
 **Why it matters:** The intervention highlights a significant divide in AI governance, pitting proponents of rigorous, independent pre-release testing against industry leaders who are actively lobbying to shape or delay such requirements.
 

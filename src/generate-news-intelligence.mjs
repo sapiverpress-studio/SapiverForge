@@ -41,7 +41,7 @@ const lowerInitial = (value) => clean(value).replace(/^([A-Z])(?=[a-z])/, (lette
 const attributedConfirmedFact = (value, candidate) => {
   const text = clean(value);
   const sourceTitle = String(candidate?.title || "");
-  const needsAttribution = /(?:sources? say|source:|person familiar|current and former officials|according to (?:people|sources|officials))/i.test(sourceTitle);
+  const needsAttribution = /(?:sources? say|sources?:|person familiar|current and former officials|according to (?:people|sources|officials))/i.test(sourceTitle);
   if (!needsAttribution || /\b(?:according to|reported?|reports?|sources?|officials?)\b/i.test(text)) return text;
   const publisher = clean(candidate?.publisher || candidate?.source || "The source");
   const attribution = /current and former officials/i.test(sourceTitle)
@@ -334,10 +334,7 @@ function buildSocial(editorial) {
   const lead = editorial.stories[0];
   const link = `${BASE}/daily-brief/`;
   const spokenCore = lead ? `${lead.headline}. ${firstSentence(lead.confirmed_fact)}` : "";
-  const spokenLead = lead && spokenCore.split(/\s+/).length > 32
-    ? `${lead.headline}. ${limitWords(firstSentence(lead.confirmed_fact), 18).replace(/…$/, ".")}`
-    : spokenCore;
-  const spokenScript = lead ? `${spokenLead} Read the Sapiver Forge Daily Brief.` : "";
+  const spokenLead = lead && spokenCore.split(/\\s+/).length > 32\n    ? lead.headline\n    : spokenCore;\n  const spokenScript = lead ? `${spokenLead} Read the Sapiver Forge Daily Brief.` : "";
   return {
     date: DATE,
     lead_headline: lead?.headline || editorial.publication_title,

@@ -1,19 +1,23 @@
-# OpenAI's Legal Brief: Astra for Law
+# OpenAI's Legal Brief: What Astra for Law Actually Adds
 
-OpenAI enters the legal sector with GPT-6 Astra, promising zero data retention. We look at whether this is enough to win over the cautious world of law firms.
+OpenAI has launched Astra for Law, combining GPT-6 Astra with legal-specific instructions and a search index spanning more than 230 million U.S. legal URLs. We look at what the product adds, how its privacy controls differ by deployment, and what lawyers still need to verify.
 
 ## The Core Offering
 
-At its heart, Astra for Law is an integration of the GPT-6 Astra model with a massive, dedicated index of 230 million legal documents. The idea is to provide a tool that understands the specific, often archaic, language of the law. By pre-loading this index, OpenAI is clearly trying to move beyond the generic capabilities of a standard chatbot and into something that can actually navigate case law and legal precedents with a bit more authority.
+Astra for Law is not a claim that GPT-6 Astra has memorised 230 million legal documents. OpenAI says the product pairs GPT-6 Astra with a Legal Search Index that searches more than 230 million URLs covering U.S. case law, statutes, regulations, court rules and administrative decisions, with new sources added daily. The point is to help legal users move from the facts of a matter to relevant authorities and passages they can inspect themselves. That distinction matters because the source retrieval layer is separate from the model's own generated answer.
 
-## The Zero-Retention Promise
+## Privacy Controls Depend on the Route
 
-The most interesting part of this announcement isn't the model itself, but the 'zero data retention' control. Let's be clear: this is a direct response to the legal industry's biggest fear. Law firms are built on client confidentiality; the idea of feeding sensitive case files into a model that might then learn from them—and potentially leak that information elsewhere—is a non-starter. OpenAI is essentially saying, 'We hear you, and we promise not to touch your data.' It is a necessary concession, but one that highlights just how much trust they have to earn.
+The privacy controls are more specific than a blanket promise of zero retention. OpenAI says eligible firms can use Zero Data Retention on the API. ChatGPT Enterprise usage is handled differently and is excluded from human review by default. OpenAI also says enterprise customer data is not used to train its models unless the customer explicitly opts in. Firms evaluating the product therefore need to check which deployment route they are using and which retention, review and access settings apply to that route.
 
-## A Limited Debut
+## A Controlled Launch
 
-Before anyone gets too excited about replacing their paralegal, it is worth noting that this is currently restricted to a very select group of firms. This is a classic 'controlled rollout.' By limiting access, OpenAI can manage expectations and, more importantly, avoid the kind of high-profile errors that would be catastrophic in a legal setting. It is a sensible approach, though it does mean the rest of the industry is left watching from the sidelines for now.
+Astra for Law is initially being offered to selected U.S. law firms through Trusted Access in ChatGPT and Codex, with API access coming later. That limited rollout means there is not yet broad real-world evidence about how consistently the legal configuration performs across different firms, practice areas and document sets. OpenAI tells users to review answers and cited sources before relying on them, which is especially important in legal work where an incorrect authority or an overstated conclusion can have material consequences.
 
-## The Practical Reality
+## What It Could Change
 
-For those firms currently in the pilot, the practical implication is a shift in how they handle initial document review. If the system works as claimed, it could significantly speed up the process of cross-referencing case law. However, the burden of verification remains entirely on the human lawyer. An AI that can read 230 million documents is impressive, but it is not a substitute for legal judgment. If you are a firm looking at this, the question isn't whether it can read, but whether you can trust its output enough to stake a client's case on it.
+If the search layer reliably surfaces relevant authorities and the model can apply them accurately to a client's facts, the immediate value is likely to be faster research, comparison and drafting rather than autonomous legal judgment. The useful question for a firm is not whether the system can produce a polished answer. It is whether lawyers can trace that answer back to the right authorities, understand the uncertainty and fit the tool inside the firm's confidentiality and approval processes.
+
+## What to Watch
+
+The next evidence to watch is practical: citation accuracy, coverage of the relevant authorities, how often lawyers have to correct the model, and whether the privacy controls work cleanly inside existing firm systems. Astra for Law is a significant product launch, but the strongest claims about its value will need to come from measured use rather than the launch announcement itself.

@@ -1,4 +1,4 @@
-# Sources for The Agentic Feedback Loop
+# Sources for AI Agents, Security and R&D
 
 This episode synthesises verification-ready Sapiver Forge Daily Brief editions from 2026-09-12 to 2026-09-18.
 

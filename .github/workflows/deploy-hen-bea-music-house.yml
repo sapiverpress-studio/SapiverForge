@@ -1,0 +1,67 @@
+name: Deploy Hen & Bea Music House
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/triggers/deploy-hen-bea-music-house.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hen-bea-music-house-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out Music House main
+        uses: actions/checkout@v4
+        with:
+          repository: sapiverpress-studio/Music-house
+          ref: main
+          path: music-house
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify Netlify credential exists
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "NETLIFY_AUTH_TOKEN is not available in SapiverForge."
+            exit 1
+          fi
+
+      - name: Build Hen & Bea Music House
+        working-directory: music-house
+        run: bash build.sh
+
+      - name: Verify production bundle
+        run: |
+          test -f music-house/dist/index.html
+          test -f music-house/dist/app.js
+          test -f music-house/dist/styles.css
+          test -f music-house/dist/keyboard/index.html
+          test -f music-house/dist/keyboard.js
+          test -f music-house/dist/assets/art/18_G1_CH09_STORY_P02_8.5-square.webp
+
+      - name: Deploy to existing Netlify production site
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: d7b046b2-235b-40ca-8dbc-427280eb1c5a
+        run: |
+          npx --yes netlify-cli deploy \
+            --dir=music-house/dist \
+            --site="$NETLIFY_SITE_ID" \
+            --auth="$NETLIFY_AUTH_TOKEN" \
+            --prod \
+            --message="Hen & Bea Music House from Music-house/main"

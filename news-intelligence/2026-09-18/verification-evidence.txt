@@ -1,0 +1,96 @@
+Here are the evidence verification notes for the 2026-09-18 morning briefing candidates:
+
+---
+
+### **[0] OpenAI Launches "Astra for Law"**
+* **Publisher:** openai.com / Reuters / Legal IT Insider  
+* **What is confirmed:** OpenAI officially announced **Astra for Law** on 17 September 2026. Powered by GPT-6 Astra, the offering integrates legal instructions, zero data retention controls, and a dedicated **Legal Search Index** indexing over 230 million U.S. case law, statutory, and regulatory URLs (in partnership with the Free Law Project). It also launches with 26 partner-built plugins (including Thomson Reuters, Harvey, Legora, and iManage).
+* **Important caveats:** Rolling out initially via a "Trusted Access" program within ChatGPT Enterprise and Codex for selected law firms (e.g., Sullivan & Cromwell, Cooley); general API access is planned for a later phase.
+* **Suitable for publication today:** **Yes.** Major primary product launch from a leading AI lab with direct industry impact.
+
+---
+
+### **[4] Apple Pay Eyes October India Rollout with Axis Bank**
+* **Publisher:** Reuters  
+* **What is confirmed:** Reuters reported on 18 September 2026 that Apple is preparing to launch Apple Pay in India next month (October 2026), starting with Axis Bank credit cards.
+* **Important caveats:** The story relies on anonymous sources ("three sources familiar with the matter"); Apple and Axis Bank have not publicly confirmed the date. The initial rollout will focus on Visa and Mastercard credit card tap-to-pay and is expected to launch without immediate integration with India's dominant Unified Payments Interface (UPI).
+* **Suitable for publication today:** **Yes.** High-credibility scoop from Reuters on Apple’s fintech expansion into India.
+
+---
+
+### **[5] & [7] Bug Bounty Researchers Hack OpenAI Monorepo Using Claude**
+* **Publisher:** Hacktron AI / Wall Street Journal (Robert McMillan)  
+* **What is confirmed:** Security research team Hacktron AI disclosed that they compromised OpenAI’s community forum via an RCE vulnerability, which they chained to gain access to OpenAI employees' internal accounts and view OpenAI’s main GitHub monorepo (`openai/openai`). The researchers used Anthropic’s Claude (specifically cybersecurity-configured versions of Opus 4.8 and Opus 5) to assist in discovering and chaining the exploits.
+* **Important caveats:** This was conducted as authorized white-hat research under OpenAI's official Bug Bounty program. OpenAI patched the vulnerabilities immediately and awarded a $6,500 bounty; no malicious exfiltration or data tampering was reported.
+* **Suitable for publication today:** **Yes.** Combines a WSJ report with a primary technical writeup detailing real-world AI-assisted red-teaming against frontier AI infrastructure.
+
+---
+
+### **[6] Meta Releases macOS App for Muse AI Agent**
+* **Publisher:** The Verge (Jay Peters)  
+* **What is confirmed:** Following mobile and web availability earlier in September 2026, Meta launched a dedicated macOS application for its **Muse** personal AI agent on 18 September 2026. The Mac app enables Muse to manage local files, read context from open windows, and pull data across connected business tools.
+* **Important caveats:** Enters a crowded desktop AI market alongside existing macOS clients from OpenAI, Anthropic, and Microsoft; deep system reading features carry strict data-privacy and governance permissions.
+* **Suitable for publication today:** **Yes.** Major product expansion by Meta into desktop AI agent workflows [6].
+
+---
+
+### **[8] PrismML Releases Bonsai 2 27B**
+* **Publisher:** TechCrunch (Julie Bort) / PrismML  
+* **What is confirmed:** PrismML released **Bonsai 2 27B**, a ternary-quantized model built on Alibaba's Qwen3.8 27B architecture. The language model compresses weights down to ~5.9 GB (or ~8.6 GB including the vision tower), allowing 27B-class reasoning and multimodal capabilities to run locally on consumer devices.
+* **Important caveats:** Benchmark retention claims (98.2% of full-precision FP16 capability) are self-reported by PrismML. Running the model locally requires PrismML's custom runtime forks of `llama.cpp` or `MLX`.
+* **Suitable for publication today:** **Yes.** Strong technical story regarding on-device AI compression and open-weight efficiency.
+
+---
+
+### **[11] Judge Denies OpenAI Access to Apple–SpaceXAI Settlement**
+* **Publisher:** Politico (Hassan Ali Kanu)  
+* **What is confirmed:** A U.S. federal judge denied OpenAI's motion to compel disclosure of a confidential settlement agreement between Apple and SpaceXAI in an antitrust proceeding, ruling after in-camera review that the settlement materials were irrelevant to OpenAI's defense [11].
+* **Important caveats:** Routine procedural discovery ruling; does not resolve the substantive antitrust claims between the parties [11].
+* **Suitable for publication today:** **Yes.** Brief legal item reflecting ongoing judicial friction in high-stakes Big Tech antitrust litigation [11].
+
+---
+
+### **[13] OpenAI Researcher Noam Brown Intercoms on Multi-Agent Systems & Alignment**
+* **Publisher:** Dwarkesh Podcast (Dwarkesh Patel)  
+* **What is confirmed:** OpenAI research scientist Noam Brown appeared on the *Dwarkesh Podcast*. He stated that OpenAI's 10,000-agent run that solved the Navier-Stokes Millennium Prize problem was primarily driven by a strong base reasoning model (<10% credit to multi-agent coordination), argued that recursive self-improvement (RSI) faces a ~3x speed limit due to serial experiment execution time and GPU bounds, and warned of degrading chain-of-thought monitorability.
+* **Important caveats:** Reflects individual researcher perspective and analysis rather than an official corporate policy statement or product release.
+* **Suitable for publication today:** **Yes.** High-signal interview containing substantive technical commentary from a lead frontier AI researcher.
+
+---
+
+### **[14] UN and Google Launch UN System Data Commons for AI Agents**
+* **Publisher:** TechCrunch (Jagmeet Singh)  
+* **What is confirmed:** The United Nations announced the launch of the **UN System Data Commons**, developed in partnership with Google and supported by $2 million from Google.org. Built on Google's open-source Data Commons and integrated with Model Context Protocol (MCP), it connects data across ~20 UN entities into a unified knowledge graph searchable via natural language and directly queryable by AI agents.
+* **Important caveats:** The project was spurred by internal UNICEF benchmarking showing LLMs answered global development queries correctly only 21.2% of the time. UN guidelines state human verification remains mandatory for critical publications.
+* **Suitable for publication today:** **Yes.** Significant partnership bridging international public data with agentic AI standards.
+
+---
+
+### **[15] Anthropic Reports Claude "Leads" 26% of Internal AI R&D**
+* **Publisher:** Bloomberg (Shirin Ghaffary) / Anthropic  
+* **What is confirmed:** Anthropic released internal data from its new R&D Automation Index showing that its Claude AI model now "leads" 26% of internal AI research and development tasks (up from <1% in February/March 2026) and collaborates on over 90% of R&D workflows under human supervision.
+* **Important caveats:** "Leading" is defined as Claude executing multi-step tasks under human high-level prompt direction; Anthropic emphasizes Claude is not fully autonomous (AL5) on any R&D metric.
+* **Suitable for publication today:** **Yes.** Provides empirical lab metrics on the rate of AI automating frontier AI research.
+
+---
+
+### **[17] Snap Partners with Salesforce and Nvidia for Specs AR**
+* **Publisher:** Reuters  
+* **What is confirmed:** Snap announced enterprise partnerships with Salesforce and Nvidia to bring AI-powered CRM and visual tools to its Specs augmented reality glasses [17].
+* **Important caveats:** Targets a narrow enterprise AR niche compared to mass-consumer wearables [17].
+* **Suitable for publication today:** **Yes** (as a secondary business/hardware item) [17].
+
+---
+
+### **Minor Discovery Signals / Open Source Releases:**
+* **[1] Bend 2 (bend-lang.com):** Independent open-source programming language/proof system update designed to mechanically verify code via formal proofs. *Suitable as a developer signal note only; lacks independent press coverage.*
+* **[2] Hister (github.com):** Open-source private local search engine by asciimoo [2]. *Suitable as an open-source tool mention only.*
+
+---
+
+### **Out of Scope Candidates (Do Not Publish):**
+* **[3] Bonsai 2 27B (prismml.com):** Marked OUT OF SCOPE in initial candidate tag (covered via candidate [8]).
+* **[9] The American Religion of Self-Storage Facilities:** Non-technology cultural analysis; OUT OF SCOPE.
+* **[10] Why I didn’t sign the Fields medallists’ letter:** Pure academic mathematics commentary; OUT OF SCOPE.
+* **[12] Rate limits on GitLab.com:** Routine operational infrastructure maintenance change; OUT OF SCOPE.
+* **[18] Amazon Pay Raise & [19] Nvidia Financial Commentary:** Lower-priority operational/financial commentary compared to breaking tech launches.

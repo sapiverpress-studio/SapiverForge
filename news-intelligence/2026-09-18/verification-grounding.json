@@ -1,0 +1,554 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22UN+System+Data+Commons%22+%22Google%22+TechCrunch&client=app-vertex-grounding&safesearch=active\">&quot;UN System Data Commons&quot; &quot;Google&quot; TechCrunch</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22OpenAI%22+%22hacktron%22+OR+%22WSJ%22+%22bug+bounty%22+monorepo+2026&client=app-vertex-grounding&safesearch=active\">&quot;OpenAI&quot; &quot;hacktron&quot; OR &quot;WSJ&quot; &quot;bug bounty&quot; monorepo 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Astra+for+Law%22+%22OpenAI%22&client=app-vertex-grounding&safesearch=active\">&quot;Astra for Law&quot; &quot;OpenAI&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Apple%22+%22Axis+Bank%22+%22Apple+Pay%22+India+Reuters+2026&client=app-vertex-grounding&safesearch=active\">&quot;Apple&quot; &quot;Axis Bank&quot; &quot;Apple Pay&quot; India Reuters 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Bonsai+2+27B%22+%22PrismML%22&client=app-vertex-grounding&safesearch=active\">&quot;Bonsai 2 27B&quot; &quot;PrismML&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Dwarkesh%22+%22Noam+Brown%22+%22Navier-Stokes%22&client=app-vertex-grounding&safesearch=active\">&quot;Dwarkesh&quot; &quot;Noam Brown&quot; &quot;Navier-Stokes&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Meta%22+%22Muse%22+%22Mac+app%22+Verge+2026&client=app-vertex-grounding&safesearch=active\">&quot;Meta&quot; &quot;Muse&quot; &quot;Mac app&quot; Verge 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22bend-lang.com%22+%22proof%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;bend-lang.com&quot; &quot;proof&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Anthropic%22+%2226%25%22+R%26D+Bloomberg+2026&client=app-vertex-grounding&safesearch=active\">&quot;Anthropic&quot; &quot;26%&quot; R&amp;D Bloomberg 2026</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEl0qiFyzh7yhEhUhLK4yb7cUG6bGrsXzH85Z3ubx2lGNbRQS4BlBN6zUS6Y7ZBiUf4Caf32Lt_FwL-cDp53OMOuDNjyZC3tj4oS6-Lixlwlx5pqVpqebG6DKQ82qnC9OpH",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFziqfhSrfMhgNAYzkP3yD2qcFZ0CLCz18gtmTR-kJcv4d98GDR0btE_EmZt1F1O_Rarhv1GMDpJcUNV6foX9jn3kISengi92knxMLkdp95ot703rCQq8w6-He-_YK_hX8HovOmhF5VJx1981pCbsUcAW0EweRF0Me3myZKw==",
+        "title": "legaltechnology.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcSDm_om_pgH2EygJZUB-WhrOjPvfAwsngqs5v__8iF9xqmfyWTdHQs93YfM8qB0R87Oln9r-EnocxzUk46H0a4do991Clx8x0Nsauq0GtL92Ol707MTw5BWShr4dJ4Hw6xlZfTquPr7AqKtRBf57OGymrz9TfHhGzdWqvJNBJA-qDwTlQTu32-oc=",
+        "title": "abajournal.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLDBSEjegFD1mQyIhk9ktS02x3fOL7zhPea3jUkF3IwV5Z2v_cR9te2DdqGJXH2qbKt-9zmgaWv1pN_wZGcEFrc6DEJXFrYC30kGUgIrAs1SMAbeWgxkNdPEH_54iLE9yI36fVKLjUbr4dgt-1Mp0xcb_q01m7FnoEfzG43yQ5ZfAflG1ntk699hIK3OQAhlJN9ubQz2XF1-d43Eu3avCduOPQgdTqo5dLGCq__gEhg-L0O2GWf1aJDQ-JP3RmHp_oR-1WrWUw",
+        "title": "westlaw.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH72S3QbSI8D-UeQpOWZSNKWndc3peuQ0h_rt_4oGpHXXoSQMDAj-0nE0HGxxmA6OjqnLS8XhfHvI0Rn7I3NrNcPTfBTxJr-XPR-FWMbjFEW30ADY-XOTOiFIDzL3OQ-kRzOcL_KjRfC_bHmFr_-UEeYAGtc1hVvaAbdfEXDGw6cc860BwB5dhCo4xUvLo7jTjpWuPda6r0JBXZs5kx9TOX4r3O6_bCUSX_WRGNgcHTi4Bv",
+        "title": "tradingview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOYCv3AClRvLM-kWrh3yC5rxfBQCOJgm5xGfgOc9dOOIA7eeOYrDCF58jmWT87WnYh47T3sgzytVWKiEAYMNj3a-S_N3PMWQKWqnlQ--2wAsiV_-C7Ri-1rfg5pWiyqZWtXtozSz1ME3WectQk1_C_MYH0Oag1eNg2N6Wtzg==",
+        "title": "finimize.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGk5EhT7vAYl35YeIMGn9qeyQZiEcFHMCXVzF31F4PXiTJimTzPWsaSYxgAiful3TGB4-SxnG6MYybDduv6uIlAGql9iwVuXXUVafLcB6gkDyE9sSWKrG1vHqGZAJrr-HGgtNNgOqhHHluc4RBtG29MZ28nI7Cu_YmNMHmzIBWTphY-46I=",
+        "title": "loansjagat.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3d-641CuzUtybfxSg-IlX_NIpgv-AtnBYuXzMyVD_R9KODeO84RrUgp040pqmFF3SV4ISasXvKvgxqrnHC8E37aNDuYkM94KHDMY1VoQlVRV1Y4E1imXamQgIY4i-bK4ARgiW0iki4YTG3qIrtO3wNQHgo1QwLvshfeWETLsqF8wltSUfvf21p3qvoxDROcIvEC42n6eHmLJ1_Xkq5UjQrWWNqlSC06diQNL7aw==",
+        "title": "theapplepost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSAR40Kz4rsVA90uHHrU2TCtIQE6jxzxFdCE_52ojeLNAch0n-iukRfN_1O1qUbNRNAZOa2VnFQsnoB2Ea9GzkTbTQ_Vdy9ijcEFHMu0OsDqGJfHV2VlpJVMaEeRfj-Ds=",
+        "title": "hacktron.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFM6K5C4stJq0HGCVhIzWIuMbXfj_PDx58QQOx19qs36c5QKts8VYIJsezshaAzzKA9Cz0CspyqNHWcysauRYhOAXUEoBLBzhSlDjknKT0BzMCSJ3ftVgc=",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1XMOShwiv45l09pZQXy9lWCJkSfiaEVSKafhQLzJnfeSXBUI3d2Fu1BnsoWxPqi0qzpxLY1UmjP35xVCh6q8EzrwYyrfoLUWY6oHs-Yn2gCkZteCiiZZcFNllBS1UKKtCrqFv9vKzpUZllGCW7B8zf-iAFxHQZoVRlA9Va7-TuLsTY1oY3dCMSLWAcwxhCkivjWCHSNQ48l99AJuliLQMIHH22Gwt2Gz8zswV7tV6y36ziGW62HzoKWQDh_HBDfsZH3Cpfdc=",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbbdjW3A6_b1i4XpqYXMh7sbNLSIQUFTZuz32L0dXx1uaEL7q5TSGmlYz-qZp1xpi6yHIQzxAU-ErC1lTyMVKCYVcOs1aDZqIPUX8nQ6Ropy6xDmnlRBHkyuK1WqFpS-uBAzo=",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGJ7Envk1rZhWS1QEMU9DG_FekYBmrgoqaVbCl5kHUoBNvlDQbBYDL1Awlw7SLbugfZo6b9NOk2RVno6BX4-1kSa9U5JJu8M0L-G--uU-AwxqvE5ujCb-w4gMWgHLDc7-8hw==",
+        "title": "tbreak.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLgEy_wR0ENr0wxC5DQitQvij9csKzgREK5qMWph89VJehtENVVoav5Kf7DcU8fnl0WveaaZZmrkq-w_cZCk3Elszicg0UXFaa-iCRffDEOwJlSgUfvXZQncGODjvsVgP8qptcpgExWzuzKmtMXijXuUaTl_HzKr6JQqdIcBU=",
+        "title": "explainx.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIgc1Q4USYCvvp1Vb253FlX6ppkdpswnrqwsrYMu9YQ11rg6KjQ13xhyT6y2idymh4gCP0OfP2jzzxZmdpCaG1BMMGj7CYFZWXwKR7xzWUW7hcyRNmnz8vGY42wWIvbuMoIHXkZk-nzjj0Zf4bntLmHK8df8kapeYAuDWyyz-KoK7G-ubsibHuAq0b8htVVcAkGWTzyiQkzCzfJkRCIwAmi8VzVZuEw88QJ1HVq-E2XOlrVr_bI89hE1FGteIEXD2V3CNHDw==",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzKchLcmYdgTrZoYn9yO6iEDGGCQSN2ZkCeBDsPlmESRXBSjfTgsmExGmouGktamBrZDFDZx3kmjc9dy0pdE3C9C84I91miCDU24C2pmeJyLnUkpj9C0U2JKQOM_IShfWayKKJpL-vB8hM8kY=",
+        "title": "prismml.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElloaXZ0S9ciNUD1z91AwxeRF2WlTijSlrocGvSk3C472PB3eed1wxlD0lKqIIKfxrTpkhjzwMDI6jVGBaUiDWSDtPwsI9KKC6nh1Gem685-o6pXMYLo3nhS2CL9XMc9TiTpBZkofnc_myvSjhGcsY-Vgz",
+        "title": "huggingface.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQLyxY0AlwcphKjZ5bGuGJPwHQ0whJQM_Y6IUKe5NjH1Mm99kOR1OA9FTohd8lkdGpheqpyShAZVxLA02BjJNmV_b6LVcJTqg4fA6731s_YtJD_DyP0MTNGbzup90-Gv0Xo9xK93PWEaSk3iz8rWU=",
+        "title": "huggingface.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEO-qkcSS0vrpJFbpX8KBEKx2DfVcYpXqtC7WMOxdD7VcJLQg02-AEiXu2SWu5nTqfMKWu6xBvvmRMNSVktkkYte_7pL-HK-TfmGbA5rUsmeFCPyQgt_fcDZWu6G0xqZ0c24bAeUQ==",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERR2AYq4I4xhfvCKYr5lp_KpGe0pxDSxRl-QsDufIuOEeYwE9ofOUPHxLy8zoary_2Jd4wty8xMmtGFedVHOCyVIbF-r2a8Bqm",
+        "title": "bidclub.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2oYU5ujVJPvQg0WeWv7xcM7LjqaB-ENdkJRZf2fMaPI8ijD81HfUv-6Z-sF9wqK31YpVd98W_JyvsbbNwSXWgblKrbk_yu-pKtBE_XaAue9R587H9xO0V1gCLZc5xR8X1MQR2plAEHUM3fQaWYQPl9upxIq0Dw4lS",
+        "title": "apple.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZ0XPNxHZdS6pnzjnSrK-yOxgvrraS61_V-aIAPK4eBmh_LVvGquHajVeIRVTzlADsWxRexRf0-JQYMc_1Lggo3-Q3qD6iaImIlWJSXEDZQ_2W9C_f4AiDP7kEKYnmNhZOsJFqN7EJGYRJHyiiwPggu1BJEYAapRIDWcmCMeGccqlE3BkUuYRtff13",
+        "title": "techinasia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpnUe4cI5VrIL-YIiRKnLn_QxA8T6Ru76-xP-84A1ZyId28WtRB-BAghryw3mBAQfR3F6uhkuCilcazoI51sGf8QO65Z0HYS6paq_WJmvv0h5piqRj1P-V4-3azklIlW5uaNc3nAgrTyqEQKA7r1aRnnnepuLhNF2iX0OWB787a7NgfTktQTGDXTMqArz6uOfWX4QrAFkD1q4=",
+        "title": "superpowerdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbXe6fb7A4o7h-NxLWxEAtkZuOrDEl5vU0eRsQ9JomUtYFFE13pbpAXEmt7sqHiZbiSlGDxXElZ8CUJNr-4zNliDHx38tVVvGzQQ==",
+        "title": "mixerbox.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvktLiFBocMxvlwAacdMeS2tfiHqbbBy8lxK7fhomcEHhdVv3CrUrBnVK-5oi_tp-U4ZEdDt7Ntl-O3_SrEB8XTIXGc7pRjCHhNcumExNDvjusUa5Dj0Ky4vX4sHXEN0ulyxSO2al9i-VvzZrcfDqWO5iVWm9bl9sQpRYFaMdllfjlYkhxFGhrqg7RcODZ8Vmdo09H5QE-W3AuzARl881CvmMtBQZdJQL6JcZdQPmbheIhhk4evQKSenxJqNz9HnsuDv6I-rn_Hl_hRzsTSJRP757d",
+        "title": "business-standard.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOjataDxPsFdC2H_pXjCUdb_ht11aZklh3C74MlCVPyH6O6FeuFC8M-WsCvUGzFE2_1eAuk9ot0IDq4HGbrbv_1uQpQMO8xx1nQl9ElmSvilq5qmbz4vLu92bUaFQkKJH09ERSdxFmrzvbSGf1jVG3Y6uWG6n3hgwH1lny6i_IKkmZ0vFmPQ2iolG3XvRRqjN6KukbJuY0pAtQTTYDRVn1kqnj2mIstSxn9FJ8Fdjh8FLwRywe-EqMPKZwJwTDV2cdnpb4JFgf1OKxCiTN83tSm8B_",
+        "title": "business-standard.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTcYJ-GmflFVeO4UGGAI4eJZP_NsENtd1Z3UMRF8LNxWeguDb-9D4sw7feFJ4QHaOmVqelN3YvI6etu15CkPlzHa-kqCdytcz-fpftOWxVj9faKRK5VijZDPbUD2ookSwbyPoumCSBuKFNBP19ZsUOQ3APf0eXPjzj6aX3CqZlRUyNSqIkRn8ZvqGGqqx1vb-r",
+        "title": "reddit.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 95,
+        "endIndex": 289,
+        "text": "### **[0] OpenAI Launches \"Astra for Law\"**\n* **Publisher:** openai.com / Reuters / Legal IT Insider  \n* **What is confirmed:** OpenAI officially announced **Astra for Law** on 17 September 2026"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 291,
+        "endIndex": 542,
+        "text": "Powered by GPT-6 Astra, the offering integrates legal instructions, zero data retention controls, and a dedicated **Legal Search Index** indexing over 230 million U.S. case law, statutory, and regulatory URLs (in partnership with the Free Law Project)"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 544,
+        "endIndex": 647,
+        "text": "It also launches with 26 partner-built plugins (including Thomson Reuters, Harvey, Legora, and iManage)"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 649,
+        "endIndex": 870,
+        "text": "* **Important caveats:** Rolling out initially via a \"Trusted Access\" program within ChatGPT Enterprise and Codex for selected law firms (e.g., Sullivan & Cromwell, Cooley); general API access is planned for a later phase"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 916,
+        "endIndex": 997,
+        "text": "** Major primary product launch from a leading AI lab with direct industry impact"
+      },
+      "groundingChunkIndices": [
+        0,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1005,
+        "endIndex": 1275,
+        "text": "### **[4] Apple Pay Eyes October India Rollout with Axis Bank**\n* **Publisher:** Reuters  \n* **What is confirmed:** Reuters reported on 18 September 2026 that Apple is preparing to launch Apple Pay in India next month (October 2026), starting with Axis Bank credit cards"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1277,
+        "endIndex": 1440,
+        "text": "* **Important caveats:** The story relies on anonymous sources (\"three sources familiar with the matter\"); Apple and Axis Bank have not publicly confirmed the date"
+      },
+      "groundingChunkIndices": [
+        4,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1442,
+        "endIndex": 1629,
+        "text": "The initial rollout will focus on Visa and Mastercard credit card tap-to-pay and is expected to launch without immediate integration with India's dominant Unified Payments Interface (UPI)"
+      },
+      "groundingChunkIndices": [
+        7,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1675,
+        "endIndex": 1755,
+        "text": "** High-credibility scoop from Reuters on Apple’s fintech expansion into India"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1763,
+        "endIndex": 2185,
+        "text": "### **[5] & [7] Bug Bounty Researchers Hack OpenAI Monorepo Using Claude**\n* **Publisher:** Hacktron AI / Wall Street Journal (Robert McMillan)  \n* **What is confirmed:** Security research team Hacktron AI disclosed that they compromised OpenAI’s community forum via an RCE vulnerability, which they chained to gain access to OpenAI employees' internal accounts and view OpenAI’s main GitHub monorepo (`openai/openai`)"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2187,
+        "endIndex": 2351,
+        "text": "The researchers used Anthropic’s Claude (specifically cybersecurity-configured versions of Opus 4.8 and Opus 5) to assist in discovering and chaining the exploits"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2353,
+        "endIndex": 2472,
+        "text": "* **Important caveats:** This was conducted as authorized white-hat research under OpenAI's official Bug Bounty program"
+      },
+      "groundingChunkIndices": [
+        8,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2474,
+        "endIndex": 2606,
+        "text": "OpenAI patched the vulnerabilities immediately and awarded a $6,500 bounty; no malicious exfiltration or data tampering was reported"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2652,
+        "endIndex": 2789,
+        "text": "** Combines a WSJ report with a primary technical writeup detailing real-world AI-assisted red-teaming against frontier AI infrastructure"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2797,
+        "endIndex": 3082,
+        "text": "### **[6] Meta Releases macOS App for Muse AI Agent**\n* **Publisher:** The Verge (Jay Peters)  \n* **What is confirmed:** Following mobile and web availability earlier in September 2026, Meta launched a dedicated macOS application for its **Muse** personal AI agent on 18 September 2026"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3084,
+        "endIndex": 3209,
+        "text": "The Mac app enables Muse to manage local files, read context from open windows, and pull data across connected business tools"
+      },
+      "groundingChunkIndices": [
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3211,
+        "endIndex": 3424,
+        "text": "* **Important caveats:** Enters a crowded desktop AI market alongside existing macOS clients from OpenAI, Anthropic, and Microsoft; deep system reading features carry strict data-privacy and governance permissions"
+      },
+      "groundingChunkIndices": [
+        13,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3754,
+        "endIndex": 3772,
+        "text": "8 27B architecture"
+      },
+      "groundingChunkIndices": [
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3774,
+        "endIndex": 3960,
+        "text": "The language model compresses weights down to ~5.9 GB (or ~8.6 GB including the vision tower), allowing 27B-class reasoning and multimodal capabilities to run locally on consumer devices"
+      },
+      "groundingChunkIndices": [
+        15,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3962,
+        "endIndex": 4084,
+        "text": "* **Important caveats:** Benchmark retention claims (98.2% of full-precision FP16 capability) are self-reported by PrismML"
+      },
+      "groundingChunkIndices": [
+        15,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4162,
+        "endIndex": 4175,
+        "text": "cpp` or `MLX`"
+      },
+      "groundingChunkIndices": [
+        17,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4221,
+        "endIndex": 4308,
+        "text": "** Strong technical story regarding on-device AI compression and open-weight efficiency"
+      },
+      "groundingChunkIndices": [
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5015,
+        "endIndex": 5251,
+        "text": "### **[13] OpenAI Researcher Noam Brown Intercoms on Multi-Agent Systems & Alignment**\n* **Publisher:** Dwarkesh Podcast (Dwarkesh Patel)  \n* **What is confirmed:** OpenAI research scientist Noam Brown appeared on the *Dwarkesh Podcast*"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5253,
+        "endIndex": 5626,
+        "text": "He stated that OpenAI's 10,000-agent run that solved the Navier-Stokes Millennium Prize problem was primarily driven by a strong base reasoning model (<10% credit to multi-agent coordination), argued that recursive self-improvement (RSI) faces a ~3x speed limit due to serial experiment execution time and GPU bounds, and warned of degrading chain-of-thought monitorability"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5628,
+        "endIndex": 5778,
+        "text": "* **Important caveats:** Reflects individual researcher perspective and analysis rather than an official corporate policy statement or product release"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5824,
+        "endIndex": 5927,
+        "text": "** High-signal interview containing substantive technical commentary from a lead frontier AI researcher"
+      },
+      "groundingChunkIndices": [
+        18,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5935,
+        "endIndex": 6232,
+        "text": "### **[14] UN and Google Launch UN System Data Commons for AI Agents**\n* **Publisher:** TechCrunch (Jagmeet Singh)  \n* **What is confirmed:** The United Nations announced the launch of the **UN System Data Commons**, developed in partnership with Google and supported by $2 million from Google.org"
+      },
+      "groundingChunkIndices": [
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6234,
+        "endIndex": 6465,
+        "text": "Built on Google's open-source Data Commons and integrated with Model Context Protocol (MCP), it connects data across ~20 UN entities into a unified knowledge graph searchable via natural language and directly queryable by AI agents"
+      },
+      "groundingChunkIndices": [
+        22,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6467,
+        "endIndex": 6629,
+        "text": "* **Important caveats:** The project was spurred by internal UNICEF benchmarking showing LLMs answered global development queries correctly only 21.2% of the time"
+      },
+      "groundingChunkIndices": [
+        21,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6631,
+        "endIndex": 6713,
+        "text": "UN guidelines state human verification remains mandatory for critical publications"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6759,
+        "endIndex": 6846,
+        "text": "** Significant partnership bridging international public data with agentic AI standards"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6854,
+        "endIndex": 7275,
+        "text": "### **[15] Anthropic Reports Claude \"Leads\" 26% of Internal AI R&D**\n* **Publisher:** Bloomberg (Shirin Ghaffary) / Anthropic  \n* **What is confirmed:** Anthropic released internal data from its new R&D Automation Index showing that its Claude AI model now \"leads\" 26% of internal AI research and development tasks (up from <1% in February/March 2026) and collaborates on over 90% of R&D workflows under human supervision"
+      },
+      "groundingChunkIndices": [
+        24,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7277,
+        "endIndex": 7476,
+        "text": "* **Important caveats:** \"Leading\" is defined as Claude executing multi-step tasks under human high-level prompt direction; Anthropic emphasizes Claude is not fully autonomous (AL5) on any R&D metric"
+      },
+      "groundingChunkIndices": [
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7522,
+        "endIndex": 7605,
+        "text": "** Provides empirical lab metrics on the rate of AI automating frontier AI research"
+      },
+      "groundingChunkIndices": [
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8086,
+        "endIndex": 8295,
+        "text": "### **Minor Discovery Signals / Open Source Releases:**\n* **[1] Bend 2 (bend-lang.com):** Independent open-source programming language/proof system update designed to mechanically verify code via formal proofs"
+      },
+      "groundingChunkIndices": [
+        26
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"UN System Data Commons\" \"Google\" TechCrunch",
+    "\"OpenAI\" \"hacktron\" OR \"WSJ\" \"bug bounty\" monorepo 2026",
+    "\"Astra for Law\" \"OpenAI\"",
+    "\"Apple\" \"Axis Bank\" \"Apple Pay\" India Reuters 2026",
+    "\"Bonsai 2 27B\" \"PrismML\"",
+    "\"Dwarkesh\" \"Noam Brown\" \"Navier-Stokes\"",
+    "\"Meta\" \"Muse\" \"Mac app\" Verge 2026",
+    "\"bend-lang.com\" \"proof\" 2026",
+    "\"Anthropic\" \"26%\" R&D Bloomberg 2026"
+  ]
+}

@@ -333,9 +333,9 @@ function renderNewsletterHtml(editorial) {
 function buildSocial(editorial) {
   const lead = editorial.stories[0];
   const link = `${BASE}/daily-brief/`;
-  const spokenCore = lead ? `${lead.headline}. ${firstSentence(lead.confirmed_fact)}` : "";
+  const spokenCore = lead ? `${lead.headline}. ${lead.confirmed_fact}` : "";
   const spokenLead = lead && spokenCore.split(/\s+/).length > 32
-    ? `${lead.headline}. ${limitWords(firstSentence(lead.confirmed_fact), 18).replace(/…$/, ".")}`
+    ? `${lead.headline}. ${limitWords(lead.confirmed_fact, 18).replace(/…$/, ".")}`
     : spokenCore;
   const spokenScript = lead ? `${spokenLead} Read the Sapiver Forge Daily Brief.` : "";
   return {

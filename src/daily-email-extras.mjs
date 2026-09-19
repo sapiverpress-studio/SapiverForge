@@ -57,10 +57,10 @@ export function collectDailyEmailExtras({ root, baseUrl }) {
 export function renderDailyEmailExtrasHtml(extras) {
   const cards = [extras.learn, extras.parents].filter(Boolean).map((item) => `<section style="margin:0 0 16px;padding:18px;border:1px solid #d7dedb;border-radius:12px;background:#ffffff">${item.image ? `<img src="${esc(item.image)}" alt="" width="180" style="display:block;width:180px;max-width:100%;height:auto;border-radius:10px;margin:0 0 14px">` : ""}<p style="margin:0 0 5px;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:#68756f">${esc(item.label)}</p><h3 style="font-size:21px;line-height:1.25;margin:0 0 8px">${esc(item.title)}</h3>${item.summary ? `<p style="margin:0 0 12px">${esc(item.summary)}</p>` : ""}<p style="margin:0"><a href="${esc(item.url)}">Open ${esc(item.title)}</a></p></section>`).join("");
   if (!cards) return "";
-  return `<section style="background:#f4f1e8;padding:20px;margin:26px 0"><p style="margin:0 0 5px;text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:#68756f">More from Sapiver Press</p><h2 style="margin:0 0 16px">New today</h2>${cards}</section>`;
+  return `<section style="background:#f4f1e8;padding:20px;margin:26px 0"><p style="margin:0 0 5px;text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:#68756f">More from Sapiver Press</p><h2 style="margin:0 0 16px">Latest from Sapiver Press</h2>${cards}</section>`;
 }
 
 export function renderDailyEmailExtrasMarkdown(extras) {
   const lines = [extras.learn, extras.parents].filter(Boolean).map((item) => `### ${item.label}: ${item.title}\n\n${item.summary ? `${item.summary}\n\n` : ""}[Open ${item.title}](${item.url})`);
-  return lines.length ? `## New today from Sapiver Press\n\n${lines.join("\n\n")}` : "";
+  return lines.length ? `## Latest from Sapiver Press\n\n${lines.join("\n\n")}` : "";
 }

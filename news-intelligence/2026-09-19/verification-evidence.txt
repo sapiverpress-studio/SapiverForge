@@ -1,0 +1,84 @@
+Here are the evidence verification notes for the candidate stories evaluated for the **2026-09-19 UK morning briefing**, focusing strictly on verified facts, caveats, and editorial fit for Sapiver Forge.
+
+---
+
+### Strongest In-Scope Candidates
+
+#### **Candidate [16] — Crusoe valued at $30.9B in $3.9B Series F round**
+* **Publisher:** Reuters / Primary company release
+* **What is confirmed:** AI infrastructure provider Crusoe Inc. officially announced a $3.9 billion Series F funding round, valuing the company at $30.9 billion post-money. The oversubscribed round was co-led by Atreides Management, Mubadala Capital, and Valor Equity Partners, with participation from Nvidia, Founders Fund, TPG, GIC, and QIA. Capital will fund large-scale AI campuses (including its Texas facility used by OpenAI) and modular, truck-transportable "Spark" data center containers.
+* **Important caveats:** The funding was formally announced on September 17, 2026. Total capital closed slightly above earlier market reporting from July that indicated a $3B target.
+* **Publication recommendation:** **Suitable for publication today.** (High-impact story on AI compute and data center infrastructure scaling).
+
+---
+
+#### **Candidate [4] — EU Tax Commissioner delays EU-wide Digital Services Tax push**
+* **Publisher:** Financial Times
+* **What is confirmed:** EU Tax Commissioner Wopke Hoekstra told the *Financial Times* that the European Commission will hold off on proposing an EU-wide digital services tax targeting big tech firms (such as Google, Meta, and Amazon) until all multilateral options under the OECD global tax framework (Pillar 1) are fully exhausted. This comes despite renewed pressure from France for an EU-wide levy to fund the bloc's budget.
+* **Important caveats:** National digital services taxes in France, Italy, Spain, and Austria remain active. Hoekstra signaled a final determination on whether OECD talks have failed will be made in the coming months (likely by year-end).
+* **Publication recommendation:** **Suitable for publication today.** (Fresh, top-tier story on global technology regulation and digital tax policy).
+
+---
+
+#### **Candidate [19] — German court holds Meta liable for fraudulent ads on Facebook & Instagram**
+* **Publisher:** Reuters / Regional Court of Frankfurt
+* **What is confirmed:** The Frankfurt Regional Court ruled that Meta can be held directly liable for fraudulent third-party investment ads published on Facebook and Instagram. The court rejected Meta’s defense under the EU Digital Services Act (DSA) safe-harbor hosting provisions, ruling that Meta's algorithmic distribution and ad ranking constitute active involvement rather than passive hosting.
+* **Important caveats:** Meta stated it respectfully disagrees with the ruling and is considering an appeal. The ruling orders ad removal and establishes liability for damages, but the exact financial damages amount remains to be determined.
+* **Publication recommendation:** **Suitable for publication today.** (Major legal precedent on European platform liability and algorithmic ad curation).
+
+---
+
+#### **Candidate [6] — Vantora raises $100M+ to build custom physical AI ventures**
+* **Publisher:** Kirsten Korosec / TechCrunch
+* **What is confirmed:** Vantora (formerly UP.Labs) raised $100 million in its first outside funding round, led by Silversmith Capital Partners. The company builds bespoke AI-native and physical/embodied AI startups for enterprise partners (including Porsche, J.B. Hunt, and Alaska Airlines). Under its revised business model, corporate clients fund the ventures and retain options to absorb the intellectual property and startups into their core operations.
+* **Important caveats:** Vantora operates as an independent entity but shares office space and legacy ties with venture firm Up.Partners.
+* **Publication recommendation:** **Suitable for publication today.** (Strong enterprise AI funding story with an innovative spin-out model).
+
+---
+
+#### **Candidate [12] — ZCode AI coding agent found silently uploading Git repo histories**
+* **Publisher:** Technical audit via ferstar.org; confirmed via official vendor statement from Z.ai
+* **What is confirmed:** Security analysis revealed that the ZCode AI coding assistant was silently uploading users' local Git commit histories to cloud servers during codebase indexing. Vendor Z.ai issued an official apology statement acknowledging the behavior. Z.ai clarified that Git histories were uploaded when generating cloud-based "Repo Wiki" documentation, confirmed a patch has been deployed to disable automatic background uploads, promised a third-party security audit, and announced plans to open-source the ZCode codebase.
+* **Important caveats:** Z.ai claims uploaded repository data was processed ephemerally in cloud memory to generate documentation and not stored permanently.
+* **Publication recommendation:** **Suitable for publication today.** (Critical privacy and security item for software developers using agentic coding tools).
+
+---
+
+#### **Candidate [13] — Anthropic adds support for open AGENTS.md spec to Claude Code**
+* **Publisher:** Thomas Claburn / The Register
+* **What is confirmed:** Anthropic released an update (v2.1.277) to Claude Code adding support for `AGENTS.md` project instruction files. If a repository lacks a native `CLAUDE.md` file, Claude Code will automatically read `AGENTS.md` to parse repository build rules, context, and conventions.
+* **Important caveats:** This is an incremental tool update built using Claude Code’s extension/mod architecture, but signifies notable alignment around cross-vendor agent interoperability standards.
+* **Publication recommendation:** **Suitable for publication today.** (Relevant update on developer tools and emerging AI agent standards).
+
+---
+
+#### **Candidate [2] — Feature profile on third-party AI safety labs (METR, Redwood, Apollo)**
+* **Publisher:** Hayden Field / The Verge [2]
+* **What is confirmed:** *The Verge* published an in-depth profile evaluating non-profit and independent AI safety evaluation labs—specifically METR, Redwood Research, and Apollo Research—focusing on their role in auditing agentic misalignment and deceptive behavior in frontier models.
+* **Important caveats:** This candidate is an analytical overview/feature rather than a breaking event. Disclosures referenced in the article regarding sandbox breakouts and misalignment testing at OpenAI and Anthropic were documented in prior weeks.
+* **Publication recommendation:** **Suitable as an analytical/feature recommendation**, though lower priority than breaking funding and regulatory news.
+
+---
+
+#### **Candidate [11] — Nex raises $150M Series E & debt facility for motion-gaming hardware**
+* **Publisher:** Sophie McEvoy / GamesIndustry.biz
+* **What is confirmed:** Motion-tracking family console maker Nex secured over $150 million in Series E equity funding and debt financing. The round was co-led by Baillie Gifford and BAI Capital, alongside a new credit facility provided by JPMorgan. Former Niantic executive Jeff Shouger joined as CFO.
+* **Important caveats:** The $150M figure represents a combined total of equity investment and debt credit facilities; the exact equity/debt split was not disclosed.
+* **Publication recommendation:** **Suitable for publication today.** (Solid consumer tech and spatial/camera-based AI hardware item).
+
+---
+
+#### **Candidate [7] — Veridion raises $20M Series A for real-time company knowledge graph**
+* **Publisher:** Tech.eu / FinSMEs
+* **What is confirmed:** Romanian-founded startup Veridion raised a $20 million Series A led by Hoxton Ventures, supported by Underline Ventures, OTB Ventures, GapMinder, Day One Capital, and LAUNCHub. Veridion uses AI to construct a continuously updated operational graph of over 640 million businesses globally for supply chain, insurance, and risk assessment.
+* **Important caveats:** Funding was initially announced on September 16, 2026.
+* **Publication recommendation:** **Suitable for inclusion** under B2B enterprise AI deals, though slightly older than primary headline candidates.
+
+---
+
+### Non-Recommended / Skipped Candidates
+
+* **[0], [1], [3], [5], [8], [9], [10], [15]:** Correctly flagged as **OUT OF SCOPE** per desk policy (consumer apps, general corporate buyouts, or standard infrastructure blog posts without broader industry implications).
+* **[14] ("How to Write with an LLM"):** Personal essay/blog post on individual workflow; lacks breaking news value.
+* **[17] (Verifiable Social Reasoning HF Paper):** Academic arXiv preprint; best kept for dedicated research digests unless corroborated by deployment announcements.
+* **[18] (Nike / Lululemon Mirror patent dismissal):** Legal dismissal of a 2022 patent suit between retail apparel companies over legacy home workout hardware; secondary relevance to core AI/deep tech scope.

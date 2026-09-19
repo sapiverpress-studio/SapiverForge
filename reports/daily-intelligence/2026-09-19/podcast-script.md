@@ -1,23 +1,23 @@
-# Crusoe's $3.9bn AI Infrastructure Round
+# The Git history you didn't mean to share
 
-Crusoe raised $3.9 billion in Series F funding at a $30.9 billion post-money valuation. This episode separates the confirmed financing from broader claims about what it means for AI infrastructure.
+Z.ai's ZCode agent has been caught uploading sensitive local repository data to the cloud. We look at the privacy implications for developers and why 'convenience' features are often a security liability.
 
-## What happened
+## The discovery
 
-Crusoe has raised $3.9 billion in Series F funding at a $30.9 billion post-money valuation. The company says the new capital will support expansion of large-scale AI campuses and its modular Spark data-centre units.
+Security researcher ferstar recently pulled back the curtain on ZCode, Z.ai’s coding agent. What they found was, frankly, a bit alarming. The agent was automatically uploading full snapshots of local repositories to Alibaba Cloud. This wasn't just your current code; it included the entire .git history and Large File Storage caches. If you have ever accidentally committed an API key or a password and then deleted it, that sensitive data was likely being whisked away to a server you didn't authorise.
 
-## Why the round matters
+## The company response
 
-The important point is the scale of investment going into the physical side of artificial intelligence. Much of the public discussion around AI focuses on models and software, but those systems still depend on data centres, networking, power and supporting infrastructure. Crusoe's funding round is another sign that investors are willing to commit very large sums to that layer of the market.
+Z.ai has since apologised, pointing the finger at a feature called 'Repo Wiki' that was enabled by default. It is the kind of corporate explanation that makes you wonder who thought that was a sensible default setting in the first place. They have promised a patch to stop the oversharing and have committed to a third-party audit. It is good that they are fixing it, but it is the sort of 'oops' moment that makes you question how much testing actually goes into these agentic features before they hit our machines.
 
-## Two forms of capacity
+## Why this matters
 
-Crusoe is pursuing large AI campuses as well as its Spark modular data-centre product. The company says the Series F funding will help expand both. That does not establish which approach will prove more economical or more important over time, but it does show Crusoe is not relying on a single deployment format.
+This incident is a stark reminder that when we give AI agents access to our local environments, we are essentially handing them the keys to the kingdom. We often focus on what the AI can do for us—writing functions, debugging, or refactoring—but we rarely stop to consider what the AI is doing with our data in the background. It highlights a massive privacy risk: these tools are often designed for maximum convenience, and that convenience frequently comes at the expense of our data sovereignty.
 
-## What the funding does not prove
+## The practical implication
 
-The financing does not prove that demand will continue at the same pace, that modular units will outperform conventional data-centre builds, or that Crusoe's current valuation will be justified by future revenue. Capital raised, valuation and deployed compute are related, but they are not the same business measure.
+The takeaway here is simple but inconvenient: treat your AI coding tools as untrusted third parties. Until you have verified exactly what data is leaving your machine, assume it is all being sent somewhere. If you are using ZCode or similar agents, check your settings immediately. If you cannot find a way to restrict what the agent sees, you might want to consider whether the convenience of an AI assistant is worth the risk of leaking your internal secrets.
 
 ## What to watch next
 
-Watch how Crusoe allocates the new capital, how the planned campuses and Spark units are deployed, and whether the company discloses more detail about customers, utilisation and economics as those projects come online. The confirmed story is substantial; the long-term outcome still depends on execution.
+Keep an eye on that promised third-party audit. It is one thing to say you are fixing a security hole, but it is another to prove it. I will be watching to see if Z.ai actually publishes the findings of that audit or if it quietly disappears into the corporate ether. More broadly, watch how other AI coding tool providers respond. If they are smart, they will start being much more transparent about what their agents are 'seeing' and 'sharing' by default.

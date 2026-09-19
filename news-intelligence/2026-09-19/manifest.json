@@ -2,7 +2,7 @@
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
   "date": "2026-09-19",
-  "generated_at": "2026-09-19T07:25:17.199Z",
+  "generated_at": "2026-09-19T10:53:06.624Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 484,
+      "elapsed_ms": 442,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,7 +23,7 @@
       "name": "Reuters",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 1732,
+      "elapsed_ms": 954,
       "collection_mode": "sitemap",
       "original_link_count": 12
     },
@@ -31,7 +31,7 @@
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 490,
+      "elapsed_ms": 418,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -39,7 +39,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 312,
+      "elapsed_ms": 334,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -47,7 +47,7 @@
       "name": "Sifted",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 2262,
+      "elapsed_ms": 2354,
       "collection_mode": "html",
       "original_link_count": 12
     }
@@ -60,47 +60,15 @@
   "quality_warnings": [],
   "release_blockers": [],
   "newsletter_subject": "Sapiver Forge Daily Brief — 2026-09-19",
-  "overall_confidence": 0.91,
+  "overall_confidence": 0.88,
   "stories": [
     {
-      "category": "business",
-      "headline": "Crusoe hits $30.9B valuation as AI infrastructure race intensifies",
-      "confirmed_fact": "AI infrastructure provider Crusoe raised $3.9 billion in Series F funding at a $30.9 billion post-money valuation. Crusoe says the money will support expansion of large-scale AI campuses and its modular Spark data-centre units.",
-      "why_it_matters": "The round shows how much capital is flowing into the physical infrastructure needed to train and run large AI systems, alongside investment in models and software.",
-      "interpretation": "Crusoe is pursuing both very large campuses and smaller modular capacity. The funding is evidence of investor demand for AI infrastructure, not proof that any one deployment model will dominate.",
-      "confidence": 0.95,
-      "source": "Reuters",
-      "discovered_via": "Reuters",
-      "source_title": "AI infrastructure provider Crusoe valued at $30.9 billion in latest funding round",
-      "url": "https://www.reuters.com/business/ai-infrastructure-provider-crusoe-valued-309-billion-latest-funding-round-2026-09-17/",
-      "discovery_url": "https://www.reuters.com/business/ai-infrastructure-provider-crusoe-valued-309-billion-latest-funding-round-2026-09-17/",
-      "link_quality": "original",
-      "published_at": "2026-09-17T19:26:10.067Z",
-      "discovery_score": 6.551
-    },
-    {
-      "category": "technology",
-      "headline": "German court finds Meta liable for fraudulent ads",
-      "confirmed_fact": "The Frankfurt Regional Court ruled that Meta can be held directly liable for fraudulent investment ads distributed on Facebook and Instagram because its advertising system actively ranks and targets paid ads rather than merely hosting third-party content. The ruling can be appealed.",
-      "why_it_matters": "The judgment tests how EU hosting protections apply when a platform algorithmically distributes paid advertising, but it is a regional-court decision and does not by itself establish an EU-wide rule.",
-      "interpretation": "If upheld, the decision could increase legal pressure on platforms to police paid-ad delivery systems more closely. Its wider significance will depend on appeals and how other courts treat similar cases.",
-      "confidence": 0.9,
-      "source": "Reuters",
-      "discovered_via": "Reuters",
-      "source_title": "German court rules Meta liable for fake ads on Instagram, Facebook",
-      "url": "https://www.reuters.com/legal/litigation/german-court-rules-meta-liable-fake-ads-instagram-facebook-2026-09-17/",
-      "discovery_url": "https://www.reuters.com/legal/litigation/german-court-rules-meta-liable-fake-ads-instagram-facebook-2026-09-17/",
-      "link_quality": "original",
-      "published_at": "2026-09-17T18:24:43.148Z",
-      "discovery_score": 6.39
-    },
-    {
       "category": "developer",
-      "headline": "ZCode patches Git-history upload behaviour after security report",
-      "confirmed_fact": "A security researcher reported that ZCode could upload workspace snapshot data, including Git history, to Z.ai servers during Repo Wiki or indexing activity without sufficiently clear disclosure. Z.ai said the uploads were associated with Repo Wiki generation, said uploaded data was destroyed after processing, and released a patch while committing to a third-party security audit.",
-      "why_it_matters": "The report and vendor response show why developers need explicit controls and clear disclosure when coding tools send repository context to cloud services.",
-      "interpretation": "The exact scope and trigger conditions are disputed, so it is safer to describe this as a transparency and data-handling issue than as proven malicious exfiltration.",
-      "confidence": 0.9,
+      "headline": "ZCode agent caught oversharing local Git history",
+      "confirmed_fact": "Security researcher ferstar found that Z.ai’s ZCode agent automatically uploaded full local repository snapshots, including sensitive .git history and LFS caches, to Alibaba Cloud. Z.ai has apologised, citing a default-enabled 'Repo Wiki' feature, and promised a patch and third-party audit.",
+      "why_it_matters": "This incident highlights the significant privacy risks when AI coding tools are granted broad access to local environments, potentially exposing internal secrets or deleted API keys without the user's explicit intent.",
+      "interpretation": "It is a stark reminder that 'convenience' features in AI agents often come with a hidden cost to data sovereignty. Developers should treat these tools as untrusted third parties until they have verified exactly what data is leaving their machine.",
+      "confidence": 0.95,
       "source": "blog.ferstar.org",
       "discovered_via": "Hacker News",
       "source_title": "Inside ZCode: Silently uploading your Git history to the cloud",
@@ -108,27 +76,59 @@
       "discovery_url": "https://news.ycombinator.com/item?id=49750694",
       "link_quality": "original",
       "published_at": "2026-09-18T06:11:17.000Z",
-      "discovery_score": 7.317
+      "discovery_score": 7.175
+    },
+    {
+      "category": "business",
+      "headline": "Crusoe hits $30.9B valuation in massive infrastructure raise",
+      "confirmed_fact": "AI infrastructure provider Crusoe has secured $3.9 billion in Series F funding, bringing its post-money valuation to $30.9 billion. The round was backed by major players including Nvidia, Mubadala Capital, and Founders Fund.",
+      "why_it_matters": "The scale of this investment underscores the immense capital requirements for the physical infrastructure—data centres and power—that underpin current AI development.",
+      "interpretation": "The market is betting heavily that the bottleneck for AI will remain physical capacity for some time, justifying these eye-watering valuations for infrastructure providers.",
+      "confidence": 0.9,
+      "source": "Reuters",
+      "discovered_via": "Reuters",
+      "source_title": "AI infrastructure provider Crusoe valued at $30.9 billion in latest funding round",
+      "url": "https://www.reuters.com/business/ai-infrastructure-provider-crusoe-valued-309-billion-latest-funding-round-2026-09-17/",
+      "discovery_url": "https://www.reuters.com/business/ai-infrastructure-provider-crusoe-valued-309-billion-latest-funding-round-2026-09-17/",
+      "link_quality": "original",
+      "published_at": "2026-09-17T19:26:10.067Z",
+      "discovery_score": 6.55
+    },
+    {
+      "category": "technology",
+      "headline": "EU pauses digital services tax to await global consensus",
+      "confirmed_fact": "European Commissioner Wopke Hoekstra confirmed the EU will delay a bloc-wide digital services tax on big tech firms while it exhausts efforts for an international solution via the OECD.",
+      "why_it_matters": "This delay avoids immediate trade friction with the US, but the pressure remains as France and other member states continue to push for national revenue streams if global negotiations stall.",
+      "interpretation": "The EU is clearly trying to avoid a fragmented tax landscape, but the clock is ticking; if the OECD process doesn't yield results soon, the bloc may be forced to act unilaterally to satisfy domestic revenue demands.",
+      "confidence": 0.85,
+      "source": "Financial Times",
+      "discovered_via": "Techmeme",
+      "source_title": "EU Commissioner Wopke Hoekstra rebuffs calls for an EU-wide digital services tax until \"all possibilities\" for taxation at the global level are exhausted (Financial Times)",
+      "url": "https://www.ft.com/content/e5a76494-71df-4ee0-a85f-b28f2c94ded6",
+      "discovery_url": "https://www.techmeme.com/260919/p4",
+      "link_quality": "original",
+      "published_at": "2026-09-19T06:00:39.000Z",
+      "discovery_score": 7.817
     },
     {
       "category": "ai",
-      "headline": "Anthropic adopts AGENTS.md spec for Claude Code",
-      "confirmed_fact": "Anthropic added AGENTS.md support to Claude Code 2.1.277. The file can provide repository instructions when no CLAUDE.md is present. OpenAI previously contributed the AGENTS.md format to the Agentic AI Foundation.",
-      "why_it_matters": "Standardisation is rarely exciting, but for developers juggling multiple AI agents, having a common way to tell those agents how to behave is a practical step toward reducing configuration headaches.",
-      "interpretation": "Support from another major coding agent reduces setup friction for teams that use more than one tool and gives the shared convention broader practical reach.",
-      "confidence": 0.9,
-      "source": "Thomas Claburn/The Register",
+      "headline": "The rise of the independent AI safety auditor",
+      "confirmed_fact": "A feature in The Verge details the growing influence of third-party safety organisations like METR, Redwood Research, and Apollo Research, which are increasingly tasked with evaluating models following high-profile misalignment incidents at major labs.",
+      "why_it_matters": "As AI labs struggle with internal safety failures, these independent bodies are becoming the de facto gatekeepers for assessing whether models are safe enough for public release.",
+      "interpretation": "It is a sign of a maturing industry that we are moving away from 'trust us' towards external verification, though the effectiveness of these audits remains a work in progress.",
+      "confidence": 0.8,
+      "source": "Hayden Field/The Verge",
       "discovered_via": "Techmeme",
-      "source_title": "Anthropic adds support for the AGENTS.md instructions spec to Claude Code; OpenAI contributed AGENTS.md to the Agentic AI Foundation last year (Thomas Claburn/The Register)",
-      "url": "https://www.theregister.com/ai-and-ml/2026/09/18/anthropic-decides-to-support-openais-markdown-instructions-spec/5297588",
-      "discovery_url": "https://www.techmeme.com/260918/p39",
+      "source_title": "A look at AI safety groups METR, Redwood Research, and Apollo Research, as AI misalignment incidents at OpenAI and Anthropic thrust them into the spotlight (Hayden Field/The Verge)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/996563/ai-safety-research-metr-redwood-openai-anthropic?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6Im9WRlFMVXFOcDciLCJwIjoiL2FpLWFydGlmaWNpYWwtaW50ZWxsaWdlbmNlLzk5NjU2My9haS1zYWZldHktcmVzZWFyY2gtbWV0ci1yZWR3b29kLW9wZW5haS1hbnRocm9waWMiLCJleHAiOjE3OTAwNzgwNzYsImlhdCI6MTc4OTY0NjA3Nn0.uqC7_g7QOvm2irjweDneh4zzkSalQCFKxlgKwM-Q1Ms",
+      "discovery_url": "https://www.techmeme.com/260919/p5",
       "link_quality": "original",
-      "published_at": "2026-09-19T01:40:00.000Z",
-      "discovery_score": 7.301
+      "published_at": "2026-09-19T06:35:01.000Z",
+      "discovery_score": 7.921
     }
   ],
-  "practical_takeaway": "If you use AI coding assistants, verify which repository data can be uploaded, which feature triggers it and how long the provider retains it. For platform teams, treat the Frankfurt Meta judgment as a specific, appealable ruling about paid-ad distribution—not a settled Europe-wide rule on algorithmic content.",
-  "watch_next": "Watch for any appeal in the Meta case, Z.ai's promised third-party audit and further detail on the scope of ZCode uploads, and whether other coding assistants adopt AGENTS.md.",
+  "practical_takeaway": "Review the permissions and default settings of any AI coding agents currently running in your local environment; if they have access to your entire repository, assume they might be sending more than just code to the cloud. For enterprise leaders, keep an eye on the shifting landscape of AI infrastructure costs, as the capital intensity of these projects is only increasing.",
+  "watch_next": "Monitor the promised third-party audit of ZCode to see if it establishes a new standard for transparency in AI developer tools, and watch for any updates on the OECD tax talks that might force the EU's hand on digital levies.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 028",
@@ -146,12 +146,12 @@
   },
   "social": {
     "date": "2026-09-19",
-    "lead_headline": "Crusoe hits $30.9B valuation as AI infrastructure race intensifies",
-    "facebook_post": "Crusoe hits $30.9B valuation as AI infrastructure race intensifies\n\nThe round shows how much capital is flowing into the physical infrastructure needed to train and run large AI systems, alongside investment in models and software.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Crusoe hits $30.9B valuation as AI infrastructure race intensifies",
-    "pinterest_description": "The round shows how much capital is flowing into the physical infrastructure needed to train and run large AI systems, alongside investment in models and software.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Crusoe raised $3.9 billion at a $30.9 billion valuation as spending on AI infrastructure continues. Today's Sapiver Forge Daily Brief separates confirmed facts from interpretation. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Crusoe raised $3.9 billion in Series F funding at a $30.9 billion valuation to expand AI data-centre infrastructure. Read the Sapiver Forge Daily Brief."
+    "lead_headline": "ZCode agent caught oversharing local Git history",
+    "facebook_post": "ZCode agent caught oversharing local Git history\n\nThis incident highlights the significant privacy risks when AI coding tools are granted broad access to local environments, potentially exposing internal secrets or deleted API keys without the user's explicit intent.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "ZCode agent caught oversharing local Git history",
+    "pinterest_description": "This incident highlights the significant privacy risks when AI coding tools are granted broad access to local environments, potentially exposing internal secrets or deleted API keys without the user's explicit intent.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "ZCode agent caught oversharing local Git history. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "ZCode agent caught oversharing local Git history. Security researcher ferstar found that Z.ai’s ZCode agent automatically uploaded full local repository snapshots, including sensitive .git history. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "a38a233d0e17d56361a38f652a02fa9b5fc1d0eaa077e2c9b3214d71193ba24a"
+  "candidate_id": "b0449cacf9c49e97b8d810a933ea6d4c0dfc40199d11d4d9f2968e7745b1b4f8"
 }

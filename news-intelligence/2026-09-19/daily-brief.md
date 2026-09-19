@@ -1,54 +1,54 @@
 # Sapiver Forge Daily Brief
 
-Today we are looking at major AI infrastructure funding, an appealable German court ruling on fraudulent ads, and fresh questions about how coding assistants handle repository data.
+Today we look at the messy reality of AI integration: from coding agents that overshare your secrets to the quiet, expensive machinery of infrastructure and the ongoing tug-of-war over digital taxes.
 
-## 1. Crusoe hits $30.9B valuation as AI infrastructure race intensifies
+## 1. ZCode agent caught oversharing local Git history
 
-**Confirmed:** AI infrastructure provider Crusoe raised $3.9 billion in Series F funding at a $30.9 billion post-money valuation. Crusoe says the money will support expansion of large-scale AI campuses and its modular Spark data-centre units.
+**Confirmed:** Security researcher ferstar found that Z.ai’s ZCode agent automatically uploaded full local repository snapshots, including sensitive .git history and LFS caches, to Alibaba Cloud. Z.ai has apologised, citing a default-enabled 'Repo Wiki' feature, and promised a patch and third-party audit.
 
-**Why it matters:** The round shows how much capital is flowing into the physical infrastructure needed to train and run large AI systems, alongside investment in models and software.
+**Why it matters:** This incident highlights the significant privacy risks when AI coding tools are granted broad access to local environments, potentially exposing internal secrets or deleted API keys without the user's explicit intent.
 
-**Sapiver Forge interpretation:** Crusoe is pursuing both very large campuses and smaller modular capacity. The funding is evidence of investor demand for AI infrastructure, not proof that any one deployment model will dominate.
+**Sapiver Forge interpretation:** It is a stark reminder that 'convenience' features in AI agents often come with a hidden cost to data sovereignty. Developers should treat these tools as untrusted third parties until they have verified exactly what data is leaving their machine.
 
-**Source:** [Reuters](https://www.reuters.com/business/ai-infrastructure-provider-crusoe-valued-309-billion-latest-funding-round-2026-09-17/) · confidence 95%
+**Source:** [blog.ferstar.org](https://blog.ferstar.org/en/posts/zcode-silent-workspace-snapshot-upload/) · discovered via Hacker News · confidence 95%
 
-## 2. German court finds Meta liable for fraudulent ads
+## 2. Crusoe hits $30.9B valuation in massive infrastructure raise
 
-**Confirmed:** The Frankfurt Regional Court ruled that Meta can be held directly liable for fraudulent investment ads distributed on Facebook and Instagram because its advertising system actively ranks and targets paid ads rather than merely hosting third-party content. The ruling can be appealed.
+**Confirmed:** AI infrastructure provider Crusoe has secured $3.9 billion in Series F funding, bringing its post-money valuation to $30.9 billion. The round was backed by major players including Nvidia, Mubadala Capital, and Founders Fund.
 
-**Why it matters:** The judgment tests how EU hosting protections apply when a platform algorithmically distributes paid advertising, but it is a regional-court decision and does not by itself establish an EU-wide rule.
+**Why it matters:** The scale of this investment underscores the immense capital requirements for the physical infrastructure—data centres and power—that underpin current AI development.
 
-**Sapiver Forge interpretation:** If upheld, the decision could increase legal pressure on platforms to police paid-ad delivery systems more closely. Its wider significance will depend on appeals and how other courts treat similar cases.
+**Sapiver Forge interpretation:** The market is betting heavily that the bottleneck for AI will remain physical capacity for some time, justifying these eye-watering valuations for infrastructure providers.
 
-**Source:** [Reuters](https://www.reuters.com/legal/litigation/german-court-rules-meta-liable-fake-ads-instagram-facebook-2026-09-17/) · confidence 90%
+**Source:** [Reuters](https://www.reuters.com/business/ai-infrastructure-provider-crusoe-valued-309-billion-latest-funding-round-2026-09-17/) · confidence 90%
 
-## 3. ZCode patches Git-history upload behaviour after security report
+## 3. EU pauses digital services tax to await global consensus
 
-**Confirmed:** A security researcher reported that ZCode could upload workspace snapshot data, including Git history, to Z.ai servers during Repo Wiki or indexing activity without sufficiently clear disclosure. Z.ai said the uploads were associated with Repo Wiki generation, said uploaded data was destroyed after processing, and released a patch while committing to a third-party security audit.
+**Confirmed:** European Commissioner Wopke Hoekstra confirmed the EU will delay a bloc-wide digital services tax on big tech firms while it exhausts efforts for an international solution via the OECD.
 
-**Why it matters:** The report and vendor response show why developers need explicit controls and clear disclosure when coding tools send repository context to cloud services.
+**Why it matters:** This delay avoids immediate trade friction with the US, but the pressure remains as France and other member states continue to push for national revenue streams if global negotiations stall.
 
-**Sapiver Forge interpretation:** The exact scope and trigger conditions are disputed, so it is safer to describe this as a transparency and data-handling issue than as proven malicious exfiltration.
+**Sapiver Forge interpretation:** The EU is clearly trying to avoid a fragmented tax landscape, but the clock is ticking; if the OECD process doesn't yield results soon, the bloc may be forced to act unilaterally to satisfy domestic revenue demands.
 
-**Source:** [blog.ferstar.org](https://blog.ferstar.org/en/posts/zcode-silent-workspace-snapshot-upload/) · discovered via Hacker News · confidence 90%
+**Source:** [Financial Times](https://www.ft.com/content/e5a76494-71df-4ee0-a85f-b28f2c94ded6) · discovered via Techmeme · confidence 85%
 
-## 4. Anthropic adopts AGENTS.md spec for Claude Code
+## 4. The rise of the independent AI safety auditor
 
-**Confirmed:** Anthropic added AGENTS.md support to Claude Code 2.1.277. The file can provide repository instructions when no CLAUDE.md is present. OpenAI previously contributed the AGENTS.md format to the Agentic AI Foundation.
+**Confirmed:** A feature in The Verge details the growing influence of third-party safety organisations like METR, Redwood Research, and Apollo Research, which are increasingly tasked with evaluating models following high-profile misalignment incidents at major labs.
 
-**Why it matters:** Standardisation is rarely exciting, but for developers juggling multiple AI agents, having a common way to tell those agents how to behave is a practical step toward reducing configuration headaches.
+**Why it matters:** As AI labs struggle with internal safety failures, these independent bodies are becoming the de facto gatekeepers for assessing whether models are safe enough for public release.
 
-**Sapiver Forge interpretation:** Support from another major coding agent reduces setup friction for teams that use more than one tool and gives the shared convention broader practical reach.
+**Sapiver Forge interpretation:** It is a sign of a maturing industry that we are moving away from 'trust us' towards external verification, though the effectiveness of these audits remains a work in progress.
 
-**Source:** [Thomas Claburn/The Register](https://www.theregister.com/ai-and-ml/2026/09/18/anthropic-decides-to-support-openais-markdown-instructions-spec/5297588) · discovered via Techmeme · confidence 90%
+**Source:** [Hayden Field/The Verge](https://www.theverge.com/ai-artificial-intelligence/996563/ai-safety-research-metr-redwood-openai-anthropic?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6Im9WRlFMVXFOcDciLCJwIjoiL2FpLWFydGlmaWNpYWwtaW50ZWxsaWdlbmNlLzk5NjU2My9haS1zYWZldHktcmVzZWFyY2gtbWV0ci1yZWR3b29kLW9wZW5haS1hbnRocm9waWMiLCJleHAiOjE3OTAwNzgwNzYsImlhdCI6MTc4OTY0NjA3Nn0.uqC7_g7QOvm2irjweDneh4zzkSalQCFKxlgKwM-Q1Ms) · discovered via Techmeme · confidence 80%
 
 ## Practical takeaway
 
-If you use AI coding assistants, verify which repository data can be uploaded, which feature triggers it and how long the provider retains it. For platform teams, treat the Frankfurt Meta judgment as a specific, appealable ruling about paid-ad distribution—not a settled Europe-wide rule on algorithmic content.
+Review the permissions and default settings of any AI coding agents currently running in your local environment; if they have access to your entire repository, assume they might be sending more than just code to the cloud. For enterprise leaders, keep an eye on the shifting landscape of AI infrastructure costs, as the capital intensity of these projects is only increasing.
 
 ## What to watch next
 
-Watch for any appeal in the Meta case, Z.ai's promised third-party audit and further detail on the scope of ZCode uploads, and whether other coding assistants adopt AGENTS.md.
+Monitor the promised third-party audit of ZCode to see if it establishes a new standard for transparency in AI developer tools, and watch for any updates on the OECD tax talks that might force the EU's hand on digital levies.
 
 ---
 

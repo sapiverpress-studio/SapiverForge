@@ -1,5 +1,5 @@
-# Sources for The $30 Billion Bet on Physical AI
+# Sources for The Git history you didn't mean to share
 
-- [Reuters: AI infrastructure provider Crusoe valued at $30.9 billion in latest funding round](https://www.reuters.com/business/ai-infrastructure-provider-crusoe-valued-309-billion-latest-funding-round-2026-09-17/)
+- [blog.ferstar.org: Inside ZCode: Silently uploading your Git history to the cloud](https://blog.ferstar.org/en/posts/zcode-silent-workspace-snapshot-upload/)
 - Daily Brief date: 2026-09-19
 - Confidence: 0.95

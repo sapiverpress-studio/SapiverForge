@@ -1,1 +1,617 @@
-{}
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=Verifiable+Social+Reasoning+for+LLM+Assistants+Hugging+Face+Fuse&client=app-vertex-grounding&safesearch=active\">Verifiable Social Reasoning for LLM Assistants Hugging Face Fuse</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Clinicians+raise+concerns+over+medical+AI+adoption+beyond+diagnostics+Financial+Times+Sarah+Neville&client=app-vertex-grounding&safesearch=active\">Clinicians raise concerns over medical AI adoption beyond diagnostics Financial Times Sarah Neville</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Trump+appoint+new+AI+adviser+AI+czar+Reuters&client=app-vertex-grounding&safesearch=active\">Trump appoint new AI adviser AI czar Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=CXMT+fifth+generation+platform+LPDDR5X+mass+production+Reuters&client=app-vertex-grounding&safesearch=active\">CXMT fifth generation platform LPDDR5X mass production Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Meta+challenges+Ofcom+Online+Safety+Act+WhatsApp+Instagram+FT&client=app-vertex-grounding&safesearch=active\">Meta challenges Ofcom Online Safety Act WhatsApp Instagram FT</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Creating+a+kill+switch+to+shut+down+a+rogue+AI+is+harder+than+it+sounds+New+York+Times&client=app-vertex-grounding&safesearch=active\">Creating a kill switch to shut down a rogue AI is harder than it sounds New York Times</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=NPR+AI+chatbot+safety+state+bills+loopholes+Cynthia+Montoya&client=app-vertex-grounding&safesearch=active\">NPR AI chatbot safety state bills loopholes Cynthia Montoya</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Japan+Nippon+Life+plans+13+billion+data+center+financing+US+Reuters&client=app-vertex-grounding&safesearch=active\">Japan Nippon Life plans 13 billion data center financing US Reuters</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5MfoJCgFHDjHRMMtLQP65t-yhgfqUlb8UlOT2EJoTx06Ph2lrGbvSpj8mHqK62KIDm9P6gwVXNDjrjKh_Df3eN67NINQPpbo_q_UqpG-vXeRATHXmpmU=",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHZOzgzQUDcuaokSsz5TE1rizw1X7znBfwam_nd4_0M1etn88yvT3DOiy9E5Ldmw9BJkv9ZVMgKJvq3dBFnkETOQ7rxUtSnZHtYSN2TV9QkNtPgPJhMua9r9sMddCefliTFPn4wlkOcXDNF3R8TKp3AlYnIcbca1BrNkIiXMCcYUlDsQ==",
+        "title": "ft.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQxJxqxAmKWupAMILs2DEJ8tOP0Wtt2D-zj5foFnvybBYEHdqp3kB-nnbeXow-F3sYMyM6tSGpLpgb0TVI4gLT1VJ8-VQz6ggNy93QlrgdOgzCY1-AiwnkrCx0NZ544ck8i_bTDqCbkjLGDMsQFognv_PSp9Yh7cGrcNnwOdqel9-V0m9GGll-ZOrI5pV6O5GZtws=",
+        "title": "tradersunion.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMxAg37EbKN9gfSpMlqg6RKfAtvSoOSF7iTHeZF8BaBbo0G_aWH8n2NvpK2rA_CO9fqsSH2TrzMtZlDGyhodZCZh4GbJN-hdaa1LgqDLQT-P9iqjweJJSDO5SEtfB5WlAWNtPe37O9Isp7t-J3GOscBg-KJgt6jtiLKL0fzmhpU6WFCSNtWz0ONORe_Q4sNeY1bBmV_31OCMWY-Y1KwuDhlw==",
+        "title": "moomoo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlL3j-jFeVsOKOCHlJ_5ceyrTMwFahS5Yjvjm-7P_zRNfDkbgrNW2FFhYYqD9FxB78Vn78aX_2Y0RoMJdP5frYZTVK-bSJTc7yFdYeix9Uxn_IY85rH0HykOV7W6eEs9Q4-Hhp3rIwkIO2-saMxhLfq_cTyJtGuAHuySe1uQuKW5RVSJNrgGaHqqt9jV790eHE-MJPQOiQPY8ynzfxJPXYjnOseJ7ZBDXL2BA=",
+        "title": "scmp.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0NPrS3vIF0svx5OlFYgAVQWvbo5mkEkus8qRQq7ZhqHiMAd-j6t8gjmmEV0mT4uZioQ5-hLKqzn0uUyQRXDs5wU4Fci0D5gkjoeXHudZSpCOAZyuL7zESwRtK28tlVEBozz23H2yzsWeVrA0zU2FjzpclVB_xJAN8Q3kH4hdhmpypvA-T6qYqXt8RnVVdBHVUZf8lcG1NtQ==",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFj9uWXcqYprPCzjKukjGLdrIn4bXinjxyrE-SWYFN8vMrLtpDpjqQFXUG6wUomu1T47Tx07qx-4nhN73veuisciK09H4ubJuwbkXngQnD5Tamk_R7YP72fFdp4F3lcvPbrVSAHhlymYOOHZqzPpjZNdPqn6WHdGE8=",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG_8zyPauYPfTa5rvoAIBBPSH1G1AfppPDX61FeFVm1qGW2e-29hGdEoOaX5hGamR5LsBxgwmTP2DiOfmVCmXYuubnNhXdp1h4woTzzmiSQVGZzodUagNs8OC4g5INy30xcIbhDdJb8t-fxAKzW7LYNIDEbcv0vrLe1WW5x0WofNKxlgp1IDQAGAgG1jI4BAs8jD4=",
+        "title": "asiaone.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGE0nSCLNHxAa2FXtKn7U2-MzeKwxAaIf2GApUqJieIhzEKlPCY4BCSSzLnAUYWEsi0DwATWRAVLgMBDpvMvGBolRVDxoLXgqzp-Z6I_6UkUB92DswA3DfjFNbO3SkgXsMJtCK5OYybwjm84xyTwfMo0-F67JMRTy8OWWY=",
+        "title": "chosun.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDyHhiogz64ue4hInFES7q8HFEFsp68YGrQdpe1WRyhM3aAxkhW5M400uRqQNwKGfdKhOhg0lBSJ3EbaQ2XYqObNxqTTlY7GoW87G9CAUV3LLWtMZ3j-NOKDJx0uJ_S783uNVakvpAV-UZDX0UY_YqdsKn_YJnzGRfK8ZjNhGxZKlQRDMg5ykSyhYFJb7nht5-OOMIDNZFFeADkU5ez5RNrvlDm08=",
+        "title": "tbsnews.net"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGXgpuOHMffEC8a-PRox88r0zoS2mnhYDr7da0Y6NuBhjZJ8eGsq0UBXoa467KxTa6S2ec8wyn3SfEq-Lr5pzXNHg4vo3QmN2O9NfpQYMbDr-Zm8-r44TTUygRBKs9j6v_tgqTA1TGj18eWME2qdIUTpS4pBpG4OQTu9Ft7ypb4qHcrKLbNHhVYI_6D8EHdpQ4VJtNl7wsT6JbOQE26hYplB8PL7YerBNEReBHKTvB4JXiIHaB13K0o2iTuSD4GwoOJdRvOw==",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEk-ngPnDcDeLfISt5T3iQb1e5gyRcLtMNQbHonszPY9C9s848PGy-iwbroep9i5ibozJiMR4i8oW1mafSA8Bvd-Ltfq6iiN7_atww2oJHpEO90CqISzHc2xTb9_RzHNxArty0jArwk61In9iwMQtKtQgAQkfyE",
+        "title": "axios.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF33pQuLKZJE_k3cgYR2Rad0OKT8Brp0Xg3C9LkE2RMtJ8YGoG1t9i51akXU2sxbjseaXoQxGI8utZQ8KBKws-qPtYnxSj6sb9xlZi4c2aa2i-ez9hsBl0ao1MMsxQdNPvxjaZNJnWyPb9LDtfeLMCKLbzm4pBEgPxPPqzZokpUu2YOfbvl_Sb2D03ulJTM2JFR2rObMxUPVXDPDtEUO9_5ejryFoM5QnXz",
+        "title": "scmp.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFreoNyqhPomRNGjpSa2Tnr6EuqBEP14_jKxSqOcoj0Yi8p3nL14joDnqUQnHduDX_tEeXlXtUfQxb1hwnWYdLK8dDsvuDCnJyokPN_S7COSo6u91N3Myh9OixvGma-",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFAcZOLe-z_u_veTuUCW2yft0v3ItV-jkVxR9MlovsqWcHy4X-I4_YFMDuhucaK2M2c5sFpTSO8J99CNoLriEcqxNLZ9DcvUzVYMqK5XHFMVTvm8o3Teq20saCgAgvsbGLMx-puUYhgwQ1n-NQJaChWmsF_f5BozTT-Hc42gT8KQVVzceTinNi5o3nCqB-8uh1wLKUMxN1NCC4mEM8065mdC60pNBLckw8aQCJT-hWDLly6Qc8GxlGS8Fq-zkgEjZeCrlkKq-3DuWsErS-IKkjaDjymQ==",
+        "title": "tradingview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHP4EOM_7bHHR5omj5un98tA1Jme2LP3JrKruLXJDaFt1BguRhFk95lR7fqN6XbMf35jHbPO4RZYLNnuvmMe-kB159R0v6VnTYNzH0y_dnOBN_EAlMXMmMWSIeqb6tEYZF3CgpTcvR-uSjdGwnPboqPrTHWeoYxEpkxxLh1SkacjVyNJX8YwkFDoj9MBRUeSgwX8o0VGV8iZ5HtwKqED6nGfWEBi0X8N5svViNOZ1uxbNo=",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrdlnLgs0aLjxLXbxolvZodbudnjYlJn0S9u1gJl8lAa3DLUCjneLMtW9cELUe9GMt31WymtYs2AWLwydA5C3q5Vly2xBtl7FKFjMb1LQ_zYJbjQJ2ZdH3BI01Ar_zKNLxkz858u_-UejLyfZRccWH-tGkGUA=",
+        "title": "vibetrader.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEehlfq5ouVV2NgsMgcCXNy2G61xOn89tfrKs5kGXJS1soq7AS4Xt6I4Bg2pbNMDjKInotodDa5sQWaV6Gi5JijL6FYUhHM0x9MTLdky7YbtYf8B4XkHZytpUB4K_iKYyHepFv8_IUb-2bL8zFHoQGAeMftcoG0aLUtEHXwO2gxmDtiX-K9fBcLamf79aDZMzucnKxYxGh3fZS17OEe3cHRXSTlf0FDvk0EJVuSCZpOGy9ICHojURYpDV-6Hwql2QrVnV7lXx93Fg==",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsb42ejxYcT4KkF92LqiC8qHDKQjn3C2006qFtOIOQw-KbVq7gNHRGFFH6YKurh9eWzGoIBT4Pke5vxIRVwhETqsoWYiMtZLooBPTukYkJoSP9FigiYGA38b3QF9UrUC-cS-Bov-L4gjalrquLoKEsYhrLspqxPQM3ZWvHFp-nHfd1fgYXLQ==",
+        "title": "finimize.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJaau5Z3GxdNkMyW8mJUzry1GMwYaMMQX6-JJPlQg9VqbHUioRDH_jPGcLY7xxajtBJwJRogDG_4l_QehyNtcyZ17-Q2QYFqW92w8NefCHVxN2a5Xuy3M1IxvpWMThIIAAgDhnczltcL50yZstC5cj5JC0M2bWLKSkiARL57N5tynw9RJ4ngGt",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmEZ0SNiP4fuQwLZpR0smXAXb5ytNdu6o69UBmat7oDplr5PfIy7uxR1rjsRzDs-3ObxsI3Ae8k4SoBv0YALoMwpc1ZelhahPFPMBS2qUtkMiTIXZtzYc=",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJaau5Z3GxdNkMyW8mJUzry1GMwYaMMQX6-JJPlQg9VqbHUioRDH_jPGcLY7xxajtBJwJRogDG_4l_QehyNtcyZ17-Q2QYFqW92w8NefCHVxN2a5Xuy3M1IxvpWMThIIAAgDhnczltcL50yZstC5cj5JC0M2bWLKSkiARL57N5tynw9RJ4ngGt",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8petYVFKck1mACCK8iDIO5c5SkQSs6fhHQsdp_S2mrGKhoh76k8P2MIQHLmhtCFhvsy9Fip0nXR_Zn3IhOTkYuNcg4SdyGXbePmT9kD4S9eMfOQeytLC1bzJNByrX4_haXCacfYD0NagnbUzC5meVyy4dPpp-PDjDfyXZy1qvz0qS9hXdS612-7SXWomTe_CQU4YfKCD8ac7XcCl81g12DNmmVCZxp5YD9xxXz57posl4UJJvdoDiKfIxeZ3Mig==",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQER-z3P5wHMy-ycBXZwXuqFH40yZqCtO-cv4rAtQzf7zi3kVW49wqIeekj7RUuV1v-ITvRC9RPhRl7W4ZV_yDu0EB02Sf8vAioIlitRg-s3_326CM_t_IgMKuHJypd6BG0dZ0knsZJDSu1-3Qbug0fV6QqBO_3oNOXh7AkZQI_SRdYjeDWDs0tRPtjUbpWCvkA3mCxDgqCaSkhJ_g==",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsi0IylkuzJ1Y6QhAhlAhjY_daerBsH_EhsnPAozKP7rWmAmL1pCTE-bnk9gCZ02Aa-eBF0s1cmwhHG6Y_5Znkn4UYruiIZlMAO7BRCq_vBtJzho-2AiWz_XE3IT8W-s9D1t5lujXn-OB6TXgIUmKL7ruP7VmqAcIv8szXzuI8zWtqesvQ1gr7uQV-_UOt",
+        "title": "businessinsider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJCLTqDbtSZtsjxLYBjUVo6aH1zg0Ae74R7bJGwi8ItYhvVBhAahUDgr6rIm85P7m8mfujl0NZLSTBafP-huC-b2iMt0qUOpRaKrBecfCZZkA9hvIVYgDEVOCQ_Hn_etw5Yjdk_hB_nUZE2bGvR91lBVOajcM=",
+        "title": "northeastern.edu"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUhCdbb0M94LvWvQH8AOmGgXpVM66baGkj4JZU_YpEaPq9g0q7VWOipvLghKA8hDITPg0wrPJVYR6hpsJ8hhpKi3TVsGiVsY3z4g6te1V9x9vLeSPy-6A=",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3srHyt9f-qFJ_xmrJSerH7Mut6lAfGy-38t7ma1KoPu6S5ndqQcveJubtQkxeOKSqKdhYGwzmu_JkRixrx3f3DRcemx_l0L0eCIQZ1wgbPresVtjMjUMHYvUXjJ_x_zdKq2pir0zvWFQv2Z1ClDRP5Tz4U2dCuOLWsJ0As1szUqprFmUo2XV_shF5yg7UU4CZ_VCqU170Mi0=",
+        "title": "soz6.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFofSqE6L1s9AnGA-crpC9yEkLVvbMEOofHVp4dBh-ohAsKY1MqvUDAP3E1iEOiBzAjH5UazzqlKoOJZ0jLro0R5w1s5DgetpPeWKhOcwyURjcIoOc623NO",
+        "title": "arxiv.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQES73o-1aW-p_uLEmbjSuGEt1tnr8mErsLV1_g778J9b4aGJGr4GrSc_udacsdQxthmzkkc_nY9vq-IBZkrWL-8VvAF5i_KATxgv-ueHMgi42slmWHXf_74VGnSZw==",
+        "title": "alphaxiv.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0n5BMOVaLtwDUXfEiNCPuIKu4DVV1oiTXLaw4bJalrX7q3tQ-tNruPQnCwEma35vBY8cKzLCg_S3e1OPRO-mzGhsIIqHKP1ANL4Ep1xO8ZtZwrT6cxsJP7gRk7uhD9wcl7gje16UJmmTLi0YDNRPhkcjV8hqCskGUpE5gv-9fNf9MOen7LUva8A==",
+        "title": "themoonlight.io"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "endIndex": 84,
+        "text": "Here are the evidence notes for the 2026-09-20 UK morning briefing for Sapiver Forge"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 131,
+        "endIndex": 281,
+        "text": "#### **Candidate [15]: Meta, Roblox, and Quora Challenge Ofcom’s Online Safety Act Categorisation**\n* **Publisher:** Financial Times (Daniel Thomas)"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 131,
+        "endIndex": 494,
+        "text": "#### **Candidate [15]: Meta, Roblox, and Quora Challenge Ofcom’s Online Safety Act Categorisation**\n* **Publisher:** Financial Times (Daniel Thomas)\n* **What is confirmed:** Meta has filed a new legal appeal in the UK Upper Tribunal challenging Ofcom’s decision to designate WhatsApp and Instagram as \"Category 1\" services under the UK Online Safety Act (OSA)"
+      },
+      "groundingChunkIndices": [
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 496,
+        "endIndex": 684,
+        "text": "Meta argues that Category 1 requirements—such as measures against fraudulent advertising and reporting on illegal content—are unsuitable for private and small-group messaging platforms"
+      },
+      "groundingChunkIndices": [
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 686,
+        "endIndex": 782,
+        "text": "Roblox and Quora are pursuing separate tribunal appeals against their respective categorisations"
+      },
+      "groundingChunkIndices": [
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 784,
+        "endIndex": 907,
+        "text": "This adds to ongoing High Court judicial review proceedings brought by Meta against Ofcom regarding fee and fine structures"
+      },
+      "groundingChunkIndices": [
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 909,
+        "endIndex": 1061,
+        "text": "* **Important caveats:** UK politicians and policy advocates express concern that tech companies are using litigation to delay implementation of the OSA"
+      },
+      "groundingChunkIndices": [
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1063,
+        "endIndex": 1145,
+        "text": "Ofcom has not yet publicly published a full formal response to the tribunal filing"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1278,
+        "endIndex": 1437,
+        "text": "#### **Candidate [8]: CXMT Begins Mass Production on 5th-Gen DRAM Platform and Unveils 24Gb LPDDR5X Chips**\n* **Publisher:** Reuters / South China Morning Post"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1278,
+        "endIndex": 1671,
+        "text": "#### **Candidate [8]: CXMT Begins Mass Production on 5th-Gen DRAM Platform and Unveils 24Gb LPDDR5X Chips**\n* **Publisher:** Reuters / South China Morning Post\n* **What is confirmed:** ChangXin Memory Technologies (CXMT), China's top DRAM manufacturer, announced at the 2026 World Manufacturing Convention in Hefei that its fifth-generation (G5) technology platform has entered mass production"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1673,
+        "endIndex": 1815,
+        "text": "The process reduces memory array feature spacing to 11.95 nanometers using multi-patterning lithography, yielding over 50% more dies per wafer"
+      },
+      "groundingChunkIndices": [
+        4,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1817,
+        "endIndex": 1907,
+        "text": "CXMT also introduced two 24Gb LPDDR5X mobile memory products manufactured on this new node"
+      },
+      "groundingChunkIndices": [
+        4,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1909,
+        "endIndex": 2055,
+        "text": "* **Important caveats:** Performance and density claims relative to global market leaders (Samsung, SK Hynix, Micron) represent company assertions"
+      },
+      "groundingChunkIndices": [
+        4,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2057,
+        "endIndex": 2145,
+        "text": "Due to US export controls on EUV equipment, CXMT relies on multi-exposure DUV techniques"
+      },
+      "groundingChunkIndices": [
+        4,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2297,
+        "endIndex": 2401,
+        "text": "#### **Candidate [14]: Trump Announces Plans for New \"AI Czar\" and \"AI Force\"**\n* **Publisher:** Reuters"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2297,
+        "endIndex": 2584,
+        "text": "#### **Candidate [14]: Trump Announces Plans for New \"AI Czar\" and \"AI Force\"**\n* **Publisher:** Reuters\n* **What is confirmed:** US President Donald Trump announced via social media that he intends to create an \"AI Force\" modeled on the Space Force and appoint a new \"AI czar\" / adviser"
+      },
+      "groundingChunkIndices": [
+        9,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2586,
+        "endIndex": 2765,
+        "text": "He reaffirmed a deregulatory stance, stating the administration will not \"hinder or stifle\" AI industry growth and that existing civil/criminal laws are sufficient to handle risks"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2767,
+        "endIndex": 2883,
+        "text": "* **Important caveats:** The announcement lacks concrete implementation details, timelines, or legislative proposals"
+      },
+      "groundingChunkIndices": [
+        9,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2885,
+        "endIndex": 3027,
+        "text": "Former venture capitalist David Sacks previously filled the AI czar role before stepping down to an external advisory capacity earlier in 2026"
+      },
+      "groundingChunkIndices": [
+        9,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3171,
+        "endIndex": 3294,
+        "text": "#### **Candidate [18]: Nippon Life Plans $13 Billion US Data Center Financing Push**\n* **Publisher:** Reuters / Nikkei Asia"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3171,
+        "endIndex": 3498,
+        "text": "#### **Candidate [18]: Nippon Life Plans $13 Billion US Data Center Financing Push**\n* **Publisher:** Reuters / Nikkei Asia\n* **What is confirmed:** Nippon Life Insurance plans to build a 2 trillion yen (~$12.75 billion) infrastructure project-financing portfolio, primarily targeted at financing US AI data center construction"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3500,
+        "endIndex": 3599,
+        "text": "The insurer is pursuing yields averaging above 2% amid soaring global compute infrastructure demand"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3601,
+        "endIndex": 3751,
+        "text": "* **Important caveats:** The plan represents a multi-year investment portfolio target reported by Nikkei Asia rather than a single finalized debt deal"
+      },
+      "groundingChunkIndices": [
+        15,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3881,
+        "endIndex": 4023,
+        "text": "#### **Candidate [4]: Clinicians Voice Caution Over Expanding Medical AI Beyond Diagnostics**\n* **Publisher:** Financial Times (Sarah Neville)"
+      },
+      "groundingChunkIndices": [
+        19,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3881,
+        "endIndex": 4265,
+        "text": "#### **Candidate [4]: Clinicians Voice Caution Over Expanding Medical AI Beyond Diagnostics**\n* **Publisher:** Financial Times (Sarah Neville)\n* **What is confirmed:** The Financial Times reports that medical practitioners and health leaders are expressing strong skepticism regarding the expansion of AI into clinical decision-making beyond established diagnostic and imaging domains"
+      },
+      "groundingChunkIndices": [
+        19,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4267,
+        "endIndex": 4482,
+        "text": "Clinicians cite a lack of real-world clinical performance data, pointing to issues such as risk of deskilling, model hallucinations, and low institutional governance awareness highlighted in recent physician surveys"
+      },
+      "groundingChunkIndices": [
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4484,
+        "endIndex": 4637,
+        "text": "* **Important caveats:** Reflects broader industry sentiment and survey analysis rather than a single regulatory ruling or corporate product cancellation"
+      },
+      "groundingChunkIndices": [
+        19,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4764,
+        "endIndex": 4895,
+        "text": "#### **Candidate [17]: Technical Analysis Highlights Practical Obstacles to AI \"Kill-Switch\" Laws**\n* **Publisher:** New York Times"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4764,
+        "endIndex": 5121,
+        "text": "#### **Candidate [17]: Technical Analysis Highlights Practical Obstacles to AI \"Kill-Switch\" Laws**\n* **Publisher:** New York Times\n* **What is confirmed:** AI researchers and computer scientists (including Geoffrey Hinton and David Bau) warn that mandatory \"kill switch\" mechanisms proposed in US federal and state legislation face severe technical hurdles"
+      },
+      "groundingChunkIndices": [
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5123,
+        "endIndex": 5304,
+        "text": "Once autonomous agents replicate, distribute across cloud networks, or interface with external tools, centralized hardware/software cutoffs become easily circumvented or ineffective"
+      },
+      "groundingChunkIndices": [
+        24,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5306,
+        "endIndex": 5419,
+        "text": "* **Important caveats:** Explanatory policy and technical analysis piece; does not report new legislation passing"
+      },
+      "groundingChunkIndices": [
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5550,
+        "endIndex": 5678,
+        "text": "#### **Candidate [1]: NPR Highlights Tech Industry Loopholes in State AI Safety Legislation**\n* **Publisher:** NPR (Katie McQue)"
+      },
+      "groundingChunkIndices": [
+        26,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5550,
+        "endIndex": 5951,
+        "text": "#### **Candidate [1]: NPR Highlights Tech Industry Loopholes in State AI Safety Legislation**\n* **Publisher:** NPR (Katie McQue)\n* **What is confirmed:** NPR reporting shows policy analysts and state lawmakers expressing concern that recent state-level AI safety bills contain specific definitions or exemptions pushed by major tech companies that create loopholes for core commercial chatbot products"
+      },
+      "groundingChunkIndices": [
+        26,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5953,
+        "endIndex": 6090,
+        "text": "* **Important caveats:** US-focused legislative breakdown, primarily drawing from state-level policy analysis and individual case studies"
+      },
+      "groundingChunkIndices": [
+        26,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6219,
+        "endIndex": 6354,
+        "text": "#### **Candidate [19]: Paper Introduces \"Fuse\" Framework for User-Mediated LLM Social Reasoning**\n* **Publisher:** Hugging Face / arXiv"
+      },
+      "groundingChunkIndices": [
+        28,
+        29
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6219,
+        "endIndex": 6562,
+        "text": "#### **Candidate [19]: Paper Introduces \"Fuse\" Framework for User-Mediated LLM Social Reasoning**\n* **Publisher:** Hugging Face / arXiv\n* **What is confirmed:** Researchers released \"Fuse,\" an open-source multi-agent benchmark evaluating LLM performance on user-mediated social reasoning (inferring motives based on subjective user narratives)"
+      },
+      "groundingChunkIndices": [
+        29,
+        30
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6564,
+        "endIndex": 6660,
+        "text": "Evaluation across 12 LLMs showed high sensitivity to user reporting bias and partial information"
+      },
+      "groundingChunkIndices": [
+        29,
+        30
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6662,
+        "endIndex": 6819,
+        "text": "* **Important caveats:** Pre-print academic paper claims; claims are as presented by authors on arXiv/Hugging Face without secondary independent verification"
+      },
+      "groundingChunkIndices": [
+        28,
+        29
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "Verifiable Social Reasoning for LLM Assistants Hugging Face Fuse",
+    "Clinicians raise concerns over medical AI adoption beyond diagnostics Financial Times Sarah Neville",
+    "Trump appoint new AI adviser AI czar Reuters",
+    "CXMT fifth generation platform LPDDR5X mass production Reuters",
+    "Meta challenges Ofcom Online Safety Act WhatsApp Instagram FT",
+    "Creating a kill switch to shut down a rogue AI is harder than it sounds New York Times",
+    "NPR AI chatbot safety state bills loopholes Cynthia Montoya",
+    "Japan Nippon Life plans 13 billion data center financing US Reuters"
+  ]
+}

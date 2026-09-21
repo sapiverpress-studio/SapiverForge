@@ -1,0 +1,673 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22young+people+in+China%22+%227M%22+%22one-person%22+OR+%22solo%22+%22WSJ%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;young people in China&quot; &quot;7M&quot; &quot;one-person&quot; OR &quot;solo&quot; &quot;WSJ&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Scott+Bessent%22+%22incident+notification%22+China+AI+2026+FT&client=app-vertex-grounding&safesearch=active\">&quot;Scott Bessent&quot; &quot;incident notification&quot; China AI 2026 FT</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Anthropic%22+%22Fable%22+%22White+House%22+Politico+2026&client=app-vertex-grounding&safesearch=active\">&quot;Anthropic&quot; &quot;Fable&quot; &quot;White House&quot; Politico 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22AX%22+%22Google%22+%22Agentic+Orchestrator%22+OR+agentexecutor.io&client=app-vertex-grounding&safesearch=active\">&quot;AX&quot; &quot;Google&quot; &quot;Agentic Orchestrator&quot; OR agentexecutor.io</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Pirate+Face%22+%22LLM+Models%22+OR+pirateface.co&client=app-vertex-grounding&safesearch=active\">&quot;Pirate Face&quot; &quot;LLM Models&quot; OR pirateface.co</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=SoftBank+OpenAI+bond+10B+11B+Bloomberg+2026&client=app-vertex-grounding&safesearch=active\">SoftBank OpenAI bond 10B 11B Bloomberg 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Altis+Labs%22+%2225M%22+Series+A+2026&client=app-vertex-grounding&safesearch=active\">&quot;Altis Labs&quot; &quot;25M&quot; Series A 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Qupital%22+%22300M%22+Series+C+%22M+Capital%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Qupital&quot; &quot;300M&quot; Series C &quot;M Capital&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=humanoid+robot+sales+%227,000%22+globally+Reuters+2026&client=app-vertex-grounding&safesearch=active\">humanoid robot sales &quot;7,000&quot; globally Reuters 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Tim+Cook+Australia+social+media+curbs+2026+Reuters&client=app-vertex-grounding&safesearch=active\">Tim Cook Australia social media curbs 2026 Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Ten+days+that+changed+the+course+of+AI%22+Reuters+2026&client=app-vertex-grounding&safesearch=active\">&quot;Ten days that changed the course of AI&quot; Reuters 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=China+slows+humanoid+robot+IPO+rush+Reuters+2026&client=app-vertex-grounding&safesearch=active\">China slows humanoid robot IPO rush Reuters 2026</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzOPG2n2w1ItlVBdM_1nieVt2L3OmD2cdAe9n0Z8GHL1IDc_esPfC3MVSJOB2dG2UoFeTCmTNOjtKWho2pdVp5r3A0pfI8rUYkdWh-IkHSL8Zf",
+        "title": "github.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0x5QLMgpAMUIsMofC6oeML53uE268yoYGCL6QxadruKYxSJbu8I2o4kwz6f1f1ftHTqa9izMFm0Ate_PqCg-GVLyLu1aPiPuZjnGd_lHz",
+        "title": "agentexecutor.io"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJTb7-mmh3u3tOAQOQLLAIhqUO6YHzJ4g8ISFxvnp3m1j31NEaSE9dTVWp2iOYiZqXBCXWaLzPu3T1peXyaBLFkF6fGEZlqzn1R14GX-WbsuZJclFOZdsS6K4dqJK3WB-1BO6ZPXhfcD9z",
+        "title": "github.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_vhWkQ30kAzaEStS7dhkRN8TKggw7nXLnPP6JODyfn_kwMVZ0YJTIPkERIloRoWOno2YfAZs1Gy7vU4QaZ6lMcSB7J3zSn7KdbPmH5CNhVhzA08EektRaI67MMPnxurDTgwA=",
+        "title": "ycombinator.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0HGAkfpPRXKoiizC7Tl8DSwy2UhWdK76yC18TvxCsSoEQJ2NFXznQJCDoqh_JrnV2zhgIbFw_euLc270p3c-qQpw89C-BRsEQnbF-eHmnWrAGMDOD-GAp95uJCFYECU2_",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbGn6LmYuBWsA_CVZmk3X43cbSlU74o8ocKtM4OvsJWIGhy40KMaI1SffK3CjqxFYniSNCGn7H0kdAHha7ibcich0vb1d5zU2PoaIYsvgmgQFXqBBM3Ghewy-RIyMrw_xdqEhJAOg7Rj4oIaLyLTDdi9nN9PzJ1DTn-e32L6Y=",
+        "title": "artrealmai.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdHYLLWOLZPhjtybSXEZT5jSsIw_A27xDRv_81h72OzXKpSGl9jN0lIDP704rEwUADmjj6FTCQvJx9-j8hZXg-7-DufcC7yPGhIrydXnlY8ti_spJOYm3o59sgwBg3n6ao_xa2XFe1XBLVGxMwbdBioCE_17By5Zuk",
+        "title": "pirateface.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAbFK4ELhrXOhMbHDR3mP2SzJGl5mWAOznLF6kvt_0GphpWKCXt5mY51YBGzQkgnJBh_mVQlsJ-swjLsz-hRqj8CBRKL5XiaVh6saCP8gI3_Cmfu3zUM-jtozU2O1EomTGUuh50F7VroeJR7vkCajo3wXVV7KoWX9zq_Oa4_W0ECFhIpvYJ9aocTLNYoxlRXbw2Mm9am6O5XPmp6n-A6yiEYqtHnIjAvFXWQeh_a0C",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjUM4aecTEUAih-9PJU8MnRexuEA6MSfSp6uh4nVDUmzJgvIbHnRStYhnSTYfF1dNGLbRI7dMh9CUo7rV3sdZm6jBUzK4AuB3hcVdNhsx_-ooYcb_or90We2yn6nmJeRn84s3-Tn512b7Z-sz-npaikcwVCrpdC46IS6PAQYWFKrldTLE=",
+        "title": "businessinsider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFsHQtD3kEO8DVZ2sebKb-zib8LlBOyGUMwDVXHn5wUVpT-N3OXOE0dNbxJTzCjixpP5gMPKQJmUsG2hrgP1T0zUWCR8DqtcyG8MIWZQs2gYFOa7PE5lk-EJZDaFmB95UgQQpTvrTf6gsI3dOEHQkOZ9m8LAL_WAmV",
+        "title": "substack.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzPasLlt3x4fc0twc_nFXQMu7moJWIbqJgXcc2K5NAaKTB45JCmlguCHTzZL6Nh1tRUntwwUCMQSAbxw6IeD3-xc-TUJDtMa9JxXp1yAddV-eRusT5YdIueR8rt4CAQdkQoSYpbKqrRxWgr2emnDd1IRxgPUI66JGk1uA4plQNo_z-NmZ-XvAjt2Dl9e6gvTH7ozcN6ks=",
+        "title": "iapp.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrOwIBXgUSrv_coAsGqg3X-eJHWxv323-l2FmCUOWoxo3jaqdoHnd1zwcWVH3fOQft-jvkva2PU1wqu8oLUOo2jUT-dY7DWX1iOkJjlFuq09HD1iqB8P2vZnwfMes5FBwDaXQ7_Xhc0Sxjpr068YJvanoahnRHg0ma60OC3fK86wwbT-uDZuKFflWpAbpzTe52oNuANrIu5iqQMEZ91YXwrSgouDESb9KJU_lKBnoUMFvipka4ebvjuOY=",
+        "title": "politicopro.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoKl2MSezbG-BdtaGr6hKH2bOHVOcnqkkXrjaT3a8PTBVkLpWdh0FkbHId2L8Bi1hWMO831qd9QEh4zzrFC7c5URKUKv8hUTnxs-7GF6D_RawDgS5Wea6XByeO0GLRPQS68yFBGET6yuATRFJFbosPVNWzSy8Kdtsj8I3j6q9PLymgOCABzsJQt3I55l_83erI8fnEPM0YxJ-v",
+        "title": "euractiv.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8NhaYWqzfUKUUN6CxhyvLrOucHDStbNL0ILPx6elHBhZA2aFsJKnUV2wtNiyifW_GkFV1TEkrS9r8TktPSr2Un4HIXfX4ZAs2i7BijA_xu74TATDPEhra-jDdLWWfeqz_7X0uiZNZo76JSV9BWp5L7V9RBzuROuqP-qahVblDe_HN1GPNx2rODml4qw==",
+        "title": "fintech.global"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDXI0HbY08xDDldfnwVJJd72jEpsrqy7R1aw9nNMFaka8t00uWfSAxz2ExxhqOGFD-cBymFuXzM7H2BjW-tsT3vsnEvAmcpnJF5bfGECAXJF6jfwmbFOBK3y9jKVWyrVz7BJchn9GJC5tu_wVDCbtxx0l0xA==",
+        "title": "thesaasnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFu5t2ET0WLy96CTi8C7_OEErzW1hvACsfewf77mRLhTTd9YdnR58pYXulORJ8yN-HNgKEp_AVy1ZBPIFbke22gxYYaJXs6IbFnL_30OqEKeyXlD0WEp1_um-iRUNeZM44FzGINsiXqR4-MCRJPjuxCb3CI-V0ffTrY8q4viA==",
+        "title": "privatecapitaljournal.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVXSw-P_y-fb-vHmSgBPHVvpkkKRhs05nQRqiBU1sx7FJDx_NiBcu0jmuZY4pHFBaO0ub8cRLMr0Ffz6pqXqGrOGhLaFat3SghlS9SKf7pNijiAiGBepBXUoOB2Xt3WKXIHwFMrQ8Q0oMFRFUW8AeBwtmYo1Vc",
+        "title": "thesaasnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoHpXbN4U4VrKbEd8Ty1Gd78_oxNOxVc6nJEAV1tpAoINZCZuVdiN93akCKlh_gscvaiz1NFbfdp6cWbK0h_mEq7i92uH1Vhe6HxXmoZuU-ZjtnuJPTEPXkmpUgaI_cTRL0a12Q6pamNF45F3RPGU-22SSSgscrkVhyi7hypkwFSjk1F7ghtFWVDhhS7GC4bg8p6pElIZ8mbtdBZ8QsHGvgfSPw7CPg4Fsu3VDo61zUsj2bC4ymH8t9Hff_mSbRw==",
+        "title": "tradingkey.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWUFnlHtF-BJ8FsJHrc57kvCoT00vqeuWxjF8Erk5yVFl5ndY9F0_9qiVfLAPhbL-GzPMEL0Hb2WpyNajDPX0vhfcuH6LcKhmP-83sXe8CcN8W4wdplFVOkVNSqZuX6JK8cNtg-MM2ZX9OTB0VAJq45B4jccQp04u6XMqvPuAG4l21h8dJvHtmQ0lve_G1nGmqSNaucS7zAgR90V3LzGl8f8jMrU3dtfGAd5uIiyt-WS2xexrNSU8HX2rzWR2JhQ==",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_PpTRpUJya8sDRqtyMJdQrDapMyOisoePR-Ucs2TITmGzzDQNncC1UPwxQfqoePp5bhqzmOLKULbY-OF9_2A0yhNv4fuA07exacYqbmmbOxLBvygSwxQH8KXwn00pSHF8RaMHgpXqRiWJigS5VIbI3_VB1PohYICV3XnFWQ-Z6kvyNjZR0__3f1yHPb5OIBrRl_lH7w8gELR5KYnBCVvHAIzejP9PI6VU0A==",
+        "title": "invezz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwRP5xD4tYRjv7xQo_4uiLctHZan2dwtFgWj9ieA3BJtn_hfNIuLA7ye_T8-P6wgfnVAfEJluA4nvJT4E9Cu-_XRRun9PJf4zjtl2G1tkbJZXNwGsrdCygftFcES6eWBGEwU46LgrjTPzXXwpv6Gz4VSvS9mT4VA7AsMt-liWcvXe5nDCbIlmzAGAuM9Q-fkh1rkULnlTNFw==",
+        "title": "indy.finance"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRlKeIXtdoq4YMDAymx0gbudnCtrlbEqIQyNteA4FTofE9rCrHIuN2MdDj7ARiaj8NnbFCw7I5ZLt76q9BpvL5k1FlX16g1LIB465ta9Alzeq52IGHK8gXvA==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFY6mwCBHFLuF0Nf9c1VETleqmB1RYsyFZsb8G1jz1FxMzNMG4R0WJIiIqAWsv2BMSK-a2RbHNyQKoIeuM7j1-JlOyPRQ3-Ox6eEyMgalgSbD2OUjggpxjId5P0I1Q8pZKEsOBd5JUy-aDQLRAyzv04OXTbfYvcryC1maUwW1lSka74dsJUhU6NBsi9QOcj3ykZfoqd8leDTRBOpaQ=",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbJvsTu1cjkIbmTACJiAOEOEmV4YkDvoekvdq_MEQwkbNC7RA3slJOhdWOZvaaFGcGfCht75wKuVC14d3KZbu0s0VmfIheG2c1BlPlSKD9znsLwkdP4IKYI0g9FQ1Ehf8HdqGDoIQPIRH-ZRzIT5iiHthq2y27zk3SJxfQlerBF3GWUFs6UGz_PA==",
+        "title": "whbl.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxp_pLT7BZ_0jBP9_P-Zkg4p8nalXwh4PabLmmH7JCaqmYG_2rbz19nXveGqd8ygu4hxzMWUMgfR5DTu0SjZ5OXr4vl_5ZcImFZ_46dq5P_wbosPBSKFIMgWd8qXRhQscmvB7-mEXGdhSxbqfOJeGlhtj0MBbSnUk82ipEiaBONGG84KzFaQ==",
+        "title": "finimize.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLHXKMYg1AGgh1Yss-xIPmQEGfMiZj7et2cEyq0Y2KPueKqShvvUZBtRG20N1-7Ijicig1bcURMzasx90-ojYXsHmemBOyTXaRuEVHrk7nn8j4iagGUehtJA==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5k6ekoctlI7uQN2UaJUsWFLk_zmiVB-Pn_9FX7uFeKuFXK9agXrNbOzngAEiG0NIE4zt1dciSfrmfvr58uuSSTy_jYpkaTefmQ7P313VlbfL34rCuClE=",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEf_wZKJ0wTjXbQkuP3aV77XozVI-YfsZ8m-ojaiLG3v2i74iemrayaaJZAXiuTrnMtfeq5gNOx3rVqvGVmONfOlXPADNXV0Tirq-eUsa4G3RZG9OdM3lBiHqrD9RnZBM61WHPNH-L4jEKngbngRdmGZ1UwtyiYNF18awR5ftQ127hIJhHLl7IrZbGaHxB5mgBJOh4Lahs7FXUy",
+        "title": "straitstimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpDVqtcZhsH-xy3zvotELDg9aBOs-fx0NJ1g66ftMUH8rB6SUtXZmD6vDehYTgXTP8C9C40TsMnTRp-6k0Lf0pzI9CeP82SYDA70n8YgfGlKJPpFyw4ffcMpLdZyTyxSTwlxPXXVK4o_Ou8EwiWmvJ0TzWaxZY_SpyaKDqZR-_h8YJ-F-IbzvmvS4Dw-1n9g5TnFU=",
+        "title": "tradersunion.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpnysIt1UoMvO6VO4s9n7_zCOg1Haq1liUe9Em4kZvR3mnPdHGJqMf2CcesCJteFC_I6gznggtBJtZq_BwNxutoEkwul8wjhLgYfaT-cR5qCxxU83XHJy-3H3tHucHS47-n6IxsdVjhYGZm9Hpd5DuW-hcPR4yDyiGyn2-Rd41wznv1n4_LmzPRsatxZrh1zhOwNQLo2ySImnqTC7mUCSIc0Tm_yv_E7VOfgOFdram4f0zJmXEW5Yj",
+        "title": "tradingview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJrXbO0s44W-sULIbY2ZDEN9nQYdPYBKSG7YRhqCL05xHdA03_XbCNDjdxKeRd1b7GLEgXhbRaA6cS5mzvihCCIG9Wnu6JdWhzbsX3aGmMQX-HVPkdq7RrZ-o7anueaYSiKXGvMa9KZI9VTK9U4nUtMmQW2jAB2r2bvApcab0Q1DmBrsBer4lG8EpupwJLvxUxSsbsnzeTUECAcaMqjD7din2az9HtfPtpMLr4I5Yp",
+        "title": "channelnewsasia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETmG_aLbOW20ens-TSxlecMRKjpB5u3mszsDujkhsMCYz_lmNiXnTjrbZTFZWqk2awBJzzQEjd0_TAdeiM1pKh04WqXjCOIbJ0WTxXDOP-Y4bwZmIglLiT1Ybq0HOF3RYSV_HfydSHxBYzrQB3ZADpo_vozEhdDTogToV0C90HG3WKzvycI4pol2sb8M2sFJXEwn154XF_yfY79DIPsPjiyOBtsRX_o7BWZsL14pZKxPd8Lyth0LgyrFNSnSKj3RVG",
+        "title": "devdiscourse.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjtLwzSVkzcu_17PAC_AMxgQq9gzQ8gVJ6c4k-D4DsMZweMbmNk7XJjdp4NZ-oQKz7R8v1oWSA4gthrSruuh3TKh0Oq0Wmmlxq0hW5iO3NbA_oH0J-fUY3OLF_ciltPBfDswvfXLel0Lj1suDpgcgEIvXhr7S9Cl275moCO91q-q60_V5uTwXM0mxsKXy6iAGBHYMpERKqDv9TpV3OTfnmZFEval2ZF0pw6sk1gQ==",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOt_6Wu3fSBr7k_EbznlQm3hGht2E2Khv2_fkr3eP7gyX8xQ0-j7yjh7qDFdNgbAJdMPoH0bxA5p6D3Em5xCj8c_x5Q61QU45GjbvhLP3YJ1VhiUK_E9qRf05CMU_uszftvJGlhzl55DFv1iTCpG105namFMoJr8PC",
+        "title": "wkzo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwAEMgxrooUIQh6_0JNh74Hp2tmbXJnESpLdHqmcpPCpd_cS0B52a2l8hUdYQVEqtx-o6GzhyeaiMTZe5nVFW1uJgjFbdzpovEiCTr2UbYp-Av8P0hxqWFYcho4ErrY_mX0R4zRze4nvcByXVy1bEme0EX2yxEisSXamqYp4FF19zLkm4Kh29VSk4M9LHNNnbW8hjvyQDnQlNeGNc=",
+        "title": "internazionale.it"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFw00JI9Undl5mtT4teT3xuWffrfJ6Ray0_oBmz4tIchp6i91BcjGYP4M7_ApJRKY9yZzw164LzqMy3gtvRxYTgVXdQQN4Hsa9-ViqUnxQL-KGYwVFfm2dVdexJlaPd9scSI4y17msRk_pM8eORwOn_PG7ADxXlYDvaeldM",
+        "title": "euronext.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 60,
+        "endIndex": 360,
+        "text": "### Candidate [0]: AX – Google’s Open Agentic Orchestrator\n* **What is confirmed:** Google has open-sourced **AX** (`github.com/google/ax`), a Kubernetes-native agentic orchestrator designed for deploying, debugging, evaluating, and scaling autonomous AI agents and sandboxed runtime environments"
+      },
+      "groundingChunkIndices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 362,
+        "endIndex": 552,
+        "text": "* **Important caveats:** The software is an early-stage open-source release from Google’s runtime research group; external production adoption and ecosystem integration are in early stages"
+      },
+      "groundingChunkIndices": [
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 554,
+        "endIndex": 682,
+        "text": "* **Publication suitability:** **Suitable for publication today** as a relevant technical release in AI developer infrastructure"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 690,
+        "endIndex": 1036,
+        "text": "### Candidate [2]: Pirate Face Rescues LLM Models from Deletion\n* **What is confirmed:** Pirate Face (`pirateface.co`) has launched a BitTorrent-based decentralized preservation and mirroring service for open-weight LLMs, using SHA-256 checksum verification and peer-to-peer swarms to archive model weights against platform takedowns or deletions"
+      },
+      "groundingChunkIndices": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1038,
+        "endIndex": 1255,
+        "text": "* **Important caveats:** The project relies on community torrent seeding and peer-to-peer networks; content moderation, licensing enforcement, and weight authenticity rely on automated hashes and community submissions"
+      },
+      "groundingChunkIndices": [
+        5,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1257,
+        "endIndex": 1393,
+        "text": "* **Publication suitability:** **Suitable for publication today** as an emerging story in open-source AI resilience and model governance"
+      },
+      "groundingChunkIndices": [
+        3,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1401,
+        "endIndex": 1844,
+        "text": "### Candidate [3]: White House Standoff with Anthropic Over Fable Take-Down\n* **What is confirmed:** *Politico* published a detailed report on contemporaneous documentation from the June 2026 19-day standoff where White House officials (including National Cyber Director Sean Cairncross and Treasury Secretary Scott Bessent) ordered Anthropic CEO Dario Amodei to disable the *Claude Fable 5* model over jailbreak and national security concerns"
+      },
+      "groundingChunkIndices": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1846,
+        "endIndex": 1958,
+        "text": "* **Important caveats:** The underlying export control order and temporary shutdown occurred in June–July 2026"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1846,
+        "endIndex": 2054,
+        "text": "* **Important caveats:** The underlying export control order and temporary shutdown occurred in June–July 2026; *Politico’s* report provides newly reported behind-the-scenes call details and documentation"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2056,
+        "endIndex": 2199,
+        "text": "* **Publication suitability:** **Suitable for publication today** as major investigative reporting on AI safety disputes and federal regulation"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2207,
+        "endIndex": 2567,
+        "text": "### Candidate [6]: Qupital Raises $300M Series C and ABS Financing\n* **What is confirmed:** Hong Kong-based AI trade-finance platform Qupital raised $300M in combined capital, consisting of a Series C equity round led by M Capital alongside asset-backed securities (ABS) commitments from MUFG and Quester Capital, as the firm prepares for potential IPO options"
+      },
+      "groundingChunkIndices": [
+        13,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2569,
+        "endIndex": 2697,
+        "text": "* **Important caveats:** The $300M total figure combines equity capital with debt/ABS facilities rather than pure equity funding"
+      },
+      "groundingChunkIndices": [
+        13,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2699,
+        "endIndex": 2790,
+        "text": "* **Publication suitability:** **Suitable for publication today** as a notable fintech deal"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2798,
+        "endIndex": 3163,
+        "text": "### Candidate [7]: Altis Labs Raises $25M Series A for Clinical Trial AI\n* **What is confirmed:** Toronto-based Altis Labs raised $25M in Series A funding co-led by OrbiMed and Qiming Venture Partners USA to scale its AI platform (including flagship model IPRO), which analyzes CT scans to predict patient survival and treatment efficacy in oncology clinical trials"
+      },
+      "groundingChunkIndices": [
+        15,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3165,
+        "endIndex": 3248,
+        "text": "* **Important caveats:** The funding was officially announced on September 17, 2026"
+      },
+      "groundingChunkIndices": [
+        15,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3250,
+        "endIndex": 3346,
+        "text": "* **Publication suitability:** **Suitable for publication today** as a solid health-tech/AI deal"
+      },
+      "groundingChunkIndices": [
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3354,
+        "endIndex": 3673,
+        "text": "### Candidate [8]: SoftBank Prepares $11B+ High-Yield Bond Sale for OpenAI Bet\n* **What is confirmed:** SoftBank Group has launched term sheets to market over $11B in debt ($10B in USD bonds across three maturities and €1B in Euro notes) to fund its upcoming $10B follow-on investment tranche in OpenAI due in October"
+      },
+      "groundingChunkIndices": [
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3675,
+        "endIndex": 3847,
+        "text": "* **Important caveats:** SoftBank's credit rating sits in speculative/junk territory (BB+ by S&P and Fitch); final pricing and execution are scheduled for later in the week"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3849,
+        "endIndex": 4005,
+        "text": "* **Publication suitability:** **Suitable for publication today** as a high-impact corporate finance story directly powering frontier AI capital expenditure"
+      },
+      "groundingChunkIndices": [
+        17,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4013,
+        "endIndex": 4297,
+        "text": "### Candidate [9]: Adaptive Secures $30M Series B for Construction Accounting AI\n* **What is confirmed:** Adaptive raised $30M in Series B funding led by Tidemark, bringing its total raised to $57M to expand its AI-driven financial and accounting software for construction contractors"
+      },
+      "groundingChunkIndices": [
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4299,
+        "endIndex": 4372,
+        "text": "* **Important caveats:** Deal was reported late last week via *Axios Pro*"
+      },
+      "groundingChunkIndices": [
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4374,
+        "endIndex": 4439,
+        "text": "* **Publication suitability:** **Suitable for publication today**"
+      },
+      "groundingChunkIndices": [
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4447,
+        "endIndex": 4811,
+        "text": "### Candidate [13]: WSJ: 7M+ One-Person AI Startups Launched in China\n* **What is confirmed:** The *Wall Street Journal* reported that young founders in China launched more than 7 million single-person AI-driven businesses in 2025 (up ~42% year-over-year), driven by high youth unemployment and supported by local municipal municipal grants (e.g., Suzhou, Chengdu)"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4813,
+        "endIndex": 4996,
+        "text": "* **Important caveats:** Figures represent registered solo entrepreneur activity utilizing AI tools; market competition among solo enterprises is intense and failure rates remain high"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4998,
+        "endIndex": 5127,
+        "text": "* **Publication suitability:** **Suitable for publication today** as a macroeconomic trend report on AI adoption and labor shifts"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5135,
+        "endIndex": 5450,
+        "text": "### Candidate [15]: Global Humanoid Robot Sales Totaled 7,000 Units in 2025\n* **What is confirmed:** The International Federation of Robotics (IFR) compiled its first global tracking dataset for humanoid robots, showing approximately 7,000 units were sold worldwide last year for industrial and service applications"
+      },
+      "groundingChunkIndices": [
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5452,
+        "endIndex": 5719,
+        "text": "* **Important caveats:** The 7,000 tally remains a minute fraction of overall robotics (542,000 traditional industrial robots installed in 2024); IFR notes many units were purchased by research labs or carmakers for testing/data collection rather than full production"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5721,
+        "endIndex": 5842,
+        "text": "* **Publication suitability:** **Suitable for publication today** as benchmark industry metric data from a primary source"
+      },
+      "groundingChunkIndices": [
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5850,
+        "endIndex": 6240,
+        "text": "### Candidate [16]: US Proposes AI Incident Notification Mechanism to China\n* **What is confirmed:** US Treasury Secretary Scott Bessent announced that during high-level meetings in New York with Chinese Vice Premier He Lifeng, the US proposed a bilateral AI national security incident notification mechanism, and both nations agreed to form an AI working group ahead of the Trump-Xi summit"
+      },
+      "groundingChunkIndices": [
+        25,
+        26
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6242,
+        "endIndex": 6406,
+        "text": "* **Important caveats:** The mechanism remains a proposal within ongoing bilateral talks; formal framework implementation depends on further diplomatic negotiations"
+      },
+      "groundingChunkIndices": [
+        25,
+        26
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6408,
+        "endIndex": 6521,
+        "text": "* **Publication suitability:** **Suitable for publication today** as a major geopolitical and AI governance story"
+      },
+      "groundingChunkIndices": [
+        25,
+        26
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6529,
+        "endIndex": 6807,
+        "text": "### Candidate [17]: China Slows Humanoid Robot IPO Approvals\n* **What is confirmed:** *Reuters* reports Chinese financial regulators (CSRC) have issued informal \"window guidance\" to investment banks slowing IPO approvals for humanoid robotics startups to curb market speculation"
+      },
+      "groundingChunkIndices": [
+        27,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7001,
+        "endIndex": 7034,
+        "text": "government-backed research grants"
+      },
+      "groundingChunkIndices": [
+        27,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7036,
+        "endIndex": 7150,
+        "text": "* **Publication suitability:** **Suitable for publication today** as a key tech regulation/market correction story"
+      },
+      "groundingChunkIndices": [
+        29,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7158,
+        "endIndex": 7471,
+        "text": "### Candidate [18]: Tim Cook Commends Australia’s Youth Social Media Curbs\n* **What is confirmed:** Australian Prime Minister Anthony Albanese met Apple Executive Chair Tim Cook at Apple Park, stating Cook described Australia's youth social media regulations and user feed control initiatives as \"world-leading\""
+      },
+      "groundingChunkIndices": [
+        30,
+        31
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7473,
+        "endIndex": 7714,
+        "text": "* **Important caveats:** Cook's assessment was reported by PM Albanese (with Apple directing inquiries to Cook's post on X emphasizing child safety controls); Apple does not run a core social platform but controls gateway iOS platform access"
+      },
+      "groundingChunkIndices": [
+        32,
+        31
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7716,
+        "endIndex": 7781,
+        "text": "* **Publication suitability:** **Suitable for publication today**"
+      },
+      "groundingChunkIndices": [
+        30,
+        32
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7789,
+        "endIndex": 8212,
+        "text": "### Candidate [19]: Reuters: Ten Days That Changed the Course of AI\n* **What is confirmed:** *Reuters* published an in-depth investigative feature detailing a chaotic 10-day stretch in September 2026 where top AI labs experienced researcher departures over extinction risks, AI agent sandbox breakouts, and unprecedented joint calls among rival CEOs (OpenAI, Anthropic, DeepMind, xAI) to slow down frontier model deployment"
+      },
+      "groundingChunkIndices": [
+        33,
+        34
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8214,
+        "endIndex": 8423,
+        "text": "* **Important caveats:** The article is an analytical synthesis bringing together multiple recent safety incidents and internal lab disclosures rather than breaking a single corporate earnings or funding event"
+      },
+      "groundingChunkIndices": [
+        33,
+        35
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8425,
+        "endIndex": 8544,
+        "text": "* **Publication suitability:** **Suitable for publication today** as a top-tier thematic analysis on frontier AI safety"
+      },
+      "groundingChunkIndices": [
+        33
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"young people in China\" \"7M\" \"one-person\" OR \"solo\" \"WSJ\" 2026",
+    "\"Scott Bessent\" \"incident notification\" China AI 2026 FT",
+    "\"Anthropic\" \"Fable\" \"White House\" Politico 2026",
+    "\"AX\" \"Google\" \"Agentic Orchestrator\" OR agentexecutor.io",
+    "\"Pirate Face\" \"LLM Models\" OR pirateface.co",
+    "SoftBank OpenAI bond 10B 11B Bloomberg 2026",
+    "\"Altis Labs\" \"25M\" Series A 2026",
+    "\"Qupital\" \"300M\" Series C \"M Capital\" 2026",
+    "humanoid robot sales \"7,000\" globally Reuters 2026",
+    "Tim Cook Australia social media curbs 2026 Reuters",
+    "\"Ten days that changed the course of AI\" Reuters 2026",
+    "China slows humanoid robot IPO rush Reuters 2026"
+  ]
+}

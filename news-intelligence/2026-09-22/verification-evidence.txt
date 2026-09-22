@@ -1,0 +1,84 @@
+Here is the verification note for the 2026-09-22 UK morning briefing.
+
+---
+
+### **Out-of-Scope Candidates**
+* **[0] "I don't want to read what you didn't write"** (Blog post / opinion) – **OUT OF SCOPE**
+* **[5] "What Sun got wrong"** (Tech history retrospection) – **OUT OF SCOPE**
+* **[6] "NASA’s Mars Sample Return mission is dead"** (Space / general science) – **OUT OF SCOPE**
+* **[8] "Fable 5 – Median thinking declined in August"** (Social media post) – **OUT OF SCOPE**
+* **[11] "Xbox plans to lay off hundreds of employees..."** (Gaming industry corporate restructuring) – **OUT OF SCOPE**
+* **[12] "Transformers Explained Visually"** (Educational / reference tool) – **OUT OF SCOPE**
+
+---
+
+### **Evidence Notes for In-Scope Candidates**
+
+#### **[2] xAI Releases Grok 4.7**
+* **What is confirmed:** xAI (SpaceXAI) officially released Grok 4.7 on September 21, 2026. The model features a 500k context window and API pricing starting at $2 per million input tokens / $6 per million output tokens. It has been made available via the xAI API, Cursor, Grok Build, and GitHub Copilot.
+* **Important caveats:** Performance benchmarks published at launch (e.g., 71.0% on DeepSWE v1.1, 46.3% on CursorBench) are company-reported evaluation scores and require ongoing independent verification across developer workloads.
+* **Publication status:** **Suitable for publication today.** High-priority frontier LLM release.
+
+---
+
+#### **[3] Apple Challenges OpenAI's Forensic Analysis & Seeks Hardware R&D Documents**
+* **What is confirmed:** In a joint legal filing made public in federal court, Apple requested authorization for its experts to conduct forensic inspections of electronic images (including a MacBook and Mac mini used by former employee X. Liu) and requested documents regarding OpenAI's hardware R&D. Apple is seeking a preliminary injunction to prevent alleged trade secret infringement in OpenAI's hardware development.
+* **Important caveats:** Claims regarding trade secret misuse and forensic data handling are allegations made in court documents by Apple, not established judicial facts. OpenAI opposes expedited discovery, arguing Apple's offboarding procedures were lax and the requests are overbroad.
+* **Publication status:** **Suitable for publication today.** Major IP and hardware dispute between leading tech entities.
+
+---
+
+#### **[4] Tencent Launches Hy Image 3.5 Preview**
+* **What is confirmed:** Tencent released its Hy Image 3.5 Preview image generation model on September 22, 2026 [4].
+* **Important caveats:** Claims that the model achieves performance parity with ByteDance’s Seedream 5.0 Pro are based solely on internal testing conducted by Tencent rather than external third-party benchmarks [4].
+* **Publication status:** **Suitable for publication today.** Best covered in brief or alongside broader Chinese AI ecosystem developments.
+
+---
+
+#### **[7] & [9] Alibaba Outlines 5T–10T Parameter Model Goal & Unveils Zhenwu V900 AI Accelerator**
+* **What is confirmed:** At Alibaba’s Apsara Conference in Hangzhou on September 22, 2026, CEO Eddie Wu announced plans to train a 5-trillion to 10-trillion parameter model (succeeding Qwen 3.8 Max) and set a target of 20GW global cloud data center capacity by 2032. Semiconductor arm T-Head unveiled the Zhenwu V900 AI accelerator, stating it triples performance over the previous generation.
+* **Important caveats:** The 5T–10T parameter model is an active development roadmap target, not a finished product. Zhenwu V900 performance claims are company disclosures; mass production is scheduled for Q1 2027. CEO Eddie Wu noted supply bottlenecks as a key constraint.
+* **Publication status:** **Suitable for publication today.** Strong lead story when combining model roadmap [7] and custom silicon hardware strategy [9].
+
+---
+
+#### **[13] Xiaomi Open-Sources MiMo-V2.6-Pro, Top-Scoring Open-Weights Model on Artificial Analysis**
+* **What is confirmed:** Xiaomi released and open-sourced (MIT license) its MiMo-V2.6 series (including MiMo-V2.6-Pro and Flash) on September 21–22, 2026. Benchmarking platform Artificial Analysis recorded MiMo-V2.6-Pro at a score of 46 on its Intelligence Index v4.3, making it the highest-scoring open-weights model on that index (tying proprietary Grok 4.7 xhigh).
+* **Important caveats:** Intelligence index standings reflect specific benchmark suites; operational performance and latency may vary based on deployment configuration and API host.
+* **Publication status:** **Suitable for publication today.** Major milestone in open-source AI models.
+
+---
+
+#### **[14] Shopify & Meta Partner for Agentic Checkout via Muse and Shop Pay**
+* **What is confirmed:** Shopify and Meta announced a partnership enabling Meta's personal AI agent, Muse, to perform agentic checkout across Shopify stores using Shop Pay. Executives Mark Zuckerberg and Tobi Lütke confirmed the collaboration on September 21, 2026.
+* **Important caveats:** Amazon separately moved to block Meta's Muse agent from accessing Amazon.com over ToS and security considerations, highlighting divergent platform strategies around agentic commerce.
+* **Publication status:** **Suitable for publication today.** Significant business story in agentic e-commerce.
+
+---
+
+#### **[15] Security Flaw Identified in Meta’s Muse Mac App; Hotfix Issued**
+* **What is confirmed:** Ars Technica reported a zero-day vulnerability in Meta's Muse Mac app that allowed local processes or terminal commands to access saved authentication tokens. Meta acknowledged the security vulnerability and issued a software hotfix.
+* **Important caveats:** Meta states the issue was addressed via a hotfix; the exact number of compromised endpoint credentials prior to the patch remains unquantified publicly.
+* **Publication status:** **Suitable for publication today.** Important AI desktop security item.
+
+---
+
+#### **[17] US Proposes AI Safety Notification System to China in Pre-Summit Talks**
+* **What is confirmed:** During bilateral talks in New York on September 20, 2026, US Treasury Secretary Scott Bessent proposed a formal AI safety notification mechanism to Chinese Vice Premier He Lifeng. The proposal seeks transparency and alert protocols for AI incidents touching on national security.
+* **Important caveats:** This is a US proposal submitted for presidential consideration ahead of the Trump-Xi summit; no bilateral treaty or agreement has been formally signed, and Chinese official media gave limited commentary.
+* **Publication status:** **Suitable for publication today.** Key technology regulation and international policy item.
+
+---
+
+#### **[18] Prysmian & Rio Tinto Deploy Inert-Anode Low-Carbon Aluminum in Amazon Data Center**
+* **What is confirmed:** Prysmian, Rio Tinto, and Amazon announced the installation of electrical cables manufactured using Rio Tinto's ELYSIS inert-anode low-carbon aluminum technology for an AWS data center in Ohio.
+* **Important caveats:** First announced on September 18, 2026. It represents a supply chain/sustainability milestone in data center infrastructure rather than a breaking computing software/hardware launch today.
+* **Publication status:** **Optional / Low priority.** Background material for AI infrastructure supply chains, but secondary to today's breaking releases.
+
+---
+
+#### **Candidates Not Recommended for Today's Briefing**
+* **[1] "Attention is all you have" (alicegg.tech):** Personal essay on attention and focus [1]. Contains no breaking corporate, technical, or research news.
+* **[10] Apple Intelligence Support Doc (support.apple.com):** Standard routine administrative user guide update for macOS settings [10].
+* **[16] Wall St Week Ahead (Reuters):** Financial macro commentary previewing rate decisions and AI capital expenditures [16]. Lacks a breaking tech release.
+* **[19] Italian Market Summary (Reuters):** Foreign-language broad stock market commentary [19].

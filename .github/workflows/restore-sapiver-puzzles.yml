@@ -38,6 +38,8 @@ jobs:
           BLOG_BASE_URL: https://suite.sapiverpress.co.uk
         run: |
           export NEWS_INTELLIGENCE_DATE="$(TZ=Europe/London date +%F)"
+          export NEWS_INTELLIGENCE_CANDIDATE_ID="$(node -e "const fs=require('fs');const d=process.env.NEWS_INTELLIGENCE_DATE;const m=JSON.parse(fs.readFileSync('news-intelligence/'+d+'/manifest.json','utf8'));process.stdout.write(String(m.candidate_id||''));")"
+          test -n "$NEWS_INTELLIGENCE_CANDIDATE_ID"
           node src/build-site.mjs
           node src/publish-news-intelligence-site.mjs
           node scripts/inject-news-intelligence-site.mjs

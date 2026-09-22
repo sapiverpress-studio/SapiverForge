@@ -37,6 +37,7 @@ jobs:
         env:
           BLOG_BASE_URL: https://suite.sapiverpress.co.uk
         run: |
+          export NEWS_INTELLIGENCE_DATE="$(TZ=Europe/London date +%F)"
           node src/build-site.mjs
           node src/publish-news-intelligence-site.mjs
           node scripts/inject-news-intelligence-site.mjs

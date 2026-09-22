@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-09-22T05:10:52.275Z",
+  "collected_at": "2026-09-22T11:30:24.378Z",
   "expected_sources": [
     "Techmeme",
     "Reuters",
@@ -13,7 +13,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 739,
+      "elapsed_ms": 708,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -21,7 +21,7 @@
       "name": "Reuters",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 3771,
+      "elapsed_ms": 4362,
       "collection_mode": "sitemap",
       "original_link_count": 12
     },
@@ -29,7 +29,7 @@
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 525,
+      "elapsed_ms": 565,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -37,7 +37,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 400,
+      "elapsed_ms": 375,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -45,7 +45,7 @@
       "name": "Sifted",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 2814,
+      "elapsed_ms": 2049,
       "collection_mode": "html",
       "original_link_count": 12
     }
@@ -53,9 +53,29 @@
   "candidates": [
     {
       "source": "Hacker News",
+      "publisher": "mimo.xiaomi.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "MiMo v2.6",
+      "url": "https://mimo.xiaomi.com/mimo-v2-6",
+      "direct_source_url": "https://mimo.xiaomi.com/mimo-v2-6",
+      "discovery_url": "https://news.ycombinator.com/item?id=49792730",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=49792730",
+      "summary": "",
+      "published_at": "2026-09-21T20:12:12.000Z",
+      "engagement": {
+        "score": 933,
+        "comments": 416
+      },
+      "collection_mode": "api",
+      "score": 8.212
+    },
+    {
+      "source": "Hacker News",
       "publisher": "blog.colinbreck.com",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 5,
+      "source_rank": 3,
       "title": "I don't want to read what you didn't write",
       "url": "https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/",
       "direct_source_url": "https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/",
@@ -65,11 +85,79 @@
       "summary": "",
       "published_at": "2026-09-21T22:30:41.000Z",
       "engagement": {
-        "score": 466,
-        "comments": 159
+        "score": 734,
+        "comments": 298
       },
       "collection_mode": "api",
-      "score": 8.252
+      "score": 8.149
+    },
+    {
+      "title": "The Austrian Academy of Science, Mistral, and Sail Reply plan to launch Apollo, an Ancient Greek LLM trained on ~600M historical Greek words, available for free (Joel Khalili/Wired)",
+      "url": "https://www.wired.com/story/apollo-ai-model-ancient-greek-secrets-papyrus/",
+      "summary": "Joel Khalili / Wired : The Austrian Academy of Science, Mistral, and Sail Reply plan to launch Apollo, an Ancient Greek LLM trained on ~600M historical Greek words, available for free &mdash; In the hope of uncovering new details about ancient life, researchers have developed a large language model that fills in the gaps in papyrus fragments.",
+      "description_html": "<A HREF=\"https://www.wired.com/story/apollo-ai-model-ancient-greek-secrets-papyrus/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260922/i14.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260922/p14#a260922p14\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Joel Khalili / <A HREF=\"http://www.wired.com/\">Wired</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wired.com/story/apollo-ai-model-ancient-greek-secrets-papyrus/\">The Austrian Academy of Science, Mistral, and Sail Reply plan to launch Apollo, an Ancient Greek LLM trained on ~600M historical Greek words, available for free</A></B></SPAN>&nbsp; &mdash;&nbsp; In the hope of uncovering new details about ancient life, researchers have developed a large language model that fills in the gaps in papyrus fragments.</P>",
+      "published_at": "2026-09-22T11:15:01.000Z",
+      "discovery_url": "https://www.techmeme.com/260922/p14",
+      "direct_source_url": "https://www.wired.com/story/apollo-ai-model-ancient-greek-secrets-papyrus/",
+      "publisher": "Joel Khalili/Wired",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.089
+    },
+    {
+      "title": "US startup Firebird is building a 300MW data center in Armenia, set to host 70K+ Nvidia chips by 2027; sources: Trump pledged Nvidia export approvals to Armenia (Mackenzie Hawkins/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-22/nvidia-chips-donald-trump-turn-armenia-into-ai-hotspot",
+      "summary": "Mackenzie Hawkins / Bloomberg : US startup Firebird is building a 300MW data center in Armenia, set to host 70K+ Nvidia chips by 2027; sources: Trump pledged Nvidia export approvals to Armenia &mdash; During the Cold War, the Soviet Union's smallest republic was an electronics and tech center for the Communist superpower.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-09-22/nvidia-chips-donald-trump-turn-armenia-into-ai-hotspot\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260922/i13.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260922/p13#a260922p13\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Mackenzie Hawkins / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-09-22/nvidia-chips-donald-trump-turn-armenia-into-ai-hotspot\">US startup Firebird is building a 300MW data center in Armenia, set to host 70K+ Nvidia chips by 2027; sources: Trump pledged Nvidia export approvals to Armenia</A></B></SPAN>&nbsp; &mdash;&nbsp; During the Cold War, the Soviet Union's smallest republic was an electronics and tech center for the Communist superpower.</P>",
+      "published_at": "2026-09-22T10:55:01.000Z",
+      "discovery_url": "https://www.techmeme.com/260922/p13",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-09-22/nvidia-chips-donald-trump-turn-armenia-into-ai-hotspot",
+      "publisher": "Mackenzie Hawkins/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.995
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "brand.io",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "Spymarks, Not Watermarks",
+      "url": "https://brand.io/article/spymarks/",
+      "direct_source_url": "https://brand.io/article/spymarks/",
+      "discovery_url": "https://news.ycombinator.com/item?id=49794615",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=49794615",
+      "summary": "",
+      "published_at": "2026-09-21T23:03:49.000Z",
+      "engagement": {
+        "score": 473,
+        "comments": 120
+      },
+      "collection_mode": "api",
+      "score": 7.932
+    },
+    {
+      "title": "Sources: multiple staff at the UK's AISI have been signed off work with stress, as tight model release schedules and AI fears lead to low morale and burnout (Financial Times)",
+      "url": "https://www.ft.com/content/60870960-f433-48ca-bc2c-708686a69ae7",
+      "summary": "Financial Times : Sources: multiple staff at the UK's AISI have been signed off work with stress, as tight model release schedules and AI fears lead to low morale and burnout &mdash; Top researchers at Aisi, OpenAI, Anthropic and Google DeepMind report burnout and stress over developing powerful AI",
+      "description_html": "<A HREF=\"https://www.ft.com/content/60870960-f433-48ca-bc2c-708686a69ae7\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260922/i12.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260922/p12#a260922p12\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/60870960-f433-48ca-bc2c-708686a69ae7\">Sources: multiple staff at the UK's AISI have been signed off work with stress, as tight model release schedules and AI fears lead to low morale and burnout</A></B></SPAN>&nbsp; &mdash;&nbsp; Top researchers at Aisi, OpenAI, Anthropic and Google DeepMind report burnout and stress over developing powerful AI</P>",
+      "published_at": "2026-09-22T10:35:00.000Z",
+      "discovery_url": "https://www.techmeme.com/260922/p12",
+      "direct_source_url": "https://www.ft.com/content/60870960-f433-48ca-bc2c-708686a69ae7",
+      "publisher": "Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.902
     },
     {
       "source": "Hacker News",
@@ -85,17 +173,33 @@
       "summary": "",
       "published_at": "2026-09-21T14:26:56.000Z",
       "engagement": {
-        "score": 660,
-        "comments": 198
+        "score": 841,
+        "comments": 249
       },
       "collection_mode": "api",
-      "score": 8.156
+      "score": 7.893
+    },
+    {
+      "title": "Finnish neocloud startup Verda raised $189M led by Emergence at a $1B+ valuation and aims to raise up to $1.5B in equity and debt in 2026 and up to $10B in 2027 (Paula Doenecke/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-22/ai-cloud-startup-verda-raises-189-million-in-funding-round",
+      "summary": "Paula Doenecke / Bloomberg : Finnish neocloud startup Verda raised $189M led by Emergence at a $1B+ valuation and aims to raise up to $1.5B in equity and debt in 2026 and up to $10B in 2027 &mdash; Cloud startup Verda has raised $189 million in fresh financing, underscoring continued investor appetite for the infrastructure powering the artificial intelligence boom.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-09-22/ai-cloud-startup-verda-raises-189-million-in-funding-round\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260922/i11.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260922/p11#a260922p11\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Paula Doenecke / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-09-22/ai-cloud-startup-verda-raises-189-million-in-funding-round\">Finnish neocloud startup Verda raised $189M led by Emergence at a $1B+ valuation and aims to raise up to $1.5B in equity and debt in 2026 and up to $10B in 2027</A></B></SPAN>&nbsp; &mdash;&nbsp; Cloud startup Verda has raised $189 million in fresh financing, underscoring continued investor appetite for the infrastructure powering the artificial intelligence boom.</P>",
+      "published_at": "2026-09-22T10:20:02.000Z",
+      "discovery_url": "https://www.techmeme.com/260922/p11",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-09-22/ai-cloud-startup-verda-raises-189-million-in-funding-round",
+      "publisher": "Paula Doenecke/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.811
     },
     {
       "source": "Hacker News",
       "publisher": "x.ai",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 3,
+      "source_rank": 4,
       "title": "Grok 4.7",
       "url": "https://x.ai/news/grok-4-7",
       "direct_source_url": "https://x.ai/news/grok-4-7",
@@ -105,69 +209,33 @@
       "summary": "",
       "published_at": "2026-09-21T15:50:15.000Z",
       "engagement": {
-        "score": 526,
-        "comments": 462
+        "score": 581,
+        "comments": 491
       },
       "collection_mode": "api",
-      "score": 8.134
+      "score": 7.79
     },
     {
-      "title": "Apple v. OpenAI: Apple asks the court to let its own experts review forensic images used in the case, and seeks documents tied to parts of OpenAI's hardware R&D (Marcus Mendes/9to5Mac)",
-      "url": "https://9to5mac.com/2026/09/21/apple-challenges-openais-forensic-analysis-in-trade-secrets-case-seeks-access-to-hardware-rd/",
-      "summary": "Marcus Mendes / 9to5Mac : Apple v. OpenAI: Apple asks the court to let its own experts review forensic images used in the case, and seeks documents tied to parts of OpenAI's hardware R&D &mdash; Apple has asked the court overseeing its lawsuit against OpenAI and other defendants to let its own experts review forensic images used &hellip;",
-      "description_html": "<A HREF=\"https://9to5mac.com/2026/09/21/apple-challenges-openais-forensic-analysis-in-trade-secrets-case-seeks-access-to-hardware-rd/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260922/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260922/p2#a260922p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Marcus Mendes / <A HREF=\"https://9to5mac.com/\">9to5Mac</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://9to5mac.com/2026/09/21/apple-challenges-openais-forensic-analysis-in-trade-secrets-case-seeks-access-to-hardware-rd/\">Apple v. OpenAI: Apple asks the court to let its own experts review forensic images used in the case, and seeks documents tied to parts of OpenAI's hardware R&D</A></B></SPAN>&nbsp; &mdash;&nbsp; Apple has asked the court overseeing its lawsuit against OpenAI and other defendants to let its own experts review forensic images used &hellip; </P>",
-      "published_at": "2026-09-22T04:45:03.000Z",
-      "discovery_url": "https://www.techmeme.com/260922/p2",
-      "direct_source_url": "https://9to5mac.com/2026/09/21/apple-challenges-openais-forensic-analysis-in-trade-secrets-case-seeks-access-to-hardware-rd/",
-      "publisher": "Marcus Mendes/9to5Mac",
+      "title": "French pharma SaaS startup Biolevate raised a €30M Series A co-led by RAISE France and Orange Ventures, taking its total funding to €36M (Brock E.W. Turner/Axios)",
+      "url": "https://www.axios.com/pro/health-tech-deals/2026/09/21/biolevate-34-million-series-a",
+      "summary": "Brock E.W. Turner / Axios : French pharma SaaS startup Biolevate raised a &euro;30M Series A co-led by RAISE France and Orange Ventures, taking its total funding to &euro;36M &mdash; Biolevate, a French pharma-focused SaaS startup, raised &euro;30 million in Series A funding, CEO Jo&euml;l Belafa tells Axios Pro exclusively.",
+      "description_html": "<A HREF=\"https://www.axios.com/pro/health-tech-deals/2026/09/21/biolevate-34-million-series-a\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260922/i10.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260922/p10#a260922p10\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Brock E.W. Turner / <A HREF=\"https://www.axios.com/\">Axios</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.axios.com/pro/health-tech-deals/2026/09/21/biolevate-34-million-series-a\">French pharma SaaS startup Biolevate raised a &euro;30M Series A co-led by RAISE France and Orange Ventures, taking its total funding to &euro;36M</A></B></SPAN>&nbsp; &mdash;&nbsp; Biolevate, a French pharma-focused SaaS startup, raised &euro;30 million in Series A funding, CEO Jo&euml;l Belafa tells Axios Pro exclusively.</P>",
+      "published_at": "2026-09-22T10:01:15.000Z",
+      "discovery_url": "https://www.techmeme.com/260922/p10",
+      "direct_source_url": "https://www.axios.com/pro/health-tech-deals/2026/09/21/biolevate-34-million-series-a",
+      "publisher": "Brock E.W. Turner/Axios",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
-      "source_rank": 1,
+      "source_rank": 5,
       "collection_mode": "rss",
-      "score": 8.082
-    },
-    {
-      "title": "Tencent launches Hy Image 3.5 Preview, saying during internal testing the image model achieved results on par with ByteDance's Seedream 5.0 Pro (Bloomberg)",
-      "url": "https://www.bloomberg.com/news/articles/2026-09-22/tencent-releases-ai-image-model-to-catch-bytedance-alibaba",
-      "summary": "Bloomberg : Tencent launches Hy Image 3.5 Preview, saying during internal testing the image model achieved results on par with ByteDance's Seedream 5.0 Pro &mdash; Tencent Holdings Ltd. launched its latest and best image-generation model on the same day as rival Alibaba Group Holding Ltd. kicked off its AI conference &hellip;",
-      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-09-22/tencent-releases-ai-image-model-to-catch-bytedance-alibaba\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260922/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260922/p1#a260922p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-09-22/tencent-releases-ai-image-model-to-catch-bytedance-alibaba\">Tencent launches Hy Image 3.5 Preview, saying during internal testing the image model achieved results on par with ByteDance's Seedream 5.0 Pro</A></B></SPAN>&nbsp; &mdash;&nbsp; Tencent Holdings Ltd. launched its latest and best image-generation model on the same day as rival Alibaba Group Holding Ltd. kicked off its AI conference &hellip; </P>",
-      "published_at": "2026-09-22T04:20:01.000Z",
-      "discovery_url": "https://www.techmeme.com/260922/p1",
-      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-09-22/tencent-releases-ai-image-model-to-catch-bytedance-alibaba",
-      "publisher": "Bloomberg",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 2,
-      "collection_mode": "rss",
-      "score": 7.985
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "bcantrill.dtrace.org",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 4,
-      "title": "What Sun got wrong",
-      "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
-      "direct_source_url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
-      "discovery_url": "https://news.ycombinator.com/item?id=49787436",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=49787436",
-      "summary": "",
-      "published_at": "2026-09-21T14:03:18.000Z",
-      "engagement": {
-        "score": 543,
-        "comments": 314
-      },
-      "collection_mode": "api",
-      "score": 7.98
+      "score": 7.718
     },
     {
       "source": "Hacker News",
       "publisher": "science.org",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 8,
+      "source_rank": 7,
       "title": "NASA’s Mars Sample Return mission is dead",
       "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
       "direct_source_url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
@@ -177,105 +245,53 @@
       "summary": "",
       "published_at": "2026-09-21T19:14:12.000Z",
       "engagement": {
-        "score": 346,
-        "comments": 283
+        "score": 401,
+        "comments": 334
       },
       "collection_mode": "api",
-      "score": 7.876
-    },
-    {
-      "title": "Alibaba CEO Eddie Wu says the company plans to train a 5T- to 10T-parameter AI model, as it lays out a sweeping push across AI models, chips, and data centers (Reuters)",
-      "url": "https://www.reuters.com/business/retail-consumer/alibaba-plans-ai-model-with-5-trillion-10-trillion-parameters-unveils-new-chip-2026-09-22/",
-      "summary": "Reuters : Alibaba CEO Eddie Wu says the company plans to train a 5T- to 10T-parameter AI model, as it lays out a sweeping push across AI models, chips, and data centers &mdash; Alibaba Group (9988.HK) plans to train a new artificial intelligence model with 5 trillion to 10 trillion parameters &hellip;",
-      "description_html": "<A HREF=\"https://www.reuters.com/business/retail-consumer/alibaba-plans-ai-model-with-5-trillion-10-trillion-parameters-unveils-new-chip-2026-09-22/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260921/i59.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260921/p59#a260921p59\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/business/retail-consumer/alibaba-plans-ai-model-with-5-trillion-10-trillion-parameters-unveils-new-chip-2026-09-22/\">Alibaba CEO Eddie Wu says the company plans to train a 5T- to 10T-parameter AI model, as it lays out a sweeping push across AI models, chips, and data centers</A></B></SPAN>&nbsp; &mdash;&nbsp; Alibaba Group (9988.HK) plans to train a new artificial intelligence model with 5 trillion to 10 trillion parameters &hellip; </P>",
-      "published_at": "2026-09-22T03:30:01.000Z",
-      "discovery_url": "https://www.techmeme.com/260921/p59",
-      "direct_source_url": "https://www.reuters.com/business/retail-consumer/alibaba-plans-ai-model-with-5-trillion-10-trillion-parameters-unveils-new-chip-2026-09-22/",
-      "publisher": "Reuters",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 3,
-      "collection_mode": "rss",
-      "score": 7.87
+      "score": 7.692
     },
     {
       "source": "Hacker News",
-      "publisher": "twitter.com",
+      "publisher": "bcantrill.dtrace.org",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 7,
-      "title": "Fable 5 – Median thinking declined in August",
-      "url": "https://twitter.com/Lon/status/2101793422487204027",
-      "direct_source_url": "https://twitter.com/Lon/status/2101793422487204027",
-      "discovery_url": "https://news.ycombinator.com/item?id=49789224",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=49789224",
-      "summary": "",
-      "published_at": "2026-09-21T16:13:57.000Z",
-      "engagement": {
-        "score": 374,
-        "comments": 265
-      },
-      "collection_mode": "api",
-      "score": 7.83
-    },
-    {
-      "title": "Alibaba's T-Head unveils the Zhenwu V900 AI accelerator, which it says triples its predecessor's performance and can scale to clusters of up to 500,000 units (Bloomberg)",
-      "url": "https://www.bloomberg.com/news/articles/2026-09-22/alibaba-unveils-ai-chip-to-drive-20gw-of-data-centers-by-2032",
-      "summary": "Bloomberg : Alibaba's T-Head unveils the Zhenwu V900 AI accelerator, which it says triples its predecessor's performance and can scale to clusters of up to 500,000 units &mdash; Alibaba Group Holding Ltd. is rolling out what it calls China's most powerful AI chip, an accelerator to compete with Nvidia Corp &hellip;",
-      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-09-22/alibaba-unveils-ai-chip-to-drive-20gw-of-data-centers-by-2032\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260921/i58.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260921/p58#a260921p58\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-09-22/alibaba-unveils-ai-chip-to-drive-20gw-of-data-centers-by-2032\">Alibaba's T-Head unveils the Zhenwu V900 AI accelerator, which it says triples its predecessor's performance and can scale to clusters of up to 500,000 units</A></B></SPAN>&nbsp; &mdash;&nbsp; Alibaba Group Holding Ltd. is rolling out what it calls China's most powerful AI chip, an accelerator to compete with Nvidia Corp &hellip; </P>",
-      "published_at": "2026-09-22T03:25:00.000Z",
-      "discovery_url": "https://www.techmeme.com/260921/p58",
-      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-09-22/alibaba-unveils-ai-chip-to-drive-20gw-of-data-centers-by-2032",
-      "publisher": "Bloomberg",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 4,
-      "collection_mode": "rss",
-      "score": 7.786
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "support.apple.com",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 9,
-      "title": "Turn off and restrict access to Apple Intelligence features on Mac",
-      "url": "https://support.apple.com/guide/mac-help/turn-restrict-access-apple-intelligence-mchlb2e44f94/mac",
-      "direct_source_url": "https://support.apple.com/guide/mac-help/turn-restrict-access-apple-intelligence-mchlb2e44f94/mac",
-      "discovery_url": "https://news.ycombinator.com/item?id=49790409",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=49790409",
-      "summary": "",
-      "published_at": "2026-09-21T17:30:21.000Z",
-      "engagement": {
-        "score": 267,
-        "comments": 182
-      },
-      "collection_mode": "api",
-      "score": 7.724
-    },
-    {
-      "title": "Source: Xbox plans to lay off hundreds of employees this week in its second major staff cut in 2026, as it also plans to consolidate several of its game studios (Aaron Holmes/The Information)",
-      "url": "https://www.theinformation.com/",
-      "summary": "Aaron Holmes / The Information : Source: Xbox plans to lay off hundreds of employees this week in its second major staff cut in 2026, as it also plans to consolidate several of its game studios &mdash; Xbox is planning to lay off hundreds of employees this week in its second major staff reduction this year, according to someone briefed on the plans.",
-      "description_html": "<P><A HREF=\"https://www.techmeme.com/260921/p57#a260921p57\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Aaron Holmes / <A HREF=\"https://www.theinformation.com/\">The Information</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.theinformation.com/briefings/exclusive-xbox-cut-hundreds-jobs-consolidate-game-studios\">Source: Xbox plans to lay off hundreds of employees this week in its second major staff cut in 2026, as it also plans to consolidate several of its game studios</A></B></SPAN>&nbsp; &mdash;&nbsp; Xbox is planning to lay off hundreds of employees this week in its second major staff reduction this year, according to someone briefed on the plans.</P>",
-      "published_at": "2026-09-22T03:15:01.000Z",
-      "discovery_url": "https://www.techmeme.com/260921/p57",
-      "direct_source_url": "https://www.theinformation.com/",
-      "publisher": "Aaron Holmes/The Information",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
       "source_rank": 5,
+      "title": "What Sun got wrong",
+      "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
+      "direct_source_url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
+      "discovery_url": "https://news.ycombinator.com/item?id=49787436",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=49787436",
+      "summary": "",
+      "published_at": "2026-09-21T14:03:18.000Z",
+      "engagement": {
+        "score": 602,
+        "comments": 350
+      },
+      "collection_mode": "api",
+      "score": 7.636
+    },
+    {
+      "title": "Chinese optical transceiver maker Ligent jumps 19% in its Hong Kong debut, giving it a ~$4.6B market cap, after raising ~$727M, the latest Hong Kong AI IPO (Sangmi Cha/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-21/ligent-technologies-to-debut-after-727-million-in-hong-kong-ipo",
+      "summary": "Sangmi Cha / Bloomberg : Chinese optical transceiver maker Ligent jumps 19% in its Hong Kong debut, giving it a ~$4.6B market cap, after raising ~$727M, the latest Hong Kong AI IPO &mdash; Computing networks maker Ligent Technologies Inc.'s shares rose in their debut on the Hong Kong stock exchange on Tuesday &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-09-21/ligent-technologies-to-debut-after-727-million-in-hong-kong-ipo\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260922/i9.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260922/p9#a260922p9\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Sangmi Cha / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-09-21/ligent-technologies-to-debut-after-727-million-in-hong-kong-ipo\">Chinese optical transceiver maker Ligent jumps 19% in its Hong Kong debut, giving it a ~$4.6B market cap, after raising ~$727M, the latest Hong Kong AI IPO</A></B></SPAN>&nbsp; &mdash;&nbsp; Computing networks maker Ligent Technologies Inc.'s shares rose in their debut on the Hong Kong stock exchange on Tuesday &hellip; </P>",
+      "published_at": "2026-09-22T09:50:00.000Z",
+      "discovery_url": "https://www.techmeme.com/260922/p9",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-09-21/ligent-technologies-to-debut-after-727-million-in-hong-kong-ipo",
+      "publisher": "Sangmi Cha/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
       "collection_mode": "rss",
-      "score": 7.7
+      "score": 7.63
     },
     {
       "source": "Hacker News",
       "publisher": "poloclub.github.io",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 10,
+      "source_rank": 8,
       "title": "Transformers Explained Visually",
       "url": "https://poloclub.github.io/transformer-explainer/",
       "direct_source_url": "https://poloclub.github.io/transformer-explainer/",
@@ -285,89 +301,58 @@
       "summary": "",
       "published_at": "2026-09-21T19:43:49.000Z",
       "engagement": {
-        "score": 280,
-        "comments": 44
+        "score": 444,
+        "comments": 68
       },
       "collection_mode": "api",
-      "score": 7.65
+      "score": 7.592
     },
     {
-      "title": "MiMo-V2.6-Pro ties Grok 4.7 (xHigh) and beats GLM-5.3 (max) on Artificial Analysis' Intelligence Index, making it the benchmark's top-scoring open-weight model (Carl Franzen/VentureBeat)",
-      "url": "https://venturebeat.com/technology/better-than-deepseek-xiaomis-mimo-v2-6-pro-debuts-as-the-top-open-weights-model-in-the-world-alongside-cheaper-v2-6-flash",
-      "summary": "Carl Franzen / VentureBeat : MiMo-V2.6-Pro ties Grok 4.7 (xHigh) and beats GLM-5.3 (max) on Artificial Analysis' Intelligence Index, making it the benchmark's top-scoring open-weight model &mdash; That puts Xiaomi's new flagship ahead of proprietary models including xAI's Grok 4.6, currently at 44, and Google's Gemini 3.8 Flash &hellip;",
-      "description_html": "<A HREF=\"https://venturebeat.com/technology/better-than-deepseek-xiaomis-mimo-v2-6-pro-debuts-as-the-top-open-weights-model-in-the-world-alongside-cheaper-v2-6-flash\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260921/i56.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260921/p56#a260921p56\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Carl Franzen / <A HREF=\"https://venturebeat.com/\">VentureBeat</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://venturebeat.com/technology/better-than-deepseek-xiaomis-mimo-v2-6-pro-debuts-as-the-top-open-weights-model-in-the-world-alongside-cheaper-v2-6-flash\">MiMo-V2.6-Pro ties Grok 4.7 (xHigh) and beats GLM-5.3 (max) on Artificial Analysis' Intelligence Index, making it the benchmark's top-scoring open-weight model</A></B></SPAN>&nbsp; &mdash;&nbsp; That puts Xiaomi's new flagship ahead of proprietary models including xAI's Grok 4.6, currently at 44, and Google's Gemini 3.8 Flash &hellip; </P>",
-      "published_at": "2026-09-22T02:15:00.000Z",
-      "discovery_url": "https://www.techmeme.com/260921/p56",
-      "direct_source_url": "https://venturebeat.com/technology/better-than-deepseek-xiaomis-mimo-v2-6-pro-debuts-as-the-top-open-weights-model-in-the-world-alongside-cheaper-v2-6-flash",
-      "publisher": "Carl Franzen/VentureBeat",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 6,
-      "collection_mode": "rss",
-      "score": 7.578
-    },
-    {
-      "title": "Shopify plans to allow Meta's Muse to complete purchases on behalf of users at Shopify-powered stores via its one-tap checkout service Shop Pay (Kelly Cloonan/Wall Street Journal)",
-      "url": "https://www.wsj.com/tech/shopify-to-use-metas-muse-for-agentic-checkout-d23947c0",
-      "summary": "Kelly Cloonan / Wall Street Journal : Shopify plans to allow Meta's Muse to complete purchases on behalf of users at Shopify-powered stores via its one-tap checkout service Shop Pay &mdash; Shopify plans to allow Meta's personal AI agent to complete purchases on behalf of users with the e-commerce platform's roster of stores",
-      "description_html": "<A HREF=\"https://www.wsj.com/tech/shopify-to-use-metas-muse-for-agentic-checkout-d23947c0\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260921/i55.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260921/p55#a260921p55\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Kelly Cloonan / <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/tech/shopify-to-use-metas-muse-for-agentic-checkout-d23947c0\">Shopify plans to allow Meta's Muse to complete purchases on behalf of users at Shopify-powered stores via its one-tap checkout service Shop Pay</A></B></SPAN>&nbsp; &mdash;&nbsp; Shopify plans to allow Meta's personal AI agent to complete purchases on behalf of users with the e-commerce platform's roster of stores</P>",
-      "published_at": "2026-09-21T23:55:00.000Z",
-      "discovery_url": "https://www.techmeme.com/260921/p55",
-      "direct_source_url": "https://www.wsj.com/tech/shopify-to-use-metas-muse-for-agentic-checkout-d23947c0",
-      "publisher": "Kelly Cloonan/Wall Street Journal",
+      "title": "Apple unveils Apple Music Hall, a 600-person live music venue built in its London headquarters at Battersea Power Station with two recording and mixing studios (David Phelan/Forbes)",
+      "url": "https://www.forbes.com/sites/davidphelan/2026/09/22/apple-music-hall-revealed-1st-look-inside-apples-new-music-venue-at-london-hq/",
+      "summary": "David Phelan / Forbes : Apple unveils Apple Music Hall, a 600-person live music venue built in its London headquarters at Battersea Power Station with two recording and mixing studios &mdash; This voice experience is generated by AI. Learn more. &hellip; Apple has just announced a new live music venue, built into its London headquarters at Battersea Power Station.",
+      "description_html": "<A HREF=\"https://www.forbes.com/sites/davidphelan/2026/09/22/apple-music-hall-revealed-1st-look-inside-apples-new-music-venue-at-london-hq/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260922/i8.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260922/p8#a260922p8\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> David Phelan / <A HREF=\"http://www.forbes.com/\">Forbes</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.forbes.com/sites/davidphelan/2026/09/22/apple-music-hall-revealed-1st-look-inside-apples-new-music-venue-at-london-hq/\">Apple unveils Apple Music Hall, a 600-person live music venue built in its London headquarters at Battersea Power Station with two recording and mixing studios</A></B></SPAN>&nbsp; &mdash;&nbsp; This voice experience is generated by AI.&nbsp; Learn more. &hellip; Apple has just announced a new live music venue, built into its London headquarters at Battersea Power Station.</P>",
+      "published_at": "2026-09-22T08:30:00.000Z",
+      "discovery_url": "https://www.techmeme.com/260922/p8",
+      "direct_source_url": "https://www.forbes.com/sites/davidphelan/2026/09/22/apple-music-hall-revealed-1st-look-inside-apples-new-music-venue-at-london-hq/",
+      "publisher": "David Phelan/Forbes",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 7,
       "collection_mode": "rss",
-      "score": 7.401
+      "score": 7.495
     },
     {
-      "title": "A researcher says a flaw in Meta's Muse Mac app lets any app or terminal command access users' Muse authentication tokens; Meta says it issued a hotfix (Dan Goodin/Ars Technica)",
-      "url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/",
-      "summary": "Dan Goodin / Ars Technica : A researcher says a flaw in Meta's Muse Mac app lets any app or terminal command access users' Muse authentication tokens; Meta says it issued a hotfix &mdash; Meta founder and CEO Mark Zuckerberg has gone to great lengths to hype the security of its new AI assistant Muse, claiming it is &ldquo;built from the ground up for privacy and security.&rdquo;",
-      "description_html": "<A HREF=\"https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260921/i54.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260921/p54#a260921p54\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Dan Goodin / <A HREF=\"https://arstechnica.com/\">Ars Technica</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/\">A researcher says a flaw in Meta's Muse Mac app lets any app or terminal command access users' Muse authentication tokens; Meta says it issued a hotfix</A></B></SPAN>&nbsp; &mdash;&nbsp; Meta founder and CEO Mark Zuckerberg has gone to great lengths to hype the security of its new AI assistant Muse, claiming it is &ldquo;built from the ground up for privacy and security.&rdquo;</P>",
-      "published_at": "2026-09-21T23:00:01.000Z",
-      "discovery_url": "https://www.techmeme.com/260921/p54",
-      "direct_source_url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/",
-      "publisher": "Dan Goodin/Ars Technica",
+      "title": "Sources: Polymarket is lobbying regulators in London, Brussels, and across the EU to be governed by financial services laws rather than local gambling rules (Financial Times)",
+      "url": "https://www.ft.com/content/ec52d0ab-3f68-476f-b308-b8e682d9c75b",
+      "summary": "Financial Times : Sources: Polymarket is lobbying regulators in London, Brussels, and across the EU to be governed by financial services laws rather than local gambling rules &mdash; US prediction markets platform is seeking to be regulated as a financial services firm rather than under a patchwork of gambling legislation",
+      "description_html": "<A HREF=\"https://www.ft.com/content/ec52d0ab-3f68-476f-b308-b8e682d9c75b\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260922/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260922/p7#a260922p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/ec52d0ab-3f68-476f-b308-b8e682d9c75b\">Sources: Polymarket is lobbying regulators in London, Brussels, and across the EU to be governed by financial services laws rather than local gambling rules</A></B></SPAN>&nbsp; &mdash;&nbsp; US prediction markets platform is seeking to be regulated as a financial services firm rather than under a patchwork of gambling legislation</P>",
+      "published_at": "2026-09-22T08:10:14.000Z",
+      "discovery_url": "https://www.techmeme.com/260922/p7",
+      "direct_source_url": "https://www.ft.com/content/ec52d0ab-3f68-476f-b308-b8e682d9c75b",
+      "publisher": "Financial Times",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 8,
       "collection_mode": "rss",
-      "score": 7.282
+      "score": 7.401
     },
     {
-      "title": "Wall St Week Ahead Investors focus on rate path, AI slowdown after Fed hike",
-      "url": "https://www.reuters.com/business/wall-st-week-ahead-investors-focus-rate-path-ai-slowdown-after-fed-hike-2026-09-18/",
+      "title": "Stoxx 600 sale su rally tech, calo greggio smorza tensioni",
+      "url": "https://www.reuters.com/it/azienda/stoxx-600-sale-su-rally-tech-calo-greggio-smorza-tensioni-2026-09-21/",
       "summary": "",
-      "published_at": "2026-09-21T07:14:57.644Z",
+      "published_at": "2026-09-21T08:39:45.594Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 3,
-      "direct_source_url": "https://www.reuters.com/business/wall-st-week-ahead-investors-focus-rate-path-ai-slowdown-after-fed-hike-2026-09-18/",
-      "discovery_url": "https://www.reuters.com/business/wall-st-week-ahead-investors-focus-rate-path-ai-slowdown-after-fed-hike-2026-09-18/",
+      "direct_source_url": "https://www.reuters.com/it/azienda/stoxx-600-sale-su-rally-tech-calo-greggio-smorza-tensioni-2026-09-21/",
+      "discovery_url": "https://www.reuters.com/it/azienda/stoxx-600-sale-su-rally-tech-calo-greggio-smorza-tensioni-2026-09-21/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 6.976
-    },
-    {
-      "title": "Bessent proposes US-China AI safety notifications in talks with Chinese vice premier",
-      "url": "https://www.reuters.com/business/finance/us-treasurys-bessent-chinas-he-launch-talks-ai-trade-critical-minerals-2026-09-20/",
-      "summary": "",
-      "published_at": "2026-09-21T10:24:49.830Z",
-      "source": "Reuters",
-      "publisher": "Reuters",
-      "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 5,
-      "direct_source_url": "https://www.reuters.com/business/finance/us-treasurys-bessent-chinas-he-launch-talks-ai-trade-critical-minerals-2026-09-20/",
-      "discovery_url": "https://www.reuters.com/business/finance/us-treasurys-bessent-chinas-he-launch-talks-ai-trade-critical-minerals-2026-09-20/",
-      "link_quality": "original",
-      "collection_mode": "sitemap",
-      "score": 6.948
+      "score": 6.771
     },
     {
       "title": "Prysmian, Rio Tinto partner to bring low-carbon aluminum to Amazon data center",
@@ -382,37 +367,40 @@
       "discovery_url": "https://www.reuters.com/technology/prysmian-rio-tinto-partner-bring-low-carbon-aluminum-amazon-data-center-2026-09-18/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 6.939
+      "score": 6.675
     },
     {
-      "title": "Settore tech sostiene mercati, greggio scende",
-      "url": "https://www.reuters.com/it/azienda/settore-tech-sostiene-mercati-greggio-scende-2026-09-21/",
+      "title": "AI gains' distribution will shape inflation, ECB's Panetta says",
+      "url": "https://www.reuters.com/business/finance/ai-gains-distribution-will-shape-inflation-ecbs-panetta-says-2026-09-21/",
       "summary": "",
-      "published_at": "2026-09-21T07:11:45.607Z",
+      "published_at": "2026-09-21T08:08:00.063Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 4,
-      "direct_source_url": "https://www.reuters.com/it/azienda/settore-tech-sostiene-mercati-greggio-scende-2026-09-21/",
-      "discovery_url": "https://www.reuters.com/it/azienda/settore-tech-sostiene-mercati-greggio-scende-2026-09-21/",
+      "direct_source_url": "https://www.reuters.com/business/finance/ai-gains-distribution-will-shape-inflation-ecbs-panetta-says-2026-09-21/",
+      "discovery_url": "https://www.reuters.com/business/finance/ai-gains-distribution-will-shape-inflation-ecbs-panetta-says-2026-09-21/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 6.894
+      "score": 6.669
     },
     {
-      "title": "Meta data center boosts Alberta appeal for hyperscalers, Capital Power says",
-      "url": "https://www.reuters.com/legal/litigation/meta-data-center-boosts-alberta-appeal-hyperscalers-capital-power-says-2026-09-21/",
-      "summary": "",
-      "published_at": "2026-09-21T10:20:12.098Z",
-      "source": "Reuters",
-      "publisher": "Reuters",
-      "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 6,
-      "direct_source_url": "https://www.reuters.com/legal/litigation/meta-data-center-boosts-alberta-appeal-hyperscalers-capital-power-says-2026-09-21/",
-      "discovery_url": "https://www.reuters.com/legal/litigation/meta-data-center-boosts-alberta-appeal-hyperscalers-capital-power-says-2026-09-21/",
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "Document Retrieval-Aware Chunking (D-RAC): Universal Retrieval-Aware Ingestion of Enterprise Documents via PDF Normalization and Multimodal Markdown Conversion",
+      "url": "https://huggingface.co/papers/2609.24220",
+      "direct_source_url": "https://huggingface.co/papers/2609.24220",
+      "discovery_url": "https://huggingface.co/papers/2609.24220",
       "link_quality": "original",
-      "collection_mode": "sitemap",
-      "score": 6.865
+      "summary": "Retrieval-Augmented Generation (RAG) systems over enterprise knowledge bases must ingest heterogeneous document formats -- PDFs, Word documents, presentations, and scans -- whose content is locked inside complex visual layouts, multi-column pages, and dense tables. Rule-based extraction and OCR destroy reading order, flatten tables, and lose heading hierarchy, while fully agentic chunking over extracted text incurs high token costs and hallucination risk. We present Document Retrieval-Aware Chunking (D-RAC), an extension of our Web Retrieval-Aware Chunking (W-RAC) framework to arbitrary document formats. D-RAC first normalizes any input document into PDF, exploiting the fact that virtually every format has a faithful, deterministic PDF rendering. A single multimodal LLM pass then converts rendered pages into retrieval-optimized Markdown -- rewriting tables as self-contained prose statements and preserving heading hierarchy -- after which chunking proceeds exactly as in W-RAC: deterministic parsing into ID-addressable units followed by lightweight LLM-based chunk planning over identifiers rather than text. Source text is never regenerated during chunking, preserving W-RAC's cost, de",
+      "published_at": "2026-09-20T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 38
+      },
+      "collection_mode": "api",
+      "score": 6.616
     },
     {
       "title": "Democrats try to ride data center backlash to election victory in rural US Midwest",
@@ -427,61 +415,145 @@
       "discovery_url": "https://www.reuters.com/legal/government/democrats-try-ride-data-center-backlash-election-victory-rural-us-midwest-2026-09-19/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 6.845
+      "score": 6.581
     },
     {
-      "title": "Ai minimi ultimi 11 giorni su speranze diplomazia Usa-Iran ed export saudita",
-      "url": "https://www.reuters.com/it/azienda/ai-minimi-ultimi-11-giorni-su-speranze-diplomazia-usa-iran-ed-export-saudita-2026-09-21/",
+      "title": "Wall St Week Ahead Investors focus on rate path, AI slowdown after Fed hike",
+      "url": "https://www.reuters.com/business/wall-st-week-ahead-investors-focus-rate-path-ai-slowdown-after-fed-hike-2026-09-18/",
       "summary": "",
-      "published_at": "2026-09-21T10:18:33.177Z",
+      "published_at": "2026-09-21T07:14:57.644Z",
+      "source": "Reuters",
+      "publisher": "Reuters",
+      "source_home": "https://www.reuters.com/technology/",
+      "source_rank": 5,
+      "direct_source_url": "https://www.reuters.com/business/wall-st-week-ahead-investors-focus-rate-path-ai-slowdown-after-fed-hike-2026-09-18/",
+      "discovery_url": "https://www.reuters.com/business/wall-st-week-ahead-investors-focus-rate-path-ai-slowdown-after-fed-hike-2026-09-18/",
+      "link_quality": "original",
+      "collection_mode": "sitemap",
+      "score": 6.553
+    },
+    {
+      "title": "Bessent proposes US-China AI safety notifications in talks with Chinese vice premier",
+      "url": "https://www.reuters.com/business/finance/us-treasurys-bessent-chinas-he-launch-talks-ai-trade-critical-minerals-2026-09-20/",
+      "summary": "",
+      "published_at": "2026-09-21T10:24:49.830Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 7,
-      "direct_source_url": "https://www.reuters.com/it/azienda/ai-minimi-ultimi-11-giorni-su-speranze-diplomazia-usa-iran-ed-export-saudita-2026-09-21/",
-      "discovery_url": "https://www.reuters.com/it/azienda/ai-minimi-ultimi-11-giorni-su-speranze-diplomazia-usa-iran-ed-export-saudita-2026-09-21/",
+      "direct_source_url": "https://www.reuters.com/business/finance/us-treasurys-bessent-chinas-he-launch-talks-ai-trade-critical-minerals-2026-09-20/",
+      "discovery_url": "https://www.reuters.com/business/finance/us-treasurys-bessent-chinas-he-launch-talks-ai-trade-critical-minerals-2026-09-20/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 6.784
+      "score": 6.524
     },
     {
-      "title": "Pope Leo calls for AI systems that don't foster divisions",
-      "url": "https://www.reuters.com/technology/pope-leo-calls-ai-systems-that-dont-foster-divisions-2026-09-21/",
+      "title": "Settore tech sostiene mercati, greggio scende",
+      "url": "https://www.reuters.com/it/azienda/settore-tech-sostiene-mercati-greggio-scende-2026-09-21/",
       "summary": "",
-      "published_at": "2026-09-21T10:09:38.106Z",
+      "published_at": "2026-09-21T07:11:45.607Z",
+      "source": "Reuters",
+      "publisher": "Reuters",
+      "source_home": "https://www.reuters.com/technology/",
+      "source_rank": 6,
+      "direct_source_url": "https://www.reuters.com/it/azienda/settore-tech-sostiene-mercati-greggio-scende-2026-09-21/",
+      "discovery_url": "https://www.reuters.com/it/azienda/settore-tech-sostiene-mercati-greggio-scende-2026-09-21/",
+      "link_quality": "original",
+      "collection_mode": "sitemap",
+      "score": 6.47
+    },
+    {
+      "title": "Meta data center boosts Alberta appeal for hyperscalers, Capital Power says",
+      "url": "https://www.reuters.com/legal/litigation/meta-data-center-boosts-alberta-appeal-hyperscalers-capital-power-says-2026-09-21/",
+      "summary": "",
+      "published_at": "2026-09-21T10:20:12.098Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 8,
-      "direct_source_url": "https://www.reuters.com/technology/pope-leo-calls-ai-systems-that-dont-foster-divisions-2026-09-21/",
-      "discovery_url": "https://www.reuters.com/technology/pope-leo-calls-ai-systems-that-dont-foster-divisions-2026-09-21/",
+      "direct_source_url": "https://www.reuters.com/legal/litigation/meta-data-center-boosts-alberta-appeal-hyperscalers-capital-power-says-2026-09-21/",
+      "discovery_url": "https://www.reuters.com/legal/litigation/meta-data-center-boosts-alberta-appeal-hyperscalers-capital-power-says-2026-09-21/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 6.697
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 2,
-      "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
-      "url": "https://huggingface.co/papers/2609.24974",
-      "direct_source_url": "https://huggingface.co/papers/2609.24974",
-      "discovery_url": "https://huggingface.co/papers/2609.24974",
-      "link_quality": "original",
-      "summary": "Agent harnesses, the external systems that mediate model-environment interaction, can substantially improve agent performance, but their gains remain tied to the harness at deployment. Because the best harness varies across domains, instances, and models, a general-purpose agent must either settle for a suboptimal shared harness or route among an ever-growing set of specialized ones. We therefore study agent harness distillation: using a domain- or instance-optimized harness as training-time guidance and transferring the behaviors it induces into model weights, so that its gains survive under a single fixed target harness. The challenge is that the two harnesses differ in action space and available information, so guidance from the optimized harness cannot serve directly as supervision for the target one. We introduce Harness-Zero, which enables harness distillation through agent-as-harness. Guided by the optimized harness, a harnessing agent corrects student responses before execution in the target harness's action space, turning harness guidance into training demonstrations. Fine-tuning on the resulting trajectories internalizes harness-induced behavior into the model, so the spe",
-      "published_at": "2026-09-20T20:00:00.000Z",
-      "engagement": {
-        "upvotes": 9
-      },
-      "collection_mode": "api",
-      "score": 6.437
+      "score": 6.441
     },
     {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
       "source_rank": 1,
+      "title": "Streaming Video Editing with Easy Adaptation",
+      "url": "https://huggingface.co/papers/2609.24788",
+      "direct_source_url": "https://huggingface.co/papers/2609.24788",
+      "discovery_url": "https://huggingface.co/papers/2609.24788",
+      "link_quality": "original",
+      "summary": "In this paper, we propose SVEET, a framework that requires merely training on a pretrained bidirectional video diffusion model but supports high-quality streaming video editing in an auto-regressive fashion. To tackle this problem, we first systematically revisit existing video-to-video diffusion approaches and identify two key principles for such streaming adaptation: backbone feature disentanglement and conditional frame independence. Building on these insights, we develop a novel paradigm for controllable video generation. At its core, an auxiliary model branch encodes source video inputs with temporally independent self-attention, and the intermediate features are injected into the corresponding backbone blocks for streaming-compatible control. Moreover, to bridge the discrepancy between the feature spaces of bidirectional and streaming models, we propose a decoupled training scheme that explicitly enforces the orthogonality between the optimization directions of video controllability and model causality. Such disentanglement ensures compatibility between the two objectives at inference and facilitates smooth zero-shot knowledge transfer across heterogeneous backbone architectu",
+      "published_at": "2026-09-20T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 4
+      },
+      "collection_mode": "api",
+      "score": 6.249
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 6,
+      "title": "OmniEdu: Open Foundation Models for Learning and Teaching",
+      "url": "https://huggingface.co/papers/2609.23088",
+      "direct_source_url": "https://huggingface.co/papers/2609.23088",
+      "discovery_url": "https://huggingface.co/papers/2609.23088",
+      "link_quality": "original",
+      "summary": "Educational foundation models must solve problems, understand curriculum structure, diagnose learner difficulties, and provide appropriate instructional support. Existing educational language models often focus on either problem solving or tutoring, with training mixtures organized by source or task rather than capability. We present OmniEdu, an open family of foundation models for K-12 learning and teaching. Its instruction-tuning corpus combines over 100 educational resources and general instruction sources, organized around four capabilities: subject competence, curriculum grounding, diagnostic reasoning, and pedagogical action and scaffolding. Our pipeline integrates deterministic cleaning, semantic auditing and rewriting, task-specific quality scoring, token-budgeted diversity selection, and pedagogical instruction assignment. It yields 69,999 examples and 15.96M supervised response tokens, including 60,951 education-specific examples. We fine-tune 4B, 9B, and 27B models and evaluate curriculum grounding, K-12 problem solving, and pedagogical tutoring, alongside general capability. Education-oriented tuning consistently improves all three educational benchmark groups across mo",
+      "published_at": "2026-09-18T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 25
+      },
+      "collection_mode": "api",
+      "score": 6.207
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Deep Persona: A Psychologically Grounded Architecture and Evaluation Framework for Role-Playing Agents and Simulations",
+      "url": "https://huggingface.co/papers/2609.22255",
+      "direct_source_url": "https://huggingface.co/papers/2609.22255",
+      "discovery_url": "https://huggingface.co/papers/2609.22255",
+      "link_quality": "original",
+      "summary": "Existing approaches to persona simulation with Large Language Models (LLMs) mostly rely on shallow character descriptions that fail to sustain coherent character behavior across extended interactions. We introduce Deep Persona, a psychologically grounded, three-layered architecture that organizes personas into hierarchical levels of observable expression, latent beliefs, and core motivational drives, for constructing highly convincing role-playing agents. Governed by the principles of scripted determinism and bounded agency, the architecture restricts the model to a reactive engine guided by a structured internal script. We further propose a reference-free evaluation framework that benchmarks dialogue naturalness against empirical human distributions using established psychological clinical instruments and adversarial stress-tests. Empirical evaluation reveals that while LLMs achieve high pragmatic fluency, they exhibit systematic limitations in emotional expression and joint attention. In addition, we present a case study of two Deep Personas and evaluate them using the proposed framework, demonstrating that structured personas can produce interactions that more closely align with",
+      "published_at": "2026-09-05T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 11
+      },
+      "collection_mode": "api",
+      "score": 6.2
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies",
+      "url": "https://huggingface.co/papers/2609.24118",
+      "direct_source_url": "https://huggingface.co/papers/2609.24118",
+      "discovery_url": "https://huggingface.co/papers/2609.24118",
+      "link_quality": "original",
+      "summary": "Vision-Language-Action (VLA) policies achieve strong performance in robotic manipulation but remain brittle once execution deviates from nominal trajectories. We propose CARE (Corrective Atomic Robotic Execution), a framework that improves recovery by learning from failures encountered during execution. Instead of generating corrective data from manually designed or random perturbations, CARE collects failed rollouts, models stage-conditioned post-failure deviations, and uses the resulting empirical distributions to synthesize representative failure states and corrective demonstrations. At inference time, CARE combines stage-wise planning with physically grounded 3D monitoring to trigger atomic adjustments or re-operations while preserving task progress. We further introduce the Failure State Recovery Benchmark (FSR-Bench), which evaluates recovery from intermediate failure states under local deviations and structural anomalies. Experiments across multiple VLA backbones, simulation benchmarks, and real-world dual-arm tasks show consistent improvements, with average task-success gains of 14.5 points in simulation and 15.9 points in the real world. Code, models, and data are availabl",
+      "published_at": "2026-09-20T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 10
+      },
+      "collection_mode": "api",
+      "score": 6.101
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 8,
       "title": "onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction",
       "url": "https://huggingface.co/papers/2609.24983",
       "direct_source_url": "https://huggingface.co/papers/2609.24983",
@@ -490,82 +562,10 @@
       "summary": "We present onPanda, an interactive tool for efficiently annotating LLM alignment data and agent trajectories. onPanda adopts token-level correction as its core interaction: while reading a model response, the annotator locates the first inappropriate token and either picks a substitute from the model's candidate tokens or types the correct text via free-form editing. The system then truncates everything after that position and continues generation from the corrected prefix, repeating this locate-correct-continue loop until a satisfactory response is obtained. This mechanism lets annotators precisely steer model outputs at low cost: a small controlled study suggests that onPanda reduces median annotation time by 52% over manual post-editing. Since the vast majority of tokens in the final response are generated by the model itself, the resulting data largely preserves the model's sampling distribution and is well suited for constructing on-policy SFT and preference data. Furthermore, the token-level corrections recorded during annotation provide fine-grained supervision with precise positions and naturally paired positive--negative samples. onPanda also connects to external tools and",
       "published_at": "2026-09-20T20:00:00.000Z",
       "engagement": {
-        "upvotes": 2
+        "upvotes": 21
       },
       "collection_mode": "api",
-      "score": 6.256
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 4,
-      "title": "Grounded Action Model: 3D Grounding as a Foundation for Robotics",
-      "url": "https://huggingface.co/papers/2609.23863",
-      "direct_source_url": "https://huggingface.co/papers/2609.23863",
-      "discovery_url": "https://huggingface.co/papers/2609.23863",
-      "link_quality": "original",
-      "summary": "Manipulation policies must know which objects matter and where they are, yet the pretrained backbones that current robot foundation models build on, from language in vision-language-action models (VLAs) to video generation in world-action models (WAMs), do not directly require this metric grounding, leaving it to be learned implicitly from robot demonstrations. We propose Grounded Action Models (GAMs), a new paradigm of robot foundation models built with 3D grounding. GAM can be conditioned using language, points, or box prompts, which are first transformed into a shared object-centric representation of the selected objects. This representation captures target-focused visual features and metric object geometry, which is mixed with robot state history through a multi-stream transformer to predict action chunks. Although GAMs can be run autonomously, they can also serve as a low-level controller that a high-level planner controls using its various input modalities, allowing for long-horizon and memory-dependent manipulation. On RoboTwin 2.0, GAM achieves an average success rate of 55.3% across 50 tasks (vs. 52.0% for Spatial Forcing), including 47.6% under scene randomization (vs. 30",
-      "published_at": "2026-09-19T20:00:00.000Z",
-      "engagement": {
-        "upvotes": 10
-      },
-      "collection_mode": "api",
-      "score": 6.181
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 5,
-      "title": "GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay",
-      "url": "https://huggingface.co/papers/2609.25001",
-      "direct_source_url": "https://huggingface.co/papers/2609.25001",
-      "discovery_url": "https://huggingface.co/papers/2609.25001",
-      "link_quality": "original",
-      "summary": "Modern video games provide a measurable testbed for AI models, combining abilities of visual understanding, instruction decomposition, goal planning, and precise action control over multiple temporal horizons. Existing datasets and benchmarks, however, either cover a narrow range of games, lack language instructions, or rely on high-variance online rollouts. To address these challenges, we introduce GameHorizon, a unified data and evaluation suite that measures gameplay capabilities at different horizons for diverse model families. GameHorizon Suite consists of three components. First, GameHorizon-Annotator is a scalable and automated annotation pipeline for multi-horizon instructions. Second, utilizing the pipeline, we construct GameHorizon-Data, the first large-scale AAA gameplay dataset with temporally aligned videos, player actions, and multi-horizon instructions. It comprises 5,000 hours of recordings from 21 games, collected by 100 human expert players. Third, we build GameHorizon-Bench with reproducible offline and stepwise online testing. The offline track enables reproducible evaluation using thousands of standardized questions organized into three primary tasks and a seri",
-      "published_at": "2026-09-20T20:00:00.000Z",
-      "engagement": {
-        "upvotes": 7
-      },
-      "collection_mode": "api",
-      "score": 6.149
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 10,
-      "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
-      "url": "https://huggingface.co/papers/2609.24972",
-      "direct_source_url": "https://huggingface.co/papers/2609.24972",
-      "discovery_url": "https://huggingface.co/papers/2609.24972",
-      "link_quality": "original",
-      "summary": "An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasingly automate this process by iteratively proposing and selecting component-wise edits of an agent harness, practically establishing a form of recursive self-improvement (RSI) at the agent-system level. However, such recursive evolution may overfit by memorizing the training tasks, showing large in-distribution gains that shrink or even vanish on out-of-distribution benchmarks. We introduce Regularized Recursive Self-Improvement of Agent Harnesses (RRSI), which incorporates the principles of regularizations into harness self-improvement by constraining the evolution candidate proposal and selection. The proposer operates with a temporally annealed budget, limiting how many edits a candidate can bundle, and it encourages unexplored trajectories based on evolution history. The selector is equipped with a critic and a pruner: the critic screens benchmark-specific proposals, while the pruner, removes changes that are too small, too expensive, or no longer useful. Together these constraints",
-      "published_at": "2026-09-20T20:00:00.000Z",
-      "engagement": {
-        "upvotes": 51
-      },
-      "collection_mode": "api",
-      "score": 6.097
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 7,
-      "title": "VideoGen-Agent: Reinforcing Video Generation Agents",
-      "url": "https://huggingface.co/papers/2609.24997",
-      "direct_source_url": "https://huggingface.co/papers/2609.24997",
-      "discovery_url": "https://huggingface.co/papers/2609.24997",
-      "link_quality": "original",
-      "summary": "Recent advances in video generative models have enabled high-fidelity, temporally coherent video generation. However, these models often struggle to satisfy prompts requiring specialized knowledge, specific identities, physical consistency, or ordered events. In this paper, we present VideoGen-Agent, a multimodal agent trained through multitask agentic reinforcement learning to use external tools for video generation. The agent coordinates augmentation, generation, and verification tools through multi-turn interactions, using the prompt and intermediate observations to guide its decisions. We train a shared policy on a category-balanced dataset spanning six tasks. Supervised fine-tuning on teacher-generated trajectories establishes tool-use behavior, which is then refined through reinforcement learning. A category-aware hybrid reward evaluates tool-call validity, task-appropriate tool use, and generated video quality. We further introduce VABench, a held-out benchmark of 600 prompts covering procedural knowledge, single- and multi-entity identity preservation, physical consistency, scene composition, and multi-shot temporal structure. On VABench, VideoGen-Agent improves over its ba",
-      "published_at": "2026-09-20T20:00:00.000Z",
-      "engagement": {
-        "upvotes": 12
-      },
-      "collection_mode": "api",
-      "score": 6.094
+      "score": 6.011
     }
   ]
 }

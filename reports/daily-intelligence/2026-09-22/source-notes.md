@@ -1,5 +1,5 @@
-# Sources for Alibaba’s AI roadmap: models, chips and 20GW of cloud capacity
+# Sources for The human cost of AI safety
 
-- [Reuters: Alibaba CEO Eddie Wu says the company plans to train a 5T- to 10T-parameter AI model, as it lays out a sweeping push across AI models, chips, and data centers (Reuters)](https://www.reuters.com/business/retail-consumer/alibaba-plans-ai-model-with-5-trillion-10-trillion-parameters-unveils-new-chip-2026-09-22/)
+- [Financial Times: Sources: multiple staff at the UK's AISI have been signed off work with stress, as tight model release schedules and AI fears lead to low morale and burnout (Financial Times)](https://www.ft.com/content/60870960-f433-48ca-bc2c-708686a69ae7)
 - Daily Brief date: 2026-09-22
 - Confidence: 0.95

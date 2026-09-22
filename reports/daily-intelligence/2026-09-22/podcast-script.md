@@ -1,23 +1,19 @@
-# Alibaba’s AI roadmap: models, chips and 20GW of cloud capacity
+# The human cost of AI safety
 
-Alibaba has outlined plans for a 5-to-10-trillion-parameter model, more than 20GW of cloud data-centre capacity by 2032 and a new in-house accelerator. This episode separates the roadmap from what has already been delivered.
+Researchers at the UK AI Safety Institute are facing severe burnout, raising questions about the sustainability of current AI oversight.
 
-## What Alibaba actually announced
+## The reality behind the headlines
 
-The model plan is for a system in the five-to-ten-trillion-parameter range, succeeding Alibaba’s current generation. That does not mean a ten-trillion-parameter model exists today. It is a development goal. On infrastructure, Eddie Wu said Alibaba Cloud aims for global data-centre capacity to exceed twenty gigawatts by 2032. The company is therefore describing expansion across both the software and physical sides of AI.
+According to reports from the Financial Times, multiple researchers at the UK AI Safety Institute have been signed off on medical leave due to extreme stress. This isn't just a case of a busy office; it is a direct consequence of the relentless pace at which frontier AI models are being developed. These teams are working within incredibly tight testing windows, trying to keep up with rapid capability leaps that seem to accelerate every time they turn around.
 
-## The Zhenwu V900
+## A grim irony
 
-Alibaba also introduced the Zhenwu V900 AI accelerator through its T-Head semiconductor unit. Alibaba says the chip delivers three times the performance of its predecessor and expects mass production in early 2027. That performance figure is a company claim rather than an independent benchmark result, so the useful milestones will be production volume, deployment and measured performance once the hardware is operating at scale.
+There is a certain dark irony here that is hard to ignore. We have built a regulatory framework designed to prevent AI-induced catastrophe, yet the people responsible for that work are being pushed to their own breaking points by the very speed of the technology they are trying to contain. It is a bit like asking a bomb disposal squad to work at double speed while the timer on the device keeps ticking faster.
 
-## Why the full stack matters
+## Why the cracks matter
 
-Taken together, the announcements show Alibaba trying to coordinate models, accelerators and cloud infrastructure rather than treating them as separate projects. Greater control of those layers could give the company more flexibility over how it deploys AI workloads. But it would be premature to call that compute independence. Alibaba still has to manufacture hardware, expand data-centre capacity and work through supply constraints.
+This matters because the safety of the most powerful AI models we have is only as good as the people testing them. If the regulators are exhausted, morale is low, and the pressure is constant, the quality and thoroughness of those safety assessments are bound to suffer. We are relying on these experts to spot the flaws that could have real-world consequences, and a burnt-out team is rarely a team that can perform at its best.
 
-## The execution risk
+## The uncertainty of the workload
 
-Alibaba has acknowledged that supply-chain bottlenecks remain a constraint. That is important because a roadmap measured in gigawatts depends on far more than a model specification. The announced chip has to reach mass production, infrastructure has to be built and equipped, and the capacity target has to translate into usable computing resources. The scale of the plan is clear; the pace and economics of delivery are not. The company’s stated ambition therefore needs to be read alongside those dependencies. A large parameter count can describe model scale, while gigawatts describe infrastructure capacity; neither measure on its own tells us how capable, efficient or commercially useful the resulting services will be.
-
-## What to watch
-
-The next useful evidence will be concrete rather than promotional: whether Zhenwu V900 reaches mass production on schedule, how widely it is deployed, what independent performance data emerges, and whether Alibaba reports measurable progress toward its 2032 capacity target. Those milestones will show how much of today’s vertically integrated roadmap becomes operating infrastructure.
+What remains unclear is how the Institute plans to adjust its operations to handle this. We know the staff are struggling, but we don't know if there is a plan to extend those testing windows or if the pressure is simply expected to continue. The gap between the speed of AI development and the speed of human oversight is widening, and right now, the humans are the ones paying the price.

@@ -49,6 +49,9 @@ for (const item of config.puzzles) {
   assert(player.includes(item.source), `player routing is missing source for ${item.slug}`);
   assert(redirects.includes(`/puzzle-source/${item.slug}/* ${item.source}:splat 200`), `same-origin proxy is missing for ${item.slug}`);
 }
+for (const item of config.otherGames || []) {
+  assert(hub.includes(`href="${item.source}"`), `other-game hub link is missing direct source for ${item.slug}`);
+}
 assert(player.includes("sapiver_export"), "player must preserve the historic export bridge");
 assert(player.includes("sapiver-corporate-theme"), "player is missing the corporate game theme injection");
 assert(player.includes("#24574c") && player.includes("#b99b5e") && player.includes("#f4efe4"), "player is missing the current green, gold and cream brand palette");

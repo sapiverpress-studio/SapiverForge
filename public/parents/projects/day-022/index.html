@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173f3a">
+  <title>My Pattern Playground</title>
+  <style>
+    :root{--ink:#173f3a;--cream:#fffaf0;--paper:#fff;--mint:#dcecdf;--yellow:#ffd970;--coral:#f58f79;--blue:#8cc9d6;--line:#d7dfd6;--shadow:0 14px 36px #173f3a18}*{box-sizing:border-box}body{margin:0;font-family:ui-rounded,"Arial Rounded MT Bold",system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 5%,#f8c9b9 0 12%,transparent 13%),radial-gradient(circle at 92% 18%,#ffe599 0 11%,transparent 12%),var(--cream);min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(100% - 28px,920px);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;padding:20px 0}.brand{font-weight:900;letter-spacing:.04em}.back{color:var(--ink);text-decoration:none;font-weight:800}.hero{background:var(--ink);color:#fff;border-radius:28px;padding:clamp(25px,6vw,52px);box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"★";position:absolute;right:25px;top:10px;font-size:120px;color:#ffffff15;transform:rotate(12deg)}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;font-weight:900;color:var(--yellow)}h1{font-size:clamp(2.25rem,8vw,4.8rem);line-height:.95;margin:.3em 0 .2em;max-width:700px}.hero p{font:600 1.05rem/1.55 system-ui,sans-serif;max-width:650px}.panel{background:#ffffffed;border:1px solid #ffffff;border-radius:24px;padding:clamp(18px,4vw,30px);box-shadow:var(--shadow);margin:20px 0}.tabs{display:flex;gap:8px;margin-bottom:18px}.tab{border:0;border-radius:999px;padding:11px 16px;background:#e8eee8;color:var(--ink);font-weight:900}.tab.active{background:var(--ink);color:#fff}.screen{display:none}.screen.active{display:block}.stats{display:flex;gap:9px;flex-wrap:wrap}.pill{background:#edf4ed;border-radius:999px;padding:8px 13px;font-weight:850}.game{min-height:430px;display:grid;place-items:center;text-align:center}.pattern{display:flex;justify-content:center;gap:clamp(7px,2vw,14px);flex-wrap:wrap;margin:28px 0}.tile,.choice{width:clamp(54px,15vw,86px);aspect-ratio:1;border-radius:20px;display:grid;place-items:center;font-size:clamp(2rem,9vw,3.6rem);background:#fff;border:3px solid var(--line);box-shadow:0 6px 0 #c9d4c9}.blank{border-style:dashed;background:#f1f5ee;color:#8aa096}.choices{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.choice{transition:.15s}.choice:hover,.choice:focus{transform:translateY(-3px);border-color:var(--coral)}.feedback{min-height:34px;margin:22px 0 4px;font-size:1.12rem;font-weight:900}.good{color:#197047}.bad{color:#b23939}.primary,.secondary,.danger{border:0;border-radius:14px;padding:13px 18px;font-weight:900}.primary{background:var(--coral);color:#2d211d}.secondary{background:var(--mint);color:var(--ink)}.danger{background:#fee1dc;color:#8b2828}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.field{display:grid;gap:6px}.field label{font-weight:850}.field input,.field select{width:100%;border:2px solid var(--line);border-radius:13px;padding:12px;background:#fff;color:var(--ink)}.symbol-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.symbol-chip{border:2px solid var(--line);background:#fff;border-radius:14px;padding:10px 13px;font-size:1.6rem}.symbol-chip.selected{border-color:var(--coral);background:#fff1ec}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.note{font:500 .93rem/1.55 system-ui,sans-serif;background:#eff4ee;padding:15px;border-radius:16px}.history{list-style:none;padding:0;display:grid;gap:8px}.history li{background:#f5f7f3;border-radius:12px;padding:11px 14px}.prompt{white-space:pre-wrap;background:#173f3a;color:#fff;border-radius:16px;padding:18px;font:600 .92rem/1.55 system-ui,sans-serif}.footer{text-align:center;padding:18px 0 40px;font:500 .88rem/1.5 system-ui,sans-serif}@media(max-width:520px){.top{font-size:.85rem}.hero{border-radius:22px}.panel{border-radius:20px}.game{min-height:390px}.tile,.choice{border-radius:15px}.tabs{overflow:auto}.tab{white-space:nowrap}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top"><div class="brand">AI INQUISITIVE PARENTS · DAY 022</div><a class="back" href="https://suite.sapiverpress.co.uk">← Sapiver Press</a></header>
+    <section class="hero"><div class="eyebrow">Personalised learning game</div><h1>My Pattern Playground</h1><p>Choose the pictures your child enjoys, then turn them into quick “what comes next?” pattern rounds. Start simple and add trickier patterns when they are ready.</p></section>
+    <main class="panel">
+      <nav class="tabs" aria-label="App sections"><button class="tab active" data-tab="play">Play</button><button class="tab" data-tab="setup">Make it ours</button><button class="tab" data-tab="about">About</button></nav>
+      <section id="play" class="screen active">
+        <div class="stats"><span class="pill">Score <b id="score">0</b></span><span class="pill">Streak <b id="streak">0</b></span><span class="pill">Best <b id="best">0</b></span><span class="pill" id="levelPill">Patterns: AB</span></div>
+        <div class="game"><div><div class="eyebrow" style="color:#53726d">What comes next?</div><div id="pattern" class="pattern" aria-live="polite"></div><div id="choices" class="choices"></div><div id="feedback" class="feedback" aria-live="polite"></div><button id="next" class="primary" hidden>Next pattern</button></div></div>
+      </section>
+      <section id="setup" class="screen">
+        <h2>Build your family’s version</h2><p>Pick at least three symbols. You can use the starter pictures or type any emoji your child recognises.</p>
+        <div id="symbolList" class="symbol-row"></div>
+        <div class="grid" style="margin-top:18px"><div class="field"><label for="custom">Add a symbol</label><input id="custom" maxlength="4" placeholder="Try 🚂 or A"></div><div class="field"><label for="difficulty">Pattern types</label><select id="difficulty"><option value="AB">AB — taking turns</option><option value="AAB">AB + AAB</option><option value="ABB">AB + AAB + ABB</option><option value="ABC">All patterns, including ABC</option></select></div></div>
+        <div class="actions"><button id="add" class="secondary">Add symbol</button><button id="save" class="primary">Save and play</button><button id="reset" class="danger">Reset starter set</button></div>
+        <p id="setupMsg" class="feedback"></p>
+      </section>
+      <section id="about" class="screen">
+        <h2>Private by design</h2><p class="note">This app runs entirely in this browser. The chosen symbols, difficulty, score and best streak are stored only in local browser storage on this device. Nothing is uploaded. Clearing browser data removes them.</p>
+        <h2>For grown-ups</h2><p>A grown-up chooses recognisable symbols and a suitable difficulty. Pattern practice should stay playful; stop or simplify it if the child is frustrated.</p>
+        <h2>Build your own with AI</h2><div class="prompt">Build me a mobile-friendly pattern game as one standalone HTML file. Let a parent choose or add custom emoji symbols and select AB, AAB, ABB and ABC pattern types. Show a sequence with one missing final item, offer three large answer buttons, give immediate feedback, track score and streak, and save settings locally in the browser. Do not use external libraries or send data anywhere.</div>
+      </section>
+    </main>
+    <footer class="footer">Made to show what an ordinary parent can build with AI · No account · No advertising · No paid service</footer>
+  </div>
+  <script>
+  (()=>{
+    const KEY='aip-pattern-playground-v1';
+    const defaults={symbols:['🐶','🚀','🍓','⚽','🌟','🦕'],selected:['🐶','🚀','🍓','⚽'],difficulty:'AB',score:0,streak:0,best:0,history:[]};
+    let state=load(),round=null,locked=false;
+    const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+    function load(){try{return {...defaults,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{return {...defaults}}}
+    function persist(){localStorage.setItem(KEY,JSON.stringify(state))}
+    function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+    function modes(){return state.difficulty==='AB'?['AB']:state.difficulty==='AAB'?['AB','AAB']:state.difficulty==='ABB'?['AB','AAB','ABB']:['AB','AAB','ABB','ABC']}
+    function sample(a,n){return [...a].sort(()=>Math.random()-.5).slice(0,n)}
+    function makeRound(){
+      locked=false; $('#next').hidden=true; $('#feedback').textContent=''; $('#feedback').className='feedback';
+      const type=modes()[Math.floor(Math.random()*modes().length)], need=type==='ABC'?3:2, picks=sample(state.selected,need);
+      const map={A:picks[0],B:picks[1],C:picks[2]}, templates={AB:'ABABAB',AAB:'AABAAB',ABB:'ABBABB',ABC:'ABCABC'};
+      const seq=[...templates[type]].map(x=>map[x]), answer=seq.pop(), options=sample([answer,...state.selected.filter(x=>x!==answer)],3);
+      round={type,seq,answer,options:options.sort(()=>Math.random()-.5)}; renderRound();
+    }
+    function renderRound(){
+      $('#pattern').innerHTML=round.seq.map(x=>`<div class="tile">${esc(x)}</div>`).join('')+'<div class="tile blank">?</div>';
+      $('#choices').innerHTML=round.options.map(x=>`<button class="choice" aria-label="Choose ${esc(x)}" data-choice="${esc(x)}">${esc(x)}</button>`).join('');
+      $$('[data-choice]').forEach(b=>b.onclick=()=>answer(b.dataset.choice)); updateStats();
+    }
+    function answer(value){if(locked)return;locked=true;const ok=value===round.answer;if(ok){state.score++;state.streak++;state.best=Math.max(state.best,state.streak);$('#feedback').textContent='Yes — the pattern continues!';$('#feedback').classList.add('good')}else{state.streak=0;$('#feedback').textContent=`Nearly — the next one is ${round.answer}`;$('#feedback').classList.add('bad')}state.history.unshift({ok,type:round.type});state.history=state.history.slice(0,8);persist();updateStats();$$('[data-choice]').forEach(b=>{b.disabled=true;if(b.dataset.choice===round.answer)b.style.borderColor='#2b9a66'});$('#next').hidden=false}
+    function updateStats(){$('#score').textContent=state.score;$('#streak').textContent=state.streak;$('#best').textContent=state.best;$('#levelPill').textContent='Patterns: '+modes().join(', ')}
+    function renderSetup(){$('#symbolList').innerHTML=state.symbols.map(x=>`<button class="symbol-chip ${state.selected.includes(x)?'selected':''}" data-symbol="${esc(x)}" aria-pressed="${state.selected.includes(x)}">${esc(x)}</button>`).join('');$$('[data-symbol]').forEach(b=>b.onclick=()=>{const x=b.dataset.symbol;if(state.selected.includes(x)){if(state.selected.length>3)state.selected=state.selected.filter(v=>v!==x)}else state.selected.push(x);renderSetup()});$('#difficulty').value=state.difficulty}
+    function show(id){$$('.screen').forEach(x=>x.classList.toggle('active',x.id===id));$$('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));if(id==='setup')renderSetup()}
+    $$('.tab').forEach(b=>b.onclick=()=>show(b.dataset.tab));$('#next').onclick=makeRound;
+    $('#add').onclick=()=>{const v=$('#custom').value.trim();if(!v)return; if(!state.symbols.includes(v))state.symbols.push(v);if(!state.selected.includes(v))state.selected.push(v);$('#custom').value='';renderSetup()};
+    $('#save').onclick=()=>{state.difficulty=$('#difficulty').value;if(state.selected.length<3){$('#setupMsg').textContent='Choose at least three symbols.';return}persist();$('#setupMsg').textContent='Saved!';show('play');makeRound()};
+    $('#reset').onclick=()=>{state={...defaults};persist();renderSetup();$('#setupMsg').textContent='Starter set restored.'};
+    makeRound();
+  })();
+  </script>
+</body>
+</html>

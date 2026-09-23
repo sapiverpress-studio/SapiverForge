@@ -1,23 +1,23 @@
-# The high cost of automated targeting
+# What the Minab school-strike investigation says about AI-assisted targeting
 
-An internal Pentagon investigation reveals how a reliance on AI targeting software and stale data led to a devastating strike on an Iranian school.
+Bloomberg reports that officials involved in an unreleased Pentagon investigation identified outdated intelligence, staffing cuts and overreliance on AI-assisted tools among failures before the Minab school strike. This episode separates those reported findings from claims the reporting does not establish.
 
-## The anatomy of a failure
+## What Bloomberg reported
 
-The Pentagon’s internal investigation into the February strike paints a picture of a system failure, not a single point of error. The report identifies a cascade of mistakes, but two factors stand out: a heavy reliance on Palantir’s Maven AI targeting software and the use of outdated intelligence data. In essence, the system was fed old information, and the AI, tasked with processing that data, contributed to a decision-making chain that ended in a tragedy that should never have happened.
+The first point to keep clear is the status of the evidence. The Pentagon investigation has not been publicly released. Bloomberg’s account is based on officials involved in that internal review. That means the findings are important reporting, but they should be attributed to those officials rather than described as a published Pentagon report. Palantir has also said its software was not responsible for the underlying data or for identifying deficiencies in that intelligence.
 
-## The gap between promise and reality
+## Maven’s role
 
-There is a persistent narrative in tech circles that AI will make military operations more precise and, by extension, more humane. The reality, as this report highlights, is far more complex. We see a dangerous gap between the promise of AI-driven efficiency and the messy, high-stakes reality of a battlefield. Palantir has distanced itself from the quality of the data used, which is a convenient way to sidestep the issue, but it doesn't change the outcome. When you build a system that relies on AI to interpret the world, you are only as good as your data—and if that data is stale, the AI is essentially just automating a mistake at high speed.
+The second point is what Maven did and did not do. Bloomberg describes Maven as part of an AI-assisted targeting workflow that helps combine and process information for military planners. The reporting does not establish that Maven autonomously chose the school as a target or authorised the strike. Instead, the reported failure involved people, data, staffing and process around the software. Some personnel relied on the system while working with information that was stale or incomplete and under compressed review timelines.
 
-## The illusion of oversight
+## Why the distinction matters
 
-The core issue here isn't just the software; it’s the human element. We talk about 'human-in-the-loop' systems as if they are a magic shield against catastrophe. But this report suggests that when operators become over-reliant on automated tools, that 'loop' becomes more of a formality than a safeguard. If the software is presented as an authority, it becomes incredibly difficult for a human operator to challenge its output, especially when the pressure is on. We’ve created a dynamic where the machine suggests, and the human simply nods along.
+That distinction matters beyond this one case. Decision-support systems can make it faster to search, combine and rank information, but speed does not make the source data current or correct. If a workflow assumes that a tool has already checked for stale intelligence when it has not, the software can amplify a mistaken assumption rather than catch it. Human review only works as a safeguard when reviewers have enough time, authority and reliable information to challenge the output.
 
 ## Practical implications
 
-For those of us watching the integration of AI into critical infrastructure, the takeaway is stark: automation is not a substitute for verification. If you are deploying AI in any environment where the cost of failure is high, you cannot treat the output as a black box. You need to be able to audit the data inputs and, more importantly, you need to maintain a culture where the human operator is empowered—and expected—to say 'no' to the machine. If your system doesn't make it easy to question the AI, it isn't a tool; it's a liability.
+For organisations using AI in high-stakes settings, the practical lesson is about controls rather than slogans. Teams need clear records of where data came from, when it was last updated, what the system is designed to detect, and which decisions still require independent human verification. The more consequential the decision, the less safe it is to treat a confident-looking software output as proof that every underlying assumption has been checked.
 
 ## What to watch next
 
-Moving forward, the focus will be on how the Pentagon adjusts its procurement and deployment protocols. Will we see stricter mandates on data freshness, or perhaps a move toward 'explainable AI' that forces systems to show their work before a strike is authorised? We should also watch for how this impacts the broader debate on autonomous weapons. This incident provides a concrete, tragic case study for regulators who have been arguing that we are moving too fast, with too little oversight, into a future where machines decide who lives and who dies.
+What to watch next is concrete: whether the Pentagon publishes the investigation or responds formally to Bloomberg’s account, whether military targeting procedures or civilian-harm review practices change, and whether Palantir or the Pentagon provides more detail about Maven’s role in the workflow. Until then, the strongest conclusion supported by the reporting is not that an AI system independently made the strike decision. It is that officials involved in the review say overreliance on AI-assisted tools was one part of a broader cascade of preventable failures.

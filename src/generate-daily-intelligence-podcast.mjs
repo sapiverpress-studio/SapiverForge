@@ -44,6 +44,23 @@ function transcriptFor(podcast) {
   return transcript;
 }
 
+function assertCompleteShortScript(value) {
+  const text = clean(value);
+  if (!text) throw new Error("Daily Short script is empty.");
+  const body = text.replace(/\s+Read the Sapiver Forge Daily Brief\.?$/i, "").trim();
+  const lastSentence = body.split(/(?<=[.!?])\s+/).filter(Boolean).at(-1) || body;
+  const finalWord = lastSentence.replace(/[.!?]+$/, "").trim().split(/\s+/).at(-1)?.toLowerCase() || "";
+  const danglingWords = new Set([
+    "a", "an", "and", "as", "at", "by", "for", "from", "if", "in", "into", "of", "on", "or",
+    "over", "than", "that", "the", "to", "under", "when", "where", "which", "while", "with"
+  ]);
+  if (danglingWords.has(finalWord)) {
+    throw new Error(`Daily Short script appears truncated: sentence ends with \"${finalWord}\".`);
+  }
+  if (!/[.!?]$/.test(lastSentence)) throw new Error("Daily Short script must contain a complete sentence before the call to action.");
+  return text;
+}
+
 async function main() {
   if (!fs.existsSync(sourcePath)) throw new Error(`Missing ${sourcePath}`);
   if (!process.env.GEMINI_API_KEY) throw new Error("GEMINI_API_KEY is required for the detailed daily story.");
@@ -84,8 +101,7 @@ Derive the practical implication and what-to-watch section only from this lead s
   const words = transcript.split(/\s+/).filter(Boolean).length;
   if (words < 450 || words > 1150) throw new Error(`Daily detailed story length is outside limits: ${words} words.`);
 
-  const shortScript = clean(manifest.social?.spoken_script || `${story.headline}. ${story.confirmed_fact} Read the Sapiver Forge Daily Brief.`);
-  if (!shortScript) throw new Error("Daily Short script is empty.");
+  const shortScript = assertCompleteShortScript(manifest.social?.spoken_script || `${story.headline}. ${story.confirmed_fact} Read the Sapiver Forge Daily Brief.`);
   const metadata = {
     episode: {
       episode_title: clean(podcast.episode_title),

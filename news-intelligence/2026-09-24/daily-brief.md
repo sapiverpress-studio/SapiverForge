@@ -4,11 +4,11 @@ Today's briefing covers a mix of biological discovery, hardware pivots, and the 
 
 ## 1. Anthropic's AI agents identify novel enzyme system
 
-**Confirmed:** Anthropic's autonomous AI agents analysed 1.9 billion protein clusters to discover a previously undescribed enzyme system in bacteriophage DNA, which they named array-associated reverse transcriptases (ART).
+**Confirmed:** Anthropic says Claude agents searched a large genomic dataset and identified a previously uncharacterised bacteriophage system it calls array-associated reverse transcriptases (ART). Human scientists then tested the candidate in Anthropic's lab; early experiments showed the ART array is expressed as distinct short RNAs, while its primary function remains unknown.
 
-**Why it matters:** This demonstrates a practical application for autonomous agents in accelerating biological research, though the findings remain in preprint and await experimental validation.
+**Why it matters:** This is evidence of AI contributing to hypothesis generation and candidate discovery alongside human laboratory work. The result is still an early preprint finding, and further experiments are underway to establish how ART works.
 
-**Sapiver Forge interpretation:** It is a genuinely impressive use of AI to sift through biological data at a scale that would be tedious for human researchers, but until we see wet-lab results, it is a promising lead rather than a proven discovery.
+**Sapiver Forge interpretation:** The notable part is the combined workflow: AI narrowed a vast biological search space and human scientists tested the resulting candidate. The discovery already has some experimental support, but ART's biological role is not yet established.
 
 **Source:** [anthropic.com](https://www.anthropic.com/news/claude-discovers-novel-enzyme-system) · discovered via Hacker News · confidence 95%
 
@@ -48,7 +48,7 @@ If you are managing AI costs, consider whether your current workloads could be o
 
 ## What to watch next
 
-Keep an eye on the upcoming release of Google's Gemini 4, as its performance and post-training capabilities will likely set a new benchmark for the industry's flagship models.
+Watch for follow-up ART experiments and peer review, evidence on whether Apple's local-AI hardware pitch changes enterprise deployment patterns, details of how Meta's visual-data opt-out works in practice, and independent use of MentalHealthBench.
 
 ---
 

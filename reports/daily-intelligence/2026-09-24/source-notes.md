@@ -1,5 +1,5 @@
-# Sources for Anthropic's ART discovery: what AI found and the lab has already tested
+# Sources for The 84-day silence: When AI agents go rogue
 
-- [anthropic.com: Claude discovers a novel enzyme system with CRISPR-like repeats](https://www.anthropic.com/news/claude-discovers-novel-enzyme-system)
+- [New York Times: OpenAI says its AI agents "took actions we did not intend" when they tried to hack government and university websites, and it is working with the organizations (New York Times)](https://www.nytimes.com/2026/09/23/technology/openai-ai-breach-australia.html?unlocked_article_code=1.DlE.2yAf.hUUS5mCftkOD&smid=url-share)
 - Daily Brief date: 2026-09-24
 - Confidence: 0.95

@@ -1,0 +1,642 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=Google+DeepMind+Koray+Kavukcuoglu+Gemini+4+post+training&client=app-vertex-grounding&safesearch=active\">Google DeepMind Koray Kavukcuoglu Gemini 4 post training</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Meta+VR+Glasses%22+Meta+Connect+2026&client=app-vertex-grounding&safesearch=active\">&quot;Meta VR Glasses&quot; Meta Connect 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Anthropic+Claude+discovers+novel+enzyme+system+CRISPR+like+repeats&client=app-vertex-grounding&safesearch=active\">Anthropic Claude discovers novel enzyme system CRISPR like repeats</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=qualcomm+snapdragon+sound+elite+gen+2&client=app-vertex-grounding&safesearch=active\">qualcomm snapdragon sound elite gen 2</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=OpenAI+MentalHealthBench+benchmark+licensed+experts&client=app-vertex-grounding&safesearch=active\">OpenAI MentalHealthBench benchmark licensed experts</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=gemini+3.8+text+to+speech+blog+google&client=app-vertex-grounding&safesearch=active\">gemini 3.8 text to speech blog google</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Meta+AI+glasses+visual+data+opt+out+training+Engadget&client=app-vertex-grounding&safesearch=active\">Meta AI glasses visual data opt out training Engadget</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=YouTube+CEO+Neal+Mohan+Meta+child+safety+settlement&client=app-vertex-grounding&safesearch=active\">YouTube CEO Neal Mohan Meta child safety settlement</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Microsoft+DARPA+quantum+computing+system+access+Reuters&client=app-vertex-grounding&safesearch=active\">Microsoft DARPA quantum computing system access Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22With+new+Macs,+Apple+aims+to+take+on+Microsoft,+Nvidia%22+reuters&client=app-vertex-grounding&safesearch=active\">&quot;With new Macs, Apple aims to take on Microsoft, Nvidia&quot; reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Financial+stocks+fall+with+AI+and+flattening+yield+curve%22+reuters&client=app-vertex-grounding&safesearch=active\">&quot;Financial stocks fall with AI and flattening yield curve&quot; reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Joanna+Stern%22+%22Mark+Zuckerberg%22+interview+camera-free+Ray-Bans&client=app-vertex-grounding&safesearch=active\">&quot;Joanna Stern&quot; &quot;Mark Zuckerberg&quot; interview camera-free Ray-Bans</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3eHAiwc8x-7nKSBu0Eb9eHKVrv2JJO6DNM9XmSkGaWII8b28bZFcOBrLst4wNJaPxpVL33XXkgWV3h8RTnFCET8GZfGWKR56kNP0PaKZ1FfCPIo-SlGM_SG0-HHCfJa36Fdn86s50yAwEYeXhpIrgeco6XFpZYbv2ErYQmx3KjiqTjw==",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1-nee0YEaYPrJ9JPWtVo_S4zLMZLPaxZZCmTJ5itAGp30E2cWPO7aKqJabyaUhV3avyF3oKiO6gNSvQazWf6uk6BB9uOAyz6HM5yGdg5cIDlfY56ndRidlv4EPqoGRvY_XDYedF7wjKgBxFNJDqPXMTKSAQxYpY5PbvH2Q2J2jX_6R9IOg1A3Ccnd0VjlDxvG7hszV4u00xGhEuqrchSidHCaCbVzhVFNbB6AN8pXaA==",
+        "title": "indianexpress.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQNcfSE2HzOCNuOZJllw1iBCi67rXSyM0SQXq4svRXVKqTthR4kqJYNjsl3oNbqFgBhtSEDFFZPknKZaq-x_SudPA5KwdXt9571mXMqCzra2_8Q6PlhcMX9jJsJ6Lb7jXkoRIqKmP5dM7mcZO5zi9ZT1DAq2ochLjirTEn82zgooCcUfLCmYtWh6yVgQs7wVxhmdhrTzCiYake4H2SzKWE_WVxjQDjIMoBS8Mt9eQ=",
+        "title": "tribuneindia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGzue-UpKvGkSFZPlt0mWs1QnX2zGsUE8x7gbuWJCOzLABX-rBL_aCseBT8e84aPSWcAUQU1xl_5pSyYf1LVwXfl9RjRuTX9ywJHxGiIrUWX4Uz9CUazWYnlTgXXCHMH5NTBjPl1H4SY5rdVdQ0LBC0A9wcMO65BVpolbZV0JXnsD_a2Ua",
+        "title": "valueaddvc.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfaIaGreDDjusufXk0q7pe0wW51uV4l6RToAD2YtSUXIBT3xmthAIJTAwsl02DwsQrTsJoWvtHG29OPvfc5hoyttEnna-bC-VrL-3UKxxR6P7cVlH6XbtsxTxBn2BejOc8NOFfj3DQ-redVL6F2zO1HlW_IUR-4zEbwA==",
+        "title": "meta.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEahSGnIJZAlgeVGeCMShld7iTugXaOSKH3jrUDvUF_Qrxxk58A7Oy2Z0-hENzxb4aAAcC521ZzVZ72uCaQPSC_VOWLwnMMUVuBT8GKXEtQhyb6a-eqsav1LIxUQSUhBoi8aQD5acfFkIitFNKSZc8AJKQ7j8SZxJXvDXmuTHeexh9-3fbJvA==",
+        "title": "knoxlabs.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUsEbFxrgsr6jhUiYGxfCsL0lSJYz7aUmHvvmtOc_ZC7P4iV1IzbYmraZP1Q7GdSRBHVCMip86XmgU2mFVERuofmED-gVbZl1pqFXj8b250KIVaJwrc_YIr1DneC7wZpfj_smFu3u6nLwH86l6DaZqevP21mcIlOWnAQ==",
+        "title": "meta.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcH65I8ohqiP5vmHCSb1UJmFqyHvJNHEj8MoEuiCGzD3E8U4MlYuvLq1twJMzS4BFDpTD_G4oo5STXjmYEeQueMO0fbEkULHtzzAO9ZI0hJm4IsAJlmn8dPTsiw-7I11I6j8fsqkCmz-JWz4E7WehGBZy50-YBSrkj2UQvw6CuqM7Zp1OOnw==",
+        "title": "mashable.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHB_NwZtVk3yDSGNu2xKgxEZrw-W1IQCezYwb7y59QmtlEssIE3SiqKqAliGvWLOQCHR5d5ClUeIa1onMH7NPn2TWGUHQw5qJRvuU5tLwZHttSnGqHtQ1GpUa96kS8twOdDpdIl-rrC18N1L2zNyoSCTc1A74S6V6gIBVnNjtJfmokG8pP_6nA=",
+        "title": "9to5google.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3Ovje9jInn4ZbTXe-t9M7wH5c_CljuxE71GIAmWwSXaAld__ngeS0JiA1RbKO0TeslFWH_r-BMxDvh6jVsvwatilNyoCSXb61fMwcYgTLo-bK450dCGqy0EqPDeXuHbeZDMnxm2oUn_8rELLLRIzkTzMJ",
+        "title": "qualcomm.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFy6a6T1engLwQT9gVW0fGGutp5CkzXY9SRCK0ru9HBdTmpoLfYGFiTG2VsCxbLWAb5D76btG1IrFrH_RIgX03QhM9_8xnf9tYRK51HM3PbgsRpDUGBXq1DAD9ActIi_fUeHo5iOfPJOeJa_BoqEoeR-xo5Fo7I_klpfKrJBdQN_CduhR3hOEHTBACu_q1V0-U4FTqvH_kIndQ1YYn8Fr11tJ7obyI8VmLfMgXS3v0SVcJQ6Gl-ScgJXPJ5BNuK7vzUfOdHRB3hO4TEti3DGq3Q105_",
+        "title": "tomsguide.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESQt3S6lalBDVcWZvycC4G6Fwozvgh2r1CdgW1cZqCbNwwyZpzywlvXgzL9AVoq8X6MytqktcLc_zh7mULgU_nhjdQMbFwMF0ZVLjP1H1IIScKS9P0R9jVTHb6eay7xCB44u9r5a0rxK84uSNAvTzdATmnrPXNBYkpBH4HuuK6kaCuEf-v7gawyCCsDW-kqPtvpHnSVY8RR4Zj5sLnukBMT4SUzfc=",
+        "title": "seekingalpha.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_YstBkeaTpCIujqGkvcFsyqaxXp4s6YCQoE01Qt3QtdsL30-s01ST8F6KoMZYRjz4d41iX8nJgJKU3RlC0KhtLr9DEj3tIdu6FuUEZtgCDlCrB5yo6QhoPt2u-HvWu_UkoaO59fjrMtnVe2hNlZqaGAjNHxKdJdugKsc7T_1VHqVhrhvxilUy09x6Lh2gwZc0YoWVb7M9sMPZ-IdaJvCS6tXaE2GPhVcmnHpUj0mY6QGhivww6WDohLNxjoaURG-N",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3kEOjg4dYXaB8dv8s1cZ8GbsD2GFMdyPIWvjq9tfHw1uTquDiiAQ_3-hZHhXSYNTl3q1n0nJ8eaht2t6_RY95hXD58AgfBDe5uQEQpe-BjKKFvYRttP3YekW4kwhmKxIOyTkMyzvEfUKwpdTb6LFkN8N-XJY_jaV2VgKMpFaJfeSSLSOLtIf8il1hPwvHGYpIPp-T",
+        "title": "breakingthenews.net"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFldJ6Yh4Q4M04g6sFBMOs43IL2kc3-UZK4uNCrnyMU7MSZuxRuIBfh642s5e_2nQcMbix60ryiWR19kvxCqRBWxAD9UyavvK0EbMhIGZd6ictZCiXJIfRG3fWMkxtL9Q=",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCnlVzX9lTOlV5AxlxfBM3X8k2nN5z7DXhZteyj76aPinp9kChZ_ouSBs2PnM2Q5myJXek9y_4AzKj1q4SW9swsT09xAy220L-KPzektsRNmeq5xFv_4mZVUS671p-yrQCUQVwLaHukfKLWYrchu47kLoHQ2YNjK09xk9AQMJaZ4AJufl176jJPpiMmNA5nAtbm8k9qNap_PO9lgHILfk=",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDWLzOEPgXNoO5lyzXoQljFs6dAnG9FNCUjWJV6JEZ2M4S85vhWHXYmylLYZG46UnSLN3ElUMO7JJlpI8oT3_7P9mOU81JYa5rKmdBN-MjPC2aq0vovBJ8ex3yU2khrPQ3sqIG8bGRwmHo1Bq3WShcAIY7APJG_fenqnEN9Lx2lDU7K-bE58jNAzSGZsv4MJ1EGyW4IPN0yveB2jZDkoMHeAoAlxjKBDqto7QBgIxh3JdBTwtrJUtNKAwN",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyvs10Q-LHuhx3N9JqTnrhGc3vwA1-bwWrS6IAdHzKtLRQMfksFhWDNYKtU4h_QsZPVyE1U7xM-V8sCZEKF6Sk0Hw-UBlVuvGPBIb7t68IsuhWHBqCg1FDFApfi1I8eh0f1VeMZ2sMQWxX5pX9ZnR88pGBmcXvcBKuLWTSzTIt2bGEXMQlgepNAw0BNi8=",
+        "title": "unite.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnGOx3k-XpeAmC3m_mHUX3VfrtGTpjfLPv6l5vm-MpKy1oDQovtoZWzfNe5s9rkqmP32qCej4Zmp519vSK7wBxiujte2d7989pLQTGEFXgN9bSdi43-TX1w5Wr0GIrnlSmiEkKo_p6KEDj76QQXbgUob9Tdc4Fg0L0pDsJ-bFFEuySIGkXWVTspDHhr2RsTqXNltpMtGpd",
+        "title": "blog.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_2KNqnhxelwFlDuiujplnYSkiq0PNr8cCRe2sIp3hoLUmByhZjPHtMw_7D-VF0fTHwiNJ7sVl-wphD-CSh9tbox5c-EmsrpeeGYgDxcq9lu2OexJezPRWaPlSA694KaLmYYwGjIzls_KazwrCp05JfIsbwjKUA7GiFg==",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEl0SS2b64gxp1_A13rEjNcPkMlzsTZp06FnkgXrn4_0KJJcWS0Vxt0OFXFF2NQOhQZ9D_hDSoXAMi1zk8SKZ6bT9GQ0-zW8eY1xKIpoVy7pDjbnlBJLHFxiKfr377o-sdUfr-rVGQxHBkl6hBZrKV52R9FskL6yuaf0aUVKB7U3X11wB70JVfDFJFPy58cARb4UZXTuJrMNZTDt1foSoeLrIt11A-r",
+        "title": "seekingalpha.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8Yp5vFUWP0y4OV9VhK0kZD-gqly_UdiyTecI16EqBbHedMVk67DQNrVjpkbTCUGvh6P3J1oeuBTWWjQoLhwV4UdoBzFqtkKAYFcPMwDTzoaIFYDgH5rBngNbdW_neUaPohSiXGa-p5uwJxqbfbgdjf9TfQrV3RaGSdWI7xV4N5i4EmBRXqKZktrmxvwm3EMsi9tKnnpeMmqLpWqLuwGvBiSVoVOiwwyd-jg==",
+        "title": "engadget.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8zunFRZM70dTK2f5Yn6Q6vWjpVytVrsTnJFF3XQviCBrFS-Aya3spKeS9Vd_0bhvXMtW7U4GfLcES1PiCqKwwFC3cWvLmnr3ZJ-b_XsW-THkpVcMJD4BR5cnG7M_pakE3RzRZekLSiyX1XeIfHC2cEOnF4lOm-8xjQDnBu2wKw6g_MCGD8ZudUFqPoDXKUbePPgB5O9wFyw==",
+        "title": "newsbytesapp.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGahlKXPYXY3fCVNOQyhhyL-yAIdQDwyvoyJAysK9zIkChBE7OPCMhxwbGZw4M8u6GJaz83oZ6HGoQVr_b_cdfIOqTL_f6Uc2wwZawfMXMQPhtK9XUZnZtcKDGmseboV2wWNYkmgowNqktUPgnwrZi2vMD7cMyU9VdmruknEKB8V6Lx4kuySEL77WqkJMkzTm9piS8lq6ZrgcZPye6cws1jUcBWT1tj4JxWEXZ94_Te3HB09Ceba3c9",
+        "title": "tampafp.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjS7wb9maqmVe6ccKps1S4v6R6OSlSvitWjKkn-fsYehL107OfLHyxRUz-CLMn3LBZH0CsQHKfuipAoChc8bABllBjpjj_R5HR28uyXudZ0AwxbNhz6v7TcA==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXqbRXVPqZYO8Xwe3ibXmXhzbrjWqH3OFdOTBin2Y6pesL_Ub83zLxheFA-cu2bTtihVA3LFfiaqfAaER5gC7_fEcnHOVNp-JZEvXVkPGMiOdFqVhaj5uzD6-sYS-noJ4e4AQq1RunTvlx4Ywf3Ufk_N-vy4tkxC9yf260Xnb3BN-vgE73oYYYp5PP6e0sVf9HqiAaUPcU9MpdLvWPIL7h-XKbl9e9F151di5R1Rl95scyUUfYmpS0QT3bt8rs",
+        "title": "kq2.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDewbo854SHhrsOdD8taKWk6rYhRvjkDj3PI3HW7Qqx1kyqNT9Qs7VatVMnmCKD7lwEOH0zrRT9zg0cfCJ-YIXD0IFSxfV2_EhvgLnFCCw6n4Ye7QcioEBUye05uz77ywd-PZzFXZ5tWIjxhXyM-NiSdf8RmBWgiNEWqA=",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFytSfqZuWBcBYcTwMMBjnjdDvM1kBkBbia68YX13zpkZ8KqLI_qJ9yQMKuVfm24a2ecRqJzM2HWXQ2gyxp_PwMpjmB8OvLRbX3kzRXszDwuvVdJf5qmwaly2-VQJmBVfHLig2ikEfqZnpGq8AvORmmBPXqN4V16U7YMS5wGFzrcKZCImFulBl5OxHJzmFQvVqzOCfAA3p_1caL0syXZYvI",
+        "title": "indexbox.io"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6jSPkkSp9zoCj20ft75iQ4HvhgReRyY2D-TaRXB5IKjJDUchrH_C0vLy3ZNkEgVViU5XLWApwiR2ULaw_JC78snQynrXq7Icedzsp4kWYFPKQ1rIF0m9kz46M1sMsrbW8LodYUxwQ8o5J-RC-bsA8zucunw6esvDwjHoVh7ZvmeoJ3Le0_jYZmJbzssmRWGHs_S8zvidBWFzzmy7o-S4=",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoHEXtRYRFbOvHheMMNDokxUDNrciwF9Wdr03kgz_cOPbJ1l-ty6vsjTBBimat-zf0TLox1UaKfR5IS29YzLDBdByxftNWHsxXU4ENNqgV585KqbF_3qOdUAwu06wVM4O-mHs_xd11NrsCseluQQLG8UN9SwQbe8IVPHFteIEV2wX-K3LzFDj0aRDAsiiukhl80lzc1R7Xsgg0saXlDhJdhSUEtvAU8rL3kfoHqMHEYcwFHkCJ",
+        "title": "pakistantoday.com.pk"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHG__-r_TF-NOnqJVz2bMBO2fVVNYLG2HGOB6T9w8b7LmgmwPjuBCOYocAqMEWWee7TLwk8DQF5V1RKJWWEoS0I7tyylD-60HrIvUAEVl-B4lbzFDMYuByByjzqC_JVVrjjZMZVBpfVIfvhPjsmnVnt1PULSKGehqSucTWNuRd_bObmDY7BDhBrasQXSyqZK3p-QSaWA5Mc5sStSn1GCEYrBzSWVPegI1wLU1QPzMm1z6ZAVJ5eHUzOkPBd1wq9A_4hos73RDGp0E_wE1IeosKl3TmxjptU9fQdfn9",
+        "title": "indiatimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVxWeJWZZGMsjKVZ_TjZF8ik4N1Z7Ko5SI4qssrUyC8D-zZ0_rymF3zOSpmMu1jyMBRGq0RN1LAfJMNuKKH7Csfc-ti8ELRrhPrDOIgAD56iQ1ynepfPoxaZ05yOeUKoDky36z7iTkHSsAH_VjFelZgPmB62siNuqaW8891TiWfS4TmR4cmDKhwfGdHZOzbeluiDE=",
+        "title": "fidelity.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlUFFaOgQiff3bUby5C8rCv3KH2Y_2DyiSaflCinS_pfE_gc2Ii4YaQEwP6Xnf5q87xtdbPGYmOsuwEXByC1FvgJ4sDp-myT2MwYhRygK_EgdN9BSR8xpfYT5k0D3HQRYvRDIR-N-drZeLyUZ0_YONVsf4vA5i1DDCILhXATAR5SJMlDbWLfVtE9h6dFaqwCAas-qWHUObhV45h5ZPr3UzjMH_myKsHHYsK6ky",
+        "title": "thestar.com.my"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 920,
+        "endIndex": 1271,
+        "text": "#### **[1] Anthropic: Claude discovers novel enzyme system in bacteriophages**\n* **Confirmed:** Anthropic announced that a team of autonomous Claude AI agents analyzed a database of 1.9 billion protein clusters and identified a previously undescribed enzyme system in bacteriophage DNA, which they named \"array-associated reverse transcriptases\" (ART)"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1273,
+        "endIndex": 1397,
+        "text": "The system features a reverse transcriptase gene adjacent to a non-coding repeating DNA array similar in structure to CRISPR"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1399,
+        "endIndex": 1490,
+        "text": "* **Caveats:** Findings are documented in a preprint that has not yet undergone peer review"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1492,
+        "endIndex": 1615,
+        "text": "Anthropic's team has not yet experimentally demonstrated wet-lab activity or the precise biological mechanism of the enzyme"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1659,
+        "endIndex": 1718,
+        "text": "** Strong landmark story for AI-driven biological discovery"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1721,
+        "endIndex": 1974,
+        "text": "#### **[2] Meta: Meta VR Glasses unveiled at Connect 2026**\n* **Confirmed:** At Meta Connect 2026, Meta officially introduced \"Meta VR Glasses,\" a lightweight (~100 grams) virtual/mixed-reality headset with dual 5K micro-OLED displays and pancake optics"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1976,
+        "endIndex": 2094,
+        "text": "The system offloads compute and battery to a pocket-sized tethered puck powered by Qualcomm's Snapdragon Reality Elite"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2096,
+        "endIndex": 2224,
+        "text": "* **Caveats:** Priced at $1,299, the device is scheduled for launch in Spring 2027 rather than immediate commercial availability"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2268,
+        "endIndex": 2325,
+        "text": "** Major hardware platform announcement from Meta Connect"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2328,
+        "endIndex": 2507,
+        "text": "#### **[3] Qualcomm: Snapdragon Sound Elite Gen 2 platform for AI wearables**\n* **Confirmed:** Qualcomm announced the Snapdragon Sound Elite Gen 2 chipset at its Snapdragon Summit"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2509,
+        "endIndex": 2749,
+        "text": "Built for audio wearables (\"hearables\" and camera-equipped earbuds), it promises double the on-device AI performance, up to 40% lower power consumption, micro-power Wi-Fi 6E, and support for real-time translation and multimodal interactions"
+      },
+      "groundingChunkIndices": [
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2751,
+        "endIndex": 2874,
+        "text": "* **Caveats:** Silicon announcement; specific partner hardware using the chipset will roll out in upcoming consumer devices"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2918,
+        "endIndex": 2980,
+        "text": "** Key hardware component update for the wearable AI ecosystem"
+      },
+      "groundingChunkIndices": [
+        8,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2983,
+        "endIndex": 3351,
+        "text": "#### **[4] Google DeepMind: Gemini 4 in early post-training phase**\n* **Confirmed:** Speaking at *The Information’s* AI Agenda Live Summit, Google DeepMind SVP Koray Kavukcuoglu confirmed that Gemini 4 has completed initial training and is currently in early post-training, with internal goals to launch an early post-training release well before the end of the year"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3353,
+        "endIndex": 3508,
+        "text": "* **Caveats:** Executive comments regarding internal timelines; no fixed public release date, architecture metrics, or benchmark evaluations were disclosed"
+      },
+      "groundingChunkIndices": [
+        13,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3552,
+        "endIndex": 3618,
+        "text": "** Significant roadmap insight into Google's upcoming flagship LLM"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3621,
+        "endIndex": 3987,
+        "text": "#### **[7] OpenAI: MentalHealthBench open benchmark release**\n* **Confirmed:** OpenAI released MentalHealthBench, an open evaluation dataset containing 1,215 synthetic mental health conversations across non-acute, high-acuity, and emergency scenarios, accompanied by 5,262 rubric criteria co-authored with 80+ licensed mental health professionals across 22 countries"
+      },
+      "groundingChunkIndices": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3989,
+        "endIndex": 4156,
+        "text": "* **Caveats:** Benchmarking relies on synthetic conversations and automated grading (using GPT-5.6 Sol against expert rubrics) rather than live clinical patient trials"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4200,
+        "endIndex": 4281,
+        "text": "** Timely benchmark launch addressing AI safety and clinical evaluation standards"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4284,
+        "endIndex": 4470,
+        "text": "#### **[12] Google: Gemini 3.8 Text-to-Speech models launched**\n* **Confirmed:** Google launched Gemini 3.8 Flash TTS and Gemini 3.8 Flash-Lite TTS in Google AI Studio and the Gemini API"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4472,
+        "endIndex": 4646,
+        "text": "The models support prompt-based custom voice creation across 100+ languages, 30-second voice replication with consent verification, SynthID watermarking, and C2PA credentials"
+      },
+      "groundingChunkIndices": [
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4648,
+        "endIndex": 4750,
+        "text": "* **Caveats:** Voice replication requires explicit recorded verbal consent from the speaker to execute"
+      },
+      "groundingChunkIndices": [
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4794,
+        "endIndex": 4847,
+        "text": "** Major developer and generative audio model release"
+      },
+      "groundingChunkIndices": [
+        20,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4850,
+        "endIndex": 5170,
+        "text": "#### **[13] Meta: Visual data opt-out for smart glasses AI training**\n* **Confirmed:** Meta introduced a new privacy control allowing smart glasses users to opt out of having \"visual data\" (images/videos captured during Meta AI queries) used to train AI models or reviewed by third-party human contractors outside the US"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5172,
+        "endIndex": 5373,
+        "text": "* **Caveats:** The opt-out setting applies strictly to visual data; audio interactions with Meta AI remain stored for training/review unless users manually delete them or disable voice trigger settings"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5417,
+        "endIndex": 5494,
+        "text": "** Important privacy policy update following ongoing scrutiny of AI wearables"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5497,
+        "endIndex": 5879,
+        "text": "#### **[14] Mark Zuckerberg Interview: Connect products and AI regulation views**\n* **Confirmed:** In an interview with Joanna Stern at Connect 2026, Meta CEO Mark Zuckerberg discussed the newly unveiled camera-free Ray-Ban Meta Audio glasses ($349) and expressed opposition to mandatory industry-wide AI safety governance, arguing individual AI labs should manage safety internally"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5881,
+        "endIndex": 6016,
+        "text": "* **Caveats:** Primarily an executive interview featuring product commentary and policy stances rather than a standalone product launch"
+      },
+      "groundingChunkIndices": [
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6060,
+        "endIndex": 6128,
+        "text": "** High-profile CEO comments accompanying Meta Connect announcements"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6131,
+        "endIndex": 6447,
+        "text": "#### **[15] YouTube: CEO Neal Mohan rejects Meta child safety settlement**\n* **Confirmed:** At YouTube's *Made on YouTube* event, CEO Neal Mohan publicly dismissed joining Meta's $18B multistate child safety settlement, stating YouTube already maintains sufficient safety features and works with third-party advisors"
+      },
+      "groundingChunkIndices": [
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6449,
+        "endIndex": 6648,
+        "text": "* **Caveats:** Meta's settlement agreement specifies that Meta's payout drops if peers do not join; California's Attorney General has warned that non-joining platforms face potential state litigation"
+      },
+      "groundingChunkIndices": [
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6692,
+        "endIndex": 6779,
+        "text": "** Significant regulatory and corporate stance on platform safety and legal liabilities"
+      },
+      "groundingChunkIndices": [
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6782,
+        "endIndex": 7108,
+        "text": "#### **[17] Microsoft: On-site DARPA access to Maryland quantum facility**\n* **Confirmed:** Microsoft opened a quantum research center in Maryland (with the University of Maryland) housing a quantum system powered by its Majorana 2 chip, providing US DARPA personnel direct on-site physical access for independent benchmarking"
+      },
+      "groundingChunkIndices": [
+        26,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7110,
+        "endIndex": 7306,
+        "text": "* **Caveats:** DARPA is conducting multi-year evaluations across quantum firms to test feasibility for utility-scale quantum computing by 2033; Microsoft targets commercial quantum systems by 2029"
+      },
+      "groundingChunkIndices": [
+        26,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7350,
+        "endIndex": 7420,
+        "text": "** High-value update on defense-industry quantum hardware benchmarking"
+      },
+      "groundingChunkIndices": [
+        26,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7423,
+        "endIndex": 7761,
+        "text": "#### **[19] Apple: Pitching enterprise Macs to lower AI compute costs**\n* **Confirmed:** Apple is marketing its newly shipping Mac Mini and Mac Studio desktops (up to ~$20,000 configurations with unified memory) directly to enterprise buyers as a cost-effective alternative to paying cloud API token fees by executing AI workloads locally"
+      },
+      "groundingChunkIndices": [
+        28,
+        29
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7763,
+        "endIndex": 7887,
+        "text": "* **Caveats:** Apple currently holds ~4.6% of the enterprise desktop market against Windows' ~91.3%, posing adoption hurdles"
+      },
+      "groundingChunkIndices": [
+        28,
+        30
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7931,
+        "endIndex": 7991,
+        "text": "** Strategic move by Apple into enterprise local AI hardware"
+      },
+      "groundingChunkIndices": [
+        28,
+        29
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8207,
+        "endIndex": 8375,
+        "text": "*\n* **[18] Reuters Market Summary:** Financial stocks slip 2-3% on AI disruption concerns and delayed AI-related IPOs (e.g., SoftBank's SB Energy roadshow postponement)"
+      },
+      "groundingChunkIndices": [
+        31,
+        32
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "Google DeepMind Koray Kavukcuoglu Gemini 4 post training",
+    "\"Meta VR Glasses\" Meta Connect 2026",
+    "Anthropic Claude discovers novel enzyme system CRISPR like repeats",
+    "qualcomm snapdragon sound elite gen 2",
+    "OpenAI MentalHealthBench benchmark licensed experts",
+    "gemini 3.8 text to speech blog google",
+    "Meta AI glasses visual data opt out training Engadget",
+    "YouTube CEO Neal Mohan Meta child safety settlement",
+    "Microsoft DARPA quantum computing system access Reuters",
+    "\"With new Macs, Apple aims to take on Microsoft, Nvidia\" reuters",
+    "\"Financial stocks fall with AI and flattening yield curve\" reuters",
+    "\"Joanna Stern\" \"Mark Zuckerberg\" interview camera-free Ray-Bans"
+  ]
+}

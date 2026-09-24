@@ -1,0 +1,77 @@
+Here are the evidence notes for the 2026-09-24 UK morning briefing verification.
+
+---
+
+### Out of Scope Candidates
+* **[0] Italian parliament votes for return to nuclear energy** – **OUT OF SCOPE** (General political/energy policy).
+* **[5] Claude Code reads AGENTS.md only when telemetry is on** – **OUT OF SCOPE** (Niche bug detail).
+* **[6] Fixing the Portobello Police Station Clock** – **OUT OF SCOPE** (Local interest/hobbyist repair).
+* **[8] I don't want the details** – **OUT OF SCOPE** (Personal opinion blog).
+* **[9] Linux support is coming to Snapdragon X2 Series** – **OUT OF SCOPE** (Marked out of scope).
+* **[10] SoftBank raised ~$11B in debt through its junk bond sale** – **OUT OF SCOPE** (General corporate finance/bond markets).
+* **[11] Senate hearing license plate readers Flock** – **OUT OF SCOPE** (Marked out of scope).
+
+---
+
+### In-Scope Candidate Verification & Evidence Notes
+
+#### **[1] Anthropic: Claude discovers novel enzyme system in bacteriophages**
+* **Confirmed:** Anthropic announced that a team of autonomous Claude AI agents analyzed a database of 1.9 billion protein clusters and identified a previously undescribed enzyme system in bacteriophage DNA, which they named "array-associated reverse transcriptases" (ART). The system features a reverse transcriptase gene adjacent to a non-coding repeating DNA array similar in structure to CRISPR.
+* **Caveats:** Findings are documented in a preprint that has not yet undergone peer review. Anthropic's team has not yet experimentally demonstrated wet-lab activity or the precise biological mechanism of the enzyme.
+* **Publication Suitability:** **Suitable.** Strong landmark story for AI-driven biological discovery.
+
+#### **[2] Meta: Meta VR Glasses unveiled at Connect 2026**
+* **Confirmed:** At Meta Connect 2026, Meta officially introduced "Meta VR Glasses," a lightweight (~100 grams) virtual/mixed-reality headset with dual 5K micro-OLED displays and pancake optics. The system offloads compute and battery to a pocket-sized tethered puck powered by Qualcomm's Snapdragon Reality Elite.
+* **Caveats:** Priced at $1,299, the device is scheduled for launch in Spring 2027 rather than immediate commercial availability.
+* **Publication Suitability:** **Suitable.** Major hardware platform announcement from Meta Connect.
+
+#### **[3] Qualcomm: Snapdragon Sound Elite Gen 2 platform for AI wearables**
+* **Confirmed:** Qualcomm announced the Snapdragon Sound Elite Gen 2 chipset at its Snapdragon Summit. Built for audio wearables ("hearables" and camera-equipped earbuds), it promises double the on-device AI performance, up to 40% lower power consumption, micro-power Wi-Fi 6E, and support for real-time translation and multimodal interactions.
+* **Caveats:** Silicon announcement; specific partner hardware using the chipset will roll out in upcoming consumer devices.
+* **Publication Suitability:** **Suitable.** Key hardware component update for the wearable AI ecosystem.
+
+#### **[4] Google DeepMind: Gemini 4 in early post-training phase**
+* **Confirmed:** Speaking at *The Information’s* AI Agenda Live Summit, Google DeepMind SVP Koray Kavukcuoglu confirmed that Gemini 4 has completed initial training and is currently in early post-training, with internal goals to launch an early post-training release well before the end of the year.
+* **Caveats:** Executive comments regarding internal timelines; no fixed public release date, architecture metrics, or benchmark evaluations were disclosed.
+* **Publication Suitability:** **Suitable.** Significant roadmap insight into Google's upcoming flagship LLM.
+
+#### **[7] OpenAI: MentalHealthBench open benchmark release**
+* **Confirmed:** OpenAI released MentalHealthBench, an open evaluation dataset containing 1,215 synthetic mental health conversations across non-acute, high-acuity, and emergency scenarios, accompanied by 5,262 rubric criteria co-authored with 80+ licensed mental health professionals across 22 countries.
+* **Caveats:** Benchmarking relies on synthetic conversations and automated grading (using GPT-5.6 Sol against expert rubrics) rather than live clinical patient trials.
+* **Publication Suitability:** **Suitable.** Timely benchmark launch addressing AI safety and clinical evaluation standards.
+
+#### **[12] Google: Gemini 3.8 Text-to-Speech models launched**
+* **Confirmed:** Google launched Gemini 3.8 Flash TTS and Gemini 3.8 Flash-Lite TTS in Google AI Studio and the Gemini API. The models support prompt-based custom voice creation across 100+ languages, 30-second voice replication with consent verification, SynthID watermarking, and C2PA credentials.
+* **Caveats:** Voice replication requires explicit recorded verbal consent from the speaker to execute.
+* **Publication Suitability:** **Suitable.** Major developer and generative audio model release.
+
+#### **[13] Meta: Visual data opt-out for smart glasses AI training**
+* **Confirmed:** Meta introduced a new privacy control allowing smart glasses users to opt out of having "visual data" (images/videos captured during Meta AI queries) used to train AI models or reviewed by third-party human contractors outside the US.
+* **Caveats:** The opt-out setting applies strictly to visual data; audio interactions with Meta AI remain stored for training/review unless users manually delete them or disable voice trigger settings.
+* **Publication Suitability:** **Suitable.** Important privacy policy update following ongoing scrutiny of AI wearables.
+
+#### **[14] Mark Zuckerberg Interview: Connect products and AI regulation views**
+* **Confirmed:** In an interview with Joanna Stern at Connect 2026, Meta CEO Mark Zuckerberg discussed the newly unveiled camera-free Ray-Ban Meta Audio glasses ($349) and expressed opposition to mandatory industry-wide AI safety governance, arguing individual AI labs should manage safety internally.
+* **Caveats:** Primarily an executive interview featuring product commentary and policy stances rather than a standalone product launch.
+* **Publication Suitability:** **Suitable.** High-profile CEO comments accompanying Meta Connect announcements.
+
+#### **[15] YouTube: CEO Neal Mohan rejects Meta child safety settlement**
+* **Confirmed:** At YouTube's *Made on YouTube* event, CEO Neal Mohan publicly dismissed joining Meta's $18B multistate child safety settlement, stating YouTube already maintains sufficient safety features and works with third-party advisors.
+* **Caveats:** Meta's settlement agreement specifies that Meta's payout drops if peers do not join; California's Attorney General has warned that non-joining platforms face potential state litigation.
+* **Publication Suitability:** **Suitable.** Significant regulatory and corporate stance on platform safety and legal liabilities.
+
+#### **[17] Microsoft: On-site DARPA access to Maryland quantum facility**
+* **Confirmed:** Microsoft opened a quantum research center in Maryland (with the University of Maryland) housing a quantum system powered by its Majorana 2 chip, providing US DARPA personnel direct on-site physical access for independent benchmarking.
+* **Caveats:** DARPA is conducting multi-year evaluations across quantum firms to test feasibility for utility-scale quantum computing by 2033; Microsoft targets commercial quantum systems by 2029.
+* **Publication Suitability:** **Suitable.** High-value update on defense-industry quantum hardware benchmarking.
+
+#### **[19] Apple: Pitching enterprise Macs to lower AI compute costs**
+* **Confirmed:** Apple is marketing its newly shipping Mac Mini and Mac Studio desktops (up to ~$20,000 configurations with unified memory) directly to enterprise buyers as a cost-effective alternative to paying cloud API token fees by executing AI workloads locally.
+* **Caveats:** Apple currently holds ~4.6% of the enterprise desktop market against Windows' ~91.3%, posing adoption hurdles.
+* **Publication Suitability:** **Suitable.** Strategic move by Apple into enterprise local AI hardware.
+
+---
+
+### Marginal / Lower Priority In-Scope Items
+* **[16] Reuters Column:** Commentary on AI "Terminator" rhetoric versus Chinese AI capabilities [16]. *(Note: Pure opinion/commentary; not a breaking news event).*
+* **[18] Reuters Market Summary:** Financial stocks slip 2-3% on AI disruption concerns and delayed AI-related IPOs (e.g., SoftBank's SB Energy roadshow postponement). *(Note: Routine equity market recap, lower editorial priority compared to direct tech breakthroughs).*

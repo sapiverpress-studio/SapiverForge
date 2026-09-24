@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203d39">
+  <title>Family Borrowing Board</title>
+  <style>
+    :root{--ink:#203d39;--cream:#fbf7ec;--paper:#fffdf8;--mint:#dce9df;--gold:#f6c85f;--coral:#ee806b;--blue:#8ec8cf;--line:#d9ded5;--red:#a63e35;--shadow:0 14px 35px #203d3916}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 7% 8%,#f3b7a8 0 10%,transparent 10.5%),radial-gradient(circle at 94% 16%,#f7d77d 0 11%,transparent 11.5%),var(--cream);color:var(--ink);font-family:ui-rounded,"Arial Rounded MT Bold",system-ui,sans-serif}.wrap{width:min(100% - 28px,980px);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;padding:19px 0;font-size:.88rem}.brand{font-weight:900;letter-spacing:.05em}.back{color:var(--ink);font-weight:850;text-decoration:none}.hero{background:var(--ink);color:white;padding:clamp(25px,6vw,52px);border-radius:28px;box-shadow:var(--shadow);overflow:hidden;position:relative}.hero:after{content:"↔";position:absolute;right:28px;top:-18px;font-size:150px;color:#ffffff13;font-weight:900}.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.73rem;font-weight:900;color:var(--gold)}h1{font-size:clamp(2.2rem,8vw,4.7rem);line-height:.95;margin:.3em 0 .22em;max-width:720px}.hero p{font:600 1.03rem/1.55 system-ui,sans-serif;max-width:650px}.panel{background:#ffffffed;border:1px solid #fff;border-radius:24px;padding:clamp(17px,4vw,30px);margin:20px 0;box-shadow:var(--shadow)}button,input,select,textarea{font:inherit}.tabs,.filters,.actions,.summary{display:flex;gap:9px;flex-wrap:wrap}.tab,.filter{border:0;border-radius:999px;padding:11px 16px;background:#e8eee7;color:var(--ink);font-weight:900;cursor:pointer}.tab.active,.filter.active{background:var(--ink);color:#fff}.screen{display:none}.screen.active{display:block}.summary{margin:18px 0}.stat{background:#edf3ed;border-radius:16px;padding:13px 16px;min-width:115px}.stat b{display:block;font-size:1.5rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}.field{display:grid;gap:6px}.field label{font-weight:850}.field input,.field select,.field textarea{width:100%;border:2px solid var(--line);border-radius:13px;padding:12px;background:#fff;color:var(--ink)}.field textarea{min-height:84px;resize:vertical}.wide{grid-column:1/-1}.primary,.secondary,.danger,.tiny{border:0;border-radius:13px;padding:12px 16px;font-weight:900;cursor:pointer}.primary{background:var(--coral);color:#2c221f}.secondary{background:var(--mint);color:var(--ink)}.danger{background:#fde3de;color:#8d3029}.tiny{padding:8px 11px;background:#edf2ec;color:var(--ink)}.items{display:grid;gap:12px;margin-top:18px}.card{background:var(--paper);border:2px solid var(--line);border-radius:19px;padding:17px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start}.card.overdue{border-color:#d98278}.card.soon{border-color:#e1b443}.card.returned{opacity:.72}.card h3{margin:0 0 5px;font-size:1.15rem}.meta{font:600 .9rem/1.5 system-ui,sans-serif;color:#506864}.badge{display:inline-block;border-radius:999px;padding:5px 9px;font-size:.75rem;font-weight:900;margin:6px 5px 0 0;background:#e8efe8}.badge.out{background:#ffe0d9}.badge.in{background:#dceef1}.badge.late{background:#f7d4cf;color:#842d27}.badge.soon{background:#ffe9a9;color:#785700}.card-actions{display:flex;gap:7px;justify-content:flex-end;flex-wrap:wrap}.empty{text-align:center;padding:46px 15px;color:#6c7c78}.note{font:500 .93rem/1.55 system-ui,sans-serif;background:#edf3ed;padding:15px;border-radius:16px}.prompt{white-space:pre-wrap;background:var(--ink);color:white;border-radius:16px;padding:18px;font:600 .92rem/1.55 system-ui,sans-serif}.footer{text-align:center;padding:17px 0 40px;font:500 .87rem/1.5 system-ui,sans-serif}@media(max-width:600px){.top{font-size:.8rem}.hero,.panel{border-radius:21px}.card{grid-template-columns:1fr}.card-actions{justify-content:flex-start}.tabs{overflow:auto;flex-wrap:nowrap}.tab{white-space:nowrap}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top"><div class="brand">AI INQUISITIVE PARENTS · DAY 023</div><a class="back" href="https://suite.sapiverpress.co.uk">← Sapiver Press</a></header>
+    <section class="hero"><div class="eyebrow">Practical family tool</div><h1>Family Borrowing Board</h1><p>Remember what went out, what came in and when it should come home—without another account, subscription or shared spreadsheet.</p></section>
+    <main class="panel">
+      <nav class="tabs" aria-label="App sections"><button class="tab active" data-tab="board">Borrowing board</button><button class="tab" data-tab="add">Add an item</button><button class="tab" data-tab="about">About</button></nav>
+      <section id="board" class="screen active">
+        <div class="summary"><div class="stat"><b id="openCount">0</b>open</div><div class="stat"><b id="soonCount">0</b>due soon</div><div class="stat"><b id="lateCount">0</b>overdue</div></div>
+        <div class="filters"><button class="filter active" data-filter="open">Open</button><button class="filter" data-filter="lent">Lent out</button><button class="filter" data-filter="borrowed">Borrowed in</button><button class="filter" data-filter="returned">Returned</button><button id="print" class="secondary">Print list</button></div>
+        <div class="field" style="margin-top:14px"><label for="search">Find an item</label><input id="search" type="search" placeholder="Search item, person or place"></div>
+        <div id="items" class="items"></div>
+      </section>
+      <section id="add" class="screen">
+        <h2 id="formTitle">Add an item</h2>
+        <form id="itemForm">
+          <input id="editId" type="hidden">
+          <div class="grid">
+            <div class="field"><label for="direction">What happened?</label><select id="direction"><option value="lent">We lent it out</option><option value="borrowed">We borrowed it</option></select></div>
+            <div class="field"><label for="itemName">Item</label><input id="itemName" required maxlength="70" placeholder="Library book"></div>
+            <div class="field"><label for="person">Person or place</label><input id="person" required maxlength="70" placeholder="School library"></div>
+            <div class="field"><label for="dateOut">Date borrowed or lent</label><input id="dateOut" type="date" required></div>
+            <div class="field"><label for="dueDate">Return by</label><input id="dueDate" type="date"></div>
+            <div class="field wide"><label for="notes">Useful note (optional)</label><textarea id="notes" maxlength="240" placeholder="Blue hardback; return to the main desk"></textarea></div>
+          </div>
+          <div class="actions" style="margin-top:16px"><button class="primary" type="submit">Save item</button><button id="cancelEdit" class="secondary" type="button" hidden>Cancel edit</button></div>
+          <p id="formMsg" aria-live="polite"></p>
+        </form>
+      </section>
+      <section id="about" class="screen">
+        <h2>Private by design</h2><p class="note">This app runs entirely in this browser. Item names, people or places, dates, notes and return history are stored only in local browser storage on this device. Nothing is uploaded. Clearing browser data removes the list.</p>
+        <h2>For grown-ups</h2><p>Use simple labels rather than sensitive personal information. The board does not send reminders or contact anyone, so a grown-up still checks real return arrangements and dates.</p>
+        <h2>Build your own with AI</h2><div class="prompt">Build me a mobile-friendly family borrowing tracker as one standalone HTML file. Let me record whether we lent or borrowed an item, its name, the person or place, the date, an optional return date and notes. Automatically show overdue and due-soon items, provide open, lent, borrowed and returned filters, search, edit, mark returned, reopen, delete and print controls, and save everything locally in the browser. Do not use external libraries or send data anywhere.</div>
+      </section>
+    </main>
+    <footer class="footer">Made to show what an ordinary parent can build with AI · No account · No advertising · No paid service</footer>
+  </div>
+  <script>
+  (()=>{"use strict";
+    const KEY="aip-family-borrowing-board-v1";
+    let entries=load(),filter="open",query="";
+    const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+    function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||"[]");return Array.isArray(x)?x:[]}catch{return []}}
+    function save(){localStorage.setItem(KEY,JSON.stringify(entries))}
+    function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+    function today(){const d=new Date();return new Date(d.getFullYear(),d.getMonth(),d.getDate())}
+    function parseDate(v){if(!v)return null;const [y,m,d]=v.split("-").map(Number);return new Date(y,m-1,d)}
+    function daysUntil(v){const d=parseDate(v);return d?Math.round((d-today())/86400000):null}
+    function dateText(v){if(!v)return "No return date";return parseDate(v).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}
+    function status(e){if(e.returned)return "returned";const n=daysUntil(e.dueDate);if(n===null)return "open";if(n<0)return "overdue";if(n<=3)return "soon";return "open"}
+    function statusText(e){if(e.returned)return "Returned";const n=daysUntil(e.dueDate);if(n===null)return "No return date";if(n<0)return `${Math.abs(n)} day${Math.abs(n)===1?"":"s"} overdue`;if(n===0)return "Due today";if(n<=3)return `Due in ${n} day${n===1?"":"s"}`;return `Return by ${dateText(e.dueDate)}`}
+    function show(id){$$(".screen").forEach(x=>x.classList.toggle("active",x.id===id));$$(".tab").forEach(x=>x.classList.toggle("active",x.dataset.tab===id))}
+    function render(){
+      const open=entries.filter(e=>!e.returned),soon=open.filter(e=>status(e)==="soon"),late=open.filter(e=>status(e)==="overdue");
+      $("#openCount").textContent=open.length;$("#soonCount").textContent=soon.length;$("#lateCount").textContent=late.length;
+      let list=entries.filter(e=>filter==="open"?!e.returned:filter==="returned"?e.returned:e.direction===filter&&!e.returned);
+      const q=query.toLowerCase();if(q)list=list.filter(e=>[e.item,e.person,e.notes].some(v=>String(v||"").toLowerCase().includes(q)));
+      list.sort((a,b)=>{if(a.returned!==b.returned)return a.returned?1:-1;const ad=a.dueDate||"9999",bd=b.dueDate||"9999";return ad.localeCompare(bd)});
+      $("#items").innerHTML=list.length?list.map(e=>{const s=status(e);return `<article class="card ${s}"><div><h3>${esc(e.item)}</h3><div class="meta">${e.direction==="lent"?"With":"From"} <strong>${esc(e.person)}</strong> · ${statusText(e)}</div><span class="badge ${e.direction==="lent"?"out":"in"}">${e.direction==="lent"?"Lent out":"Borrowed in"}</span>${s==="overdue"?'<span class="badge late">Overdue</span>':s==="soon"?'<span class="badge soon">Due soon</span>':""}${e.notes?`<p class="meta">${esc(e.notes)}</p>`:""}</div><div class="card-actions"><button class="tiny" data-action="toggle" data-id="${e.id}">${e.returned?"Reopen":"Mark returned"}</button><button class="tiny" data-action="edit" data-id="${e.id}">Edit</button><button class="danger tiny" data-action="delete" data-id="${e.id}">Delete</button></div></article>`}).join(""):'<div class="empty">Nothing here yet.</div>';
+      $$("[data-action]").forEach(b=>b.onclick=()=>act(b.dataset.action,b.dataset.id));
+    }
+    function act(action,id){const e=entries.find(x=>x.id===id);if(!e)return;if(action==="toggle"){e.returned=!e.returned;e.returnedAt=e.returned?new Date().toISOString():"";save();render()}else if(action==="delete"){if(confirm(`Delete "${e.item}"?`)){entries=entries.filter(x=>x.id!==id);save();render()}}else{$("#editId").value=e.id;$("#direction").value=e.direction;$("#itemName").value=e.item;$("#person").value=e.person;$("#dateOut").value=e.dateOut;$("#dueDate").value=e.dueDate;$("#notes").value=e.notes;$("#formTitle").textContent="Edit item";$("#cancelEdit").hidden=false;show("add")}}
+    function resetForm(){$("#itemForm").reset();$("#editId").value="";$("#dateOut").value=new Date().toISOString().slice(0,10);$("#formTitle").textContent="Add an item";$("#cancelEdit").hidden=true}
+    $$(".tab").forEach(b=>b.onclick=()=>{show(b.dataset.tab);if(b.dataset.tab==="add"&&!$("#editId").value)resetForm()});
+    $$(".filter").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;$$(".filter").forEach(x=>x.classList.toggle("active",x===b));render()});
+    $("#search").oninput=e=>{query=e.target.value;render()};
+    $("#itemForm").onsubmit=e=>{e.preventDefault();const id=$("#editId").value,record={id:id||crypto.randomUUID?.()||String(Date.now()),direction:$("#direction").value,item:$("#itemName").value.trim(),person:$("#person").value.trim(),dateOut:$("#dateOut").value,dueDate:$("#dueDate").value,notes:$("#notes").value.trim(),returned:false,returnedAt:""};if(id){const old=entries.find(x=>x.id===id);Object.assign(old,record,{returned:old.returned,returnedAt:old.returnedAt})}else entries.push(record);save();resetForm();filter="open";$$(".filter").forEach(x=>x.classList.toggle("active",x.dataset.filter==="open"));show("board");render()};
+    $("#cancelEdit").onclick=()=>{resetForm();show("board")};$("#print").onclick=()=>window.print();
+    resetForm();render();
+  })();
+  </script>
+</body>
+</html>

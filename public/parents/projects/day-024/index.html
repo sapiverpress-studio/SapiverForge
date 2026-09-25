@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173f3a">
+  <title>Our Family Countdowns</title>
+  <style>
+    :root{--ink:#173f3a;--cream:#fff8e9;--paper:#fffefa;--mint:#dcecdf;--yellow:#ffd66b;--coral:#f1846d;--blue:#91cbd5;--line:#d8dfd5;--shadow:0 15px 38px #173f3a18}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(circle at 9% 7%,#f5b8a9 0 11%,transparent 11.5%),radial-gradient(circle at 93% 16%,#ffe092 0 10%,transparent 10.5%),var(--cream);font-family:ui-rounded,"Arial Rounded MT Bold",system-ui,sans-serif}.wrap{width:min(100% - 28px,980px);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;padding:19px 0;font-size:.88rem}.brand{font-weight:900;letter-spacing:.05em}.back{color:var(--ink);text-decoration:none;font-weight:850}.hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;border-radius:28px;padding:clamp(25px,6vw,52px);box-shadow:var(--shadow)}.hero:after{content:"★";position:absolute;right:28px;top:-12px;font-size:145px;color:#ffffff12;transform:rotate(12deg)}.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.73rem;font-weight:900;color:var(--yellow)}h1{font-size:clamp(2.25rem,8vw,4.8rem);line-height:.95;margin:.3em 0 .22em;max-width:720px}.hero p{font:600 1.03rem/1.55 system-ui,sans-serif;max-width:650px}.panel{background:#ffffffed;border:1px solid #fff;border-radius:24px;padding:clamp(17px,4vw,30px);margin:20px 0;box-shadow:var(--shadow)}button,input,select,textarea{font:inherit}.tabs,.actions,.filters{display:flex;gap:9px;flex-wrap:wrap}.tab,.filter{border:0;border-radius:999px;padding:11px 16px;background:#e7eee7;color:var(--ink);font-weight:900;cursor:pointer}.tab.active,.filter.active{background:var(--ink);color:#fff}.screen{display:none}.screen.active{display:block}.wall{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:15px;margin-top:18px}.card{position:relative;background:var(--paper);border:2px solid var(--line);border-radius:22px;padding:20px;min-height:222px;overflow:hidden}.card.pinned{border-color:var(--coral);box-shadow:0 8px 20px #ef846a20}.card:after{content:attr(data-emoji);position:absolute;right:8px;bottom:-19px;font-size:92px;opacity:.11;transform:rotate(-8deg)}.card h3{margin:8px 0 5px;font-size:1.3rem;position:relative;z-index:1}.count{font-size:clamp(2rem,7vw,3.5rem);font-weight:950;line-height:1;margin:17px 0 6px;position:relative;z-index:1}.count small{font-size:.34em}.date{font:600 .9rem/1.45 system-ui,sans-serif;color:#536c67}.badge{display:inline-block;border-radius:999px;padding:5px 9px;background:var(--mint);font-size:.73rem;font-weight:900}.card-actions{display:flex;gap:7px;flex-wrap:wrap;position:relative;z-index:1;margin-top:14px}.primary,.secondary,.danger,.tiny{border:0;border-radius:13px;padding:12px 16px;font-weight:900;cursor:pointer}.primary{background:var(--coral);color:#2d221e}.secondary{background:var(--mint);color:var(--ink)}.danger{background:#fde3de;color:#8c3028}.tiny{padding:8px 10px;background:#edf3ed;color:var(--ink)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}.field{display:grid;gap:6px}.field label{font-weight:850}.field input,.field select,.field textarea{width:100%;border:2px solid var(--line);border-radius:13px;padding:12px;background:#fff;color:var(--ink)}.field textarea{min-height:80px;resize:vertical}.wide{grid-column:1/-1}.empty{text-align:center;padding:48px 16px;color:#6a7c77}.note{font:500 .93rem/1.55 system-ui,sans-serif;background:#edf3ed;padding:15px;border-radius:16px}.prompt{white-space:pre-wrap;background:var(--ink);color:#fff;border-radius:16px;padding:18px;font:600 .92rem/1.55 system-ui,sans-serif}.footer{text-align:center;padding:17px 0 40px;font:500 .87rem/1.5 system-ui,sans-serif}@media(max-width:580px){.top{font-size:.8rem}.hero,.panel{border-radius:21px}.tabs{overflow:auto;flex-wrap:nowrap}.tab{white-space:nowrap}.wall{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top"><div class="brand">AI INQUISITIVE PARENTS · DAY 024</div><a class="back" href="https://suite.sapiverpress.co.uk">← Sapiver Press</a></header>
+    <section class="hero"><div class="eyebrow">Practical family tool</div><h1>Our Family Countdowns</h1><p>Put birthdays, holidays, visits and little family milestones in one cheerful countdown wall built around the dates that matter to you.</p></section>
+    <main class="panel">
+      <nav class="tabs" aria-label="App sections"><button class="tab active" data-tab="wall">Countdown wall</button><button class="tab" data-tab="add">Add a countdown</button><button class="tab" data-tab="about">About</button></nav>
+      <section id="wall" class="screen active">
+        <div class="filters"><button class="filter active" data-filter="upcoming">Upcoming</button><button class="filter" data-filter="past">Finished</button><button id="print" class="secondary">Print wall</button></div>
+        <div id="cards" class="wall"></div>
+      </section>
+      <section id="add" class="screen">
+        <h2 id="formTitle">Add a countdown</h2>
+        <form id="eventForm">
+          <input id="editId" type="hidden">
+          <div class="grid">
+            <div class="field"><label for="name">What are you counting down to?</label><input id="name" required maxlength="70" placeholder="Grandma's visit"></div>
+            <div class="field"><label for="emoji">Picture or emoji</label><input id="emoji" maxlength="6" value="🎉" placeholder="🎉"></div>
+            <div class="field"><label for="date">Date</label><input id="date" type="date" required></div>
+            <div class="field"><label for="time">Time (optional)</label><input id="time" type="time"></div>
+            <div class="field"><label for="repeat">Repeat</label><select id="repeat"><option value="none">One-time event</option><option value="yearly">Every year</option></select></div>
+            <div class="field wide"><label for="note">Short note (optional)</label><textarea id="note" maxlength="180" placeholder="Train arrives at 10:15"></textarea></div>
+          </div>
+          <div class="actions" style="margin-top:16px"><button class="primary" type="submit">Save countdown</button><button id="cancelEdit" class="secondary" type="button" hidden>Cancel edit</button></div>
+        </form>
+      </section>
+      <section id="about" class="screen">
+        <h2>Private by design</h2><p class="note">This app runs entirely in this browser. Countdown names, dates, times, notes and pinned choices are stored only in local browser storage on this device. Nothing is uploaded. Clearing browser data removes them.</p>
+        <h2>For grown-ups</h2><p>A grown-up checks every date and decides which details are suitable to store. The app does not send notifications, invitations or reminders and does not replace an official calendar.</p>
+        <h2>Build your own with AI</h2><div class="prompt">Build me a mobile-friendly family countdown wall as one standalone HTML file. Let me add a title, emoji, date, optional time, short note and a choice to repeat yearly. Calculate the live days and hours remaining, sort upcoming events, keep finished events separately, let me pin, edit and delete cards, print the wall and save everything locally in the browser. Do not use external libraries or send data anywhere.</div>
+      </section>
+    </main>
+    <footer class="footer">Made to show what an ordinary parent can build with AI · No account · No advertising · No paid service</footer>
+  </div>
+  <script>
+  (()=>{"use strict";
+    const KEY="aip-family-countdowns-v1";
+    let events=load(),filter="upcoming";
+    const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+    function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||"[]");return Array.isArray(x)?x:[]}catch{return []}}
+    function save(){localStorage.setItem(KEY,JSON.stringify(events))}
+    function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+    function buildDate(e,year){const [y,m,d]=e.date.split("-").map(Number),[hh,mm]=(e.time||"23:59").split(":").map(Number);return new Date(year??y,m-1,d,hh,mm,e.time?0:59)}
+    function target(e){let d=buildDate(e);if(e.repeat==="yearly"&&d.getTime()<Date.now()){const now=new Date();d=buildDate(e,now.getFullYear());if(d.getTime()<Date.now())d=buildDate(e,now.getFullYear()+1)}return d}
+    function remaining(e){const ms=target(e)-new Date(),past=ms<0,abs=Math.abs(ms),days=Math.floor(abs/86400000),hours=Math.floor(abs%86400000/3600000);return {ms,past,days,hours}}
+    function dateText(e){return target(e).toLocaleString("en-GB",{weekday:"short",day:"numeric",month:"long",year:"numeric",...(e.time?{hour:"2-digit",minute:"2-digit"}:{})})}
+    function show(id){$$(".screen").forEach(x=>x.classList.toggle("active",x.id===id));$$(".tab").forEach(x=>x.classList.toggle("active",x.dataset.tab===id))}
+    function render(){
+      let list=events.filter(e=>filter==="past"?remaining(e).past:!remaining(e).past);
+      list.sort((a,b)=>(b.pinned-a.pinned)||(target(a)-target(b)));
+      $("#cards").innerHTML=list.length?list.map(e=>{const r=remaining(e),main=r.days>0?`${r.days} <small>day${r.days===1?"":"s"}</small>`:`${r.hours} <small>hour${r.hours===1?"":"s"}</small>`;return `<article class="card ${e.pinned?"pinned":""}" data-emoji="${esc(e.emoji||"★")}"><span class="badge">${e.repeat==="yearly"?"Repeats yearly":r.past?"Finished":"Coming up"}</span><h3>${esc(e.emoji||"★")} ${esc(e.name)}</h3><div class="count">${r.past?"Finished":main}</div><div class="date">${dateText(e)}${e.note?`<br>${esc(e.note)}`:""}</div><div class="card-actions"><button class="tiny" data-action="pin" data-id="${e.id}">${e.pinned?"Unpin":"Pin"}</button><button class="tiny" data-action="edit" data-id="${e.id}">Edit</button><button class="danger tiny" data-action="delete" data-id="${e.id}">Delete</button></div></article>`}).join(""):'<div class="empty">No countdowns here yet.</div>';
+      $$("[data-action]").forEach(b=>b.onclick=()=>act(b.dataset.action,b.dataset.id));
+    }
+    function act(action,id){const e=events.find(x=>x.id===id);if(!e)return;if(action==="pin"){e.pinned=!e.pinned;save();render()}else if(action==="delete"){if(confirm(`Delete "${e.name}"?`)){events=events.filter(x=>x.id!==id);save();render()}}else{$("#editId").value=e.id;$("#name").value=e.name;$("#emoji").value=e.emoji;$("#date").value=e.date;$("#time").value=e.time;$("#repeat").value=e.repeat;$("#note").value=e.note;$("#formTitle").textContent="Edit countdown";$("#cancelEdit").hidden=false;show("add")}}
+    function resetForm(){$("#eventForm").reset();$("#editId").value="";$("#emoji").value="🎉";$("#formTitle").textContent="Add a countdown";$("#cancelEdit").hidden=true}
+    $$(".tab").forEach(b=>b.onclick=()=>{show(b.dataset.tab);if(b.dataset.tab==="add"&&!$("#editId").value)resetForm()});
+    $$(".filter").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;$$(".filter").forEach(x=>x.classList.toggle("active",x===b));render()});
+    $("#eventForm").onsubmit=e=>{e.preventDefault();const id=$("#editId").value,record={id:id||crypto.randomUUID?.()||String(Date.now()),name:$("#name").value.trim(),emoji:$("#emoji").value.trim()||"★",date:$("#date").value,time:$("#time").value,repeat:$("#repeat").value,note:$("#note").value.trim(),pinned:false};if(id){const old=events.find(x=>x.id===id);Object.assign(old,record,{pinned:old.pinned})}else events.push(record);save();resetForm();filter="upcoming";$$(".filter").forEach(x=>x.classList.toggle("active",x.dataset.filter==="upcoming"));show("wall");render()};
+    $("#cancelEdit").onclick=()=>{resetForm();show("wall")};$("#print").onclick=()=>window.print();
+    setInterval(render,60000);render();
+  })();
+  </script>
+</body>
+</html>

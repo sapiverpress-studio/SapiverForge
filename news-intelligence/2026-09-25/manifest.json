@@ -64,10 +64,10 @@
   "stories": [
     {
       "category": "business",
-      "headline": "Insurers link $1B in extra costs to hospital AI coding",
-      "confirmed_fact": "Blue Cross-backed research claims that hospitals' use of automated AI coding tools generated approximately $1 billion in additional expenses during 2024–2025 by scanning records to submit higher-tier billing claims.",
-      "why_it_matters": "The dispute highlights a growing tension where AI-driven administrative efficiency is being framed by insurers as a systematic method for inflating healthcare costs.",
-      "interpretation": "While hospitals maintain these tools simply ensure thorough documentation, the scale of the alleged cost increase suggests that automated billing is becoming a significant point of regulatory and financial friction.",
+      "headline": "BCBSA estimates $942M in extra costs as AI coding spreads",
+      "confirmed_fact": "Blue Cross Blue Shield Association analysis of de-identified claims data estimates that increased coding of medically complex hospital cases added $942 million in spending for BCBS companies between 2023 and 2025. BCBSA says the pattern coincided with wider adoption of AI coding tools and raises concerns that those tools may be contributing, but the analysis does not establish AI as the sole cause of the added costs.",
+      "why_it_matters": "BCBSA reports that coding complexity increased without corresponding evidence of more care, making the distinction between more complete documentation and inappropriate upcoding a significant payment-integrity question.",
+      "interpretation": "The evidence supports an association between changing coding patterns and wider AI-tool adoption, not a clean causal estimate of AI's effect. Independent analysis would be needed to separate legitimate documentation improvements from coding changes that increase reimbursement without changed treatment.",
       "confidence": 0.95,
       "source": "New York Times",
       "discovered_via": "Techmeme",
@@ -127,8 +127,8 @@
       "discovery_score": 7.72
     }
   ],
-  "practical_takeaway": "When adopting AI for administrative or customer-facing tasks, expect increased scrutiny from regulators and partners regarding how your models influence billing or user behaviour. Ensure your internal documentation is robust enough to defend against claims of systematic bias or 'optimisation' that might be perceived as exploitative.",
-  "watch_next": "Monitor the Massachusetts Gaming Commission's review of DraftKings, as its findings could set a precedent for how AI-driven marketing and user-targeting are regulated across the betting and financial services sectors.",
+  "practical_takeaway": "If you deploy AI in coding, billing or other revenue-linked workflows, audit how model outputs change classifications, payments and documentation, and retain evidence that those changes match the underlying records. The same principle applies to customer-targeting systems: automation should make high-impact decisions more traceable, not less.",
+  "watch_next": "Watch for responses to BCBSA's analysis from hospitals and coding-tool vendors, especially evidence that distinguishes more complete documentation from inappropriate upcoding. Also watch the Massachusetts Gaming Commission's review for concrete findings about how AI is used in betting promotions.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 033",
@@ -146,12 +146,12 @@
   },
   "social": {
     "date": "2026-09-25",
-    "lead_headline": "Insurers link $1B in extra costs to hospital AI coding",
-    "facebook_post": "Insurers link $1B in extra costs to hospital AI coding\n\nThe dispute highlights a growing tension where AI-driven administrative efficiency is being framed by insurers as a systematic method for inflating healthcare costs.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Insurers link $1B in extra costs to hospital AI coding",
-    "pinterest_description": "The dispute highlights a growing tension where AI-driven administrative efficiency is being framed by insurers as a systematic method for inflating healthcare costs.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Insurers link $1B in extra costs to hospital AI coding. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Insurers link $1B in extra costs to hospital AI coding. Blue Cross-backed research claims that hospitals' use of automated AI coding tools generated approximately $1 billion in additional. Read the Sapiver Forge Daily Brief."
+    "lead_headline": "BCBSA estimates $942M in extra costs as AI coding spreads",
+    "facebook_post": "BCBSA estimates $942M in extra costs as AI coding spreads\n\nBCBSA reports that coding complexity increased without corresponding evidence of more care, making the distinction between more complete documentation and inappropriate upcoding a significant payment-integrity question.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "BCBSA estimates $942M in extra costs as AI coding spreads",
+    "pinterest_description": "BCBSA reports that coding complexity increased without corresponding evidence of more care, making the distinction between more complete documentation and inappropriate upcoding a significant payment-integrity question.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "BCBSA estimates rising coding complexity added $942M in hospital costs from 2023–2025 and says AI coding tools may be contributing. #SapiverForge #AI #Healthcare #Technology",
+    "spoken_script": "Blue Cross Blue Shield Association estimates that increased coding of medically complex hospital cases added $942 million in BCBS spending from 2023 to 2025, and says AI coding tools may be contributing. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "a999584c69264614b2514f88d70a83cbddb7849ca3eeb03ef5818ff94b46b979"
+  "candidate_id": "12ce43fde0870b3183ef7271a5a20a81626bfd63f928cdcc30de3f02fc6dbef8"
 }

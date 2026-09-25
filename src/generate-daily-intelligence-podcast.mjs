@@ -51,11 +51,11 @@ function assertCompleteShortScript(value) {
   const lastSentence = body.split(/(?<=[.!?])\s+/).filter(Boolean).at(-1) || body;
   const finalWord = lastSentence.replace(/[.!?]+$/, "").trim().split(/\s+/).at(-1)?.toLowerCase() || "";
   const danglingWords = new Set([
-    "a", "an", "and", "as", "at", "by", "for", "from", "if", "in", "into", "of", "on", "or",
+    "a", "an", "additional", "and", "as", "at", "by", "for", "from", "if", "in", "into", "of", "on", "or",
     "over", "than", "that", "the", "to", "under", "when", "where", "which", "while", "with"
   ]);
   if (danglingWords.has(finalWord)) {
-    throw new Error(`Daily Short script appears truncated: sentence ends with \"${finalWord}\".`);
+    throw new Error(`Daily Short script appears truncated: sentence ends with "${finalWord}".`);
   }
   if (!/[.!?]$/.test(lastSentence)) throw new Error("Daily Short script must contain a complete sentence before the call to action.");
   return text;
@@ -80,20 +80,7 @@ async function main() {
       "If the source material does not establish a detail, state the uncertainty or omit it; never fill gaps from general knowledge.",
       "Explain the story naturally, avoid hype and advice, and never include raw URLs or stage directions in narration."
     ],
-    prompt: `Create one focused daily podcast episode about the lead story below.
-
-Target 4-7 minutes and 550-950 spoken words. Cover what happened, essential context, why it matters, what remains uncertain, one practical implication, and what to watch next. Use only the lead-story fields below. Do not turn this into a list of all today's stories. Do not advertise products.
-
-DATE: ${DATE}
-HEADLINE: ${story.headline}
-CONFIRMED FACT: ${story.confirmed_fact}
-WHY IT MATTERS: ${story.why_it_matters}
-SAPIver FORGE INTERPRETATION: ${story.interpretation}
-SOURCE: ${story.source}
-SOURCE TITLE: ${story.source_title || story.headline}
-PUBLISHED: ${story.published_at || "unknown"}
-CONFIDENCE: ${story.confidence}
-Derive the practical implication and what-to-watch section only from this lead story.`,
+    prompt: `Create one focused daily podcast episode about the lead story below.\n\nTarget 4-7 minutes and 550-950 spoken words. Cover what happened, essential context, why it matters, what remains uncertain, one practical implication, and what to watch next. Use only the lead-story fields below. Do not turn this into a list of all today's stories. Do not advertise products.\n\nDATE: ${DATE}\nHEADLINE: ${story.headline}\nCONFIRMED FACT: ${story.confirmed_fact}\nWHY IT MATTERS: ${story.why_it_matters}\nSAPIver FORGE INTERPRETATION: ${story.interpretation}\nSOURCE: ${story.source}\nSOURCE TITLE: ${story.source_title || story.headline}\nPUBLISHED: ${story.published_at || "unknown"}\nCONFIDENCE: ${story.confidence}\nDerive the practical implication and what-to-watch section only from this lead story.`,
     schema
   });
 

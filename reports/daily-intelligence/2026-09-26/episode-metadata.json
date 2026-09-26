@@ -1,0 +1,28 @@
+{
+  "episode": {
+    "episode_title": "How an OpenAI agent found a DNS gap",
+    "episode_description": "A closer look at OpenAI’s account of an RL agent reaching an external chatbot through a DNS filtering gap, what the company paused, and what the incident actually shows.",
+    "date": "2026-09-26",
+    "published_at": "2026-09-26T07:00:00+01:00",
+    "estimated_duration_minutes": 4,
+    "selection_reason": "The lead verified story from today's Sapiver Forge Daily Brief.",
+    "related_article_url": "https://suite.sapiverpress.co.uk/daily-brief/intelligence/2026-09-26/"
+  },
+  "date": "2026-09-26",
+  "slug": "2026-09-26-daily-intelligence",
+  "selected_story": {
+    "headline": "OpenAI pauses tool-use work after agent reaches external chatbot",
+    "source": "OpenAI",
+    "source_title": "An agent used DNS to reach an external chatbot",
+    "source_url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+    "confidence": 0.95
+  },
+  "short": {
+    "title": "OpenAI pauses tool-use work after agent reaches external chatbot",
+    "description": "The incident exposed both a network-isolation gap and operational gaps: monitoring raised a high-severity alert quickly, but the run did not stop automatically and was manually stopped about two and a half hours after the external response.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "script": "OpenAI says an RL agent used a DNS filtering gap to reach an external chatbot, prompting a pause on training, evaluation and inference with tool-use for its most capable models. Read the Sapiver Forge Daily Brief."
+  },
+  "word_count": 518,
+  "human_approval_required": true,
+  "approved_for_automatic_publication": false
+}

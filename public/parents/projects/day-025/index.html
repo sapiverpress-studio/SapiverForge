@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#183f3a">
+  <title>Copy My Beat</title>
+  <style>
+    :root{--ink:#183f3a;--cream:#fff9ea;--paper:#fffefa;--mint:#dcecdf;--yellow:#ffd566;--coral:#f1846d;--blue:#8fcbd5;--line:#d8dfd5;--shadow:0 15px 38px #183f3a18}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(circle at 8% 8%,#f5b6a7 0 11%,transparent 11.5%),radial-gradient(circle at 93% 17%,#ffe094 0 10%,transparent 10.5%),var(--cream);font-family:ui-rounded,"Arial Rounded MT Bold",system-ui,sans-serif}.wrap{width:min(100% - 28px,940px);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;padding:19px 0;font-size:.88rem}.brand{font-weight:900;letter-spacing:.05em}.back{color:var(--ink);text-decoration:none;font-weight:850}.hero{position:relative;overflow:hidden;background:var(--ink);color:white;border-radius:28px;padding:clamp(25px,6vw,50px);box-shadow:var(--shadow)}.hero:after{content:"♪";position:absolute;right:30px;top:-28px;font-size:160px;color:#ffffff13;transform:rotate(10deg)}.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.73rem;font-weight:900;color:var(--yellow)}h1{font-size:clamp(2.4rem,9vw,5rem);line-height:.95;margin:.3em 0 .2em}.hero p{font:600 1.03rem/1.55 system-ui,sans-serif;max-width:650px}.panel{background:#ffffffed;border:1px solid white;border-radius:24px;padding:clamp(17px,4vw,30px);margin:20px 0;box-shadow:var(--shadow)}button,input,select{font:inherit}.tabs,.actions,.stats{display:flex;gap:9px;flex-wrap:wrap}.tab{border:0;border-radius:999px;padding:11px 16px;background:#e7eee7;color:var(--ink);font-weight:900;cursor:pointer}.tab.active{background:var(--ink);color:white}.screen{display:none}.screen.active{display:block}.stats{margin-bottom:19px}.pill{background:#edf3ed;border-radius:999px;padding:9px 14px;font-weight:850}.game{text-align:center;min-height:455px;display:grid;place-items:center}.beats{display:flex;justify-content:center;gap:8px;margin:22px 0;flex-wrap:wrap}.beat{width:clamp(35px,10vw,55px);aspect-ratio:1;border-radius:14px;background:#e8eee7;border:3px solid transparent;display:grid;place-items:center;font-size:1.35rem;font-weight:900;transition:.12s}.beat.hit{background:#ffd9d1}.beat.now{border-color:var(--ink);transform:translateY(-4px)}.beat.got{background:#c9ead6}.status{font-size:1.15rem;font-weight:900;min-height:34px}.pad{width:min(72vw,285px);aspect-ratio:1;border-radius:50%;border:0;background:radial-gradient(circle at 35% 30%,#ffb6a7,var(--coral) 58%,#c95d4b);box-shadow:0 14px 0 #a94c40,0 22px 35px #8d453333;color:#fff;font-size:clamp(2rem,9vw,3.4rem);font-weight:950;cursor:pointer;touch-action:manipulation;user-select:none}.pad:active,.pad.active{transform:translateY(9px);box-shadow:0 5px 0 #a94c40}.primary,.secondary,.danger{border:0;border-radius:13px;padding:12px 17px;font-weight:900;cursor:pointer}.primary{background:var(--coral);color:#2d221e}.secondary{background:var(--mint);color:var(--ink)}.danger{background:#fde3de;color:#8c3028}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.field{display:grid;gap:6px}.field label{font-weight:850}.field input,.field select{width:100%;border:2px solid var(--line);border-radius:13px;padding:12px;background:#fff;color:var(--ink)}.tempo-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px}.tempo-row output{font-size:1.35rem;font-weight:950;min-width:75px}.note{font:500 .93rem/1.55 system-ui,sans-serif;background:#edf3ed;padding:15px;border-radius:16px}.prompt{white-space:pre-wrap;background:var(--ink);color:#fff;border-radius:16px;padding:18px;font:600 .92rem/1.55 system-ui,sans-serif}.footer{text-align:center;padding:17px 0 40px;font:500 .87rem/1.5 system-ui,sans-serif}@media(max-width:560px){.top{font-size:.8rem}.hero,.panel{border-radius:21px}.tabs{overflow:auto;flex-wrap:nowrap}.tab{white-space:nowrap}.game{min-height:420px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top"><div class="brand">AI INQUISITIVE PARENTS · DAY 025</div><a class="back" href="https://suite.sapiverpress.co.uk">← Sapiver Press</a></header>
+    <section class="hero"><div class="eyebrow">Personalised music game</div><h1>Copy My Beat</h1><p>Choose the speed and challenge, listen to a short rhythm, then tap it back on the big beat pad.</p></section>
+    <main class="panel">
+      <nav class="tabs" aria-label="App sections"><button class="tab active" data-tab="play">Play</button><button class="tab" data-tab="setup">Choose the challenge</button><button class="tab" data-tab="about">About</button></nav>
+      <section id="play" class="screen active">
+        <div class="stats"><span class="pill">Score <b id="score">0</b></span><span class="pill">Streak <b id="streak">0</b></span><span class="pill">Best <b id="best">0</b></span></div>
+        <div class="game"><div><div class="eyebrow" style="color:#55736e">Listen. Then copy.</div><div id="beats" class="beats" aria-label="Rhythm beats"></div><div id="status" class="status" aria-live="polite">Press “Play the beat” to begin.</div><div style="margin:20px 0"><button id="pad" class="pad" disabled>TAP</button></div><div class="actions" style="justify-content:center"><button id="listen" class="primary">Play the beat</button><button id="newBeat" class="secondary">New rhythm</button></div></div></div>
+      </section>
+      <section id="setup" class="screen">
+        <h2>Make the challenge fit</h2>
+        <div class="grid">
+          <div class="field"><label for="length">Pattern length</label><select id="length"><option value="4">4 beats</option><option value="6">6 beats</option><option value="8">8 beats</option></select></div>
+          <div class="field"><label for="difficulty">Difficulty</label><select id="difficulty"><option value="easy">Easy — mostly sounds</option><option value="medium">Medium — more rests</option><option value="tricky">Tricky — expect surprises</option></select></div>
+          <div class="field" style="grid-column:1/-1"><label for="tempo">Tempo</label><div class="tempo-row"><input id="tempo" type="range" min="60" max="140" step="5"><output id="tempoOut">90 BPM</output></div></div>
+        </div>
+        <div class="actions" style="margin-top:18px"><button id="saveSettings" class="primary">Save and play</button><button id="resetProgress" class="danger">Reset score</button></div>
+      </section>
+      <section id="about" class="screen">
+        <h2>How it works</h2><p>The app plays one sound for every active beat. Silent spaces are rests. After the count-in, tap the large pad on the beats you heard. You are scored on which beat positions you copied, not on millisecond-perfect timing.</p>
+        <h2>Private by design</h2><p class="note">This game runs entirely in this browser. Difficulty, tempo, score, streak and best score stay only in local browser storage on this device. No microphone is used, no audio is recorded and nothing is uploaded.</p>
+        <h2>For grown-ups</h2><p>Choose a comfortable volume before starting and keep it playful. Browser audio may require the first button tap before sound can play.</p>
+        <h2>Build your own with AI</h2><div class="prompt">Build me a mobile-friendly copy-the-rhythm game as one standalone HTML file. Let a parent choose 4, 6 or 8 beats, a tempo and difficulty. Generate patterns containing sounds and rests, play them with the Web Audio API, give a clear count-in, let the child tap the rhythm back on a large button, compare taps by beat position, give immediate accuracy feedback, track score and streak, and save settings locally. Do not use a microphone, external libraries or paid services.</div>
+      </section>
+    </main>
+    <footer class="footer">Made to show what an ordinary parent can build with AI · No account · No microphone · No paid service</footer>
+  </div>
+  <script>
+  (()=>{"use strict";
+    const KEY="aip-copy-my-beat-v1",defaults={length:4,difficulty:"easy",tempo:90,score:0,streak:0,best:0};
+    let state=load(),pattern=[],taps=new Set(),mode="idle",timer=null,audio=null,startAt=0;
+    const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+    function load(){try{return {...defaults,...JSON.parse(localStorage.getItem(KEY)||"{}")}}catch{return {...defaults}}}
+    function save(){localStorage.setItem(KEY,JSON.stringify(state))}
+    function chance(){return state.difficulty==="easy"?.78:state.difficulty==="medium"?.62:.5}
+    function makePattern(){stop();pattern=Array.from({length:Number(state.length)},(_,i)=>i===0?1:(Math.random()<chance()?1:0));if(pattern.every(Boolean))pattern[pattern.length-2]=0;if(pattern.filter(Boolean).length<2)pattern[1]=1;taps.clear();mode="idle";$("#status").textContent="Press “Play the beat” to begin.";$("#pad").disabled=true;renderBeats()}
+    function renderBeats(active=-1,reveal=mode==="result"){$("#beats").innerHTML=pattern.map((v,i)=>`<div class="beat ${reveal&&v?"hit":""} ${active===i?"now":""} ${taps.has(i)?"got":""}">${reveal?(v?"●":"–"):i+1}</div>`).join("")}
+    function ctx(){if(!audio)audio=new (window.AudioContext||window.webkitAudioContext)();if(audio.state==="suspended")audio.resume();return audio}
+    function tone(when=0,soft=false){const c=ctx(),o=c.createOscillator(),g=c.createGain();o.type="sine";o.frequency.value=soft?520:220;g.gain.setValueAtTime(0.0001,c.currentTime+when);g.gain.exponentialRampToValueAtTime(soft?.055:.16,c.currentTime+when+.008);g.gain.exponentialRampToValueAtTime(0.0001,c.currentTime+when+.12);o.connect(g).connect(c.destination);o.start(c.currentTime+when);o.stop(c.currentTime+when+.14)}
+    function stop(){if(timer)clearTimeout(timer);timer=null;mode="idle"}
+    function play(){stop();taps.clear();mode="listen";$("#listen").disabled=true;$("#newBeat").disabled=true;$("#pad").disabled=true;const ms=60000/state.tempo;$("#status").textContent="Listen…";let step=0;function next(){if(step<pattern.length){renderBeats(step,false);if(pattern[step])tone();step++;timer=setTimeout(next,ms)}else{countIn(ms)}}next()}
+    function countIn(ms){let n=3;$("#status").textContent=`Your turn in ${n}…`;tone(0,true);function tick(){n--;if(n>0){$("#status").textContent=`Your turn in ${n}…`;tone(0,true);timer=setTimeout(tick,ms)}else{beginTap(ms)}}timer=setTimeout(tick,ms)}
+    function beginTap(ms){mode="tap";taps.clear();renderBeats();$("#status").textContent="Tap the rhythm now!";$("#pad").disabled=false;startAt=performance.now();timer=setTimeout(finish,pattern.length*ms+ms*.45)}
+    function hit(){if(mode!=="tap")return;const ms=60000/state.tempo,index=Math.round((performance.now()-startAt)/ms);if(index>=0&&index<pattern.length)taps.add(index);tone(0,true);$("#pad").classList.add("active");setTimeout(()=>$("#pad").classList.remove("active"),90);renderBeats(index,false)}
+    function finish(){mode="result";$("#pad").disabled=true;const correct=pattern.reduce((n,v,i)=>n+(Boolean(v)===taps.has(i)?1:0),0),pct=Math.round(correct/pattern.length*100);if(pct>=75){state.score++;state.streak++;state.best=Math.max(state.best,state.streak);$("#status").textContent=pct===100?"Perfect copy!":"Great listening — "+pct+"% matched."}else{state.streak=0;$("#status").textContent="Good try — "+pct+"% matched. Listen again."}save();updateStats();renderBeats(-1,true);$("#listen").disabled=false;$("#newBeat").disabled=false}
+    function updateStats(){$("#score").textContent=state.score;$("#streak").textContent=state.streak;$("#best").textContent=state.best}
+    function show(id){$$(".screen").forEach(x=>x.classList.toggle("active",x.id===id));$$(".tab").forEach(x=>x.classList.toggle("active",x.dataset.tab===id));if(id!=="play")stop()}
+    $$(".tab").forEach(b=>b.onclick=()=>show(b.dataset.tab));$("#listen").onclick=play;$("#newBeat").onclick=makePattern;$("#pad").onclick=hit;
+    $("#tempo").oninput=e=>$("#tempoOut").textContent=e.target.value+" BPM";
+    $("#saveSettings").onclick=()=>{state.length=Number($("#length").value);state.difficulty=$("#difficulty").value;state.tempo=Number($("#tempo").value);save();makePattern();show("play")};
+    $("#resetProgress").onclick=()=>{state.score=state.streak=state.best=0;save();updateStats()};
+    $("#length").value=state.length;$("#difficulty").value=state.difficulty;$("#tempo").value=state.tempo;$("#tempoOut").textContent=state.tempo+" BPM";updateStats();makePattern();
+  })();
+  </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-09-27T07:03:58.501Z",
+  "collected_at": "2026-09-27T11:57:18.632Z",
   "expected_sources": [
     "Techmeme",
     "Reuters",
@@ -13,7 +13,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 437,
+      "elapsed_ms": 442,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -21,7 +21,7 @@
       "name": "Reuters",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 1771,
+      "elapsed_ms": 835,
       "collection_mode": "sitemap",
       "original_link_count": 12
     },
@@ -29,7 +29,7 @@
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 460,
+      "elapsed_ms": 464,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -37,7 +37,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 296,
+      "elapsed_ms": 367,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -45,7 +45,7 @@
       "name": "Sifted",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 1986,
+      "elapsed_ms": 2513,
       "collection_mode": "html",
       "original_link_count": 12
     }
@@ -53,9 +53,29 @@
   "candidates": [
     {
       "source": "Hacker News",
+      "publisher": "authorsguild.org",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "OpenAI Feared \"Optics\" of what might appear on Hacker News",
+      "url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
+      "direct_source_url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
+      "discovery_url": "https://news.ycombinator.com/item?id=49863864",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=49863864",
+      "summary": "",
+      "published_at": "2026-09-27T06:19:33.000Z",
+      "engagement": {
+        "score": 274,
+        "comments": 245
+      },
+      "collection_mode": "api",
+      "score": 8.295
+    },
+    {
+      "source": "Hacker News",
       "publisher": "github.com",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 7,
+      "source_rank": 4,
       "title": "Show HN: Reladraw – A diagram language where you decide where to place things",
       "url": "https://github.com/reladraw/reladraw",
       "direct_source_url": "https://github.com/reladraw/reladraw",
@@ -65,11 +85,47 @@
       "summary": "I love making diagrams to help understand, plan, etc. However, the options are (A) auto-placement languages like Mermaid or Graphviz (which don't let me decide how the diagram looks), or (B) software like Draw.io which are powerful but are very time consuming (and inefficient for agents to manipulate). I wanted to have the benefits of both, where you can define a diagram in a diagram language, but also retain a high degree of control over what the diagram looks like. I also wanted this to work w",
       "published_at": "2026-09-26T17:10:40.000Z",
       "engagement": {
-        "score": 269,
-        "comments": 78
+        "score": 323,
+        "comments": 88
       },
       "collection_mode": "api",
-      "score": 8.116
+      "score": 8.165
+    },
+    {
+      "title": "In China, recent warnings about existential AI risks are seen as distinctly Western or as a ploy to stop Chinese AI companies from overtaking their US rivals (Lily Kuo/New York Times)",
+      "url": "https://www.nytimes.com/2026/09/27/world/asia/china-us-ai-distrust.html?unlocked_article_code=1.EVE.h8tG.lRHxbBc3XBI8&smid=url-share",
+      "summary": "Lily Kuo / New York Times : In China, recent warnings about existential AI risks are seen as distinctly Western or as a ploy to stop Chinese AI companies from overtaking their US rivals &mdash; In China, A.I. doomsday warnings can feel distinctly Western or like a ploy to stop Chinese A.I. companies from trying to overtake their U.S. rivals.",
+      "description_html": "<A HREF=\"https://www.nytimes.com/2026/09/27/world/asia/china-us-ai-distrust.html?unlocked_article_code=1.EVE.h8tG.lRHxbBc3XBI8&smid=url-share\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260927/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260927/p5#a260927p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Lily Kuo / <A HREF=\"https://www.nytimes.com/\">New York Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.nytimes.com/2026/09/27/world/asia/china-us-ai-distrust.html?unlocked_article_code=1.EVE.h8tG.lRHxbBc3XBI8&smid=url-share\">In China, recent warnings about existential AI risks are seen as distinctly Western or as a ploy to stop Chinese AI companies from overtaking their US rivals</A></B></SPAN>&nbsp; &mdash;&nbsp; In China, A.I. doomsday warnings can feel distinctly Western or like a ploy to stop Chinese A.I. companies from trying to overtake their U.S. rivals.</P>",
+      "published_at": "2026-09-27T11:00:30.000Z",
+      "discovery_url": "https://www.techmeme.com/260927/p5",
+      "direct_source_url": "https://www.nytimes.com/2026/09/27/world/asia/china-us-ai-distrust.html?unlocked_article_code=1.EVE.h8tG.lRHxbBc3XBI8&smid=url-share",
+      "publisher": "Lily Kuo/New York Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.061
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "reddit.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 10,
+      "title": "Meta Blocks President Lula's Facebook Page, Campaign Ads 2 Weeks from Election",
+      "url": "https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and/",
+      "direct_source_url": "https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and/",
+      "discovery_url": "https://news.ycombinator.com/item?id=49864642",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=49864642",
+      "summary": "",
+      "published_at": "2026-09-27T08:44:04.000Z",
+      "engagement": {
+        "score": 221,
+        "comments": 132
+      },
+      "collection_mode": "api",
+      "score": 7.969
     },
     {
       "title": "How effective altruism shaped AI safety and Anthropic; some early Anthropic employees are considering buying remote US land for relocation if AI goes awry (Wall Street Journal)",
@@ -83,29 +139,9 @@
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
-      "source_rank": 1,
+      "source_rank": 2,
       "collection_mode": "rss",
-      "score": 8.056
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "gultsch.de",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 1,
-      "title": "Breaking Up with Google Play: Why Conversations Is Now Free",
-      "url": "https://gultsch.de/posts/breaking-up-with-google-play/",
-      "direct_source_url": "https://gultsch.de/posts/breaking-up-with-google-play/",
-      "discovery_url": "https://news.ycombinator.com/item?id=49855315",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=49855315",
-      "summary": "",
-      "published_at": "2026-09-26T10:55:56.000Z",
-      "engagement": {
-        "score": 659,
-        "comments": 264
-      },
-      "collection_mode": "api",
-      "score": 8.011
+      "score": 7.772
     },
     {
       "title": "New York City-based HIFI, which provides API infrastructure for stablecoin payments and settlements, raised a $37M Series A led by Left Lane Capital (Brian Danga/The Block)",
@@ -119,45 +155,9 @@
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
-      "source_rank": 2,
-      "collection_mode": "rss",
-      "score": 7.958
-    },
-    {
-      "title": "PicoJool, which is developing AI data center interconnects based on vertical cavity surface emitting lasers, raised a $27.5M Series A led by Socratic Partners (Mike Wheatley/SiliconANGLE)",
-      "url": "https://siliconangle.com/2026/09/24/pat-gelsinger-backed-startup-picojool-raises-27-5m-to-boost-bandwidth-for-ai-clusters/",
-      "summary": "Mike Wheatley / SiliconANGLE : PicoJool, which is developing AI data center interconnects based on vertical cavity surface emitting lasers, raised a $27.5M Series A led by Socratic Partners &mdash; A startup called PicoJool that's backed by former Intel Corp. Chief Executive Pat Gelsinger says it's ready to help ease the strain &hellip;",
-      "description_html": "<A HREF=\"https://siliconangle.com/2026/09/24/pat-gelsinger-backed-startup-picojool-raises-27-5m-to-boost-bandwidth-for-ai-clusters/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260927/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260927/p2#a260927p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Mike Wheatley / <A HREF=\"http://siliconangle.com/\">SiliconANGLE</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://siliconangle.com/2026/09/24/pat-gelsinger-backed-startup-picojool-raises-27-5m-to-boost-bandwidth-for-ai-clusters/\">PicoJool, which is developing AI data center interconnects based on vertical cavity surface emitting lasers, raised a $27.5M Series A led by Socratic Partners</A></B></SPAN>&nbsp; &mdash;&nbsp; A startup called PicoJool that's backed by former Intel Corp. Chief Executive Pat Gelsinger says it's ready to help ease the strain &hellip; </P>",
-      "published_at": "2026-09-27T04:45:01.000Z",
-      "discovery_url": "https://www.techmeme.com/260927/p2",
-      "direct_source_url": "https://siliconangle.com/2026/09/24/pat-gelsinger-backed-startup-picojool-raises-27-5m-to-boost-bandwidth-for-ai-clusters/",
-      "publisher": "Mike Wheatley/SiliconANGLE",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
       "source_rank": 3,
       "collection_mode": "rss",
-      "score": 7.844
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "blog.codinghorror.com",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 10,
-      "title": "If we do not stop to help each other, what do we become?",
-      "url": "https://blog.codinghorror.com/if-we-do-not-stop-to-help-each-other-what-do-we-become/",
-      "direct_source_url": "https://blog.codinghorror.com/if-we-do-not-stop-to-help-each-other-what-do-we-become/",
-      "discovery_url": "https://news.ycombinator.com/item?id=49863062",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=49863062",
-      "summary": "",
-      "published_at": "2026-09-27T03:20:46.000Z",
-      "engagement": {
-        "score": 170,
-        "comments": 61
-      },
-      "collection_mode": "api",
-      "score": 7.84
+      "score": 7.675
     },
     {
       "source": "Hacker News",
@@ -173,11 +173,47 @@
       "summary": "",
       "published_at": "2026-09-26T09:13:41.000Z",
       "engagement": {
-        "score": 385,
-        "comments": 95
+        "score": 404,
+        "comments": 103
       },
       "collection_mode": "api",
-      "score": 7.776
+      "score": 7.576
+    },
+    {
+      "title": "PicoJool, which is developing AI data center interconnects based on vertical cavity surface emitting lasers, raised a $27.5M Series A led by Socratic Partners (Mike Wheatley/SiliconANGLE)",
+      "url": "https://siliconangle.com/2026/09/24/pat-gelsinger-backed-startup-picojool-raises-27-5m-to-boost-bandwidth-for-ai-clusters/",
+      "summary": "Mike Wheatley / SiliconANGLE : PicoJool, which is developing AI data center interconnects based on vertical cavity surface emitting lasers, raised a $27.5M Series A led by Socratic Partners &mdash; A startup called PicoJool that's backed by former Intel Corp. Chief Executive Pat Gelsinger says it's ready to help ease the strain &hellip;",
+      "description_html": "<A HREF=\"https://siliconangle.com/2026/09/24/pat-gelsinger-backed-startup-picojool-raises-27-5m-to-boost-bandwidth-for-ai-clusters/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260927/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260927/p2#a260927p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Mike Wheatley / <A HREF=\"http://siliconangle.com/\">SiliconANGLE</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://siliconangle.com/2026/09/24/pat-gelsinger-backed-startup-picojool-raises-27-5m-to-boost-bandwidth-for-ai-clusters/\">PicoJool, which is developing AI data center interconnects based on vertical cavity surface emitting lasers, raised a $27.5M Series A led by Socratic Partners</A></B></SPAN>&nbsp; &mdash;&nbsp; A startup called PicoJool that's backed by former Intel Corp. Chief Executive Pat Gelsinger says it's ready to help ease the strain &hellip; </P>",
+      "published_at": "2026-09-27T04:45:01.000Z",
+      "discovery_url": "https://www.techmeme.com/260927/p2",
+      "direct_source_url": "https://siliconangle.com/2026/09/24/pat-gelsinger-backed-startup-picojool-raises-27-5m-to-boost-bandwidth-for-ai-clusters/",
+      "publisher": "Mike Wheatley/SiliconANGLE",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.56
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "DSec",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 8,
+      "title": "DeepSeek Elastic Compute (DSec)",
+      "url": "https://arxiv.org/abs/2609.22978",
+      "direct_source_url": "https://arxiv.org/abs/2609.22978",
+      "discovery_url": "https://news.ycombinator.com/item?id=49859112",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=49859112",
+      "summary": "",
+      "published_at": "2026-09-26T18:22:41.000Z",
+      "engagement": {
+        "score": 262,
+        "comments": 86
+      },
+      "collection_mode": "api",
+      "score": 7.542
     },
     {
       "title": "Numeral, a provider of AI-powered tech to automate sales tax compliance workflows in over 90 countries, raised a $100M Series C led by Insight Partners (FinTech Global)",
@@ -191,29 +227,49 @@
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
-      "source_rank": 4,
+      "source_rank": 5,
       "collection_mode": "rss",
-      "score": 7.753
+      "score": 7.469
     },
     {
       "source": "Hacker News",
-      "publisher": "DSec",
+      "publisher": "discourse.haskell.org",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 9,
-      "title": "DeepSeek Elastic Compute (DSec)",
-      "url": "https://arxiv.org/abs/2609.22978",
-      "direct_source_url": "https://arxiv.org/abs/2609.22978",
-      "discovery_url": "https://news.ycombinator.com/item?id=49859112",
+      "source_rank": 6,
+      "title": "How to keep enjoying programming in a world of LLMs",
+      "url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
+      "direct_source_url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
+      "discovery_url": "https://news.ycombinator.com/item?id=49854875",
       "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=49859112",
+      "discussion_url": "https://news.ycombinator.com/item?id=49854875",
       "summary": "",
-      "published_at": "2026-09-26T18:22:41.000Z",
+      "published_at": "2026-09-26T09:41:58.000Z",
       "engagement": {
-        "score": 228,
-        "comments": 76
+        "score": 244,
+        "comments": 279
       },
       "collection_mode": "api",
-      "score": 7.633
+      "score": 7.351
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "tomshardware.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/asml-says-its-sells-absolutely-nothing-in-europe-calls-on-eu-to-help-create-demand",
+      "direct_source_url": "https://www.tomshardware.com/tech-industry/semiconductors/asml-says-its-sells-absolutely-nothing-in-europe-calls-on-eu-to-help-create-demand",
+      "discovery_url": "https://news.ycombinator.com/item?id=49844663",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=49844663",
+      "summary": "",
+      "published_at": "2026-09-25T13:49:06.000Z",
+      "engagement": {
+        "score": 302,
+        "comments": 678
+      },
+      "collection_mode": "api",
+      "score": 7.35
     },
     {
       "title": "Sources: OpenAI, Anthropic, and researchers are probing tens of thousands of frontier model security incidents, including sandbox escapes and website hijacking (Madison Mills/Axios)",
@@ -227,9 +283,29 @@
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
-      "source_rank": 5,
+      "source_rank": 6,
       "collection_mode": "rss",
-      "score": 7.624
+      "score": 7.341
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "antonz.org",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 9,
+      "title": "Go Concurrency Distilled",
+      "url": "https://antonz.org/go-concurrency-distilled/",
+      "direct_source_url": "https://antonz.org/go-concurrency-distilled/",
+      "discovery_url": "https://news.ycombinator.com/item?id=49856988",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=49856988",
+      "summary": "",
+      "published_at": "2026-09-26T14:34:49.000Z",
+      "engagement": {
+        "score": 239,
+        "comments": 95
+      },
+      "collection_mode": "api",
+      "score": 7.305
     },
     {
       "title": "Research: OpenAI agents scanned a UN data hub 16K+ times between April and the end of June, and circumvented a filter that was blocking their requests for data (Robert McMillan/Wall Street Journal)",
@@ -243,29 +319,9 @@
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
-      "source_rank": 6,
+      "source_rank": 7,
       "collection_mode": "rss",
-      "score": 7.541
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "discourse.haskell.org",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 8,
-      "title": "How to keep enjoying programming in a world of LLMs",
-      "url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
-      "direct_source_url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
-      "discovery_url": "https://news.ycombinator.com/item?id=49854875",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=49854875",
-      "summary": "",
-      "published_at": "2026-09-26T09:41:58.000Z",
-      "engagement": {
-        "score": 207,
-        "comments": 251
-      },
-      "collection_mode": "api",
-      "score": 7.359
+      "score": 7.257
     },
     {
       "title": "Google Threat Intelligence Group finds dark web marketplaces selling access to AI models, including from Anthropic, Google, and OpenAI, at up to 97% discounts (Tom Wilson/Financial Times)",
@@ -279,92 +335,36 @@
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
-      "source_rank": 7,
-      "collection_mode": "rss",
-      "score": 7.34
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "jev-pokemon.vercel.app",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 6,
-      "title": "Show HN: Jev Plays Pokémon Red",
-      "url": "https://jev-pokemon.vercel.app/",
-      "direct_source_url": "https://jev-pokemon.vercel.app/",
-      "discovery_url": "https://news.ycombinator.com/item?id=49845172",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=49845172",
-      "summary": "Hey HN! Wanted to share a fun project I've been hacking on. Given Jev can make decisions really fast (but not fast enough to play Doom yet sadly), I wanted to try and push it to play a more complex game than Tetris. So I went with Pokémon. I've spent endless hours playing this game as a child so building this was a ton of fun. I open sourced everything in case you want to hack on it yourself here: https://github.com/christianmat/jev-pokemon The game is being streamed live including the tokens an",
-      "published_at": "2026-09-25T14:28:07.000Z",
-      "engagement": {
-        "score": 262,
-        "comments": 111
-      },
-      "collection_mode": "api",
-      "score": 7.3
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "github.com",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 2,
-      "title": "PipePipe: NewPipe hard fork implementing SponsorBlock",
-      "url": "https://github.com/InfinityLoop1308/PipePipe",
-      "direct_source_url": "https://github.com/InfinityLoop1308/PipePipe",
-      "discovery_url": "https://news.ycombinator.com/item?id=49842764",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=49842764",
-      "summary": "",
-      "published_at": "2026-09-25T10:55:40.000Z",
-      "engagement": {
-        "score": 384,
-        "comments": 210
-      },
-      "collection_mode": "api",
-      "score": 7.27
-    },
-    {
-      "title": "Sources: US and Russian diplomats worked to weaken an AI weapons pact at the UN this month, removing a requirement that humans review AI-generated targets, more (Pranshu Verma/Washington Post)",
-      "url": "https://www.washingtonpost.com/technology/2026/09/26/how-us-russia-weakened-global-effort-regulate-killer-ai/",
-      "summary": "Pranshu Verma / Washington Post : Sources: US and Russian diplomats worked to weaken an AI weapons pact at the UN this month, removing a requirement that humans review AI-generated targets, more &mdash; The two nations weakened a range of safeguards in a landmark U.N. effort to try to regulate the use of lethal autonomous weaponry.",
-      "description_html": "<A HREF=\"https://www.washingtonpost.com/technology/2026/09/26/how-us-russia-weakened-global-effort-regulate-killer-ai/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/260926/i17.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/260926/p17#a260926p17\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Pranshu Verma / <A HREF=\"https://www.washingtonpost.com/\">Washington Post</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.washingtonpost.com/technology/2026/09/26/how-us-russia-weakened-global-effort-regulate-killer-ai/\">Sources: US and Russian diplomats worked to weaken an AI weapons pact at the UN this month, removing a requirement that humans review AI-generated targets, more</A></B></SPAN>&nbsp; &mdash;&nbsp; The two nations weakened a range of safeguards in a landmark U.N. effort to try to regulate the use of lethal autonomous weaponry.</P>",
-      "published_at": "2026-09-26T19:50:00.000Z",
-      "discovery_url": "https://www.techmeme.com/260926/p17",
-      "direct_source_url": "https://www.washingtonpost.com/technology/2026/09/26/how-us-russia-weakened-global-effort-regulate-killer-ai/",
-      "publisher": "Pranshu Verma/Washington Post",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
       "source_rank": 8,
       "collection_mode": "rss",
-      "score": 7.072
+      "score": 7.056
     },
     {
-      "title": "White House press reinstated, Trump-Xi meeting, OpenAI agent hack (Updated)",
-      "url": "https://www.reuters.com/podcasts/openai-agent-hack-trump-xi-talks-tigray-2026-09-24/",
+      "title": "Microsoft revamps Copilot with code generation, agentic AI tools",
+      "url": "https://www.reuters.com/technology/microsoft-revamps-copilot-with-code-generation-agentic-ai-tools-2026-09-25/",
       "summary": "",
-      "published_at": "2026-09-25T07:35:31.639Z",
+      "published_at": "2026-09-25T13:51:29.167Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 1,
-      "direct_source_url": "https://www.reuters.com/podcasts/openai-agent-hack-trump-xi-talks-tigray-2026-09-24/",
-      "discovery_url": "https://www.reuters.com/podcasts/openai-agent-hack-trump-xi-talks-tigray-2026-09-24/",
+      "direct_source_url": "https://www.reuters.com/technology/microsoft-revamps-copilot-with-code-generation-agentic-ai-tools-2026-09-25/",
+      "discovery_url": "https://www.reuters.com/technology/microsoft-revamps-copilot-with-code-generation-agentic-ai-tools-2026-09-25/",
       "link_quality": "original",
       "collection_mode": "sitemap",
       "score": 6.55
     },
     {
-      "title": "Wildberger sieht in Open-AI-Vorfall in Australien \"alarmierendes Signal\"",
-      "url": "https://www.reuters.com/de/firma/wildberger-sieht-open-ai-vorfall-australien-alarmierendes-signal-2026-09-25/",
+      "title": "Microsoft amplia recursos do Copilot com ferramenta de programação e agente de IA",
+      "url": "https://www.reuters.com/pt/tecnologia/SBCZ3JN2SNP4FFYUI5HJ3JDFC4-2026-09-25/",
       "summary": "",
-      "published_at": "2026-09-25T10:41:43.820Z",
+      "published_at": "2026-09-25T13:27:15.903Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 2,
-      "direct_source_url": "https://www.reuters.com/de/firma/wildberger-sieht-open-ai-vorfall-australien-alarmierendes-signal-2026-09-25/",
-      "discovery_url": "https://www.reuters.com/de/firma/wildberger-sieht-open-ai-vorfall-australien-alarmierendes-signal-2026-09-25/",
+      "direct_source_url": "https://www.reuters.com/pt/tecnologia/SBCZ3JN2SNP4FFYUI5HJ3JDFC4-2026-09-25/",
+      "discovery_url": "https://www.reuters.com/pt/tecnologia/SBCZ3JN2SNP4FFYUI5HJ3JDFC4-2026-09-25/",
       "link_quality": "original",
       "collection_mode": "sitemap",
       "score": 6.47
@@ -382,25 +382,10 @@
       "summary": "While Large Language Models (LLMs) rely on highly non-linear components, in this work we demonstrate that they exhibit fundamental linearity: when inputs from distinct text streams are linearly combined, the model outputs a superposition of the individual next-token distributions. We term this the Superposition Linearity Hypothesis. We provide evidence that superposition is an intrinsic property of the Transformer architecture rather than an emergent consequence of training; in fact, we observe that it tends to diminish as pretraining progresses. However, we demonstrate that linearity can be substantially restored through lightweight fine-tuning, significantly reducing the divergence between the predicted next-token distribution and the average of the individual next-token distributions. Finally, we introduce a guided decoding procedure that disentangles superposed outputs, enabling the simultaneous generation of two coherent continuations from a single forward pass.",
       "published_at": "2026-09-23T20:00:00.000Z",
       "engagement": {
-        "upvotes": 70
+        "upvotes": 72
       },
       "collection_mode": "api",
       "score": 6.46
-    },
-    {
-      "title": "Nscale listing pushes the limits of AI optimism",
-      "url": "https://www.reuters.com/commentary/breakingviews/nscale-listing-pushes-limits-ai-optimism-2026-09-25/",
-      "summary": "",
-      "published_at": "2026-09-25T10:35:49.886Z",
-      "source": "Reuters",
-      "publisher": "Reuters",
-      "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 3,
-      "direct_source_url": "https://www.reuters.com/commentary/breakingviews/nscale-listing-pushes-limits-ai-optimism-2026-09-25/",
-      "discovery_url": "https://www.reuters.com/commentary/breakingviews/nscale-listing-pushes-limits-ai-optimism-2026-09-25/",
-      "link_quality": "original",
-      "collection_mode": "sitemap",
-      "score": 6.39
     },
     {
       "source": "Hugging Face",
@@ -415,22 +400,37 @@
       "summary": "Recently, Large Language Models (LLMs) have been increasingly able to solve advanced mathematical problems, including many that have been open for decades. This opens the door to expansion of mathematical knowledge at unprecedented scale. Yet, while LLMs may be able to conjecture and prove more and more theorems, it remains open whether this new mathematical knowledge is interesting or useful. We define intrinsic interestingness of a theorem as the ratio between the length of its proof and the length of its statement. We show that this correlates strongly with an extrinsic measure of the downstream utility of a theorem. We identify the difficulty of a proof conditioned on a set of premises as a useful primitive for computing these metrics, and train a 27B model that predicts proof difficulty more accurately than frontier general-purpose models. Optimizing for our metric creates a model capable of producing more interesting theorems, while also reducing substantial or full overlap with Mathlib from 91.9% to 30.6%, showcasing the creation of more out-of-distribution math. We show that our system can generate candidate theorems, select the most interesting among them, and iteratively",
       "published_at": "2026-09-22T20:00:00.000Z",
       "engagement": {
-        "upvotes": 8
+        "upvotes": 9
       },
       "collection_mode": "api",
-      "score": 6.377
+      "score": 6.4
     },
     {
-      "title": "Oracle, Blue Owl project delay sends ripples through AI financing, sources say",
-      "url": "https://www.reuters.com/business/energy/oracle-blue-owl-project-delay-sends-ripples-through-ai-financing-sources-say-2026-09-24/",
+      "title": "US equity funds post first inflow in five weeks on renewed AI optimism",
+      "url": "https://www.reuters.com/business/us-equity-funds-post-first-inflow-five-weeks-renewed-ai-optimism-2026-09-25/",
       "summary": "",
-      "published_at": "2026-09-25T10:22:46.343Z",
+      "published_at": "2026-09-25T13:03:29.118Z",
+      "source": "Reuters",
+      "publisher": "Reuters",
+      "source_home": "https://www.reuters.com/technology/",
+      "source_rank": 3,
+      "direct_source_url": "https://www.reuters.com/business/us-equity-funds-post-first-inflow-five-weeks-renewed-ai-optimism-2026-09-25/",
+      "discovery_url": "https://www.reuters.com/business/us-equity-funds-post-first-inflow-five-weeks-renewed-ai-optimism-2026-09-25/",
+      "link_quality": "original",
+      "collection_mode": "sitemap",
+      "score": 6.39
+    },
+    {
+      "title": "Global equity funds snap two-week outflow as AI optimism returns",
+      "url": "https://www.reuters.com/world/china/global-markets-flows-graphic-2026-09-25/",
+      "summary": "",
+      "published_at": "2026-09-25T13:02:49.186Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 4,
-      "direct_source_url": "https://www.reuters.com/business/energy/oracle-blue-owl-project-delay-sends-ripples-through-ai-financing-sources-say-2026-09-24/",
-      "discovery_url": "https://www.reuters.com/business/energy/oracle-blue-owl-project-delay-sends-ripples-through-ai-financing-sources-say-2026-09-24/",
+      "direct_source_url": "https://www.reuters.com/world/china/global-markets-flows-graphic-2026-09-25/",
+      "discovery_url": "https://www.reuters.com/world/china/global-markets-flows-graphic-2026-09-25/",
       "link_quality": "original",
       "collection_mode": "sitemap",
       "score": 6.31
@@ -448,37 +448,37 @@
       "summary": "In this paper, we propose RGBD20K, a novel dataset for facilitating the development of more robust and general RGB-D semantic segmentation by encompassing abundant categories and high-quality annotations. RGBD20K possesses several attractive properties: (1) Expanded Semantic Space. In particular, it covers 160 fine-grained categories, largely surpassing the category diversity of existing popular RGB-D benchmarks (e.g., NYUv2 with 40 classes and SUN RGB-D with 37 classes). With such enriched semantic coverage, we expect to promote the learning of more generalizable segmentation models. (2) Larger Scale. Compared with current benchmarks, RGBD20K offers 20,000 RGB-D image pairs, providing a substantially larger training resource that benefits the development of more powerful deep models. (3) High-Fidelity Annotation. We perform rigorous re-evaluation and correction of existing labels to resolve long-standing annotation noise, resulting in a clean and reliable ground-truth foundation. Furthermore, we propose a novel score-purified fusion (SPF) method, which achieves state-of-the-art performance across all evaluated benchmarks, demonstrating the effectiveness of our approach in leveragi",
       "published_at": "2026-09-23T20:00:00.000Z",
       "engagement": {
-        "upvotes": 7
+        "upvotes": 8
       },
       "collection_mode": "api",
-      "score": 6.272
+      "score": 6.297
     },
     {
-      "title": "UK firms to use Ukraine battlefield data for AI drone swarm development",
-      "url": "https://www.reuters.com/business/aerospace-defense/uk-firms-use-ukraine-battlefield-data-ai-drone-swarm-development-2026-09-25/",
+      "title": "Anthropic investor Lonsdale says AI firms stoking fear to sway policy",
+      "url": "https://www.reuters.com/business/media-telecom/anthropic-investor-lonsdale-says-ai-firms-stoking-fear-sway-policy-2026-09-25/",
       "summary": "",
-      "published_at": "2026-09-25T09:35:08.073Z",
+      "published_at": "2026-09-25T18:55:23.705Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 5,
-      "direct_source_url": "https://www.reuters.com/business/aerospace-defense/uk-firms-use-ukraine-battlefield-data-ai-drone-swarm-development-2026-09-25/",
-      "discovery_url": "https://www.reuters.com/business/aerospace-defense/uk-firms-use-ukraine-battlefield-data-ai-drone-swarm-development-2026-09-25/",
+      "direct_source_url": "https://www.reuters.com/business/media-telecom/anthropic-investor-lonsdale-says-ai-firms-stoking-fear-sway-policy-2026-09-25/",
+      "discovery_url": "https://www.reuters.com/business/media-telecom/anthropic-investor-lonsdale-says-ai-firms-stoking-fear-sway-policy-2026-09-25/",
       "link_quality": "original",
       "collection_mode": "sitemap",
       "score": 6.23
     },
     {
-      "title": "US equity funds post first inflow in five weeks on renewed AI optimism",
-      "url": "https://www.reuters.com/business/us-equity-funds-post-first-inflow-five-weeks-renewed-ai-optimism-2026-09-25/",
+      "title": "Converse pauses social media ads, marketing after racism uproar, Bloomberg News reports",
+      "url": "https://www.reuters.com/world/converse-pauses-social-media-ads-marketing-after-racism-uproar-bloomberg-news-2026-09-25/",
       "summary": "",
-      "published_at": "2026-09-25T13:03:29.118Z",
+      "published_at": "2026-09-25T18:23:24.282Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 6,
-      "direct_source_url": "https://www.reuters.com/business/us-equity-funds-post-first-inflow-five-weeks-renewed-ai-optimism-2026-09-25/",
-      "discovery_url": "https://www.reuters.com/business/us-equity-funds-post-first-inflow-five-weeks-renewed-ai-optimism-2026-09-25/",
+      "direct_source_url": "https://www.reuters.com/world/converse-pauses-social-media-ads-marketing-after-racism-uproar-bloomberg-news-2026-09-25/",
+      "discovery_url": "https://www.reuters.com/world/converse-pauses-social-media-ads-marketing-after-racism-uproar-bloomberg-news-2026-09-25/",
       "link_quality": "original",
       "collection_mode": "sitemap",
       "score": 6.15
@@ -496,22 +496,22 @@
       "summary": "Recent years have witnessed major progress in joint audio-video generation. Existing models still suffer from limited per-modality fidelity, insufficient text-modality alignment and weak cross-modal synchronization. While reinforcement-learning post-training offers a promising remedy, directly adapting it to joint audio-video generation is challenging. Heterogeneous multimodal rewards entangle learning signals and complicate credit assignment. Joint optimization of two modality towers is computationally expensive given their divergent dynamics. Moreover, synchronization evaluation difficulty depends on paired samples, preventing fair reward comparisons. We propose AV-GRPO, a modality-anchored online diffusion RL framework, and 5DAV, a decoupled, difficulty-controllable training dataset. AV-GRPO includes three key modules: (1) modality-anchored rollouts to disentangle learning signals and stabilize difficulty; (2) trajectory-locked frozen-tower optimization to reduce cost and reassign credit; (3) adaptive objectives and perturbation strengths tailored to modality-specific dynamics. This converts coupled multimodal preference learning into unimodal subproblems for precise reward attr",
       "published_at": "2026-09-23T20:00:00.000Z",
       "engagement": {
-        "upvotes": 4
+        "upvotes": 5
       },
       "collection_mode": "api",
-      "score": 6.089
+      "score": 6.129
     },
     {
-      "title": "Global equity funds snap two-week outflow as AI optimism returns",
-      "url": "https://www.reuters.com/world/china/global-markets-flows-graphic-2026-09-25/",
+      "title": "Perplexity AI sued by startup for allegedly stealing 'wake word' technology",
+      "url": "https://www.reuters.com/legal/legalindustry/perplexity-ai-sued-by-startup-allegedly-stealing-wake-word-technology-2026-09-25/",
       "summary": "",
-      "published_at": "2026-09-25T13:02:49.186Z",
+      "published_at": "2026-09-25T18:21:33.926Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 7,
-      "direct_source_url": "https://www.reuters.com/world/china/global-markets-flows-graphic-2026-09-25/",
-      "discovery_url": "https://www.reuters.com/world/china/global-markets-flows-graphic-2026-09-25/",
+      "direct_source_url": "https://www.reuters.com/legal/legalindustry/perplexity-ai-sued-by-startup-allegedly-stealing-wake-word-technology-2026-09-25/",
+      "discovery_url": "https://www.reuters.com/legal/legalindustry/perplexity-ai-sued-by-startup-allegedly-stealing-wake-word-technology-2026-09-25/",
       "link_quality": "original",
       "collection_mode": "sitemap",
       "score": 6.07
@@ -535,21 +535,6 @@
       "score": 6.021
     },
     {
-      "title": "Trump-Xi state dinner guest list includes SpaceX’s Musk, Nvidia’s Huang and LVMH’s Arnault",
-      "url": "https://www.reuters.com/legal/government/trump-xi-state-dinner-guest-list-includes-spacexs-musk-nvidias-huang-lvmhs-2026-09-25/",
-      "summary": "",
-      "published_at": "2026-09-25T12:22:23.463Z",
-      "source": "Reuters",
-      "publisher": "Reuters",
-      "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 8,
-      "direct_source_url": "https://www.reuters.com/legal/government/trump-xi-state-dinner-guest-list-includes-spacexs-musk-nvidias-huang-lvmhs-2026-09-25/",
-      "discovery_url": "https://www.reuters.com/legal/government/trump-xi-state-dinner-guest-list-includes-spacexs-musk-nvidias-huang-lvmhs-2026-09-25/",
-      "link_quality": "original",
-      "collection_mode": "sitemap",
-      "score": 5.99
-    },
-    {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
@@ -562,10 +547,25 @@
       "summary": "Detectors of alignment failures screen deployed language models and score alignment benchmarks. Most are generative judges that spend a decoding pass on every criterion, and classifiers that read token probabilities, such as Llama Guard, still score one fixed label per call. Jev, a model trained with reinforcement learning for calibrated decisions (RLCD), answers many typed questions about one input with calibrated probabilities in a single call. Whether it detects alignment failures has not been measured. We present RLCDAlignBench, which benchmarks Jev on ten alignment failures: sycophancy, jailbreaks, deception, prompt injection, hallucination, privacy violation, social bias, reward hacking, concealing uncertainty, and power seeking. It spans 44 benchmarks and five target models, labelled by each benchmark's scorer and, on two, by humans. Many of these failures are relational, defined against a reference, such as the user's belief or an injected instruction, that the response alone does not reveal. Our key idea is therefore to vary what Jev is asked separately from what it sees: the question's wording and answer type on one side, the fields of the input on the other. A single gen",
       "published_at": "2026-09-23T20:00:00.000Z",
       "engagement": {
-        "upvotes": 5
+        "upvotes": 6
       },
       "collection_mode": "api",
-      "score": 5.969
+      "score": 6.003
+    },
+    {
+      "title": "Meta engañó a consumidores en caso de Cambridge Analytica, según un jurado de Nuevo México",
+      "url": "https://www.reuters.com/es/tecnolog%C3%ADa/XLZPECLHDVIFPDTMMK3PB75PLE-2026-09-25/",
+      "summary": "",
+      "published_at": "2026-09-25T18:14:26.670Z",
+      "source": "Reuters",
+      "publisher": "Reuters",
+      "source_home": "https://www.reuters.com/technology/",
+      "source_rank": 8,
+      "direct_source_url": "https://www.reuters.com/es/tecnolog%C3%ADa/XLZPECLHDVIFPDTMMK3PB75PLE-2026-09-25/",
+      "discovery_url": "https://www.reuters.com/es/tecnolog%C3%ADa/XLZPECLHDVIFPDTMMK3PB75PLE-2026-09-25/",
+      "link_quality": "original",
+      "collection_mode": "sitemap",
+      "score": 5.99
     }
   ]
 }

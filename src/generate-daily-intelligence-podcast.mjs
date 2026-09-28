@@ -14,6 +14,7 @@ const sourcePath = path.join(ROOT, "news-intelligence", DATE, "manifest.json");
 const OUT = path.join(ROOT, "reports", "daily-intelligence", DATE);
 const slug = `${DATE}-daily-intelligence`;
 const clean = (value) => String(value ?? "").replace(/\s+/g, " ").trim();
+const firstSentence = (value) => clean(value).match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() || clean(value);
 fs.mkdirSync(OUT, { recursive: true });
 
 const schema = {
@@ -61,6 +62,14 @@ function assertCompleteShortScript(value) {
   return text;
 }
 
+function buildCompleteShortScript(story) {
+  const factSentence = firstSentence(story?.confirmed_fact);
+  if (!factSentence || !/[.!?]$/.test(factSentence)) {
+    throw new Error("Lead confirmed fact does not contain a complete sentence for the Daily Short.");
+  }
+  return assertCompleteShortScript(`${clean(story.headline)}. ${factSentence} Read the Sapiver Forge Daily Brief.`);
+}
+
 async function main() {
   if (!fs.existsSync(sourcePath)) throw new Error(`Missing ${sourcePath}`);
   if (!process.env.GEMINI_API_KEY) throw new Error("GEMINI_API_KEY is required for the detailed daily story.");
@@ -88,7 +97,8 @@ async function main() {
   const words = transcript.split(/\s+/).filter(Boolean).length;
   if (words < 450 || words > 1150) throw new Error(`Daily detailed story length is outside limits: ${words} words.`);
 
-  const shortScript = assertCompleteShortScript(manifest.social?.spoken_script || `${story.headline}. ${story.confirmed_fact} Read the Sapiver Forge Daily Brief.`);
+  // Build the Short from a complete source sentence rather than reusing any word-truncated social copy.
+  const shortScript = buildCompleteShortScript(story);
   const metadata = {
     episode: {
       episode_title: clean(podcast.episode_title),

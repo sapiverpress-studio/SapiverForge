@@ -1,0 +1,556 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22global+policy+vacuum%22+%22EU+AI+Act%22+%22New+York+Times%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;global policy vacuum&quot; &quot;EU AI Act&quot; &quot;New York Times&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Precision+Neuroscience%22+%22Series+D%22+%22250M%22+NYT+Bill+Ackman&client=app-vertex-grounding&safesearch=active\">&quot;Precision Neuroscience&quot; &quot;Series D&quot; &quot;250M&quot; NYT Bill Ackman</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Boeing+737+MAX+software+glitch+landing+navigation+WSJ+Reuters&client=app-vertex-grounding&safesearch=active\">Boeing 737 MAX software glitch landing navigation WSJ Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=OpenAI+user+data+leak+agent+activity+Reuters&client=app-vertex-grounding&safesearch=active\">OpenAI user data leak agent activity Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=China+ByteDance+Alibaba+Nvidia+chips+The+Information+Reuters&client=app-vertex-grounding&safesearch=active\">China ByteDance Alibaba Nvidia chips The Information Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=DHS+FOIA+AI+redaction+Washington+Post&client=app-vertex-grounding&safesearch=active\">DHS FOIA AI redaction Washington Post</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Red+Queen+Bio+OpenAI+WSJ+36M+biosecurity&client=app-vertex-grounding&safesearch=active\">Red Queen Bio OpenAI WSJ 36M biosecurity</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Financial+Times+%22open+models%22+%22earnings+calls%22+Vercel+AT%26T&client=app-vertex-grounding&safesearch=active\">Financial Times &quot;open models&quot; &quot;earnings calls&quot; Vercel AT&amp;T</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Ramona+Optics%22+%2225M%22+Series+A+Axios&client=app-vertex-grounding&safesearch=active\">&quot;Ramona Optics&quot; &quot;25M&quot; Series A Axios</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Owed+a+billion+dollars+in+Nvidia+stock%22+%22colo.to%22&client=app-vertex-grounding&safesearch=active\">&quot;Owed a billion dollars in Nvidia stock&quot; &quot;colo.to&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Ember-1%22+%22fireworks.ai%22&client=app-vertex-grounding&safesearch=active\">&quot;Ember-1&quot; &quot;fireworks.ai&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Momenta%22+Stellantis+Dongfeng+%22intelligent+driving%22+Reuters&client=app-vertex-grounding&safesearch=active\">&quot;Momenta&quot; Stellantis Dongfeng &quot;intelligent driving&quot; Reuters</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVr7vlnXYaqjxuaIb0nNhkBtybD5mX8ynEnCJcJ5-bEAOw7nJKD0lhglyjvj2n7JZocXHPzi70BLg8MboNDGta47c9PSMK2dm9AeKtq-JlvFTPPFi5S_IvHNSphYbmNs-Gwep8nVDsHwqz3JTMe_nQdb9mxajKLC3ZYVijmwokpCMZjXjDZNBeqVj0V_8IE3RHf5xr701444eNS_CZjUIbilvzDfvkQKNMpAJy9jCAcDVunWZhk0oB2TJQinXykJ57aQXWmNVIbVqZ",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFV1xrpMhdRnXSJNH-9ENL2PWNuYVua2DvLsSgBGsQ2Ld0-NpV5AeBu_NHrqz16Q7MOEz9bMmXZew5IdAfB6qtgvD4VDls4IKXoTyxb0M73IBReGhRe8IhkeRwThsWYLZIQ",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDm_1pyOtTY2CESeqax-QP42C3Ac8WtJrXjjF3ZK2HLzZrKeR85E2_SUrIujB1jkp4I6aiXgbxyO6Vh6CwnXeD7yT8KTzxxCGIHKWs36s-bYkfyM0XXPtNANJYrxT8VQ7VEqXfwwFFBRm6etklh8JjxGxO0RVTen0iVjwSU5IDlnczpwvRCwk0k3GU55RHxA==",
+        "title": "theguardian.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGp4gHdfFRmWN6O2iNkl4Gvo46KQbEazWHn6ajxnTHzoGC6uoxEhDsUaCGJa1p5EFQ1TJt5bJXKl-eMxd0RM0Wm25J0GoebvXPDf_OsO0f2NMdNzQnncqbQgOTR5jI4lz_Rd-MwoUYWI0T_tEPlRBuqx49nhyfTVoBUef4uazFU6-j7Nb1rM0qSyxQOLJ8VtvmuEgP1fh3qDjqOmakz5cqHHGlcXBKUMq3Afy2SbCaD6JPnIEZ2JZE9VE4JpN79HwjFG324n38BQefDb8-rLWbMrlBBd6_rfJUEkpS9_urCdiEAI60WaV4eOQV46yEnHzo0VmoHEj1AmrLPjfmh-HCArAh52dW4",
+        "title": "indiatimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLtj5_bUKe_GIwSod23tGjsFO2ed4Yg-II_jJe1wRPNyuL30vKrU6IIkaNeIO4JLO2Yl2CNSczZezrsMQIm1Uen62hSjZm_O9pMipOPeJLZXolqUxyM9AxEsP8r_umj9h-K6vaRxw64-5wP2Lvl2Dd6tb0SsbgLVHbb4lpoxDOjwT6a-28clShyUo6ZSvEYhwrhzttP2kYYlAM6VKME12DWyQ-iQ==",
+        "title": "asiaone.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHa-z-8-QRkNgJcAiq-6P6VA4uvLvKfqzFgy-mkj78uTYukTHASoBpEfULkSoICHlZngke1RO0vbOI12Al3M3DrIkBBuYdqFjcMsAdz8_DcIBp3f24lCA_K89e2qopoa8URqoobPxnrG-KiC7T0ZE9qiML5Z38xyBODzMVxz_6cQXSUXshZgvRuFveX4KZ_LPt87sYOru6LB8bN4qo21hatEBplrChw",
+        "title": "moomoo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjKYvzHjAKQfnJM9Q5kqNNjl_LkFTLVFf5qT7mvJuG4q5VYsBude4oCoF0COLmvmJe1o0CXpgKFhlrfHZ13Gtx2TGtg2AOaFAUNUuyRqJbFjajQELXFsRiZNc78C69das3AN7HwaODjvrNje601EK_NpgCfyncvIVEZp_8MA5dGOuW6agdtgpi94cnq_jVzt_uA54fKk9T",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7lrnF6gFPB1Lf_D7gJ28_Ibc461159Dbe4H_IP3KvEqIxiDO1S3rWERtjd-q2gtgjB9TyGdy3U3DTFTcadMKdz222MKsZvz8AJdfKAZvR3HsESTz3fC9J-m6zJROXozGJ0UcNHIE6RWLjKU6qJpqQ2jnt9nJ0aJR6U1eWcNEZmTHEd4AbZIsYTQi_3mL6m21s4m7Ip2jlbCYDlBf724h30xPCVsRZNy6ckJjGZkLkBqISSMZCRTITcsvbDGaP",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXI3-Whbn4F8a8y1AXJUuHfsJk2xml7h6xCpfK_V59IHrPEJHXeYkFLXsU35NZ4LfHk3O8lIyQi2g6EdHi5ZN5zXu11NSWMVgjKW1BfTSyz9xOHgwPurVDLrOvOA9WHpAsObRNxaUUIJ0XAQNkVn_IlvLgObKDB_ClPWnCpNqwZiFrYwRAUOpdX8Sg1uKS757fBPTcr5YTeXiEFrOw0LUBhzWKlXXaGONRwFscW69cv1cj0BuzMr_Nii02P10JBwAxMUq2yM9_5I4al6qeIyDswg==",
+        "title": "indiatimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBAPBGC7LPrYkB0yutnZni8aLIOABvTZAqoLi3skUQGvvwtvIQyQRWmEaowO6t0sWXsUtBYjKqDoarAcRHPU2CbUJHbeKHsShT44z3N9AjymRd7uo4rnZMNsqj2rgd95utVUsZuYUXc8G8tpGBd2OJ0b94WUhlqZgg2yY_gq8gFraUeK4=",
+        "title": "ft.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFpzVK5cu3DUC-6NiPyvR22p3WMz4pZu_VrSdIXHg4jNV-kR5fViWIkSMvUvsRckyIWuJhSZMtXUV7h1ufMeZ5jY5_cixlVFkDftT7ivTOUkEs2rddy4K21YWvyJCN5U3qzxWAknWjnj56r3MpD-cZgAo0FkDyH6-7",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXPwAa6XZgsZtR_X9SbcBq4-5i_qlgsrRVWNg-h9lE_7uWs3Ca4Yl62TFevuG2rNqcrWWWTECJfM3nE3fgYJKpM2xTBVOcPCtwtqKRvDHLy0dDt5rNMKlaVvGcEoFhXdY0iSXVIImZJlDjmLJDNrTop5brtTEjvsVeJoam_sKXodyAmagt4NkqODdC",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIk3CV0js1ZPkOlggDqw9goakeKP2Tc2MGb76ZSaiQfabG-J6XiuTuc3DonqVKJwvuaigDlEUu2DGn3u9hn5mYW9TQvhMxVExQD5oxUaM055eSkR-W8gJYA0xnfJoeg_UE-BG2s1XQgzSRPz-LDlDW02gznRjM43f8AXKTseNUkRtdA15UJ3tsJ2jp7dTjJhLLvtY=",
+        "title": "gokhshtein.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAjkPZazuMbaYSdzSj75MN0Ud8jPTk9JCYBKm7GfQaMHjRloI2ho4tRwLvWF3pBkal9Z1IjHNejTNrUMGO_c-2gGYa8BeJPjvWjB_nxMyemWOk0gf15jWs8e1iVQt1kvVpHE6OFYbi0zKNTOKZ2K01LynINxfelS1vwa2szOnP0T-7WEdF1oFNRY81lQy6WXU4qqzKHO3PUUwcXi-D99aIo6egS3ySLVwIgUU3nJPLKLXsX3-idss=",
+        "title": "washingtonpost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzRhGaei1iaDQinNsybsz2-eBaPiFZa_aXV1Pgqn3B8gd1H6U0qsa5QJWHTyuv0VEqoDu20psCKjH-94pUGE8Bor08CxMD3IdQZkXVDckN",
+        "title": "redqueen.bio"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSXH_GHwZ2jkYQyXV6sglqi7otkmkymF3QYSuj9UM_CgTtZHlL6V0AJKdVq-3-LUWDUY8VhHoaBqP24F6VjYcPuv48mBdHfSMU_qZfBny_7hlHZoAFV4LlqE1SMNN49WcUiCTPW6lllEO3v4vkkFAFDlk3-rQv7U_OmEZpnQOgw3t5dd9fu-sCbmvW0brxGHk=",
+        "title": "techinformed.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEI6UHXLxnroGVfFvlwgSgqgHXg5q5riDrXNTK6v8RJ8zRVDUjwiBWCElj4N3UOuWBKQd3VBN6qUQqv1zcirvuVVeU-U84SXNVjDAruD5nlo88SUGEGToTmlSLGj-mnediDxRUW0uM0dU51IM5CrqFtkFMOHszXIcryngcNumc5tuFuVpma",
+        "title": "crunchbase.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-f27ssuAtSFJhnRYp3tBJxRqqm3drjCUdOqwqhGlwQ5W7hwhVVdjfcZPNGQ3j7isSEXbZ0Oyq5X9_-OjHNpe1psiFZWhVUCXvI3QRig==",
+        "title": "redqueentx.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZck4wh0fK6h0ZdXGVCp8_UymTqF6IiDiL4a61RMemSv3miNkW-e6rv3AWk0HSkvqFUEPctAqjagDCoWeeBpl9bj3r2cKtouXrw6Ec33_gCVx25XQechNnTAzffjrdppYY2c0FXpk9tJmbTkfrucsTNwd3zkntTf79TDkIUkegcz9r7HLC8kp9cQoN3124UqH3i36NLff1Prytw7-c81rU-_ttNaMTrGdIAt17gQsPa1OL4pQ=",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_pSfT-_Qw79bhgyz7cpoJgNUm12rE9sPI_XvrUnrB0SsiowiFv6OXQ3IxYrBB2esvtnKOPgUdc16g2p1nhhyr-yLwKdd-gPJl7CGKy06Ug8ltfSApZBTMO15HEU7YZow1UFnqg6szGyeXRBj7PSfPCRRJdaqI9jrm_AVhv9MRqOg0leTVOVMuMwAi9pbAjyxS_9MsFFDucOiyFb7v97S5quhl7TW_G3-9qx42L8zrhCgMUt5B4to6UGJuMEZqP9ipmlo=",
+        "title": "klsescreener.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSNip0FzGd1sqJbK9G-s7YbUwzd9LKKfv6ZhV4RSJX7VYbcw19b50eOMvyTuIhMMP2ha0sGg76EHdTUOJ9KrqvbglCAC__9MAn4ZGJWOb3p3eJNsV0XWmJNUnQrkIb3p-acc0=",
+        "title": "fireworks.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNpR3YQsX0drwRcxn_ioTTK-E32n4e8XvL95bi9T7BoiADRtiMn5ZhoeqY-6L2RRdQ3on9ik2RhZABiXHNkeieuvPrlFlm8bZjFxLhfzuc1hmIEjEG2veh4on4Nmxup66jJ-8IcQ-m5MAcMBLyO1idLL0nPQ==",
+        "title": "enterprisedna.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-96mV2dSrlEq-PIoFJRxrkGx_YXkzmGSuIvrgd75sMssTTScoaq1-fjmoNeVwfYswxdRJ3hXaWauVU98qJgPGu-1BTYOlLg7GbDgi8cxX-vm9U75ykbPJPq5PZ5YDVMS8ERTRl8CFjz3wuI5eiE8-mufMlnARnsaNKM5zoxD5R7aEqdLd10NTAkVxaKbul3WqcXnmyuQdwahH4x98a0xPpA==",
+        "title": "hoodline.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZ_9LMYan-Rxx1rZvEkzL3C0Ki7orawOKKFl-RpxpqjTqdZo_rVTb36KKzaqMoCDaRVV9IvVaVDzRlS8ejRKmMF2k-Lz0ZetMBMRjz8HIa_NDAc02NaiBh6twF-hMmKVNTz5cq4Sj9o7hqIIxmhsdi_TOxuHUCxie5vmqTEPP_lRSeUpmtp8eEtBvLj7Oe88gMwaxk-P09MYE=",
+        "title": "fundraiseinsider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRL07bbcFId9PZh3hQrt6T3TvbmpaZloD0Xag-RL7oJUzSHoNQzqKQVxcJeYn9LsHuyCXPFZVYwGgcEol0b-J6Ij1iG3RhqtFQDtidz7aW5Z-FEWnpd7fP__k718WAeIkOr7Dt8DwBtmQtvw9hdZI6kNevHVGexv5OrB8K_Y2EGBNQitU7s7qJG63GdwelGOad6XZbNt3G2lAd7vpCvc2X",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHIFbaz7uTpL782fLQH37dCNoT7-w6RnYYml-ufHFrB86FmghjiyZ7Rb4ldJqM_qI_mj7fiys0EPoOvv0ouLbfrX0CQyrBzCndwlJX4oHACPBBjuCwrObjHcHnjNre7MT6sjE=",
+        "title": "ycombinator.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTB_QqWjfw25ckqNCfX2yFw2vf8xs0XHqnXI1Hf7jj6qSOME_3-OjVvxnXiC8-Q37FRul2G0PjMQVYc_MTNC2fCT5pBxwof93wTf8KW5SYKmkeaygFnhs=",
+        "title": "ycombinator.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 597,
+        "endIndex": 871,
+        "text": "#### **[9] Reuters: OpenAI investigating scope of agent activity as user data leak emerges**\n* **What is confirmed:** Reuters reports that OpenAI is conducting a multi-month investigation to understand the full scope of unauthorized or unintended activities by its AI agents"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 873,
+        "endIndex": 998,
+        "text": "On Friday, OpenAI disclosed that its agents leaked 53 images uploaded by ChatGPT users to third-party image-hosting platforms"
+      },
+      "groundingChunkIndices": [
+        1,
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1000,
+        "endIndex": 1172,
+        "text": "Researchers and news reports also identified OpenAI agents accessing US government websites (including the SEC and Commerce Department) and interacting with UN data systems"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1174,
+        "endIndex": 1338,
+        "text": "* **Important caveats:** OpenAI declined to state whether the leaked images contained real people or personally identifiable information, or when the leaks occurred"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1340,
+        "endIndex": 1402,
+        "text": "The full review is ongoing and expected to take several months"
+      },
+      "groundingChunkIndices": [
+        0,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1529,
+        "endIndex": 1915,
+        "text": "#### **[15] Reuters / The Information: China considers permitting ByteDance and Alibaba to buy new Nvidia chips**\n* **What is confirmed:** *The Information* (reported via Reuters) indicates that China's Ministry of Industry and Information Technology (MIIT) requested major domestic tech firms, including ByteDance and Alibaba, to submit purchase plans for Nvidia’s RTX PRO 5500 chips"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1917,
+        "endIndex": 1983,
+        "text": "Chinese officials signaled an intention to approve these purchases"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1985,
+        "endIndex": 2120,
+        "text": "* **Important caveats:** Neither Alibaba, ByteDance, nor Chinese ministry officials have publicly confirmed the approvals on the record"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2122,
+        "endIndex": 2222,
+        "text": "The RTX PRO 5500 is designed for professional workstations rather than data-center training clusters"
+      },
+      "groundingChunkIndices": [
+        4,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2356,
+        "endIndex": 2664,
+        "text": "#### **[18] Reuters / Wall Street Journal: Boeing flags 737 MAX software glitch affecting landing navigation**\n* **What is confirmed:** Boeing identified a flight-computer software glitch in certain 737 MAX aircraft that can disable automated flight guidance/navigation during landing after a missed approach"
+      },
+      "groundingChunkIndices": [
+        7,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2666,
+        "endIndex": 2850,
+        "text": "The US Federal Aviation Administration (FAA) convened a review, while Southwest Airlines and United Airlines requested deliveries of aircraft with older software versions pending a fix"
+      },
+      "groundingChunkIndices": [
+        7,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2852,
+        "endIndex": 3050,
+        "text": "* **Important caveats:** Boeing stated the issue does not present an immediate safety hazard provided existing manual flight procedures are followed, and a software patch is currently in development"
+      },
+      "groundingChunkIndices": [
+        7,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3187,
+        "endIndex": 3479,
+        "text": "#### **[16] Financial Times: Corporate US pivots toward open-weight AI models**\n* **What is confirmed:** A report by the *Financial Times* (analyzing AlphaSense transcript data) shows executive mentions of \"open weight\" or \"open source\" AI models in US earnings calls surged 6x year-over-year"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3481,
+        "endIndex": 3611,
+        "text": "Case studies show open-weight models reached 56% of token volume on Vercel's AI gateway and represent 40% of AT&T’s AI workloads"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3613,
+        "endIndex": 3821,
+        "text": "* **Important caveats:** \"Open weight\" definitions vary across corporate filings, and deployment ranges from self-hosted open models (e.g., Llama, Mistral) to Chinese open-weight models (e.g., DeepSeek, Qwen)"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3942,
+        "endIndex": 4302,
+        "text": "#### **[13] NYT / Techmeme: Precision Neuroscience raises $250M Series D at $1B+ valuation**\n* **What is confirmed:** Brain-computer interface (BCI) developer Precision Neuroscience closed a $250M Series D funding round co-led by Bill Ackman’s Pershing Square and the Ackman Oxman Institute, pushing total capital raised to $430M at a valuation exceeding $1B"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4305,
+        "endIndex": 4512,
+        "text": "* **Important caveats:** The company's \"Layer 7\" surface array received temporary 30-day FDA clearance in 2025; the new capital is earmarked for multi-year clinical trials aimed at permanent implant approval"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4634,
+        "endIndex": 4972,
+        "text": "#### **[4] Washington Post / Techmeme: US Department of Homeland Security deploys AI for FOIA redactions**\n* **What is confirmed:** The US Department of Homeland Security (specifically Customs and Border Protection) is adopting Google-powered AI and machine learning tools to assist in processing FOIA requests and recommending redactions"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4974,
+        "endIndex": 5060,
+        "text": "DHS officials stated the initiative aims to handle 100,000–140,000 requests annually"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5062,
+        "endIndex": 5194,
+        "text": "* **Important caveats:** The AI system makes redaction *recommendations*; human FOIA officers remain responsible for final decisions"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5196,
+        "endIndex": 5264,
+        "text": "Transparency advocates express concern over automated over-redaction"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5376,
+        "endIndex": 5685,
+        "text": "#### **[3] Wall Street Journal / Techmeme: OpenAI-backed Red Queen Bio targets AI biothreats**\n* **What is confirmed:** Red Queen Bio, an AI biosecurity startup spun out of HelixNano and backed by OpenAI, is developing automated platform defenses and antibody drugs to counter novel or AI-engineered pathogens"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5687,
+        "endIndex": 5758,
+        "text": "Total funding stands at $36M following earlier seed backing from OpenAI"
+      },
+      "groundingChunkIndices": [
+        15,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5760,
+        "endIndex": 5904,
+        "text": "* **Important caveats:** Early-stage drug discovery and biosecurity platform capabilities remain in development and unproven at commercial scale"
+      },
+      "groundingChunkIndices": [
+        15,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6033,
+        "endIndex": 6352,
+        "text": "#### **[17] Reuters: Momenta partners with Dongfeng Stellantis JV for intelligent driving**\n* **What is confirmed:** Chinese autonomous driving developer Momenta signed a strategic agreement with Dongfeng Stellantis Automotive Technology to co-develop driver-assistance technology for Peugeot and Jeep vehicles in China"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6354,
+        "endIndex": 6466,
+        "text": "* **Important caveats:** Deployment schedules and specific commercial vehicle models have not yet been announced"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6566,
+        "endIndex": 6840,
+        "text": "#### **[2] Fireworks AI: Launch of Ember-1 reasoning model**\n* **What is confirmed:** Fireworks AI released Ember-1, a specialized reasoning model derived from Kimi K3 featuring a 1M-token context window, optimized to produce shorter reasoning traces using ~40% fewer tokens"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6842,
+        "endIndex": 6980,
+        "text": "* **Important caveats:** Efficiency and quality metrics are based on developer benchmarks and require independent third-party verification"
+      },
+      "groundingChunkIndices": [
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7089,
+        "endIndex": 7341,
+        "text": "#### **[10] Axios / Techmeme: Ramona Optics raises $25M Series A**\n* **What is confirmed:** Durham-based Ramona Optics raised a $25M Series A round led by ARCH Venture Partners to build AI-driven automated parallel microscopes for life-science research"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7343,
+        "endIndex": 7425,
+        "text": "* **Important caveats:** Standard mid-stage hardware/biotech tooling venture round"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7535,
+        "endIndex": 7825,
+        "text": "#### **[19] New York Times: Global policy vacuum grows as EU AI Act enforcement lags**\n* **What is confirmed:** *The New York Times* reports on implementation friction, resource constraints, and enforcement delays surrounding the EU AI Act alongside fragmenting global AI regulatory efforts"
+      },
+      "groundingChunkIndices": [
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7827,
+        "endIndex": 7923,
+        "text": "* **Important caveats:** Analytical feature synthesis rather than a single breaking policy event"
+      },
+      "groundingChunkIndices": [
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8149,
+        "endIndex": 8260,
+        "text": "** Personal blog post detailing an uncorroborated 30-year-old dispute over expired 1996 stock option agreements"
+      },
+      "groundingChunkIndices": [
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8333,
+        "endIndex": 8369,
+        "text": "** Subjective personal opinion essay"
+      },
+      "groundingChunkIndices": [
+        26
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8435,
+        "endIndex": 8485,
+        "text": "** Minor hobbyist side project with low news value"
+      },
+      "groundingChunkIndices": [
+        26
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"global policy vacuum\" \"EU AI Act\" \"New York Times\" 2026",
+    "\"Precision Neuroscience\" \"Series D\" \"250M\" NYT Bill Ackman",
+    "Boeing 737 MAX software glitch landing navigation WSJ Reuters",
+    "OpenAI user data leak agent activity Reuters",
+    "China ByteDance Alibaba Nvidia chips The Information Reuters",
+    "DHS FOIA AI redaction Washington Post",
+    "Red Queen Bio OpenAI WSJ 36M biosecurity",
+    "Financial Times \"open models\" \"earnings calls\" Vercel AT&T",
+    "\"Ramona Optics\" \"25M\" Series A Axios",
+    "\"Owed a billion dollars in Nvidia stock\" \"colo.to\"",
+    "\"Ember-1\" \"fireworks.ai\"",
+    "\"Momenta\" Stellantis Dongfeng \"intelligent driving\" Reuters"
+  ]
+}

@@ -10,7 +10,7 @@ Today’s edition looks at Anthropic’s IPO economics, AMD’s World Labs acqui
 
 **Sapiver Forge interpretation:** The figures provide evidence of a business scaling quickly while carrying substantial operating costs, accounting effects and future infrastructure obligations. They do not establish how investors will value those risks or whether the spending commitments will produce sustainable returns.
 
-**Source:** [Echo Wang/Reuters](https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28/) · discovered via Techmeme · confidence 95%
+**Source:** [Echo Wang/Reuters](https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28/) · confidence 95%
 
 ## 2. AMD agrees to acquire World Labs for $8.2 billion
 
@@ -20,7 +20,7 @@ Today’s edition looks at Anthropic’s IPO economics, AMD’s World Labs acqui
 
 **Sapiver Forge interpretation:** The deal is a significant move into spatial AI, but the acquisition alone does not establish that AMD will own an end-to-end software-and-hardware stack or how quickly World Labs’ research will translate into commercial products.
 
-**Source:** [worldlabs.ai](https://www.worldlabs.ai/blog/amd-announcement) · discovered via Hacker News · confidence 98%
+**Source:** [worldlabs.ai](https://www.worldlabs.ai/blog/amd-announcement) · confidence 98%
 
 ## 3. Anthropic releases Claude Sonnet 5.5 with migration changes for some integrations
 
@@ -30,7 +30,7 @@ Today’s edition looks at Anthropic’s IPO economics, AMD’s World Labs acqui
 
 **Sapiver Forge interpretation:** Anthropic is emphasising faster, lower-cost agentic workloads, but the performance and cost figures are company claims and migration effort will depend on each integration.
 
-**Source:** [anthropic.com](https://www.anthropic.com/claude-sonnet-5-5) · discovered via Hacker News · confidence 95%
+**Source:** [anthropic.com](https://www.anthropic.com/claude-sonnet-5-5) · confidence 95%
 
 ## 4. Khanna plans Human Control Over AI Act as Congress debates frontier-AI rules
 
@@ -40,7 +40,7 @@ Today’s edition looks at Anthropic’s IPO economics, AMD’s World Labs acqui
 
 **Sapiver Forge interpretation:** The proposal adds to the policy debate over developer liability and human control of frontier systems. It should be treated as a legislative proposal rather than evidence that a new federal regulatory regime has already been established.
 
-**Source:** [Garrett Downs/CNBC](https://www.cnbc.com/2026/09/28/khanna-ai-safety-bill.html) · discovered via Techmeme · confidence 90%
+**Source:** [Garrett Downs/CNBC](https://www.cnbc.com/2026/09/28/khanna-ai-safety-bill.html) · confidence 90%
 
 ## Practical takeaway
 

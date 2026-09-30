@@ -1,0 +1,19 @@
+GPT-6.1 Sol is OpenAI’s newest Sol model, and the important part of the launch is not just capability. It is the combination of capability, price and availability.
+
+OpenAI says GPT-6.1 Sol approaches GPT-6 Astra on several evaluations covering agentic coding, computer use and professional work, while charging one-fifth of Astra’s standard input and output token prices. In the API, standard GPT-6.1 Sol pricing is two dollars per million input tokens and ten dollars per million output tokens, with cached input priced at ten cents per million tokens.
+
+That does not mean every workload will cost exactly one-fifth as much. OpenAI’s published benchmark figures use different tasks, reasoning settings and cost-per-task measurements. The simpler claim is that the standard token prices are one-fifth of Astra’s, while OpenAI reports near-Astra performance on several selected evaluations.
+
+Availability also needs to be stated precisely. GPT-6.1 Sol is available through the OpenAI API and to eligible users in ChatGPT Work and Codex. OpenAI says it is not yet available in Chat. The launch material does not list Microsoft Foundry as a launch channel, so that should not be treated as confirmed availability from OpenAI’s own announcement.
+
+There are currently two relevant API processing speeds to compare. Standard is the base price. Fast mode is priced at twice Standard. OpenAI has also announced GPT-6.1 Sol Ultrafast, with up to eight-times faster token generation compared with standard speed in Codex, but the company says Sol Ultrafast will arrive in the coming days. It is therefore not accurate to present Ultrafast as an option already available at launch.
+
+The safety classification also needs context. Under OpenAI’s Preparedness Framework, GPT-6.1 Sol is treated as Critical capability in cybersecurity and High capability in the biological and chemical domain. Critical is a capability threshold used by OpenAI to describe what the model can potentially do in demanding cybersecurity settings. It is not a general label saying that ordinary use of the model is inherently unsafe or that a security incident is inevitable.
+
+Because of those capability assessments, OpenAI says GPT-6.1 Sol uses the same safeguards stack as GPT-6 Astra. The company says those safeguards are intended to address malicious use and unauthorized or misaligned model activity. As with any vendor safety claim, the important question for users is how those controls interact with their own permissions, tools and deployment environment.
+
+For teams considering Sol, the practical comparison is straightforward. Benchmark Standard and Fast against the latency and cost requirements of the actual workflow. If the model will be allowed to use tools, modify code or interact with external systems, apply the same access-control, logging and review discipline you would use for another powerful automation system. The Preparedness classification is a reason to take capability seriously, not a reason to invent a different risk label.
+
+The next things to watch are concrete. OpenAI says Sol Ultrafast is coming in the next few days, so its actual availability and pricing can be checked when it launches. Developers can also compare production results against OpenAI’s benchmark claims and monitor the deployment-safety documentation as the model is used more widely.
+
+For now, GPT-6.1 Sol is a lower-priced route to capabilities OpenAI says are close to Astra on selected tasks. Standard and Fast are available today; Ultrafast is announced but not yet live. That distinction matters when evaluating both cost and performance.

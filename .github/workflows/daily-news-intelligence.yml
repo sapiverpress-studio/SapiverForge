@@ -21,6 +21,7 @@ on:
       - 'src/brevo-list-resolver.mjs'
       - 'src/brevo-campaign-errors.mjs'
       - 'scripts/sync-netlify-subscribers-to-brevo.mjs'
+      - 'scripts/normalize-daily-short.mjs'
       - 'src/generate-weekly-intelligence-podcast.mjs'
       - 'src/generate-daily-intelligence-podcast.mjs'
       - 'scripts/generate-elevenlabs-mp3.mjs'
@@ -81,6 +82,7 @@ jobs:
           node --check src/brevo-list-resolver.mjs
           node --check src/brevo-campaign-errors.mjs
           node --check scripts/sync-netlify-subscribers-to-brevo.mjs
+          node --check scripts/normalize-daily-short.mjs
           node --check src/generate-weekly-intelligence-podcast.mjs
           node --check src/generate-daily-intelligence-podcast.mjs
           node --check scripts/generate-gemini-podcast-wav.mjs
@@ -107,6 +109,10 @@ jobs:
           BLOG_BASE_URL: https://suite.sapiverpress.co.uk
           SAPIVER_EDITORIAL_CHARACTER_FILE: editorial/isla-character.md
         run: node src/generate-news-intelligence.mjs
+
+      - name: Normalize complete Daily Short
+        if: github.event_name != 'pull_request'
+        run: node scripts/normalize-daily-short.mjs
 
       - name: Validate intelligence contract
         id: contract

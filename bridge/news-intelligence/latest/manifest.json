@@ -64,14 +64,14 @@
   "stories": [
     {
       "category": "ai",
-      "headline": "OpenAI launches GPT-6.1 Sol at lower price point",
-      "confirmed_fact": "OpenAI has released GPT-6.1 Sol, a model offering agentic coding and navigation capabilities at one-fifth the cost of its flagship GPT-6 Astra. The model is available now via API and Microsoft Foundry, with an optional 'Ultrafast' inference tier that carries a 6x price premium.",
-      "why_it_matters": "Lowering the cost of frontier-level reasoning could accelerate the adoption of agentic workflows in enterprise software, though the 'Critical' cybersecurity rating assigned to the model under OpenAI's own framework serves as a reminder of the risks involved in deploying such powerful systems.",
-      "interpretation": "OpenAI is clearly trying to make its most capable models accessible to a wider range of developers, but the high cost of the 'Ultrafast' tier suggests that speed remains a premium commodity in the current AI market.",
-      "confidence": 0.95,
-      "source": "openai.com",
+      "headline": "OpenAI launches GPT-6.1 Sol at one-fifth of Astra's standard token price",
+      "confirmed_fact": "OpenAI has released GPT-6.1 Sol through the OpenAI API, ChatGPT Work and Codex. OpenAI says it approaches GPT-6 Astra on several agentic coding, computer-use and professional-work evaluations at one-fifth of Astra's standard input and output token prices. Standard API pricing is $2 per million input tokens and $10 per million output tokens; Fast mode is priced at 2x Standard, while Sol Ultrafast is planned for the coming days rather than available at launch.",
+      "why_it_matters": "The lower standard price gives developers another cost-performance option for capable agentic workloads. OpenAI's Preparedness Framework classifies GPT-6.1 Sol as Critical for cybersecurity capability, which is a capability threshold; OpenAI says it applies the same safeguards stack used for GPT-6 Astra.",
+      "interpretation": "At launch, the practical API speed choice is Standard or Fast, with Fast priced at twice Standard. Sol Ultrafast has been announced but is not yet available, so it should not be described as a current 6x-priced option.",
+      "confidence": 0.97,
+      "source": "OpenAI",
       "discovered_via": "Hacker News",
-      "source_title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "source_title": "GPT-6.1 Sol: Near-Astra intelligence for a fifth of the price",
       "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
       "discovery_url": "https://news.ycombinator.com/item?id=49896586",
       "link_quality": "original",
@@ -80,11 +80,11 @@
     },
     {
       "category": "ai",
-      "headline": "White House unveils voluntary 'Super Intelligence' accord",
-      "confirmed_fact": "President Trump has secured a voluntary commitment from leaders at Google, Anthropic, Meta, OpenAI, xAI, and Nvidia to implement internal controls, external audits, and board oversight for AI systems. The agreement, which rebrands AI as 'Super Intelligence' (SI) for federal purposes, is non-enforceable.",
-      "why_it_matters": "This accord signals a preference for industry self-policing over mandatory federal regulation, leaving the effectiveness of these safety measures entirely dependent on the willingness of the signatory companies to follow through.",
-      "interpretation": "By opting for a voluntary pact, the administration is betting that tech giants will prioritise safety to avoid future government intervention, though critics might argue that self-regulation rarely survives the pressure of market competition.",
-      "confidence": 0.9,
+      "headline": "White House and tech executives sign voluntary AI safety accord",
+      "confirmed_fact": "Reuters reports that President Trump and technology executives signed a voluntary, 'morally binding' AI accord calling for robust internal controls, independent assessments and board-level oversight of AI systems. Separately, Trump directed federal agencies to use the term 'Super Intelligence' instead of 'artificial intelligence'; the accord itself was not the action that changed federal terminology.",
+      "why_it_matters": "The accord is a voluntary governance commitment rather than a binding federal regulation, so its practical effect will depend on how signatories implement and disclose the promised controls and assessments.",
+      "interpretation": "The agreement provides a common set of voluntary governance commitments. Whether it materially changes company practices or produces measurable safety improvements will require evidence from implementation and independent assessment.",
+      "confidence": 0.94,
       "source": "Kanishka Singh/Reuters",
       "discovered_via": "Techmeme",
       "source_title": "Trump releases a voluntary AI accord with tech leaders, asking companies to partner with external auditors and set up internal controls to monitor AI alignment (Kanishka Singh/Reuters)",
@@ -96,11 +96,11 @@
     },
     {
       "category": "technology",
-      "headline": "UK tribunal revives £300M antitrust lawsuit against Apple and Amazon",
-      "confirmed_fact": "The UK Competition Appeal Tribunal has allowed a collective action lawsuit to proceed, alleging that Apple and Amazon colluded in 2018 to restrict third-party merchants from selling Apple products on Amazon's UK marketplace. The claim, valued at up to £306 million, alleges this agreement artificially inflated prices.",
-      "why_it_matters": "This case highlights the ongoing scrutiny of platform-merchant relationships in the UK. While the tribunal dismissed broader claims as speculative, the remaining marketplace allegations could still result in significant financial and operational consequences for both companies.",
-      "interpretation": "The court's decision to narrow the scope of the lawsuit suggests a cautious approach to antitrust litigation, but it remains a significant hurdle for both tech giants as they defend their marketplace practices.",
-      "confidence": 0.85,
+      "headline": "UK tribunal allows part of Apple-Amazon consumer claim to proceed",
+      "confirmed_fact": "The UK Competition Appeal Tribunal has allowed part of a collective consumer claim to proceed alleging that a 2018 agreement between Apple and Amazon restricted some third-party merchants from selling Apple products on Amazon's UK marketplace and raised prices. Reuters reports that broader parts of the claim were dismissed.",
+      "why_it_matters": "The remaining claim keeps scrutiny on marketplace restrictions and their potential effect on UK consumers, while the tribunal's narrowing of the case limits what will actually be litigated.",
+      "interpretation": "The ruling allows allegations about the UK marketplace arrangement to be tested; it does not establish that Apple or Amazon violated competition law.",
+      "confidence": 0.9,
       "source": "Reuters",
       "discovered_via": "Reuters",
       "source_title": "Apple, Amazon face revived UK consumer lawsuit over product sales",
@@ -112,11 +112,11 @@
     },
     {
       "category": "business",
-      "headline": "Accelevation IPO prices below range amid investor caution",
-      "confirmed_fact": "Data center infrastructure firm Accelevation Holdings Corp. raised $540 million in its US IPO, pricing shares at $18.00—below the marketed range of $20.00 to $24.00. The company faces high customer concentration, with two clients accounting for 61% of its 2025 revenue.",
-      "why_it_matters": "The pricing suggests that while the demand for AI infrastructure remains high, investors are becoming more selective about valuations and the underlying stability of companies serving the sector.",
-      "interpretation": "It is a useful reminder that even in the AI gold rush, the market is starting to look more closely at the risks associated with infrastructure providers, particularly those with lopsided client lists.",
-      "confidence": 0.85,
+      "headline": "Accelevation raises $540M in IPO priced below marketed range",
+      "confirmed_fact": "Accelevation Holdings sold 30 million shares at $18 each in its U.S. IPO, raising $540 million, below the marketed range of $20 to $24 per share. The company disclosed that two customers accounted for 61% of its 2025 revenue.",
+      "why_it_matters": "The offering provides a current market test for an AI-infrastructure supplier while highlighting customer-concentration risk alongside sector growth.",
+      "interpretation": "Pricing below the marketed range shows investors accepted the offering at a lower valuation than initially sought. It does not by itself establish a broader change in demand for AI infrastructure.",
+      "confidence": 0.9,
       "source": "Bloomberg",
       "discovered_via": "Techmeme",
       "source_title": "AI infrastructure company Accelevation and backer Olympus raise $540M in a US IPO after selling 30M shares for $18 each, below its marketed $20-$24 range (Bloomberg)",
@@ -127,8 +127,8 @@
       "discovery_score": 7.596
     }
   ],
-  "practical_takeaway": "For those integrating AI, keep an eye on the cost-performance trade-offs of new models like GPT-6.1 Sol. If you are managing enterprise workflows, remember that 'always-on' agent deployments depend heavily on your internal workspace access policies. Finally, monitor how the new White House 'Super Intelligence' accord influences your own internal AI governance standards.",
-  "watch_next": "Watch for how the 'Super Intelligence' accord signatories implement their promised external audits and whether these voluntary measures lead to any measurable changes in system safety or transparency.",
+  "practical_takeaway": "If you are evaluating GPT-6.1 Sol, compare Standard and Fast pricing against your own latency needs and apply appropriate controls for agentic access. For governance teams, distinguish the White House accord's voluntary commitments from binding legal requirements and track how signatories implement independent assessments and board oversight.",
+  "watch_next": "Watch for OpenAI to make Sol Ultrafast available and publish its final pricing, for signatories to disclose how they implement the White House accord, for the Apple-Amazon claim to progress through the UK tribunal, and for Accelevation's post-IPO disclosures on customer concentration.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -146,12 +146,12 @@
   },
   "social": {
     "date": "2026-09-30",
-    "lead_headline": "OpenAI launches GPT-6.1 Sol at lower price point",
-    "facebook_post": "OpenAI launches GPT-6.1 Sol at lower price point\n\nLowering the cost of frontier-level reasoning could accelerate the adoption of agentic workflows in enterprise software, though the 'Critical' cybersecurity rating assigned to the model under OpenAI's own framework serves as a reminder of the risks involved in deploying such powerful systems.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "OpenAI launches GPT-6.1 Sol at lower price point",
-    "pinterest_description": "Lowering the cost of frontier-level reasoning could accelerate the adoption of agentic workflows in enterprise software, though the 'Critical' cybersecurity rating assigned to the model under OpenAI's own framework serves as a reminder of the risks involved in deploying such powerful systems.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "OpenAI launches GPT-6.1 Sol at lower price point. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "OpenAI launches GPT-6.1 Sol at lower price point. OpenAI has released GPT-6.1 Sol, a model offering agentic coding and navigation capabilities at one-fifth the cost of. Read the Sapiver Forge Daily Brief."
+    "lead_headline": "OpenAI launches GPT-6.1 Sol at one-fifth of Astra's standard token price",
+    "facebook_post": "OpenAI launches GPT-6.1 Sol at one-fifth of Astra's standard token price\n\nThe lower standard price gives developers another cost-performance option for capable agentic workloads. OpenAI's Preparedness Framework classifies GPT-6.1 Sol as Critical for cybersecurity capability, which is a capability threshold; OpenAI says it applies the same safeguards stack used for GPT-6 Astra.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "OpenAI launches GPT-6.1 Sol at one-fifth of Astra's standard token price",
+    "pinterest_description": "The lower standard price gives developers another cost-performance option for capable agentic workloads. OpenAI's Preparedness Framework classifies GPT-6.1 Sol as Critical for cybersecurity capability, which is a capability threshold; OpenAI says it applies the same safeguards stack used for GPT-6 Astra.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "OpenAI has launched GPT-6.1 Sol at one-fifth of Astra's standard token price. Standard and Fast are available now; Sol Ultrafast is still coming. #SapiverForge #AI #OpenAI #Technology",
+    "spoken_script": "OpenAI has released GPT-6.1 Sol through its API, ChatGPT Work and Codex at one-fifth of Astra's standard token price. Sol Ultrafast is still coming rather than available at launch. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "80872fd7bfd06f000bbcd838b2a7c2f7fe58186c9cba2f6fece667f644721cf9"
+  "candidate_id": "3c4f907b6ce53220f1330bc8d486785b7a611eb12c2b69f9a04a6804e64d9299"
 }

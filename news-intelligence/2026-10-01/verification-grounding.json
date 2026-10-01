@@ -1,0 +1,300 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Google%22+%22WSJ%22+%22cognitive+and+emotional+harm%22+OR+%22education%22+%22schools%22+AI+risks+children&client=app-vertex-grounding&safesearch=active\">&quot;Google&quot; &quot;WSJ&quot; &quot;cognitive and emotional harm&quot; OR &quot;education&quot; &quot;schools&quot; AI risks children</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Tencent%22+%22Oracle%22+%227+billion%22+OR+%22Southeast+Asian%22&client=app-vertex-grounding&safesearch=active\">&quot;Tencent&quot; &quot;Oracle&quot; &quot;7 billion&quot; OR &quot;Southeast Asian&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Gemini+4+Argon%22+site:blog.google+OR+site:reuters.com+OR+site:techcrunch.com&client=app-vertex-grounding&safesearch=active\">&quot;Gemini 4 Argon&quot; site:blog.google OR site:reuters.com OR site:techcrunch.com</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Artificial+Analysis%22+%22Gemini+4+Argon%22+%22GPT-6+Astra%22&client=app-vertex-grounding&safesearch=active\">&quot;Artificial Analysis&quot; &quot;Gemini 4 Argon&quot; &quot;GPT-6 Astra&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Amazon%22+%22Constellation+Energy%22+%22Maryland%22+%22690+megawatts%22+OR+%2220-year%22&client=app-vertex-grounding&safesearch=active\">&quot;Amazon&quot; &quot;Constellation Energy&quot; &quot;Maryland&quot; &quot;690 megawatts&quot; OR &quot;20-year&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22PurposeMed%22+%22Grindr%22+%22250+million%22+OR+%22Freddie%22&client=app-vertex-grounding&safesearch=active\">&quot;PurposeMed&quot; &quot;Grindr&quot; &quot;250 million&quot; OR &quot;Freddie&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Gavin+Newsom%22+%22No+Robo+Bosses+Act%22+OR+%22fire+or+discipline+workers%22&client=app-vertex-grounding&safesearch=active\">&quot;Gavin Newsom&quot; &quot;No Robo Bosses Act&quot; OR &quot;fire or discipline workers&quot;</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6iQ398TODq-1mW24NVkyRVI2Ef9Oc6a8rdoF5PH-LdIWs6SN9yq3DCZVyPgeliq_HiHgaqhj1D4m3zGIiuliUOeMWg4g3K6HhEDIMxKDiW4kf5u2AYMyQOjlURRnQdOjnNfpUUOiK5gFJ8RRWqCCMRP3Zs9Q0bFfDLNLMLO05LZLrxa-WIXIzgzOQfA==",
+        "title": "blog.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrBBS8w29N3LGKyNciS3Rx_hPmUgSB0il9Aavjrf5wgeAj_oyEvnn5yAQK1WyrHbk8f9xO1xD_O75r2tGUdtxv7kveLcRX76mF9zzqLzU6J-W-2jIyQGI3zw==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGahu8kN8fEtLsioZJrBhmSWN9OXLpJ_SYh-RSS-CRZXXZaVc8TdX7363LkhlHzGitu_O8ORLk7LIoYggHQo_CuI3RA2IWxVl5OgW0mmn84LLxRQ4UcC4G0O_m3H7cW8DI7qOdZ_7opyfo8kUdZdbx_vnyeF1Yn37P1I4ve5sik5p8=",
+        "title": "artificialanalysis.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFzhAQ7RmJm6rMmNvfCkdNJAcoe2-tQiffw_WrClXS-Xv5Fd_2Pv0DjqtSF_zdE4HY716roYy4X2C9N84JlQS48aCV84QyszbZc_YvVjT_fzGL6E2ZLmbI",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1BZRZsh66-cwu750chcEfhfVBP4EbaH-WjBIK-glBvy8W5xsaHJFD9tM-KrequJAub1ePogvAiC9eVOTCtIrbAkzCNMMJSGV_ENarwxCV0jlbTxEvPK7uv15QEKgDiWehenVPOy8oijAsIY2o9PSbaiWW2DPNhNhSU5WB_2O8F7skVsZOxJiGu0ZtzeUNcDX4d6tUdWRjvzFSLSO_Hhw1hFXBAPOEWS3tJnB_M_LhYBFN0a_LJFXurGQoeyYGvBw_TaPGLc2tScPu",
+        "title": "wccftech.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkkOb82XL2iE8a1aQ0WW7cTjUxI3uVXD8q0CraC01icriwLhtLeLzPAaj1G5BQy7gZjl0kHR4T7OTrFYzSEOT596E_PFLDmC8K9wgw-GSyG_s8qjjwnofqqVJLjKQoktl98baFi38Phd_3bmOR2NR6vKzRaUOfk2V_sSg3jZ9sMscZt-scPRUNgda0oHjpXf-YY6ykEVzzLoP0",
+        "title": "startupfortune.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnTiWicSVokEln8in1xqoHWJjmVpl7RFfzmy05K45ks6nceOBmfEZu28q6BuYx9iYuuaL4PaAfQ4Slxe1RoUPb_p9arB76ED78uTTrQF9AzLVnhdX5CYJ0IdGOO-JlT44q8Uzl_515BKQYBprk7GxWJgxm7_qeuB_K7eg6zaMHvyqOO0zXbqo1zypmMBKkTSrFslaoglxOU_s2ACfSZ-7ZMh7bersPqRsofm5U8E_fqgA=",
+        "title": "techstrong.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGSp17fwR1IAc4-eI-jAz56prb7zhYD-lp7sCjaiVozERQ5IhQwAcx6MCEllE2SXYb83pSRMKWm1kZNSKuLUkW_mBQGnzRhPtqm5u6_xjRSPvDUJEJIS9m-VIjqAjZBGlgb27vdEWPFSwRJGKzNv-XaxAcEPzCqYjLfHAR-aOeAThO7MKCLDI=",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2l39M0vvlmibQWbGj7PbRnEON1JwnasYXJS2fUk6JDeViDBPVf-s3-GFnEUYJDQ6PV72knx6TwjALQOGMl6H2_qWu5F5ffczT4NNTDET8FenDp6JuVSQh81e1vyA6ciR7sYROHfyDElhnp72ASNiMJGAC0jyOh_eAEAsQRyzZxBdFBoe31SrCt2GJuWgEtD7Ypss=",
+        "title": "seekingalpha.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLk_MFFAzGVg24Wmt1bjb2rcaSGqvAOJ2bq_MChhSAvGQKQRvFQ7IVuAApLmbaGJ86vTMCbjiKd3U2eB-czTbBDagKi25a44Da5_TwLCZIraBcf3You3w71AqXdV1E7kKpisIDCQs-X_rADoKH_ZG4RoA6LdoPd4BtdMgtRZEp9COvpGHQdID-xSw7wBTtWodJ8KDQAGpCRZrtvbi3G-_lNEHDLF659uevpfXHXAyvebYaoZ59yI0rNOahxKeb44c5",
+        "title": "constellationenergy.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMygV_dg5cNvfIIdnpsTIP_Muyv6KRTibuck2BqtU1atgDjmTa24J-FmToNinTLpl9dd2zGl94_AWU_Bx2-Uzp7w-D2euT9sU2NsBJe1OmAD1HYTz7I1YVycyvcnsQ9zlaKw_bLZE949_RI087ztGgf71pjOdTjMNJ8ZbhnHIRgwImhjlqS-XY9asTuty7Jku3qHcpMpUbv7XADub9xiwZQHdrFMrCzmPlBbtQsg78pEbM3EGZqnaAfK0TT2pvbMNb5Q==",
+        "title": "businesswire.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvjbSQtvnLz-zVEgR1iff0ESWe_R_QkrrTDWoD3oJU3D2AaLpSP52aXYrCITl_qpAFev0tSpglz8ENxaiYww7W1KqJ6PKTfM3-wwjahJWN7wC3LwsEjitJ5lK1ZVxew6Tw0HxZYCjcB2l3Z_UJe3i_qcIGl2rkZaCo3_iVMWCQ3OwpVMOaM0aoA1xdvv_Dh23dMxgKobLPJKw=",
+        "title": "stocktitan.net"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExuXy-ZLIGB5s1T3rgfDtY3qSiT-bYngdUpHakAYlBUX8fEYME7Mz0RSf3JsJt-dzAyST6zTBszAI00mZS_Dt8IrNqdnCpSlIhKSuIfeia23kwGvv_CaLtI3nYtgwa7kRxOu0MO6L7pmWWEzmjzbD5uQWfvSzT9NCR",
+        "title": "bsky.app"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 554,
+        "endIndex": 827,
+        "text": "#### **[0], [11], [14] Google Releases Gemini 4 Argon with High Output Limits & New Benchmarks**\n* **Confirmed:** Google DeepMind announced *Gemini 4 Argon*, its next-generation frontier AI model focused on software engineering, enterprise knowledge work, and cyber defense"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 829,
+        "endIndex": 988,
+        "text": "Google introduced a 1M-token output limit (up from 64K in previous models) with introductory API pricing of $2 per 1M input tokens and $10 per 1M output tokens"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 990,
+        "endIndex": 1233,
+        "text": "Independent evaluator Artificial Analysis confirmed Argon (high reasoning) tied OpenAI's GPT-6 Astra (max) at 53 on its Intelligence Index while posting a significantly lower 15% hallucination rate on AA-Omniscience (compared to 51% for Astra)"
+      },
+      "groundingChunkIndices": [
+        2,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1235,
+        "endIndex": 1391,
+        "text": "* **Caveats:** The model is currently rolling out through trusted partner testing and US government pre-release evaluation before full public API deployment"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1393,
+        "endIndex": 1516,
+        "text": "Real-world software engineering performance versus benchmark scores remains under active discussion across developer forums"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1665,
+        "endIndex": 1984,
+        "text": "#### **[1] Tencent Signs $7B Deal with Oracle for Overseas Advanced AI Chips**\n* **Confirmed:** The *Financial Times* reported that Tencent signed a 5-year, ~$7 billion agreement with Oracle to access roughly 100,000 advanced AI chips hosted in Oracle’s Southeast Asian data centers (including Malaysia and Indonesia)"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2031,
+        "endIndex": 2117,
+        "text": "Reuters picked up the report but noted it could not independently verify exact figures"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2119,
+        "endIndex": 2262,
+        "text": "The deal relies on leasing cloud compute capacity in data centers located outside mainland China to remain compliant with US export regulations"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2337,
+        "endIndex": 2639,
+        "text": "#### **[15] California Signs \"No Robo Bosses Act\" (SB 947) Banning AI-Only Firings**\n* **Confirmed:** California Governor Gavin Newsom signed SB 947 into law, making California the first US state to prohibit employers from relying solely on automated decision systems (AI) to fire or discipline workers"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2641,
+        "endIndex": 2785,
+        "text": "Where AI serves as the primary basis for disciplinary action, human reviewers must independently corroborate the finding using secondary records"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2787,
+        "endIndex": 2838,
+        "text": "* **Caveats:** The law takes effect on July 1, 2027"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2840,
+        "endIndex": 2966,
+        "text": "Pre-notification requirements were removed following a veto of a broader 2025 bill, and gig-worker provisions were scaled back"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3041,
+        "endIndex": 3321,
+        "text": "#### **[9] Amazon & Constellation Energy Sign 20-Year Nuclear Power Agreement**\n* **Confirmed:** Constellation Energy and Amazon announced a 20-year power purchase agreement supporting over $3 billion in infrastructure investment at the Calvert Cliffs nuclear facility in Maryland"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3323,
+        "endIndex": 3411,
+        "text": "The deal covers 690 megawatts (MW) of power, including 190 MW of new generating capacity"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3413,
+        "endIndex": 3507,
+        "text": "* **Caveats:** The 190 MW capacity expansion is scheduled to come online between 2030 and 2032"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3509,
+        "endIndex": 3667,
+        "text": "Power will feed directly into the 13-state PJM regional grid under a retail agreement rather than via a direct physical wire to an isolated data center campus"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3742,
+        "endIndex": 4135,
+        "text": "#### **[12] Grindr Acquires Telehealth Provider PurposeMed for $250 Million**\n* **Confirmed:** Grindr signed a definitive agreement to acquire PurposeMed Inc., parent company of HIV-prevention telehealth platform Freddie, for a base purchase price of $250 million ($190 million in cash and $60 million in common stock), plus up to $70 million in performance-based earnouts tied to 2027 targets"
+      },
+      "groundingChunkIndices": [
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4137,
+        "endIndex": 4225,
+        "text": "* **Caveats:** Subject to customary closing conditions, with closing expected in Q4 2026"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4227,
+        "endIndex": 4304,
+        "text": "Initial expansion investments will temporarily dilute combined EBITDA margins"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4379,
+        "endIndex": 4744,
+        "text": "#### **[4] WSJ: Internal Documents Show Google Researchers Concerned Over AI Risks to Children**\n* **Confirmed:** *The Wall Street Journal* reported that internal Google documents and research sources warned of potential cognitive, emotional, and social dependency risks for children as Google pushed Gemini AI features across Chromebooks and K–12 classroom tools"
+      },
+      "groundingChunkIndices": [
+        12
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Google\" \"WSJ\" \"cognitive and emotional harm\" OR \"education\" \"schools\" AI risks children",
+    "\"Tencent\" \"Oracle\" \"7 billion\" OR \"Southeast Asian\"",
+    "\"Gemini 4 Argon\" site:blog.google OR site:reuters.com OR site:techcrunch.com",
+    "\"Artificial Analysis\" \"Gemini 4 Argon\" \"GPT-6 Astra\"",
+    "\"Amazon\" \"Constellation Energy\" \"Maryland\" \"690 megawatts\" OR \"20-year\"",
+    "\"PurposeMed\" \"Grindr\" \"250 million\" OR \"Freddie\"",
+    "\"Gavin Newsom\" \"No Robo Bosses Act\" OR \"fire or discipline workers\""
+  ]
+}

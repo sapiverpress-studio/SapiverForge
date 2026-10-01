@@ -1,10 +1,10 @@
 # Sapiver Forge Daily Brief
 
-Today, we look at Google's latest model release, California's new approach to automated management, and the massive infrastructure bets powering the AI industry.
+Today, we look at Google's latest model announcement, California's new approach to automated management, and the massive infrastructure bets powering the AI industry.
 
-## 1. Google launches Gemini 4 Argon with expanded output limits
+## 1. Google unveils Gemini 4 Argon with 1M-token output limit
 
-**Confirmed:** Google has released Gemini 4 Argon, a new frontier model featuring a 1M-token output limit and introductory API pricing of $2 per 1M input tokens. Independent testing by Artificial Analysis indicates the model ties OpenAI's GPT-6 Astra on its Intelligence Index while reporting a 15% hallucination rate compared to Astra's 51%.
+**Confirmed:** Google has announced Gemini 4 Argon, a new frontier model with a 1M-token output limit and introductory pricing of $2 per 1M input tokens and $10 per 1M output tokens. Access is initially limited to trusted cyber defenders through Google's Fairwind programme. On Artificial Analysis's AA-Omniscience benchmark, Argon recorded a 15% hallucination rate compared with 51% for GPT-6 Astra (max), while both score 53 on the Artificial Analysis Intelligence Index.
 
 **Why it matters:** The significant increase in output capacity and lower reported hallucination rates suggest a shift in how frontier models handle complex, long-form enterprise tasks, though real-world performance remains to be seen.
 

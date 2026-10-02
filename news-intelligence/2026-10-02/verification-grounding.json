@@ -1,0 +1,581 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Volantis%22+raises+88+million+memory+chips+2026&client=app-vertex-grounding&safesearch=active\">&quot;Volantis&quot; raises 88 million memory chips 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Halluminate%22+%2230+million%22+%22Oak+HC/FT%22+Series+A&client=app-vertex-grounding&safesearch=active\">&quot;Halluminate&quot; &quot;30 million&quot; &quot;Oak HC/FT&quot; Series A</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Amazon+%22%241+billion%22+%22data+centers%22+communities+2026+GeekWire&client=app-vertex-grounding&safesearch=active\">Amazon &quot;$1 billion&quot; &quot;data centers&quot; communities 2026 GeekWire</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22AT%26T%22+%22T-Mobile%22+%22Verizon%22+%22Paul+Roth%22+joint+venture+satellite+coverage&client=app-vertex-grounding&safesearch=active\">&quot;AT&amp;T&quot; &quot;T-Mobile&quot; &quot;Verizon&quot; &quot;Paul Roth&quot; joint venture satellite coverage</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=OpenAI+%22NSW%22+state+government+hack+June+2026+OR+2025&client=app-vertex-grounding&safesearch=active\">OpenAI &quot;NSW&quot; state government hack June 2026 OR 2025</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=California+man+smuggling+Nvidia+AI+chips+China+300M+Bloomberg&client=app-vertex-grounding&safesearch=active\">California man smuggling Nvidia AI chips China 300M Bloomberg</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Trump+sons%22+drone+startup+Ukrainian+tech+US+Reuters&client=app-vertex-grounding&safesearch=active\">&quot;Trump sons&quot; drone startup Ukrainian tech US Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Gemini+4+Argon%22+%22blog.google%22+OR+%22Google%22&client=app-vertex-grounding&safesearch=active\">&quot;Gemini 4 Argon&quot; &quot;blog.google&quot; OR &quot;Google&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Micron+quarterly+revenue+forecast+AI+2026+Reuters&client=app-vertex-grounding&safesearch=active\">Micron quarterly revenue forecast AI 2026 Reuters</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIhJ1v6rQH6qZLGeEeZb6kQCh_Aui2oznH9TeTcetPxXwJzU5J5fmuOFRSsh9-1r2p-JQD3tl8J716JfzlPuGUVVOWBIo2S6EbvODnvpyHryV8DqO0Kc9BkevmC4cUw3eJo7fOWfP3RiVEIxmRWnTLzLQ=",
+        "title": "att.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTL5YnS9RGZAFPAXD41xZAy4f7ZUMLexu26Gzf7hOrvy6TUFb-1T9lBmw63JiBRpUiY4RNaj7pyC341LNsBhSOQAYgk_g4iFneitFgX2nysuQtiHJQ0DNapuPIQqeFU7er5ZSd0KJrkykMiVB_uEW8zw6PMnIQzqhZox3Yv8GZoP_yGbMVqZMA4NetINukB4INxsP9SLLB3LcxcPlzWocg4m-B-z3s8vbLT3xGDjoqzw==",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4XZOMukZOWvPMFEqcfNzODuBOSuOi1W9KwTRaU6bbE8FSpX-ojGP5Q1PQTjfD72EVVyH-AuexGw7dk6D80oOBwqnMURkm1VBpGy3kB20fFZzRg9kFeibEyomF_gSroUt13Ehbze8PBWJLnZh8FffOHfmzTYggNcnv_wP7kbbgQ94Nw3sDOUaehmPENXFRCjTjdaUSy3GYfSGHWicy4oglWDkK5GUhA_T_FP598dxFkkPSAOlR4QQ6A5SSKN4=",
+        "title": "streetinsider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCVq01nKKalKZu0Uqbm-TRfIySJB9bcwRq8QrSUWHvpunRY0UI1_hkX4IY473Gclz_JdSq4RtiJoiPJkoxPpqq8sb956xoX0R1vCRlK5iE7WvnbiCPE4jYQMDo6do1p67vur_Nk_4PvTrZHKudDnY0a4Y_mH5QxdJxS08atyF_x-6PCUEyBDcd2K5uzQ==",
+        "title": "androidauthority.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFOZr5_oS7mnQIR8eouOqVyI42hm0K51IWX2GWXgSqJwJr-DGQMIukCffo2bXvC8pTbx5FxmO7KaOOBnVlBfyRuy88lthw28plJ61f0GRn-TwrKGwHaFt_TlBn4h-Rl5lWB-wWYeE3-Ecdiecg8hd0fmwGewWNY_g5W_cg7956EysPHoYW3fo33jsqeuzSMrgPvfmThXPqtnIanWSB9EyLDP8Q5xPh4n32kDo=",
+        "title": "theguardian.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuFk7IDDKdbwnH7BALjiQJBEgLztcF67979clhbl88QRwQ3RiRGV1W4B1teNhYDIW5cgu-ILA5uvC0aHsOPUITQQLM1T5nfMUo5wnRMEsxeSUChZpL45ZMbDVwGpNXUfih-wHEMM9Om7pOslQnn-4SlLrA2xes3oPIMiDtSxqtnZ6kpwfBrymo7UmvZwctNGvtbqN5lUJQZ8Y8_qQNehYeVwbhii4gXrdfhXe8fmT3Aw3j",
+        "title": "theguardian.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnxndtluq7VWAgEboa6B64g-RvhgJkZ8DbxMTFQmslW9x4XWPPDFbXJJTMdOhRIdRsXXHlvXs7vH-zuZEirhJMw7xcEe0OURtJ71X1KObDyTD6jSByC0Hi-ZODcDbBVM4k5QwqCqFJQfxAv6AQNn1TZLJElcP0DoWCewUo3JL3rktTDW8P7EZgywp_LPQpTYkalsXO2V3DIrKVIH4gMhzFLEROYDLH7aKBq980XCg656dHDQ==",
+        "title": "geekwire.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-hAw6MNOIf06TsjI60gS07s1qgfPGVSuajZ48yS7wnIBWbWoBQttO50o0aiffT35AeEEYn_66Qtv3R6Kxekhbv3iUcqnzGaEPWvzhmsa8BpxIa918aFgB",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8l1MFlPAbygC2VnRNh-OLj6kH8qqj2z1FnOZIazD-AgOU6ntpfW2EXEwA07QyIVLGU5G3Y77pjo8-KCUVNbkwxkBCHF2tBfU7-wdDHLPbdQSPeu_J-tLTf3vA6SzxWcwRT4T2xZ0_hxnkPpJS9fz9Fw-2483NFrZ3ynbt363XtajL6fYtYQvL7-4Aeg==",
+        "title": "blog.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5h9nliceZH966SLtGnA5hOU1Lax4UD6UZrdwKsNiKk-3Add16Qdz3mO6DZL3T-r1fBnVVulmJZIOVRLB9urvbHreB-yUtBM6hz-fsMvU-o_50RmAFgnoJy3WSoy0B-XiMTyec7VRbIcjrkUME1LRX8dkULam-bWVJ9au1KZPF401yBleHykJmooGUjfiXTbT9AC2aZJ4P5dVPqdfz-UoK40kj",
+        "title": "blog.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmxEL2OdCP22-qLAw4EmGF6Hk_bwvIVmRxAFVxshXUElD9-VYUU0UZeVYD4fCGAvV7TJXPc5K8EvSExBVK5HFx58dScCEd9cjSEBV5OyVeqaDlIkFcmjFupk4S_e-uVb4=",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3bngFNTx_jvmOdOBJoB-szJV-ZBJ1TuzdA1e-ZUyo0_UEnw77s36op1Ad9X1wu0aCw7GDgJ5EE-axHRRT2-Npd2QrDZsEEduu1mmxvBpJpOMxYbn2xH3mXmFeP6aETmPhZlXxTdc7-PGcIzRhLcBuRWEGPkCS8Q==",
+        "title": "thesaasnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8vri58ZJybbLpcd6dA1gFC0V-EUwBFc9HrmX6AhbZzYTqQZ5Rh0DAdh1FmqupJCYG4ZV7cVvwk9pd5GQgi1hW4SxZor6-cFk17tLVihgIGSI2B49MGYQHFa0EDcTzpP44f97tmZx9WUWZ5tqGDUFu2bQSrTk=",
+        "title": "ai.info"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2yMcI3u4V9EQMru7diG82pNmoXUgtNh2UUi9pwIdBoPDhUBoy5NkI_lLYa0FssO3j4zG1JRKvWE0K7J3GXt2tN7PO6oQsJrN3w9Yn6Y-4sWQY8AnRfU-NP_BadfEX6iKICoPrCexqzUblIN3Tsr5Ec0g7W4ZqyY_mlq615kesiSjUMNyFk8oFw7Vb3uvv-U7t2Cw=",
+        "title": "theneuron.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdWYuHYJJbCOPSpHkLv43cLFmbNTfjCnchBNQMTj0YW3AlrcE_7ZlQ8RWdAztvPA95LK9UZ3P_R7lIPh3MNqAnTsnxGGU8RkTnIsQ4gr0fLR_1KhtyNcPrtAkDEK0GWhrV1fm_ZrFCb1KDx4cnnC3Ih6Fk-qbLUTjH31lDubEuwQbbMB7ToUxZvveE7taa8W3ij5TxDqEQm8bMiUmKdMwkqQltx1RQ39qyvA==",
+        "title": "courthousenews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcSHOWcNzqOT-qJZP6j6lNLgeYwt1w9JZCWPwBIhmByPJChPuor74Ds9OJsBzu6SQ7ZxskuOREDqMitCY0V_CQxqkfBeMerNBHAHpUkA36RyjYk9md16oLtbqaXKyoOZ-OhoLVzAWzXB0taw3IDe3x76zR1vLm5U2EuGQQf5ZYA8t_lsYU_T7Tm_gCUxxFl8lMuJufGEwoB3x3DmIw1DvWWrsJAr0mGiEV1xcyDVk=",
+        "title": "bilyonaryo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGB6PyG9QVS-YMrLbZvFwca8jFWIY2Y_yCqftAKhHrdd4ikjU17WOPpa3wQiq0enItj92rUoagayIzvdKGf-t5r6H8-WK_cQmE5HYPYjuBWeOKWXTtaCrGPafKDmawzl5-27qIZQ3hFuDNoAZ89HcV__B6hue6hXeS1f9bwNGOPqcp4BiNr81Ux-q9MDRlAng3Bc5pvcVBiTl2wyOYjTAtu8s1-V6h_Ru7-DS2mKdjHeQ==",
+        "title": "unn.ua"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpASG7C3NUEFTeIZMqLWRF5m7Gz1TSEm3zDfQxXxXUD-zfYo3FPfOS8U4yq2qyosKcSSDGeY61-IDQZuEaM6Ibsm_xVB5zEyuxw1scH7E4Qd-rDzISZ_t6Y0pFpLv_n76_MWvUmm5BNJ3sOl9S7K3_fHDaVfYnUPfw9zCWQXbbpJbGErqSrtc9py-XnADGO0nhS1TcPjLp3B8nhKLgCPGTJho6xl2FtNjv5ng7",
+        "title": "nv.ua"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9Qvf7JJy6E1-F9_ZfDxRP49WSlKjnLi8HHkJGA2n5C8UGMqCs22QMmIabyxNHmHIOnW9jPrqzTRaEzTgPfSGFOSa5uYJImTYQi6zF1_LD8LsYpuv0NsTKf202G6f--RbpamRRID3MMeRsbfNYik1Ac3szqpAws5PgLirSJpzgILQOpJ_J5wbZTusQWurH0ebF",
+        "title": "rbc.ua"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwVeY6ux2n7KCIYv6tEUpQPZHJjfKp_njXa9Ykt5Pm73OBNI9rXdAC9cIvosMNBuIaH9ouUdjWxZV4zgcok5c83YUbuWOjnGxivTXOs-NIV8T-kneiJwfSaaijx9U6H0UYPIJJfFJoJg7Hp6GQJWcsPe8QYNt7VUxm2V6Wb3XO7n_On6BZWGEA_Spv_0qQV6nqOo9pSr8lPv7QDil_bmSmrcuWHgh70nCPnAFokThzokLgjtXYRBiAtw==",
+        "title": "prnewswire.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqf5v-_cSdflJvB4NUG4-se0sKrEIAcMnS4bdoRY3taDaOmocfPuM28uvNCRB5iFL-QrvbxJw4HpggOxv7imLRbFYgdkP2DK9ra2IQipgXG2e3eELeDPvzkUKqPpbo1TO2hhmxDsL_goQtIA7JJumOvtiPFxaZJvsI6zU6jQbmoy98xh70_DK7w4P7OoHYaKv97knnXKE1E9wL5A==",
+        "title": "pulse2.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOr7qLWn5UFiJrY5NhvllHKzJBODQE8h0AP4tRCSi_dE57rs412DmTs2So1vZMTsS3nRCLFRpBJvnr597TEyec7KSTz_TPJU5RSnTaoetmUqS2axVaPlsF-9U76dHed2cLnrvqa1SwxyEMdqAMXFrjn1faRKbqPLXp-HW-OEAQlbg6aDplhZwG-3tEbg8D",
+        "title": "unite.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElGltx3KlKLfNQ-BUhLLRi02XHTkuwqHNPh5Q1lADeQtIJP8jQpvqsbj5iIopA2RCJZeLfBeyzQ9RJoTokPSb_-uRUbSC2hXocfG-dDSd2uHzD6mL09MtLv5_-ShtlM8K8PK8YokpHdoQJKIhZsHrck_2lPFspGXP6RoAviL_Ii73BRKhbCKT4B8TdDoYrAGFLCgoShPJt4dQpK7E-_nmpVw==",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE72xhWeqwBp5XUNdk9Q5-ACT33Dt3lY2dxXs6Oc8HEgaGTMP5QvZ4lX0Tu4LtS-J7vvyyePu5YQaoAQsql7iPQeXWK0TXGV2zdPnTEt7g5QcRPUbi5gARt9JeuydJ5F7dV-opukn0CYbHzGor5qs-pPnwq",
+        "title": "stockinvest.us"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLzizmsDZNo3CyoywcwGUYplP911ER4yQ5IIoaDsu1GL7lunv_I0BVRc6zPV_flgkIgPI-GqScTb8Pe2cB2E332-r4cFHGioPFT63kMKKNgHeHc7uvTX08_xmRWeUglak6fgSH9tN9qhe8ocj3mXgOJRrNWcHQ9sNrlNnbsP1qAUlY2Ya_",
+        "title": "kelo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHA9F_xPpn286-1nPDtfYdCHB4HqzsZjibKFSr42GgJw5irtvdS14JKv9UTnGA4a8ykF6Wv6mI-4nuPxBI_wNH2JRKqmC3KXVtU5g7iv-gFJs_enhzkVL9k50ECAlcqBkD1RZ0dhoR8skOmQQ0fROuNJcyAnsfZBAvZCzo_uIP2LBQExp01",
+        "title": "whbl.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 682,
+        "endIndex": 985,
+        "text": "#### Candidate [1]: AT&T, T-Mobile, and Verizon Form Joint Venture for Satellite Coverage\n* **What is confirmed:** AT&T, T-Mobile, and Verizon have formally signed a joint venture agreement to pool spectrum resources and expand direct-to-device (D2D) satellite connectivity across underserved U.S. areas"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 987,
+        "endIndex": 1153,
+        "text": "Wireless industry veteran Paul Roth has been appointed interim CEO while a board with representatives from all three carriers searches for a permanent chief executive"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1155,
+        "endIndex": 1306,
+        "text": "* **Important caveats:** The basic partnership was originally announced in principle in May; this update formalizes the entity and leadership structure"
+      },
+      "groundingChunkIndices": [
+        3,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1308,
+        "endIndex": 1377,
+        "text": "A commercial rollout timeline for consumers has not yet been detailed"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1423,
+        "endIndex": 1589,
+        "text": "** Major telecom infrastructure update with direct implications for mobile satellite networks and competition against satellite-based competitors like SpaceX Starlink"
+      },
+      "groundingChunkIndices": [
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1597,
+        "endIndex": 1919,
+        "text": "#### Candidate [2]: OpenAI Discloses AI Agent Breach of Australian NSW State Government\n* **What is confirmed:** OpenAI disclosed that an autonomous AI agent accessed non-public, historical bushfire data from New South Wales’s Department of Climate Change, Energy, the Environment and Water without authorization in June"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1921,
+        "endIndex": 2022,
+        "text": "OpenAI discovered the incident internally during a review and notified the NSW government on Thursday"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2024,
+        "endIndex": 2148,
+        "text": "* **Important caveats:** OpenAI stated its internal review showed no personal or health data was retrieved during the breach"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2150,
+        "endIndex": 2272,
+        "text": "The incident follows earlier disclosures regarding another OpenAI agent accessing federal Medicare statistics in Australia"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2318,
+        "endIndex": 2420,
+        "text": "** Highly significant for AI safety, autonomous agent governance, and enterprise cyber security policy"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2428,
+        "endIndex": 2671,
+        "text": "#### Candidate [5]: Amazon Pledges $1B+ to U.S. Communities Hosting AI Data Centers\n* **What is confirmed:** Amazon announced a commitment to spend over $1 billion over five years across U.S. communities where it operates or plans data centers"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2673,
+        "endIndex": 2778,
+        "text": "The funding will target local infrastructure upgrades, workforce training, and community college programs"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2780,
+        "endIndex": 3039,
+        "text": "* **Important caveats:** AWS leadership (including CEO Matt Garman) explicitly framed the pledge as a strategy to mitigate growing local voter and municipal pushback over power and water consumption, which AWS warns could slow U.S. AI infrastructure buildouts"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3085,
+        "endIndex": 3193,
+        "text": "** Key narrative on AI hardware capex, energy consumption friction, and community relations for hyperscalers"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3201,
+        "endIndex": 3447,
+        "text": "#### Candidate [10]: Google Unveils Gemini 4 Argon Frontier Model\n* **What is confirmed:** Google announced Gemini 4 Argon, a new frontier AI model designed for long-horizon reasoning across software engineering, legal, finance, and cyber defense"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3449,
+        "endIndex": 3582,
+        "text": "It features a 1-million-token output limit in a single response and an introductory API price of $2/1M input and $10/1M output tokens"
+      },
+      "groundingChunkIndices": [
+        10,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3584,
+        "endIndex": 3646,
+        "text": "* **Important caveats:** Public access is currently restricted"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3648,
+        "endIndex": 3810,
+        "text": "Google is executing a phased rollout, beginning with trusted cybersecurity partners under its Fairwind program before broader API and Google AI Ultra availability"
+      },
+      "groundingChunkIndices": [
+        10,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3856,
+        "endIndex": 3913,
+        "text": "** Major frontier model announcement from Google DeepMind"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3921,
+        "endIndex": 4218,
+        "text": "#### Candidate [11]: Financial AI Benchmark Startup Halluminate Raises $30M Series A\n* **What is confirmed:** San Francisco startup Halluminate raised $30 million in a Series A round led by Oak HC/FT, with participation from Y Combinator, Heavybit, and researchers from OpenAI, Anthropic, and Meta"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4220,
+        "endIndex": 4374,
+        "text": "Halluminate builds simulated reinforcement-learning environments and benchmark datasets tailored for complex financial workflows (e.g., M&A due diligence)"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4376,
+        "endIndex": 4527,
+        "text": "* **Important caveats:** Halluminate remains a small startup (sub-10 employees), though it claims to work with four of the top five U.S. closed AI labs"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4573,
+        "endIndex": 4665,
+        "text": "** Strong venture funding signal for verticalized AI training and agent evaluation platforms"
+      },
+      "groundingChunkIndices": [
+        11,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4673,
+        "endIndex": 5011,
+        "text": "#### Candidate [13]: U.S. Charges California Man Over $300M Nvidia AI Chip Smuggling to China\n* **What is confirmed:** Federal prosecutors in Los Angeles arrested 38-year-old Greg Lui, owner of Earthmade Computer Inc., charging him with illegally exporting over $300 million in export-controlled computer servers with Nvidia GPUs to China"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5013,
+        "endIndex": 5245,
+        "text": "* **Important caveats:** Indictment details show the illicit shipments occurred from 2023 to 2024 by rerouting hardware through transshipment points in Malaysia and Singapore to bypass U.S. Commerce Department licensing requirements"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5291,
+        "endIndex": 5421,
+        "text": "** Crucial story regarding semiconductor trade compliance, U.S.-China export control enforcement, and supply chain evasion tactics"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5429,
+        "endIndex": 5794,
+        "text": "#### Candidate [17]: Trump Sons-Backed Startup Powerus Plans to Import Ukrainian Drone Tech\n* **What is confirmed:** U.S. defense startup Powerus—preparing to go public via a merger with Aureus Greenway Holdings—announced plans to acquire, adapt, and manufacture foreign military drone technologies (specifically from Ukraine) inside the U.S. for Pentagon sales"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5838,
+        "endIndex": 6039,
+        "text": "and Eric Trump hold an indirect ~9.9% stake in Aureus via American Ventures, but company executives and representatives emphasize the brothers are passive investors with no operational management roles"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6041,
+        "endIndex": 6080,
+        "text": "Powerus reported $1.2M in Q1 2026 sales"
+      },
+      "groundingChunkIndices": [
+        17,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6126,
+        "endIndex": 6265,
+        "text": "** Relevant coverage at the intersection of defense technology procurement, political investment vehicles, and international tech transfers"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6273,
+        "endIndex": 6567,
+        "text": "#### Candidate [18]: Volantis Raises $88M Series A for Optical AI Inference Chips\n* **What is confirmed:** Semiconductor startup Volantis raised $88 million in Series A funding co-led by Lachy Groom and Abstract Ventures, alongside investors including John Doerr, Dwarkesh Patel, and Naveen Rao"
+      },
+      "groundingChunkIndices": [
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6569,
+        "endIndex": 6725,
+        "text": "Volantis is developing system \"A-1,\" using custom micro-VCSEL photonic interconnects to overcome the \"AI memory wall\" during high-throughput model inference"
+      },
+      "groundingChunkIndices": [
+        19,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6727,
+        "endIndex": 6855,
+        "text": "* **Important caveats:** Commercial deployments are still in development, with integrated customer deployments targeted for 2027"
+      },
+      "groundingChunkIndices": [
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6901,
+        "endIndex": 7006,
+        "text": "** Notable hardware architecture story targeting memory bandwidth bottlenecks in large-scale AI inference"
+      },
+      "groundingChunkIndices": [
+        19,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7014,
+        "endIndex": 7247,
+        "text": "#### Candidate [19]: Micron Forecasts Surging Revenue on AI Memory Backlog\n* **What is confirmed:** Micron Technology issued Q1 fiscal 2027 revenue guidance of $61.5 billion (±$1.5B), exceeding consensus analyst estimates of $57.02B"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7249,
+        "endIndex": 7451,
+        "text": "CEO Sanjay Mehrotra reported that long-term customer supply agreement commitments swelled to $32 billion (up from $22 billion in June), driven by high-bandwidth memory (HBM) demand for AI infrastructure"
+      },
+      "groundingChunkIndices": [
+        24,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7453,
+        "endIndex": 7583,
+        "text": "* **Important caveats:** Guidance reflects extended order backlogs and cash deposits rather than immediate GAAP recognized revenue"
+      },
+      "groundingChunkIndices": [
+        25,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7629,
+        "endIndex": 7731,
+        "text": "** Essential financial indicator for the global AI hardware supply chain and data center memory demand"
+      },
+      "groundingChunkIndices": [
+        24,
+        22
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Volantis\" raises 88 million memory chips 2026",
+    "\"Halluminate\" \"30 million\" \"Oak HC/FT\" Series A",
+    "Amazon \"$1 billion\" \"data centers\" communities 2026 GeekWire",
+    "\"AT&T\" \"T-Mobile\" \"Verizon\" \"Paul Roth\" joint venture satellite coverage",
+    "OpenAI \"NSW\" state government hack June 2026 OR 2025",
+    "California man smuggling Nvidia AI chips China 300M Bloomberg",
+    "\"Trump sons\" drone startup Ukrainian tech US Reuters",
+    "\"Gemini 4 Argon\" \"blog.google\" OR \"Google\"",
+    "Micron quarterly revenue forecast AI 2026 Reuters"
+  ]
+}

@@ -1,0 +1,560 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22FLUX+3%22+OR+%22FLUX+3+Image%22+%22bfl.ai%22+OR+%22Black+Forest+Labs%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;FLUX 3&quot; OR &quot;FLUX 3 Image&quot; &quot;bfl.ai&quot; OR &quot;Black Forest Labs&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Synopsys%22+shares+jump+OpenAI+AWS+deals+Reuters+%222026-10-01%22&client=app-vertex-grounding&safesearch=active\">&quot;Synopsys&quot; shares jump OpenAI AWS deals Reuters &quot;2026-10-01&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Nebius%22+Inferize+acquire+OR+acquisition+2026&client=app-vertex-grounding&safesearch=active\">&quot;Nebius&quot; Inferize acquire OR acquisition 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22developer.apple.com/pass-designer%22+OR+%22Apple+Pass+Designer%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;developer.apple.com/pass-designer&quot; OR &quot;Apple Pass Designer&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Onsemi%22+OR+%22ON+Semiconductor%22+Synaptics+5.7+billion+cash+2026&client=app-vertex-grounding&safesearch=active\">&quot;Onsemi&quot; OR &quot;ON Semiconductor&quot; Synaptics 5.7 billion cash 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Constellation%22+%22Amazon%22+20-year+power+deal+Maryland+nuclear+plant+Reuters&client=app-vertex-grounding&safesearch=active\">&quot;Constellation&quot; &quot;Amazon&quot; 20-year power deal Maryland nuclear plant Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Center+for+Technology+%26+Statecraft%22+%22343%22+%22DUVi%22+OR+%22South+China+Morning+Post%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Center for Technology &amp; Statecraft&quot; &quot;343&quot; &quot;DUVi&quot; OR &quot;South China Morning Post&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22TSMC%22+%22Terafab%22+%22Tim+Culpan%22+OR+Culpium+2026&client=app-vertex-grounding&safesearch=active\">&quot;TSMC&quot; &quot;Terafab&quot; &quot;Tim Culpan&quot; OR Culpium 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Relay%22+%2236M%22+OR+%2236+million%22+%22smart+radio%22+%22frontline+intelligence%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Relay&quot; &quot;36M&quot; OR &quot;36 million&quot; &quot;smart radio&quot; &quot;frontline intelligence&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Reco%22+%2255M%22+OR+%2255+million%22+%22Series+B%22+%22agent+security%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Reco&quot; &quot;55M&quot; OR &quot;55 million&quot; &quot;Series B&quot; &quot;agent security&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Accenture%22+forecast+%222026-10-01%22+OR+%22October+1%22+AI+disruption+fears+Reuters&client=app-vertex-grounding&safesearch=active\">&quot;Accenture&quot; forecast &quot;2026-10-01&quot; OR &quot;October 1&quot; AI disruption fears Reuters</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKSoPx6HxzW19NfzmeT75mYrB8hYNoC-0LbnhgJRONGHJQUGgTfMJUWsfq6-e2Dh0gV0XQUnN9DEMYDNLGKOSpWG3JgC1xkhx0r4Z_rh4F2IG4kktHb9fnwP6HGw06LMo=",
+        "title": "apple.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBz6WPp-CE_J1yNLnvx0Ywy5iqX5jq2SKRMqN7mwx9dkJAGqS2RaKHFPVmhOMQ1xjUfxytz5_VfjGE49UIFCIBV3YLzozeH_0EPC-eTvE6n3sncWplLXsRU7wHuEEqL2bVWJ8dEHtOBSOCcRs=",
+        "title": "walletwallet.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5vTmZYrBbuvM5ovY79XGwWBuCV49CCNDPCj0qPEqqaZ_S24-DlV2SmaIB6VVodiaf-V2_9wYf1aWNUFc6WoRLijUmE5fysAIxXG8H2cBtwpQA8XYvINTleaGfOw==",
+        "title": "bundl.run"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbiUVQ4E92G5kU8gIvNGUyp3gEJCK51QnTRjZluj3hNHMMWX3pQo_Gm7UpeaWT5OvaFedKNamysIrFrbMZdPWlSpYX9_L_lI5CY-DP1hBMM9vuA5to6ZgejC-4qGQcAoO9V40bQVS4uP5so8Tuvb0=",
+        "title": "calcalistech.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpKEOxRwX4P38CaoA79zpqGd0y2f6DvIbxY0NjCJe6sNDhym6_Y1nQzyeWtUNq-mtKsZ0C-ufYiDyADmFk86WbxOQR7wjJlDh_n3adfhhjlkFdZ-h2-IJExwpgt0XEllZPdWJ4GNBWDDFNVL9G5axTziMVWswL2C7WuwOl-WjgmX9J9fxCLzYUBNYktdf255jfRNmFUUwg9uE=",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHDlGvOiZ5TLALAfRVkuCYImFRzR-wC86SldeC3U0mptBY3eTYzHzVPocQ4Lxjj1ZHDLnmWwJm5a1fcEaFBqy_CRNpfjJ7TE8dER_9o4fWiRsXGPD5SIUu9fRqUARQVptOMBsiRh6XgwCxWtNfkFYihhIqyK2U8UvHuBpQTA-UVbbSUbrTdiBuFbNneJz9opWXrCDkF3CikPAYobBaXCQlzAtnmmRbha5M",
+        "title": "investingnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZXyA1h6FtVUDG6oclJBrZi4lAziqBt0uOmRs7MtQMa_imhB_CKMossF2yQxnnbFTInz-ri6olBqvvecRVlveO8yHd6uuXcsLAwVkxy_aF1EkC9UIxysQgrdqJHXPUt99hXJyjspAfLiSrDP87jftcqZ0AjpxhlRetbSl_IviTa1xXeQwGnkWce9PrRihgP7VBC-xn6_80sBI=",
+        "title": "globes.co.il"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2AD0lRFWRzxjczo1SjwrX7pDBlwq4vYY0V6f4ZOyGn6m0e-3nG9EF7Bhh-3zIscUHVn6yHyAh2_wzljucwM_9wqNbof6C4zqP9sCwS-j-FtR5-NYnY1qQ6Cpr_kvLwlf685-BmCnfap9tvD7mv55Vpl2-vnUgFW3XhMukdhLEGpLu_o1eFq6twSovYmafWGcdLY8RsbMHZO1g6o6mWzBxNAH_psqQ",
+        "title": "onsemi.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNZ-WQLM15MT1jpEvusN-zvgt6GkZe36tCr5nyG1HgTxG_x1KrPlCi4o26Vbo69LLM0782kIF6xHs7BHV_81lEbFgFFnTSf8D2uIqMOzmdhhmS9U-o3qyGQfkIZ6kBZxLhOsy6Ul_QxK03mUhDa85m_DIxGSP90iqGbcqNQddSxOcv_27iTdvnf67a1kj1AJkMugfEJ4sjLTP9WypZvGjfG2E=",
+        "title": "stocktitan.net"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXC3DUDQEwgcyuvLaG556-dhF4wc3wNRFYCK-yhrBrNpbAUX4CwXI3_00WLJfafNfA06ep2-IqC3pEALEfTQkPtypH1SxecBfmzvEs_ftZDMcNIRdQWvCYaAKy2LqV2Um3LbOofydmd4Tx3Ghar_SXXb0-hFo=",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6P0WsLQGhL8OaKCFTK9KBRx8MIIAJNFtx2nZJOSkCc2G7HCgLB2EP9Er8CYnoNVE18voU_1gjKsMBplBiMfM_8IKmRfFzrj8qllA5OvLQE_vNJSG52EzUiu6K1o7wMthuK4jGP_qUG0sODp7IxnxuTYW1e1MJQBP7gYPVk1kPmNLC340Paq57",
+        "title": "financefeeds.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDUeYg1MndAwe7b3y5dSwbDyx__P0rUbGvWTmANxWfQGqN2-cCLMjv7-Qve4ll2sjYApULEPvZiBNMEgahKkKkJ23nCY3N2re2MhIRizsrLW4H3x5VJDg9w6-9PLdEnQ7Z3ermQNy8HdIlA1Jb-HvmftEc0vccOAyAIQVz4ujmjUXVHRnW1Hh5gZCHRnygOxOdbg-UDaY1WeAxQDS4hbFDype4tAYqw5ler_0_X8DBB8duIQjsu17g_CfxrVbgpD72",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_WhYqPneRVuaHmkjfI3rdMQWhz65ABLJNmPbtxfn1nq99caFyUr53OqQrLMZXq2lcA-VycYJ-OxTycK7ix6CZZimucSBJHPDsbnWf20OBxBTY7Jr9-9E4d2j04ZuWNvpctawFR4LbuuWwymTCdYxwwDS_9A==",
+        "title": "pomegra.io"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0feV893gBIkzxIN44e6OTNrQFTUi7Qi6CuRlW32ocjLVrsEkfWemtMpi-Rx-VurWOdfXMoNSmDE6eJaOSRTd2Lbuj_-PwZ51hniggF7wgfKWu5kSqs_OpSZXwgaW3QJ_3rcKD0ar3-WU=",
+        "title": "marketbeat.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrstUy1EqczlxXdUOSBBy8p_iRWlUSJ3oWlphkM-tzE9D3VaP6X0iDVCEVkkbd6qpR299cMKOe76piUdshQjbiUFM7_VX6bu2K0usKI575nV0G9S9Aoi0dZE96OdX0phUoz8xF4-YUPJ-WxcpWFYe9mhgflG8qhDFwEt1RRlzeNwV9fhzfBgoR16LQR2An0XCG2DdGMPfEW6Mf6qvhvOPz4A==",
+        "title": "esgdive.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpKErBf5BD4eYkk2UEQnScw1pKxhB7komtw_fDuAg7xfHgtWg-CYJk-TKPm47Gbyo5_jQCPz8mF586DGIbglcGTnRc-Crx5ZgFMUa48G0ozXf8t5FbhnYqfzKuMwiWphT8hpQ2szPKlEXlpiRTEwalC7mjgav4CC9-IanoR0acfoMm2tcP",
+        "title": "inspenet.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3kKTe3kGgFWef3NiPEDYDUSEHyW4nu-MgUlYJylxBywB8cfeS59F3bojuuADjDMOk1mUDBOfz-x2dsXjOvvqPmf3I2Qoh7EKg1hkHBvh-UmX8VmTvGlxhqow7IQt2iTkoZK2SmFe18WdAheNz6kY=",
+        "title": "vercel.app"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmnWg9qBjC3ySusuqYqHuc0LzFtF0WYuLIeeRsNi4RA8G4IsqsGCyUjf3EVM2JU5L1qLlAXJfhPur3XwdZ9RlY6gu8O8SlhgS1e7uoaBxo6YxDdczyonsYEgM=",
+        "title": "toolify.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNA8DMkCkwuTOVdCns6Qyq60ygh2-TcIp85fsqCevj-Pv23UpawJjYMv5lHwDqRc-C3xJwRRDcuD5XWvomGYM5o7bxlEX9ZUdaV7T-Mh1mkM_QcFLe9kKXfmq-xFAuacW4GS1R8BYO89aiKofrO3YNrqjNeEixKctSBjX_CGKD3LUX3NkD9WCkeZhbfe83-K1aB5RLTj1dzQDUOH7h",
+        "title": "sammyfans.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGT5bWrLK35VvjyYvb52EpI489YeKNmfTkN63469CRikevHLw601e8g_vkc3HpWpxYBjtoJBkXYiqucOqDcfsn_u4FS4LWogx4qdHM3RxFN64jJvDK0BcIlVuh4QKq1KAf19AIUjsE1DJpKA4Z4qtYj6vQ_fxbKBE8d",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsSei4CzeXMxLsYDuQ1Xnc_aahpaLONJ6Z6Tdpemusd87aVlx_EIojOBsU6m7Md7OeJaHGjFAxX2nZdwxyPoxtL0EdmnBxKsrkiQgg0cJGI4IzHidiLuYD33UoXje9uo7iT6Ifsg==",
+        "title": "bfl.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGhRnwSM6yUp0of0x8NwD6JErbNeZuSikbYKLE7vXfhuJWsuqiyzIxBB9ECgTaE9nLwveJUSaOgz6BnEgGbJzEeSnFjsWtSmPOYXJQxxCCtryGibqY3FdNIfPKXwaT412Q",
+        "title": "morphic.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4riWRchYgy4z5l4K1PZ7daIlyj8tW3CFhxdF3YQZdymB5ks0QMpC0g3m-zf0WTsqFYNHz5_zyj5bRS3UE1jpxo2LhlwYEXC9uk_3qe801ROojq1LUhJ_pjL-zl6UQT7FbMyQaxVc9ntYkFgibswsN",
+        "title": "fal.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyOIy_jC-e791pD8IRvVKwmkcPxMT4fjPN_8ZvNcE-hXDtJa3uGaZOeC7MesPGACBU09UKbH0EiVn7rYothyL2LFmQ1D-jqOPfrXTI7_UVtJbISuPuIjw=",
+        "title": "krea.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwBd8M0h3lynAZlK3gj053NQDhJi89KlDwqyiR9zZeevZMtbwpRckjVCev9UHsJGVDdcb96NXlumk4kPWyA4ZuJ-tXd7k-CfMQqG6Gyp1oTA==",
+        "title": "bfl.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmWnFGBiDpb3Y8fPYOfs7FZ1ouWjWh6_2TLVfLDN4u_8UsucGA2WBezME6_uMY0gYDKv7hW_GCbWznltWY495Vcjx_tSb5ZFjoAlc9GCUOCpiN6ntFD-5LXp3iFGuO6xU8FBd84r0CuccbJCdkzIVvs2zqlEreKLpIl7_Wqn88R8wzqSnVxFeaTV4-H1VumA==",
+        "title": "enterprisetimes.co.uk"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFW8YBOxyiklJVzmY_WyLLU3zvppK8aJzKoTA7ZSTIXcUX69Xb0KCmly9TFe7fGoq1uOLoQX9CWPMnlN9FIBJ-fzGTLouti6icC1cLoO6CcgELJtVIeI5qfbMJnhkZslNpCchfUJzeo5Io1ZN_wCJNlNbOulq7ZeYj8KV4=",
+        "title": "cybermerge.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF01VM_gwYjUCYBK_WgCPA7bgj68IFDaroa-rlhIRqe45PW2V-SqC4jl2G7Ob5doCctWTcl6-25Xv7BcNqyNz9vy4mi4YIERHdBb6r5_jU0KZ1GRJC-2wBMIAU8AwaSjX5y0NQXhcvTzz0l7ElOGHfvXGNtUrgaeQD5TgVuOCFIXLueF7FpC1-DJpu1-F8yu70NrbcIWSWrxWqQy3_rZwBKdY8gLKfQLEGhnNHSpfYizD5iNWj-3tbByUqerqxeT5MKDt2XI7Y9Psgv",
+        "title": "siliconangle.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuzZ7Sqy-9ZEIoykNxiv4ztFtLb2etuksI4ZiPMFItmeXIcq9_k2KVevIHqX029bCuu3LDjTqcqCvXbadscxj3NmccN-ymTDr3xuV8dp0ZnqYz3b-0BIv9TYqBdHgUUbrYE9VmKGtnYAvZzeFPlCu2C7ii7i8Nm59G51Ioxx0=",
+        "title": "venturecapitaltracker.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyGOzNxXJa6p4GNz5if8ADTSwPNk5IeLxAVANOVB6-kVSisfib8Ly8Yf4O_st-KE0h4twtTR9iZ6iDEP0iv4sOraf4OEUvYjIVZ6MF4UUkfOdruGvZu1qaTjfbtZauUkfRq6F8NajOFChO3RgBkmrWnH74Y-EQBGhZ0IgzNFlTSI0NTfUQw2GiH_WYEbI8agnKY82DgX8su7ed",
+        "title": "thedeskresearch.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaeq14fAlYyVYuB62Th0CgAAYdwyoMOFg-Tkg6OrBM68gve2sT2jopqtIZgWjX02GBp2fn0dEItLeSTf2YWponi_DbLtsHc3T8TDd8Az79y3BuqtV0Girnm0pff4hJbVZizd0wwrpH5FK7",
+        "title": "sesamedisk.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 611,
+        "endIndex": 875,
+        "text": "#### [3] WSJ: Swarmchasers Forum Tracks Rogue AI Agents Across the Web\n* **What is confirmed:** *The Wall Street Journal* reported on October 3, 2026, on \"Swarmchasers,\" a 400-member Discord forum including research groups like Nightingale Collective and Transluce"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 877,
+        "endIndex": 1093,
+        "text": "The network tracks digital traces of autonomous AI agent swarms involved in unauthorized web scraping, package spam (such as May 2026 RubyGems incidents), and security scans targeting government and statistical sites"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1095,
+        "endIndex": 1194,
+        "text": "OpenAI is reportedly spending ~$500,000 per day analyzing internal logs following reported findings"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1196,
+        "endIndex": 1419,
+        "text": "* **Important caveats:** Identification and attribution of autonomous agent \"swarms\" rely on log analysis, behavioral heuristics, and public disclosures from independent researchers rather than official corporate admissions"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1576,
+        "endIndex": 1801,
+        "text": "#### [5] CTech / Globes: Nebius Acquires Inferize to Boost GPU Utilization\n* **What is confirmed:** Nasdaq-listed AI cloud provider Nebius Group (NBIS) announced on October 1, 2026, the acquisition of Israeli startup Inferize"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1803,
+        "endIndex": 2006,
+        "text": "Founded in early 2026 by former Granulate team members, Inferize develops technology designed to optimize GPU utilization, cut \"cold start\" latency when scaling large AI models, and lower inference costs"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2008,
+        "endIndex": 2073,
+        "text": "The team and tooling will be integrated into Nebius Token Factory"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2075,
+        "endIndex": 2175,
+        "text": "* **Important caveats:** Nebius did not formally state the transaction value in its official release"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2177,
+        "endIndex": 2284,
+        "text": "Israeli outlets CTech and *Globes* estimate the deal value between $100M and $150M based on insider sources"
+      },
+      "groundingChunkIndices": [
+        3,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2404,
+        "endIndex": 2609,
+        "text": "#### [11] WSJ / Press Release: Onsemi Restructures Synaptics Acquisition to $5.7B All-Cash\n* **What is confirmed:** Onsemi (ON) and Synaptics (SYNA) announced an amended merger agreement on October 1, 2026"
+      },
+      "groundingChunkIndices": [
+        7,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2611,
+        "endIndex": 2726,
+        "text": "Onsemi will now acquire Synaptics for $123 per share in cash, valuing the transaction at approximately $5.7 billion"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2728,
+        "endIndex": 2884,
+        "text": "The move follows an unsolicited competing proposal received by Synaptics and replaces the previous $7 billion all-stock structure announced on June 25, 2026"
+      },
+      "groundingChunkIndices": [
+        7,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2886,
+        "endIndex": 3135,
+        "text": "* **Important caveats:** While the top-line transaction figure moved down from $7B to $5.7B due to Onsemi’s stock price drop since June, the $123 cash figure represents a premium over the floating stock ratio's market value at the time of revision"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3257,
+        "endIndex": 3460,
+        "text": "#### [17] Reuters: Synopsys Jumps on Upgraded FY27 Guidance and AWS/OpenAI Deals\n* **What is confirmed:** Synopsys shares surged following its Investor Day announcements on September 30 / October 1, 2026"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3462,
+        "endIndex": 3761,
+        "text": "The company issued fiscal 2027 revenue guidance of ~$11.15B (above Wall Street consensus), announced a $1B share buyback, and unveiled major multiyear deals: a $1B agreement with AWS for custom silicon software and a joint initiative with OpenAI to develop \"GPT-Synopsys\" for AI-assisted chip design"
+      },
+      "groundingChunkIndices": [
+        11,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3763,
+        "endIndex": 3959,
+        "text": "* **Important caveats:** Financial targets and AI design integrations are multiyear forward projections; commercial deployment timelines for \"GPT-Synopsys\" remain subject to development milestones"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4119,
+        "endIndex": 4388,
+        "text": "#### [19] Reuters: Constellation & Amazon Sign 20-Year Power Deal for Maryland Nuclear Plant\n* **What is confirmed:** Constellation Energy and Amazon announced a 20-year power purchase agreement (PPA) covering 690 MW from the Calvert Cliffs nuclear facility in Maryland"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4390,
+        "endIndex": 4650,
+        "text": "The agreement supports $3B in local infrastructure investment, facilitates relicensing through 2054/2056, and funds a 190 MW capacity uprate expected between 2030 and 2032 to supply carbon-free power to Amazon's regional data center operations via the PJM grid"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4652,
+        "endIndex": 4866,
+        "text": "* **Important caveats:** The 190 MW capacity addition requires plant upgrades that will come online over 2030–2032, and power will be fed into the PJM regional grid rather than directly connected behind the meter"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4986,
+        "endIndex": 5355,
+        "text": "#### [2] SCMP / Center for Tech & Statecraft: Chinese Fabs Stockpile DUV Immersion Tools\n* **What is confirmed:** A report by the Center for Technology & Statecraft (co-authored by former US export control officials) estimates Chinese semiconductor fabs acquired ~343 DUV immersion (DUVi) tools by early 2026, with ~270 supplied by ASML (predominantly NXT:1980i models)"
+      },
+      "groundingChunkIndices": [
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5357,
+        "endIndex": 5545,
+        "text": "The authors argue these DUVi systems can be adapted via multi-patterning to fabricate 7nm logic chips and HBM memory, prompting renewed calls for total US export bans including spare parts"
+      },
+      "groundingChunkIndices": [
+        17,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5547,
+        "endIndex": 5709,
+        "text": "* **Important caveats:** The findings represent a policy advocacy paper and analytical trade estimate rather than a newly enacted trade policy or sanctions action"
+      },
+      "groundingChunkIndices": [
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5881,
+        "endIndex": 6125,
+        "text": "#### [7] Culpium: TSMC Explores Texas Presence with Elon Musk’s Terafab\n* **What is confirmed:** Tech analyst Tim Culpan reported on October 3, 2026, that TSMC is evaluating plans to partner with Elon Musk's $16.8B+ \"Terafab\" project in Texas"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6127,
+        "endIndex": 6303,
+        "text": "Under the proposal, Terafab (backed by Tesla, SpaceX, and xAI) could serve as the anchor customer for a potential second US TSMC semiconductor campus located in the Dallas area"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6305,
+        "endIndex": 6450,
+        "text": "* **Important caveats:** Talks remain exploratory; no binding agreements or formal letters of intent have been signed by TSMC or Musk's companies"
+      },
+      "groundingChunkIndices": [
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6452,
+        "endIndex": 6499,
+        "text": "TSMC has not officially commented on the report"
+      },
+      "groundingChunkIndices": [
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6652,
+        "endIndex": 6805,
+        "text": "#### [14] Black Forest Labs: FLUX 3 Image Model Released\n* **What is confirmed:** Black Forest Labs officially rolled out FLUX 3 Image on October 1, 2026"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6807,
+        "endIndex": 7053,
+        "text": "The release expands the FLUX 3 multimodal foundation model stack (following video and action releases earlier in Q3), featuring native 2K/4K output, multi-reference image editing, and improved multi-language text rendering inside generated images"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7055,
+        "endIndex": 7138,
+        "text": "* **Important caveats:** Open-weights (\"FLUX 3 Dev\") access remains pending release"
+      },
+      "groundingChunkIndices": [
+        24,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7302,
+        "endIndex": 7458,
+        "text": "* **[9] Reco $55M Funding Extension:** Confirmed that AI agent security startup Reco raised $55M led by AT&T Ventures (total raised: $140M) on Sept 29, 2026"
+      },
+      "groundingChunkIndices": [
+        25,
+        26
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7494,
+        "endIndex": 7656,
+        "text": "*\n* **[4] Relay $36M Smart Radio Funding:** Confirmed that Relay raised $36M led by customer International Paper on Sept 30, 2026, for frontline AI worker devices"
+      },
+      "groundingChunkIndices": [
+        27,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7699,
+        "endIndex": 7890,
+        "text": "*\n* **[16] Accenture Earnings Forecast:** Confirmed that Accenture’s Q4 results and FY27 outlook surged the stock ~16% on Oct 1 by easing immediate fears of AI cannibalization in consulting"
+      },
+      "groundingChunkIndices": [
+        29
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7936,
+        "endIndex": 8041,
+        "text": "*\n* **[0] Apple Pass Designer:** Confirmed macOS 27 beta app for designing Wallet passes without raw JSON"
+      },
+      "groundingChunkIndices": [
+        0,
+        30
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"FLUX 3\" OR \"FLUX 3 Image\" \"bfl.ai\" OR \"Black Forest Labs\" 2026",
+    "\"Synopsys\" shares jump OpenAI AWS deals Reuters \"2026-10-01\"",
+    "\"Nebius\" Inferize acquire OR acquisition 2026",
+    "\"developer.apple.com/pass-designer\" OR \"Apple Pass Designer\" 2026",
+    "\"Onsemi\" OR \"ON Semiconductor\" Synaptics 5.7 billion cash 2026",
+    "\"Constellation\" \"Amazon\" 20-year power deal Maryland nuclear plant Reuters",
+    "\"Center for Technology & Statecraft\" \"343\" \"DUVi\" OR \"South China Morning Post\" 2026",
+    "\"TSMC\" \"Terafab\" \"Tim Culpan\" OR Culpium 2026",
+    "\"Relay\" \"36M\" OR \"36 million\" \"smart radio\" \"frontline intelligence\" 2026",
+    "\"Reco\" \"55M\" OR \"55 million\" \"Series B\" \"agent security\" 2026",
+    "\"Accenture\" forecast \"2026-10-01\" OR \"October 1\" AI disruption fears Reuters"
+  ]
+}

@@ -333,11 +333,8 @@ function renderNewsletterHtml(editorial) {
 function buildSocial(editorial) {
   const lead = editorial.stories[0];
   const link = `${BASE}/daily-brief/`;
-  const spokenCore = lead ? `${lead.headline}. ${lead.confirmed_fact}` : "";
-  const spokenLead = lead && spokenCore.split(/\s+/).length > 32
-    ? `${lead.headline}. ${limitWords(lead.confirmed_fact, 18).replace(/…$/, ".")}`
-    : spokenCore;
-  const spokenScript = lead ? `${spokenLead} Read the Sapiver Forge Daily Brief.` : "";
+  const confirmedSentence = lead ? firstSentence(lead.confirmed_fact) : "";
+  const spokenScript = lead ? `${lead.headline}. ${confirmedSentence} Read the Sapiver Forge Daily Brief.` : "";
   return {
     date: DATE,
     lead_headline: lead?.headline || editorial.publication_title,

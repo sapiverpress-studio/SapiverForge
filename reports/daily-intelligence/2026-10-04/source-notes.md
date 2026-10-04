@@ -1,5 +1,5 @@
-# Sources for The $42 Billion Handshake: Anthropic and Broadcom's Circular Future
+# Sources for The safety gap at OpenAI
 
-- [Reuters: Broadcom to lend Anthropic up to $42 billion to lease its chips, filing says](https://www.reuters.com/business/broadcom-lend-anthropic-up-42-billion-lease-its-chips-filing-says-2026-10-01/)
+- [theatlantic.com: I quit OpenAI because its culture is broken](https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/?gift=v5U_UzUTothfWXsPxtvNVAh7esWToMRD6XnbXmc5WgA)
 - Daily Brief date: 2026-10-04
 - Confidence: 0.95

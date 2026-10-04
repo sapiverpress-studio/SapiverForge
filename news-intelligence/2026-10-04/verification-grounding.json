@@ -1,189 +1,183 @@
 {
   "searchEntryPoint": {
-    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Kolibri%22+%22Aleph+Alpha%22+model+2026&client=app-vertex-grounding&safesearch=active\">&quot;Kolibri&quot; &quot;Aleph Alpha&quot; model 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Toshiba%22+double+HDD+production+capacity+AI+data+centers+FY2027+Nikkei+Asia&client=app-vertex-grounding&safesearch=active\">&quot;Toshiba&quot; double HDD production capacity AI data centers FY2027 Nikkei Asia</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22I+quit+OpenAI+because+its+culture+is+broken%22+Atlantic&client=app-vertex-grounding&safesearch=active\">&quot;I quit OpenAI because its culture is broken&quot; Atlantic</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Gemini+model+limits%22+%229to5Google%22+%22Flash-Lite%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Gemini model limits&quot; &quot;9to5Google&quot; &quot;Flash-Lite&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=OpenAI+safety+team+resignation+Atlantic+October+2026&client=app-vertex-grounding&safesearch=active\">OpenAI safety team resignation Atlantic October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Bob+Cringely+died+Mark+Stephens&client=app-vertex-grounding&safesearch=active\">Bob Cringely died Mark Stephens</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Toshiba%22+HDD+production+%22FY2027%22+AI+data+centers&client=app-vertex-grounding&safesearch=active\">&quot;Toshiba&quot; HDD production &quot;FY2027&quot; AI data centers</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Google+UK+Play+Store+class+action+trial+October+2026&client=app-vertex-grounding&safesearch=active\">Google UK Play Store class action trial October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Broadcom%22+%22Anthropic%22+%2242+billion%22+lease+chips+filing+Reuters&client=app-vertex-grounding&safesearch=active\">&quot;Broadcom&quot; &quot;Anthropic&quot; &quot;42 billion&quot; lease chips filing Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Stephen+Wolfram%22+%22pure+math+research%22+%22age+of+AI%22&client=app-vertex-grounding&safesearch=active\">&quot;Stephen Wolfram&quot; &quot;pure math research&quot; &quot;age of AI&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Aleph+Alpha%22+Kolibri+%22open-weight%22&client=app-vertex-grounding&safesearch=active\">&quot;Aleph Alpha&quot; Kolibri &quot;open-weight&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Google%22+%22OSS+VRP%22+%22Tom%27s+Hardware%22+AI+reports+freeze&client=app-vertex-grounding&safesearch=active\">&quot;Google&quot; &quot;OSS VRP&quot; &quot;Tom&#39;s Hardware&quot; AI reports freeze</a>\n  </div>\n</div>"
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%229to5Google%22+%22Gemini%22+model+limits+%223.5+Flash-Lite%22+%22October+9%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;9to5Google&quot; &quot;Gemini&quot; model limits &quot;3.5 Flash-Lite&quot; &quot;October 9&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Google+1.2B+UK+class+action+Play+Store+lawsuit+FT+October+2026&client=app-vertex-grounding&safesearch=active\">Google 1.2B UK class action Play Store lawsuit FT October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Alexandr+Wang%22+Meta+%22Chief+AI+Officer%22+WSJ+October+2026&client=app-vertex-grounding&safesearch=active\">&quot;Alexandr Wang&quot; Meta &quot;Chief AI Officer&quot; WSJ October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Bob+Cringely%22+%22Mark+Stephens%22+OR+%22Mark+Stevens%22+died+October+2026&client=app-vertex-grounding&safesearch=active\">&quot;Bob Cringely&quot; &quot;Mark Stephens&quot; OR &quot;Mark Stevens&quot; died October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=OpenAI+safety+employee+quits+Atlantic+Reuters+October+2026&client=app-vertex-grounding&safesearch=active\">OpenAI safety employee quits Atlantic Reuters October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Toshiba%22+%22hard+disk+drive%22+OR+%22HDD%22+capacity+%22FY2027%22+AI+data+centers&client=app-vertex-grounding&safesearch=active\">&quot;Toshiba&quot; &quot;hard disk drive&quot; OR &quot;HDD&quot; capacity &quot;FY2027&quot; AI data centers</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Google%22+%22OSS+Vulnerability+Reward+Program%22+OR+%22OSS+VRP%22+%22product+vulnerability%22+suspended+October+2026&client=app-vertex-grounding&safesearch=active\">&quot;Google&quot; &quot;OSS Vulnerability Reward Program&quot; OR &quot;OSS VRP&quot; &quot;product vulnerability&quot; suspended October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Richard+Ho%22+OpenAI+%22Jalapeno%22+Broadcom+chip&client=app-vertex-grounding&safesearch=active\">&quot;Richard Ho&quot; OpenAI &quot;Jalapeno&quot; Broadcom chip</a>\n  </div>\n</div>"
   },
   "groundingChunks": [
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWZQWvCWN9PuDYZbijetYrNdqYCwi9wLWBSbgzY1pMvMVZsMdp9BSw46tYdcTCDnwMpriKg4_X96NxaYyhUU5V7nBEsS3ZM_JACdOBS37Xg2CQdESYI1XmaXBiq6sySo4OAk2XPK89CqmlSAJLu4Z1YEVwU_XZ_l-5u34rQHbcnwa9IO28MCIgnyCAjw7IS8Lanfyz3k-nZEu42RITVybK8zGUsa2K1lU7eilHeg0=",
-        "title": "tikr.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFK23x5E8iJt0vCCW3do8OeHbp4YGo6hnLl7cFwZww0xKJP5Va_EZwL8i4guZsYbqpBovMqrreEyhLC27NjQlxZDtLaz7P2jKG8lHQERjMEoKKipXvzSHVUDtmbiGP2NOH3IYNSxncStYjEon7RFqL-tcJXkR3P_5Der4Bq",
-        "title": "qz.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOU9L7-Yy-WOFYnd_hdTPPqNvwnjzwj4XPuSwyf-wmfWt7gzjk9A7etrg3dmukYG8PnHivgOo8I3TLx1A3eM7k5ovzfsw6CvkjOvqKK9_odYlYGoHUNvzXkBvBsbYumTptrM3L2enJK0S7bSUs_i8zOIYUYYUSiEvphciCabhsfjl0uaSHR7F_j03XGQcfJDFaTCNnKs2RKzQ51XgR4d0uwugijKabrQ==",
-        "title": "facebook.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8V3X2aF4iUOXud2vhjYo2XQRSLUmSTizkYwdKDIDI5_8S5FU7y652XnSCEBZ_JjWPZtIzPX-52-qCtnkJUTgwFoZvgu1JVgvhvB_rTrqy-WVgWs1Qh__hvKYO37rmwyj435WAj41uuLsCS8OFaDI9e7Y-ELqS_ppy5NywEgVQGO9yTJ7_e33tYK14CftlXnWKzI-FTiON-8AG5KsRxYNKn_11waeo6-tTWzPt2Pklmwc2wAfMDNG-2Okp",
-        "title": "semiwiki.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmmlNjSGiRp6jH5_b3s3wSnCHa5vecWw1qwgPqGwDFvp2IeQS5UkDc6L7w8jbQ_L9HpPNnd4rxcy-5eFxd0Ex7KeRPaRZ3B0MXdlVwI-WgFvggB0f3BjZR_3Aw7j3ANrFsc7nulSPjECB-fNf1jFosBuZHGtFljdkkGXHPyJsJziAZoMno2aDu311j5uMclamRxcUqCiWwLczqEvKTS5Z66fciLmfHqIDdkY_5qj85UyZ4CSIGtnDikkkNMlZpJ7KJUebT-_Iv9g==",
-        "title": "shopifreaks.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFm2SBuKdOm2c_Mrgd0oIs0JIIssiu-H9qe09kq4tJmXNVkcLa4tlr_VrFmtMjHKuT48JKf9Rd4FtvIIwOuYXttmk8EE4BasyO5AK4UDX9VJS7umqZLMKFtZs_zgdpFGjpVymVWToeCnR2SlyKDWzkEEOVugkmNDyfQfzzeGZNx04g-NQ==",
-        "title": "jointheclaim.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGo0hUdqx_zalx8y1rQ7OTH0VstqXASdCOHGlGb6rEpaeR5EhfUpV-FfZfk5yfye__PEaTmb3jZnOWccYJ7NdhCqoh2ml11HDy0ipMvGpbULU6zdeGXHZt7u-ne6YFn3r6N7ZOQst2yS5-lr4VkXTMYAUCaWCbsaLdfkXKjlVCtDF1g0RK5HLfhYgn1rP-hyNpu5GQcC5zgCaYcOvweeIO9_7dGxE0Kx-7x55xM6fQdtP-I4--DAdNL3_wDWcg=",
-        "title": "geradinpartners.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiVovSBMsNNQkTfR0EUxHVlb0otlh-TLHo4eRkcF6PmmUzmIJoRNz8GGk9lGYZ4PMWmitsAUBhvSNv6LdCJnMDLX4QawoVzPTbP0mJnGLDEDhJro0zkhk9TzMTt5UA-KbYLMNHASoyuJ8gSybcDrALDH1MJMrngYng8Vg37_VYDL4o2wC7ZTDwckHAIx5Psj48Bhl4CNr4rwfSbKhkiplgTkP3aRoK_HxNMo2tHJn30HB7JGoU5kLXzQJ7VWU=",
-        "title": "brickcourt.co.uk"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEzIsMVr0ZnDOCMkdeJ1kKL-Gt3BZ6SpH8rIN2FwcXwP_hP4h-ZL9VfaCSBcZALulkfKpVsTOyBzZPonaVQ4DAc8SRzrLq1FMMzDhxX9BYrQC-o0sjfSTbz7g7DAwHNHcI0sC8wTcGsR5BUfUJA1Y5_to3-w==",
-        "title": "shattered.io"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiPCG6G9hiDLSqlm4aG_h-XmkxqtM1GF1Tr24eA6Q-yZbi6tQ96iT2V9UVt9aY7YrehgAnLlrrgT73Ud3H7qxS3Ip47xGi5JDofUjbF6J599GOmf3Wk7eLfvx_0EoV-Q1s8MMa4u7pdyWGFIVP",
-        "title": "calcalistech.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2fS29rQpwa1L5Y05uo-JRWyTpLGD5hid2ctFX86eUZmPU_MGlnhiHg5_CeWyh3Cs3iX-lbPRjqLyNievQb1CwaXRpSLxHqq2aFRTu5nPHBnjPpdd_mU5GPIgophjmPfZ2aiwGIF0vA1qqf75gwC56AwVywomzDPjND6tRYujiM8-tk-CWHiF0OLWfoScS4T04M-88XIMu6NY35DIiziZf5dot1MZt3rU=",
-        "title": "theguardian.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRxyA6Dw32JlHn3DOv72TfzXX6bJPjX7lgWX92NZq2EEmmdyFVJ9fq6tMsQHAVmH2sqZcE0fRVaqe-SeYIRyy-OpUtKRCocuVmK-XGoSsDRmFr9xeN2MCk0-x6pxLVX48zNrx_gc-o0C8hCY8RVwKuNBSntPTaBpkznlPW_dbNINmTkd68lCCE9lGPQ_Y=",
-        "title": "businessinsider.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJ8WBC7HMTeH0yND7zznd38N0mcP1xNXwYvptUv_F3GyHYBqud0udpPYN8fvxHuDniXfLEvtrUIRMRRrdflFEfPt4uRi0O2sqoe07D4BMMwuzyCxnKAyCIFM-0aYgTYOx6k4gbi9vcKCjKlbQgH-pgCwktmHQ2hXemXyLyNbjzAFZ_fnjIg2BjWokQII0=",
-        "title": "briefs.co"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGx_UX47liZ4i90bt-W_bY-dmUqFzCTmLsNpGD9IqNdlXeefYXLFQoQvb9z2qxkXODSRn5-yfHNDTrMfTy-_NDs7SMWwurVUrtqLexN4iaNeFyA8PD08vq2im9n0kNcapTUe-M2S39PTdOT1a1LlUkls8V5GKsp3kM1RJsRycBScSUc-HH8",
-        "title": "aleph-alpha.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHj9gbLb1qZSz9iRYqYxcCxWJ83vn6Nos5tTRUSecnxCmepDE9GkZ-SONx0J8DTYqi1cZCYPj4PpfYm1rMOlkRsqTXBdAnlgGfG67YmYAkW6guFaSZqmp0DsVLL-VCt6BcQAw==",
-        "title": "huggingface.co"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9RdF_J7VKv9IwVKk0VyJUU-TTWs6S1zSuvNWtHRoHK9SWHl1awFPuXbqTN56hmjHw_-Ihcz5UNTvamKS0PiQdhXPuOkQfQl730jtqXTEtsrBmBf6TZsD3GdNDxBeTyDdBsk8D9r44c7_I6GMhNsTd9s84banbtGqw7TL_7NHfiFXFOyvQIaQ=",
-        "title": "aleph-alpha.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpeGd76iIoF_2bLPieXvkZv7pdILNWjo_v7UAnxpPq_4qKqCYOXcaw2kk3yUjJA8wQMugrTHpeZ202Op6PePBxq1ZuiCqyaUMa4k4cHg0mPUg8bItULo5Ri97rinLVVvYCJsAnVZJJmTAvLVXrqtWf-pQ0GZ9CcM5DtxGKn84xwfdEEUVu1R-WSBxnYcmEmvdE_K4QuRNa3Tgy",
-        "title": "superpowerdaily.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXM3q3BI02CG1ystU_W7YEyG80Fl3ani-Ab22R5STQoFZSBdrpOshwT-V4oPsoHucBRMJE2pbhfimRKLqIeBBxLaW-V1zxG0UFzEYHUSPjfYUKGeIkVXpVb2iqA2kc_z9QRgl7O4Lp5lDqXiP89nCzWB9qbNSxboJpuS9ORWTg-NgFyg==",
-        "title": "developersdigest.tech"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdA4r2vnAk12S0ktqIjZKI3-bhrmOq9Vc8568RtM-YRRUaaa5Io7xstqdAtlQmuRWNLzKSAQ0DXzBFheUj17c0syubocaq3Na6AbYfrmF4EOhPfErczFhPU6pAxjKLuZPhIieRgF2YBQx6JJ0bSU9aZejstWDPFUVDN5pekzBnMcrN1A==",
-        "title": "qwe.edu.pl"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkfdqfvcv9a1yoQAJRv5zakEif8vhEDaQ78HJlc2xdmT-1ZQIUqq-p143_CMXwdGcedhKI8DeI7eaf8SP8cgGt6Q1Q3GmYffZpmdurBZm_YyteDuDtRLTS2qfLvHPy5W0f58G7rnwbTxS9C44nXchUhPoBNz8_T4teQTyZVr2_V4AKkwdDnhio5Yts-XWIs0ajSFNtsdVoqkTcsZtLnKx2",
-        "title": "aigovernance.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd1Og2TR5HYRPsKWGFbXFmrhWXCh3qKB8syMvlHd9fXPfyhowPGqz_sPbTo_4J5ciW1eMxVewVJ55CytNLsKdHWi0MA-FnkTiOuN8CmGVziZ9xDZHSqY_J3Tg7UJ1aHqzDimnx3rPVvLWnLmybTljfme-HPkv3Ao2biCzt1gF8x65ZpgIp4j4yRwE2_417F6P9fbSEfNBH3uSA0kKxZxvVyA==",
-        "title": "invezz.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_WVQcnkUHL8nW1G9UHK5mWk4Zo2Q1wSMvJQwH0x5ZgrfeQrP4-IimflylgnNQCZRvciy9_0qeA1aSq6ZO6Y9Om1CLfjlGtdigjkL66Wye_0sW5bJOw6xW-gic6kBNjzXBYA9AyvlpfAPWn2BB57jZJ7uxIZ-uFrk7nwvNA1gmX01C7VfW1jGMFukGXe5TPMyhmrpzCvRiGg0jvd_qOIoQ4auwhkOjQalndq-LZfy0iKURRA==",
-        "title": "thecryptobasic.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE66O16wtvZHwegABl6kPDz8EmlQDpfyNbUdPyQjMnjFDLOT7v7xhMDBjPCFehRzaHrW2NJ3coHvAbxDD9Y-xd95gBQIEolYDI0Na6uQz5bLPZHDVbRd-MXBpA4kmaBmm--ROs2QOlYevkplwtkCon2zGL0s0oI9F1UalAqxHGuKfYueZt3BsnFVhkfghkS-KVDWtRjgc0ykHNgrJmO_1K5ej5-KxA_wg==",
-        "title": "neoteo.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFG7GVNrIp7gpOwZidIZ4azLqA4gWE3vtDU9to6nkuK2AfTbKfJpuy7cN7UlVB5BB11okA-qmaWquhb7KdRIOAvk9lAr3BYSLJjphdAuQ-3Lkr7U-cpLnqvQMxXEQyHQzPGbsAsa0hoKs7zgmq9fgBSQuZOyqs4KJfdge3ecyGAXZ03eeqpwUsuyieAPVWCxkRTFXRL3ZDeMcprMyrdZieiUqV1c7rck8uKGzF4o5ReLc3eEJWkZC4GqPc5kIFyAMWdKuDATCX8GKvwtn_XQ==",
-        "title": "facebook.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuZiyzwOVBS0bVfCz5785e1p--jC4CibBQcQ_Hrg1T8QRc1phWF9ad1BCLPZjsjY-NkvH-yu1pXoBg1vAR8AeoIyMW3KuV0kf_X3v-XsuaOeP7BuBmX7rf7q0WDKRzuydvM8KvwaQXEzu7I12V7_jp0jQ3qKIOBm-uBEXvZcBvrpHQu6wdd4JysbYVHmrILXBuffBuZFPc1chP5uRuhoqOaiWqocMGfaPtFBWdCgh7TzWPHhrSQrWa0U_IBvscCGD1xv9U0E9cNlIoxO7Aetk=",
-        "title": "trendforce.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFC9yw4LG2oR3xLZdK2J2x9Y8s_LFnAkFXZ5HY9uEVMgSKBA_2SSukkB-pAQsw-fVOlsYKExiBfnWD3QahHD7h8oe2L2xqu2BF7oLXmyTRIXKqWXI2sfPYsocglgeR8za4Mm4kM1vpaGz7ouG8dhcOA47qs7aPdeenLVPm2EhQzcWZRqGzF_rDghcbJPu45DA87yJGTyueqYclQSWF5T8hM4u93spq5V0kwF3juIL_EH2sI8lfvZu1a01X0MbtW5s45ZcEPoFbnnOaOV1JhvcxMrwQvSja99WkGRs3cT3dwK1Cb-eMhkqiyvuM7lFOmmku1FOtsEy0BXmL-vFQS9-p_VV1Exqvm2eVp2xJ3",
-        "title": "tomshardware.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqmbvU0XfqOel68WHGQf9Uj0QXgfJjJuvo8NdLVPQE9-DAgO8miyKNPFM9GRR0CTv-Mx__tBEvydrPp2oMN1JjTLgemoeXVRk0fomWKk4w0WNJ-ET4X0u-TZrUysyfd93pyd_VnSb-GM47EdAIbh3lf5lzf76VQFsO93k7ZIEm0zFnBtRKI2c=",
-        "title": "9to5google.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcXOPOXR2tvVKDqcJmfBcoavtUiFMGtutBsbaTaR8ayaywM2X5djQuu8k3JQS1J9KBf2BFB47mEAJhZZLw7gZQyJmfboHTK9LaD7tIXb5yruz-5kf8hInWPv_Bnmwsq3NPkXU=",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9pJOByDuE2ZjRsCmGHNaZIYoCLFgZWAAQZNhx7kHhXQt3wtqexnVeA-SciBNSu4BP6Eyjhm2_8QKL5p3PQz8M_VJMtbWJfkifR66-H2gkhOuZLURktRgFRADvC8UL-TQQ9mE=",
         "title": "ycombinator.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCOG4Vyv10hFUpFu9JiiFYLgHXYzEUJ21jpODH5Xq7oU7P-RpHkpaUJ92hAqmo5PFmbTB_M54W60rqUykpT7KyguEH_TseOj4mKJezUCsoN7BBm-ql3_bw4vr6jgeDiYX9eH3h_WwLF8o9J9ygmGrdBTDvQNBiEEibvW8QKW3R9YjthPQlu-gENKSLEkra5-U8vNBYqwrg-3xR5w==",
-        "title": "stephenwolfram.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe5K2y8Qx7H4r9sTYDIQYFdAYjAPs8SVkKVgkZFRM3fQTqKrKK8Cw4FVORnwhTJKctQSogje2Geu98SNr3TJKwO-gAa-xdJlayBFmo4IlspbZAhdiboom-SbTx6vuWyFlVqENR5tM=",
+        "title": "wikipedia.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTDZl-88Mb-Xlbq7WqOKzKJD900y7MJBKxt1l5pU51C8njdMh-1tWj_YqN8rZQqnZZ29_qbflreZEiuf4EmzMr3caVgfkzBaaq91OsvLnP6u_cI9CM9Bbj0SbDdWCdsgqfkBhBIy8RZjo4tpCbl4deIbKaaag7Rep-EIwyUF3fahTelg6odZkzc48f9kUVleMwpBz1midoYJccLts3FQblm8H7q4zTBGfypnqeak8S",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrBuyOSXpvYbRrTPUBBh9Jwda9TWXeI4LC9rQ1F4f-mvhg7TFUb8Q_k5KFQlW9OD1ZPxRmvKZRsheoaP5UzreJLXJZAilqDbDtuadEcvkbAtIznWgoAqUS1v9vO4WWoMmwxkhSu8ry-JqHuoZRDZY7RFPqn1BUw3FGKWRLW-FrCVUgxvvJcw8WlLDQ",
+        "title": "seekingalpha.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlRbdOjBf2LBcmfCQMC-1IqfskFVFhnW2O1tuyd-eQX0M01wHm2z9Bas5hl2TUDYgBBk_cXQHt1SoxSBd0Ymlypq-KgAa7GsxPbQJ9sXvtH3gaAdxEOKkzqtZ6zyizVCMh2fyg4UtI3JistpmV-x_l1UNIHCX9c1did0CBQUO2PS_gJAF_bhtB9Gv1DPB_S3Twk0OzTUwCzvjm-tErw0PIDscFeEc1HdXuzUIlH8PIJWqwr2o1iY7pkbfHXjCigEmGkj0OZA==",
+        "title": "indianexpress.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1Cs65tzpL_gfnTRwR1wnyWqv3zcvTij61bGH1uT2-m54DS5OsJkTNXxFRBBshS73L2rYHAofzcFPs51yhtlL-T90qMmrT0C0Pi4HevWOpuWxh_0ZEMhARff_2eg0ZVwjPhAYop2-kdfGQHqVMTwb4UdmpKNojNiwEJ-tNm7IT5r4MFM9xK7QK1O_ErOrxObcF2JMRWOQZUB79iw==",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6OqNcoQ1XBVFLTLTWQfh4TNzvN2yJY7zyifVCvNcJRvBP7EuQ6EqwktkaSenEltF3H1xofBTESaMl-1adBUuXi_rAXdItW-ABUUQePtvOYOtLUNxRSSqtceeAx1CMQX29K5giOfEpGBRYCfs6ScPFXk-xUD7ZUg1wBKL5H_8IsyZjxSILDIE8yy2mWe6dRfjaqNo64mg2hliiWgG7hH6ZSjY=",
+        "title": "channelnewsasia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuXer_Qy3DD1AlnFQ2RH6Z3KV2oi3KpfZf2I-NESM2zl0X6wsXQQDHYyy7E28qnIL3tuKdu8AEGLy0mGR32ulcsrXvVDoGGlhydZ8Tcoji",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEP6Aq0RVQC-D_YRtreNEtgl-Pva_JN3s3fyZw8MgY_PEjaiUxhIiwUzPdrPzqT9mBv7Bj2KMTHG8iaiZ3XQa5PGg8GFcFRhKNvD1lMe3sPnb2nTQOKcHdfaVgAFGjksOLBD4kxs_ggxByCb3GzkP33WiGJjOhmmq6IKDUriMBzI1aeO8BX4NNtVyX1zo26AArnG1PVdy4P8hPBWt0EBXDFGOHIz8IOEdpDMw==",
+        "title": "mediapost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHb4bIpVmYxPqVW7qXOJNu5mhf9i0rQyVubJt0oJ_kr-WBHNwOn0vn5HaIE9IUcBInCRCZ3HLVwW9BnENLXduypnIAxEEGZTl5tN1K9Ez2VxHAioFFvrM2y1ezDm_TzA687kqCR6lkPUW7pCQW9Kw==",
+        "title": "sqmagazine.co.uk"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYtn3u7v6ieZzwqut3nE6vX8pLjxTEnRME9eaomZRCQB4bAV4NW0Az4GiJ8ngDtQQaGqiAimZXTkkjsdpjvvs9FYOX8DriPeedryUejZZ9z3BMMaOBJGFfu9l_AaEsr-xYXti0bH78t5FWW1lQJeuNuG0gQeod6TLRflN9Ca_JoZIMHxIaE0TGFgOy1wDa6w9K2_UlcKsCFoFbCasrKmJXZWT5wa1OUFmVMPwzt2mN7GOahxtR6ifiU4EcMg==",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE32GlVgyDEU-H8LWgizBiOWwgsq3vvH6OpEo22k4D_3H0x1XfH3OCG5uAh3aoDgImUK62NrswRTgW7leQtv_6GJhdif7RPEhZnCu8geaAYQMnCQOwBm2DYXgZ3kv20iE2NMZ4PhBuo_sRV3ufE8_QxnplMHOZWxkNjgEI=",
+        "title": "substack.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYyVN2ocQHkPh1iaAtwMAx43hwb8D2NK0_s8ZpOhxR4bYDubnVFmlkweE8WGVmL2dS7bFc15s1W9cJuWe8bfyg25MI-lfz0XSt5bBRSWqehBt1O3RTC-22J1eF8M8olMNRpJsnUMEonAvep5EugIAKsLdxVcbtUcg2H_VvODWU_RQBQJlCh_HyJ-A2J4dBxVquhJI-y2vAO05_LRjzhnMAfJ8W2e2pkITK5HMPfONCyTrGa2lIWb2FaeyWP_UeyQ1daYYv8QLQaIlpA_GbOpy0bEYCDLVTFHZTAC2LOAf6UwYOfCsZIRpW5X99f-m0BovWwnmZzSoRtcJVrtwzkDjmIqTcSXnYvHuoYY4eHCYJpPMi9S11ZiuGiyk5g5NBLpyficyNXeKcJto4RePIE52Njpe7BVudTeavA30A",
+        "title": "tomshardware.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzqQS6ZupZPe-uDLtGa916Yma3SLivKj_eNlS37FHdCYWgsfotcUONWCo_ucVjd6i1a3DbM1b2j7B4l6EnWO25CkcLhPsWxiC8ndppBR3D3-kZUohHq6h1fl73rsaKKIYoHtiKJiZVrNX9ZQJ7QILsm8uwD2DKlUUpfg==",
+        "title": "servethehome.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_ehinqNQofKTc-18tczsqLod_ibljBKbu8t6hB91_3aHpdMN3B7ci8aQV-231olF1VXsWSDFlHqp7AIs8jstUz9r92q4toml65Cl-5ynsuRx2lM_Ab5GxUhyi34LS8_Eir7BFPV77JPPPW3p7hX-NWgE7k5XypoGPvHbI4rciAFwj1f8=",
+        "title": "ft.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfcs9H6kPEfi1b_RjWNsIb39aGm7gvILqbS9n0iPaje_l8NwJ432dETpwOTn093sNBkNUaGdyuoiMUE4v-d4Dtx-s4rLuNm8__ahX1RSBZo4JeI3U9zzfaT-7fYVNAjI0=",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwdppSjm5yndjGIFLQVjBj3LehJnWiXLLTznx5kUeFJvG576-vPJd44eB5Cz-15gPSwqZf68f2UsvOGcd9myBqI8v6wW3DbvvE7j4mSnuOEVre4zpqZmqtJtPuLM6e3hYNFk4FoYTCm8hRj80Jqjm9bd51bc1VufStrI1Hz4bJx_7chiD6PdoNLeTD10-K8d47C_1c8QlDHC-MhCPsAMOXm0Ow4XqyGQDumKNS2CR66Pzqr0WA5H4udrMBweBMSxaZLue39HgKiS3E4oVgGuI=",
+        "title": "trendforce.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFP-8JqvZBV7Vn3wMPhkc-3lUcaIdy2-cqYy6r9blBajLeoXM2Sz6jCZIOr2ZROpPetIwb-Kuze8AD53Fu7yTyqyfRfWYcBPfL8rrskH5fed5U5efUOSfpUG3keBJBYr2gw1MYn7Y6U5XTF854UVzENIs0oN9fgBlQEkWFBU3bPTLYVEcKir4unkGqu1_JgLu2TIpp2s_tm5u4pN7J7wuHkumymSz9ABm9cOV3-chxIt765yw==",
+        "title": "thecryptobasic.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYwV_NtkNwtE36ZXBDErDLtU10kqHuNcBNeQYEwJqn6dcs4J8PycQgga6C8He_zUDMIPkGdSxt3UeDrprQRSKaMeU4Sw56fIT7UCUmv2P_da2gOCCb0JM5nUkgkuKzRJ7LikJvYLrE6cY=",
+        "title": "tmcnet.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7O07gGzcOCYpohZ1sDyw8hygvCOZxza9-EI8vzECZ7tcQyKb_YodEr25z7tBVVtqs3Wu7-axvoN_6VO8FixRluG_-OK1FjPcw2V_nMg_jfATlzMFHBAFbr_8410M9sHN64IhTAcjm8TWfKnHQQhUxO-t9r43Cg39pZEZJf2R2ULk-c7tbaLo8yKpdlChcjYjCu0-HXbDyKHPsBUOcdfm9DzIoIqqElg==",
+        "title": "neoteo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXEdz_8pLYg6xwKo3SbTG1atHPVp4hpBnX7_0vlaP-tSeQwo8b_OgEnBwM_mzL8cL5ppWl6O8HbZ7ToJYZtteib0AeV9azGzPK_7ifYnFWPJumHHUEJ5CncAqR-Dzz7pg4AYq851Z8Gu8asX64a7-8TUL2swVRzmaLlUg=",
+        "title": "xenospectrum.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGH2ETBULShkfO2GmSDwRlwZhgdmSiYAhsOPucXe1VHlJ7gQd_RsGLFqlLR3aOb0Q3srMOSYbJpjzFCX-5LaiFISpjthqQ8cPa3YvV8SHANWE-Ho0f8TT3eC-ReagLCKgbYMNzhB_c5BfkOBuR3cNbHbnoh4Ih-3cMSf1Vpt2R0wZ5OA0WNC7MSkIVKP645QzA-iJAnAP84wI0zTrfy_2wibneSrdsqdR-jZovLQOPrBIJPaZXw3-jmaANJMDogSV1vUizo5kQcEvGqBkaA-G8mgtHKUY_sLw3-0xqmD1o-E_yWPq6V44c0uiJV3eJjlMfZpBNhGgXVbQE3oW56xyzRc3OZb6nLzpkUSeHUyw==",
+        "title": "tomshardware.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMSYcfg9iyMN_fjoAiNJUKpmW4QOyQN6Sp591ayaCeFQn86WRKDlqgBFJNgdSoehbCQ8N7txacgXwGvS5wRXVqhJN5NStqY1BKZ3cIbk12I8NmBvSgQ5EDCQLv6TchUpzpXbX9_4hzFkUYv6sLydqmtq3A3cwdy2zoBiARjCV4o9zesF7kFw-xb5bLUYtZU5S9-i8sLjzBQTE=",
+        "title": "techmannews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGH2ETBULShkfO2GmSDwRlwZhgdmSiYAhsOPucXe1VHlJ7gQd_RsGLFqlLR3aOb0Q3srMOSYbJpjzFCX-5LaiFISpjthqQ8cPa3YvV8SHANWE-Ho0f8TT3eC-ReagLCKgbYMNzhB_c5BfkOBuR3cNbHbnoh4Ih-3cMSf1Vpt2R0wZ5OA0WNC7MSkIVKP645QzA-iJAnAP84wI0zTrfy_2wibneSrdsqdR-jZovLQOPrBIJPaZXw3-jmaANJMDogSV1vUizo5kQcEvGqBkaA-G8mgtHKUY_sLw3-0xqmD1o-E_yWPq6V44c0uiJV3eJjlMfZpBNhGgXVbQE3oW56xyzRc3OZb6nLzpkUSeHUyw==",
+        "title": "tomshardware.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAsgZsC5EfP2UfbzVbDZWCN-eO11kLTGJcvOO2HtI71Uqb2L_uFctBWk-OEV7SqxUriIJMoAPHy8rAV4hCxpEouxFomiYO_PV3d-ecP-taOhLDTcdKvjvmDHcAm35vOzTLXa6d4OF2APzH3JTFDXKZj6yT",
+        "title": "9to5google.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmW7UL4R0QZ5EWxvnvOoPS9xyye_gJsPDumkG_43S-Eo_5fk2I1DAGMXHhxmFSWLZqweWb01KmZXo1DLoIFnGer10KUWH0T4-9HN_6raof1-0b0ePKql2CrP5NyvOjM0BrBGKC_wioNZU4m4K7DI3jgbE4rvjZ5jkk80twn2ORkTkQwhzx-c4BmAf7ttxZyg==",
+        "title": "ssbcrack.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7yxGqm-r2XJdNxtk2-FSLeKEPi6fseFd48uPfmq6xILbJaoFavQ2hWRLpN_bqoRjpHX0vroJefMU03orCHW8fiu5wYKoadOSrKQDEpSueeVmdUJsqOT-m1MiTfcvaWsL7b0YaMLJ8efJH5docvN45gmCzfmil92g1PnbEE0FQtH6yqomJiso=",
+        "title": "9to5google.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkvycK89qPG-xK4lSCLhMls0r5Xa4W05ZkDeWIZfTHC8wC-HKI7lRKWvD_8g-4Q3onD1tc8x3d3M4mL87O7q7MhcGDjwaLb1BY0jOvMb2GpvMyPVYobzPGcy7Q5uIYKj-7DIkT0FPP3-Wq9cSv7CoueELgrA==",
+        "title": "shattered.io"
       }
     }
   ],
   "groundingSupports": [
     {
       "segment": {
-        "startIndex": 395,
-        "endIndex": 661,
-        "text": "#### [16] Broadcom Agrees to Lend Anthropic Up to $42 Billion for AI Infrastructure\n* **What is confirmed:** Anthropic’s IPO prospectus disclosures show chip manufacturer Broadcom has agreed to extend a convertible credit facility of up to $42 billion to Anthropic"
+        "startIndex": 219,
+        "endIndex": 457,
+        "text": "#### **Candidate [0]: Hacker News | \"Tell HN: Bob Cringely has died\"**\n* **Confirmed:** A user post on Hacker News claims tech columnist and documentary presenter Bob Cringely (real name Mark Stephens) died in his sleep on October 3, 2026"
       },
       "groundingChunkIndices": [
         0,
@@ -192,138 +186,97 @@
     },
     {
       "segment": {
-        "startIndex": 663,
-        "endIndex": 827,
-        "text": "The loan is intended to finance approximately one-third of Anthropic’s $125.2 billion, five-year commitment to lease Tensor Processing Unit (TPU) compute capacity"
+        "startIndex": 459,
+        "endIndex": 570,
+        "text": "* **Caveats:** This report relies entirely on a single unverified forum post (\"Tell HN\") citing a family friend"
       },
       "groundingChunkIndices": [
-        0,
-        1
+        0
       ]
     },
     {
       "segment": {
-        "startIndex": 829,
-        "endIndex": 913,
-        "text": "Broadcom acts simultaneously as custom hardware designer, lessor, and debt financier"
+        "startIndex": 858,
+        "endIndex": 1129,
+        "text": "#### **Candidate [2] & [16]: The Atlantic / Reuters | \"I quit OpenAI because its culture is broken\"**\n* **Confirmed:** David Robinson, a former safety systems leader at OpenAI who left the company in late September, published an op-ed in *The Atlantic* on October 3, 2026"
       },
       "groundingChunkIndices": [
         2,
-        1
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 915,
-        "endIndex": 1045,
-        "text": "* **Important caveats:** Broadcom retains the right to designate third-party financing partners to underwrite portion of the notes"
-      },
-      "groundingChunkIndices": [
-        0,
-        1
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1047,
-        "endIndex": 1201,
-        "text": "Anthropic noted in its S-1 filing that Broadcom’s dual status as both vendor and lender creates potential conflicts of interest regarding compute access"
-      },
-      "groundingChunkIndices": [
-        1,
         3
       ]
     },
     {
       "segment": {
-        "startIndex": 1203,
-        "endIndex": 1278,
-        "text": "No notes are expected to be sold prior to the completion of Anthropic's IPO"
+        "startIndex": 1131,
+        "endIndex": 1359,
+        "text": "Corroborated by Reuters and *The Guardian*, Robinson alleges that OpenAI's fast-paced \"iterative deployment\" culture prioritizes launch speed over safety research and advocates for nuclear- and aviation-style safety redundancies"
       },
       "groundingChunkIndices": [
-        0,
-        1
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1280,
-        "endIndex": 1411,
-        "text": "* **Publication status:** **SUITABLE TODAY** — High-impact lead story on AI sector financing models and corporate interdependence"
-      },
-      "groundingChunkIndices": [
-        1
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1419,
-        "endIndex": 1700,
-        "text": "#### [6] Google Defends £1.2B UK Consumer Class Action Lawsuit Over Play Store Fees\n* **What is confirmed:** Google is set to defend a £1.2 billion opt-out class action lawsuit brought on behalf of approximately 20 million UK consumers in the UK Competition Appeal Tribunal (CAT)"
-      },
-      "groundingChunkIndices": [
-        4
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1702,
-        "endIndex": 1936,
-        "text": "The suit, led by consumer advocate Liz Coll, alleges Google abused its dominant market position by charging excessive 30% commissions on Play Store purchases since October 2015, which were passed on to consumers as inflated app prices"
-      },
-      "groundingChunkIndices": [
-        5,
-        4
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 2069,
-        "endIndex": 2131,
-        "text": "Barry Rodger) that received CAT approval in mid-September 2026"
-      },
-      "groundingChunkIndices": [
-        6,
-        4
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 2133,
-        "endIndex": 2190,
-        "text": "Google continues to deny liability in the consumer action"
-      },
-      "groundingChunkIndices": [
+        2,
         4,
-        7
+        5
       ]
     },
     {
       "segment": {
-        "startIndex": 2192,
-        "endIndex": 2304,
-        "text": "* **Publication status:** **SUITABLE TODAY** — Highly relevant for a UK briefing ahead of tribunal proceedings"
+        "startIndex": 1361,
+        "endIndex": 1505,
+        "text": "* **Caveats:** The story centers on the subjective account and warnings of a departed employee amidst an ongoing industry-wide governance debate"
       },
       "groundingChunkIndices": [
+        2,
         4
       ]
     },
     {
       "segment": {
-        "startIndex": 2312,
-        "endIndex": 2704,
-        "text": "#### [4] OpenAI Senior Safety Leader David Robinson Resigns, Citing 'Broken' Culture\n* **What is confirmed:** David Robinson, a senior safety leader at OpenAI who spent 3.5 years at the company and oversaw safety transparency and system reports for 12 model launches, resigned and published an op-ed in *The Atlantic* on October 3, 2026, titled *\"I Quit OpenAI Because Its Culture Is Broken\"*"
+        "startIndex": 1507,
+        "endIndex": 1619,
+        "text": "OpenAI maintains that its formal Preparedness Framework and safety testing protocols provide adequate protection"
       },
       "groundingChunkIndices": [
+        2,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1669,
+        "endIndex": 1731,
+        "text": "** Strong primary source backed by major news agency reporting"
+      },
+      "groundingChunkIndices": [
+        2,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1739,
+        "endIndex": 2071,
+        "text": "#### **Candidate [3]: Techmeme / Wall Street Journal | Profile of Meta Chief AI Officer Alexandr Wang**\n* **Confirmed:** *The Wall Street Journal* published a profile on October 4, 2026, detailing the role of Meta Chief AI Officer Alexandr Wang (29) in building hype and leading Meta Superintelligence Labs following his appointment"
+      },
+      "groundingChunkIndices": [
+        7,
         8,
         9
       ]
     },
     {
       "segment": {
-        "startIndex": 2706,
-        "endIndex": 2858,
-        "text": "He warned that frontier AI labs are relying on dangerous \"trial-and-error\" approaches and prioritizing rapid release cycles over structural safety rigor"
+        "startIndex": 2073,
+        "endIndex": 2180,
+        "text": "* **Caveats:** This is an executive profile and feature piece rather than a breaking corporate announcement"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2182,
+        "endIndex": 2224,
+        "text": "Wang was appointed to the role in mid-2025"
       },
       "groundingChunkIndices": [
         10,
@@ -332,41 +285,73 @@
     },
     {
       "segment": {
-        "startIndex": 2860,
-        "endIndex": 3055,
-        "text": "* **Important caveats:** OpenAI issued a counterstatement disputing Robinson's assessment, stating that it actively pauses model training or holds back releases when safety benchmarks are not met"
+        "startIndex": 2226,
+        "endIndex": 2314,
+        "text": "* **Publication Suitability Today:** **Suitable** (as an executive profile/feature item)"
       },
       "groundingChunkIndices": [
-        11,
-        12
+        7
       ]
     },
     {
       "segment": {
-        "startIndex": 3057,
-        "endIndex": 3189,
-        "text": "* **Publication status:** **SUITABLE TODAY** — Significant insider governance narrative impacting AI policy and safety discussions"
+        "startIndex": 2462,
+        "endIndex": 2652,
+        "text": "Ian Cutress of *More Than Moore* published a detailed Q&A on October 4 with OpenAI VP of Hardware Richard Ho regarding \"Jalapeño,\" OpenAI’s custom inference ASIC co-designed with Broadcom"
       },
       "groundingChunkIndices": [
-        9,
+        7,
         11
       ]
     },
     {
       "segment": {
-        "startIndex": 3197,
-        "endIndex": 3394,
-        "text": "#### [3] Aleph Alpha Releases 'Kolibri', a 78B Open-Weight Sovereign AI Model\n* **What is confirmed:** German AI firm Aleph Alpha released *Kolibri-1* under an Apache 2.0 license on October 3, 2026"
+        "startIndex": 2654,
+        "endIndex": 2844,
+        "text": "Ho confirmed the chip carries 216 GiB HBM4 memory, operates at 700W peak, and that internal OpenAI AI models (including Codex) were used to optimize circuit design and write hardware kernels"
       },
       "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2846,
+        "endIndex": 3079,
+        "text": "* **Caveats:** Efficiency and latency benchmark claims (1.5x–1.9x performance/watt gains over Nvidia GB200/GB300) are based on OpenAI's internal test runs on the public InferenceX benchmark suite rather than independent lab reviews"
+      },
+      "groundingChunkIndices": [
+        11,
+        12,
         13
       ]
     },
     {
       "segment": {
-        "startIndex": 3396,
-        "endIndex": 3535,
-        "text": "It is a 78.1B parameter Mixture-of-Experts (MoE) LLM (activating 3.46B parameters per token) engineered specifically for English and German"
+        "startIndex": 3129,
+        "endIndex": 3196,
+        "text": "** Offers verified technical details directly from the program lead"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3204,
+        "endIndex": 3517,
+        "text": "#### **Candidate [10]: Techmeme / Financial Times | Google defends £1.2B UK Play Store class action lawsuit**\n* **Confirmed:** The *Financial Times* reported on October 4, 2026, that Google is set to defend a seven-week, £1.2 billion class-action trial in London's Competition Appeal Tribunal starting October 5"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3519,
+        "endIndex": 3713,
+        "text": "The lawsuit, brought on behalf of roughly 20 million UK consumers, alleges Google charged excessive 30% Play Store commissions on Android apps since 2015, which inflated app prices for end users"
       },
       "groundingChunkIndices": [
         14
@@ -374,75 +359,96 @@
     },
     {
       "segment": {
-        "startIndex": 3537,
-        "endIndex": 3651,
-        "text": "The model supports up to a 1M token context window and was trained entirely on European data center infrastructure"
+        "startIndex": 3715,
+        "endIndex": 3870,
+        "text": "* **Caveats:** Google denies all anti-competitive claims, arguing Android provides wider platform choice and that Play Store fees support platform security"
       },
       "groundingChunkIndices": [
-        15,
         14
       ]
     },
     {
       "segment": {
-        "startIndex": 3653,
-        "endIndex": 3811,
-        "text": "* **Important caveats:** Reported performance metrics (e.g., AIME 2026, GPQA) originate from Aleph Alpha’s internal evaluations; peer replication is pending"
+        "startIndex": 3872,
+        "endIndex": 3977,
+        "text": "This consumer case follows Google’s separate £260 million settlement with UK developers in August 2026"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4027,
+        "endIndex": 4090,
+        "text": "** Highly relevant legal and regulatory story for a UK briefing"
+      },
+      "groundingChunkIndices": [
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4098,
+        "endIndex": 4412,
+        "text": "#### **Candidate [12]: Techmeme / Nikkei Asia | Toshiba double HDD production capacity for AI data centers by FY2027**\n* **Confirmed:** Toshiba Electronic Devices & Storage Corporation confirmed (and *Nikkei Asia* reported) a ~¥60 billion ($380 million) expansion of its Laguna Technopark plant in the Philippines"
       },
       "groundingChunkIndices": [
         16,
-        17
+        17,
+        18
       ]
     },
     {
       "segment": {
-        "startIndex": 3813,
-        "endIndex": 3888,
-        "text": "Running the model locally in FP8 precision requires ~78 GB of resident VRAM"
+        "startIndex": 4414,
+        "endIndex": 4627,
+        "text": "Toshiba shipped its first nearline HDDs from the new line on October 2, 2026, aiming to double its annual HDD capacity output by FY2027 (compared to FY2025 levels) and capture 30% of the market by storage capacity"
       },
       "groundingChunkIndices": [
-        18,
-        14
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 3890,
-        "endIndex": 4012,
-        "text": "* **Publication status:** **SUITABLE TODAY** — Benchmark story for European sovereign tech and open-source AI deployment"
-      },
-      "groundingChunkIndices": [
+        16,
         19,
-        17
+        18
       ]
     },
     {
       "segment": {
-        "startIndex": 4020,
-        "endIndex": 4374,
-        "text": "#### [7] Toshiba to Double AI Data Center Hard Drive Production by FY2027\n* **What is confirmed:** Toshiba Information Equipment (Philippines) and Nikkei Asia confirmed on October 2, 2026, that Toshiba is investing ¥60 billion (~$380 million) to double its output of high-capacity hard disk drives (HDDs) for AI data centers by FY2027 compared to FY2025"
+        "startIndex": 4629,
+        "endIndex": 4766,
+        "text": "* **Caveats:** The \"doubling\" metric refers to total petabytes/terabytes of storage capacity manufactured, not total physical drive units"
       },
       "groundingChunkIndices": [
-        20,
-        21
+        17,
+        19
       ]
     },
     {
       "segment": {
-        "startIndex": 4376,
-        "endIndex": 4458,
-        "text": "Toshiba aims to increase its global storage capacity market share from ~10% to 30%"
+        "startIndex": 4629,
+        "endIndex": 4817,
+        "text": "* **Caveats:** The \"doubling\" metric refers to total petabytes/terabytes of storage capacity manufactured, not total physical drive units. Japanese fiscal year 2027 runs through March 2028"
       },
       "groundingChunkIndices": [
-        20,
-        21
+        20
       ]
     },
     {
       "segment": {
-        "startIndex": 4460,
-        "endIndex": 4616,
-        "text": "* **Important caveats:** The expanded Laguna Technopark facility recently shipped its initial batch, but full capacity doubling will roll out through FY2027"
+        "startIndex": 4867,
+        "endIndex": 4927,
+        "text": "** Verified by company announcements and financial reporting"
+      },
+      "groundingChunkIndices": [
+        16,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4935,
+        "endIndex": 5342,
+        "text": "#### **Candidate [13]: Techmeme / Tom's Hardware | Google freezes product flaw submissions to OSS VRP over invalid AI reports**\n* **Confirmed:** Effective October 1, 2026, Google officially suspended product vulnerability report submissions to its Open Source Software Vulnerability Reward Program (OSS VRP) after engineers were overwhelmed by thousands of low-quality, AI-generated hallucinated bug reports"
       },
       "groundingChunkIndices": [
         21,
@@ -451,159 +457,102 @@
     },
     {
       "segment": {
-        "startIndex": 4618,
-        "endIndex": 4776,
-        "text": "Following the news, shares of competitors Western Digital and Seagate dropped 10–13% due to concerns over potential easing of tight nearline storage pricing"
+        "startIndex": 5344,
+        "endIndex": 5417,
+        "text": "Google stated it will reformat the program and issue an update by Q1 2027"
       },
       "groundingChunkIndices": [
-        20,
+        21,
         23
       ]
     },
     {
       "segment": {
-        "startIndex": 4778,
-        "endIndex": 4899,
-        "text": "* **Publication status:** **SUITABLE TODAY** — Key hardware infrastructure update reflecting AI storage supply dynamics"
+        "startIndex": 5419,
+        "endIndex": 5587,
+        "text": "* **Caveats:** The freeze only applies to product vulnerability reports under OSS VRP; supply chain vulnerability submissions and Google Cloud VRP reports remain active"
       },
       "groundingChunkIndices": [
-        20,
-        24
+        21,
+        22
       ]
     },
     {
       "segment": {
-        "startIndex": 4907,
-        "endIndex": 5171,
-        "text": "#### [10] Google Suspends Product Bug Bounty Submissions to OSS VRP Due to 'AI Slop'\n* **What is confirmed:** Google officially suspended product vulnerability report submissions to its Open Source Software Vulnerability Reward Program (OSS VRP) on October 1, 2026"
+        "startIndex": 5637,
+        "endIndex": 5709,
+        "text": "** Strong tech policy/security story grounded in official company action"
       },
       "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5717,
+        "endIndex": 5994,
+        "text": "#### **Candidate [14]: Techmeme / 9to5Google | Google Gemini model access limits starting October 9**\n* **Confirmed:** Google updated its official Gemini support documentation (first reported by *9to5Google* on October 3) restricting model availability starting October 9, 2026"
+      },
+      "groundingChunkIndices": [
+        24,
         25
       ]
     },
     {
       "segment": {
-        "startIndex": 5173,
-        "endIndex": 5312,
-        "text": "The freeze was prompted by a surge of low-quality, automated LLM-generated bug reports that inundated engineers and open-source maintainers"
+        "startIndex": 5996,
+        "endIndex": 6206,
+        "text": "Unpaid Gemini app users will be restricted to the 3.5 Flash-Lite model (losing access to 3.6 Flash and 3.1 Pro), while $4.99/mo AI Plus subscribers will be restricted to Flash-Lite and Flash (losing Pro access)"
       },
       "groundingChunkIndices": [
+        24,
         25
       ]
     },
     {
       "segment": {
-        "startIndex": 5314,
-        "endIndex": 5403,
-        "text": "Google stated it is restructuring the program and expects to provide an update in Q1 2027"
+        "startIndex": 6208,
+        "endIndex": 6297,
+        "text": "The $19.99/mo AI Pro plan will gain access to the \"Deep Think\" parallel reasoning feature"
       },
       "groundingChunkIndices": [
+        24,
+        26,
         25
       ]
     },
     {
       "segment": {
-        "startIndex": 5405,
-        "endIndex": 5578,
-        "text": "* **Important caveats:** The suspension is restricted to the *product flaw submission* track of OSS VRP; supply chain vulnerability reporting and the Cloud VRP remain active"
+        "startIndex": 6299,
+        "endIndex": 6454,
+        "text": "* **Caveats:** Paid AI Plus subscribers will receive individual email notices outlining when tier adjustments take effect for their specific billing cycles"
       },
       "groundingChunkIndices": [
+        24,
         25
       ]
     },
     {
       "segment": {
-        "startIndex": 5580,
-        "endIndex": 5746,
-        "text": "* **Publication status:** **SUITABLE TODAY** — Strong operational security story showing the negative externalities of automated AI tools on open-source maintenance"
+        "startIndex": 6504,
+        "endIndex": 6546,
+        "text": "** Well-corroborated product policy update"
       },
       "groundingChunkIndices": [
-        25
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 5754,
-        "endIndex": 6072,
-        "text": "#### [11] Google Restricts Model Access for Free and AI Plus Gemini Users\n* **What is confirmed:** Google updated its official Gemini support documentation, revealing that starting October 9, 2026, free tier Gemini users will be restricted strictly to the Gemini 3.5 Flash-Lite model (removing access to Flash and Pro)"
-      },
-      "groundingChunkIndices": [
-        26
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6074,
-        "endIndex": 6171,
-        "text": "$4.99/month AI Plus subscribers will be restricted to Flash-Lite and 3.6 Flash, losing Pro access"
-      },
-      "groundingChunkIndices": [
-        26
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6173,
-        "endIndex": 6345,
-        "text": "* **Important caveats:** Higher-tier AI Pro ($19.99/mo) and AI Ultra subscribers retain full Pro access and are gaining new multi-step reasoning capabilities (\"Deep Think\")"
-      },
-      "groundingChunkIndices": [
-        26
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6347,
-        "endIndex": 6474,
-        "text": "* **Publication status:** **SUITABLE TODAY** — Directly impacts consumer digital business and AI tier monetization strategies"
-      },
-      "groundingChunkIndices": [
-        26
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6649,
-        "endIndex": 6753,
-        "text": "Based solely on an anonymous forum post claiming tech columnist Mark Stephens (Bob Cringely) passed away"
-      },
-      "groundingChunkIndices": [
+        24,
         27
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6755,
-        "endIndex": 6843,
-        "text": "No official obituary, family statement, or reliable news source has confirmed the report"
-      },
-      "groundingChunkIndices": [
-        27
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6982,
-        "endIndex": 7027,
-        "text": "Opinion essay published on September 28, 2026"
-      },
-      "groundingChunkIndices": [
-        28
       ]
     }
   ],
   "webSearchQueries": [
-    "\"Kolibri\" \"Aleph Alpha\" model 2026",
-    "\"Toshiba\" double HDD production capacity AI data centers FY2027 Nikkei Asia",
-    "\"I quit OpenAI because its culture is broken\" Atlantic",
-    "\"Gemini model limits\" \"9to5Google\" \"Flash-Lite\" 2026",
-    "OpenAI safety team resignation Atlantic October 2026",
-    "Bob Cringely died Mark Stephens",
-    "\"Toshiba\" HDD production \"FY2027\" AI data centers",
-    "Google UK Play Store class action trial October 2026",
-    "\"Broadcom\" \"Anthropic\" \"42 billion\" lease chips filing Reuters",
-    "\"Stephen Wolfram\" \"pure math research\" \"age of AI\"",
-    "\"Aleph Alpha\" Kolibri \"open-weight\"",
-    "\"Google\" \"OSS VRP\" \"Tom's Hardware\" AI reports freeze"
+    "\"9to5Google\" \"Gemini\" model limits \"3.5 Flash-Lite\" \"October 9\" 2026",
+    "Google 1.2B UK class action Play Store lawsuit FT October 2026",
+    "\"Alexandr Wang\" Meta \"Chief AI Officer\" WSJ October 2026",
+    "\"Bob Cringely\" \"Mark Stephens\" OR \"Mark Stevens\" died October 2026",
+    "OpenAI safety employee quits Atlantic Reuters October 2026",
+    "\"Toshiba\" \"hard disk drive\" OR \"HDD\" capacity \"FY2027\" AI data centers",
+    "\"Google\" \"OSS Vulnerability Reward Program\" OR \"OSS VRP\" \"product vulnerability\" suspended October 2026",
+    "\"Richard Ho\" OpenAI \"Jalapeno\" Broadcom chip"
   ]
 }

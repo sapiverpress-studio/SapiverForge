@@ -30,6 +30,7 @@ on:
       - 'scripts/generate-gemini-podcast-wav.mjs'
       - 'scripts/publish-podcast-feed.mjs'
       - 'test/news-intelligence-sources-contract.mjs'
+      - 'test/news-intelligence-short-contract.mjs'
       - 'test/brevo-empty-list-contract.mjs'
       - 'src/gemini-provider.mjs'
 
@@ -89,6 +90,7 @@ jobs:
           node --check scripts/publish-podcast-feed.mjs
           node --check src/gemini-provider.mjs
           node test/news-intelligence-sources-contract.mjs
+          node test/news-intelligence-short-contract.mjs
           node test/brevo-empty-list-contract.mjs
 
       - name: Smoke test five discovery sources

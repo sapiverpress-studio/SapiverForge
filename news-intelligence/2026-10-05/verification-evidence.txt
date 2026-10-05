@@ -1,0 +1,139 @@
+### Candidate Review & Evidence Notes
+
+---
+
+### [0] Hacker News | Turn off Apple Intelligence on macOS 27 and get its disk space back
+* **What is confirmed:** A developer published an open-source command-line tool on GitHub (`omlahore/RemoveMacAI`) that automates disabling local Apple Intelligence background services and removing associated model storage on macOS.
+* **Important caveats:** The repository uses forward-looking / community version naming ("macOS 27"). It is a minor utility script rather than a major software release or Apple policy change.
+* **Publication suitability:** **Low / Optional.** Technically verified, but low editorial impact beyond niche power-user tips.
+
+---
+
+### [1] Hacker News | Improper redaction reveals Google Data Center water and electricity usage
+* **What is confirmed:** Local Nebraska news outlet *1011now* reported that an annual report submitted by Google’s subsidiary (Agate LLC) to Nebraska's Department of Environment and Energy contained improperly redacted text boxes. Copying the text beneath the redactions revealed that the Lincoln, NE facility consumed 52.65 MW at peak electrical demand and used 13.299 million gallons of water over the past year. Google had previously claimed these figures were protected trade secrets.
+* **Important caveats:** While Google sought trade secret exemption across its Nebraska sites, the 13.3 million gallon figure for the Lincoln location is relatively low compared to larger regional data centers.
+* **Publication suitability:** **SUITABLE.** Strong verified story on AI infrastructure transparency and reporting failures.
+
+---
+
+### [2] Hacker News | Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s
+* **What is confirmed:** The open-source project *Strata* (`Niko1221/Strata`) was released on GitHub, introducing custom quantization and execution pipelines designed to run large Mixture-of-Experts (MoE) models (such as Qwen 3.8 Flash Next) on single consumer GPUs like the NVIDIA RTX 4090.
+* **Important caveats:** Performance benchmarks (e.g., 100+ tokens/second) depend heavily on specific quantization levels (IQ3/Q4), context sizes, and offloading parameters.
+* **Publication suitability:** **SUITABLE.** Relevant open-source benchmark for developer and local LLM tooling coverage.
+
+---
+
+### [3] Techmeme | Firmus plans to allocate ~50% of its IPO shares to existing holders
+* **Scope assessment:** **OUT OF SCOPE.** Standard financial market capital raising / IPO mechanics without a direct focus on core tech innovation or regulation.
+
+---
+
+### [4] Techmeme | Sources: Western open-weight models set to launch, including Reflection AI
+* **What is confirmed:** *Axios* reports that Nvidia-backed startup Reflection AI is preparing to launch its first open-weight foundation model this month, aiming to compete directly with leading Chinese open models like DeepSeek and Qwen. Reflection AI has previously secured major multi-billion-dollar compute access agreements with Nebius and SpaceX's Colossus.
+* **Important caveats:** Sourced via unnamed insiders; Reflection AI has not yet published official benchmarks, model weights, or specific license terms.
+* **Publication suitability:** **SUITABLE.** Strong trend analysis on Western vs. Chinese open-weight model competition.
+
+---
+
+### [5] & [12] Motorsport / Reuters | F1 drivers frustrated by software glitch / FIA to investigate
+* **What is confirmed:** Reuters and CNA report that Formula One governing body FIA launched an investigation after a widespread software and power-unit control bug disrupted the formation lap at the Sepang circuit (Malaysia). Electrical glitches forced drivers—including Lewis Hamilton—to stop and restart their cars on track to clear control faults.
+* **Important caveats:** While tied to an F1 sporting event, the root cause involves critical embedded engine control software and hybrid power-management systems from major automotive manufacturers.
+* **Publication suitability:** **SUITABLE** (Recommend citing Reuters [12]). Relevant technical look at mission-critical automotive software reliability.
+
+---
+
+### [6] Hacker News | Nearly 200 People Under Observation After Irkutsk Lab Worker Dies from Plague
+* **Scope assessment:** **OUT OF SCOPE.** General biological health and public safety news without direct technology, computing, or regulation overlap.
+
+---
+
+### [7] Techmeme | Sean Parker's resurrection of Stability AI with focus on music professionals
+* **What is confirmed:** *The Information* published a profile on Stability AI's turnaround led by Executive Chairman Sean Parker and CEO Prem Akkaraju. Following a $76 million funding round backed by Sony Music, Universal Music, and Warner Music, Stability AI is pivoting away from image generation to position itself around professional AI music production software and licensed model training.
+* **Important caveats:** Key user interface controls mentioned by Parker (such as controlling generation via humming or beatboxing) are planned software features rather than currently available releases.
+* **Publication suitability:** **SUITABLE.** Significant strategic narrative for generative AI business models and music industry licensing.
+
+---
+
+### [8] Hacker News | Tell HN: Bob Cringely has died
+* **What is confirmed:** Technology journalist and author Mark Stephens (who wrote under the pseudonym Robert X. Cringely) passed away in his sleep over the weekend. He was best known for his long-running column *InfoWorld*, his 1992 book *Accidental Empires*, and hosting the 1996 PBS documentary series *Triumph of the Nerds*.
+* **Important caveats:** Initially reported via family contacts on Hacker News and confirmed across tech historical community channels.
+* **Publication suitability:** **SUITABLE.** Highly relevant obituary for technology history and digital journalism readers.
+
+---
+
+### [9] Techmeme | Change.org investing $100M of its own money to rebuild platform with AI
+* **What is confirmed:** *Axios* reports that non-profit petition platform Change.org is committing $100 million of internal capital to rebuild its infrastructure using AI, launching a beta AI copilot to assist petition organizers with drafting and target identification.
+* **Important caveats:** Change.org explicitly noted that fully automated AI-generated text and media underperform human-written petitions with signers, leading them to focus AI deployment on back-end data aggregation and human-assisted workflows rather than autonomous content creation or auto-signing.
+* **Publication suitability:** **SUITABLE.** Concise, realistic case study on real-world ROI and limitations of corporate AI integration.
+
+---
+
+### [10] Reuters | BOJ says AI boom may have eased financial conditions, warns of market risks
+* **What is confirmed:** Bank of Japan Deputy Governor Shinichi Uchida stated in a speech that the global AI investment surge has acted as a positive macroeconomic demand shock, easing financial conditions by raising equity valuations. However, he cautioned that financial markets face correction risks if real corporate earnings fail to keep pace with AI valuation expansion.
+* **Important caveats:** Represents central bank economic assessment rather than a corporate tech announcement.
+* **Publication suitability:** **SUITABLE.** Key macroeconomic perspective for enterprise technology briefing readers.
+
+---
+
+### [11] Techmeme | Q&A with Google SVP James Manyika on AI risks and regulation
+* **What is confirmed:** In a Bloomberg interview (*Big Take*), Google Senior Vice President and DeepMind Institute co-director James Manyika stated that the AI industry cannot self-regulate effectively on its own and argued that risk governance must involve shared oversight across government, industry, and civil society.
+* **Important caveats:** Interview commentary following recent voluntary White House commitments; contains executive opinions rather than actionable regulatory legislative passage.
+* **Publication suitability:** **SUITABLE.** Good executive policy commentary context.
+
+---
+
+### [13] Reuters | Former Anthropic researcher Coxon to testify at New York City AI hearing
+* **What is confirmed:** Bloomberg and Reuters report that former Anthropic researcher Jacob Coxon—who publicly resigned in September over safety concerns—is testifying at a New York City Council hearing chaired by Speaker Julie Menin. Representatives from OpenAI, Anthropic, Google, and Meta are also attending as city lawmakers consider municipal AI safety and whistleblower protection legislation.
+* **Important caveats:** Municipal legislation in NYC may face jurisdictional limits compared to state or federal regulatory oversight.
+* **Publication suitability:** **SUITABLE.** Highly actionable regulatory and AI safety governance news.
+
+---
+
+### [14] Techmeme | Monzo in talks with CVC and Advent to sell up to 15% stake
+* **What is confirmed:** *Financial Times* reports that UK digital bank Monzo is in early discussions with private equity firms CVC Capital Partners and Advent International to sell up to a 15% minority stake. This follows the breakdown of preliminary takeover discussions with Brazil’s Nubank, which stalled over Monzo’s requested £10 billion valuation.
+* **Important caveats:** Based on source-led reporting; discussions remain ongoing and no deal terms have been formally finalized.
+* **Publication suitability:** **SUITABLE.** Outstanding relevance for a UK morning tech briefing.
+
+---
+
+### [15] Reuters | OpenAI safety employee quits, says 'time for trial and error is over'
+* **What is confirmed:** David Robinson, a senior safety researcher who oversaw safety evaluations at OpenAI for three years, resigned and published an op-ed in *The Atlantic*. He criticized OpenAI’s "iterative deployment" approach, arguing that rapid product sprints increase system failure risks and calling for nuclear/aviation-style safety protocols.
+* **Important caveats:** Represents an individual employee resignation and opinion piece, though it aligns with recent researcher departures across top labs.
+* **Publication suitability:** **SUITABLE.** Direct coverage of safety culture debate within frontier AI developers.
+
+---
+
+### [16] Hacker News | Why don't more developers “use the platform”?
+* **Scope assessment:** **OUT OF SCOPE.** Standard opinion essay/blog post discussing web developer frameworks vs. native browser APIs; lacks breaking news value.
+
+---
+
+### [17] Hacker News | Show HN: AI search for every photo and frame of video on macOS
+* **What is confirmed:** An independent developer created an open-source macOS app (*SCM*) providing local semantic search for personal photo and video libraries [17].
+* **Important caveats:** Early-stage Show HN project without verified enterprise backing or scale [17].
+* **Publication suitability:** **Low.** Optional for developer product roundups; outranked by major candidate stories today.
+
+---
+
+### [18] Reuters | Trump names intelligence chief Clayton as AI czar, to head task force
+* **What is confirmed:** President Trump announced that Director of National Intelligence Jay Clayton will lead a new federal AI task force named the "Super Intelligence Force" (SIF). SIF includes FTC Chairman Andrew Ferguson and OPM Director Scott Kupor, and is mandated to produce a report on AI risks, opportunities, and federal agency roles within 120 days.
+* **Important caveats:** SIF focuses primarily on maintaining US competitiveness and light-touch regulation/self-policing rather than imposing new legislative restrictions.
+* **Publication suitability:** **SUITABLE.** Major national technology policy and governance headline.
+
+---
+
+### [19] Techmeme | Sam Altman says OpenAI and Anthropic hold fundamentally different worldviews
+* **What is confirmed:** In an interview with Politico's *Decoded*, OpenAI CEO Sam Altman stated that OpenAI and Anthropic maintain fundamentally opposing philosophies on AI regulation. Altman argued that the widespread societal and economic benefits of AI justify accepting operational risks, contrasting OpenAI’s approach with more precautionary regulatory stances.
+* **Important caveats:** Executive strategic messaging highlighting corporate differentiation in ongoing policy debates.
+* **Publication suitability:** **SUITABLE.** Strong executive positioning signal on AI governance.
+
+---
+
+### Recommended Top Selections for Today’s Briefing:
+1. **[14] Monzo in talks with CVC / Advent after Nubank deal failure** *(Strong UK fintech angle)*
+2. **[18] Trump names DNI Jay Clayton as AI czar to head 'Super Intelligence Force'** *(Major policy signal)*
+3. **[13] Ex-Anthropic researcher Jacob Coxon testifying at NYC Council AI hearing** *(Governance & safety)*
+4. **[1] Google Data Center Nebraska water/electricity usage exposed via improper redaction** *(Transparency & infrastructure)*
+5. **[15] OpenAI safety researcher David Robinson resigns over culture** *(Lab safety governance)*
+6. **[7] Stability AI's music pivot under Sean Parker** *(Generative media transformation)*
+7. **[8] Obituary: Technology author and documentarian Bob Cringely (Mark Stephens)** *(Industry history)*

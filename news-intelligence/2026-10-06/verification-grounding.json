@@ -1,0 +1,708 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=Google+Constellation+Energy+3.6+GW+Reuters&client=app-vertex-grounding&safesearch=active\">Google Constellation Energy 3.6 GW Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Asos+Snowflake+instance+notification+share+price+FT&client=app-vertex-grounding&safesearch=active\">Asos Snowflake instance notification share price FT</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Reflection%22+%22Beam%22+%22501B%22+open+weight+model&client=app-vertex-grounding&safesearch=active\">&quot;Reflection&quot; &quot;Beam&quot; &quot;501B&quot; open weight model</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Anthropic+IPO+prospectus+Dario+Amodei+18M+Reuters&client=app-vertex-grounding&safesearch=active\">Anthropic IPO prospectus Dario Amodei 18M Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Opus+5.5%22+%22vals.ai%22+%22room-temperature+magnetic+semiconductor%22&client=app-vertex-grounding&safesearch=active\">&quot;Opus 5.5&quot; &quot;vals.ai&quot; &quot;room-temperature magnetic semiconductor&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Florida+woman%22+%22Claude%22+diary+%22Anthropic%22+%22reported%22&client=app-vertex-grounding&safesearch=active\">&quot;Florida woman&quot; &quot;Claude&quot; diary &quot;Anthropic&quot; &quot;reported&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Accenture+contractor%22+%22FBI%22+%22data+breach%22+Reuters&client=app-vertex-grounding&safesearch=active\">&quot;Accenture contractor&quot; &quot;FBI&quot; &quot;data breach&quot; Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Mistral+Large+4+le+Chonk&client=app-vertex-grounding&safesearch=active\">Mistral Large 4 le Chonk</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22for+every+30+Chinese+AI+researchers+in+the+US+in+2025%22&client=app-vertex-grounding&safesearch=active\">&quot;for every 30 Chinese AI researchers in the US in 2025&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Palmer+Luckey%22+%22Erebor%22+7B+deposits+FT&client=app-vertex-grounding&safesearch=active\">&quot;Palmer Luckey&quot; &quot;Erebor&quot; 7B deposits FT</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuzATdyAP62Gg8WNlINl0Q8VFEBg2hMg8C6bhGPqL46aSZuT2Sv-mWKsojVy9xAzSgwJNCjm6QinytXh5c-5EbDc9DUYNuZwewTvSSusZfgYPIgorR_3xExMN3n8mA5kctudXroQ8qyz5-xwhpHTwj69DbExTecubh8PKDeknHhnPwRyjZtEUr2qw5YMY5FGiB6BITjPshx92wgFcEXN1z7wxX_vjPkMY8uH1c9sm5BURr_0cI4oWF3_eCUICZALKHRZFGI9-OyiRulqown-lAaOKYKzJwMiE=",
+        "title": "venturebeat.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0s_GRv49j2EO-2tE6EJbkJqxeNEL8FUvUPsC2c1D4tYL1mdl_VPjfge0KQ7V6bYuxFVa18slSINgqINqZwTwx7fe01ILtu66nCOY5AkEHfv2BKyX76nP8R53-mSLtTP4QEAt-8hp8lM_NAJU9B0pNyRtw_c0yRiEs46-Ap1tiAJTh1KwB16v0dT0TBjgOUuQSIezP1IM=",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXGz-O9Ysd0IROUpqxX6OlXSepAHa4k64AxA4wnuMox3nalwLH0niP0sU3oy9GYKn-QcciXc5ZQgiCv0Klo2cZNsw2k4Z6GstEC8gPwhKVwwXLxYcy-VLl8tJy3M3IrKwKx98Aiak6m_fydminBZKYuXE903OFtcjdUUE63hNjdDsdjm5VQtqx",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1Vftp_YUgIxjigb1X7VnqQASOZqxxByHlFeFcFAU6r2efDi8TfseMGqSCHbgQSxA9C-xeHcQceOTqz3lS8ETolewuU3y4DusJo_R-C6AVWqAVpFPW90MiS_nwQnA6TzclZZtGiffHxhoiLGUyGb4y6JHD_KZpdPZhDoyQhZ-MEEra3XZl5u43dgOCHgl7j_lGNgPHmdvBSJ-blcy1zrmHi2D8wFZXpOD1wOGvhL0PJ7kmblMl9YG7IVFZe_Zd-RY=",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFR2TAbwljL6PA28ZXTQOwZJu-E4BqbUTQKxL593jjB90PT8bZ5YTFlbkhKaP9fiVgblniTwQZjsi8IMu-Fo8sZlitQ9x4zS30NjgRYkzCAwv6zRoEZaI0FbMefdDhVq6WLXp1A9K5j1hs=",
+        "title": "tmtbreakout.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcN7zawlb_8xk2XY8Zz96WQqhLQu04rqKNi_nyaKm12ee4eYUKH8853io1orfcL84R2dC06c6TrNQRmOCa-yJufOjjvkilHXfJnD6DoczPZIQX7BDcjgfEFQmMTmgTBPVmqC-uU6FIkZx5UaSTfqa-z10ftBA-JNb8vq6PB5FXMXRutoi5N1SZ7z-21XD2DkpXqucMEUaTelkZ3LMp7Dr-km-V0CjmiBmiBaQrNCmUHQCjKngKEHIg4Mn2BHNq_Q1GH9OtUCV2C1Mx7jUykuDzlxJbn1xW",
+        "title": "marktechpost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiw_8G3aTDKqzv2NiKabJ9l0mqj6InWE5auAu8CAZSjtkaIO6MKQStiSf5MIaze7rjO1-Bq2gXJgGA0DNIWpx9U4Ss1ag43XG4_qkS-3QHZ5Z1lj9Fg2ABE91qsNAdqOfsYvZ_y7E=",
+        "title": "datacamp.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqvvDu-3XwTCI7vr2kk06Pibi1ZGzJXS5zJRTy2gACCVVextLeSSEFudxAblSwoz9yGKXAQ5C0J5m05C91h6dz8D0MgM-ZT3I45f9zClhkLsstfSjKAApI3pH20o0hclRtIc_zONmVtdXSkuOSnx83CoDWgReboJweYnOG",
+        "title": "ai-tldr.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-pPtvUNz9rzTao2UmPgDbygF0frFZc_5P3vjBd4TiHSnscnTgGEQLhF3pG9--SCMeeaOduoxc1ph99NUp6uQBSVUb5Y0GZxCD63QDB7gvt75bA-duslTQAdLig_w4WznExXbHvjcE_ADNo4h-OFGvhcVrvA1U2hcwxd_6iTj_5jBKEqb4CIw3ClDYr-64FhPN1vq-sdXhdzQ=",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHI1DSj43YxkgFOTlw9dUf3NOfF-U-XoJ_-l_NjpSUNfb3PONSPoOhzyBAGTrum7T3ReuZv_dwQQxlhcrILWoVehGQWcUeUcPj3-wbtIJ_UpiGoged5l1rg80NWlQEZ7Wvlr4lOY1ABCGb8iR_ULmfA6nzuLMf5-uxXjwOP4BDvQCaecLCsEl6VwPLbrVO5cIQyfJ1PNzsZzi9HmOchGBUwuVDsUkS1oJii01vshBaO0Ju8mnViqH1B",
+        "title": "n1n.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-yW5uMCNUUd7caIYEcSnM3Nq5NB3VYA8_d7h2TUdI2f-IHfhIr4ja1eVVCMTm08gpF5-6LVsr_7j6i_AM7ReCMZnHK7OEkgrdeX3EgDdqyTnpzulT0yhWoVvRc_W2vUSW6kHRDN1VNCiNIIYkPnJTrYQK5bktyH_Rh5I=",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHR9jxAUQeCn3ZsE8nEX3cNlZxl1bbKM2_zWxcw0cf7kvcETorybMB-8nP4ODRbjWF1k8Z5S_FQjS6QO9AwtpkidBTVGpmsCiDz3Z3ZLr1kBpdGdZbmX_uFZwqY3svwCJIikGl9o_5Vm4kAQgu6qPVz8QOu6V37cQGEWEyVAd0Nx6q7rE7gclndkcOMNSc2mwfFUrLWrYqf_Xo4ViQ=",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiJ8wwCyIr1kh-gw5xxfs-Ko_Bv1ymEzJPX6NoJI4IqmqZH6t2Jy2YNovVP58UE7vjzdYHcgN6Br9iG5lBcxayEHHlsljtl5pHyFJOYta0hk52hOBYvqIdIA==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8E8edavU8QV6ZVajeLxfdH0f43d5xsXyUB6FK2FLxl82EtyPU8rhxWZZMUbvBOgTR6f701wFP1g8_dvSR-x08wuBP29pA4uiGjZzu-gfDhm7e9uXSdfUTRlQ=",
+        "title": "toolify.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFR2TAbwljL6PA28ZXTQOwZJu-E4BqbUTQKxL593jjB90PT8bZ5YTFlbkhKaP9fiVgblniTwQZjsi8IMu-Fo8sZlitQ9x4zS30NjgRYkzCAwv6zRoEZaI0FbMefdDhVq6WLXp1A9K5j1hs=",
+        "title": "tmtbreakout.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEyagVVAojkhXBVpZ9yPYqHjoMj4trt7xSiIGYR9gn-Lzg-cgbzoOT0eoNEqVU6fFYn6P2bK6Pa6DFdtvJWFosiv9nqkE7ODyA0acsgXW_j2b4bGKuQ5SbnD6HJl8a4ArkqvQU1O7j4HdDY9IZg-wE_tbgvSJK_PV4ipAPXTX3eDVL9SlHQTTrVA==",
+        "title": "tradersunion.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNrl07KwFSppfeMkPOxtKVBpTs48WeltTStSPaZkUsMmFNGo2BdPXDcDXGCkcCMBLvy8SBK6ksY5ePdABxyF88KU7GLJ-gPCYEkGVyJeBRAVhPjYOUHlVTG_Doht566W0aYmMfy82KEB2Rhp0I6t0ngenscTEUQI6vaIda-L_SZ_riL5Gat34jYRuFi5kD4Lp2YGAkk3tHunytZJqm7iy8BlA4C-sUkIA01PxLlEMo8iV1hVxrXhhEY1_dVtM=",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwSyRZVsUadZB9-EsQ9D-5YvZRKrpTJOIVUa8Sl0-EmVUl5P-QIQh2TENeWQfYskT2WrLmkyTGR6vUIdUVTkFbGqYDoyH6ljnygyEjZ-obPFIkQn0V7C7dvLxcTRYQK-hq-6xRwqE=",
+        "title": "airwallex.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZVn7D8Y8knPuolgafJ82mVezAAryaS5oI-IhH1MSysJv5r247SbVuS6EotBzHKohhywCjlKGjsqFYoDjqUh093_MrYwPtfN-_GrpS3RiKgk9Ep8DhVGGAjz_ILBrqqr9scqSPa9cRsRgVq_TB_-bIViqAb5DfE4i8XLIImC13EyOGPz4G4Q==",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxE1jsO0xbn9zZx2pTD6HmRDJjtzZIeLsxmF8Lfw60MBqAmPRrRaZCP_mRC_00VDjdjff8DS6Q5xAy7kUp5wizcLmGD-SljwHUxHD6WMJp6RrpM9-GBic7NM4WOTPBuJZ1nuv5RDJ1gS4pUBy4YF4KqbYyEVBYpBmaO5fXXi2E-qWADWq8MaJtKL0kahwElnKjzOlBkQvy1VdNuAVbnoNQGeDZLsuNdfmk6Wf2bxONgIVPwnAQveYv_RA66koxJ_RFescGzmwUqI2YwEJP7bYPT8OVXIBW9Ghr-CBnNtYJSlLJHILP-n4HgP2jJnF-9N5XuRW9vUit_DypYEpqMb4tz8LI8oLjPXf0wYeYnSY5j1p0iBoKoffEdKYlnJyjOA5GMBmwUto=",
+        "title": "tomshardware.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrIzmzD56Maq0P-WNH_czP_XQxEPt3AqxWqQU906fuQk_4vVfgKD-ppuGaj6BmOkwijNH5NVkWQYpB5UjzF9YuR9CpfEE8GBGjlTN_NvKQs97R6aKHBgOOJn65KuIUOXulQhUqMeNpXoqd0oxjrwwtEgTZ560IUSzhasVFgcdNEhAM3PS4cgNelyxkbHSXlk401NWYz68roGXwiwauPb82G3R1wmALJvaiTsrrMOIGlT3tTkd18C3xmcAeJNhLVA3gGy6HG0RlZQkkegd2ylFFVJzi",
+        "title": "indiatimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHx8xYSbRMXM71H_o50hIxCPPLvOdMhI700azGn5o-XdrrJQEsBK-fS4sgOZND6XuwMl2sro01TaU46D8_q1DKxQVVvqav7efe7732FAc876P22x0e_o63AGmNViCPnEG-6vMF2dUsc_w==",
+        "title": "cybernews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbqSctaYpyPMHFvPFZq9d_uyQ3cV_QY9_YqEokLzo_Q9dlbnP3BVIKllBb4giDMcqLKFDmsF6t2MIk-Ssqw51QpiHqtHobhw2In1hC3CLBd97V06SPcAqmj7hE5JL4u7I2PJOYVxbl5nArehrcidC_vtTWlIZOEG-_76lec8CPjkKPRlwgosyRfQXnGj9W-8sQ9g6uWYunio8YgobALuQY0wsb1WqAgmxgvJlTpK3CIZXPyAsM7q0QC4SqzJfmrEjoM7PvGIYnGrkMzyY3tGbEdIga3MGE2w==",
+        "title": "thestatesman.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFsP4z3R4ceyVVlcsFSBe3Cgixu35S4dTSEd2Q_-9svSWbVVQNLcDcnqKHsKr--ADE5IfiNu1GZ5Hs5CgRmbwwz9KMs16La2WqgQ2X_SiBcTy-7FsdlilghbEuCHozYKA_a_hHyIVm2zHZNpET3MspbYMb_rhRhFKkOSnotQ==",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWQob042VRIkJ1jzFqZ-n5em-p2xWZXGSCDq8NESQwu1Jvo6BUIBtSEqvO4Has4mkvhKzTJBNwpf7daaSMyQxYgvLd05okY6iM6-eO46J3NZ8dWDjpleOSQGXRMB1tUR8V8cuF7S7NkYR_NG2FnJhgr1KQCr1FU1vN7l8afOUWgFJ5rydORtJD4HA_R8k8eqWWq0fqQFMexVnKZb15iWGR_0hBvRL474u3LVYH9X75OVTG64st6SORoswQNRiQMVDTpRYqdc8olPHYfrnEbAqUZAMQTXvTh1XP05St6Ev_vpJhVm0XevaaNNZ5TJN44YWPKW3LMITZ7S8AJxL4jdLGpfOjwDTu_nSNFbCrqVRj-Wo-306nFz2pWEZslYjjO_E=",
+        "title": "indiatimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8xpvLdNZRbyA3_LbLinz6cOQay8Im2ENIsOQNsRnnS5ru0TwVBAsTfPbbyF6AxfYOka8pxSkj1fMnBqWaye_Jr3n4ZQAEuWd1MGgjQGUV-7rG8PyOKvbxZrNS5obwHzBGHoO2J9WGihd3aNxJYtImOd_33D_-Fk3WwKkqWYng1cLqhm6aDh8aZa5iD0NEXnykmdS-14bfDnYe8GYCYerGcxbh-kX4iFQR_gz96f2SHxugS2cxoCXW",
+        "title": "straitstimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdKUK-zrXMhN4dcYFTgXwmCBT1temdU_7gNKNiiXFxSzpvrCqQTgwn9Ntj4M3tARYFfCbqph3wgbeXQTKYC4zL2lLJB3oDH7e15eP2MqzBMq4cADsY1aItMK0L0vo1Haii4_rIaK8XESTs62UM2d_WVW1eUufzAzqw0j29S_d2hLTuLw==",
+        "title": "thehackernews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8mqLgXWQ1spbfar7AhL_TpMhTOhu5OSjWujItpb06YramGlVqgK1ve5CJ0jzLloWyYofSaPPKSLp3bNJpmJ1YnBWAD9k-6hcyBEZsHXfrG9SwmvVmxi7vPBo__WBRQ0K0AW4RaeMvC_9-DEUwOcSLPmFqDBolJaJ0Cc8_ldebzhv4bTHZhA==",
+        "title": "em360tech.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmro2gN0Qy4P_-0pSSvVCNIZT_D4Xy9gw9l7TvifOg-VEXB9oyq81E6llmulhexnvcTDKmlC8bZLBm89xpf2HnyL9Bi9PbLhviAT0uLVx5TIAfr_9Kb5vvuiUE8JnuOlekdEnoUZCp7mvHtWQvHbu7xfQ4lEmqsR8xc_f-tJpABYHKRI6q69bpJdfRhHBdIA89SykpgSR55Afo_bu9xMRg3mV6XQ==",
+        "title": "securityaffairs.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 395,
+        "endIndex": 617,
+        "text": "#### Candidate [0]: Mistral releases Mistral Large 4 (\"le Chonk\") 1T-parameter model\n* **What is confirmed:** On October 6, 2026, Mistral AI released a public preview of **Mistral Large 4 (ML4)**, code-named **\"Le Chonk\"**"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 619,
+        "endIndex": 729,
+        "text": "The 1-trillion parameter multimodal Mixture-of-Experts (MoE) model uses 49 billion active parameters per token"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 731,
+        "endIndex": 827,
+        "text": "It was trained over two months across 4,000 Nvidia Grace Blackwell GPUs in European data centers"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 829,
+        "endIndex": 937,
+        "text": "Preview access is live today via Mistral's API, with a focus on agentic workloads, coding, and cybersecurity"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 939,
+        "endIndex": 1165,
+        "text": "* **Important caveats:** Open model weights are not downloadable today; they are scheduled for public release on October 27, 2026, following a 3-week preview and testing period with cybersecurity partners and government bodies"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1167,
+        "endIndex": 1264,
+        "text": "The weights will be distributed under a custom Mistral license rather than pure open-source terms"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1328,
+        "endIndex": 1407,
+        "text": "** This is a major flagship AI model release from Europe's leading frontier lab"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1415,
+        "endIndex": 1743,
+        "text": "#### Candidate [3]: ASOS app alert claims Snowflake breach; stock falls 10%+\n* **What is confirmed:** On October 6, 2026, UK online fashion retailer ASOS suffered a notification security breach when customers received app push notifications stating, *\"we have fully compromised the Snowflake instance\"* alongside a Telegram link"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1745,
+        "endIndex": 1846,
+        "text": "Shares of ASOS (London: ASC) fell by over 10% to 12.5% during intraday trading following the incident"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1848,
+        "endIndex": 1893,
+        "text": "ASOS confirmed it is investigating the matter"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1895,
+        "endIndex": 2123,
+        "text": "* **Important caveats:** ASOS has not verified whether customer data or the underlying Snowflake data warehouse was actually accessed or stolen, or whether the breach was confined to the mobile app push/messaging dispatch system"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2187,
+        "endIndex": 2255,
+        "text": "** Well-corroborated, market-moving UK enterprise cybersecurity news"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2263,
+        "endIndex": 2453,
+        "text": "#### Candidate [5]: Reflection AI announces Beam (501B open-weight model)\n* **What is confirmed:** Reflection AI announced **Beam** on October 5, 2026, its first open-weight sparse MoE model"
+      },
+      "groundingChunkIndices": [
+        5,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2455,
+        "endIndex": 2583,
+        "text": "Beam features 501B total parameters with 23B active parameters per token, optimized for coding, reasoning, and agentic workflows"
+      },
+      "groundingChunkIndices": [
+        5,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2585,
+        "endIndex": 2656,
+        "text": "It was pretrained on 23.8 trillion tokens using 6,144 Nvidia GB300 GPUs"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2658,
+        "endIndex": 2858,
+        "text": "* **Important caveats:** Weights are not yet available for local hosting or download; access is restricted to an API waitlist preview, with open weights promised under Apache 2.0 later in October 2026"
+      },
+      "groundingChunkIndices": [
+        5,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2860,
+        "endIndex": 2957,
+        "text": "Performance claims (e.g., matching GLM 5.2 at lower compute) rely on self-reported lab benchmarks"
+      },
+      "groundingChunkIndices": [
+        5,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3030,
+        "endIndex": 3456,
+        "text": "#### Candidate [6]: Opus 5.5 agents identify room-temperature magnetic semiconductor candidates\n* **What is confirmed:** AI benchmark/eval startup **Vals AI** published a report stating that an automated workflow of 90+ Claude Opus 5.5 agents ran quantum Density Functional Theory (DFT) simulations to identify two room-temperature magnetic semiconductor (RTMS) candidates: $\\text{YBaMnFeO}_5$ and $\\text{KV[Cr(CN)}_6\\text{]}$"
+      },
+      "groundingChunkIndices": [
+        7,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3458,
+        "endIndex": 3615,
+        "text": "* **Important caveats:** These results are **purely computational DFT simulation predictions**, not experimentally synthesized or physically proven materials"
+      },
+      "groundingChunkIndices": [
+        9,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3617,
+        "endIndex": 3801,
+        "text": "$\\text{KV[Cr(CN)}_6\\text{]}$ was previously synthesized in 1999 without spin-sorting measurements, while $\\text{YBaMnFeO}_5$ faces potential atomic scrambling during physical synthesis"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3803,
+        "endIndex": 3899,
+        "text": "Must be explicitly reported as an AI lab simulation showcase, not a validated physical discovery"
+      },
+      "groundingChunkIndices": [
+        9,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3901,
+        "endIndex": 4024,
+        "text": "* **Publication readiness:** **Suitable for publication today**, with strict framing around computational/simulation status"
+      },
+      "groundingChunkIndices": [
+        9,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4032,
+        "endIndex": 4343,
+        "text": "#### Candidate [7]: Anthropic IPO prospectus details CEO Dario Amodei's $18M compensation\n* **What is confirmed:** Reuters reported on October 6, 2026, additional details from Anthropic's S-1/IPO prospectus showing CEO Dario Amodei earned $18 million in 2025, while President Daniela Amodei earned $16.4 million"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4345,
+        "endIndex": 4455,
+        "text": "* **Important caveats:** The vast majority of compensation comprised equity and stock options rather than cash"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4457,
+        "endIndex": 4535,
+        "text": "Base salaries for both co-founders were increased to $1.4 million in July 2025"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4537,
+        "endIndex": 4684,
+        "text": "(Note: Broad details of Anthropic's IPO prospectus were initially reported in late September 2026, but executive pay specifics were detailed today)"
+      },
+      "groundingChunkIndices": [
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4757,
+        "endIndex": 4990,
+        "text": "#### Candidate [8]: Study: China struggles to recruit foreign AI researchers\n* **What is confirmed:** The New York Times (Zeyi Yang) reported on October 6, 2026, on a study measuring AI talent migration flows between the US and China"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4992,
+        "endIndex": 5149,
+        "text": "The study reveals that for every 30 Chinese AI researchers working in the United States in 2025, only one researcher in China moved in the opposite direction"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5151,
+        "endIndex": 5344,
+        "text": "* **Important caveats:** While local Chinese AI researchers are increasingly staying in China due to domestic sector growth, attracting non-native/foreign researchers remains a major bottleneck"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5417,
+        "endIndex": 5636,
+        "text": "#### Candidate [11]: Google enters 3.6 GW power deal with Constellation Energy\n* **What is confirmed:** Google contracted for 3,590 MW (3.6 GW) of electricity from Constellation Energy in the US PJM Interconnection grid"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5638,
+        "endIndex": 5910,
+        "text": "The agreement includes a 20-year Power Purchase Agreement (PPA) for 890 MW of new nuclear capacity generated by uprating 11 existing reactor units across Illinois, Pennsylvania, and New Jersey, enabling $4.3B+ in nuclear capital investment with deliveries starting in 2028"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5912,
+        "endIndex": 5979,
+        "text": "The remaining 2,700 MW is a general long-term power supply contract"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5981,
+        "endIndex": 6212,
+        "text": "* **Important caveats:** The nuclear capacity expansion (890 MW) relies on uprating existing operational reactors rather than constructing brand-new nuclear power plants, and initial power generation will not come online until 2028"
+      },
+      "groundingChunkIndices": [
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6276,
+        "endIndex": 6359,
+        "text": "** Highly significant for AI data center infrastructure and clean energy deployment"
+      },
+      "groundingChunkIndices": [
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6367,
+        "endIndex": 6681,
+        "text": "#### Candidate [12]: Palmer Luckey's Erebor Bank surpasses $7B in deposits\n* **What is confirmed:** The Financial Times reported on October 6, 2026, that Erebor Bank—the startup lender co-founded by Palmer Luckey and Joe Lonsdale—has accumulated over $7 billion in total deposits since opening in February 2026"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6683,
+        "endIndex": 6772,
+        "text": "Deposits grew by over $3 billion in the past quarter alone, adding 500+ corporate clients"
+      },
+      "groundingChunkIndices": [
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6774,
+        "endIndex": 6846,
+        "text": "* **Important caveats:** Figures rely on insider sources cited by the FT"
+      },
+      "groundingChunkIndices": [
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6848,
+        "endIndex": 6973,
+        "text": "Erebor specifically targets high-risk startup, AI hardware, crypto, and defense tech clients underserved by traditional banks"
+      },
+      "groundingChunkIndices": [
+        18,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7046,
+        "endIndex": 7345,
+        "text": "#### Candidate [13]: Anthropic reports Claude \"diary\" entry to police; user faces felony charge\n* **What is confirmed:** Carli Michelle Heller of Bonita Springs, Florida, was arrested on a second-degree felony charge under Florida law after Anthropic reported her Claude chat logs to law enforcement"
+      },
+      "groundingChunkIndices": [
+        19,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7347,
+        "endIndex": 7529,
+        "text": "Anthropic's automated safety filters flagged messages written on September 26–27 threatening an attack on the Lee County Sheriff's Office, which human reviewers escalated to police"
+      },
+      "groundingChunkIndices": [
+        19,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7531,
+        "endIndex": 7598,
+        "text": "Heller told authorities she treated the chatbot as a personal diary"
+      },
+      "groundingChunkIndices": [
+        19,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7600,
+        "endIndex": 7775,
+        "text": "* **Important caveats:** Anthropic's public privacy terms explicitly permit voluntary disclosure to law enforcement when necessary to prevent imminent serious harm or violence"
+      },
+      "groundingChunkIndices": [
+        19,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7839,
+        "endIndex": 7927,
+        "text": "** Illustrates crucial legal and privacy implications surrounding AI platform monitoring"
+      },
+      "groundingChunkIndices": [
+        19,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7935,
+        "endIndex": 8189,
+        "text": "#### Candidate [15]: FBI removes Accenture contractor following ShinyHunters data breach\n* **What is confirmed:** On October 5, 2026, the FBI removed an Accenture contractor after a major data breach exposed personal records of thousands of FBI employees"
+      },
+      "groundingChunkIndices": [
+        24,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8191,
+        "endIndex": 8340,
+        "text": "FBI cyber chief Brett Leatherman confirmed to Reuters that a contractor failed to apply an explicitly issued security patch to a third-party platform"
+      },
+      "groundingChunkIndices": [
+        26,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8342,
+        "endIndex": 8473,
+        "text": "Sources identified the affected platform as Oracle PeopleSoft (powering `fbijobs.gov`), exploited by the hacking group ShinyHunters"
+      },
+      "groundingChunkIndices": [
+        24,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8475,
+        "endIndex": 8656,
+        "text": "* **Important caveats:** Official FBI statements did not explicitly name Accenture or Oracle PeopleSoft, though both were independently confirmed by sources familiar with the matter"
+      },
+      "groundingChunkIndices": [
+        24,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8720,
+        "endIndex": 8780,
+        "text": "** Critical enterprise cybersecurity and government IT story"
+      },
+      "groundingChunkIndices": [
+        24,
+        28
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "Google Constellation Energy 3.6 GW Reuters",
+    "Asos Snowflake instance notification share price FT",
+    "\"Reflection\" \"Beam\" \"501B\" open weight model",
+    "Anthropic IPO prospectus Dario Amodei 18M Reuters",
+    "\"Opus 5.5\" \"vals.ai\" \"room-temperature magnetic semiconductor\"",
+    "\"Florida woman\" \"Claude\" diary \"Anthropic\" \"reported\"",
+    "\"Accenture contractor\" \"FBI\" \"data breach\" Reuters",
+    "Mistral Large 4 le Chonk",
+    "\"for every 30 Chinese AI researchers in the US in 2025\"",
+    "\"Palmer Luckey\" \"Erebor\" 7B deposits FT"
+  ]
+}

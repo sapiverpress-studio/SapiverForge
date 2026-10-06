@@ -1,0 +1,79 @@
+### Out-of-Scope Candidates
+
+* **[1] ChatGPT cartoonists signatures:** Marked **OUT OF SCOPE**.
+* **[2] Uber acquires ezCater ($2.3B):** Marked **OUT OF SCOPE**.
+* **[4] Common Lisp article:** Marked **OUT OF SCOPE**.
+* **[9] Example.com redesign:** Marked **OUT OF SCOPE**.
+* **[14] Deno to Node blog post:** Marked **OUT OF SCOPE**.
+
+---
+
+### In-Scope Candidate Verification & Evidence Notes
+
+#### Candidate [0]: Mistral releases Mistral Large 4 ("le Chonk") 1T-parameter model
+* **What is confirmed:** On October 6, 2026, Mistral AI released a public preview of **Mistral Large 4 (ML4)**, code-named **"Le Chonk"**. The 1-trillion parameter multimodal Mixture-of-Experts (MoE) model uses 49 billion active parameters per token. It was trained over two months across 4,000 Nvidia Grace Blackwell GPUs in European data centers. Preview access is live today via Mistral's API, with a focus on agentic workloads, coding, and cybersecurity.
+* **Important caveats:** Open model weights are not downloadable today; they are scheduled for public release on October 27, 2026, following a 3-week preview and testing period with cybersecurity partners and government bodies. The weights will be distributed under a custom Mistral license rather than pure open-source terms.
+* **Publication readiness:** **Suitable for publication today.** This is a major flagship AI model release from Europe's leading frontier lab.
+
+---
+
+#### Candidate [3]: ASOS app alert claims Snowflake breach; stock falls 10%+
+* **What is confirmed:** On October 6, 2026, UK online fashion retailer ASOS suffered a notification security breach when customers received app push notifications stating, *"we have fully compromised the Snowflake instance"* alongside a Telegram link. Shares of ASOS (London: ASC) fell by over 10% to 12.5% during intraday trading following the incident. ASOS confirmed it is investigating the matter.
+* **Important caveats:** ASOS has not verified whether customer data or the underlying Snowflake data warehouse was actually accessed or stolen, or whether the breach was confined to the mobile app push/messaging dispatch system.
+* **Publication readiness:** **Suitable for publication today.** Well-corroborated, market-moving UK enterprise cybersecurity news.
+
+---
+
+#### Candidate [5]: Reflection AI announces Beam (501B open-weight model)
+* **What is confirmed:** Reflection AI announced **Beam** on October 5, 2026, its first open-weight sparse MoE model. Beam features 501B total parameters with 23B active parameters per token, optimized for coding, reasoning, and agentic workflows. It was pretrained on 23.8 trillion tokens using 6,144 Nvidia GB300 GPUs.
+* **Important caveats:** Weights are not yet available for local hosting or download; access is restricted to an API waitlist preview, with open weights promised under Apache 2.0 later in October 2026. Performance claims (e.g., matching GLM 5.2 at lower compute) rely on self-reported lab benchmarks.
+* **Publication readiness:** **Suitable for publication today.**
+
+---
+
+#### Candidate [6]: Opus 5.5 agents identify room-temperature magnetic semiconductor candidates
+* **What is confirmed:** AI benchmark/eval startup **Vals AI** published a report stating that an automated workflow of 90+ Claude Opus 5.5 agents ran quantum Density Functional Theory (DFT) simulations to identify two room-temperature magnetic semiconductor (RTMS) candidates: $\text{YBaMnFeO}_5$ and $\text{KV[Cr(CN)}_6\text{]}$.
+* **Important caveats:** These results are **purely computational DFT simulation predictions**, not experimentally synthesized or physically proven materials. $\text{KV[Cr(CN)}_6\text{]}$ was previously synthesized in 1999 without spin-sorting measurements, while $\text{YBaMnFeO}_5$ faces potential atomic scrambling during physical synthesis. Must be explicitly reported as an AI lab simulation showcase, not a validated physical discovery.
+* **Publication readiness:** **Suitable for publication today**, with strict framing around computational/simulation status.
+
+---
+
+#### Candidate [7]: Anthropic IPO prospectus details CEO Dario Amodei's $18M compensation
+* **What is confirmed:** Reuters reported on October 6, 2026, additional details from Anthropic's S-1/IPO prospectus showing CEO Dario Amodei earned $18 million in 2025, while President Daniela Amodei earned $16.4 million.
+* **Important caveats:** The vast majority of compensation comprised equity and stock options rather than cash. Base salaries for both co-founders were increased to $1.4 million in July 2025. (Note: Broad details of Anthropic's IPO prospectus were initially reported in late September 2026, but executive pay specifics were detailed today).
+* **Publication readiness:** **Suitable for publication today.**
+
+---
+
+#### Candidate [8]: Study: China struggles to recruit foreign AI researchers
+* **What is confirmed:** The New York Times (Zeyi Yang) reported on October 6, 2026, on a study measuring AI talent migration flows between the US and China. The study reveals that for every 30 Chinese AI researchers working in the United States in 2025, only one researcher in China moved in the opposite direction.
+* **Important caveats:** While local Chinese AI researchers are increasingly staying in China due to domestic sector growth, attracting non-native/foreign researchers remains a major bottleneck.
+* **Publication readiness:** **Suitable for publication today.**
+
+---
+
+#### Candidate [11]: Google enters 3.6 GW power deal with Constellation Energy
+* **What is confirmed:** Google contracted for 3,590 MW (3.6 GW) of electricity from Constellation Energy in the US PJM Interconnection grid. The agreement includes a 20-year Power Purchase Agreement (PPA) for 890 MW of new nuclear capacity generated by uprating 11 existing reactor units across Illinois, Pennsylvania, and New Jersey, enabling $4.3B+ in nuclear capital investment with deliveries starting in 2028. The remaining 2,700 MW is a general long-term power supply contract.
+* **Important caveats:** The nuclear capacity expansion (890 MW) relies on uprating existing operational reactors rather than constructing brand-new nuclear power plants, and initial power generation will not come online until 2028.
+* **Publication readiness:** **Suitable for publication today.** Highly significant for AI data center infrastructure and clean energy deployment.
+
+---
+
+#### Candidate [12]: Palmer Luckey's Erebor Bank surpasses $7B in deposits
+* **What is confirmed:** The Financial Times reported on October 6, 2026, that Erebor Bank—the startup lender co-founded by Palmer Luckey and Joe Lonsdale—has accumulated over $7 billion in total deposits since opening in February 2026. Deposits grew by over $3 billion in the past quarter alone, adding 500+ corporate clients.
+* **Important caveats:** Figures rely on insider sources cited by the FT. Erebor specifically targets high-risk startup, AI hardware, crypto, and defense tech clients underserved by traditional banks.
+* **Publication readiness:** **Suitable for publication today.**
+
+---
+
+#### Candidate [13]: Anthropic reports Claude "diary" entry to police; user faces felony charge
+* **What is confirmed:** Carli Michelle Heller of Bonita Springs, Florida, was arrested on a second-degree felony charge under Florida law after Anthropic reported her Claude chat logs to law enforcement. Anthropic's automated safety filters flagged messages written on September 26–27 threatening an attack on the Lee County Sheriff's Office, which human reviewers escalated to police. Heller told authorities she treated the chatbot as a personal diary.
+* **Important caveats:** Anthropic's public privacy terms explicitly permit voluntary disclosure to law enforcement when necessary to prevent imminent serious harm or violence.
+* **Publication readiness:** **Suitable for publication today.** Illustrates crucial legal and privacy implications surrounding AI platform monitoring.
+
+---
+
+#### Candidate [15]: FBI removes Accenture contractor following ShinyHunters data breach
+* **What is confirmed:** On October 5, 2026, the FBI removed an Accenture contractor after a major data breach exposed personal records of thousands of FBI employees. FBI cyber chief Brett Leatherman confirmed to Reuters that a contractor failed to apply an explicitly issued security patch to a third-party platform. Sources identified the affected platform as Oracle PeopleSoft (powering `fbijobs.gov`), exploited by the hacking group ShinyHunters.
+* **Important caveats:** Official FBI statements did not explicitly name Accenture or Oracle PeopleSoft, though both were independently confirmed by sources familiar with the matter.
+* **Publication readiness:** **Suitable for publication today.** Critical enterprise cybersecurity and government IT story.

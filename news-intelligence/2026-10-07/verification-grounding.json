@@ -1,0 +1,905 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Tereina%22+SAP+payment+service+Reuters&client=app-vertex-grounding&safesearch=active\">&quot;Tereina&quot; SAP payment service Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Micron%22+union+Taiwan+strike+%22Taoyuan%22+Reuters&client=app-vertex-grounding&safesearch=active\">&quot;Micron&quot; union Taiwan strike &quot;Taoyuan&quot; Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Stuut%22+Series+B+Insight+%2252.5%22+OR+%22order-to-cash%22&client=app-vertex-grounding&safesearch=active\">&quot;Stuut&quot; Series B Insight &quot;52.5&quot; OR &quot;order-to-cash&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22OpenAI%22+%22sharing+AI+progress+in+mathematics%22+OR+%22github.com/openai/math%22&client=app-vertex-grounding&safesearch=active\">&quot;OpenAI&quot; &quot;sharing AI progress in mathematics&quot; OR &quot;github.com/openai/math&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Google+Playground+%22game+creation%22+%22Gemini%22+%22Nano+Banana%22+OR+%22Lyria%22&client=app-vertex-grounding&safesearch=active\">Google Playground &quot;game creation&quot; &quot;Gemini&quot; &quot;Nano Banana&quot; OR &quot;Lyria&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22OpenAI%22+%22Decisions+API%22+OR+%22guides/decisions%22+developers.openai.com&client=app-vertex-grounding&safesearch=active\">&quot;OpenAI&quot; &quot;Decisions API&quot; OR &quot;guides/decisions&quot; developers.openai.com</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Disruptive%22+fund+%2210+billion%22+OR+%227.5+billion%22+Groq+%22Reflection+AI%22+WSJ&client=app-vertex-grounding&safesearch=active\">&quot;Disruptive&quot; fund &quot;10 billion&quot; OR &quot;7.5 billion&quot; Groq &quot;Reflection AI&quot; WSJ</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Mistral+Large+4%22+OR+%22mistral-large-4%22+mistral.ai&client=app-vertex-grounding&safesearch=active\">&quot;Mistral Large 4&quot; OR &quot;mistral-large-4&quot; mistral.ai</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22PS5%22+modders+jailbreak+%22Push+Square%22+OR+%22AI+tools%22+emulators&client=app-vertex-grounding&safesearch=active\">&quot;PS5&quot; modders jailbreak &quot;Push Square&quot; OR &quot;AI tools&quot; emulators</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22ElevenLabs%22+invest+%22India%22+Reuters&client=app-vertex-grounding&safesearch=active\">&quot;ElevenLabs&quot; invest &quot;India&quot; Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Elon+Musk%22+Terafab+chipmaking+TSMC+Bloomberg&client=app-vertex-grounding&safesearch=active\">&quot;Elon Musk&quot; Terafab chipmaking TSMC Bloomberg</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFi9Fq2RgfpiOoYZkgrLS_ZWnuDFrciakt7qKAtpRE_FOU-QnQgznkku-a2bYt6ncKy9E_ioYLhhTLCaTfwAy2t3ToudYhFnlSgbmGpTha6DqjnExrIOs3o6uarl_-Uoi4uAHfMk3Iwc343WKXub924gg==",
+        "title": "openai.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwr7EzWrdCYCdSS_vHTxybdDgFy2ulEIjVCLD2arTbCsETTRu1NxKmMebPBkH1F6k_lyXUNpYkIq9gJgdqSnbf7eYq2FMixKti9gN_5qbGsCTO-dtTvyfy6ZKrk7SnTQfkN1-bVwP3WJ2hM1mJaqX7b4vS827n4Bi3y0ApAEMsRozLD0lVZA05GSKkawQe5eG3DdHyI9f63aGgKvU9K3W81IXFnBhds_bmwSCiFDrBEtKcRgH3rJvA-WNPb7NH4AoWke5E5KmgFOa9A0cxXa_s7LAphYUO9IZxV8RFZfnY8g==",
+        "title": "globenewswire.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4sydupLCHwEPFU3Sx-AlZhKaCdS4oeMn8bgBVnaNcqozfr7r2_fAmBwA593f3Gea6H8_6yicj-1-wE3JBJTJPyupY47UsmRK3vsZjwJvb_23aXxvCpjFi56OMykLifExmkikdba_XvCn8SYVdEw==",
+        "title": "9to5google.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG07nzmH2-kIdWXwFNbUpdp1x7nsuIeElgycRugW4iLOI_b5W53OScD6oNwFIvnPxOvk7lgVfEdoEPkDw0cyXbQggyAVDPUHpJUuNYdN1FsjA5HpclAfiaIcd03csg=",
+        "title": "mistral.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuXxfcxGTWuUR-75gIAftPJmPsopyE7kK9n4N8S2QOYZUOC3AJ_vKNX7yTR_T7hVWNHgHJf0Zi-NlOwd9hBFr_ncHk2CgparsVPF0SuXfA3wvIENlmhX2w4zYWxdEMpyZ8Ljd-_rKCPH2pCo760HbOXsMJxTLdiNkJqZTCdJs-ceh76bSBPtsCrSs=",
+        "title": "openai.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-ywfVrkwFQOhnWV9HGQNO7q70OdSPKA9qfmvjChv6fPqoCWkpq23qQPbnkftnIUMqK24t-7dujz4oWzE5Pw6QgKpbweYbn4PSzdo5g3vCpzpIcSvTZBxtMg==",
+        "title": "dataguy.in"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRSCI2QddeKIa_RRgQjTgSmWUXaH5JeCWphJTdAtMCUCjewk5jbiLcVsONstmcZ-m57m7VNGYSsepcIbx8iiHiZMcse81FIpyt7Lu0eyocedUjtYTeZXhbhlpb8Xhj1_wdWlA_JOugML7o8dgmKbSELlQF750M_UiS13h7tKdAZ7sFW7T2-u0EW8pPwzj_IepvHR096k0QqUVuPLNVJCpppAGiskiGNoK8TAz2Cw==",
+        "title": "thestar.com.my"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4VdX8M0vuLipYwo7Kv1F747XnQH8UNN7RxpA6IBOYgUK-XrB95G95v3yKw8ElpzsbzdVoJauG1S0limrxuoX5QRYqeq6mP6dmHW2HyWrGpIPj32x7Z50Gsh5G5h_Lofop3grawyzQPlZ73Gk=",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBTK-6RHTkV5Jhl0Z0I6HIfuL1iQz9iVieEgnZZ9bOYraDGxz8JGFn38bUTMxTui5GOmVtjJ5j1XqLe9xSzoUnBFZHnTUUYKiKFaQig4Bzqoh08NY-PCx4gKNw_M5gQNZf_n79W6eRcWct3rpg70HZYXLb_nicp0AfxrifRC2lrVI1Bcuo7mrL5RiV5zWjzw==",
+        "title": "cfodive.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKzk5DBdGeka3X-qASGu3c-j1bg-eveMI0ZKgvHVx8Ii_xc1_a0iJRhhUySIw9rAgqKsgN7RHyger2oxqzxWydrvhe_Hz0KdMp0aYq1Mx4-wDlrXUPkiF_ReF68R6iqXsF9E67alJUWNtt7-OSS3-AkqgVTVH3iuXSat28cMxNk_NNTavJ1mQW3tjhSVop7QFhDnj5fcEut1hH5B9zOZCbNDbqr6FdzaRoygqxv8qdDzlVsRwNVz_pBLN3z07ZdMMQWA==",
+        "title": "tradingview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVP_N2UL66J8TBwY04fGgR6_3PV4bx-II2hIB9RI3DGRgFnGeey4Px6am50u2S13KNYN1ikCpUrPBvJ6QOvvFi6Lzx7eFlF5bctsduWgld9xd53vp-OXtG6T8Ot1MWSEDU_58CnGIUIDXAaID9_1EkP1XiqGhrtGFLVh4liIQsMgMrBeymzRFaJrtTrMHw",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmKbz54eHQqBFR0T5GWMzn7fmZYtAGTna_p6XSptpSfnJT_jl1I1UgzZpUh-2V5lUu-i6AEHIl1u1e9DBwiq-g_7yYxpW1dDkT9qiPKaS43iGQUX0yY9c8kffr6txSfWr9Ccmw6EE-kLRmt_rEgXycNkCYcmlSANFzWcEPQnwAAlDzJmoczZyL5tUpSpfo0mFNyXjBCVm8wMvWTFMX3MIr_beTU9oAo4CmXHbUqHL3gBCUHvD0Ih4oYUJWumzU6FgDPL5gyuXtZ0S9HwqZFdDpBbaHUBuFZjVFMeO7P1aYRQ==",
+        "title": "morningstar.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTTjzEywdmwafrdAuElii04fRO_mD-J-pgQQ50X7keQinZtZPvpeWJV1a41XKKIModWeqm-J1VIIed56v2R6d1hX0dzJILxDCLKftuVPS77Pw0ZDl7ZH6NsBUDs9pr3VCfoGhK7WSQ-CSGtuA5m_kvBEbWyUlXrue2u9jBmiu-yA_ZrMFW549o7ovqTwKJML2R5BKMNVEDjftpmrtkgZ-OGGp6vJAPn-eHtgd_ALs=",
+        "title": "pushsquare.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGk7OOtFuLOF9pt8wlOyY6gkUCoUzep3VwU5aP-hlMW1x2WU-xQiqX6s_WvC7uqxChSmq03MeCCXg17mbzXhPJtMfuTBTftUEC4UwmrGOEUc8szBIxuAwOVRrC-ZBmDLE4jUXpz5mT9SzCDMrilSzRYID3aH5DLVtQDF1lbfA8PGPHyq5c1L8Y7sabK",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFC-EErc3cUUCsAUgxu-75549vlf2OtRYwN6k3chgPUTK-y9Mt8Y23j8J4w4m_riqXA8_nJ5yNwRyEaYrnLxbTW61i588RiO2k_XTsEEJgOnzdTuem6qDqy5G-fPjLahr1uxxDmio3lx4sqqtOXei9dQEsmKxc=",
+        "title": "quantumzeitgeist.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmr4iYDoxKxTBvwpIr4VPk-nRzCWUjkafQ-J-oHl7QdX8Sos8MxRHHKB6sNdkxsRkpjFTJS84BVYGS3zOBl3V_PwVsVZizlslbB5LgQkYxb7czff4f4HffTVwgwc8OVKmh8k4=",
+        "title": "mistral.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9T0UmwHnMbMzNSTNOq2FjCUEVso16Fnq1nW8tdgIw5pjTsqkilTXhQpcQZJJ6w6TK3abxWUVtCUZiUlPMiCPa_uCGi237tuqn1k05E6XN27jF9iH2v0M7bLhnpEZ8-jOJWThKIJRK7-dUgN2fvaS-sRaA8AQFtQCU0kGjF5Rq5GsR",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCQz7l6SNTTitHl_n0XDvPFFXovi-BLPd_gwnim0VR6vXAKF8oZTag8BTteZkOnyhWBWGMQVVagUDm27okBls00dnISYnlkaAM4Xb3jDrzbeRVqGmsAS8p41bYsLTUUFN70PoN2-NpN9vh8GOhPdi8Ig==",
+        "title": "huggingface.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYUVUALA5G7xQx-vksJxUYGhxpULUCMIQVHjAcgkg1IyOWmghdFmhOU1Ax52YragBeB6GQXLJl4OlVUoJkdzWcE8Ru8lHEp20rlIB4aTcYwKAv1g7xM2Z--J34GaAKBfKI-FFSfTGyCUtC4PD2",
+        "title": "openai.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHu260m_y2Xlar6-67MGgxzy4HIfaUIuJml-OvwtchE_lpPU0m5koUk3pY85FpVtM7FS5eKN78OXDhd31ea0DD_CKMXyBx3AZ-CZz3dIOCVeWxHoXfUYtVhxji2K0THslcDe0dnmBcgz7MdbQBe6sT_58yNV1ha0IgJgTc4lcwzU3mzfFwiqgQTpUoPBjEvm-SqPCCMPQ==",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEOfiERJPBw73MO2wALwLP0wA7Y2fGLYcDYgqTuJBnQbhfCm40F_AR0_nhL2ntMlabTyq70Q1P3RQO5wDNxmAxYQ3T5LxDDzvnvUPsoovY6vwijPFvWvKnojTiIpelFoXwdSEiPmQYhsxkWc87Tn1re1MNooF6B2ltfm5rlylff6k-AxwolmQAV4CjgQ==",
+        "title": "openai.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHa-6ae0iJnorssmFa_hz1FAsOOXJWD8CBrdBXcl3xkIrybrLrt4I4qlQUIyaVPsaZx3_RE3q_e_3_uW7q8IF44XgFhZ87aoRMNmulOiTxPbn8HJTqGI-1gCeQULhVAUm40497rcQbpyxs=",
+        "title": "sanity.io"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7vLOxAyaYNRro0JisEZXS14Ima4KFd0RkGEO1ZWPxYFL9m5xCy5nkjvCOFDMD8u8mFGPIDhopV1tHZGeGnG5t8tetDLDOMIHkuNY-VodtZpSpbeyw5el8vuld8J3J53x-dPlAVFARzgpdbcHvejsKZTb4w0fzmTmdMA==",
+        "title": "stuut.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwyQBbHDlu2gnDUfD7Z54X4AGWu9KjR6RzK5qUgHdggRkCVFFaXGvgWWgCG_wr1JneP6YsDZi9IVyNjMlDdo_NngY2hzWDQlyuX6GKBWm9hlwh7gGd2zGITr958p8Ybm3V",
+        "title": "deepmind.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFNXf8PjPE6Dv7nOCNmVvw620Kf-vEhNHAORM3cEbwsjr2hpHco2BA8hXE2tEIDxOjCgjXb-NuwDBsUeG-4z1m6i7IGNap7KPOZrBKAN-SzEVZaZrvEQadKtegcXf8CShVgCEox1cZ-j_q0WAX",
+        "title": "google.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHV8he-fwAqug9ctfRVAzT9chv23ndbvsLm8e0Bh2pk1EaI0INGE7VsBABfRch6wm8d4KBmz5JRlB7BnlsI65GmRmvc5hBwnWr7rdoy2lpLljPwiwbLM899L4geeDoIudIoifqYzkE3ydva4x6_gnjpiww-7Ou5t1M_iRQhyoxU4VICP9sKFdw=",
+        "title": "chosun.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFhlRtN8KYDpZRNpMfUAN6gIgJUDOkQMJ5nyQyF416q3xM1VckypXpNu6S53gq_0bxS5_UysSB3gsZmLjpEcmDRgUL6kN-NA8m1mfjJzomfx7ujce_nI2SXSsk_o_cBhTJrfdAHcTssinlrQ7BYNoiOU8uSeuH62hD",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaRy2_IE0yKOcDsTvGtgN_R3PWXWYrg2hSBssQzx6wZg1LAMl0-aeCRLVwqy-NJq9cI6hXqefZZqwP3QTRIm3MxKn5plEKH9y04xj0TjhlNLYB4fOdeZqAK9LIPPuY6zTE4gLu2hvo6nbmOkqdXqjIMYCy58RoKECBAddTfd422PCvLGnsA4zRCVOiuI07rqv6r54YY38MRZmwVgYCqYnbZV_3UJag7HoF-g1F",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCdvum5N8aOe3zclZEn_xwc6Gu05asMto7hc5fBJ9yFuUy1SEEzcN2TuJCIOIpGvksc4umc9wuYHArd0E1ekYvrpKDfjJZhBk_V8IMlnRiiieSGnSoAgPYKlaz9-Nfmr4Gnb4JpB7l1igo1TPTPXZ4_WNY-A==",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEY8Q-oBoGF5FlhLV5m0Uw8QbrExldF7oTgjNYFenkMe4Miisx4DUjWo1Qjtw5gOPyDbjNMb97CUePPWU9w_czEL7ABRDeJ_VIIAx6ggY6povZlKjYEIlGrxXf6_p7IV1Ar9fuiSiWVpH1mc1BETw==",
+        "title": "calcalistech.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-ywfVrkwFQOhnWV9HGQNO7q70OdSPKA9qfmvjChv6fPqoCWkpq23qQPbnkftnIUMqK24t-7dujz4oWzE5Pw6QgKpbweYbn4PSzdo5g3vCpzpIcSvTZBxtMg==",
+        "title": "dataguy.in"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEryhCMEP3m4zDX0B54EEzfsNifzPiWkpCneAMfj3jUQUlEqIoaromvWOkmrRDKEwMMI_RvQsQdDoLXDaR_8qhvuH_p_BsFWTiwu8aVor3VKZBj5fp9HKH6m8bk6jP7fzRdHSE189_VLN6pN2Zu8SnWvTC2H9JL8g7qzb5g0cRE_izDrfbRXFzqb7-ERXsuGOUMtzs9UsQhJ87xX4StdxJSEfgPNJrOfo7hQrITGE8Htq_bzSV3rR6FAGQE",
+        "title": "techshotsapp.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZgoc3OffsXBrsh5HFWu1pn2pgcEE0MeHKEM3EVda9neGBBvwSD8H3aJ81Slcj2pqZF-lCNhICzzrdYUbRJik5sGKq3BsGnHU-UPeW0J25qNHE43wKw_p9RHZgFjnnbPb4GR7hvQ3DqgwIs1D1Omyy66CAvldHIKqexMLCoHnJFSK_B_6khlBQeVLm-cDKuUA=",
+        "title": "thetokenpress.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5i18042qB_YpvlSSaEi0UTYnJ8K6yMOUC1aGHyvGERBQDCH069W-3O3R2emsXw2umNZyeBCyjzVdnh1Jpsq7GteE2vMwRfUsjuBfxO_fRHXNRWkgPwldWDkRIe1UxtUU9oJFgvFMaZkAJc1cx16iT3zWCusFZL1fPqRsqxNX7d8VCZ0QdEYHKAPa3J9MWaArO4mqt9tXXsr0bTiNd_mVaJWbQRamtoSpZLXBCm0-2eGL0tCMJnKwVVQxZnO6fYoODBaBNw57DLXSAmgurdhDifeA3F6pLHweR-RA=",
+        "title": "indiatoday.in"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4wb0lf24mH-IawxvUO6Zpvb4-rq0qhCq7o3kPlMoh764vnnNq7hnggHENlXyxus8klaiLoVjeRs8qnFAHNAgLsb2t0f2vTdqK6koyZ5LzCUvlMgo6s_T8v-lBnN2uM6LFeDVrCUQHh4X8dqBMpIEGBnk-MGcepV1vqemJQ-9cgms5itfqtD79n1PbKGOcRF5XXLaNR24Mk4Nuq7k4aBzmtl5LLLA1Ag_PNsqqSQ==",
+        "title": "techfundingnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3g92Mj8giq5UBOaToDbNlX9tP8Udx1gUtqHTj-Rf6r7E_6EhQIyxKKo8iSiP-_cCuk5nzhay2vpU3gq3xsXfF5W2zB58Ptp4iPcLUz4kWfK7PxMlrqJ6waSPqSLl-NvVJFDiXjPef5wbA_EVE1aajSGofM3KpA3VrU-wjIkVoWHpQOaC6AJI=",
+        "title": "nexuswild.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 122,
+        "endIndex": 235,
+        "text": "Below is the verification breakdown for the strongest **IN SCOPE** news candidates for today’s morning briefing"
+      },
+      "groundingChunkIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 237,
+        "endIndex": 392,
+        "text": "Out-of-scope items (consumer hardware preorders, general market forecasts, or unverified community surveys) have been excluded from recommended publication"
+      },
+      "groundingChunkIndices": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 400,
+        "endIndex": 550,
+        "text": "### Candidate [0]: OpenAI Releases AI-Generated Mathematical Research Repository\n* **Source:** OpenAI Announcement / GitHub (`github.com/openai/math`)"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 400,
+        "endIndex": 779,
+        "text": "### Candidate [0]: OpenAI Releases AI-Generated Mathematical Research Repository\n* **Source:** OpenAI Announcement / GitHub (`github.com/openai/math`)\n* **Editorial Scope:** IN SCOPE (AI Research & Frontier Models)\n* **What is Confirmed:** OpenAI published hundreds of mathematical research preprints generated by an unreleased internal frontier model to a open GitHub repository"
+      },
+      "groundingChunkIndices": [
+        0,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 781,
+        "endIndex": 957,
+        "text": "The release includes machine-checked Lean 4 formalizations for select proofs (e.g., progress toward open problems like the Unique Games Conjecture and Quasi-Riemann Hypothesis)"
+      },
+      "groundingChunkIndices": [
+        0,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 781,
+        "endIndex": 1064,
+        "text": "The release includes machine-checked Lean 4 formalizations for select proofs (e.g., progress toward open problems like the Unique Games Conjecture and Quasi-Riemann Hypothesis), summaries of model reasoning, compute usage metrics (~3 hours equivalent ChatGPT Pro thinking per result)"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 781,
+        "endIndex": 1167,
+        "text": "The release includes machine-checked Lean 4 formalizations for select proofs (e.g., progress toward open problems like the Unique Games Conjecture and Quasi-Riemann Hypothesis), summaries of model reasoning, compute usage metrics (~3 hours equivalent ChatGPT Pro thinking per result), and was developed in consultation with the Institute for Advanced Study's Advisory Group on Math & AI"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1169,
+        "endIndex": 1244,
+        "text": "* **Important Caveats:** The papers represent AI-generated preprints/claims"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1246,
+        "endIndex": 1294,
+        "text": "While automated Lean proofs are machine-verified"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1246,
+        "endIndex": 1436,
+        "text": "While automated Lean proofs are machine-verified, unformalized mathematical expositions still require rigorous human peer review by the math community before being treated as proven theorems"
+      },
+      "groundingChunkIndices": [
+        10,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1482,
+        "endIndex": 1566,
+        "text": "** High-impact story on AI capabilities in formal reasoning and scientific discovery"
+      },
+      "groundingChunkIndices": [
+        0,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1574,
+        "endIndex": 1677,
+        "text": "### Candidate [5]: Mistral Unveils Mistral Large 4 (\"Le Chonk\")\n* **Source:** Mistral AI (`mistral.ai`)"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1574,
+        "endIndex": 1940,
+        "text": "### Candidate [5]: Mistral Unveils Mistral Large 4 (\"Le Chonk\")\n* **Source:** Mistral AI (`mistral.ai`)\n* **Editorial Scope:** IN SCOPE (AI Models & Open Source Infrastructure)\n* **What is Confirmed:** Mistral AI announced **Mistral Large 4 (ML4)**, a 1-trillion parameter natively multimodal Mixture-of-Experts (MoE) model with ~49–52B active parameters per token"
+      },
+      "groundingChunkIndices": [
+        3,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1942,
+        "endIndex": 2010,
+        "text": "The model was trained in Europe on 3,800 NVIDIA Grace Blackwell GPUs"
+      },
+      "groundingChunkIndices": [
+        3,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2012,
+        "endIndex": 2133,
+        "text": "A public preview API is live on Mistral Studio, with open weights scheduled for public release at the end of October 2026"
+      },
+      "groundingChunkIndices": [
+        3,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2135,
+        "endIndex": 2217,
+        "text": "* **Important Caveats:** Weights are not yet downloadable today (preview API only)"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2219,
+        "endIndex": 2317,
+        "text": "Comparative benchmark claims against competing closed and open frontier models are vendor-reported"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2363,
+        "endIndex": 2453,
+        "text": "** Significant release for European open-weight AI sovereignty and frontier infrastructure"
+      },
+      "groundingChunkIndices": [
+        3,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2461,
+        "endIndex": 2579,
+        "text": "### Candidate [6]: OpenAI Decisions API Enters Public Beta\n* **Source:** OpenAI Developer Documentation & Announcement"
+      },
+      "groundingChunkIndices": [
+        18,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2461,
+        "endIndex": 2744,
+        "text": "### Candidate [6]: OpenAI Decisions API Enters Public Beta\n* **Source:** OpenAI Developer Documentation & Announcement\n* **Editorial Scope:** IN SCOPE (AI Developer Platform & APIs)\n* **What is Confirmed:** OpenAI opened public beta access to its **Decisions API** for all developers"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2746,
+        "endIndex": 2871,
+        "text": "Powered by GPT-6 Luna, the specialized API endpoint returns structured choices, probabilities (predicates), and rubric scores"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2873,
+        "endIndex": 2998,
+        "text": "It executes up to 10x faster than standard text generation calls through the Responses API and carries zero output-token fees"
+      },
+      "groundingChunkIndices": [
+        4,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3000,
+        "endIndex": 3212,
+        "text": "* **Important Caveats:** Developer feedback during early testing indicates distinct probability calibration between predicate and choice outputs, as well as separate caching mechanics from standard text inference"
+      },
+      "groundingChunkIndices": [
+        19,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3258,
+        "endIndex": 3363,
+        "text": "** Key product update for enterprise developers building automated agent routing and classification loops"
+      },
+      "groundingChunkIndices": [
+        4,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3371,
+        "endIndex": 3518,
+        "text": "### Candidate [1]: Stuut Raises $52.5M Series B for AI Agent Order-to-Cash Automation\n* **Source:** GlobeNewswire / Insight Partners / SiliconANGLE"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3371,
+        "endIndex": 3812,
+        "text": "### Candidate [1]: Stuut Raises $52.5M Series B for AI Agent Order-to-Cash Automation\n* **Source:** GlobeNewswire / Insight Partners / SiliconANGLE\n* **Editorial Scope:** IN SCOPE (AI Enterprise SaaS & Venture Funding)\n* **What is Confirmed:** Order-to-cash enterprise automation platform **Stuut** raised $52.5M in Series B funding led by Insight Partners, with participation from Andreessen Horowitz (a16z), Microsoft’s M12, and Activant"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3814,
+        "endIndex": 3859,
+        "text": "The round brings total capital raised to $93M"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3861,
+        "endIndex": 3988,
+        "text": "The platform deploys autonomous AI agents to manage enterprise invoicing, cash application, collections, and dispute resolution"
+      },
+      "groundingChunkIndices": [
+        1,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3990,
+        "endIndex": 4134,
+        "text": "* **Important Caveats:** Operational impact metrics (e.g., 40% increased cash flow, 47% DSO reduction) are self-reported vendor customer metrics"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4180,
+        "endIndex": 4224,
+        "text": "** Strong enterprise agentic AI funding deal"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4232,
+        "endIndex": 4364,
+        "text": "### Candidate [4]: Google Launches No-Code \"Playground\" AI Game Creation Platform\n* **Source:** Google Labs / The Verge / 9to5Google"
+      },
+      "groundingChunkIndices": [
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4232,
+        "endIndex": 4554,
+        "text": "### Candidate [4]: Google Launches No-Code \"Playground\" AI Game Creation Platform\n* **Source:** Google Labs / The Verge / 9to5Google\n* **Editorial Scope:** IN SCOPE (Creative AI & No-Code Developer Tools)\n* **What is Confirmed:** Google Labs introduced **Playground**, a browser-based, prompt-driven game creation platform"
+      },
+      "groundingChunkIndices": [
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4556,
+        "endIndex": 4732,
+        "text": "The system uses an integrated harness combining **Gemini 3.8 Flash** (logic/code generation), **Nano Banana** (2D/3D visual textures), and **Lyria** (music and audio synthesis)"
+      },
+      "groundingChunkIndices": [
+        2,
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4734,
+        "endIndex": 4797,
+        "text": "It is currently in public experiment mode for US users aged 18+"
+      },
+      "groundingChunkIndices": [
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4799,
+        "endIndex": 5013,
+        "text": "* **Important Caveats:** Availability is currently restricted by age (18+) and geography (US-only), and the platform is structured as an experimental Google Labs project rather than a full commercial engine release"
+      },
+      "groundingChunkIndices": [
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5059,
+        "endIndex": 5119,
+        "text": "** Relevant consumer-facing generative AI product deployment"
+      },
+      "groundingChunkIndices": [
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5127,
+        "endIndex": 5267,
+        "text": "### Candidate [12]: Micron Taiwan Union Secures Strike Authorization Over Bonus Dispute\n* **Source:** Reuters / Central News Agency (Taiwan)"
+      },
+      "groundingChunkIndices": [
+        6,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5127,
+        "endIndex": 5541,
+        "text": "### Candidate [12]: Micron Taiwan Union Secures Strike Authorization Over Bonus Dispute\n* **Source:** Reuters / Central News Agency (Taiwan)\n* **Editorial Scope:** IN SCOPE (Semiconductor Supply Chain & Labor)\n* **What is Confirmed:** A labor union representing workers at Micron Technology’s Taoyuan plant in Taiwan overwhelmingly voted (83.3% total membership, 99% of voting members) to authorize strike action"
+      },
+      "groundingChunkIndices": [
+        6,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5543,
+        "endIndex": 5688,
+        "text": "Workers are demanding a permanent profit-sharing scheme equal to 15% of operating profits, citing recent profit windfalls in the AI memory sector"
+      },
+      "groundingChunkIndices": [
+        26,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5690,
+        "endIndex": 5812,
+        "text": "* **Important Caveats:** The vote grants legal authority to strike, but an actual work stoppage has not yet been initiated"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5814,
+        "endIndex": 5917,
+        "text": "Negotiations are ongoing ahead of Micron's upcoming board meeting and a scheduled union rally on Oct 19"
+      },
+      "groundingChunkIndices": [
+        26,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5963,
+        "endIndex": 6068,
+        "text": "** High-priority risk event for global High-Bandwidth Memory (HBM) and DRAM supply chains for AI hardware"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6076,
+        "endIndex": 6206,
+        "text": "### Candidate [14]: Elon Musk Clarifies Terafab Operations; Intel Reaffirms Involvement\n* **Source:** Bloomberg / Reuters / Quartz"
+      },
+      "groundingChunkIndices": [
+        7,
+        11,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6076,
+        "endIndex": 6508,
+        "text": "### Candidate [14]: Elon Musk Clarifies Terafab Operations; Intel Reaffirms Involvement\n* **Source:** Bloomberg / Reuters / Quartz\n* **Editorial Scope:** IN SCOPE (Semiconductors & AI Compute Infrastructure)\n* **What is Confirmed:** Elon Musk clarified on X that Tesla and SpaceX will directly build and operate the planned $16.8B Terafab chip manufacturing complex in Grimes County, Texas, ruling out operational management by TSMC"
+      },
+      "groundingChunkIndices": [
+        7,
+        28,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6510,
+        "endIndex": 6653,
+        "text": "Simultaneously, Intel CEO Lip-Bu Tan confirmed to Bloomberg that Intel remains actively engaged as Terafab’s technology and packaging partner"
+      },
+      "groundingChunkIndices": [
+        28,
+        29,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6655,
+        "endIndex": 6862,
+        "text": "* **Important Caveats:** Terafab is a multi-year, highly complex infrastructure project targeting 1 TWh of annual compute; partner obligations and fab construction timelines remain subject to execution risks"
+      },
+      "groundingChunkIndices": [
+        28,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6908,
+        "endIndex": 7011,
+        "text": "** Resolves recent industry speculation surrounding North American semiconductor manufacturing strategy"
+      },
+      "groundingChunkIndices": [
+        7,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7019,
+        "endIndex": 7136,
+        "text": "### Candidate [9]: Venture Firm Disruptive Target $10B Fund for Late-Stage AI Stars\n* **Source:** Wall Street Journal"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7019,
+        "endIndex": 7389,
+        "text": "### Candidate [9]: Venture Firm Disruptive Target $10B Fund for Late-Stage AI Stars\n* **Source:** Wall Street Journal\n* **Editorial Scope:** IN SCOPE (Venture Capital & AI Financing)\n* **What is Confirmed:** WSJ reported that Dallas-based VC firm Disruptive is seeking up to $10B for a massive late-stage venture fund and has already secured $7.5B in capital commitments"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7391,
+        "endIndex": 7485,
+        "text": "The firm previously funded AI inference provider Groq and open-weights developer Reflection AI"
+      },
+      "groundingChunkIndices": [
+        5,
+        30
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7487,
+        "endIndex": 7592,
+        "text": "* **Important Caveats:** Based on market sources; the fund has not reached its final close target of $10B"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7638,
+        "endIndex": 7728,
+        "text": "** Highlights ongoing megafund concentration in AI compute and foundation model ecosystems"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7736,
+        "endIndex": 7844,
+        "text": "### Candidate [17]: SAP-Backed Tereina Embedded Payments Go Live in SAP ERP\n* **Source:** Reuters / CFO Dive"
+      },
+      "groundingChunkIndices": [
+        8,
+        31
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7736,
+        "endIndex": 8085,
+        "text": "### Candidate [17]: SAP-Backed Tereina Embedded Payments Go Live in SAP ERP\n* **Source:** Reuters / CFO Dive\n* **Editorial Scope:** IN SCOPE (Enterprise Software, FinTech & Digital Assets)\n* **What is Confirmed:** Tereina, a payments company backed and owned by SAP, launched **SAP Pay**, an embedded transaction layer operating inside SAP Cloud ERP"
+      },
+      "groundingChunkIndices": [
+        8,
+        32
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8087,
+        "endIndex": 8268,
+        "text": "The feature allows enterprise customers to execute cross-border payouts directly within ERP workflows using traditional bank rails as well as USDC stablecoins via Circle integration"
+      },
+      "groundingChunkIndices": [
+        8,
+        32
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8270,
+        "endIndex": 8401,
+        "text": "* **Important Caveats:** Cross-border stablecoin execution availability depends on regulatory compliance across supported corridors"
+      },
+      "groundingChunkIndices": [
+        32
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8447,
+        "endIndex": 8534,
+        "text": "** Significant milestone for embedded B2B payments and corporate digital asset adoption"
+      },
+      "groundingChunkIndices": [
+        8,
+        32
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8542,
+        "endIndex": 8659,
+        "text": "### Candidate [19]: ElevenLabs Commits 'Hundreds of Millions' to India AI Expansion\n* **Source:** Reuters / CNBC TV18"
+      },
+      "groundingChunkIndices": [
+        9,
+        33
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8542,
+        "endIndex": 8884,
+        "text": "### Candidate [19]: ElevenLabs Commits 'Hundreds of Millions' to India AI Expansion\n* **Source:** Reuters / CNBC TV18\n* **Editorial Scope:** IN SCOPE (Generative Voice AI & Global Tech Expansion)\n* **What is Confirmed:** Voice AI leader ElevenLabs (recently valued at $22B) announced plans to invest \"hundreds of millions of dollars\" in India"
+      },
+      "groundingChunkIndices": [
+        9,
+        34
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8886,
+        "endIndex": 9053,
+        "text": "The expansion focuses on hiring a 100-member local team, developing specialized Indic language models across 22 scheduled languages, and servicing enterprise customers"
+      },
+      "groundingChunkIndices": [
+        33,
+        35
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9055,
+        "endIndex": 9183,
+        "text": "* **Important Caveats:** Specific capital breakdown and precise multi-year deployment schedules were not detailed by the company"
+      },
+      "groundingChunkIndices": [
+        35
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9229,
+        "endIndex": 9300,
+        "text": "** Strong international market growth story in emerging market Voice AI"
+      },
+      "groundingChunkIndices": [
+        9,
+        35
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Tereina\" SAP payment service Reuters",
+    "\"Micron\" union Taiwan strike \"Taoyuan\" Reuters",
+    "\"Stuut\" Series B Insight \"52.5\" OR \"order-to-cash\"",
+    "\"OpenAI\" \"sharing AI progress in mathematics\" OR \"github.com/openai/math\"",
+    "Google Playground \"game creation\" \"Gemini\" \"Nano Banana\" OR \"Lyria\"",
+    "\"OpenAI\" \"Decisions API\" OR \"guides/decisions\" developers.openai.com",
+    "\"Disruptive\" fund \"10 billion\" OR \"7.5 billion\" Groq \"Reflection AI\" WSJ",
+    "\"Mistral Large 4\" OR \"mistral-large-4\" mistral.ai",
+    "\"PS5\" modders jailbreak \"Push Square\" OR \"AI tools\" emulators",
+    "\"ElevenLabs\" invest \"India\" Reuters",
+    "\"Elon Musk\" Terafab chipmaking TSMC Bloomberg"
+  ]
+}

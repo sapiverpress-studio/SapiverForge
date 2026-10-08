@@ -6,6 +6,11 @@ on:
       - 'scripts/build-shop-page.mjs'
       - 'scripts/apply-trust-first-site.mjs'
       - 'test/shop-page-contract.mjs'
+      - 'test/etsy-prints-contract.mjs'
+      - 'lib/etsy-prints.mjs'
+      - 'netlify/functions/etsy-prints.mjs'
+      - 'scripts/etsy-prints-client.js'
+      - '.github/workflows/etsy-prints-check.yml'
       - '.github/workflows/test-shop.yml'
   workflow_dispatch:
 jobs:
@@ -20,6 +25,10 @@ jobs:
             data/shop-products.json
             scripts/apply-trust-first-site.mjs
             scripts/build-shop-page.mjs
+            scripts/etsy-prints-client.js
+            lib/etsy-prints.mjs
+            netlify/functions/etsy-prints.mjs
+            test/etsy-prints-contract.mjs
             test/shop-page-contract.mjs
           sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v4
@@ -29,3 +38,5 @@ jobs:
         run: mkdir -p public && node scripts/apply-trust-first-site.mjs
       - name: Validate retailer links and published products
         run: node test/shop-page-contract.mjs
+      - name: Test Etsy API read-only logic and Netlify responses
+        run: node test/etsy-prints-contract.mjs

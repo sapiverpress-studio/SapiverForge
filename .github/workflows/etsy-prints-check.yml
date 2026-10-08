@@ -1,0 +1,45 @@
+name: SapiverPrints daily Etsy check
+
+on:
+  schedule:
+    - cron: '15 5 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/etsy-prints-check.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sapiverprints-public-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify credentials and check exact SapiverPrints active inventory
+        env:
+          ETSY_PRINTS_KEYSTRING: ${{ secrets.ETSY_PRINTS_KEYSTRING }}
+          ETSY_PRINTS_SHARED_SECRET: ${{ secrets.ETSY_PRINTS_SHARED_SECRET }}
+        run: node scripts/check-etsy-prints.mjs
+      - name: Commit changed listing IDs only
+        run: |
+          git add data/etsy-active-listing-ids.json
+          if git diff --cached --quiet; then
+            echo "No listing membership changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(shop): record changed SapiverPrints active listing IDs"
+          git push origin HEAD:main

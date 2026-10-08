@@ -61,6 +61,7 @@ function header() {
     <p>Human-led. AI-empowered.</p>
     <nav aria-label="Site links">
       <a href="/">Home</a>
+      <a href="/shop/">Shop</a>
       <a href="/daily-brief/">Daily Brief</a>
       <a href="/podcast/">Podcast</a>
       <a href="/learn/">Sapiver Learn</a>
@@ -75,7 +76,7 @@ function footer() {
   return `<footer class="site-footer">
     <p><strong>Sapiver Press</strong> · Human-led. AI-empowered.</p>
     <p>Useful publishing, learning, audio and practical experiments — shared clearly and released with human judgement.</p>
-    <p><a href="/daily-brief/">Daily Brief</a> · <a href="/podcast/">Podcast</a> · <a href="/learn/">Sapiver Learn</a> · <a href="/parents/">AI Inquisitive Parents</a> · <a href="/puzzles/">Sapiver Puzzles</a> · <a href="/resources/">Resources</a></p>
+    <p><a href="/shop/">Shop</a> · <a href="/daily-brief/">Daily Brief</a> · <a href="/podcast/">Podcast</a> · <a href="/learn/">Sapiver Learn</a> · <a href="/parents/">AI Inquisitive Parents</a> · <a href="/puzzles/">Sapiver Puzzles</a> · <a href="/resources/">Resources</a></p>
   </footer>`;
 }
 
@@ -100,6 +101,7 @@ ${header()}
     <p class="eyebrow">Explore</p>
     <h2>Start with what interests you.</h2>
     <div class="trust-grid">
+      <article class="trust-card"><h3>Shop prints &amp; books</h3><p>Explore Sapiver Prints educational posters on Etsy and our children’s books on Amazon.</p><a class="text-link" href="/shop/">Browse our shop</a></article>
       <article class="trust-card"><h3>Daily Brief</h3><p>Checked AI stories, practical context and a deeper daily story without the hype.</p><a class="text-link" href="/daily-brief/">Open the Daily Brief</a></article>
       <article class="trust-card"><h3>Sapiver Forge AI Briefing</h3><p>Short audio episodes for when reading is not convenient.</p><a class="text-link" href="/podcast/">Open the podcast</a></article>
       <article class="trust-card"><h3>Sapiver Learn</h3><p>Short daily lessons that build practical AI understanding from the foundations upward.</p><a class="text-link" href="/learn/">Open Sapiver Learn</a></article>
@@ -119,9 +121,9 @@ ${header()}
   <section class="posts">
     <p class="eyebrow">Work in progress</p>
     <h2>Some things are worth showing before they are worth selling.</h2>
-    <p class="quiet-note">Two projects I care about most are still being developed. They are not being presented here as finished products or pushed through a sales funnel.</p>
+    <p class="quiet-note">Some of our companion experiences and practical tools are still in development. Published books and available prints can be found in the shop.</p>
     <div class="wip-grid">
-      <article class="wip-card"><span class="status">In development</span><h3>Hen &amp; Bea’s Music House</h3><p>A story-led music-learning book and companion experience for children and grown-ups.</p></article>
+      <article class="wip-card"><span class="status">Companion website developing</span><h3>Hen &amp; Bea’s Music House</h3><p>The book is available on Amazon; the interactive companion website continues to grow.</p><p><a class="text-link" href="/shop/#amazon">Browse the book</a></p></article>
       <article class="wip-card"><span class="status">In testing</span><h3>Drawing → DXF</h3><p>A practical manufacturing workflow for turning customer drawings into usable digital drawing and DXF packs.</p></article>
     </div>
   </section>
@@ -237,6 +239,7 @@ for (const required of [
   'href="/learn/"',
   'href="/parents/"',
   'href="/puzzles/"',
+  'href="/shop/"',
   "SAPI_PUZZLES_START",
   "instagram.com/sapiverpress",
   "tiktok.com/@sapiver.press",
@@ -246,4 +249,5 @@ for (const required of [
   if (!home.includes(required)) throw new Error(`Trust-first homepage is missing required item: ${required}`);
 }
 
-console.log("Applied Sapiver Press trust-first website presentation; Gate sales references removed from public HTML.");
+await import("./build-shop-page.mjs");
+console.log("Applied Sapiver Press trust-first website presentation and updated Shop page.");

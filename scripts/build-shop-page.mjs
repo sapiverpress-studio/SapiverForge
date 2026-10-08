@@ -25,13 +25,14 @@ const html = [
 '<header class="site-header"><a class="brand" href="/">Sapiver Press</a><p>Human-led. AI-empowered.</p><nav aria-label="Site links"><a href="/">Home</a><a href="/shop/" aria-current="page">Shop</a><a href="/daily-brief/">Daily Brief</a><a href="/podcast/">Podcast</a><a href="/learn/">Sapiver Learn</a><a href="/parents/">AI Inquisitive Parents</a><a href="/puzzles/">Sapiver Puzzles</a><a href="/resources/">Resources</a></nav></header>',
 '<main class="content"><section class="hero"><p class="eyebrow">Sapiver Press shop</p><h1>Educational prints and children’s books</h1><p>Browse our Sapiver Prints collections and story-led books. Orders are placed directly with Etsy or Amazon.</p><div class="shop-categories"><a class="button" href="#etsy">Etsy posters</a><a class="button button-secondary" href="#amazon">Amazon books</a></div></section>',
 '<section class="shop-section" id="etsy"><p class="eyebrow">Sapiver Prints</p><h2>Posters &amp; prints · Etsy</h2><div class="shop-store"><div><strong>Shop Sapiver Prints</strong><p>Find current designs, sizes and prices in our Etsy shop.</p></div><a class="button" href="'+esc(data.etsyShopUrl)+'" target="_blank" rel="noopener noreferrer">Visit Etsy shop ↗</a></div>',
- etsy.length ? '<h3>Available individual prints</h3>'+grid(etsy) : '<p class="shop-note">Individual poster links and photographs will be added here as they are confirmed. Browse our Etsy shop for the latest available prints.</p>',
+ '<div id="etsy-live" aria-live="polite"><p class="shop-note">Loading current products from Etsy…</p></div>',
 '</section><section class="shop-section" id="amazon"><p class="eyebrow">Sapiver Press books</p><h2>Children’s books · Amazon KDP</h2><p>Our books are sold through Amazon.</p>',
  grid(kdp),
 '</section><section class="shop-section"><h2>Ordering and delivery</h2><p>Follow a product link to complete your purchase on Etsy or Amazon. The retailer displays the final price, delivery details and current availability.</p></section></main>',
-'<footer class="site-footer"><p><strong>Sapiver Press</strong> · Human-led. AI-empowered.</p><p><a href="/">Home</a> · <a href="/shop/">Shop</a> · <a href="/resources/">Resources</a></p></footer></body></html>'
+'<footer class="site-footer"><p><strong>Sapiver Press</strong> · Human-led. AI-empowered.</p><p><a href="/">Home</a> · <a href="/shop/">Shop</a> · <a href="/resources/">Resources</a></p></footer><script type="module" src="/shop/etsy-prints-client.js"></script></body></html>'
 ].join('\n');
 const output = path.join(root,'public','shop','index.html');
 fs.mkdirSync(path.dirname(output), {recursive:true});
 fs.writeFileSync(output,html,'utf8');
+fs.copyFileSync(path.join(root,'scripts','etsy-prints-client.js'), path.join(root,'public','shop','etsy-prints-client.js'));
 console.log('Built Shop: '+etsy.length+' verified Etsy product(s), '+kdp.length+' Amazon book(s).');

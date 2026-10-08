@@ -5,8 +5,8 @@ export default async function handler(request) {
   if (request.method !== 'GET') return new Response('Method not allowed', { status: 405, headers: { Allow: 'GET' } });
   try {
     const data = await loadSapiverPrints({
-      keystring: process.env.ETSY_PRINTS_KEYSTRING,
-      sharedSecret: process.env.ETSY_PRINTS_SHARED_SECRET
+      keystring: typeof Netlify === 'undefined' ? process.env.ETSY_PRINTS_KEYSTRING : Netlify.env.get('ETSY_PRINTS_KEYSTRING'),
+      sharedSecret: typeof Netlify === 'undefined' ? process.env.ETSY_PRINTS_SHARED_SECRET : Netlify.env.get('ETSY_PRINTS_SHARED_SECRET')
     });
     // Successful responses are fresh for five minutes (well under Etsy's six-hour maximum).
     return new Response(JSON.stringify({shop: data.shop, checkedAt: data.checkedAt, items: data.items}), {

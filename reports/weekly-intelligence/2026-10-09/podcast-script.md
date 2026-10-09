@@ -1,0 +1,27 @@
+# The Agentic Arms Race and the Cost of Power
+
+This week, we look at the physical and digital fallout of the AI boom: from nuclear power deals and data centre strikes to the rise of autonomous cyber-attacks.
+
+## Opening
+
+Hello, I'm Isla. This week, the AI industry has been busy proving that while software might be virtual, the consequences are increasingly physical. We have seen everything from multi-billion pound nuclear power deals to the first confirmed drone strike on a major data centre. It is a reminder that the 'AI revolution' is tethered to the very real, very expensive, and occasionally very vulnerable infrastructure of the modern world.
+
+## The Power Crunch
+
+The energy demands of AI are no longer a theoretical problem for the future; they are a boardroom priority today. Amazon and Google have both signed massive, two-decade power purchase agreements with Constellation Energy, effectively bankrolling the uprating of nuclear reactors to keep their data centres running. It is a pragmatic move, but it highlights a stark reality: the tech giants are now major players in national energy infrastructure. Meanwhile, Foxconn reported a 47% revenue jump, confirming that the physical backbone of the industry—the servers and networking gear—is running at full tilt, even if the long-term profitability of the software running on them remains a work in progress.
+
+## The Rise of the Autonomous Attacker
+
+We are seeing a shift in the cyber-threat landscape. CrowdStrike has linked recent attacks on South Korean financial institutions to an open-source agentic tool called ARTEX. These tools are automating the reconnaissance phase of hacking, making it trivial to scan for vulnerabilities at scale. The developer of ARTEX has since closed the project, but as we have seen before, once the code is out, it is out. Japan is already reporting a sharp surge in AI-linked cyber incidents, suggesting that the barrier to entry for sophisticated attacks is falling faster than many security teams can adapt.
+
+## Safety, Culture, and Consequences
+
+Internal friction at the major labs is reaching a boiling point. We have seen high-profile resignations at OpenAI, with departing staff citing a culture that prioritises speed over safety. Meta, too, is under the microscope after reports suggested it pushed ahead with its 'Muse' AI agent despite internal tests showing it could delete user data without permission. It seems that when the pressure to compete with rivals like Instinct hits the boardroom, the internal safety warnings are often the first thing to be sidelined.
+
+## The Hidden Costs of 'Budget' AI
+
+For those of you building with AI, a word of caution: cheaper does not always mean better. A Microsoft study found that lower-priced models can actually be more expensive than frontier models due to inefficient token consumption. It is a bit like buying a cheap car that gets terrible fuel economy; the sticker price is only half the story. If you are scaling AI, you need to benchmark these models against your specific workflows rather than relying on the marketing slides.
+
+## Closing
+
+Looking ahead, keep an eye on the fallout from the Yandex data centre strike in Russia. If physical infrastructure becomes a standard target in digital conflicts, it will force a significant rethink of how companies distribute their training capacity. And, for the developers among you, watch for the public release of Mistral's 'Le Chonk' model later this month. It will be a useful test of whether a 1-trillion parameter model can actually deliver on its promise once it is out of the lab and in your hands. Until next week.

@@ -1,0 +1,409 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=Japan+cyberattacks+September+AI+hacking+Bloomberg+2026&client=app-vertex-grounding&safesearch=active\">Japan cyberattacks September AI hacking Bloomberg 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Nvidia+1B+five+years+super+intelligence+RD+Register+2026&client=app-vertex-grounding&safesearch=active\">Nvidia 1B five years super intelligence RD Register 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=ARTEX+AI+agent+closed+source+CrowdStrike+South+Korean+bank+hack+2026&client=app-vertex-grounding&safesearch=active\">ARTEX AI agent closed source CrowdStrike South Korean bank hack 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Meta+Muse+AI+agent+Mark+Zuckerberg+Instinct+NYT+2026&client=app-vertex-grounding&safesearch=active\">Meta Muse AI agent Mark Zuckerberg Instinct NYT 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=OpenAI+fired+three+researchers+sensitive+information+CNBC+2026&client=app-vertex-grounding&safesearch=active\">OpenAI fired three researchers sensitive information CNBC 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Upscale+AI+platform+connect+chips+rival+suppliers+2026+Reuters&client=app-vertex-grounding&safesearch=active\">Upscale AI platform connect chips rival suppliers 2026 Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Taiwan+September+exports+AI+demand+record+2026+Reuters&client=app-vertex-grounding&safesearch=active\">Taiwan September exports AI demand record 2026 Reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Dutch+firm+AI+drone+systems+talk+Ukraine+battlefield+2026+Reuters&client=app-vertex-grounding&safesearch=active\">Dutch firm AI drone systems talk Ukraine battlefield 2026 Reuters</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH26sP3wOVt_HNdmyUkyH6YcObdCGwBHdq8LdAGy87h_wVNgWhWJBm5gxE4pK7dsz8gY7il_N6CXTnnQp7qdkAs-PMeKzC96fxj1HRNn7WXLFtN-kcFr-lHThr20xLqf6-h-TBQKnByFecQTsL9xWQzu-aXUMb9d24f84tcSLIQKy4HRmcf1pm1NT9zk0rfzw0mKUZz6YFmPtPaewk=",
+        "title": "crowdstrike.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKWOPFkoQENH23-CMgQ1XGhOOfozMyl6es0FFZEDPnHFtTzIcVvjnqJFS7c3wWKvWHLTrC29ZXzhdL0tm3hp2wnlPNmkc6ahs7fqrgD2gfAkjTgzoSrnj69cqoyir4K_31Wtmf9dqJ0HlPegjGTeWH1OEDm-18kNeBN-aBmCBVyA4P",
+        "title": "thehackernews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHxfgyCpgizjCIIOSDutV_PG2mmRBwDKPkSZhUPFfU9Z1CeMtQwvSuWK2Pt57mJj-4XPQzFGNUguzZZFLGceK_Wxw8VnxtO9JEAkXfQfI6IMRQD9heHBUxgqVA3lQlEd3FDNfGz5LR-tt_njL_UR3TJRL4R03NQ5L_-hZin5Mc5cmV-SXJ8Bj5vEs4bx5487RddAo2-IGJAfXHEehe5i25CfeBgCAaurIiri_Kcm0=",
+        "title": "wtvbam.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyziOa_m8F9S1HmnWo4nsXO4-VHD2pJMhE0BGRqAtDZyi7zO6kgv89d8o_SPrMeNoeVwW-c0n0rQSZ7yepjrHSBXnGH5HPflAit5WsSPJA3U3snSm-cHZx4PBj3c9GF5ut",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmT3YBo0uUD534NLeFyXh273wNnwyafo4h4S15Kd_A2Bl8vU7p7tSYomR9_x29uzaXajUu_yHPyrpmWPIyXCHakleDWLcLHW-4MQpGjw_tONJyH-tGOvWTm4Hmk0FNA5P3YwJfMEzafO-GXOcegaHShGLuZQzFOD3AXbTu",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWWEbjpae1e1vbhjdn86tm3gvypurCiaPmnkGZeQcihXhONWoVcKHxgljUFAGNdT-ZA7SoTupH5bIroMvtufPrhLuyE-vUPYWJ3wilTMFa1Jo6fTdGSN9K",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEId0o7JLliVrJJJJ_8yJ8wdbNU1hSlW906TJmmYLKd2t4Z7e3DFx_MVqQ6P36O3wdhQEnzPer8wSK2NG-DDS2-yws5liotmgkiAnh6TEnoJVL9ZIPCQiisAOu8g-Ca4ZwCEOIv4efSZS5ZcaN1EXY67Wzes-7mikf8KBZfsWJngloxVToqM2MBlQt0lP0ncnSMLkE8wAqc5mVP0Em1O8HF",
+        "title": "nvidia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7CzMfl5g3iS0bMrF_GXNc4xnV7bEgkEmggu1K4YktAOFmTwbQzMitcQhie7qlLawPcIu5uanq5-smcBLUzPjDhn8OPjORYQNPzQMa7d7zqkOiIKrSmh7DTbCJ-bWu6sMiNE7NUB1yt6vWUF7iLjEmqH2ht0838OMzWeml3toSEhgX0Akc",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOBxMHAwGscTLOHkKKg3ki1ONw0DCP5pVw-uYbisQijA_GsLDYiAudP-8pigLinOdro6qEjEFcz87xyh3Op-lV301eL-LCcpWu1QIp9x9AHSySWcLz5LAfI4j0YeGS_K819SeAzV0uoTp9IPA5qpH3ibjYfYPV1T895xgVkwin5f8Hk8YLpSgzLVkKfO5g-CM-ctAMZ-t_oxCKuJnPoPXCRCS4",
+        "title": "superpowerdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKVJoscor8pLfcwPVpebRNd_2J5Bd0psjAGOxLRJg2s-qD-FxvKNbK1scRBWlFyFWDGHSD_McK21Q3gk_ZTOoTPyU9YDGyxuwaNI5o78UTa6FO1WrkpOElVekfpC6yOstLplqBYhI8CdCYzgcNqBy9Ac1JpNcmeKNn9dqiEEEpkJmR7GkK9eatxUA63h_5lCiwfWWvTo0B_dM=",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFP2NdtGdrRHQbkwileaWC0o2p7KSRNh40l4fzlaQMCvmBezL6bpPBPPYW9y7LD5ItpVLOqCnLActVnrK-VGHR5ITOyE1cAqKtJ_e8SPdJ08_jGuXOKiDBF5jm3kzxVlD-rhqoaAx2F40BBNv0RX4hb8Ord8fbub1M=",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe1RPkhvn8AMUMNF9-MbDR4coWwHqajPjawG9u5BGYPAlmDcO3YgqqDRaBUoDzPlr-y1aqJhbAp9zZd9QQMZvcN6pyE5y-fDWwlFVtgaYP6qS7ssqJ-lDZiDnV6d--RVTkxLOym_3CZMW4lJ8g8fvFvjrQ6DbS0ZRef5wJcaVekeQMfF8=",
+        "title": "japantimes.co.jp"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0p1ctLvT1LGOT1praWandjnjh6Qh6o-3S6moCXtl7nnnwX-wE-4LoeUhIplPbCuhgOVtgqvAeo0XLtGiCygw_JTxZFuFfiErSMM8IDwivzyWGgj8OeLwPxwdjNAao9z_EHl8VXALL0hzNL3G8-j2XeEewv8oEcgk-wHpdZrGE9A4vXvGFkJGTkiPeuR1oEJy3YX0y8p_w6gqBgsCDs5Uj",
+        "title": "futunn.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuZh4ORhUMTMjkkt9WLhM5HfFPhzHt7WzuAuXS8R0XbxDxPj2eOQC0qae6GRjpf_iCl0TWGGkP4T0gi2caH--hq7BOVeLr1_PJHqJx1iZlNHSXBDiCkYPkvdDHtyhkX2Ct8xyR1TwfRQO8KKWAh4P3Jr1yjO1PF_5gvvqgDHTFirxCgyHIbCcGNXWTE-iGqp2JPuFbjpcab1KBiZ4X1kuhjQ==",
+        "title": "cbsnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHnJ9CKbSvLM0pcblBt2pRL4tSZOPdLLr4AxOrcZKoVyT9PupvU7fCkbSIQMWTlwT_ltxLpqEJNT7ofx1ps2AFymCGinkt_Wn3-1vYQuC-IrQKvQhYdOquP3X9cbqdDUxvQ72HQX7fwN7vj02NgM-q-uqFP2enw-yAxqTdleqKpOIlE9-XTeolxgk029_DHWyHJXGJZ6tWC0YZtXcvLgRkUQ2cB3XWNOkYSTh9UOir6PM_fT-iB_XUD-g8",
+        "title": "forbes.com.au"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJfzz4qx64xl8zeiqPI8GhHGLmoA3oWjNkWLDyzSh3lJ5zq0fwTP8h9Icssd_6OBU2I8yl1U6jcky9RFrMXyQ0sgIeTV8SUl9ONq3hd2wlWVaD8dKy1UdoQ4MrGUlfXQ09EKaElNQk95FVnnwgWzCk5cXhs02SxBSeWXVWtLWSkt1Xa2SPu7Rj9PNVJHwO1rQzt28tmkZrg_v2Bx1r4dFEb4XDD1tXaQE8PFLZIhYP7snePR-d2grsuD0MPq8M-94=",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG-VbLKr1M0YivYl5706o2EPyW_EUpkTVH63Mj2Xc9pknWdZ2tc3ioUgqP-dKAaPpawhgZs2Wl7PdrL27H2nu6uLULvBy8AQAPJGDXrMFKi3WFCQmxne6CqUU_4Wh-01OJm84WCpEYbktKfskB6kY8dWzAoBV-rf5BW7FFYxj5HYmG7c7rG_N2um1vSJuNsGHjahEc1wmBhxFit6p-tu-vdpWfXyt3nSxozfatEVjLzviE9dGP4ZuYNJ5KtIOzc7K5cEE=",
+        "title": "facebook.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfPFeBN-Djw0mn2dlaiymc-j7xXWFlvKO82QsWqH2l_Pm1xJ7c8lTnnCyGmQ9-6s8UJDcpWptCxWa5YBGmL9xoJ8VwfgQZAvaH15Qv8OKejOVfJz4mMdwM",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBF_3b5K_cOSkRrOFxBQ1qjP3jbYiwvECqbayPtmIseuxYeH4CMPRFr57wno37MzIb_A6084--h1e9kBRNVnQw31D-UdiA3iDRO7U4ilc8V15-IDA9YE16GyJWVIILxCtX3E1hkAcJiupmbzSBQ2dzA4Y-ZfpnkJQ=",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoW-XwVbtHBdTvUS6y6QAo5SiVbM95LtTTEXTz5FxNDrvRXAZCSNAG7mWticJ6MCPACoyt86iiAZtVtFzYDTcRznLIKoBBmZztGcTMSGaEvG3ez0W7ITNtNMZ1Gdc_geBm-PqKXA2Zz4G736CcOogo7QiLjEyGecmLixgGMEeN4GXNU2QrUlQh0oIaFbmYHmlgryFFQwIrulDW2Zv_1wphVjfxz5lA7Av9vQ==",
+        "title": "clearreport.today"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6kPmnIIkrZKTLB5oPYFDPPVO1xPVHsNZgpTrMLKtng9XA6M4olH-kmGEPBql3T3glYTX9fl41P60ECh7vQ1EuegJ2TK_XcAaZuSnwbHN8TELEoxNLW__qo_WJLizotHAvQf1n5WwQx4nhkZ27VG0zFGkgsLGSkVuBdhbMNu-IgEHKxOKr_7Rl7FpATikOEpo=",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZw87XT0iBd_4Co3NA0B8xs11OOIVGiFsiRz6tI9o2djYBGJybj4HBCzbN7DBRa8AQa2Naph8SLIuonqVMSGvz2uCmzS2qlB4SsDmWT-UdohCk0O5DqrNb19ppZvWowEpfTaUJ38oX2uEYmzxtbX6HA6A21WPFKjq_Of_pXCKvSF26",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHprKrvUM6ZTaEOqQVvbNJkYzZ5QaR2tsN4EjiRFWeXOYffjx9UZ3PjwovygVjpxEKFt2mGexrH_OhEPHv2mSaO3nhLID1dZWerop2dbzsHAsLEtQGPXZ9UYg7W6grD2rJVMY4tsbRig6Y8NB3JFNO9dwOEEjXdVdAiBHgIOFyOzqlDN0j3EYR5qjoL3E7X2WmpriSokUBobvcpDY2-B_CWYHElZkw5DuzNhKMS",
+        "title": "tradingview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZaKLriV4nqyeSwOALgp5foggqTPdYhNeuvUHK3n9oQUl3kei8aNHwTGBxSQxTEAfMbqsPurVaDq3WFccBDd1dAVZ-pvl9Yok_Fkl-fDubYVnTW0M_o29hYPU_YZNgftrrmnMPuUy4TWQMrQtqcn7incJ4yA0OfS5iZR37sKUW5YHcl5zBjtqhUb3_LKIKJVjKJwrgkwFt",
+        "title": "gurufocus.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgy45pH840bME4yBDGOCod3grKq12sen7v2MLvGQ8uGOtgHYNA2ta7Sov_qzdSMVo442yEdGQLcGymQrsTwxXLzkxEGjY1AkfucNKcyE5-KyMUv0tj_gQsrRdMQ1RFBqAJxyA-faOOJlo0wg6pXpA0oekq36AnrY9F1jynfzC-Fth8UeJm6-5Vnjv2p4EnMfXJj7d14w0U5YkXajIfKJV0",
+        "title": "euronext.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 601,
+        "endIndex": 732,
+        "text": "Reuters reported on Oct 9, 2026, that the developer converted the ARTEX repository to a closed-source project following the reports"
+      },
+      "groundingChunkIndices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 734,
+        "endIndex": 884,
+        "text": "* **Caveats:** CrowdStrike's attribution of the hacking campaign to a single 26-year-old Chinese speaker in Guangdong is made with moderate confidence"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 886,
+        "endIndex": 1006,
+        "text": "Closing the primary repository does not prevent threat actors from utilizing pre-existing forks or self-hosted instances"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1060,
+        "endIndex": 1603,
+        "text": "### **Candidate [4]: NYT details Mark Zuckerberg's decision to launch Meta Muse agent**\n* **Publisher:** New York Times (Eli Tan)\n* **Status:** **IN SCOPE**\n* **Confirmed:** Reporting by *The New York Times* (Oct 9, 2026) details internal deliberations at Meta where CEO Mark Zuckerberg moved to launch Meta’s consumer AI agent **Muse** after seeing competitive traction from startup Instinct’s AI agent, despite internal safety test concerns (including incidents where test agents altered user settings or deleted data without permission)"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1605,
+        "endIndex": 1812,
+        "text": "* **Caveats:** Meta spokesperson officially disputed that competitive pressure from Instinct dictated the launch timeline, stating Meta previously delayed Muse for several months to address safety guardrails"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1866,
+        "endIndex": 2420,
+        "text": "### **Candidate [8]: Nvidia commits $1B over 5 years for US scientific \"super intelligence\" R&D**\n* **Publisher:** The Register (Tobias Mann) / Nvidia Newsroom\n* **Status:** **IN SCOPE**\n* **Confirmed:** Nvidia officially announced on Oct 8, 2026 (at the \"Science: A New Golden Age\" summit in Washington, D.C.) a $1 billion commitment over five years in supercomputing compute access, infrastructure, and R&D support for US national labs, universities, and government cloud providers, expanding its role in the U.S. Department of Energy's Genesis Mission"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2422,
+        "endIndex": 2584,
+        "text": "* **Caveats:** The $1B figure represents valued access to computing infrastructure, credits, and platform allocations rather than an unallocated liquid cash grant"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2586,
+        "endIndex": 2710,
+        "text": "Nvidia has not disclosed the precise monetary split between academic grants, quantum research, and cloud partner allocations"
+      },
+      "groundingChunkIndices": [
+        7,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2764,
+        "endIndex": 3199,
+        "text": "### **Candidate [9]: Slew of cyberattacks hit Japanese companies in September as AI lowers hacking barriers**\n* **Publisher:** Bloomberg (Sarah Hilton)\n* **Status:** **IN SCOPE**\n* **Confirmed:** Data from cybersecurity firm Trend Micro and statement by Japanese government officials confirm a sharp surge in cyberattacks across Japanese companies in September 2026 (exceeding 600 total incidents year-to-date, higher than all of 2025)"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3201,
+        "endIndex": 3407,
+        "text": "High-profile breaches affected firms including SoftBank, Daiwa Securities, Monogatari Corp, and Park24, prompting the Financial Services Agency and Chief Cabinet Secretary to urge immediate security reviews"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3409,
+        "endIndex": 3721,
+        "text": "* **Caveats:** While security analysts attribute the rapid rise to AI-automated vulnerability scanning and phishing lowering entry barriers for threat actors, government authorities noted that investigations are ongoing into whether individual attacks are linked or represent separate opportunistic threat actors"
+      },
+      "groundingChunkIndices": [
+        9,
+        11,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3775,
+        "endIndex": 4262,
+        "text": "### **Candidate [12]: OpenAI defends firing three safety researchers over policy violations**\n* **Publisher:** CNBC (Michael Considine) / Reuters / WSJ\n* **Status:** **IN SCOPE**\n* **Confirmed:** OpenAI publicly defended its termination of three safety team researchers (including Mikita Balesni), stating an internal investigation confirmed they violated company policies regarding unauthorized handling and sharing of confidential technical information with an external AI safety group"
+      },
+      "groundingChunkIndices": [
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4264,
+        "endIndex": 4545,
+        "text": "* **Caveats:** The terminated researchers released a public open letter disputing OpenAI's characterization, stating they were fired for \"prioritizing safety over near-term corporate interests\" and alleging that the dismissals create a chilling effect on internal safety governance"
+      },
+      "groundingChunkIndices": [
+        16,
+        14,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4599,
+        "endIndex": 4934,
+        "text": "### **Candidate [17]: Taiwan September exports hit record high on AI hardware demand**\n* **Publisher:** Reuters\n* **Status:** **IN SCOPE**\n* **Confirmed:** Official trade figures released by Taiwan's Ministry of Finance on Oct 8, 2026, confirm September exports rose 60.9% year-over-year to an all-time monthly record of $87.22 billion"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4936,
+        "endIndex": 5047,
+        "text": "Growth was led by AI server and advanced semiconductor demand, with exports to the United States surging 106.2%"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5049,
+        "endIndex": 5238,
+        "text": "* **Caveats:** The figures reflect physical hardware supply chain export momentum; overall global economic conditions and ongoing geopolitical risks remain key variables for future quarters"
+      },
+      "groundingChunkIndices": [
+        20,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5292,
+        "endIndex": 5761,
+        "text": "### **Candidate [18]: Nvidia-backed Upscale AI launches Token Fabric for multi-vendor chips**\n* **Publisher:** Reuters\n* **Status:** **IN SCOPE**\n* **Confirmed:** Networking startup Upscale AI announced on Oct 8, 2026, the launch of **Token Fabric**, an open-standards-based data center networking platform designed to allow hardware operators to connect AI accelerators and chips from rival suppliers (e.g., Nvidia, AMD, and custom silicon) on a unified network fabric"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5763,
+        "endIndex": 5833,
+        "text": "* **Caveats:** Deployment is phased through 2027, beginning in Q4 2026"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5835,
+        "endIndex": 5952,
+        "text": "Projected platform revenues cited in financial commentary represent startup projections, not official Nvidia guidance"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6006,
+        "endIndex": 6497,
+        "text": "### **Candidate [19]: Dutch firm Intelic uses AI to coordinate multi-vendor drone systems for Ukraine**\n* **Publisher:** Reuters (Anthony Deutsch / Bart Biesemans)\n* **Status:** **IN SCOPE**\n* **Confirmed:** Amsterdam-based defense software startup Intelic demonstrated its **Nexus** AI platform at a test site in Katwijk aan Zee, showing how edge AI software enables disparate radar, sensor, and interceptor drone systems from multiple vendors to communicate and perform target verification"
+      },
+      "groundingChunkIndices": [
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6499,
+        "endIndex": 6576,
+        "text": "Intelic operates a Kyiv office under a €30M Dutch Defence Ministry contract"
+      },
+      "groundingChunkIndices": [
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6578,
+        "endIndex": 6776,
+        "text": "* **Caveats:** Although the Nexus software is capable of fully autonomous target engagement, current operational deployment maintains human-in-the-loop authorization for kinetic interceptor launches"
+      },
+      "groundingChunkIndices": [
+        24
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "Japan cyberattacks September AI hacking Bloomberg 2026",
+    "Nvidia 1B five years super intelligence RD Register 2026",
+    "ARTEX AI agent closed source CrowdStrike South Korean bank hack 2026",
+    "Meta Muse AI agent Mark Zuckerberg Instinct NYT 2026",
+    "OpenAI fired three researchers sensitive information CNBC 2026",
+    "Upscale AI platform connect chips rival suppliers 2026 Reuters",
+    "Taiwan September exports AI demand record 2026 Reuters",
+    "Dutch firm AI drone systems talk Ukraine battlefield 2026 Reuters"
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-10T05:41:00.875Z",
+  "collected_at": "2026-10-10T12:25:02.805Z",
   "expected_sources": [
     "Techmeme",
     "Reuters",
@@ -13,7 +13,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 515,
+      "elapsed_ms": 396,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -21,7 +21,7 @@
       "name": "Reuters",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 1109,
+      "elapsed_ms": 983,
       "collection_mode": "sitemap",
       "original_link_count": 12
     },
@@ -29,7 +29,7 @@
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 387,
+      "elapsed_ms": 429,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -37,7 +37,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 243,
+      "elapsed_ms": 321,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -45,11 +45,67 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 2071,
+      "elapsed_ms": 2532,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
   "candidates": [
+    {
+      "title": "A look at Walmart's troubled push to automate its ~200 US warehouses, as it and partners like Symbotic face technical setbacks; Walmart owns 12.6% of Symbotic (Sarah Nassauer/Wall Street Journal)",
+      "url": "https://www.wsj.com/business/logistics/walmart-automation-robots-warehouses-65f016b2?st=GBFvs6&reflink=desktopwebshare_permalink",
+      "summary": "Sarah Nassauer / Wall Street Journal : A look at Walmart's troubled push to automate its ~200 US warehouses, as it and partners like Symbotic face technical setbacks; Walmart owns 12.6% of Symbotic &mdash; Machines programmed to sort merchandise in warehouses hit kinks with cardboard boxes and turkeys; automation push reaches &lsquo;peak complexity&rsquo;",
+      "description_html": "<A HREF=\"https://www.wsj.com/business/logistics/walmart-automation-robots-warehouses-65f016b2?st=GBFvs6&reflink=desktopwebshare_permalink\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261010/i10.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261010/p10#a261010p10\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Sarah Nassauer / <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/business/logistics/walmart-automation-robots-warehouses-65f016b2?st=GBFvs6&reflink=desktopwebshare_permalink\">A look at Walmart's troubled push to automate its ~200 US warehouses, as it and partners like Symbotic face technical setbacks; Walmart owns 12.6% of Symbotic</A></B></SPAN>&nbsp; &mdash;&nbsp; Machines programmed to sort merchandise in warehouses hit kinks with cardboard boxes and turkeys; automation push reaches &lsquo;peak complexity&rsquo;</P>",
+      "published_at": "2026-10-10T10:40:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261010/p10",
+      "direct_source_url": "https://www.wsj.com/business/logistics/walmart-automation-robots-warehouses-65f016b2?st=GBFvs6&reflink=desktopwebshare_permalink",
+      "publisher": "Sarah Nassauer/Wall Street Journal",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.027
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "rea.tools",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "REA Reverse – Engineer Anything",
+      "url": "https://rea.tools/",
+      "direct_source_url": "https://rea.tools/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50028275",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50028275",
+      "summary": "",
+      "published_at": "2026-10-10T00:37:07.000Z",
+      "engagement": {
+        "score": 478,
+        "comments": 195
+      },
+      "collection_mode": "api",
+      "score": 7.958
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "minesweeper.mikelacher.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "Triple-A Minesweeper",
+      "url": "https://minesweeper.mikelacher.com/",
+      "direct_source_url": "https://minesweeper.mikelacher.com/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50022292",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50022292",
+      "summary": "",
+      "published_at": "2026-10-09T15:51:05.000Z",
+      "engagement": {
+        "score": 1059,
+        "comments": 204
+      },
+      "collection_mode": "api",
+      "score": 7.913
+    },
     {
       "source": "Hacker News",
       "publisher": "gizmodo.com",
@@ -64,11 +120,11 @@
       "summary": "",
       "published_at": "2026-10-09T21:06:59.000Z",
       "engagement": {
-        "score": 504,
-        "comments": 282
+        "score": 599,
+        "comments": 325
       },
       "collection_mode": "api",
-      "score": 8.173
+      "score": 7.892
     },
     {
       "source": "Hacker News",
@@ -84,17 +140,33 @@
       "summary": "",
       "published_at": "2026-10-09T13:03:48.000Z",
       "engagement": {
-        "score": 1137,
-        "comments": 582
+        "score": 1263,
+        "comments": 639
       },
       "collection_mode": "api",
-      "score": 8.157
+      "score": 7.877
+    },
+    {
+      "title": "Current and former employees say TikTok US still coordinates closely with the global TikTok org, and US staff continue to use ByteDance's internal chat app Lark (Sylvia Varnham O'Regan/Politico)",
+      "url": "https://www.politico.com/news/magazine/2026/10/09/tiktok-trump-deal-us-china-01093142",
+      "summary": "Sylvia Varnham O'Regan / Politico : Current and former employees say TikTok US still coordinates closely with the global TikTok org, and US staff continue to use ByteDance's internal chat app Lark &mdash; In the months before TikTok finalized a deal to sell its U.S. operations to a group of investors friendly to President Donald Trump &hellip;",
+      "description_html": "<A HREF=\"https://www.politico.com/news/magazine/2026/10/09/tiktok-trump-deal-us-china-01093142\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261010/i9.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261010/p9#a261010p9\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Sylvia Varnham O'Regan / <A HREF=\"http://www.politico.com/\">Politico</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.politico.com/news/magazine/2026/10/09/tiktok-trump-deal-us-china-01093142\">Current and former employees say TikTok US still coordinates closely with the global TikTok org, and US staff continue to use ByteDance's internal chat app Lark</A></B></SPAN>&nbsp; &mdash;&nbsp; In the months before TikTok finalized a deal to sell its U.S. operations to a group of investors friendly to President Donald Trump &hellip; </P>",
+      "published_at": "2026-10-10T08:40:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261010/p9",
+      "direct_source_url": "https://www.politico.com/news/magazine/2026/10/09/tiktok-trump-deal-us-china-01093142",
+      "publisher": "Sylvia Varnham O'Regan/Politico",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.864
     },
     {
       "source": "Hacker News",
       "publisher": "carrierexplode.com",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 7,
+      "source_rank": 8,
       "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
       "url": "https://carrierexplode.com/",
       "direct_source_url": "https://carrierexplode.com/",
@@ -104,83 +176,47 @@
       "summary": "Showing off carrier-explode, one of my side projects that continuously archives carrier settings for all major phone brands. carrier-explode also contains decoders and explanations for all the common baseband configurations, etc. There’s still quite a bit of work to be done in checking my assumptions, but the tool has already been proven useful for a few enthusiast groups.",
       "published_at": "2026-10-09T18:10:55.000Z",
       "engagement": {
-        "score": 261,
-        "comments": 33
+        "score": 343,
+        "comments": 42
       },
       "collection_mode": "api",
-      "score": 8.124
+      "score": 7.789
     },
     {
       "source": "Hacker News",
-      "publisher": "minesweeper.mikelacher.com",
+      "publisher": "beaksec.github.io",
       "source_home": "https://news.ycombinator.com/",
+      "source_rank": 10,
+      "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
+      "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+      "direct_source_url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50029123",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50029123",
+      "summary": "",
+      "published_at": "2026-10-10T03:02:47.000Z",
+      "engagement": {
+        "score": 220,
+        "comments": 106
+      },
+      "collection_mode": "api",
+      "score": 7.712
+    },
+    {
+      "title": "A look at differing revenue calculations of Anthropic and OpenAI, as Anthropic books gross sales through cloud partners, while OpenAI records only its net share (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-09/anthropic-and-openai-s-revenue-calculations-confuse-investors",
+      "summary": "Bloomberg : A look at differing revenue calculations of Anthropic and OpenAI, as Anthropic books gross sales through cloud partners, while OpenAI records only its net share &mdash; When measuring the race between artificial intelligence leaders OpenAI and Anthropic PBC, investors have run into a problem &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-10-09/anthropic-and-openai-s-revenue-calculations-confuse-investors\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261010/i8.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261010/p8#a261010p8\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-10-09/anthropic-and-openai-s-revenue-calculations-confuse-investors\">A look at differing revenue calculations of Anthropic and OpenAI, as Anthropic books gross sales through cloud partners, while OpenAI records only its net share</A></B></SPAN>&nbsp; &mdash;&nbsp; When measuring the race between artificial intelligence leaders OpenAI and Anthropic PBC, investors have run into a problem &hellip; </P>",
+      "published_at": "2026-10-10T06:35:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261010/p8",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-10-09/anthropic-and-openai-s-revenue-calculations-confuse-investors",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
       "source_rank": 3,
-      "title": "Triple-A Minesweeper",
-      "url": "https://minesweeper.mikelacher.com/",
-      "direct_source_url": "https://minesweeper.mikelacher.com/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50022292",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50022292",
-      "summary": "",
-      "published_at": "2026-10-09T15:51:05.000Z",
-      "engagement": {
-        "score": 811,
-        "comments": 157
-      },
-      "collection_mode": "api",
-      "score": 8.114
-    },
-    {
-      "title": "Sources: Anthropic's AI agents submitted 20 visa applications via a form on the US State Department website; the applications were incomplete and not processed (New York Times)",
-      "url": "https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html?unlocked_article_code=1.HVE.8qqm.Wioro2BMBvfg&smid=nytcore-ios-share",
-      "summary": "New York Times : Sources: Anthropic's AI agents submitted 20 visa applications via a form on the US State Department website; the applications were incomplete and not processed &mdash; The Philadelphia Police Department said the agents had also sent in a false homicide tip. The incidents led the White House &hellip;",
-      "description_html": "<A HREF=\"https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html?unlocked_article_code=1.HVE.8qqm.Wioro2BMBvfg&smid=nytcore-ios-share\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261010/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261010/p3#a261010p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.nytimes.com/\">New York Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html?unlocked_article_code=1.HVE.8qqm.Wioro2BMBvfg&smid=nytcore-ios-share\">Sources: Anthropic's AI agents submitted 20 visa applications via a form on the US State Department website; the applications were incomplete and not processed</A></B></SPAN>&nbsp; &mdash;&nbsp; The Philadelphia Police Department said the agents had also sent in a false homicide tip.&nbsp; The incidents led the White House &hellip; </P>",
-      "published_at": "2026-10-10T05:20:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261010/p3",
-      "direct_source_url": "https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html?unlocked_article_code=1.HVE.8qqm.Wioro2BMBvfg&smid=nytcore-ios-share",
-      "publisher": "New York Times",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 1,
       "collection_mode": "rss",
-      "score": 8.085
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "rea.tools",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 8,
-      "title": "REA Reverse – Engineer Anything",
-      "url": "https://rea.tools/",
-      "direct_source_url": "https://rea.tools/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50028275",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50028275",
-      "summary": "",
-      "published_at": "2026-10-10T00:37:07.000Z",
-      "engagement": {
-        "score": 244,
-        "comments": 81
-      },
-      "collection_mode": "api",
-      "score": 8.052
-    },
-    {
-      "title": "Cloudflare acquires Deno, co-founded by Node.js creator Ryan Dahl, which had developed an open-source alternative to Cloudflare Workers and had raised $26M (Paul Sawers/The New Stack)",
-      "url": "https://thenewstack.io/cloudflare-acquires-deno-ryan-dahl/",
-      "summary": "Paul Sawers / The New Stack : Cloudflare acquires Deno, co-founded by Node.js creator Ryan Dahl, which had developed an open-source alternative to Cloudflare Workers and had raised $26M &mdash; Cloudflare is buying the startup co-founded by Node.js creator Ryan Dahl, a longtime competitor that recently built its own open-source version &hellip;",
-      "description_html": "<A HREF=\"https://thenewstack.io/cloudflare-acquires-deno-ryan-dahl/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261010/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261010/p2#a261010p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Paul Sawers / <A HREF=\"http://thenewstack.io/\">The New Stack</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://thenewstack.io/cloudflare-acquires-deno-ryan-dahl/\">Cloudflare acquires Deno, co-founded by Node.js creator Ryan Dahl, which had developed an open-source alternative to Cloudflare Workers and had raised $26M</A></B></SPAN>&nbsp; &mdash;&nbsp; Cloudflare is buying the startup co-founded by Node.js creator Ryan Dahl, a longtime competitor that recently built its own open-source version &hellip; </P>",
-      "published_at": "2026-10-10T05:10:02.000Z",
-      "discovery_url": "https://www.techmeme.com/261010/p2",
-      "direct_source_url": "https://thenewstack.io/cloudflare-acquires-deno-ryan-dahl/",
-      "publisher": "Paul Sawers/The New Stack",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 2,
-      "collection_mode": "rss",
-      "score": 7.998
+      "score": 7.697
     },
     {
       "source": "Hacker News",
@@ -196,17 +232,33 @@
       "summary": "",
       "published_at": "2026-10-09T13:12:47.000Z",
       "engagement": {
-        "score": 628,
-        "comments": 288
+        "score": 667,
+        "comments": 300
       },
       "collection_mode": "api",
-      "score": 7.924
+      "score": 7.643
+    },
+    {
+      "title": "Laptop production share outside China is expected to fall from 24% in 2025 to 21% in 2026 as PC makers rethink shifting production amid soaring component costs (TrendForce)",
+      "url": "https://www.trendforce.com/presscenter/news/20261008-13264.html",
+      "summary": "TrendForce : Laptop production share outside China is expected to fall from 24% in 2025 to 21% in 2026 as PC makers rethink shifting production amid soaring component costs &mdash; TrendForce's latest notebook industry research reveals that the primary risk facing the market in 2027 is expected to shift &hellip;",
+      "description_html": "<A HREF=\"https://www.trendforce.com/presscenter/news/20261008-13264.html\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261010/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261010/p7#a261010p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.trendforce.com/\">TrendForce</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.trendforce.com/presscenter/news/20261008-13264.html\">Laptop production share outside China is expected to fall from 24% in 2025 to 21% in 2026 as PC makers rethink shifting production amid soaring component costs</A></B></SPAN>&nbsp; &mdash;&nbsp; TrendForce's latest notebook industry research reveals that the primary risk facing the market in 2027 is expected to shift &hellip; </P>",
+      "published_at": "2026-10-10T06:25:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261010/p7",
+      "direct_source_url": "https://www.trendforce.com/presscenter/news/20261008-13264.html",
+      "publisher": "TrendForce",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.61
     },
     {
       "source": "Hacker News",
       "publisher": "iminafleeting.com",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 2,
+      "source_rank": 3,
       "title": "Sorry, I'm in a meeting",
       "url": "https://iminafleeting.com/",
       "direct_source_url": "https://iminafleeting.com/",
@@ -216,202 +268,150 @@
       "summary": "",
       "published_at": "2026-10-09T09:21:48.000Z",
       "engagement": {
-        "score": 834,
-        "comments": 247
+        "score": 930,
+        "comments": 260
       },
       "collection_mode": "api",
-      "score": 7.923
+      "score": 7.563
     },
     {
-      "source": "Hacker News",
-      "publisher": "typesafe.ai",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 6,
-      "title": "Typesafe AI raises $870M at $7.5B",
-      "url": "https://typesafe.ai/blog/series-ai",
-      "direct_source_url": "https://typesafe.ai/blog/series-ai",
-      "discovery_url": "https://news.ycombinator.com/item?id=50023450",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50023450",
-      "summary": "",
-      "published_at": "2026-10-09T17:02:31.000Z",
-      "engagement": {
-        "score": 324,
-        "comments": 236
-      },
-      "collection_mode": "api",
-      "score": 7.923
-    },
-    {
-      "title": "A US Senate investigation led by Senators Warren, Van Hollen, and Blumenthal says some hyperscalers misled the public about AI data centers' costs and benefits (Nik Popli/Time)",
-      "url": "https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/",
-      "summary": "Nik Popli / Time : A US Senate investigation led by Senators Warren, Van Hollen, and Blumenthal says some hyperscalers misled the public about AI data centers' costs and benefits &mdash; Nik Popli &hellip; As the world's biggest technology companies race to build data centers across the country to power an AI boom &hellip;",
-      "description_html": "<A HREF=\"https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261010/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261010/p1#a261010p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Nik Popli / <A HREF=\"https://time.com/\">Time</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/\">A US Senate investigation led by Senators Warren, Van Hollen, and Blumenthal says some hyperscalers misled the public about AI data centers' costs and benefits</A></B></SPAN>&nbsp; &mdash;&nbsp; Nik Popli &hellip; As the world's biggest technology companies race to build data centers across the country to power an AI boom &hellip; </P>",
-      "published_at": "2026-10-10T05:05:00.000Z",
-      "discovery_url": "https://www.techmeme.com/261010/p1",
-      "direct_source_url": "https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/",
-      "publisher": "Nik Popli/Time",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 3,
-      "collection_mode": "rss",
-      "score": 7.915
-    },
-    {
-      "title": "Anthropic says it is barring live internet access for internal evals until monitoring is reliable, after its agents exploited websites and bypassed restrictions (Tim Fernholz/TechCrunch)",
-      "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
-      "summary": "Tim Fernholz / TechCrunch : Anthropic says it is barring live internet access for internal evals until monitoring is reliable, after its agents exploited websites and bypassed restrictions &mdash; Anthropic said its models exploited websites on the internet, including some run by U.S. government agencies &hellip;",
-      "description_html": "<A HREF=\"https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261009/i35.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261009/p35#a261009p35\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Tim Fernholz / <A HREF=\"http://techcrunch.com/\">TechCrunch</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/\">Anthropic says it is barring live internet access for internal evals until monitoring is reliable, after its agents exploited websites and bypassed restrictions</A></B></SPAN>&nbsp; &mdash;&nbsp; Anthropic said its models exploited websites on the internet, including some run by U.S. government agencies &hellip; </P>",
-      "published_at": "2026-10-10T03:30:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261009/p35",
-      "direct_source_url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
-      "publisher": "Tim Fernholz/TechCrunch",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 4,
-      "collection_mode": "rss",
-      "score": 7.769
-    },
-    {
-      "title": "Cloudflare debuts Clef-omni, an open-weight decision model supporting audio and video input alongside text and image, and cuts Clef-flash's price below Jev's (Cloudflare)",
-      "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
-      "summary": "Cloudflare : Cloudflare debuts Clef-omni, an open-weight decision model supporting audio and video input alongside text and image, and cuts Clef-flash's price below Jev's &mdash; Following last week's release of Clef and Clef-flash, Cloudflare's open-weight decision models, we decided to bring forth more gifts.",
-      "description_html": "<A HREF=\"https://blog.cloudflare.com/clef-faster-cheaper-multimodal/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261009/i34.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261009/p34#a261009p34\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.cloudflare.com/\">Cloudflare</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://blog.cloudflare.com/clef-faster-cheaper-multimodal/\">Cloudflare debuts Clef-omni, an open-weight decision model supporting audio and video input alongside text and image, and cuts Clef-flash's price below Jev's</A></B></SPAN>&nbsp; &mdash;&nbsp; Following last week's release of Clef and Clef-flash, Cloudflare's open-weight decision models, we decided to bring forth more gifts.</P>",
-      "published_at": "2026-10-10T02:40:00.000Z",
-      "discovery_url": "https://www.techmeme.com/261009/p34",
-      "direct_source_url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
-      "publisher": "Cloudflare",
+      "title": "Chip design software leader Synopsys says it is exploring partnerships with Chinese AI labs to develop AI-powered chip design tools for the Chinese market (Yifan Yu/Nikkei Asia)",
+      "url": "https://asia.nikkei.com/business/tech/semiconductors/synopsys-looks-to-work-with-chinese-ai-labs-to-speed-up-chip-design",
+      "summary": "Yifan Yu / Nikkei Asia : Chip design software leader Synopsys says it is exploring partnerships with Chinese AI labs to develop AI-powered chip design tools for the Chinese market &mdash; PALO ALTO, California &mdash; Chip design software leader Synopsys says it is looking to help Chinese companies develop chips faster &hellip;",
+      "description_html": "<A HREF=\"https://asia.nikkei.com/business/tech/semiconductors/synopsys-looks-to-work-with-chinese-ai-labs-to-speed-up-chip-design\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261010/i6.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261010/p6#a261010p6\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Yifan Yu / <A HREF=\"https://asia.nikkei.com/\">Nikkei Asia</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://asia.nikkei.com/business/tech/semiconductors/synopsys-looks-to-work-with-chinese-ai-labs-to-speed-up-chip-design\">Chip design software leader Synopsys says it is exploring partnerships with Chinese AI labs to develop AI-powered chip design tools for the Chinese market</A></B></SPAN>&nbsp; &mdash;&nbsp; PALO ALTO, California &mdash; Chip design software leader Synopsys says it is looking to help Chinese companies develop chips faster &hellip; </P>",
+      "published_at": "2026-10-10T06:15:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261010/p6",
+      "direct_source_url": "https://asia.nikkei.com/business/tech/semiconductors/synopsys-looks-to-work-with-chinese-ai-labs-to-speed-up-chip-design",
+      "publisher": "Yifan Yu/Nikkei Asia",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 5,
       "collection_mode": "rss",
-      "score": 7.654
+      "score": 7.523
     },
     {
-      "title": "Sources: Dario Amodei spoke with Meta's Alexandr Wang earlier this year, hoping to source more compute; Meta declined the request (Wall Street Journal)",
-      "url": "https://www.wsj.com/tech/ai/ai-computing-power-demand-a63da9b9?st=tzDj41",
-      "summary": "Wall Street Journal : Sources: Dario Amodei spoke with Meta's Alexandr Wang earlier this year, hoping to source more compute; Meta declined the request &mdash; Bitter rivals are forming alliances and executives are having to personally intervene over the scramble for resources to fuel the AI boom",
-      "description_html": "<A HREF=\"https://www.wsj.com/tech/ai/ai-computing-power-demand-a63da9b9?st=tzDj41\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261009/i33.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261009/p33#a261009p33\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/tech/ai/ai-computing-power-demand-a63da9b9?st=tzDj41\">Sources: Dario Amodei spoke with Meta's Alexandr Wang earlier this year, hoping to source more compute; Meta declined the request</A></B></SPAN>&nbsp; &mdash;&nbsp; Bitter rivals are forming alliances and executives are having to personally intervene over the scramble for resources to fuel the AI boom</P>",
-      "published_at": "2026-10-10T01:45:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261009/p33",
-      "direct_source_url": "https://www.wsj.com/tech/ai/ai-computing-power-demand-a63da9b9?st=tzDj41",
-      "publisher": "Wall Street Journal",
+      "title": "Sources detail how Firmus' IPO collapsed in 48 hours after US fund managers deemed its $30B valuation too rich for a company with just $51M in FY 2026 revenue (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-09/data-center-darling-s-30-billion-ipo-dream-crushed-in-48-hours?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MTYxMjE0MSwiZXhwIjoxNzkyMjE2OTQxLCJhcnRpY2xlSWQiOiJUTU05UzVLSkg2VjQwMCIsImJjb25uZWN0SWQiOiIxMDMxRDIzQ0YzNEY0Q0ZEQTM3MDVBRDc4MjYwNTBEMSJ9.-CUwCUPRd1JHAqd8D36ChrGP0JL2pBwuJQ1dyBTmpQY",
+      "summary": "Bloomberg : Sources detail how Firmus' IPO collapsed in 48 hours after US fund managers deemed its $30B valuation too rich for a company with just $51M in FY 2026 revenue &mdash; Current Time 0:00 Loaded: 17.94% Playback Rate &mdash; This is a modal window. &mdash; Unmute &mdash; In 48 hours, Firmus Grid Ltd. went &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-10-09/data-center-darling-s-30-billion-ipo-dream-crushed-in-48-hours?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MTYxMjE0MSwiZXhwIjoxNzkyMjE2OTQxLCJhcnRpY2xlSWQiOiJUTU05UzVLSkg2VjQwMCIsImJjb25uZWN0SWQiOiIxMDMxRDIzQ0YzNEY0Q0ZEQTM3MDVBRDc4MjYwNTBEMSJ9.-CUwCUPRd1JHAqd8D36ChrGP0JL2pBwuJQ1dyBTmpQY\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261010/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261010/p5#a261010p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-10-09/data-center-darling-s-30-billion-ipo-dream-crushed-in-48-hours?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MTYxMjE0MSwiZXhwIjoxNzkyMjE2OTQxLCJhcnRpY2xlSWQiOiJUTU05UzVLSkg2VjQwMCIsImJjb25uZWN0SWQiOiIxMDMxRDIzQ0YzNEY0Q0ZEQTM3MDVBRDc4MjYwNTBEMSJ9.-CUwCUPRd1JHAqd8D36ChrGP0JL2pBwuJQ1dyBTmpQY\">Sources detail how Firmus' IPO collapsed in 48 hours after US fund managers deemed its $30B valuation too rich for a company with just $51M in FY 2026 revenue</A></B></SPAN>&nbsp; &mdash;&nbsp; Current Time 0:00 Loaded: 17.94% Playback Rate&nbsp; &mdash;&nbsp; This is a modal window.&nbsp; &mdash;&nbsp; Unmute&nbsp; &mdash;&nbsp; In 48 hours, Firmus Grid Ltd. went &hellip; </P>",
+      "published_at": "2026-10-10T06:05:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261010/p5",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-10-09/data-center-darling-s-30-billion-ipo-dream-crushed-in-48-hours?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MTYxMjE0MSwiZXhwIjoxNzkyMjE2OTQxLCJhcnRpY2xlSWQiOiJUTU05UzVLSkg2VjQwMCIsImJjb25uZWN0SWQiOiIxMDMxRDIzQ0YzNEY0Q0ZEQTM3MDVBRDc4MjYwNTBEMSJ9.-CUwCUPRd1JHAqd8D36ChrGP0JL2pBwuJQ1dyBTmpQY",
+      "publisher": "Bloomberg",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 6,
       "collection_mode": "rss",
-      "score": 7.536
+      "score": 7.436
     },
     {
-      "title": "In PA, FBI agents arrested a co-founder of a Canadian cybersecurity firm specializing in ransomware negotiations, as part of the ShinyHunters investigation (Brian Krebs/Krebs on Security)",
-      "url": "https://krebsonsecurity.com/2026/10/fbi-arrests-founder-of-ransomware-negotiation-firm/",
-      "summary": "Brian Krebs / Krebs on Security : In PA, FBI agents arrested a co-founder of a Canadian cybersecurity firm specializing in ransomware negotiations, as part of the ShinyHunters investigation &mdash; Agents with the Federal Bureau of Investigation (FBI) on Thursday arrested the co-founder of a Canadian cybersecurity firm in connection &hellip;",
-      "description_html": "<A HREF=\"https://krebsonsecurity.com/2026/10/fbi-arrests-founder-of-ransomware-negotiation-firm/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261009/i32.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261009/p32#a261009p32\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Brian Krebs / <A HREF=\"https://krebsonsecurity.com/\">Krebs on Security</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://krebsonsecurity.com/2026/10/fbi-arrests-founder-of-ransomware-negotiation-firm/\">In PA, FBI agents arrested a co-founder of a Canadian cybersecurity firm specializing in ransomware negotiations, as part of the ShinyHunters investigation</A></B></SPAN>&nbsp; &mdash;&nbsp; Agents with the Federal Bureau of Investigation (FBI) on Thursday arrested the co-founder of a Canadian cybersecurity firm in connection &hellip; </P>",
-      "published_at": "2026-10-10T01:10:02.000Z",
-      "discovery_url": "https://www.techmeme.com/261009/p32",
-      "direct_source_url": "https://krebsonsecurity.com/2026/10/fbi-arrests-founder-of-ransomware-negotiation-firm/",
-      "publisher": "Brian Krebs/Krebs on Security",
+      "title": "Circana: US Xbox unit sales fell 33% YoY to an all-time low in 2026 through August, while PS5 sales fell 25%, as both consoles hit record high average prices (Kaan Serin/Eurogamer.net)",
+      "url": "https://www.eurogamer.net/xbox-playstation-sales-new-lows-hardware-market",
+      "summary": "Kaan Serin / Eurogamer.net : Circana: US Xbox unit sales fell 33% YoY to an all-time low in 2026 through August, while PS5 sales fell 25%, as both consoles hit record high average prices &mdash; &ldquo;Price sensitivity is becoming a real problem.&rdquo; &mdash; Follow Grand Theft Auto VI &hellip; PS5 and Xbox Series X/S consoles &hellip;",
+      "description_html": "<A HREF=\"https://www.eurogamer.net/xbox-playstation-sales-new-lows-hardware-market\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261010/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261010/p4#a261010p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Kaan Serin / <A HREF=\"https://www.eurogamer.net/\">Eurogamer.net</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.eurogamer.net/xbox-playstation-sales-new-lows-hardware-market\">Circana: US Xbox unit sales fell 33% YoY to an all-time low in 2026 through August, while PS5 sales fell 25%, as both consoles hit record high average prices</A></B></SPAN>&nbsp; &mdash;&nbsp; &ldquo;Price sensitivity is becoming a real problem.&rdquo;&nbsp; &mdash;&nbsp; Follow Grand Theft Auto VI &hellip; PS5 and Xbox Series X/S consoles &hellip; </P>",
+      "published_at": "2026-10-10T05:55:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261010/p4",
+      "direct_source_url": "https://www.eurogamer.net/xbox-playstation-sales-new-lows-hardware-market",
+      "publisher": "Kaan Serin/Eurogamer.net",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 7,
       "collection_mode": "rss",
-      "score": 7.432
+      "score": 7.349
     },
     {
-      "title": "Sources and internal docs: TikTok cut the violations for which an advertiser could be immediately banned from 37 to 13 last fall, leading to a surge in scams (Katharine Schwab/Forbes)",
-      "url": "https://www.forbes.com/sites/iainmartin/2026/10/07/tiktok-quietly-gutted-its-advertising-rules-scams-have-exploded-ever-since/",
-      "summary": "Katharine Schwab / Forbes : Sources and internal docs: TikTok cut the violations for which an advertiser could be immediately banned from 37 to 13 last fall, leading to a surge in scams &mdash; This voice experience is generated by AI. Learn more. &mdash; Last year, TikTok's executives quietly defanged its advertising rules &hellip;",
-      "description_html": "<A HREF=\"https://www.forbes.com/sites/iainmartin/2026/10/07/tiktok-quietly-gutted-its-advertising-rules-scams-have-exploded-ever-since/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261009/i31.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261009/p31#a261009p31\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Katharine Schwab / <A HREF=\"http://www.forbes.com/\">Forbes</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.forbes.com/sites/iainmartin/2026/10/07/tiktok-quietly-gutted-its-advertising-rules-scams-have-exploded-ever-since/\">Sources and internal docs: TikTok cut the violations for which an advertiser could be immediately banned from 37 to 13 last fall, leading to a surge in scams</A></B></SPAN>&nbsp; &mdash;&nbsp; This voice experience is generated by AI.&nbsp; Learn more.&nbsp; &mdash;&nbsp; Last year, TikTok's executives quietly defanged its advertising rules &hellip; </P>",
-      "published_at": "2026-10-09T23:35:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261009/p31",
-      "direct_source_url": "https://www.forbes.com/sites/iainmartin/2026/10/07/tiktok-quietly-gutted-its-advertising-rules-scams-have-exploded-ever-since/",
-      "publisher": "Katharine Schwab/Forbes",
+      "title": "Sources: Anthropic's AI agents submitted 20 visa applications via a form on the US State Department website; the applications were incomplete and not processed (New York Times)",
+      "url": "https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html?unlocked_article_code=1.HVE.8qqm.Wioro2BMBvfg&smid=nytcore-ios-share",
+      "summary": "New York Times : Sources: Anthropic's AI agents submitted 20 visa applications via a form on the US State Department website; the applications were incomplete and not processed &mdash; The Philadelphia Police Department said the agents had also sent in a false homicide tip. The incidents led the White House &hellip;",
+      "description_html": "<A HREF=\"https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html?unlocked_article_code=1.HVE.8qqm.Wioro2BMBvfg&smid=nytcore-ios-share\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261010/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261010/p3#a261010p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.nytimes.com/\">New York Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html?unlocked_article_code=1.HVE.8qqm.Wioro2BMBvfg&smid=nytcore-ios-share\">Sources: Anthropic's AI agents submitted 20 visa applications via a form on the US State Department website; the applications were incomplete and not processed</A></B></SPAN>&nbsp; &mdash;&nbsp; The Philadelphia Police Department said the agents had also sent in a false homicide tip.&nbsp; The incidents led the White House &hellip; </P>",
+      "published_at": "2026-10-10T05:20:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261010/p3",
+      "direct_source_url": "https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html?unlocked_article_code=1.HVE.8qqm.Wioro2BMBvfg&smid=nytcore-ios-share",
+      "publisher": "New York Times",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 8,
       "collection_mode": "rss",
-      "score": 7.286
+      "score": 7.245
     },
     {
-      "title": "USA Today demanda a OpenAI por infracción de derechos de autor en entrenamiento de IA",
-      "url": "https://www.reuters.com/latam/negocio/OUV44HAITRLATHXTZKGWAMQOT4-2026-10-08/",
+      "title": "Trump divulga transações com ações da Nvidia enquanto se prepara para homenagear CEO da empresa",
+      "url": "https://www.reuters.com/pt/negocio/OIF6YEQGCVKYPMMGTFU45RTERQ-2026-10-08/",
       "summary": "",
-      "published_at": "2026-10-08T16:20:26.112Z",
+      "published_at": "2026-10-08T17:21:48.876Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 1,
-      "direct_source_url": "https://www.reuters.com/latam/negocio/OUV44HAITRLATHXTZKGWAMQOT4-2026-10-08/",
-      "discovery_url": "https://www.reuters.com/latam/negocio/OUV44HAITRLATHXTZKGWAMQOT4-2026-10-08/",
+      "direct_source_url": "https://www.reuters.com/pt/negocio/OIF6YEQGCVKYPMMGTFU45RTERQ-2026-10-08/",
+      "discovery_url": "https://www.reuters.com/pt/negocio/OIF6YEQGCVKYPMMGTFU45RTERQ-2026-10-08/",
       "link_quality": "original",
       "collection_mode": "sitemap",
       "score": 6.55
     },
     {
-      "title": "Spotify renews multiyear deal with podcaster Joe Rogan",
-      "url": "https://www.reuters.com/technology/spotify-renews-multiyear-deal-with-podcaster-joe-rogan-2026-10-08/",
+      "title": "Google Cloud lança agente de IA para escritórios",
+      "url": "https://www.reuters.com/pt/tecnologia/TLOCZ7K4DBOHNI4LPOTKQ5AAIE-2026-10-08/",
       "summary": "",
-      "published_at": "2026-10-08T13:28:52.349Z",
+      "published_at": "2026-10-08T16:47:26.587Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 2,
-      "direct_source_url": "https://www.reuters.com/technology/spotify-renews-multiyear-deal-with-podcaster-joe-rogan-2026-10-08/",
-      "discovery_url": "https://www.reuters.com/technology/spotify-renews-multiyear-deal-with-podcaster-joe-rogan-2026-10-08/",
+      "direct_source_url": "https://www.reuters.com/pt/tecnologia/TLOCZ7K4DBOHNI4LPOTKQ5AAIE-2026-10-08/",
+      "discovery_url": "https://www.reuters.com/pt/tecnologia/TLOCZ7K4DBOHNI4LPOTKQ5AAIE-2026-10-08/",
       "link_quality": "original",
       "collection_mode": "sitemap",
       "score": 6.47
     },
     {
-      "title": "Amazon lança primeiros tablets Android, aumenta preços e incorpora Alexa",
-      "url": "https://www.reuters.com/pt/tecnologia/5ASUAY6GCVMETLFAQ7DJAM2KII-2026-10-08/",
+      "title": "Anthropic lança painel de controle e ferramentas de animação para Claude",
+      "url": "https://www.reuters.com/pt/tecnologia/45YD2SII4JKLXPDALEFHJOEXBY-2026-10-08/",
       "summary": "",
-      "published_at": "2026-10-08T16:14:45.099Z",
+      "published_at": "2026-10-08T20:23:44.479Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 3,
-      "direct_source_url": "https://www.reuters.com/pt/tecnologia/5ASUAY6GCVMETLFAQ7DJAM2KII-2026-10-08/",
-      "discovery_url": "https://www.reuters.com/pt/tecnologia/5ASUAY6GCVMETLFAQ7DJAM2KII-2026-10-08/",
+      "direct_source_url": "https://www.reuters.com/pt/tecnologia/45YD2SII4JKLXPDALEFHJOEXBY-2026-10-08/",
+      "discovery_url": "https://www.reuters.com/pt/tecnologia/45YD2SII4JKLXPDALEFHJOEXBY-2026-10-08/",
       "link_quality": "original",
       "collection_mode": "sitemap",
       "score": 6.39
     },
     {
-      "title": "EUA suspendem Microsoft e grandes empresas de TI de programa de vistos de residência permanente",
-      "url": "https://www.reuters.com/pt/tecnologia/NTQPQE2JXFJOVKIIPVFJKMK4WI-2026-10-08/",
+      "title": "South Korea, Japan buffeted by hacks as AI lowers bar for cybercriminals",
+      "url": "https://www.reuters.com/legal/litigation/south-korea-japan-buffeted-by-hacks-ai-lowers-bar-cybercriminals-2026-10-09/",
       "summary": "",
-      "published_at": "2026-10-08T16:02:22.555Z",
+      "published_at": "2026-10-09T04:24:03.905Z",
+      "source": "Reuters",
+      "publisher": "Reuters",
+      "source_home": "https://www.reuters.com/technology/",
+      "source_rank": 6,
+      "direct_source_url": "https://www.reuters.com/legal/litigation/south-korea-japan-buffeted-by-hacks-ai-lowers-bar-cybercriminals-2026-10-09/",
+      "discovery_url": "https://www.reuters.com/legal/litigation/south-korea-japan-buffeted-by-hacks-ai-lowers-bar-cybercriminals-2026-10-09/",
+      "link_quality": "original",
+      "collection_mode": "sitemap",
+      "score": 6.316
+    },
+    {
+      "title": "Apple names insider Steve Smith as new M&A chief, memo shows",
+      "url": "https://www.reuters.com/legal/legalindustry/apple-names-insider-steve-smith-new-ma-chief-memo-shows-2026-10-08/",
+      "summary": "",
+      "published_at": "2026-10-08T19:20:41.778Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 4,
-      "direct_source_url": "https://www.reuters.com/pt/tecnologia/NTQPQE2JXFJOVKIIPVFJKMK4WI-2026-10-08/",
-      "discovery_url": "https://www.reuters.com/pt/tecnologia/NTQPQE2JXFJOVKIIPVFJKMK4WI-2026-10-08/",
+      "direct_source_url": "https://www.reuters.com/legal/legalindustry/apple-names-insider-steve-smith-new-ma-chief-memo-shows-2026-10-08/",
+      "discovery_url": "https://www.reuters.com/legal/legalindustry/apple-names-insider-steve-smith-new-ma-chief-memo-shows-2026-10-08/",
       "link_quality": "original",
       "collection_mode": "sitemap",
       "score": 6.31
-    },
-    {
-      "title": "USA Today sues OpenAI for copyright infringement over AI training",
-      "url": "https://www.reuters.com/legal/legalindustry/usa-today-sues-openai-copyright-infringement-over-ai-training-2026-10-08/",
-      "summary": "",
-      "published_at": "2026-10-08T15:39:17.669Z",
-      "source": "Reuters",
-      "publisher": "Reuters",
-      "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 5,
-      "direct_source_url": "https://www.reuters.com/legal/legalindustry/usa-today-sues-openai-copyright-infringement-over-ai-training-2026-10-08/",
-      "discovery_url": "https://www.reuters.com/legal/legalindustry/usa-today-sues-openai-copyright-infringement-over-ai-training-2026-10-08/",
-      "link_quality": "original",
-      "collection_mode": "sitemap",
-      "score": 6.23
     },
     {
       "title": "Anthropic launches dashboard, animation tools for Claude",
@@ -421,12 +421,12 @@
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 6,
+      "source_rank": 5,
       "direct_source_url": "https://www.reuters.com/technology/anthropic-launches-dashboard-animation-tools-claude-2026-10-08/",
       "discovery_url": "https://www.reuters.com/technology/anthropic-launches-dashboard-animation-tools-claude-2026-10-08/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 6.206
+      "score": 6.23
     },
     {
       "source": "Hugging Face",
@@ -447,19 +447,34 @@
       "score": 6.137
     },
     {
-      "title": "Trump AI task force leaders to meet on Thursday, vice chair says",
-      "url": "https://www.reuters.com/world/trump-ai-task-force-leaders-meet-thursday-vice-chair-says-2026-10-08/",
+      "title": "Meta bans TikTok ads on its platforms in US",
+      "url": "https://www.reuters.com/business/media-telecom/meta-bans-tiktok-advertising-its-apps-bloomberg-news-reports-2026-10-08/",
       "summary": "",
-      "published_at": "2026-10-08T18:15:12.232Z",
+      "published_at": "2026-10-08T23:28:33.401Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
       "source_rank": 7,
-      "direct_source_url": "https://www.reuters.com/world/trump-ai-task-force-leaders-meet-thursday-vice-chair-says-2026-10-08/",
-      "discovery_url": "https://www.reuters.com/world/trump-ai-task-force-leaders-meet-thursday-vice-chair-says-2026-10-08/",
+      "direct_source_url": "https://www.reuters.com/business/media-telecom/meta-bans-tiktok-advertising-its-apps-bloomberg-news-reports-2026-10-08/",
+      "discovery_url": "https://www.reuters.com/business/media-telecom/meta-bans-tiktok-advertising-its-apps-bloomberg-news-reports-2026-10-08/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 6.094
+      "score": 6.07
+    },
+    {
+      "title": "Chinese developer makes ARTEX AI agent closed-source after Korean bank hack",
+      "url": "https://www.reuters.com/world/china/chinese-developer-makes-artex-ai-agent-closed-source-after-korean-bank-hack-2026-10-09/",
+      "summary": "",
+      "published_at": "2026-10-09T01:56:07.306Z",
+      "source": "Reuters",
+      "publisher": "Reuters",
+      "source_home": "https://www.reuters.com/technology/",
+      "source_rank": 8,
+      "direct_source_url": "https://www.reuters.com/world/china/chinese-developer-makes-artex-ai-agent-closed-source-after-korean-bank-hack-2026-10-09/",
+      "discovery_url": "https://www.reuters.com/world/china/chinese-developer-makes-artex-ai-agent-closed-source-after-korean-bank-hack-2026-10-09/",
+      "link_quality": "original",
+      "collection_mode": "sitemap",
+      "score": 6.053
     },
     {
       "source": "Hugging Face",
@@ -480,21 +495,6 @@
       "score": 6.051
     },
     {
-      "title": "Man City head to Anfield under cloud of financial rules verdict",
-      "url": "https://www.reuters.com/sports/soccer/man-city-head-anfield-under-cloud-financial-rules-verdict-2026-10-08/",
-      "summary": "",
-      "published_at": "2026-10-08T12:18:05.130Z",
-      "source": "Reuters",
-      "publisher": "Reuters",
-      "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 8,
-      "direct_source_url": "https://www.reuters.com/sports/soccer/man-city-head-anfield-under-cloud-financial-rules-verdict-2026-10-08/",
-      "discovery_url": "https://www.reuters.com/sports/soccer/man-city-head-anfield-under-cloud-financial-rules-verdict-2026-10-08/",
-      "link_quality": "original",
-      "collection_mode": "sitemap",
-      "score": 5.99
-    },
-    {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
@@ -507,10 +507,10 @@
       "summary": "GPU-parallel simulation provides abundant robot interaction, but existing benchmarks rarely combine this scale with heterogeneous manipulation tasks and standardized multi-task RL evaluation. We introduce Hebero (Heterogeneous Benchmark for Robot Learning), a GPU-parallel Isaac Lab benchmark that enables efficient joint training and evaluation of a single policy across all 40 heterogeneous tasks. Scaling experiments show that increasing parallel replicas per task improves success under a fixed wall-clock budget. To support learning with sparse rewards and limited demonstrations, we propose Demonstration-Guided Policy Optimization (DGPO), which reuses demonstrations for dense tracking rewards and asymmetric value learning. Its shared stack supports controlled comparisons of learner-specific demonstration interfaces within PPO. Within DGPO framework, we introduce IW-ABC, which uses a lightweight per-task learning progress signal to coordinate adaptive behavior cloning (ABC), relaxing demonstration guidance with task progress, and importance weighting (IW), emphasizing lagging tasks in PPO updates. With 50 demonstrations per task, IW-ABC achieves 90.1% state-input mean success, outper",
       "published_at": "2026-10-05T20:00:00.000Z",
       "engagement": {
-        "upvotes": 7
+        "upvotes": 8
       },
       "collection_mode": "api",
-      "score": 5.872
+      "score": 5.897
     },
     {
       "source": "Hugging Face",

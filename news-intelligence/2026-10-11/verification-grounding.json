@@ -1,0 +1,1229 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=Apple+iPhone+18+Pro+orders+Nikkei+Asia+October+2026&client=app-vertex-grounding&safesearch=active\">Apple iPhone 18 Pro orders Nikkei Asia October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Satya+Nadella+Super+Intelligence+systems+black+boxes+deterministic+systems+October+2026&client=app-vertex-grounding&safesearch=active\">Satya Nadella Super Intelligence systems black boxes deterministic systems October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Japan+cyber+attacks+state+of+emergency+cyber+space+Financial+Times+October+2026&client=app-vertex-grounding&safesearch=active\">Japan cyber attacks state of emergency cyber space Financial Times October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Yandex+data+center+Vladimir+drone+attack+October+2026&client=app-vertex-grounding&safesearch=active\">Yandex data center Vladimir drone attack October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Microsoft+Decision+1+model+foundry+Command+Line+October+2026&client=app-vertex-grounding&safesearch=active\">Microsoft Decision 1 model foundry Command Line October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Rein+Security+Series+A+25M+CTech+October+2026&client=app-vertex-grounding&safesearch=active\">Rein Security Series A 25M CTech October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=General+Medicine+120M+Series+B+a16z+Fierce+Healthcare+October+2026&client=app-vertex-grounding&safesearch=active\">General Medicine 120M Series B a16z Fierce Healthcare October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Multiply+Labs+75M+Series+B+NantWorks+October+2026&client=app-vertex-grounding&safesearch=active\">Multiply Labs 75M Series B NantWorks October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=DCC+Energy+Nexora+725+million+KKR+buyout+Reuters+October+2026&client=app-vertex-grounding&safesearch=active\">DCC Energy Nexora 725 million KKR buyout Reuters October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Neolix+robovan+fleet+Shenzhen+Bloomberg+October+2026&client=app-vertex-grounding&safesearch=active\">Neolix robovan fleet Shenzhen Bloomberg October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=EU+tech+chief+rogue+AI+risk+Reuters+October+2026&client=app-vertex-grounding&safesearch=active\">EU tech chief rogue AI risk Reuters October 2026</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpY3Yaol_DHypOHo2M0_XxNax9SVKrbUR_WWVYkMC08rWtJpIs9MeBzJ0jUvLwowVztbPHZJUci2PVG1q_NYl6YVa_7cbuilKooK2cG0rgJCCf5uKzLKfQfzlHVpXoYOPfUKbJqrS_5Zqswm53ACVFkQbaj-CBIHXomQAIDYsz7yZx6XuIGg4ThjeRiJMWuPPqWmdKKjdZA8uo0VYqzSo=",
+        "title": "kfgo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpWrAv_tvl35VMrv5eEi_VRiJxBP52lO1v81tpAYVwqjHgAm2eIJphYmqqVRmlgWbWo_h1gJVOWydb3K_BmPMJvmaO66W_2v5LuPnMYDLace9J8M_teaI74UT9aAhFRqbF211zSHMFsziSn1X4MkO4rdctKaRS63ZUn2GTjBTvOZdce8eTTS6Gj3ImpO7iXqsM5U-1vytygixhqh-8ZH6AdUvKlfQwGN4FkVInK7tjoRVC4qb74LYRDAAdI5BQAeGRnm3Gg6kXHnVY-v3_NWfg5TydW3w2-hZOYgGchHQF4xcWzLtcudLrvO2o21z51MtXnTCpxCs=",
+        "title": "kare11.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6d0XiBfI6dP41GIGX9S79AmVfBNlvNzC85jc5z_G8SMer1qW758E1DfiF4L2GaxqIZZ644_y7E-UYQwljU7GjK9XPWOa3AHwC52LOzbxT-r0fiRmjLq41",
+        "title": "kyivpost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6cgEGNU2As-p_l7TxSLwY_SfQB058EuhYLBCdnmudZAjJ8zmkJYb_C9byD25WmqDPUUWt1ZPcsfxhgFMYQ5EObvwAhHaMurpgH8S7yLYbpUg7Rcy55-aCzS7qLibYAL8q2gaAlajfTmZtuCZyBCD7UhIYYUinFZLz",
+        "title": "cryptobriefing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF--BZYY9XUCAe-HbYSrk9PCAQM1GawLNqHZ1MDburSu3lRA9f5eCGaIW63SeyWtdjai4Aa4nvBuI1ROmlouqkAtMrzrQdcuc-iQ3Sy_qy1CwCYt_opPqTMeld5VBoSXGbDfLw0z62PtepD86KZ29RldW09g5Ts8Yr168r-noTia1G1TJPx1vk0Nu56eF6NOViVg3r3CIffIQ3S-W9_VSDRLktei9v6Kj6XLQ==",
+        "title": "united24media.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyIYV3P-kU_V2Ap-DCLadFpECsKCuDbmmLs4f-_3eGfv7iKFYkaK3NLjmt3wiUjSoRkBd4ecVza1Z5O97_WMmb8HOHlg5W4hE1xkQB7ODBBiELdiWhPiBykH1aLT7rXvreZgShbOl53Iff5xpxXgcn4c8UWKuornxmmzq7uCvrt1niGX6xm7duKP-33rgvjrjtDHYfF07_X5_EUSq5xiV6IS9fGk7juF16u6a1_FGlng==",
+        "title": "ukrinform.net"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNnrO4FgD0z59d533mLqsAdfKATkPG8sDyoUsgNL9JqXIPZ3W2Y67mSdo34p6Q49ulfg5-1_DdGcUBhxDAI2a8ab5Vh8KFaf6RgZynyP3RLqbsJMGHt7oiCmewoWg=",
+        "title": "instagram.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELrtIHBvMFCe_dxmYuFbUUcsFaDcCQ2nWcA5YWUGAkSe0k_73JJzBD5ps7qpnjCorr8SFVtKRed9U2R3KfRR2l0ZXQCjHmUChZNX-O-WUNMFPIPqaqlkMptBj4ar5YTsAIlRO1vsv0IPBoUOzqTZLVIWR1G3ZSt-YKe1bneyLJui-2kg==",
+        "title": "ft.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-8HUd1HdxxB1h-pmjQtpTiL9NYxUcUaZ8lNyOjUTIswqK4I9qrNkTpDQgqRw4SJYaav8ay44DzAdflYUcP1vb60uqmuKEdBHaaw7-fSYbeTu1EfKmDY4RudWt_i6kIfkx7al_jYtvYn_KBApVJDeSG4c029I8t0yKCd8IvlqQpl54AIW13eVlrA==",
+        "title": "gizmodo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOlpKstIWB-w514hFIjkKFg4dMZUu1CEkOIlKv4E9CXDQmnDeDJ5CFRrLzFWHoCfFGl6pmtgqddQq4imeybwzZefvsZIkX6lUmCzSmd2J6uZ-HIXIcokKxhIQxVFuIwBLGtuDkx9wR08L2V0fjhY6R7lwujUrGFdGPKdAfuUy8pqbOiru-m0NP3d3hiFGaZQZM8eFY58i1qXcPdQ==",
+        "title": "pymnts.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHukNdlDVYDPyC_RXFas3I3CUNm7Me7QjsfvNofpnhqUBhwhK47VM40gIXZQ7tKGNuV_BG3eqOd9p0syP_9_vv-tprkN7xYJRuKBLDD2qL0VcM0HLUOcnq0IUmXzLnMj3Wi0TovCBoyBR4U707fACOpjpNpzb_9Ci8WZae-h60AdQWwQHqEBX1ksWExjUJ4V3Z5cVYiL-2ajm5aMIKLz0TaAg==",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGloMnc8orA2jAFkoHgid6v-w2hnjHwFWROMt3onMNOGBpZnIh8WSSIPiIZLebVZ1_1LzaGwb1N2mdEG_Ybx9DFlvIQxPUaE-UfgDnlpPWpF7dJC5x-yLCKikPYdMAL1-NAaF7tD9h8Mr_Y6w1v-GaO5dct_81rr-DM8M4iV0cLltI=",
+        "title": "japantimes.co.jp"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEF90Ri5Dy12cUE7eyu1p7in7S1goXQndn7TZGsjvtRyCrw0tNMDEMx31YfEEm1gk283YFYypaY72GyKoTgJsAPMlSeL98lPo8Ua8n42JqMKA_uQzcO_1hUtNMUon09PzXGr38yHIhrAQgiKbOrnuU-bxv1C6EehTssmg==",
+        "title": "microsoft.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2OkIIGL-pA4uxCAXFGDEvaac7g5bwq39XVmIo1smzGjZBJV0VC7h-hCMQD-164uknS1om8Yagn8n4EvJQv6_VTdiH5h5BOEMX538ho8PTtvO_16KfdaCbFZHfrY_h8pXQ2zHaNIIt9kHJI2wL4H0QFmfvg_6m8tInmJf_nKcPboBI5MRL-aQXWgxxsuzaua2Ygwrat09W5MuOSLszMDucKJcwhV4RIT96_BTW8gC6dmQgKYDNeHGvFsvTdbS7gJc1r7BXXGylLqNJk4lg",
+        "title": "microsoft.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkqphESbICHUeaVwMTmE4aHe3Et_rbzJ6hOAE9eu15dsfO4DVs9aHP-d2HyxVZkcxLAp-nEH_HFa0AGbcS9enf_RleJiFNSqAayHS8w1pv53gG0p529wPfcSUnZXcVgH53h3KafqoSkQE=",
+        "title": "openrouter.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_LmiKQPt00ypWJX0Xj36XDg3ronBF3malLxr2RaeazpQdMx_WUvAAS9iKnasG40rpyHsT-AFZDGWOlzK25DEWYDZnfMvGob-NjNks0lDQN9nl92oWmYw7nQR58rM-M5oPr0-zpImZwgLhMNlJoMpYy2CKfl8dug==",
+        "title": "cryptobriefing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFs7emTRoRD1X5b9XatKFuAjdHXdBKPsWOLBi4XsJIUpGioYRQr05RDJY7G4u3wNOofDHwzN32cbaVhmxeqjWGF9fsN2wyWOI8IBZoFT9uYKnqiOU2RqRdhQ_tz3ef5kDufb9GyLQQ6uMg6_UxesPVI3rLk9QkKxfRegWSY8X7yo7z7HUewognk2O-C-LJ1w6VE_60Gj_6PUx43SxxjZQ==",
+        "title": "dealroom.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmCp91Fo7OX2mMKcpfQV_R7uFijMtxpdaVJcHFNIGQpaF4ZEawf1clMLLlqCPRV8N10ThqXKo0nBg0EIIhmtkS6gxXjRC1YyoihDyg1yCEkrbAZcQx1JfICLxEjNKLXr9WK2drKxBxg8KuAzvtiz2asDNDMizNhDxYqe9dqZQx0fyGIB9A9eHe_ru-RaZuvbfcnM1eSHrGRQgCvs3mrP9kMHx8l88EfztUC8SRxpHGNfPLkCmlWg==",
+        "title": "medium.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoe8SfqcrqYznNBZoIcSksfsFvG-m5ESTcZq8Urdns4Qw9yHi-jVUeKFQCslB0AQAOPZgyQFeD8Waz1h6LP5A4OH9JdFaC5ecKPc5JHLHpSI9FzPgHin5ym2o4HyENn39ynJCqtCWl6pozE670_Pq9Ih8FFwZhi-BCGs41LGvXDEQdjxOXKPEd1XoQ3xgjBkZ4fAbAYNpsUlD-jFjb2Ds=",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtI7NC6HhUzivuFXfaSgLzbvrrHzRn2jyjn84EGbdHblc8b-HOjIdgKqbCWJ4b7Ru_VGDd4jE_XzLtAEu_DZuR1ft4qi1qMf3rqBFhqlFXX6PLq-dbxrpk9CIz32Rwn-t4n6j7pmCOogDTs1f-xTv6AQTH5m5j7axxnPv349mKsJLQ7TD9my1B85fVOuhL-xEVyYpiGdySWJ8KKXG3CmrPiHeZmvdqoam_",
+        "title": "businessinsider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEGI6yNEeqGvUBFbDieIy5Q0ASayMZdRLOfe3D4AWKtNxTVeT3H84SBLS2bQVuwiXNn2DLMnLTR2mia4Hgqs7V7PcQggdW4WnK1ACbcNM0ZBpMQsgRvCi0yFwNFWYdkTmHXIo3Sif5gspM3MGAVzfeQgEVUlAhYICcm0SwjnskOHM0tFQ0QvVmkb1CMJXm5Zyj4SKEu8cMX8JbEeGCw-i-3cjqx8J6AjBZ7qvmhM-VPgkjzB_5iFOWVJUHdF_INsBhuBorGq-VZ1JcPeQRjAF1tMn4LwVJcO9dfwV_ZYIvFPPemF_Pfp3Me5DCYmKgU4i5U4S13g==",
+        "title": "businesstoday.in"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIClcIece9Fk2dTEJWK1bFzRcAw7BX_nYQ494TFPpWmm3K6ZS-Fj1g0JPzEu032FNDIeiEZc1vvCPO3y1zUbuhr0tinOj850uLt6IA-DgBjR80r2esE9pLhMaQpiGatGI0Sc2cT938lhQZU21YFgVvAyJjrbGdvLqpfP5T7SYN0CKR4QJcFpU7ZNshnxaZsmIpNbg3udagI7_VFr8WMg6PF_ZrNqapfxtr_1mkorCG3z1brOLIkY8ylXQbF0wcwjC_83QmbLxGnpgBkN2eDa9Md0ZkgZiZhA823p0PCpBrkZ7AHyJVR5ew0_0=",
+        "title": "indiatimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbJ7WEmR_yywQEVaeGLnt7YqF4Tf3Y12XqCyMQRXKkYFZDYrMDQWSDFvhu2Vt4xfTfq-iYBS-51njFtcgne3btka7bOkvMUnS5mVmqr2KebeEPRpKYymVgss2tXWu_CmEeQsXT7cbHmI8zk_45NwBac0rBHZgiIocEaQ9WKJ8kIY7Wjngn-CbyyYqdhVhYpoE-bkyXWg==",
+        "title": "benzinga.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBYXGdguMe6uq3a_1MhcBmbCbeubp0f8q-mh2aJyIm7pLFhIl6j_U3ql910TQw5DGSxb8IEnrLB4Ue-9HT3wirkzYa34ZEa6as6-bBSHyR4zjI5_F6M_MHhFJFDF8z31H7VtDFf1bWXtva14Ih2w==",
+        "title": "calcalistech.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwC-wrf6X3_y6z5oaz4xNxu1MAHZpIu3j3YYJzG2yt4gKgWgptZ9k5MDGH-a1rVS9EaC2oHS0wigUY_8C1SSV66_CDzbtlgdNy7SnjxuXpZaQDKMzK_7wGGuUugErnDXrRDU2hCv2I0ixfrU7cM3jN8qp_fa9xWKKNL2agvR-SHQLMI5OzyV6AmxUmSxCarwySVy9D9v6RZtyKV03IBMyiUL9UdiwNgqwT0PAp7iKrBU7ti1n8KUclmIlOnPS8iCTZwOqGx4TmOFJ6LW93UDDcG5o6-j7BO4Xo2dMKlM-n",
+        "title": "morningstar.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2cw7JTSBlaFzAuNW16nkHUb-h7sedTc4KY12-OToH81yJ2d9zGHnFh0LVdTumWT8I6gNdB2rMECv-WUS5wIXrTBYBkjCb2A0u_NoU4-aD0ODteWShMK_oOgpDz_6kK1cw5_In1zJJcsXUvjewcspMPZWQjg0OAZ0XHKutF-VPsqdBmxTWm06WjnSJlpa_3z4=",
+        "title": "securityweek.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLSOEa2gzv_tcG258Z2QZtryP1pPfuRS4zGXcNq8s7tjRliMjBLjouubIf7FPktt6puUaUrFiHzYavYn9tdHDg3TMb3uON_93s-OQN3N8fHdsuMWVDrQ==",
+        "title": "reinsec.io"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHz-5COHyk0uvpTiNbDiFL4KrHpHoU5ojVkebkTKLn4hncYEdVWEJYJZ9vXrf5ZENqjMsplgD1lS7Q7uB552TtFTSfwTTWJ7zC-Pty1yWIByeHOU6ceF2eTj93fasHnKuT8wBFqaUDXv0NJOvTbE2PlNqHtU8j09UptrkoexHccri0-RLL3nvAC3znYbpbPW4_l-Ggf_-wIPS6OFVd3iQ7TcqAGMxSPA==",
+        "title": "superpowerdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiErj3tco4Lu1FX4V_fNybC7R5E-pLOYL9HD8V2y4Ow2MXq6x7Kt99ifKWOYv44M6KimziTQxmnX3FpxY3AqQGZX9TOVZQ6-vtZU0fFRn2xQmMq2os802_2XXalfAZ1lgqbSMdXNOz13iEGLZ8eX6jQjgagwnrSLkU6dU=",
+        "title": "cryptobriefing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNMb10Z7dj6NKRCfXC_itl0kN6S_VGjHCyJ8K866LfrwqeSg-vmAP1Xc9cTmHbol9kBq-vC_lFWMaIc7r6HrCEgyuedboul1YNiybZRmjWwb7VvHpOX8Z7qP9CeZHF6apcKbpUPw==",
+        "title": "multiplylabs.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-FF7PO-vQbOZrm6PJ1gMhTEgO81LZdbHtZ2VLteu0peLUlPBawXHAzyK9XQG9IQ72NRHgAbUvM3zxGWPWaCjns6xLqWhB6M5HBJUzFuV61TwPWSY_SeV4hIjsikffMredM6Zc9kOZeWz-i8GSySAYFi4d3m6LYWH0hvKBYKmVszX7OHFIst87YyNPm4YmuxU_YKL9HTR9YXA=",
+        "title": "businessinsider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErFu2Bgc4arODKwadA0kFztMoffZkQZtc55GTIxEMbvLDPEmig1CtGVNKurTcG72mCFyqL1fAgNt_0SzuQLs7XghNwirqmhlIWAZcgsI8g5dgKsTheNlr55A_Fx5xnBw8aOYUOBA6QzPWmvl2DBsetpra2Uba3Djb_aWxH1iVSO078BvHupsMU6TSri2Y7aW9XKB2LcA==",
+        "title": "axios.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUlVtrVtHrIfTYTFCL9shTUuyGYoqDN9I3E_mRmyM3bd_VNz9L9wrpnRdUSD8FgNT_yWwzZaJ-QoYObEEeccUVDA6-UKYS0Rmbrbc_2rdSLoSgmVuc0XCuQbtWVbMYfmdOJ4kGi-kjevsZ9_iFwn_cB-vcVTzoEDGqP4MaDSGen5facOIH0XXIU8anmdnUzFrwXzFxSPWAt_qj1BIeXQRGpbDLj8wLnw==",
+        "title": "biobuzz.io"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHT3EKe2d_nN9M8o7eUAt9K9EkZrdu52aXIkex1-81RbUly9SeYbN-9IzFK8HmRCPwAvMEhFSqxrFDkgvr9msW9w-buvE7QgQMk3fETiUX-cWV8s1L0QepWbGj63trhr_epvkYVKcr71qwQ4oAo0Y3LhGtGluXLzrcqQk7IXMQ9tl_QOhxC5ooS8A==",
+        "title": "finsmes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmNFrc3UM_tM8rWSEGtAD1GNhmlIe2R-3zDTF5osv7TdqU2TykVLedvQivUYdHy3DvYhYBs9BYdqnd42LEoXChIkP5FLm-xFy8PfMN1lH5aOq-Aui_rnjIb751_cc=",
+        "title": "instagram.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjU4IzAWofcJCezmPAFn5OjS_5K3UY0Q4ecWZxvR7db9JwYPRy6aAIn0yh4hA5GUt5rRH2cxek5PS4Jify56S8LG4GBSRorZtIAQZ8Ah8iJ0FyqdDfHugV-xAH0na0qgzoj9O1li3bbEOwpcwT6OuhNoAEGpWIymLppLOXUbriYA47KxxWxWrNqTxdrRfcH1V7GP1Qo607gYssN4hdFsWU8mGmcg==",
+        "title": "fiercehealthcare.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRKEFUpd8nKt2QnwU8nkhbZ1EJ1VH5V9h3JgAW6VXvJhcMHx6GSLNJ6-46j8xpiH6pEBYq65m4Gew5mXOtaCHm122ff561dcijQ4x4oXlWXU8xrG4XYMgMU1wDP6-mxB8tdOQ30yugW0sB0a-fxWifVxcNU0ae8luv9sUsO1XY3kznhY4H",
+        "title": "mobihealthnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqP1h3cZQxTfC1XRF0XSZEY0zDrBqcHLDHecn7E4q6au1bgFrThecZ0CjvcvKEjgfZwZ1DW1m0g8KJ5JFy7fxeSjlJqRkiw3brlrdgZblofEkCq7IhBxPwr9236nxAD8ik3u7tMnJh5E0UYGC0rQ5aNw==",
+        "title": "a16z.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDwDOgBnrm8Sl4dmHskgDPUpKiNo-pkr2Bsws716Z3JeVxS2n2xFkG0jO8tfaPe5kwcKvuhMpL_zFxoy_6fyshvMNtGA5yXkVp4AMpW_Jy3DZ7VlS6uMlTH-AL0a-ryjMebgHZsynNb0CaJbd0bcp2WheR7wt9vBGVUWnMKzzQAM_e4829CU4E5rw=",
+        "title": "finsmes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0NvfZmueuHger6JyjAPYD4ATTG41lxIgAJj62-H8CsdGNC68nbw7gMwHrTOdStB1JcznZ-5hBRaZXLvFqUImM9YabwBJLe5mS2mTjURKBEcIi7oF5JfEEenRxqGVM8Ko39BREEDWcLoIeI_GvF8RCMTyJYM8eB3VlkzWRgL_zC9ORLApp7XmjVhgr3f0owyZ5RdOH0WZ7zHRo-R0zeNZ3dcI=",
+        "title": "hlth.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeYCmpedPJCq8q6rvSFSGi4_9zFMVY44UkIreJDFD39-MP_qfxxlzJxhOCau77pCKsdXqC11qOHqof3_LiLPprEIE0y0f_ieHQKyuosZC248ou_fZoY4O7znjDpMgtENv7IrUQL0Q8yG08Yy8jI5xLNEgQAlTpCNw8VupEIBscIRiwHP9UhbsF0Krl41s9teFs0BSDGyw8I4pvt7YNs1KR8oYEImVGeAQRrzuePJQ66iY=",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXhPszquPhBRyFVONYp2HKaehSQKRl6E_K5c22YsnZD047qyvlSGHMgg97c0aiM4mhgPIYaJfBiXxkkwiAojMThO8PFe4eIVBV8I2WNX68dAFh1JeGy8UYk1jML3Yrw_XuY-RaK4wT2WiBHgE3Xl9dDjZCUr38na6Rj7ylhgQw6CjGdgTn49wDFC6NW13l0xkRjnw=",
+        "title": "9to5mac.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGM2qZrL8AfxZ2hAQEkvKun68pkQkP-zP3MbMhL1UGNyClO5NtWgZbw9SpTeXL7rurJ6uFsvX7M1AZ1SSoil7zkoZ5nNmT5NVuNfnlILweYlLJ37ZQXDpgIL5izENX5d0f0hQUYYHL9IRu8fmIRJ63g5oRcAJWCf3dxdIqk-o9XBXFcxh7_plSj",
+        "title": "macrumors.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdzXOohvOGjaMWCBjd340wm3FZJXJaM0iGGrdgomSzpKcCtG1vUkVid9yFar-ht8E8wGm6rnMdThoccKD94-f0btC6dqKpR6Tz3VKStGyTZ2oscRIRWkxq8mfkfgkbhjBKCnj0V3cV4n2dkaG8U-99eq0xFwuggfDpxYGHzGb6-w==",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHszYTgWEiPwLI50yXpnXBBS8BIO2MpCQ-sM7KcLTA4-6b_HYbgaO9Vq8NmPBuLxMgHHU9NRUWCYvUiZzNr1FwGg3I6Q5MiBrvzJSPbiiE3VtjWuicHzRocbrcCQxl40GF1DEIK9iE54xhaoj6TrZ1yk9gpPypAla7dP7aOa1tzC1k5etNIp6IJBD3-lULMIXnJUQVUNq1FN2XxrQzeHxf7ksFWCKuGKfxDUm3wq03Ab4VbLg==",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnX9jar_yjllJ6-HGdjFQRMB4I1czHc_EgVwe1-ppcrq9Pq3p9RNb0qZjo6_EG9irziIO4cticC6wCrBQMl4K0KbuR0Rt0Tee3BZtJGEemTEt6Y8F8Qx-DV1SLdtAnNFYB_JPj2JqE9Hfao31V_MnbOq9UlP1mrlHdq3MJgkkPJFCCH6yYYUzBjeaalw==",
+        "title": "macrumors.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELQTXTFm154xAy0aXVCYWMAEuTP2pnBaBcNNv5NUMgFX59OqC6Zpt6Ik5rswjk3Rwuh3bBOXXdJUHTZVwCkGvrFkTb7Qt9l1oYojZv5Apsnm6t7N6xurd8ljsQZdlARxLVQGvyobi-7AS8E9Edq9M3GcFHr9hB7CB0JjBuCRRgG0o-v3N6N3XSz_dtpNGDbpN7-eNqm2RlmpcpUqe-AAXjNTt49eyFXLXil37etqVFg1-ROigIRLpXwqHSYg==",
+        "title": "tradingview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEAPu2nXo05ZZPIt9mK3YI08jfRaOrvk72bQavrkNFway7DZimpc24J1C5O9iRPJyYpircD6rr_DUaBos7uCf_KuMn6mul6T7QWdTjIHWSFUDeEPE5RKt0c1LVqoOjl1ksSpRWaE-0m1eQWswrB2Rh_dNAfGK68K5eHvoal5NOk1k8u2V2Chf5NXfCt3__TRXor5CuH4CRcSIc",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8Tukco-OBqkYQkrvmI9zeXd2-jOEdKRNddTDk4Vnx82Z9u1U97nc6VkY0NHzq4KUCeD3HYbeol-oNtyFgVQshlSodewwDqyCSV4FHia2LwnQKTHQk_vD4EymuVA5wtvf6zH7vtFHGZfSIpPFScrmO74nyzXTqBx3TotpqsjaZYF2n2dsS0Nza",
+        "title": "lcx.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHj4ikMAm7WmvQGEqqjverXiAbuh_XP-ztkrF_6Zu4wI0qyuVIUOL4MIOq-UaI0d1rk_Drsq6U7PLnsPNfmFowE5S9pPW5DEAHn1L2vG6a4ylJNdWRYvfz2TtvYj5VH_jaB00kAMCHnz5QrbXSKUQWinCAjDSrAQDDqPlKBAIFDyxrL_w==",
+        "title": "aishunos.uz"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZOXWnHjOXNcqwZWWbw3c2h7HBjvhBL0O3vERGujB88x8GtgKF1P_qwKaxRj7JGjWUU47d6zyB98YBzKOnR8GTVybKY1oRpRNcqTKHCAOJcIdrRyyOrVxx8FUBY5QFd_QXnPZ40WoE0Rc0Ka0lidfQNrOXX7Vuczhd4Xgo3AkReA==",
+        "title": "dipprofit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEd4MhnKMWUXH-S8XyMpSPSX1ZOZhiH8zdRfqOxASWmoihRusg40xVZ0KUD1O3aHLFVa0TV9FZP0b5iP08F736JkqBEZ3dbtlZ53X9t21yHFeMgbzaAw0TzV8QPosDS2YdbcMJLhDjAtuPWta2st5vHFInNb1LXpfFIgjxMJ6auBQfMPgmV7cxw_YmvLxIWPiZqliCakX7ipRXh2qNy9e4CnNK2kndC2EnkbqhqEQtBR64u3ntAH2q0X-L-kF2G2vM6Ypox-YwfR3uJfBbhvw==",
+        "title": "tradingview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgh5R7Um2J25h25k5g4hVapwQGm06UngY3UvVeMvqv3SYt8dv5pnXBusKwAxRPAK9sBU2EkAbB2KEJGjONfPDvalBmUzafpNqda7Nq2H6I7a_5ncoEXCwic3Q2ezT9bcxNgSr7592h-ZFbcslt61c_9U2YFtvlO8wZTG138u7W_68ywN0c38fRu4c5mh5_PHKF9WYqnrDO-i9BCbdRDWrrGY3Y1XSZHM90Kj35FjnJlv8=",
+        "title": "mergersindia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdXcT9wZEu97SR2elx9pyyxKK_huLxyOH62QJuPqA7OSjAJ1lyRpmSRYUuph5kFiE-DxESb8HDM6ASDiREivS05TtpiA8Ko_7TBTZk0ev80rfHY-l8IJQfYu-HqqqLC1Y0Fi-5t8vJ4kOWd267-af-OsEoO5JhB_brY2rFpS5LxIsZ_Dp8vT_gEw3Ima9_N1e371oEJRHAqEzRCYed7IHgyhxAU0iTOG5vVjHvtKZbVvOqA1TWBn1alKWoZuh4po9SSXRr",
+        "title": "morningstar.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZx9pVA54ISOKBO9Ekg33XDo1kUquUzV_E4Lj6DifWPU4jrUh7xCSYhU_iKJVckLl0iaDpEloiwf_ht7EZLEePS1F5TIHMr9NB3Ym3wpMemjYYOcHuSApPB5J_qKBi0_CtOoufNzetwBi9VevW3lBvFqQrBbliXSujCHI7R_R1FxRnEu6nHBuxZteo3D3KODn4yHPFk8m5",
+        "title": "ajbell.co.uk"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAwjxVN7jqGnd4V_eCxaOKBsV52VoiHnFsFmvhhl8sbSB7H4VM76By4tgP61v1QYJuWNp2aUw067B3MG6AXADs9vzQhj2d2JeogCnj8cWok9OUBmKacRGaSKLULTx7PFsRxlmL_Zl7ceHazH0tr32SXMgIH6wxcdiRoJUFrTMroO2MX9RK9QpNNHKlSpNkb-rLtneHAEPQpCBFse0Fd3EGjABpcE4e5bXONvau58fU",
+        "title": "advfn.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkYbugEQtU1c8AZenH69Gwbd6-SQJFg1rYl05VABWuiQJNrNtF0_SnZi9MSuhJ4gsX4VM4Q_JaoKZ_3_znCjoy4Luy1lovROBVzducx7fDkQSkOv6VQKUaHDfNrBDCmFcWkE6k60we8ugljNBzlcPjh3wfaXNTA_I2Es_84VvKhdlpYSYnoLqTPNnMiY4PZSuAzMY=",
+        "title": "tradersunion.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNGL8exkBqK622dfpKhtfyWhMV-idOV1bWSTzPOlfFXWRxaipgtCjjPNcmx6LeDFKE7QtD40RwP61XL0eR9YagdkJfghIR3KPGkD3Vf49BpYRCsoaa7POXKpZkfJq0oUUVabiyu_IEOvuHmS25315Y3szWjTY6YTqyYiHvNFqNhN2OKKfQBN1a52NwnUiaUxNdMsKXiMQDtQ3D-P8=",
+        "title": "ndtv.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFK2MVSLSYmBG8y5srwffojxjWKjb9aHdoxAise_taZmCOHY5lXpPjox-yO9ot6O8qBEBe3q7mxhsDvNezZN-fguWRECfMwmnTbF327lxyeLBYwReg_Re6ovZ3RPqalBWyEU8yNzpM18Co1V-XHw2lz9PB0NQ7QDk0_EUoPKXEKnR88hQtf4_ZIT-XTUY-M46DRpE0Ck5RteJHYJwOzaf0fwEj0IO_iv0bSHLIKA5-6bw==",
+        "title": "newsbytesapp.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVxd5e4lMzy6go6OnacFfA_37GxCro48PtK9JDN0OJTvO7nk1S-9zkUd4SnpJ9kwqQm91m6PVOmS9uf4965vm30UgpcWWrmV6DmlSh1uW_u4L2Vf-BEUFJ8xf099QoKTwVnTrJkPb3kLkvoNkJZLg-nmdgeqQ1ldqsNDpxSGWC5-cmHlt4I454hgWhVU9SKci5MxtQYlOdSUyTXDrAiV0yIU2LyHMEkY8qAoGycTrvD6s_36tzr-HQJ_doGOwJzNV96WNLDVNvkYmq87cMfUzgdJMNKAcmBqKNdX6LL2W9Ls9rwiYy_9DSxGo8FQeVV1hRgq4du4VHZK8x7vGptsY-MK2KRPlw8Qg8hSO-NjnokCSEyLjxmLGmWkpfY9YSYdXsjGmsPw==",
+        "title": "globenewswire.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETYXxZdoasrNGmMR0eYZtbLbHsDQj5RW7e3cg0__A8NZNURMQIUzobFnaWOljy52RTtEdhZFFSPCbxZ-RsPavvk6cxJFa10xxrsXInQcVWdPPYJcmNpYpcdgdWEKeyhLIFkySe-fUvWe0f41XDONgIz03cAkj-FMdIfl0s21Oc94jC4I05ihZB1GTtTjpqp-Y6h3ABeF0ZYNvA4GhA6isv68rOuzuWYIJjaBCiXBCeZEKaGbv4Ofz1C0hH3lyf0d0O2ztcm1HyxDn4VbNFqjo=",
+        "title": "prnewswire.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHncH-4oTh-6uOXG_oT_1rtkwFKX53wpnWGR2LyaoVhr5FE01gNtVK8aabjIfVkXs5oqutUC0ifsBFbS3Hm--Ni4Az4vvfvJ5EWTvtHcpMTnSw3bVveO28bXUHsNRCRyGw2nKfE_6Rl3zm-oNr_NjbiuEiK6pKGW6La47HHkn2MZkXLkxeHWa0FEsRQoOH6SwdEstjX4J_yHw2lNEyCVEy6IHeo1I0OHohnhzrwhjX2kN837VO_K5ETvHuUWIYr_miOsbQ=",
+        "title": "facebook.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 172,
+        "endIndex": 187,
+        "text": "cloud`, Reuters"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 172,
+        "endIndex": 205,
+        "text": "cloud`, Reuters, Associated Press"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 172,
+        "endIndex": 216,
+        "text": "cloud`, Reuters, Associated Press, Kyiv Post"
+      },
+      "groundingChunkIndices": [
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 218,
+        "endIndex": 411,
+        "text": "* **What is confirmed:** Yandex and local officials confirmed that the company's data center in the Vladimir region (east of Moscow) was hit by a drone attack overnight on October 10–11, 2026"
+      },
+      "groundingChunkIndices": [
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 413,
+        "endIndex": 506,
+        "text": "The strike triggered a fire, forcing a total operational shutdown of the 50-megawatt facility"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 508,
+        "endIndex": 636,
+        "text": "This marks the third Yandex data hub taken offline by drone strikes in four days (following Sasovo on Oct 8 and Kaluga on Oct 9)"
+      },
+      "groundingChunkIndices": [
+        2,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 638,
+        "endIndex": 822,
+        "text": "Outages affected over 80 Yandex Cloud infrastructure services, developer APIs (including YandexGPT), and consumer applications (Yandex Go, Music, and Pay) across Russia and CIS markets"
+      },
+      "groundingChunkIndices": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 824,
+        "endIndex": 975,
+        "text": "* **Important caveats:** Detailed operational recovery timelines and full financial assessments of damaged server hardware remain unconfirmed by Yandex"
+      },
+      "groundingChunkIndices": [
+        6,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1147,
+        "endIndex": 1273,
+        "text": "### **[14] Japan Declares \"State of Emergency in Cyberspace\" After Widespread Hacks**\n* **Primary Sources:** *Financial Times*"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1147,
+        "endIndex": 1284,
+        "text": "### **[14] Japan Declares \"State of Emergency in Cyberspace\" After Widespread Hacks**\n* **Primary Sources:** *Financial Times*, *Gizmodo*"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1147,
+        "endIndex": 1294,
+        "text": "### **[14] Japan Declares \"State of Emergency in Cyberspace\" After Widespread Hacks**\n* **Primary Sources:** *Financial Times*, *Gizmodo*, *PYMNTS*"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1296,
+        "endIndex": 1676,
+        "text": "* **What is confirmed:** Masaaki Taira, head of Japan’s National Cybersecurity Strategy Headquarters (NCSH), declared a \"state of emergency in cyberspace\" following a surge of unauthorized access and ransomware incidents affecting over 20 major Japanese corporations (including East Japan Railway Co., Times Car, Lawson, and Bookoff) as well as municipal and government entities"
+      },
+      "groundingChunkIndices": [
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1678,
+        "endIndex": 1898,
+        "text": "In response, Japan's Financial Services Agency instructed banks to stop accepting non-chipped driver’s licenses for remote account creation after digital driver's license photo databases were breached and leaked online"
+      },
+      "groundingChunkIndices": [
+        7,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1900,
+        "endIndex": 2153,
+        "text": "* **Important caveats:** Government authorities have not publicly attributed the wave of attacks to specific threat groups or nation-states, though security firms attribute the high victim count to widespread credential theft and weak perimeter security"
+      },
+      "groundingChunkIndices": [
+        7,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2315,
+        "endIndex": 2442,
+        "text": "### **[8] Microsoft Launches Fast Decision-Scoring Model \"Microsoft-Decision-1\"**\n* **Primary Sources:** Microsoft Command Line"
+      },
+      "groundingChunkIndices": [
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2315,
+        "endIndex": 2466,
+        "text": "### **[8] Microsoft Launches Fast Decision-Scoring Model \"Microsoft-Decision-1\"**\n* **Primary Sources:** Microsoft Command Line, Microsoft Foundry Blog"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2315,
+        "endIndex": 2478,
+        "text": "### **[8] Microsoft Launches Fast Decision-Scoring Model \"Microsoft-Decision-1\"**\n* **Primary Sources:** Microsoft Command Line, Microsoft Foundry Blog, OpenRouter"
+      },
+      "groundingChunkIndices": [
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2480,
+        "endIndex": 2576,
+        "text": "* **What is confirmed:** Microsoft officially unveiled *Microsoft-Decision-1* on October 9, 2026"
+      },
+      "groundingChunkIndices": [
+        13,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2622,
+        "endIndex": 2767,
+        "text": "5-9B, the model is engineered for rapid classification, routing, response evaluation, and workflow control rather than open-ended text generation"
+      },
+      "groundingChunkIndices": [
+        12,
+        16,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2769,
+        "endIndex": 2859,
+        "text": "Given a set of pre-defined options, it outputs a single-pass, calibrated probability score"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2861,
+        "endIndex": 3041,
+        "text": "It was made available via Microsoft Foundry and OpenRouter, with Microsoft planning to rebase future iterations on Microsoft AI (MAI) and OpenAI models under the same API interface"
+      },
+      "groundingChunkIndices": [
+        13,
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3043,
+        "endIndex": 3240,
+        "text": "* **Important caveats:** Microsoft's performance claims (such as being 35× faster than GPT-6 Sol at median latency) are internal benchmark numbers that require independent third-party verification"
+      },
+      "groundingChunkIndices": [
+        12,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3306,
+        "endIndex": 3431,
+        "text": "** Significant product release representing a shift toward specialized, low-latency decision layers in AI agent orchestration"
+      },
+      "groundingChunkIndices": [
+        16,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3439,
+        "endIndex": 3564,
+        "text": "### **[15] Satya Nadella Urges Enterprises to Treat AI Models as \"Insider Risks\"**\n* **Primary Sources:** Satya Nadella via X"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3439,
+        "endIndex": 3584,
+        "text": "### **[15] Satya Nadella Urges Enterprises to Treat AI Models as \"Insider Risks\"**\n* **Primary Sources:** Satya Nadella via X, *Business Insider*"
+      },
+      "groundingChunkIndices": [
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3439,
+        "endIndex": 3602,
+        "text": "### **[15] Satya Nadella Urges Enterprises to Treat AI Models as \"Insider Risks\"**\n* **Primary Sources:** Satya Nadella via X, *Business Insider*, *Business Today*"
+      },
+      "groundingChunkIndices": [
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3604,
+        "endIndex": 3760,
+        "text": "* **What is confirmed:** On October 10, 2026, Microsoft CEO Satya Nadella published an essay advocating for a fundamental redesign of enterprise AI security"
+      },
+      "groundingChunkIndices": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3762,
+        "endIndex": 3893,
+        "text": "He argued that autonomous AI models are non-deterministic \"black boxes\" that must be treated like potential corporate insider risks"
+      },
+      "groundingChunkIndices": [
+        19,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3895,
+        "endIndex": 4123,
+        "text": "Nadella emphasized that the \"supply of intelligence\" must be decoupled from the \"authority to act,\" requiring deterministic system harnesses, external access controls, human-in-the-loop kill switches, and zero-trust auditability"
+      },
+      "groundingChunkIndices": [
+        19,
+        20,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4346,
+        "endIndex": 4458,
+        "text": "** Prominent executive commentary addressing AI safety, governance, and system design for enterprise deployments"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4466,
+        "endIndex": 4583,
+        "text": "### **[5] Rein Security Raises $25M Series A for Runtime AI Agent Security**\n* **Primary Sources:** CTech / Calcalist"
+      },
+      "groundingChunkIndices": [
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4466,
+        "endIndex": 4612,
+        "text": "### **[5] Rein Security Raises $25M Series A for Runtime AI Agent Security**\n* **Primary Sources:** CTech / Calcalist, Rein Security Press Release"
+      },
+      "groundingChunkIndices": [
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4466,
+        "endIndex": 4626,
+        "text": "### **[5] Rein Security Raises $25M Series A for Runtime AI Agent Security**\n* **Primary Sources:** CTech / Calcalist, Rein Security Press Release, SecurityWeek"
+      },
+      "groundingChunkIndices": [
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4628,
+        "endIndex": 4852,
+        "text": "* **What is confirmed:** Israeli and US-based startup Rein Security announced a $25 million Series A funding round co-led by Glilot Capital and Sienna Venture Capital on October 8, 2026, bringing total funding to $35 million"
+      },
+      "groundingChunkIndices": [
+        23,
+        25,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4854,
+        "endIndex": 5073,
+        "text": "Rein's platform uses patented \"sidecar\" technology at runtime to monitor code execution, enforce guardrails, and prevent prompt injection or rogue agent behaviors without routing enterprise data through external proxies"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5075,
+        "endIndex": 5243,
+        "text": "* **Important caveats:** Growth figures cited by the company (8× revenue increase and 5× customer base expansion since January 2026) are self-reported startup metrics"
+      },
+      "groundingChunkIndices": [
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5309,
+        "endIndex": 5401,
+        "text": "** Relevant deal note highlighting venture capital investment in AI agent runtime protection"
+      },
+      "groundingChunkIndices": [
+        27,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5409,
+        "endIndex": 5537,
+        "text": "### **[7] Multiply Labs Secures $75M Series B for Robotic Drug Manufacturing**\n* **Primary Sources:** Multiply Labs Announcement"
+      },
+      "groundingChunkIndices": [
+        29
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5409,
+        "endIndex": 5557,
+        "text": "### **[7] Multiply Labs Secures $75M Series B for Robotic Drug Manufacturing**\n* **Primary Sources:** Multiply Labs Announcement, *Business Insider*"
+      },
+      "groundingChunkIndices": [
+        30
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5409,
+        "endIndex": 5566,
+        "text": "### **[7] Multiply Labs Secures $75M Series B for Robotic Drug Manufacturing**\n* **Primary Sources:** Multiply Labs Announcement, *Business Insider*, *Axios*"
+      },
+      "groundingChunkIndices": [
+        31
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5696,
+        "endIndex": 5816,
+        "text": "Patrick Soon-Shiong's NantWorks, with participation from AstraZeneca, Teradyne, Lingotto, Lux Capital, and Founders Fund"
+      },
+      "groundingChunkIndices": [
+        29,
+        30
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5818,
+        "endIndex": 5852,
+        "text": "Total funding exceeds $100 million"
+      },
+      "groundingChunkIndices": [
+        29,
+        32
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5854,
+        "endIndex": 6040,
+        "text": "The company constructs cloud-orchestrated, modular robotic pods that automate repetitive, manual biomanufacturing steps for cell/gene therapies and mRNA drugs within sterile environments"
+      },
+      "groundingChunkIndices": [
+        29,
+        32,
+        33
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6042,
+        "endIndex": 6230,
+        "text": "* **Important caveats:** Product throughput metrics (claims of a 74% reduction in cost per dose and 100× throughput increase) are company estimates and have not been independently audited"
+      },
+      "groundingChunkIndices": [
+        32,
+        34
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6384,
+        "endIndex": 6514,
+        "text": "### **[10] General Medicine Raises $120M Series B for Healthcare Commerce Marketplace**\n* **Primary Sources:** *Fierce Healthcare*"
+      },
+      "groundingChunkIndices": [
+        35
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6384,
+        "endIndex": 6532,
+        "text": "### **[10] General Medicine Raises $120M Series B for Healthcare Commerce Marketplace**\n* **Primary Sources:** *Fierce Healthcare*, *MobiHealthNews*"
+      },
+      "groundingChunkIndices": [
+        36
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6384,
+        "endIndex": 6560,
+        "text": "### **[10] General Medicine Raises $120M Series B for Healthcare Commerce Marketplace**\n* **Primary Sources:** *Fierce Healthcare*, *MobiHealthNews*, Andreessen Horowitz (a16z)"
+      },
+      "groundingChunkIndices": [
+        37
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6562,
+        "endIndex": 6830,
+        "text": "* **What is confirmed:** General Medicine, founded by PillPack founders TJ Parker, Elliot Cohen, and Ashwin Muralidharan, raised $120 million in Series B financing led by Andreessen Horowitz (a16z), with participation from Eli Lilly, Mercy Health, Matrix, and BoxGroup"
+      },
+      "groundingChunkIndices": [
+        35,
+        36
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6832,
+        "endIndex": 6878,
+        "text": "The round brings total funding to $152 million"
+      },
+      "groundingChunkIndices": [
+        36,
+        38
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6880,
+        "endIndex": 7062,
+        "text": "The company operates a nationwide digital healthcare store offering cash and insurance pricing for over 2,900 medical services, lab tests, prescriptions, and virtual/in-person visits"
+      },
+      "groundingChunkIndices": [
+        36,
+        39,
+        38
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7064,
+        "endIndex": 7167,
+        "text": "* **Important caveats:** Platform adoption and customer outcome statistics rely on internal survey data"
+      },
+      "groundingChunkIndices": [
+        39,
+        40
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7310,
+        "endIndex": 7446,
+        "text": "### **[17] Apple Reportedly Reduces iPhone 18 Pro Orders Amid Weak Demand**\n* **Primary Sources:** *Nikkei Asia* via Reuters / *9to5Mac*"
+      },
+      "groundingChunkIndices": [
+        41
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7310,
+        "endIndex": 7459,
+        "text": "### **[17] Apple Reportedly Reduces iPhone 18 Pro Orders Amid Weak Demand**\n* **Primary Sources:** *Nikkei Asia* via Reuters / *9to5Mac*, *MacRumors*"
+      },
+      "groundingChunkIndices": [
+        42
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7310,
+        "endIndex": 7469,
+        "text": "### **[17] Apple Reportedly Reduces iPhone 18 Pro Orders Amid Weak Demand**\n* **Primary Sources:** *Nikkei Asia* via Reuters / *9to5Mac*, *MacRumors*, *Quartz*"
+      },
+      "groundingChunkIndices": [
+        43
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7471,
+        "endIndex": 7669,
+        "text": "* **What is confirmed:** Nikkei Asia reported on October 9, 2026, that Apple instructed component suppliers to reduce production for the iPhone 18 Pro and iPhone 18 Pro Max by 15% to 20% for October"
+      },
+      "groundingChunkIndices": [
+        42,
+        41,
+        44
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7671,
+        "endIndex": 7827,
+        "text": "Sources attributed the conservative order volume to softer consumer demand driven by $100 price increases across the Pro lineup and rising memory chip costs"
+      },
+      "groundingChunkIndices": [
+        42,
+        41,
+        43
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7829,
+        "endIndex": 7935,
+        "text": "* **Important caveats:** Apple has not officially commented on or confirmed supply chain order adjustments"
+      },
+      "groundingChunkIndices": [
+        43
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8001,
+        "endIndex": 8083,
+        "text": "** Material hardware and supply chain story impacting major consumer tech equities"
+      },
+      "groundingChunkIndices": [
+        45,
+        44
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8091,
+        "endIndex": 8199,
+        "text": "### **[18] EU Tech Chief Affirms AI Act Capability Against \"Rogue AI\" Risks**\n* **Primary Sources:** Reuters"
+      },
+      "groundingChunkIndices": [
+        46,
+        47
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8091,
+        "endIndex": 8216,
+        "text": "### **[18] EU Tech Chief Affirms AI Act Capability Against \"Rogue AI\" Risks**\n* **Primary Sources:** Reuters, *Cointelegraph*"
+      },
+      "groundingChunkIndices": [
+        48
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8218,
+        "endIndex": 8505,
+        "text": "* **What is confirmed:** In an interview published October 9, 2026, EU Tech Chief Henna Virkkunen stated that the EU AI Act (enacted two years prior) provides sufficient regulatory authority across model lifecycles to mitigate risks from non-deterministic or autonomous \"rogue\" AI agents"
+      },
+      "groundingChunkIndices": [
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8507,
+        "endIndex": 8667,
+        "text": "She confirmed that the European Commission is actively evaluating safety and transparency disclosures requested in late August from over 30 leading AI companies"
+      },
+      "groundingChunkIndices": [
+        47,
+        49
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8669,
+        "endIndex": 8818,
+        "text": "* **Important caveats:** Concrete enforcement outcomes or formal investigations resulting from the August disclosures are still under internal review"
+      },
+      "groundingChunkIndices": [
+        47,
+        49
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8884,
+        "endIndex": 8976,
+        "text": "** Notable policy position from top European Union regulator amidst global AI safety debates"
+      },
+      "groundingChunkIndices": [
+        47,
+        50
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8984,
+        "endIndex": 9091,
+        "text": "### **[19] DCC Energy Sells Tech Division Nexora for $725M Ahead of Buyout**\n* **Primary Sources:** Reuters"
+      },
+      "groundingChunkIndices": [
+        51,
+        52
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8984,
+        "endIndex": 9122,
+        "text": "### **[19] DCC Energy Sells Tech Division Nexora for $725M Ahead of Buyout**\n* **Primary Sources:** Reuters, *Morningstar* / Alliance News"
+      },
+      "groundingChunkIndices": [
+        53
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9124,
+        "endIndex": 9307,
+        "text": "* **What is confirmed:** Dublin-based DCC Energy agreed to sell its technology unit, Nexora, to One Equity Partners for an enterprise value of $725 million ($701 million net proceeds)"
+      },
+      "groundingChunkIndices": [
+        51,
+        53
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9309,
+        "endIndex": 9522,
+        "text": "The transaction provides an additional expected payout of ~42 pence per share to DCC shareholders on top of the £5.75 billion takeover offer agreed in July with a consortium led by KKR and Energy Capital Partners"
+      },
+      "groundingChunkIndices": [
+        53,
+        54,
+        55
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9524,
+        "endIndex": 9644,
+        "text": "* **Important caveats:** Closing is anticipated on or after March 1, 2027, subject to antitrust and regulatory approvals"
+      },
+      "groundingChunkIndices": [
+        56,
+        55,
+        52
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9710,
+        "endIndex": 9782,
+        "text": "** Relevant corporate M&A note for technology and infrastructure readers"
+      },
+      "groundingChunkIndices": [
+        53,
+        55
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9790,
+        "endIndex": 9907,
+        "text": "### **[4] Neolix Operates 27K Robovan Fleet as Shenzhen Tests Nighttime Delivery**\n* **Primary Sources:** *Bloomberg*"
+      },
+      "groundingChunkIndices": [
+        57
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9790,
+        "endIndex": 9920,
+        "text": "### **[4] Neolix Operates 27K Robovan Fleet as Shenzhen Tests Nighttime Delivery**\n* **Primary Sources:** *Bloomberg*, *NewsBytes*"
+      },
+      "groundingChunkIndices": [
+        58
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9790,
+        "endIndex": 9949,
+        "text": "### **[4] Neolix Operates 27K Robovan Fleet as Shenzhen Tests Nighttime Delivery**\n* **Primary Sources:** *Bloomberg*, *NewsBytes*, PR Newswire / GlobeNewswire"
+      },
+      "groundingChunkIndices": [
+        59,
+        60
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9951,
+        "endIndex": 10101,
+        "text": "* **What is confirmed:** Beijing-based autonomous logistics company Neolix has expanded its Level 4 robovan fleet past 27,000 units across 300+ cities"
+      },
+      "groundingChunkIndices": [
+        57,
+        58,
+        59
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10103,
+        "endIndex": 10296,
+        "text": "A feature on Shenzhen highlights how local permits granted in 2026 allow driverless delivery vehicles to operate overnight shifts to utilize low-traffic hours and reduce last-mile courier costs"
+      },
+      "groundingChunkIndices": [
+        57,
+        58,
+        61
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10298,
+        "endIndex": 10430,
+        "text": "* **Important caveats:** Low-light sensor navigation and edge-case safety in dense urban night environments remain technical hurdles"
+      },
+      "groundingChunkIndices": [
+        57
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10496,
+        "endIndex": 10600,
+        "text": "** Excellent background feature on physical AI commercialization and autonomous vehicle scaling in China"
+      },
+      "groundingChunkIndices": [
+        57,
+        60
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "Apple iPhone 18 Pro orders Nikkei Asia October 2026",
+    "Satya Nadella Super Intelligence systems black boxes deterministic systems October 2026",
+    "Japan cyber attacks state of emergency cyber space Financial Times October 2026",
+    "Yandex data center Vladimir drone attack October 2026",
+    "Microsoft Decision 1 model foundry Command Line October 2026",
+    "Rein Security Series A 25M CTech October 2026",
+    "General Medicine 120M Series B a16z Fierce Healthcare October 2026",
+    "Multiply Labs 75M Series B NantWorks October 2026",
+    "DCC Energy Nexora 725 million KKR buyout Reuters October 2026",
+    "Neolix robovan fleet Shenzhen Bloomberg October 2026",
+    "EU tech chief rogue AI risk Reuters October 2026"
+  ]
+}

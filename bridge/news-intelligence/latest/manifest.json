@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-10-11",
-  "generated_at": "2026-10-11T12:43:21.855Z",
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T15:16:08.605Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,23 +15,23 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 410,
+      "elapsed_ms": 630,
       "collection_mode": "rss",
       "original_link_count": 12
     },
     {
       "name": "Reuters",
       "ok": true,
-      "item_count": 7,
-      "elapsed_ms": 1641,
+      "item_count": 12,
+      "elapsed_ms": 399,
       "collection_mode": "sitemap",
-      "original_link_count": 7
+      "original_link_count": 12
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 413,
+      "elapsed_ms": 409,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -39,7 +39,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 160,
+      "elapsed_ms": 187,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -47,89 +47,91 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1897,
+      "elapsed_ms": 5173,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
   "healthy_source_count": 4,
   "human_approval_required": true,
   "approved_for_automatic_distribution": false,
-  "newsletter_ready_for_human_approval": true,
-  "quality_status": "ready_with_warnings",
+  "newsletter_ready_for_human_approval": false,
+  "quality_status": "blocked",
   "quality_warnings": [
     "Sifted unavailable during discovery; edition proceeded with 4/5 source families."
   ],
-  "release_blockers": [],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-10-11",
-  "overall_confidence": 0.875,
+  "release_blockers": [
+    "1 selected story has only a homepage, profile or invalid publication link."
+  ],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-10-12",
+  "overall_confidence": 0.91,
   "stories": [
     {
       "category": "lead",
-      "headline": "Yandex Cloud hit by third data centre strike in four days",
-      "confirmed_fact": "A drone attack on October 10–11 forced the total shutdown of Yandex's 50-megawatt data centre in the Vladimir region. This is the third facility taken offline by strikes in four days, disrupting over 80 cloud services and consumer applications across Russia and CIS markets.",
-      "why_it_matters": "The rapid succession of strikes against critical cloud infrastructure highlights the extreme vulnerability of centralised digital services to physical conflict, with significant downstream impacts on both enterprise APIs and consumer platforms.",
-      "interpretation": "The repeated targeting of these specific hubs suggests a coordinated effort to degrade regional digital capacity, rather than isolated incidents.",
+      "headline": "Microsoft bets on custom silicon for 2027",
+      "confirmed_fact": "Microsoft has unveiled the Maia 300, a third-generation AI inference accelerator built on TSMC’s N2P process, with plans to make it the company's primary inference platform by 2027.",
+      "why_it_matters": "The move signals a long-term shift toward internal hardware control for hyperscalers, though the chips remain restricted to Microsoft's own infrastructure rather than being available for cloud rental.",
+      "interpretation": "Microsoft is clearly looking to reduce its reliance on external GPU suppliers, but with production scaling not arriving until 2027, the company remains dependent on current market leaders for the immediate future.",
       "confidence": 0.95,
-      "source": "status.yandex.cloud",
-      "discovered_via": "Hacker News",
-      "source_title": "3rd Yandex Cloud Data Center Was Hit",
-      "url": "https://status.yandex.cloud/en/incidents/2136",
-      "discovery_url": "https://news.ycombinator.com/item?id=50040547",
-      "link_quality": "original",
-      "published_at": "2026-10-11T07:34:45.000Z",
-      "discovery_score": 8.476
-    },
-    {
-      "category": "technology",
-      "headline": "Japan declares 'state of emergency in cyberspace'",
-      "confirmed_fact": "Japan’s National Cybersecurity Strategy Headquarters has declared a state of emergency following a surge of breaches affecting over 20 major corporations and government entities. Banks have been instructed to stop accepting non-chipped driver’s licences for account creation after photo databases were leaked.",
-      "why_it_matters": "The move signals a major escalation in how national governments are responding to widespread credential theft and perimeter security failures, forcing immediate changes to identity verification standards.",
-      "interpretation": "This is a blunt admission that current corporate and municipal security postures are failing to contain systemic threats, which may require a state-level intervention.",
-      "confidence": 0.9,
-      "source": "Financial Times",
+      "source": "Tom Warren/The Verge",
       "discovered_via": "Techmeme",
-      "source_title": "After 20+ major Japanese companies reported cyber attacks in recent weeks, Japan's NCSH chief says the country is in \"a state of emergency in cyber space\" (Financial Times)",
-      "url": "https://www.ft.com/content/2d4333d1-8119-44a4-a5a5-2ee9ef2544fa",
-      "discovery_url": "https://www.techmeme.com/261010/p19",
+      "source_title": "Microsoft unveils its third-gen in-house AI chip, the Maia 300, built on TSMC's N2P process node and aimed at serving as its \"primary AI inference system\" (Tom Warren/The Verge)",
+      "url": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ImhuOHhJWE1DRnQiLCJwIjoiL25ld3MvMTAwOTQ2NS9taWNyb3NvZnQtbWFpYS0zMDAtY2hpcC1pbXByb3ZlbWVudHMtcm9sbG91dCIsImV4cCI6MTc5MjI0OTI3MCwiaWF0IjoxNzkxODE3MjcwfQ.i9L0gEtKZ0hTFs7qN6PA6RQy74E-sUQ_GKvVv5h7JJY",
+      "discovery_url": "https://www.techmeme.com/261012/p21",
       "link_quality": "original",
-      "published_at": "2026-10-11T03:40:01.000Z",
-      "discovery_score": 7.323
-    },
-    {
-      "category": "ai",
-      "headline": "Microsoft pivots to 'decision-scoring' models",
-      "confirmed_fact": "Microsoft has released Microsoft-Decision-1, a model designed for classification and workflow routing rather than text generation. It outputs a single-pass probability score and is currently available via Microsoft Foundry and OpenRouter.",
-      "why_it_matters": "The shift toward specialised, low-latency decision layers suggests that the industry is moving away from using general-purpose LLMs for every task, prioritising speed and predictability for agent orchestration.",
-      "interpretation": "Microsoft is betting that the future of AI agents lies in deterministic routing rather than just creative generation, though their performance claims remain internal benchmarks that need independent testing.",
-      "confidence": 0.85,
-      "source": "Achint Srivastava/Command Line",
-      "discovered_via": "Techmeme",
-      "source_title": "Microsoft unveils Microsoft-Decision-1, a fast decision-scoring model trained on Qwen3.5-9B, and says it will soon rebase it on MAI, OpenAI, and other models (Achint Srivastava/Command Line)",
-      "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
-      "discovery_url": "https://www.techmeme.com/261011/p2",
-      "link_quality": "original",
-      "published_at": "2026-10-11T05:05:02.000Z",
-      "discovery_score": 7.542
+      "published_at": "2026-10-12T13:15:01.000Z",
+      "discovery_score": 7.456
     },
     {
       "category": "business",
-      "headline": "Rein Security raises $25M to police AI agents",
-      "confirmed_fact": "Rein Security has secured $25 million in Series A funding for its 'sidecar' technology, which monitors AI agent execution at runtime to prevent rogue behaviours and prompt injection. The company reports its platform is currently securing thousands of active agents.",
-      "why_it_matters": "As enterprises deploy more autonomous agents, the demand for runtime guardrails that don't rely on external proxies is growing, reflecting a shift toward 'zero-trust' AI architectures.",
-      "interpretation": "Investors are clearly banking on the idea that the 'agentic' era will be defined by security failures, making runtime monitoring a mandatory layer rather than an optional add-on.",
-      "confidence": 0.8,
-      "source": "Meir Orbach/CTech",
+      "headline": "The $30 billion price tag for a gigawatt of AI",
+      "confirmed_fact": "Financial modeling indicates that constructing and equipping a 1-gigawatt AI data center requires approximately $30 billion in capital expenditure, with $17 billion allocated to chips and accelerators.",
+      "why_it_matters": "These figures highlight the immense capital intensity required to sustain the current AI buildout, where power and hardware costs dominate the balance sheet.",
+      "interpretation": "The sheer scale of these investments suggests that hyperscalers are betting heavily on long-term returns, as the infrastructure costs alone are enough to make even the largest tech firms pause.",
+      "confidence": 0.9,
+      "source": "Lynn Doan/Bloomberg",
       "discovered_via": "Techmeme",
-      "source_title": "Rein Security, which develops runtime tools to secure enterprise AI agents and stop adversarial AI agents, raised a $25M Series A, taking total funding to $35M (Meir Orbach/CTech)",
-      "url": "https://www.calcalistech.com/ctechnews/article/rkf52cnimg",
-      "discovery_url": "https://www.techmeme.com/261011/p4",
+      "source_title": "Analysis: constructing and equipping a 1GW AI data center in Abilene, Texas, could cost ~$30B, including $17B on chips, $3B on power, and $2.4B on construction (Lynn Doan/Bloomberg)",
+      "url": "https://www.bloomberg.com/features/2026-ai-data-center-build-costs/",
+      "discovery_url": "https://www.techmeme.com/261012/p24",
       "link_quality": "original",
-      "published_at": "2026-10-11T05:50:01.000Z",
-      "discovery_score": 7.734
+      "published_at": "2026-10-12T13:55:13.000Z",
+      "discovery_score": 7.724
+    },
+    {
+      "category": "developer",
+      "headline": "QGIS closes the door on AI contributions",
+      "confirmed_fact": "The QGIS open-source project has formally prohibited AI-generated or AI-assisted code contributions, citing maintainer burnout and an influx of unmergeable pull requests.",
+      "why_it_matters": "This marks a significant moment for open-source governance, as projects grapple with the operational reality that AI-generated code can create more work for human maintainers than it saves.",
+      "interpretation": "It turns out that 'AI-assisted' often just means 'human-verified', and for volunteer-led projects, the verification cost is becoming unsustainable.",
+      "confidence": 0.95,
+      "source": "github.com",
+      "discovered_via": "Hacker News",
+      "source_title": "QGIS bans AI assisted contributions",
+      "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
+      "discovery_url": "https://news.ycombinator.com/item?id=50054751",
+      "link_quality": "original",
+      "published_at": "2026-10-12T11:22:24.000Z",
+      "discovery_score": 8.048
+    },
+    {
+      "category": "technology",
+      "headline": "Smartphone market hits 14-year low",
+      "confirmed_fact": "Global smartphone shipments fell 20% year-on-year in Q3 2026, a decline attributed to memory shortages caused by the diversion of DRAM and NAND supply to AI data centers.",
+      "why_it_matters": "The AI boom is now directly impacting consumer hardware availability and pricing, showing that the massive demand for data center capacity has tangible consequences for the wider tech market.",
+      "interpretation": "When AI infrastructure starts eating the memory supply meant for consumer devices, it is a clear sign that the industry's priorities have shifted decisively toward the data center.",
+      "confidence": 0.85,
+      "source": "Counterpoint Research",
+      "discovered_via": "Techmeme",
+      "source_title": "Global smartphone shipments fell 20% YoY in Q3 to a 14-year low amid memory shortages; Apple's share crossed 20% for the first time in any Q3, reaching 22% (Counterpoint Research)",
+      "url": "http://www.counterpointresearch.com/",
+      "discovery_url": "https://www.techmeme.com/261012/p25",
+      "link_quality": "original",
+      "published_at": "2026-10-12T14:10:05.000Z",
+      "discovery_score": 7.815
     }
   ],
-  "practical_takeaway": "If your organisation is deploying AI agents, treat them as untrusted 'insider risks' rather than reliable software. Prioritise runtime monitoring and deterministic routing layers over general-purpose models to reduce the risk of rogue behaviour.",
-  "watch_next": "Monitor whether the 'state of emergency' in Japan leads to stricter global standards for digital identity verification, and keep an eye on the recovery timelines for Yandex's infrastructure as a bellwether for cloud resilience in conflict zones.",
+  "practical_takeaway": "If you are planning infrastructure or software projects, account for the ongoing supply chain squeeze on memory components and the increasing administrative burden of managing AI-assisted code contributions in your development pipelines.",
+  "watch_next": "Keep an eye on whether other open-source projects follow the QGIS model of banning AI contributions, and monitor if the memory supply crunch for consumer devices begins to ease as hyperscalers reach their planned 2027 infrastructure targets.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -138,21 +140,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 040",
-      "title": "My Fraction Kitchen",
-      "summary": "Choose the denominators and challenge types a child needs, then identify, build and compare visual fractions using equal-part food models.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-040/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-040/poster.png"
+      "label": "AI Inquisitive Parents · Day 041",
+      "title": "My Place Value Lab",
+      "summary": "Choose two-, three- or four-digit numbers, then identify digit values, build numbers and match mathematically correct expanded forms.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-041/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-041/poster.png"
     }
   },
   "social": {
-    "date": "2026-10-11",
-    "lead_headline": "Yandex Cloud hit by third data centre strike in four days",
-    "facebook_post": "Yandex Cloud hit by third data centre strike in four days\n\nThe rapid succession of strikes against critical cloud infrastructure highlights the extreme vulnerability of centralised digital services to physical conflict, with significant downstream impacts on both enterprise APIs and consumer platforms.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Yandex Cloud hit by third data centre strike in four days",
-    "pinterest_description": "The rapid succession of strikes against critical cloud infrastructure highlights the extreme vulnerability of centralised digital services to physical conflict, with significant downstream impacts on both enterprise APIs and consumer platforms.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Yandex Cloud hit by third data centre strike in four days. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Yandex Cloud hit by third data centre strike in four days. A drone attack on October 10–11 forced the total shutdown of Yandex's 50-megawatt data centre in the Vladimir region. Read the Sapiver Forge Daily Brief."
+    "date": "2026-10-12",
+    "lead_headline": "Microsoft bets on custom silicon for 2027",
+    "facebook_post": "Microsoft bets on custom silicon for 2027\n\nThe move signals a long-term shift toward internal hardware control for hyperscalers, though the chips remain restricted to Microsoft's own infrastructure rather than being available for cloud rental.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Microsoft bets on custom silicon for 2027",
+    "pinterest_description": "The move signals a long-term shift toward internal hardware control for hyperscalers, though the chips remain restricted to Microsoft's own infrastructure rather than being available for cloud rental.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Microsoft bets on custom silicon for 2027. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Microsoft bets on custom silicon for 2027. Microsoft has unveiled the Maia 300, a third-generation AI inference accelerator built on TSMC’s N2P process, with plans to make it the company's primary inference platform by 2027. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "10ba3de23964c131c46e6c1e301a19e8b041b4dd8151c9e444922b0cfc3828c6"
+  "candidate_id": "25ebac16f9a93aeac1c5e7070dc82948515395168df62488e42fbd74a22d8101"
 }

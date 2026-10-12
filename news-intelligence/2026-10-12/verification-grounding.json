@@ -1,0 +1,680 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Andrew+Garfield%22+%22Artificial%22+%22OpenAI%22+%22Reuters%22&client=app-vertex-grounding&safesearch=active\">&quot;Andrew Garfield&quot; &quot;Artificial&quot; &quot;OpenAI&quot; &quot;Reuters&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Maia+300%22+%22Microsoft%22+%22N2P%22+TSMC+2027&client=app-vertex-grounding&safesearch=active\">&quot;Maia 300&quot; &quot;Microsoft&quot; &quot;N2P&quot; TSMC 2027</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Singapore%27s+President%22+%22fresh+graduates%22+%22AI%27s+risk%22+%22Reuters%22&client=app-vertex-grounding&safesearch=active\">&quot;Singapore&#39;s President&quot; &quot;fresh graduates&quot; &quot;AI&#39;s risk&quot; &quot;Reuters&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Intel+CEO%22+%22Chinese+frontier+AI+model+adoption%22+%22Reuters%22&client=app-vertex-grounding&safesearch=active\">&quot;Intel CEO&quot; &quot;Chinese frontier AI model adoption&quot; &quot;Reuters&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Bloomberg%22+%22scam+economy%22+%22442B%22+%22Chinese+scam+industry%22+%22cocaine%22&client=app-vertex-grounding&safesearch=active\">&quot;Bloomberg&quot; &quot;scam economy&quot; &quot;442B&quot; &quot;Chinese scam industry&quot; &quot;cocaine&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Abilene%22+%22data+center%22+%2230B%22+bloomberg+1GW+AI&client=app-vertex-grounding&safesearch=active\">&quot;Abilene&quot; &quot;data center&quot; &quot;30B&quot; bloomberg 1GW AI</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Counterpoint+Research%22+%22smartphone%22+%2220%25%22+%22Q3%22+%222026%22+%22memory%22&client=app-vertex-grounding&safesearch=active\">&quot;Counterpoint Research&quot; &quot;smartphone&quot; &quot;20%&quot; &quot;Q3&quot; &quot;2026&quot; &quot;memory&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Italia+offrir%C3%A0+agevolazioni+fiscali+per+investimenti+settore+software%22+Meloni+reuters&client=app-vertex-grounding&safesearch=active\">&quot;Italia offrirà agevolazioni fiscali per investimenti settore software&quot; Meloni reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22QGIS%22+%22AI%22+%22assisted%22+PR+pull+387+github+qgis+enhancement+proposals&client=app-vertex-grounding&safesearch=active\">&quot;QGIS&quot; &quot;AI&quot; &quot;assisted&quot; PR pull 387 github qgis enhancement proposals</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Charles+Lamanna%22+%22Anthropic%22+%222B%22+%22The+Information%22&client=app-vertex-grounding&safesearch=active\">&quot;Charles Lamanna&quot; &quot;Anthropic&quot; &quot;2B&quot; &quot;The Information&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Googlebooks%22+%22android%22+%22the+verge%22+%22dominic+preston%22&client=app-vertex-grounding&safesearch=active\">&quot;Googlebooks&quot; &quot;android&quot; &quot;the verge&quot; &quot;dominic preston&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Karpathy%22+%22The+gap+in+shared+understanding+of+LLM+capability+is+widening%22&client=app-vertex-grounding&safesearch=active\">&quot;Karpathy&quot; &quot;The gap in shared understanding of LLM capability is widening&quot;</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQKiK2agSSG7xH0OOpRlbV7N3bqj9ax_FdsbvQf171hTZuOPJhVV3motOtELmriYtPTC0msBF01ylSXTW1KEIooW1v4-ZfnbNhU4eKRBYdEUVLoQCQU8nLE3YzIq1uCsJ7m4nTczKExgIR5kp3C0MbKg==",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-pxhwDYj26LtlzkbHqll9Ma-R6DidKGbQ-nkDaJOGRqlNo2tO1I8XY7DSOvwpxI8i2W0U8XextCu9IBoMOw0zzCG8ftQE8XxJrHmjYiTlUF6ZV5dbpfLUG6lzeNfWRZleWB36M5-uyX-1Tesmq6oIOBe3JCUO3-U=",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxgj_QUT-iOcyRSzY5yoAHoLozLRj36ZI9vfIY0HBE_EF1L_fmMsq2cag9R80hpJEfr8tdxqD-Fh5KrZqeLKoBw6-It1x-CwIOIG8L5Rgv2fHhaettfcgofbSyZYcFMSB-LFxpXzzlWwZk2VovlRJvaFo0SbchN4vqiK_UP5OHf7HHT8XQVX4lg0Y=",
+        "title": "blockspace.media"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBuxodXlQ5KOs-BsOPGAB75tUP02tOdkgPBpWp-LmjEQ3HNvI4mqIXFBdW79V0drUH6OFJibPk7kum943FkK68_fY--0C2MlNMzv_m1JDK0mjRMR_3YZg1vxVyruYYGCRUb17hBc-QC7wY1eVJ2yJsrpercn2g9ZSfZcSO2Jn-nsHvj5Km2Iwr-GIFcZE5Qt8UhXkpOfdRc3sMBmZ3ySC_dcvzI6pLSu3Zb_pwPPF6Yn8=",
+        "title": "daily.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMCGlXzWBjnoBi_ICXqs3jKXJpKt4Md2TB4mzVCesKOA40vyeowUPyjOsOiuEvdzpJwzUNr5av0OKvCZ4DSdRvgIzC2skePAvHoG19xhjOcf_hTtR2WerQmfquSEYV9Jj9vw8kMUXXZTO5LS3aenGwaFPzDxdRoggIox6KGkwD43_tnMwaVJiOiAvPupnpjiADmd5UASS6v3h7Dv3JyEX_TO22l-KFk_urxJUpvvmYqJ1j-NTLko_BOhlm",
+        "title": "counterpointresearch.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoo14kGjXZP3dFbbwI7LT0ZarvBxGGo9dF9OqCtxWmiswsXO1giK9Jc1LQGHWvJN9A8nXngNg5QS1W6j2ZBfGGiCj6sgsh83okF26BSL7aUvMqrFbS-9cZgh9cAR-FgHqohgSmWvkJjJrY4pf61-txbMDVdrglf61FdgGfrjE8ef8TiwYmbOkoc6Z2hTh25HPbwVcKYz7t",
+        "title": "globalbankingandfinance.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMO8AbJXZhZPhWdt4Ai8g_KfbKtd0ZgYh92O17Qt-Tjxf4afqJlqcluraz3CYpdzGHlCIxhEi26hklkMWuyF-OTzoT_5dwx2JIa_tI45VacLasJf8JWnjVZXLEmXEKMNEN6Qd6ys6BUyuUGW2IHCz5-Jc1ehfp26u4qP1chfHNW45K",
+        "title": "cryptobriefing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGi9AeQbI3VW3HDdejgDikiPq062JWsyc2HURWDUro8SkrZMVsd0du3KydTPZuaMXivdXZxNZ-yqzd1mZRrgWFfB63lKRY_EHJDgQdVMhhpqrFKa-7Nh0JBLD0FaKGJLKNDpLDvF6L0_Hbf8CwFqozoOvAUejnvVHQiDSutxNV7fIMqgDPvvPISzo2fVqDKOYRe5jlpP2ZKO3gBctVTrgWLHDEXMFhnkpQZA==",
+        "title": "thehindu.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8s2Xoi1aEULLUuwuc2zpm_megyo9q8I9eKlIaoE27caVPXpqgQwfvHvi1C0x4RDFsA-uoUcU0sZXiY0i6RXHqT6Sh7o8TNnnl1QuirUz5AkA6saRhR3pRcMQSL34EjIAgjPLKLyPxBqZH6SRmTos3y2S2p6YMMaEFbpI=",
+        "title": "daily.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXyG3ukaIHEfauL4oimVdPCpVhqz8dCfFbY_uq91AwPAqw7boI-hkFiBT7yDL0K5xujqIFNetg4JocS2UFV9iUts7XVAOrReq3XiqiUCkUWDiIsZEfVW3l-uwHIyYKo86iDbpVbsUbwzK88z7eIiUHoI0fvSC7Ej_nOAQqkUlhtrbmo2y98ygFYU2bDwy0OpU=",
+        "title": "lavx.hu"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPDwGgTLZG5d-NBLApaZKM1en2igAlp01ka1Jgz0-MpogIlKKFrDJwwceP-TKdz-jdMICO1H1dvS5Zguj3C7C06vvftbEHFneLP0el6ItaNJH3dnplQxjQn7U-nb6kCMZZzb8=",
+        "title": "ycombinator.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyG22nA6Jb5dO0QqN6OUoGiHMCCfN15OfOXEkAIN4K5caVf8ptHkNQ4oXtHxAv1wLDehH7z9nDltzOfwYyQsy-bJ5dGpHb8gJzssahpWGB8pB0tw==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeuxvZIPxNNJoynYZ9ywJmZhXFXxV9xexNcEAJ6XtzzSiXGS0yPeRup0H1sEDxZ6GdIDooVjtlcMydqXpZj54_TERkckpS9VBQGE42ydK-ihgenJYsz1KS0NCJWjVxMmOtMAM3HxDxFzJeqdCq7sSdvrDrur9XDUo=",
+        "title": "intuitionlabs.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPTH-v2JvLLUDjX7_xWAayKt-irpHSirPWUbee-1_ApGmedpcUt-gd8N2loSLOdR8yJmulpkjzQGvHvyopSe9aHeig5lHOS4dWzOPgFnGVkdhC-CRDggw8k_IrhSkfvO1qxUJtcHOugNsM6g==",
+        "title": "clawguardsecurity.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhoYRYs2U9y-_GPBTbMQW-3MJJidQvr9SSZz_sgicFKOM1kejiY6ayn46oH9NG1dPVmrMImuhBBBT0RXSMxsdy_FHuH2JAhXCTBlZdEaXBwJHSPqS-ROX41Hrrs3xzNeJORcwd_XxhVwejk_7hsGlCm46cHhG9JPbX0PgQ1YirIyCuc4VOxkSEzdbA_zHICMwN-6VG9xxoWWjLzKmrAiwBP1fIs2WD2c1tocv1EYFisk_v",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpYjlaQxd-MIWvcPEGiTT0o8wHHB9waG11YPcTCYYD6xLn72EOnaMhmYtUTmkXf1GNBM2oJUzo0889rSW_qakdZh8x8djebm8oizlRVl_lQLCrbn9JfbgXYrj9lSk5kVk4Qpao-1zrm0NeFeu4GbL8wVV1Z6p6WkpXEcLrMaFYVOyFfa_tH--47IWwkosWqBpNU1z5yES9h0jkNJ5Aux_kORYDy8M=",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWvW9zR-UlSdzcL4YVEA-gVg_Hl1mJl0l8d4KlsP-ySKo1aTAEiwqGi7jLfk5xKs6Y1QncUjfFPJbbCy6VCKnVdYKuj2AWkiueFL4RbrCOv7NwK5qf-x2P02ae-lsIh1KmJyVCy5zJbchdDe75WdrMGEHZn7zr63mKZC1cBWzbp2pjDIKc5pFKS8vHaFMSDMqycK14aIdDSHN_jhdU88BTu1Iy08mG4E4dqkCtyK6TYuKfHj-DZ8HSYIpzGb5Ue4E1uTyjK9kwzXSxeJWSgeUdJg==",
+        "title": "economictimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1Nr814DL0KFpU_dAZjoZwngO28TZzViPEkEDmPPQ6dKQI-uYEAFL4DY4axTR8Q2RbywqwsgkK77SHxiL72hO61DLZo-bNcU7jo1AXUeFWFs9xiLcqGW0W3Az-GjQydFTwwgXQjHIEIDhTkqUw6Kaf4VIgOBDu7L9nP0TkIjWHMMchZUulOUOkDvSL99Pl8etR-CNzHtZPAltujITsQshUI0YY2LhEC81aRZWRD1VoZMp4G-fdeqKlJMb8N-3nked7HX2t5tRfO6eVMLY=",
+        "title": "indiatimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGefnrycoJDZwb9tT4z5tRWJw3-zwkPU8pAmwOtyaJfavA6yBybtgRMkXyirW5Mq8YREov67ViqjEhADZogvW4zhYqpZO936nHAbddTbWPp-5RF",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqrkwd4eE9Yjumi_eHoyZn2cJuzW8v4WxxcyYh8t6GFclXv9175h46PU97cOBMaMNXaV2W3EAeA-3jsLO8v8yhei95os_iv086_AQRXXtmpJX76nLFtb43hSINobEYFubeqKhjdJ-rDFiVk8mZEIt6ieVdNxLYbiH12Vs_31gFY0Il6L9uuHUlvv42_iFZBOoRJ6aduJE7k7X5WLBNiu_9BDgQp5BT5KHMu-UBFN-3MyWoZCZonmd5edJe",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUbWZaY5igCgTAVB-SRCkEa5xRDeUnu_X4lQtn42FwtNFTUyjVFatjrB6mgNcTZ_U_R4rT5lDFT1mCd0Je48cTOnm1FDCfE0feqxkwPRZ3tzUWAw05DdzaZzCO3cZslDlHupSIaJ49VRWC_JQ2Uax_Qr2Li8Z3HpP3PWaM_MVOomEDKUS765la6UnAdABQ2-IcdF3r5th_",
+        "title": "buzzsprout.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEteWhT55zuV-bmA_98J7DE66dfUWEuNTeFJLSQLcig5FcYAEH4hme8JiKs-eXgEYF4uj9JV-9dkQ6v5O57_O6kS8kcDKkoWlV7YxHjyaTLC5z_E4VXCRptnR8T",
+        "title": "ghostarchive.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbb3OVCb8vtb_LPdJVV2QOweKdTb_BdqyePwMh1TIQNK3NBwUBoBacGeaBTXlbFKJBdbPBve7ikcs4Wmm631p_eP4EkOkZNH4hLp7cWclUvyx4JAle88v9Q6Q-Wjs5bKDPcouioCm8xfivQ72H3LuiY5UhFkmWIICIlFPJYRVEVFmcoByIJe1MaVh6pZK4_Q9R3r42lQ==",
+        "title": "aibreakingwire.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFw5kWp8s9eoA8GYL1jXfqnzWzVZuyqLsEEYK_JMULkcY3--F3kllp3pTG8ETXKDvjHH5YNnb-Kd-i4ItLBxNI4haQMT9Dxp_0mjzne2wMUCAbgxsLjbQ==",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAUGdXMt7bGGmX03ZzMgp1ex9K4tq6HJh64XYWZEo8rXuDSMwzxfAXq8i9UslJP-cBjgAmK5AeYu6jkywymdUx2ByGNW9_AcmgwT_mdP5HaJvsS2_D5ZIDh_A8gWJ9o32Pk3hWFpb6nI7gMOkI8bu1oRR_9a9HjXMEZFhEjE3hvI4sutayBmDOREP28-u1C7pn9ORRE5zNEAWlx2NKofTk_LzPTE4o6rf_6eHtgXxmvlvjXg==",
+        "title": "indiatoday.in"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqlLv2zTgb05gsUNi0FcNscIZvvTSlI-8DjR5Ktyb1wuoa_vRkK_9Z8y0P73Ew0UWFPje2cJyoYnz2NrGzEZxzPoXqwbiCp5nANTMzNC3ZLovyZCHu6FukzabwqnpwF7DIySzFUFzJOwk_QvRFN9n2wkB_CySmNHYoDzQe8wwmkAm_L3PqkILBtQcRNYTqAGhpxNRQ7xopQvKeHDO4Hq3OjZZgzHj4-0c=",
+        "title": "1065thebuzz.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 326,
+        "endIndex": 571,
+        "text": "#### **Candidate [14]: Microsoft unveils Maia 300 custom AI inference chip**\n* **What is confirmed:** Microsoft officially announced the **Maia 300**, its third-generation custom AI accelerator built on TSMC’s N2P process node with HBM4 memory"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 573,
+        "endIndex": 724,
+        "text": "Microsoft stated that Maia accelerators will become its primary inference platform starting in 2027, with multi-gigawatt production deployments planned"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 726,
+        "endIndex": 779,
+        "text": "Racks hold 96 accelerators in a 167-kW power envelope"
+      },
+      "groundingChunkIndices": [
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 781,
+        "endIndex": 872,
+        "text": "* **Important caveats:** Production scaling is targeted for 2027, not immediately available"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 874,
+        "endIndex": 1076,
+        "text": "Performance metrics (e.g., 40% higher token output per megawatt compared to leading GPU systems) are vendor-reported figures from Microsoft's technical paper and await independent third-party benchmarks"
+      },
+      "groundingChunkIndices": [
+        0,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1078,
+        "endIndex": 1178,
+        "text": "Microsoft is not opening Maia directly to cloud rental customers; it remains internal infrastructure"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1239,
+        "endIndex": 1316,
+        "text": "** High-priority headline story for enterprise AI hardware and cloud strategy"
+      },
+      "groundingChunkIndices": [
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1324,
+        "endIndex": 1614,
+        "text": "#### **Candidate [8]: Counterpoint Research: Global smartphone shipments drop 20% in Q3 amid memory shortage**\n* **What is confirmed:** Preliminary Q3 2026 market data from Counterpoint Research shows global smartphone shipments fell **20% YoY**, hitting a 14-year low for the third quarter"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1616,
+        "endIndex": 1730,
+        "text": "The decline was heavily driven by soaring DRAM/NAND memory prices and supply diversion to AI data center buildouts"
+      },
+      "groundingChunkIndices": [
+        4,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1732,
+        "endIndex": 1849,
+        "text": "Samsung held the top spot at 23% market share, while Apple reached a Q3 record 22% share despite overall volume drops"
+      },
+      "groundingChunkIndices": [
+        4,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1851,
+        "endIndex": 1934,
+        "text": "* **Important caveats:** Figures are preliminary industry market research estimates"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1936,
+        "endIndex": 2088,
+        "text": "Counterpoint notes that premium phone demand remained resilient, while budget and mid-range devices suffered the largest price increases and supply cuts"
+      },
+      "groundingChunkIndices": [
+        4,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2149,
+        "endIndex": 2259,
+        "text": "** Key macro update on consumer tech hardware and the knock-on supply chain impact of AI infrastructure demand"
+      },
+      "groundingChunkIndices": [
+        6,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2267,
+        "endIndex": 2535,
+        "text": "#### **Candidate [3]: QGIS bans AI-assisted code contributions (QEP 428)**\n* **What is confirmed:** Maintainers of the open-source GIS software QGIS passed QGIS Enhancement Proposal 428 (QEP 428 / PR #387) to formally prohibit AI-generated or AI-assisted contributions"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2537,
+        "endIndex": 2675,
+        "text": "The decision replaces a previous \"human-in-the-loop\" tagging policy due to maintainer burnout and a influx of unmergeable AI pull requests"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2677,
+        "endIndex": 2808,
+        "text": "* **Important caveats:** Core maintainers explicitly noted in project discussions that the ban acts as a strict moratorium baseline"
+      },
+      "groundingChunkIndices": [
+        10,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2677,
+        "endIndex": 2960,
+        "text": "* **Important caveats:** Core maintainers explicitly noted in project discussions that the ban acts as a strict moratorium baseline; exceptions (such as IDE autocomplete tools or language localization) may be evaluated and relaxed on a case-by-case basis as policy definitions refine"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3021,
+        "endIndex": 3125,
+        "text": "** Strong case study in open-source developer governance and the operational strain of AI-generated code"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3133,
+        "endIndex": 3470,
+        "text": "#### **Candidate [11]: Bloomberg cost analysis: 1GW AI data center in Texas costs ~$30B**\n* **What is confirmed:** Bloomberg published an infrastructure cost model by Lynn Doan detailing that constructing and fully equipping a 1-gigawatt AI data center site (such as the campus footprint in Abilene, Texas) totals roughly **$30 billion**"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3472,
+        "endIndex": 3609,
+        "text": "Major line items include ~$17B for AI chips/accelerators, ~$3B for power equipment/grid connections, and ~$2.4B for facility construction"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3864,
+        "endIndex": 3956,
+        "text": "** Valuable context on the capex economics underpinning the hyperscaler data center buildout"
+      },
+      "groundingChunkIndices": [
+        12,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3964,
+        "endIndex": 4234,
+        "text": "#### **Candidate [12]: The Information: Charles Lamanna profile & Microsoft's Anthropic spend**\n* **What is confirmed:** *The Information* published a profile on Microsoft EVP Charles Lamanna (who oversees Copilot, platform tools, and recently merged Office/Teams teams)"
+      },
+      "groundingChunkIndices": [
+        13,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4236,
+        "endIndex": 4372,
+        "text": "The report notes his rising executive profile and cites a source stating Microsoft is on track to spend **$2B+ per year** with Anthropic"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4374,
+        "endIndex": 4582,
+        "text": "* **Important caveats:** The $2B+ annual Anthropic spend figure relies on an unnamed source cited by *The Information* and is not disclosed in official SEC filings by Microsoft or public Anthropic disclosures"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4584,
+        "endIndex": 4728,
+        "text": "* **Publication status:** **Suitable for publication today**, clearly attributing the Anthropic spending figure to *The Information*'s reporting"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4736,
+        "endIndex": 5104,
+        "text": "#### **Candidate [18]: Intel CEO: Adoption of Chinese frontier AI models has been \"very fast\"**\n* **What is confirmed:** Speaking at a DBS panel in Singapore on Oct 12, Intel CEO Lip-Bu Tan stated that the adoption of Chinese frontier open-source AI models (referencing DeepSeek, Kimi, and GLM) has been \"very fast\" due to low token costs and \"good enough\" performance"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5106,
+        "endIndex": 5274,
+        "text": "* **Important caveats:** These are executive remarks from an industry panel discussion rather than an official corporate policy announcement or financial reporting item"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5335,
+        "endIndex": 5434,
+        "text": "** Concise, noteworthy executive commentary on global AI model competition and open-source dynamics"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5442,
+        "endIndex": 5828,
+        "text": "#### **Candidate [16]: Singapore President warns of AI impact on fresh graduate employment**\n* **What is confirmed:** Speaking at the IMF/World Bank annual meetings in Bangkok on Oct 12, Singapore President Tharman Shanmugaratnam warned that AI adoption is dampening entry-level hiring for fresh university graduates, particularly in AI-exposed sectors, urging early global intervention"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5830,
+        "endIndex": 5988,
+        "text": "* **Important caveats:** This is high-level macroeconomic policy commentary; no specific statutory or regulatory measures were introduced alongside the speech"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6049,
+        "endIndex": 6131,
+        "text": "** Relevant macro/policy coverage regarding AI's impact on technical labor markets"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6139,
+        "endIndex": 6513,
+        "text": "#### **Candidate [2]: Bloomberg: AI supercharging ~$442B global scam economy**\n* **What is confirmed:** Bloomberg published a detailed report investigating how generative AI tools are scaling global scam operations to an estimated **$442 billion** annually, expanding Chinese-linked cyber-scam networks beyond traditional Southeast Asian compounds into international markets"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6804,
+        "endIndex": 6876,
+        "text": "** Substantive investigative piece on AI misuse and cybercrime economics"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6884,
+        "endIndex": 7226,
+        "text": "#### **Candidate [19]: Italy proposing software and cloud tax incentives in 2027 budget**\n* **What is confirmed:** Italian Prime Minister Giorgia Meloni announced at an Assolombarda event that Italy's draft 2027 budget law will include tax incentives to promote business investment in software, specifically including cloud software contracts"
+      },
+      "groundingChunkIndices": [
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7228,
+        "endIndex": 7400,
+        "text": "* **Important caveats:** This is a policy proposal for inclusion in the upcoming budget draft; it remains subject to cabinet presentation and Italian parliamentary approval"
+      },
+      "groundingChunkIndices": [
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7461,
+        "endIndex": 7523,
+        "text": "** Practical short note on European enterprise tech tax policy"
+      },
+      "groundingChunkIndices": [
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7531,
+        "endIndex": 7862,
+        "text": "#### **Candidate [13]: Google Health Guardian launching on Fitbit Air and Edge**\n* **What is confirmed:** Google announced that its \"Health Guardian\" feature will launch later in October on the Fitbit Air and the newly announced $180 Fitbit Edge for Google Health Premium subscribers, alongside expanded automated activity tracking"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7864,
+        "endIndex": 7967,
+        "text": "* **Important caveats:** Requires a Google Health Premium subscription; rollout occurs later in October"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7969,
+        "endIndex": 8073,
+        "text": "* **Publication status:** **Suitable for publication today** as a secondary consumer digital health note"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8081,
+        "endIndex": 8412,
+        "text": "#### **Candidate [6]: The Verge: Googlebooks hands-on review**\n* **What is confirmed:** *The Verge* (Dominic Preston) published a hands-on review of the first wave of \"Googlebooks\" (Android-powered laptops), noting initial software stability issues, app casting friction, and a lack of full desktop parity in core productivity apps"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8414,
+        "endIndex": 8538,
+        "text": "* **Important caveats:** Product review reflecting individual hands-on testing rather than a new product launch announcement"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8667,
+        "endIndex": 8952,
+        "text": "#### **Candidate [5]: Andrej Karpathy post on LLM capability understanding gap**\n* **What is confirmed:** AI researcher Andrej Karpathy posted an informal thought piece on X arguing that public understanding of LLM capabilities is splitting into a sharp \"funnel\" across four user tiers"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9046,
+        "endIndex": 9157,
+        "text": "5,000 frontier researchers) are informal \"napkin math\" and personal observations rather than empirical research"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9211,
+        "endIndex": 9315,
+        "text": "** Fits thought-leadership summary sections, but represents individual opinion rather than verified news"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9323,
+        "endIndex": 9564,
+        "text": "#### **Candidate [17]: Andrew Garfield comments on OpenAI movie 'Artificial'**\n* **What is confirmed:** Actor Andrew Garfield discussed playing OpenAI CEO Sam Altman at the London Film Festival premiere of Luca Guadagnino's film *Artificial*"
+      },
+      "groundingChunkIndices": [
+        24,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9566,
+        "endIndex": 9677,
+        "text": "* **Important caveats:** Entertainment press coverage focusing on actor remarks during a movie promotional tour"
+      },
+      "groundingChunkIndices": [
+        24,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9728,
+        "endIndex": 9891,
+        "text": "** While technically in-scope due to the OpenAI subject matter, it offers minimal tech analysis or business substance compared to major industry developments today"
+      },
+      "groundingChunkIndices": [
+        24,
+        25
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Andrew Garfield\" \"Artificial\" \"OpenAI\" \"Reuters\"",
+    "\"Maia 300\" \"Microsoft\" \"N2P\" TSMC 2027",
+    "\"Singapore's President\" \"fresh graduates\" \"AI's risk\" \"Reuters\"",
+    "\"Intel CEO\" \"Chinese frontier AI model adoption\" \"Reuters\"",
+    "\"Bloomberg\" \"scam economy\" \"442B\" \"Chinese scam industry\" \"cocaine\"",
+    "\"Abilene\" \"data center\" \"30B\" bloomberg 1GW AI",
+    "\"Counterpoint Research\" \"smartphone\" \"20%\" \"Q3\" \"2026\" \"memory\"",
+    "\"Italia offrirà agevolazioni fiscali per investimenti settore software\" Meloni reuters",
+    "\"QGIS\" \"AI\" \"assisted\" PR pull 387 github qgis enhancement proposals",
+    "\"Charles Lamanna\" \"Anthropic\" \"2B\" \"The Information\"",
+    "\"Googlebooks\" \"android\" \"the verge\" \"dominic preston\"",
+    "\"Karpathy\" \"The gap in shared understanding of LLM capability is widening\""
+  ]
+}

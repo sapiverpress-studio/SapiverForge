@@ -1,5 +1,5 @@
-# Sources for The Character.AI Chapter: A Cautionary Tale of Hype vs. Revenue
+# Sources for The Safety Paradox: Who Controls the Truth?
 
-- [Rhea Rose Abraham/Reuters: Character.AI files for Chapter 11 bankruptcy in the US, agrees to sell some assets to Disney for $20M, and plans to keep operating as it completes the sale (Rhea Rose Abraham/Reuters)](https://www.reuters.com/legal/litigation/characterai-files-bankruptcy-agrees-sell-some-assets-disney-20-million-2026-10-13/)
+- [Aditya Soni/Reuters: Sources: Anthropic and OpenAI have pushed for substantial control over what external AI evaluators can publish, out of concern that trade secrets could leak (Aditya Soni/Reuters)](https://www.reuters.com/world/behind-ai-industrys-call-independent-reviews-fight-over-what-gets-made-public-2026-10-13/)
 - Daily Brief date: 2026-10-13
 - Confidence: 0.95

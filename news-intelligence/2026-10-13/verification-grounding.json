@@ -1,171 +1,159 @@
 {
   "searchEntryPoint": {
-    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22GLM-Legal%22+z.ai+2026&client=app-vertex-grounding&safesearch=active\">&quot;GLM-Legal&quot; z.ai 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Omron%22+%22OnLogic%22+675+million+2026&client=app-vertex-grounding&safesearch=active\">&quot;Omron&quot; &quot;OnLogic&quot; 675 million 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Nvidia%22+China+AI+chip+share+IDC+34%25+2026&client=app-vertex-grounding&safesearch=active\">&quot;Nvidia&quot; China AI chip share IDC 34% 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Character.AI%22+bankruptcy+Disney+20+million+2026&client=app-vertex-grounding&safesearch=active\">&quot;Character.AI&quot; bankruptcy Disney 20 million 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Broadcom%22+CEO+AI+casino+chip+stock+sell-off+2026&client=app-vertex-grounding&safesearch=active\">&quot;Broadcom&quot; CEO AI casino chip stock sell-off 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22NTT+Data%22+Anthropic+Osaka+data+center+2026&client=app-vertex-grounding&safesearch=active\">&quot;NTT Data&quot; Anthropic Osaka data center 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Muse+Wonder%22+Meta+research.meta.ai+2026&client=app-vertex-grounding&safesearch=active\">&quot;Muse Wonder&quot; Meta research.meta.ai 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Anthropic%22+%22distillation%22+%22Fable+5.1%22+%22Opus+5.5%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Anthropic&quot; &quot;distillation&quot; &quot;Fable 5.1&quot; &quot;Opus 5.5&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Microsoft%22+%22chips%22+%22despliegue%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Microsoft&quot; &quot;chips&quot; &quot;despliegue&quot; 2026</a>\n  </div>\n</div>"
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Intel+CEO%22+%22Chinese+frontier+AI+model%22+adoption+fast+2026&client=app-vertex-grounding&safesearch=active\">&quot;Intel CEO&quot; &quot;Chinese frontier AI model&quot; adoption fast 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Norway+fines+Xandr+Grindr+2026&client=app-vertex-grounding&safesearch=active\">Norway fines Xandr Grindr 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%222610.13928%22+OR+%22hide+arbitrary+capabilities%22+arxiv&client=app-vertex-grounding&safesearch=active\">&quot;2610.13928&quot; OR &quot;hide arbitrary capabilities&quot; arxiv</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Apple+HomeView%22+smart+display+2026&client=app-vertex-grounding&safesearch=active\">&quot;Apple HomeView&quot; smart display 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Uber+Sarfraz+Maredia+leaving+2026&client=app-vertex-grounding&safesearch=active\">Uber Sarfraz Maredia leaving 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Anthropic+OpenAI+external+evaluators+Reuters+2026&client=app-vertex-grounding&safesearch=active\">Anthropic OpenAI external evaluators Reuters 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Intel+D270+GPU%22+OR+%22D270+GPU+AI+Accelerator%22&client=app-vertex-grounding&safesearch=active\">&quot;Intel D270 GPU&quot; OR &quot;D270 GPU AI Accelerator&quot;</a>\n  </div>\n</div>"
   },
   "groundingChunks": [
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5e6PmeT120aMaI8SIDHUB_Vi010Zhj7EeEVZYCCwwK_13j6X1c3r7g0dYRyntn2Sh0GJrZL0n02wVbNLkKA1gBeUWVh2ktwgr7DvncNNngMzATnXGn4IdJyJaI_eP75WiiAdX86uE_VoNoXDxmEQF8Lj1jMT4a39KKAWilGoMLCCmobOplW1aMu_LC73hRmVLGoY_e4ahhjjTOj1KyJ041UNz1PaBNm-8",
-        "title": "wtvbam.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU29VwuLnTbJF3K7wXni_i92oij0Z9t4j-GdPRXDI4bWH6dxiupobRif45mLr3IYzzl0pHFy9bfRkG_teo023e-UelGzECsSpePKQRFGbCPOsa21V65ERQAC54nvNG69jvbV16-XeqZgmzvw4Y7vUrVk8dLX6VE7n8NEQCEWnSVwZSbIjDdL5TE568qPlwtyUdQKDtSP1Cngs8GtnKpfPA2jSgKmsHfwKRQ7CFoDUMsA==",
+        "title": "wsau.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHALpqVF9R5gxfm0nn2Be_8zZR2B0vyMzI5VE0W7byYHkMXnCAUR060vDcbls-DVgs3-fimpv2ePtDmb_dUtbz2bPWQBprSkRQXywFMibMRjpu1k4-v2zIl1Onpny1eTRSu3KzWehgI05KQlim-QIcKSaW_TN58gYmAuQow7okoF1mzs-xI-9NNTVjcNlrBV8WirFh716ilrwnPmrEfYscCfhh4edUjt2AwiisgIocQjNGt35-TLNfU0yA-aZVnDQK0uqLgYGDR0DnsX-WBglQ2A==",
-        "title": "businesswire.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEImTF7zOcFHh_46IgmIKw544vTbHCH8NjbSCrXF_fp0qXjrxJLN-lwIdVQxtWYcrivppBtYA9bE5xh9CDA3zy9xgn97OPbTmdeNArXEMh5u8GTCuT5KyuvqX58DXIsTcp2RR4zhkdKi6CXetK-NGq6Jz3iaD0fPV_zdSrs78u8hyvq453iOxqdjvPMlH9NIka49WFMgcPSd4ccaP8XDSclXzb3ml9WINxcPaYYcjuf2e8c",
+        "title": "euronext.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXgXlfW4qwKsWR7n8iS2iVugvmumUxP_3wnNuxICGVozCxHT73q6ZzJFHM0celCNzfhoNUMvwY6euwgazUONqeu3KOidTsL_1U1x3AjyrWCCMuIyrvrH9_DZRx3OfKkcGW1KK-OxV-b3uRYEDIW3Co3SbwHpHguJKqLaq-WtgTjV47oP7Lf3mnm5TpJKi0",
-        "title": "ppc.land"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXBsFmbuTK4A5UHtqy3og4vIattL5nrwYTkJsETlsOqMYov9AOyg00qX426_Duv7_5Rhp1FtRzKIKbrJDGg9920LsNMwxpLnh6C9T_Tufd9gNx88QlU8RiIBYfGPoAzTgDnD6ho5Hg2YbBSf2cMmHfZsYrpIIG3yN_S08XLC8bTalHpQg=",
+        "title": "thenextweb.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFNTkM04RCVaea7mirXy4fCsm7F1ZbimjEvlOMohiVy_8P84cLlSyFzOlwXplCCxP6oDC4t_hGaT-8FpG8PkPjhRIwlMNBwumnWLCQRfCXQMiEOa2xk2NH7udk49i4M1jbSt6_R90SJjjUpnmcwolU9d6cGQLjw4Td5ZuaX5ElGEzn3K0yh92BT4JVok4=",
-        "title": "finimize.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPrDcnlLPmo0rZtdxcudo0UHQjehzhp_bwF8_m648XMXlOAGTv8hTgp6bCK1QcQGMwTrSfYqBp0re1P4Kunx2ZkxWJLPPyyUtW71J6830n1LUu-HaN3uBEjPuBmjarbOjrNChs1AJH14KcitwF8_RuiiABm50UDtGX0z-YgdwFm-AVFkYWuiWU08szmZ_MEeLOXQ0M4Arep5RCWN_LuwZG7K4mna6PqaPa7IiJKMK8FEhgwDnAxCMW",
+        "title": "daily.dev"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwx28aQtoJ5Z-fZe58obX9XD7f7Sj90e0k_MJ8VQpKO3yLDpSLvZvlkMv-62zAXmJ4gA2_9MdfAh0Mvn3Iw2hJ5co7MOBHSDe1t3If6lpuNqlBzU0Pu7vtoFbUZa1AIMEyVemsbjUMxa9P5g1RV0mQqM6Ye73jSP49MEQOPX2IHTBvmw==",
-        "title": "ft.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGjfsCvwyQ28Qt3LVmaYrxhwWb5xcTsRH1DjmbBlfQMq_U_Oj3_MgYTuhEBJV9Htaq35aHKewCaBW5HZ4-kHjwKwCPtAnWxG_pKGp-SQJUZxbSjglFXjANdSebeD_wVguzPrw5Otpc-nSW9VcylRX5Hfpv2z5eK0u1FWJkvX0z7a8d_jYSLVEj-eQC9Y6t5q9fjjce1EUFw3PLPgE2mWS22bw6pW7Q",
+        "title": "apple.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExQnTjKB_W_pnJ3IGlDARAJ3WK7HYS-UepIq__7iflqglWRvNjlMMALNGHUiw2ZqWawoNSkVOJX6OWtvWssm11hPT-sLBEiRxZsbX8577rUk2lAoeR-mgxRnMFsUdrCHPyWh7h_1-Y66adQ5e7HpbVN-ImI7YAmbcsdzolt7JwlFzFTtW9-RA9i-Jn89TSC-_FKQ==",
-        "title": "startupfortune.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnFGQWURulG-OWndhGU7ptMPpnRD38REItHStih-KHM9lRRrnd95-ETazmSvun-XwXT5neSPmeRjoTHdg1Fb38pzVfFsVnDLoNDamgoq_6-Cl_Z_lo-IxgSPrXk9ppTGp3g13Coi77vva38wk_TyeDrnMKxchrsbi75xCRVV0woMT3sph5Hr_Ii9A=",
+        "title": "9to5mac.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4NTajURmg9kDHzjdWPX0Dcru6yeuUmNxAFlgyhNT-DVijj9vB8AljMu_ycsREEZfVR5qByU5uFfvtMuLTNte6SySYmgIFaSAy8gZATz0MBZdpwS4bRIeL5Fa_BINX42Rhhr-mxWZbHoh1-aO5ZVDYQYNHxbtxAA77rcuRPMlKtUxb-QNOLIfWwF5O19cLjTq7THP8iQ==",
-        "title": "kucoin.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCtUFnULPSLDYiI05xU89wO3wu_uWvE627tUTzXTBIlqoCKnKfJA32a7JuJKj97Ksqey8xyVIyH3O5vwoNxMOCk-aY7WZTPjZbBjOCj3D92KnZ5rPqbEM55pQfJfIezyH4ALHhXhTm9d1qbYTEHI0c9KATCbg31Cq18pJuxlA95AAvYQ==",
+        "title": "engadget.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-oQDTP7fGS7VApv-YxLLKipctzUyouZEa3_-KcAMqkGnVPoV7mtKI0qHh2gAj-uzsWap6ANxzM6sTN2Nsvc4KzkkBXGWzqO7NkKFz-HSnWE5hug2JXgAyMvlPIcl5q-rPrJccwikSkKS0xET-kOy23I2DVHqAKz4=",
-        "title": "biggo.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEYBtLnCz3MoC6a5OIhXJmofbmM32ue8LvlOY_250T9VihXN34a2s5ER_BGfkw2LB4YaR3VBbmXkIhS7npkANoZLw0CsHPqkn6doIvDkplOiAtZiDw0_NP38AdFfK5lbZjy0gNc2MFVrPVSBW3KzUkvPn4rltgC0FZ41MTISK5naMNHG2tuc1yvis_6RQd6C4r6voy-Sbd6ppup2B_4PrOjJCa2Mi0",
+        "title": "apple.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCnE--V_JLGCyNhTGrLYhF6DLXWtX5TBz1mcRgRni50269JbSC1U6g7eYnIax36MbPhBeW3oYr_fGPOXChQQZSr1H5MUdLWssq5BNO3AU-IZO1KAmjrjlD-jfXi8oNlabwu4vy7V_zTiN67zKOy3ecYkWXzUfO0gLtJOVSehfvzzHY5bIkwrUHDIk7LqwcZyOPa7ryn9LI1bFnU6XtYqLh",
-        "title": "brecorder.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2R1fweIO5Z0n9mN79juB9evYDpfW1bSi2KTssERMoM_hQZa2SdjWYxB7EXsT2J_og7OKC18IUIJYHEdBECGBztDVH84SyEPq2VqcJcfhxKLFghJ_20qc4LURhJbt0WifO8_DPSFT24zcY-k84uxlidi6kpWK-CvjAUg_WV2c=",
+        "title": "thehackernews.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHv4vTg05B-xYMpSGIN6p_R3FpJsjk-Hlg49gBXKEDaFfGqpIViZCOoGpEbcvnHvIAdEV1bclHyt48SHpkZdEnWcv_B4_2MzJJOOgM7NWav7G3OzH31CdbWzqne_r6lBWsMuYoeeHi9RrcvQ_MyUtvvE3YqQWu2V1VraRxpKejo-a_B2-DzaP6hUq61W3KmJuCM0qfbAIqBCVQwbPVHqB0D7XWDssJ06c-lnN0Rnu15aEFIYv4=",
-        "title": "livemint.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAzk2rLL8N0lNrALa41sHPthdQH6K-QcWhSomDOShU2o5m4v7bs4CG98mE4BahcpQTM6ClhiDcealL9kkoynVIB9ki9npp7m6x4RYlaoSHAfj2V5tLcwDwORt31Y_fXLxExija0nIKYdlHlIBMxRfv7940lqEl89PLCPdYkzdxs-PVD01ayKH-1e7ymojeiLgw0Woc9w==",
+        "title": "whbl.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6B4Z6-AKeQcQ9kKu1kIqA61Js7sK8aPZupoOwUrnaoyl_X8x20MgiWvdjAkdnqWn9IJR70hZSeeAUW_QGzCBhHn32xGDtQ3fnEebJDHUcEaCPl-WVAiAKYDHYKleYSbc6ZEPeSEM0gA_SOn1jXqHY14rxUzrqFhq3hIRU0YWUfkZCLy1hzzfcyrM=",
-        "title": "aiweekly.co"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJXO3OHDNkhHC5gXSfUxjkGQJ5tG19Xeb-DKtVKKUFLgbT-KaBkz8rS4VGN-6hQY2kqrGMuj7_PwZEOLpZm3xHx58r7T6K7P4FZAPQpMLum7w60qvecF3955LiwA8Hm67rV01yPNfQ-SQ3IX8lfLBAOwmydCLQS3APQlbBq5mt4VXJo0z610EihDoWnZzOWaoHbb9dB-TfZZj1avFtvsZgljOfElIyuDdgc6sHTHE=",
+        "title": "engadget.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuhK9zc7IvjRvsu2RRNYsrBQTbJpdAz8lE1cVyUyT0cWuN_e-z-qUO7gqnVFGd5zqrdmrvFDP6pVevDVDXrWsZYMMvxs6AVLPLOEd9UVlBQVsPSEqE79FbzYoMGo5_5x_LK8V8ZrppPgpFPre4",
-        "title": "cellcog.ai"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMxqvQ7T9PYQ2DquuCs-GnSC9f2-vJS21IfZH_bPYz_Sbkj06pExP2iQBopw7IooalFT607hSVu9o_sRZz0SPh93rhRrPfUQnFAo9N6uIXP28-Z-kKLhle6eIGUFEetCAZ9EV2j8MG_kIPgoc_zzYPc4xomNjq9xYpcfjlOSX-wWV4bifAVLJC-Fw9--kp5YjyeFS4V0Uvcf8epgRPYYAU5Ooj-nyCTm0f5Il0bLKdd2Nm2w==",
+        "title": "latimes.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIh8ZslFQZNWeuLnluCwk9MiVlSMYZv7I0stle4W0HbcZs4hqBY-DthYZLpHubH4OcnyeA-puZ_zvgfW2-z1uS6P8o-dXdemUpXpV75rmRZw7jERX9QnCyxnCXC_go37ycxl2oNMBasHL-FTdZXKm2im9xIkVSrbA=",
-        "title": "biggo.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6bae7TCOuJpIlRcAU5ANKmtJL-v9-Rlyajsi5hBDSzuDByWoHEp-AWe6LHhWtdt9BwoNHuB2wgSOKGigRRYbtEIB0EU67AWM5nHO24gX419y3ZKH_8ANbi_aTC0LeILDfDWBljMuOVrEYIztL1SxFqCma",
+        "title": "qz.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_rba9e7HTmsOfNn4yQ4hn0j0-SYA8AgrOd_uSGR5gXI_UFqKvUb39a7oWfiDf2rzzf0vTcWJzWK1oOsOwv8wTTIPM7blsVRH9b0_glJscXl88pxN3O_VJ6TpMY2v3JbCy_82MbSCxu2fBZxqViycrllWTspZg_6SCxvxW5L9WmmVnl3uWFYhoPwICOQsq6P8gm02bEng7epInenKCT4k_vjcn0tlHrLvnxs4Rp2qkRxlE",
-        "title": "brecorder.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgzJv3x6ZmPMKWL95bl0SrotAl85BNW696soK78VHm6xcM6uArcLKCzjnOcTB4LRQSg0WMlNDnD_511lkdJM4e3ltCOEtg6CVE2d44B5WKNtQqLURmX31_tBf-z6eQUDNA40BFWtUQho7Yb1QJooNAgnPCEaawsaenWsFXqbiWqpnrFg==",
+        "title": "cryptobriefing.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjMu_Ht2DGCswYzke7diLWuoT6lQN7TMb-MTX1Dhzpi6e8UEhc-MmTENHXuxQpPk2KCOg6BPKJASqvnfLwcMKE6TitDpx9VfMheL55OpMs7GpvHEeUzIujDCEAnYRUxhawHzDuI8LaHe2kgM68gW-2RDi3E4kXjC7MlyV_ZBcFGkSiZ-8SUUElg_JEQi5-Vfil0L4=",
-        "title": "w.media"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGr8EVrU6Ft8Irkg0W5_oBQU4y9AB3hLuGW15u1mAYqBJgYxXknue9SgyHbFUGw38CmekP6PiEHb6lndbnFB2BWQjws4N1y1gSny0YTw1ZYxS70j7iUpx8QSb3kzENpad4a0FDOc7dBTLcDQPjqNnUFPNERWjDlOOy2fXQI78X-LD-zEq8NxIlar0YMjYXpDSU=",
+        "title": "welcome.ai"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHBskjhLyRgqd3gS5CoaNPgeaiICqjutNg9x978WIQjAfvyaBpkns5Ae5ojSwtYFxJLuVI6JyWgC2u8xgLo_X9rfS4lPFT7IRtvWKBL0xNpRXgcOLj6_x8tYi2_GCAFbre4IQz5Qky3hh7W_R1Vn5gFh1lNAZXqKd8mf4-hYjbIvYE94UaM2z-Vt-ppmzeYqWGGMtPtaVqVtoLXeATC1iGV5jD4Ys1AgRbAQ2IgZ6IMgjBKU83D5AbAdMvmLaLZww=",
-        "title": "facebook.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuFHYW3d-wFKwwiun8rAJDqiPgstIsdGYdnD5XTD-OahkDGdX65GyuMMoxiSZYrJWA1eN6qKolNSWPUXvGyYh_3Yif2zcXrR8bvbTZ7evp0KoGjEDjpYGhAJWlBRJitqkMl7C4WVTfpwGcYS14nOj6VNs1AZFh9a_foUBbIoOwtYROLtSHeLHT4OGMch7GtW57v-zQk1U7Ldw6DQ==",
+        "title": "reddit.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuOXVrgYLgTYiH1s9fMqtGdQHNtGUc_VX32R6UmVyEXLX3_N813aZTR8JMCVWdHTHrjwE43Hk3NeSMnebcaF1xxTF9zknbetp8r-ktDY88ViNaaDSTYeEAclN7TmsxCQbLN_oVWKZNu31vkuU_v2HGhnRl3W7d",
-        "title": "fb.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoE2MHJIUBFcYS_gd-5at_VZJdZ8xSUXDvFE37ODbtEeRMh4C14BW85OCJ35qiMH1RSgta6zJAJ3D0PNOiL6VAliSq0XKmN9IHTd0qm57GVjZuWbPs18CWcsroiRykI0rpBuan5BW9SUigbprsSz04gD7LgRtQNCXf0bqNDyYrD-fslWqeh4v5bKsW9jnGAAv7BvGuzOOehlEP7odZ-m3XGA==",
+        "title": "wccftech.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5VPb5qNWHhJapo-0fB_myf1qnRK3HMGvrwe8tUQ9hhokDkCLnxinFKgvK-09Ce3p4S6Wse4-z4d-3yd2h59DYZD3a-ifGuB_x7c2_YMShFjs1cQH8lL5MQmeuZ0ye-Is=",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyiksvUk_ZH-a0knyWd4bujGcte5Ymlom3jQBkFHjbIvtrQrfphu8ys4yldHXKD0lQwZ-CniI6YzqSuWszHf2DvEUUfnDpceqbDDaMvl4FC0qVw7mHKwukV2wrbF0AIUq4mKh3DYoouZ1zRXDBxwbD5FM2eDyq94X8xRHBrFjLFUReqDV-ax5R",
+        "title": "n1n.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqIDWOeFCZLDIRel5Nxvw6ddoOeQfxUFXXFKVxDVitQxuJY07LzNGRTlDGd_TBXE2njt7K0muW73xiNLvhvdZOVzMNiPHaLFkuaDYb_MLbXt_2EJEG6AW9f2R7KeEhZ3knv2tJej5rZs-sepAzwN7aXmvnGZJecd6uhko2q0MDd-o4eImqh6Ir03ioJSk2FKAFHwpZRhsVpDdELiyowLJWKCSC6AZLBBccpyvhtthBeJ6I-zt6cL-v1pKYcIAQESErd2EvOtKS",
+        "title": "indianexpress.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKYek0pBNlaO-SRStqm1nAOBJD4MGvncnD2aewmDjQ0IzJ052MqG27k1kjwwG5w0eoizuUUMTXo8wOw4ib0rr0Nek-M1dJE7z7tDJqrms-HgJkOLHuRudtPCGPtSvm9rryE-d8gdPeH-4fzUC1OUkVDofTN9mhze7ae1bCrrQrZcfeqCFDTlmIwcfyHaipvaboBXoODveAUlkRTlw98EIH5XfCL52Z",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrH6wh6STS44TLfw56qo5luclVSjO4ufx0CM0OncDLJvLMiVcmcozV0MP2wxMAxikueGURBlkS8Q9yEkyEjGXSZt8Nz9y0Kuzp8TsLh_iPDL1MbGyPf-e1fw==",
+        "title": "arxiv.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGr45teeqZ_dAC75TkkPZNK7UZ-iwRnW0qMfcuxjl-zxGtHPBLVz4thmzFaTL5XaTOr6iDazE8SXxJC-VxtnvMw1N86FOnvWpI4JlHI2aMa0JXHNCKhu5MK2DBEL3GsvB71",
         "title": "youtube.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0szYIzvIa47LgpkiBHKsjE6wIBffG6UYHIhlx_EzLG8H7huC89VYuGKCfzdMDAhmt7XwDwAgc42a2MusN7efyoSZHJxdCRS7NR2AkcrOoWPPSS77WLFWP_38aUAtEePkNbEDehhkHHKnM5Q==",
-        "title": "meta.ai"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKgGbVvWnxq2VZTidjiEozQc-BZsb7hXtiPH9DkeYx9jX-2SE-OStaswLByp_bUFMvtDmVG79FVOChqPKNB6x7_0pVeF6sgxF9mY6DXsOaUC5ZbQ0EeYXjoLvpjIg1z2eimLL1zFtJZ6Axvb5a1_xb5wOfxCxrlhC2GNiF3x0hFUGoR218afW1ZDU=",
+        "title": "daily.dev"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOdR-bDune7lLJaq0dcxTJb9EqVVI-3CgICxUoChZHDZqIb94eyKWCd-3UGfgm1yaex-gNeiv92jYRDUKgx9MIlwydsahKpMOL10qrBpbaXSyQCxY5VbMbTeT8I8JLJa_dcuc70UeabN6BoUg=",
-        "title": "omron.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwHfozz8DKS_ylcbWFDr-emFAuEcl93llBz8QdpRW852lZAFFFAwkJcA3CNhfCXcjzag9wm-7J6ygtVE54VP3W42n1CQ7SHKOTUjLz6PI8Tpz-zQgUMjmiozLmf_NaMONt2iusssDNRmckvkDT3N-dw3xvr3cHKwg=",
-        "title": "biggo.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOmjWti1WuhSNc5a0lECFyWeIQAy6ZiYzLU9PslpH5Kal2DCNfsT2mC75xRFqdJFBGGqVizuDTk6q0PJ8PYe2y59bzaKmq_DuwpVUKANdNGuJZvKw0aftdHNZhtkrvXSBLjWJfjM1vQHzUcY03Z75XeGj1k43GsM0UnIX1o1oktR7cV2olzp-9iVP_8QHNE1doTzWfd06d",
-        "title": "tikr.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwXjX-fArgbU21Ao4JIJDn9CUXB087Lyz1CfZC6pwvXTexhsb_fzHFLuqxMjL3wyLNVWEx0YlRC0eHAr-yy661vo0ItjNdEFlpO4lxmE1AVKgIG1u7gfgp38iijFiLBA469CoDeAlGtTGgSMR-gUVHHimHY6_MBwHWIG5zw_LCZzRelEygUaTiwZIpVAm1We-izYIzRkjhEO5V5QBDffHdj8Zwy1vCNpBIjFQS6iL5tjZR47YksiXaTlY6zO8kh8Tf9-0=",
-        "title": "tradingkey.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKICujdBnoyjd4uHQg4xqxFFgzBKtB19P_N7C5FCb84U18RPA8dh0KblNFG4DnzAnT03zQdbI3HMPojTI1Zvxf0wW0x2IE1KTk718h7MqZhynwjZK7oy04HfkNqaPv0bOhd7eG-oAGt0EelnmS4SzKZmSm_H8ABfkllA7a90O7OF_ndS9E-qV_ocFyfptLNx5ynRT5T1j7ZWMiSKzRGuYnyx18HZ7lo_HsKygFhQ5cHKwvKA9Vcu1hKxbIcwHe0vMbeDYwo2fcOMyTNv7N20nqXQA=",
-        "title": "notebookcheck.org"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHypmHtJHc8oVDzw6M03sPoHrMdO2D6RAw7wKAU1-4Kf5UvEbbPeAA6Sm_PubtGRTJ97HF6GKT8lqpP1kY1WCUXmV1_7QXzF5FWzxkeeC-UeoMxfFBHbwmshlfX-ReS85ZDfTVwTUj-oWFJwSRmhQKkAh5tVS1M2Eb2oJVX7mFvxenTuQ==",
-        "title": "qore.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhdcH2GRP9hOZFVg-3vtyjCURsP3oDlKOeHUSON0NIaGlhgwV3U-wEhlzHZMeWt-JMqczmh-262aOvSSfZCg3lJ1zUy5AENLeIvdvaAwI4MPwr2KTBiIg2NqDAwiDM5IY=",
-        "title": "ai-tldr.dev"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1TQhQWPCWRqVAaRRtRFli1xC2ZEP9mGi5Jww4ZkSla0UHK3_NtcLzQAWNZ1wMbrXX86ztcLkTnqXlHjZrvocxR3kVtg7UM3RaKRVO0hYh7aTui4djhetDm38sx6lNCDJd3FW0a6UPNifU_hQmAtwMcPA_W89gbpxLkioHGXOD0WDJjBWyQ0wtxt_2",
+        "title": "deeplearn.org"
       }
     }
   ],
   "groundingSupports": [
     {
       "segment": {
-        "startIndex": 179,
-        "endIndex": 317,
-        "text": "#### **[6] Character.AI files for Chapter 11 bankruptcy; Disney enters $20M stalking-horse deal**\n* **Publisher:** Reuters / Court Filings"
+        "startIndex": 134,
+        "endIndex": 443,
+        "text": "### **[15] Anthropic and OpenAI push for control over third-party AI safety evaluations**\n* **Publisher:** Reuters (Aditya Soni)\n* **Confirmed:** Reuters reported that Anthropic and OpenAI have sought contract terms giving them significant approval rights over what external AI evaluators can publicly publish"
       },
       "groundingChunkIndices": [
         0,
@@ -174,263 +162,129 @@
     },
     {
       "segment": {
-        "startIndex": 371,
-        "endIndex": 470,
-        "text": "(owner of Character.AI) voluntarily filed for Chapter 11 bankruptcy in Delaware on October 12, 2026"
+        "startIndex": 445,
+        "endIndex": 609,
+        "text": "The companies cite concerns that embedded evaluators with deep internal access could inadvertently disclose trade secrets or proprietary architecture to competitors"
       },
       "groundingChunkIndices": [
+        0,
         1
       ]
     },
     {
       "segment": {
-        "startIndex": 472,
-        "endIndex": 546,
-        "text": "The company listed estimated assets and liabilities between $50M and $100M"
+        "startIndex": 611,
+        "endIndex": 742,
+        "text": "* **Important Caveats:** Both labs recently made public commitments endorsing independent evaluation without editorial interference"
       },
       "groundingChunkIndices": [
-        0
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 548,
-        "endIndex": 691,
-        "text": "It signed a $20 million \"stalking horse\" agreement with Walt Disney for a non-exclusive perpetual license to certain IP and transition services"
-      },
-      "groundingChunkIndices": [
+        0,
         1
       ]
     },
     {
       "segment": {
-        "startIndex": 694,
-        "endIndex": 874,
-        "text": "* **Important caveats:** Disney’s $20M offer sets a baseline for a court-supervised auction under Section 363, not a full buyout of the consumer application or operating business"
+        "startIndex": 744,
+        "endIndex": 1027,
+        "text": "Anthropic told Reuters that pre-publication approval rights apply specifically to new evaluator firms while establishing working relationships, whereas OpenAI stated it only redacts strictly confidential details and permits evaluators to explicitly flag when redactions have occurred"
       },
       "groundingChunkIndices": [
-        1,
         2,
         3
       ]
     },
     {
       "segment": {
-        "startIndex": 876,
-        "endIndex": 1069,
-        "text": "While Character.AI intends to keep its app online during proceedings, the company stated the platform will be wound down if the auction fails to produce a buyer willing to continue operating it"
+        "startIndex": 1171,
+        "endIndex": 1449,
+        "text": "### **[13] & [2] Apple launches $299 HomeView smart display; confirms launch delay in the EU**\n* **Publisher:** Wired / MacRumors / Apple Newsroom\n* **Confirmed:** Apple officially announced **Apple HomeView**, a $299 7-inch smart home display powered by an A18 chip and Siri AI"
       },
       "groundingChunkIndices": [
-        0,
-        2
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1195,
-        "endIndex": 1329,
-        "text": "#### **[4] Global chip stock sell-off deepens following Broadcom CEO's \"casino\" warning**\n* **Publisher:** Financial Times / Bloomberg"
-      },
-      "groundingChunkIndices": [
-        4
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1195,
-        "endIndex": 1567,
-        "text": "#### **[4] Global chip stock sell-off deepens following Broadcom CEO's \"casino\" warning**\n* **Publisher:** Financial Times / Bloomberg\n* **What is confirmed:** Broadcom CEO Hock Tan warned at an event in Singapore on October 12, 2026, that many investors in the AI boom \"have no clue what they are investing in\" and compared speculative expectations to \"being in a casino\""
-      },
-      "groundingChunkIndices": [
-        4
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1569,
-        "endIndex": 1656,
-        "text": "His comments sparked a sharp global sell-off in semiconductor stocks on October 12–13"
-      },
-      "groundingChunkIndices": [
-        4
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1569,
-        "endIndex": 1731,
-        "text": "His comments sparked a sharp global sell-off in semiconductor stocks on October 12–13: Samsung fell up to 8.8%, SK Hynix fell 9.4%, and Micron dropped nearly 4%"
-      },
-      "groundingChunkIndices": [
-        4
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1733,
-        "endIndex": 1878,
-        "text": "* **Important caveats:** Market declines reflect broader market anxieties over enterprise AI ROI and rising bond yields, not solely Tan's remarks"
-      },
-      "groundingChunkIndices": [
-        4
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1880,
-        "endIndex": 2006,
-        "text": "Broadcom simultaneously reiterated strong operational growth, forecasting its custom AI chip revenues to reach $230B by FY2028"
-      },
-      "groundingChunkIndices": [
+        4,
         5,
         6
       ]
     },
     {
       "segment": {
-        "startIndex": 2143,
-        "endIndex": 2268,
-        "text": "#### **[8] IDC report: Nvidia's China AI chip market share drops to 34% as Huawei closes gap**\n* **Publisher:** Reuters / IDC"
+        "startIndex": 1451,
+        "endIndex": 1581,
+        "text": "It features facial recognition for up to six personalized user profiles, tabletop and wall-mounting options, and ships November 13"
       },
       "groundingChunkIndices": [
-        7,
-        8
+        4,
+        5
       ]
     },
     {
       "segment": {
-        "startIndex": 2143,
-        "endIndex": 2459,
-        "text": "#### **[8] IDC report: Nvidia's China AI chip market share drops to 34% as Huawei closes gap**\n* **Publisher:** Reuters / IDC\n* **What is confirmed:** An IDC research report details that Nvidia’s share of China’s data-center AI accelerator market fell to 34% in H1 2026, down from market dominance in prior years"
+        "startIndex": 1802,
+        "endIndex": 2091,
+        "text": "* **Important Caveats:** Related announcements from the same event include the 4th-gen **Apple TV 4K** ($299, A19 chip) [7], **HomePod mini 2** ($149, S10 chip) [9], and the **Apple Home Collection** (third-party smart home hardware co-developed with LG Electronics and Schneider Electric)"
       },
       "groundingChunkIndices": [
-        7,
-        8
+        7
       ]
     },
     {
       "segment": {
-        "startIndex": 2461,
-        "endIndex": 2572,
-        "text": "Nvidia shipped 678,000 units (a 44% YoY decline) due to US export restrictions and local procurement directives"
+        "startIndex": 2322,
+        "endIndex": 2832,
+        "text": "### **[18] Norway fines Microsoft subsidiary Xandr $9.6M over Grindr data sharing**\n* **Publisher:** Reuters / Datatilsynet\n* **Confirmed:** Norway’s data protection authority (*Datatilsynet*) imposed a 92 million NOK (~$9.6 million / €8.5 million) fine on adtech firm Xandr (now owned by Microsoft) for unlawfully processing and sharing sensitive personal data—including users' sexual orientation—from dating app Grindr with third-party advertisers via real-time bidding auctions between 2018 and 2020"
       },
       "groundingChunkIndices": [
-        7,
         8,
         9
       ]
     },
     {
       "segment": {
-        "startIndex": 2574,
-        "endIndex": 2662,
-        "text": "Meanwhile, Huawei’s shipments rose to 572,000 units, expanding its market share to 28%"
+        "startIndex": 2834,
+        "endIndex": 2938,
+        "text": "* **Important Caveats:** The underlying conduct occurred prior to Microsoft acquiring Xandr in late 2021"
       },
       "groundingChunkIndices": [
-        7,
+        8,
         9
       ]
     },
     {
       "segment": {
-        "startIndex": 2664,
-        "endIndex": 2875,
-        "text": "* **Important caveats:** Figures are sourced from an internal IDC market tracking report obtained by Reuters; IDC did not publicly specify product-level breakdowns or account for unauthorized gray-market imports"
+        "startIndex": 2940,
+        "endIndex": 2999,
+        "text": "The fine was calculated based on Xandr's historical revenue"
       },
       "groundingChunkIndices": [
-        7,
         9
       ]
     },
     {
       "segment": {
-        "startIndex": 2998,
-        "endIndex": 3130,
-        "text": "#### **[11] Anthropic claims new defenses reduced model distillation attacks by 90%–99%**\n* **Publisher:** Anthropic Research Blog"
+        "startIndex": 3001,
+        "endIndex": 3043,
+        "text": "Xandr has three weeks to appeal the ruling"
       },
       "groundingChunkIndices": [
         10,
-        11
+        9
       ]
     },
     {
       "segment": {
-        "startIndex": 2998,
-        "endIndex": 3286,
-        "text": "#### **[11] Anthropic claims new defenses reduced model distillation attacks by 90%–99%**\n* **Publisher:** Anthropic Research Blog\n* **What is confirmed:** On October 12, 2026, Anthropic published research on anti-distillation safeguards implemented across Claude Fable 5.1 and Opus 5.5"
+        "startIndex": 3151,
+        "endIndex": 3422,
+        "text": "### **[3] Head of Uber’s autonomous mobility unit, Sarfraz Maredia, to depart**\n* **Publisher:** Bloomberg / Quartz\n* **Confirmed:** Sarfraz Maredia, global head of autonomous mobility and delivery at Uber, is leaving the company on November 16 after more than 12 years"
       },
       "groundingChunkIndices": [
-        10
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 3288,
-        "endIndex": 3425,
-        "text": "The key feature, \"preserved thinking,\" prevents API accounts created after August 31, 2026, from modifying prior context during API calls"
-      },
-      "groundingChunkIndices": [
-        10,
-        11
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 3427,
-        "endIndex": 3560,
-        "text": "Anthropic explicitly named Chinese AI labs Zhipu AI and Moonshot AI for unauthorized data harvesting and prompt-forwarding activities"
-      },
-      "groundingChunkIndices": [
-        10,
-        11
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 3562,
-        "endIndex": 3757,
-        "text": "* **Important caveats:** Metrics (90%–99% reduction in data loss, 10x–100x drop in extracted reasoning tokens) are self-reported figures from Anthropic and have not been independently audited"
-      },
-      "groundingChunkIndices": [
-        10
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 3759,
-        "endIndex": 3911,
-        "text": "Anthropic acknowledged the measures introduce trade-offs, including API flexibility constraints for legitimate developers and occasional false positives"
-      },
-      "groundingChunkIndices": [
-        10
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 4040,
-        "endIndex": 4177,
-        "text": "#### **[13] / [16] NTT Data in final talks to build $6.3B, 500 MW Anthropic data center in Osaka**\n* **Publisher:** Nikkei Asia / Reuters"
-      },
-      "groundingChunkIndices": [
-        12,
-        13
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 4040,
-        "endIndex": 4339,
-        "text": "#### **[13] / [16] NTT Data in final talks to build $6.3B, 500 MW Anthropic data center in Osaka**\n* **Publisher:** Nikkei Asia / Reuters\n* **What is confirmed:** Japanese IT group NTT Data is in advanced negotiations to construct Anthropic’s first dedicated data center in Japan, located in Osaka"
-      },
-      "groundingChunkIndices": [
+        11,
         12
       ]
     },
     {
       "segment": {
-        "startIndex": 4341,
-        "endIndex": 4453,
-        "text": "The facility is projected to cost up to ¥1 trillion ($6.3 billion) with a power capacity of up to 500 megawatts"
+        "startIndex": 3424,
+        "endIndex": 3563,
+        "text": "His responsibilities will be split between senior directors Samarth Kejriwal (driverless operations) and Aaron Emrich (autonomous delivery)"
       },
       "groundingChunkIndices": [
         12,
@@ -439,9 +293,20 @@
     },
     {
       "segment": {
-        "startIndex": 4455,
-        "endIndex": 4560,
-        "text": "The parties aim to execute a final agreement by March 31, 2027, with partial operations targeted for 2028"
+        "startIndex": 3565,
+        "endIndex": 3701,
+        "text": "* **Important Caveats:** An Uber spokesperson confirmed Maredia is leaving for an executive position outside the transportation industry"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3703,
+        "endIndex": 3797,
+        "text": "The exit follows several other senior departures from Uber's autonomous team earlier this year"
       },
       "groundingChunkIndices": [
         12,
@@ -450,233 +315,102 @@
     },
     {
       "segment": {
-        "startIndex": 4562,
-        "endIndex": 4725,
-        "text": "* **Important caveats:** Based on source-informed Nikkei reporting; neither NTT Data nor Anthropic has issued a formal press announcement or signed final contracts"
+        "startIndex": 3913,
+        "endIndex": 4179,
+        "text": "### **[12] Intel unveils D270 GPU AI Accelerator with up to 480 GB LPDDR5X**\n* **Publisher:** Intel\n* **Confirmed:** Intel published specifications for its new **D270 GPU AI Accelerator**, an inference-optimized data center accelerator based on the Xe3P architecture"
       },
       "groundingChunkIndices": [
         14,
-        12
+        15
       ]
     },
     {
       "segment": {
-        "startIndex": 4727,
-        "endIndex": 4826,
-        "text": "Due to grid power constraints, early operations may rely on on-site fuel cells and local generation"
+        "startIndex": 4181,
+        "endIndex": 4293,
+        "text": "It delivers up to 1.3 PFLOPs of FP8 compute at a 350W power envelope and supports up to 480 GB of LPDDR5X memory"
       },
       "groundingChunkIndices": [
         14,
-        12
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 4858,
-        "endIndex": 4955,
-        "text": "** Notable infrastructure development (must be explicitly attributed to Nikkei/Reuters reporting)"
-      },
-      "groundingChunkIndices": [
-        12,
-        13
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 4963,
-        "endIndex": 5100,
-        "text": "#### **[1] / [14] / [17] Meta launches Muse Wonder frontier AI models for autonomous agents**\n* **Publisher:** Meta AI Research / Reuters"
-      },
-      "groundingChunkIndices": [
-        15,
         16
       ]
     },
     {
       "segment": {
-        "startIndex": 4963,
-        "endIndex": 5296,
-        "text": "#### **[1] / [14] / [17] Meta launches Muse Wonder frontier AI models for autonomous agents**\n* **Publisher:** Meta AI Research / Reuters\n* **What is confirmed:** On October 12, 2026, Meta launched the \"Muse Wonder\" and \"Muse Wonder Full\" model series, designed specifically for multi-step personal and professional agentic workflows"
+        "startIndex": 4295,
+        "endIndex": 4466,
+        "text": "* **Important Caveats:** The card targets long-context LLM serving and agentic AI workloads using high-capacity LPDDR5X rather than traditional high-bandwidth memory (HBM)"
       },
       "groundingChunkIndices": [
+        16,
         15,
-        16
+        17
       ]
     },
     {
       "segment": {
-        "startIndex": 5298,
-        "endIndex": 5442,
-        "text": "The architecture introduces \"Active Memory\" (cross-session context persistence) and \"Active Focus\" (sustained task execution and error recovery)"
+        "startIndex": 4587,
+        "endIndex": 4927,
+        "text": "### **[16] Intel CEO Lip-Bu Tan notes rapid adoption of Chinese frontier AI models**\n* **Publisher:** Reuters\n* **Confirmed:** Speaking at a panel in Singapore, Intel CEO Lip-Bu Tan stated that adoption of Chinese frontier AI models (such as DeepSeek, Kimi, and GLM) has been \"very fast\" due to lower token costs and competitive performance"
       },
       "groundingChunkIndices": [
-        15,
-        16
+        18,
+        19
       ]
     },
     {
       "segment": {
-        "startIndex": 5444,
-        "endIndex": 5505,
-        "text": "The models are available via the Meta Model API and Muse Code"
+        "startIndex": 4929,
+        "endIndex": 5000,
+        "text": "Tan reiterated his support for open-source AI as a driver of efficiency"
       },
       "groundingChunkIndices": [
-        15,
-        16
+        18,
+        19
       ]
     },
     {
       "segment": {
-        "startIndex": 5507,
-        "endIndex": 5644,
-        "text": "* **Important caveats:** Capability benchmark claims and safety evaluations originate directly from Meta’s release notes and model card"
+        "startIndex": 5246,
+        "endIndex": 5580,
+        "text": "### **[11] Paper: AI models can provably hide arbitrary capabilities (arXiv:2610.13928)**\n* **Publisher:** arXiv (Draguns et al., Oxford / Contramont Research)\n* **Confirmed:** Academic paper demonstrating a theoretical proof-of-concept construction (\"digital lockers\") that embeds encrypted neural network circuits into model weights"
       },
       "groundingChunkIndices": [
-        17,
-        18
+        20,
+        21
       ]
     },
     {
       "segment": {
-        "startIndex": 5646,
-        "endIndex": 5743,
-        "text": "Integration into the consumer Muse application is rolling out gradually to paid subscribers first"
-      },
-      "groundingChunkIndices": [
-        15,
-        16
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 5836,
-        "endIndex": 5956,
-        "text": "#### **[15] Omron acquires US industrial PC maker OnLogic for $675M**\n* **Publisher:** Omron Corporate Release / Reuters"
-      },
-      "groundingChunkIndices": [
-        19,
-        20
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6197,
-        "endIndex": 6221,
-        "text": "for $675 million in cash"
-      },
-      "groundingChunkIndices": [
-        19,
-        20
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6223,
-        "endIndex": 6319,
-        "text": "The deal uses a reverse triangular merger structure and is expected to close around January 2027"
-      },
-      "groundingChunkIndices": [
-        19,
-        20
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6321,
-        "endIndex": 6427,
-        "text": "Omron stated the move will accelerate its \"physical AI\" and edge-computing footprint in factory automation"
-      },
-      "groundingChunkIndices": [
-        19,
-        20
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6429,
-        "endIndex": 6537,
-        "text": "* **Important caveats:** Subject to standard regulatory clearances and closing conditions through early 2027"
-      },
-      "groundingChunkIndices": [
-        20
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6633,
-        "endIndex": 6765,
-        "text": "#### **[19] Microsoft unveils Maia 300 custom AI chip for multi-gigawatt scaling**\n* **Publisher:** Microsoft Announcement / Reuters"
+        "startIndex": 5582,
+        "endIndex": 5812,
+        "text": "The hidden capabilities unlock only when activated by a secret trigger and mathematically resist standard capability elicitation techniques (such as fine-tuning, weight noising, and gradient search) under cryptographic assumptions"
       },
       "groundingChunkIndices": [
         21,
-        22
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6633,
-        "endIndex": 6956,
-        "text": "#### **[19] Microsoft unveils Maia 300 custom AI chip for multi-gigawatt scaling**\n* **Publisher:** Microsoft Announcement / Reuters\n* **What is confirmed:** On October 12, 2026, Microsoft officially presented Azure Maia 300, its 3rd-generation custom AI accelerator built on TSMC's 2nm (N2P) process with 288GB HBM4 memory"
-      },
-      "groundingChunkIndices": [
-        21,
+        22,
         23
       ]
     },
     {
       "segment": {
-        "startIndex": 6958,
-        "endIndex": 7165,
-        "text": "Microsoft announced plans for production deployments in 2027, scaling the Maia family to multi-gigawatt data center footprints to handle inference tasks (Copilot, Teams) and lower reliance on commercial GPUs"
+        "startIndex": 5814,
+        "endIndex": 5872,
+        "text": "* **Important Caveats:** Treat as claims made by the paper"
       },
       "groundingChunkIndices": [
-        21,
-        22
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 7167,
-        "endIndex": 7291,
-        "text": "* **Important caveats:** Product rollout is a 2027 production roadmap rather than immediate off-the-shelf availability today"
-      },
-      "groundingChunkIndices": [
-        21,
-        24
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 7293,
-        "endIndex": 7446,
-        "text": "The headline performance claim (~40% higher token output per megawatt) is based on internal Microsoft benchmarks against unspecified reference GPU setups"
-      },
-      "groundingChunkIndices": [
-        21,
-        22,
-        24
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 7929,
-        "endIndex": 8088,
-        "text": "* **[5] GLM-Legal (z.ai):** Valid specialized model launch, but secondary in priority compared to the top tier releases listed above; access is currently gated"
-      },
-      "groundingChunkIndices": [
-        25
+        20,
+        23
       ]
     }
   ],
   "webSearchQueries": [
-    "\"GLM-Legal\" z.ai 2026",
-    "\"Omron\" \"OnLogic\" 675 million 2026",
-    "\"Nvidia\" China AI chip share IDC 34% 2026",
-    "\"Character.AI\" bankruptcy Disney 20 million 2026",
-    "\"Broadcom\" CEO AI casino chip stock sell-off 2026",
-    "\"NTT Data\" Anthropic Osaka data center 2026",
-    "\"Muse Wonder\" Meta research.meta.ai 2026",
-    "\"Anthropic\" \"distillation\" \"Fable 5.1\" \"Opus 5.5\" 2026",
-    "\"Microsoft\" \"chips\" \"despliegue\" 2026"
+    "\"Intel CEO\" \"Chinese frontier AI model\" adoption fast 2026",
+    "Norway fines Xandr Grindr 2026",
+    "\"2610.13928\" OR \"hide arbitrary capabilities\" arxiv",
+    "\"Apple HomeView\" smart display 2026",
+    "Uber Sarfraz Maredia leaving 2026",
+    "Anthropic OpenAI external evaluators Reuters 2026",
+    "\"Intel D270 GPU\" OR \"D270 GPU AI Accelerator\""
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-13T06:11:46.681Z",
+  "collected_at": "2026-10-13T14:06:04.890Z",
   "expected_sources": [
     "Techmeme",
     "Reuters",
@@ -13,7 +13,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 516,
+      "elapsed_ms": 399,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -21,7 +21,7 @@
       "name": "Reuters",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 1735,
+      "elapsed_ms": 1693,
       "collection_mode": "sitemap",
       "original_link_count": 12
     },
@@ -29,7 +29,7 @@
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 389,
+      "elapsed_ms": 537,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -37,7 +37,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 313,
+      "elapsed_ms": 233,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -45,11 +45,31 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1244,
+      "elapsed_ms": 1893,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
   "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "11 year old unsoundness bugs found in Rust borrow checker",
+      "url": "https://github.com/rust-lang/rust/issues/164250",
+      "direct_source_url": "https://github.com/rust-lang/rust/issues/164250",
+      "discovery_url": "https://news.ycombinator.com/item?id=50069499",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50069499",
+      "summary": "",
+      "published_at": "2026-10-13T10:27:00.000Z",
+      "engagement": {
+        "score": 366,
+        "comments": 177
+      },
+      "collection_mode": "api",
+      "score": 8.298
+    },
     {
       "source": "Hacker News",
       "publisher": "tomshardware.com",
@@ -64,57 +84,49 @@
       "summary": "https://www.reuters.com/business/retail-consumer/french-supe... , https://www.bbc.com/news/articles/crq5nzxv9q4yo , https://www.lemonde.fr/en/france/article/2026/10/12/french-s... Related: https://www.claroty.com/team82/research/freeze-the-controlle... I think the military commissary's freezers were hacked - https://news.ycombinator.com/item?id=49508506 - Aug 2026 (239 comments)",
       "published_at": "2026-10-12T12:16:42.000Z",
       "engagement": {
-        "score": 573,
-        "comments": 746
+        "score": 796,
+        "comments": 915
       },
       "collection_mode": "api",
-      "score": 8.453
+      "score": 8.124
     },
     {
-      "source": "Hacker News",
-      "publisher": "research.meta.ai",
-      "source_home": "https://news.ycombinator.com/",
+      "title": "Apple says the HomeView will not be available in the EU because Siri AI is currently unavailable on iOS there and it is \"working constructively with the EU\" (Hartley Charlton/MacRumors)",
+      "url": "https://www.macrumors.com/2026/10/13/apple-homeview-wont-be-available-in-eu/",
+      "summary": "Hartley Charlton / MacRumors : Apple says the HomeView will not be available in the EU because Siri AI is currently unavailable on iOS there and it is &ldquo;working constructively with the EU&rdquo; &mdash; Apple's new HomeView smart home hub will not be available in the European Union because Siri AI is currently unavailable &hellip;",
+      "description_html": "<A HREF=\"https://www.macrumors.com/2026/10/13/apple-homeview-wont-be-available-in-eu/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i24.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p24#a261013p24\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Hartley Charlton / <A HREF=\"http://www.macrumors.com/\">MacRumors</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.macrumors.com/2026/10/13/apple-homeview-wont-be-available-in-eu/\">Apple says the HomeView will not be available in the EU because Siri AI is currently unavailable on iOS there and it is &ldquo;working constructively with the EU&rdquo;</A></B></SPAN>&nbsp; &mdash;&nbsp;   Apple's new HomeView smart home hub will not be available in the European Union because Siri AI is currently unavailable &hellip; </P>",
+      "published_at": "2026-10-13T13:46:17.000Z",
+      "discovery_url": "https://www.techmeme.com/261013/p24",
+      "direct_source_url": "https://www.macrumors.com/2026/10/13/apple-homeview-wont-be-available-in-eu/",
+      "publisher": "Hartley Charlton/MacRumors",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.086
+    },
+    {
+      "title": "Uber's head of autonomous mobility and delivery, Sarfraz Maredia, is leaving on November 16 after 12+ years at Uber, the latest exit from its autonomous unit (Natalie Lung/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-13/uber-executive-overseeing-robotaxi-expansion-efforts-to-depart",
+      "summary": "Natalie Lung / Bloomberg : Uber's head of autonomous mobility and delivery, Sarfraz Maredia, is leaving on November 16 after 12+ years at Uber, the latest exit from its autonomous unit &mdash; An Uber Technologies Inc. executive overseeing the company's global autonomous efforts across ride-hailing and delivery will depart next month &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-10-13/uber-executive-overseeing-robotaxi-expansion-efforts-to-depart\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i23.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p23#a261013p23\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Natalie Lung / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-10-13/uber-executive-overseeing-robotaxi-expansion-efforts-to-depart\">Uber's head of autonomous mobility and delivery, Sarfraz Maredia, is leaving on November 16 after 12+ years at Uber, the latest exit from its autonomous unit</A></B></SPAN>&nbsp; &mdash;&nbsp; An Uber Technologies Inc. executive overseeing the company's global autonomous efforts across ride-hailing and delivery will depart next month &hellip; </P>",
+      "published_at": "2026-10-13T13:35:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261013/p23",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-10-13/uber-executive-overseeing-robotaxi-expansion-efforts-to-depart",
+      "publisher": "Natalie Lung/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
       "source_rank": 2,
-      "title": "Muse Wonder",
-      "url": "https://research.meta.ai/blog/muse-wonder",
-      "direct_source_url": "https://research.meta.ai/blog/muse-wonder",
-      "discovery_url": "https://news.ycombinator.com/item?id=50059115",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50059115",
-      "summary": "",
-      "published_at": "2026-10-12T16:48:01.000Z",
-      "engagement": {
-        "score": 591,
-        "comments": 324
-      },
-      "collection_mode": "api",
-      "score": 8.212
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "github.com",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 3,
-      "title": "Codex CLI installs a persistent, self-updating background daemon by default",
-      "url": "https://github.com/openai/codex/issues/48195",
-      "direct_source_url": "https://github.com/openai/codex/issues/48195",
-      "discovery_url": "https://news.ycombinator.com/item?id=50060694",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50060694",
-      "summary": "",
-      "published_at": "2026-10-12T18:29:04.000Z",
-      "engagement": {
-        "score": 523,
-        "comments": 267
-      },
-      "collection_mode": "api",
-      "score": 8.202
+      "collection_mode": "rss",
+      "score": 7.998
     },
     {
       "source": "Hacker News",
       "publisher": "yyhh.org",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 6,
+      "source_rank": 4,
       "title": "AI is a tool and using it well takes skill",
       "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
       "direct_source_url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
@@ -124,33 +136,33 @@
       "summary": "",
       "published_at": "2026-10-12T21:40:18.000Z",
       "engagement": {
-        "score": 325,
-        "comments": 273
+        "score": 490,
+        "comments": 395
       },
       "collection_mode": "api",
-      "score": 8.095
+      "score": 7.925
     },
     {
-      "title": "A global chip stock sell-off deepens after Broadcom's CEO likened AI investing to a casino, with Samsung down as much as 8.8%, SK Hynix 9.2%, and Micron 4% (Financial Times)",
-      "url": "https://www.ft.com/content/e16f0422-cf75-4cc9-962d-4605e421dc63",
-      "summary": "Financial Times : A global chip stock sell-off deepens after Broadcom's CEO likened AI investing to a casino, with Samsung down as much as 8.8%, SK Hynix 9.2%, and Micron 4% &mdash; Declines for Samsung and SK Hynix drag Kospi sharply lower as investors fret over scale of AI investment",
-      "description_html": "<A HREF=\"https://www.ft.com/content/e16f0422-cf75-4cc9-962d-4605e421dc63\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p4#a261013p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/e16f0422-cf75-4cc9-962d-4605e421dc63\">A global chip stock sell-off deepens after Broadcom's CEO likened AI investing to a casino, with Samsung down as much as 8.8%, SK Hynix 9.2%, and Micron 4%</A></B></SPAN>&nbsp; &mdash;&nbsp; Declines for Samsung and SK Hynix drag Kospi sharply lower as investors fret over scale of AI investment</P>",
-      "published_at": "2026-10-13T05:05:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261013/p4",
-      "direct_source_url": "https://www.ft.com/content/e16f0422-cf75-4cc9-962d-4605e421dc63",
-      "publisher": "Financial Times",
+      "title": "Apple HomeView demo: a square screen with a personalized, iPhone-like experience based on facial recognition, up to six users, Siri AI, and a closed ecosystem (Nicole Nguyen/Wall Street Journal)",
+      "url": "https://www.wsj.com/tech/personal-tech/my-first-impressions-of-apples-new-smart-home-display-615ac94c?st=GH8ig1&reflink=desktopwebshare_permalink",
+      "summary": "Nicole Nguyen / Wall Street Journal : Apple HomeView demo: a square screen with a personalized, iPhone-like experience based on facial recognition, up to six users, Siri AI, and a closed ecosystem &mdash; HomeView is a square-shaped screen for smart home control, hands-free FaceTime calls and access to Siri AI",
+      "description_html": "<A HREF=\"https://www.wsj.com/tech/personal-tech/my-first-impressions-of-apples-new-smart-home-display-615ac94c?st=GH8ig1&reflink=desktopwebshare_permalink\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i22.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p22#a261013p22\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Nicole Nguyen / <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/tech/personal-tech/my-first-impressions-of-apples-new-smart-home-display-615ac94c?st=GH8ig1&reflink=desktopwebshare_permalink\">Apple HomeView demo: a square screen with a personalized, iPhone-like experience based on facial recognition, up to six users, Siri AI, and a closed ecosystem</A></B></SPAN>&nbsp; &mdash;&nbsp; HomeView is a square-shaped screen for smart home control, hands-free FaceTime calls and access to Siri AI</P>",
+      "published_at": "2026-10-13T13:25:31.000Z",
+      "discovery_url": "https://www.techmeme.com/261013/p22",
+      "direct_source_url": "https://www.wsj.com/tech/personal-tech/my-first-impressions-of-apples-new-smart-home-display-615ac94c?st=GH8ig1&reflink=desktopwebshare_permalink",
+      "publisher": "Nicole Nguyen/Wall Street Journal",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
-      "source_rank": 1,
+      "source_rank": 3,
       "collection_mode": "rss",
-      "score": 8.054
+      "score": 7.912
     },
     {
       "source": "Hacker News",
       "publisher": "z.ai",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 4,
+      "source_rank": 2,
       "title": "GLM-Legal",
       "url": "https://z.ai/blog/glm-legal",
       "direct_source_url": "https://z.ai/blog/glm-legal",
@@ -160,33 +172,33 @@
       "summary": "",
       "published_at": "2026-10-12T16:11:45.000Z",
       "engagement": {
-        "score": 509,
-        "comments": 296
+        "score": 619,
+        "comments": 344
       },
       "collection_mode": "api",
-      "score": 8.027
+      "score": 7.857
     },
     {
-      "title": "Character.AI files for Chapter 11 bankruptcy in the US, agrees to sell some assets to Disney for $20M, and plans to keep operating as it completes the sale (Rhea Rose Abraham/Reuters)",
-      "url": "https://www.reuters.com/legal/litigation/characterai-files-bankruptcy-agrees-sell-some-assets-disney-20-million-2026-10-13/",
-      "summary": "Rhea Rose Abraham / Reuters : Character.AI files for Chapter 11 bankruptcy in the US, agrees to sell some assets to Disney for $20M, and plans to keep operating as it completes the sale &mdash; Character.AI said on Monday it had filed for Chapter 11 bankruptcy in the US and agreed to sell some of its assets to Walt Disney (DIS.N) for $20 million.",
-      "description_html": "<A HREF=\"https://www.reuters.com/legal/litigation/characterai-files-bankruptcy-agrees-sell-some-assets-disney-20-million-2026-10-13/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p3#a261013p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Rhea Rose Abraham / <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/legal/litigation/characterai-files-bankruptcy-agrees-sell-some-assets-disney-20-million-2026-10-13/\">Character.AI files for Chapter 11 bankruptcy in the US, agrees to sell some assets to Disney for $20M, and plans to keep operating as it completes the sale</A></B></SPAN>&nbsp; &mdash;&nbsp; Character.AI said on Monday it had filed for Chapter 11 bankruptcy in the US and agreed to sell some of its assets to Walt Disney (DIS.N) for $20 million.</P>",
-      "published_at": "2026-10-13T04:55:02.000Z",
-      "discovery_url": "https://www.techmeme.com/261013/p3",
-      "direct_source_url": "https://www.reuters.com/legal/litigation/characterai-files-bankruptcy-agrees-sell-some-assets-disney-20-million-2026-10-13/",
-      "publisher": "Rhea Rose Abraham/Reuters",
+      "title": "Apple unveils the fourth-gen Apple TV 4K, with Siri AI, an A19 chip, 128GB of storage, far-field mics, Wi-Fi 7, and Bluetooth 6, shipping November 13 for $299 (Jennifer Pattison Tuohy/The Verge)",
+      "url": "https://www.theverge.com/tech/1009663/apple-tv-4k-siri-ai-microphones-4th-gen-announced",
+      "summary": "Jennifer Pattison Tuohy / The Verge : Apple unveils the fourth-gen Apple TV 4K, with Siri AI, an A19 chip, 128GB of storage, far-field mics, Wi-Fi 7, and Bluetooth 6, shipping November 13 for $299 &mdash; The fourth-gen streaming box also gets a surround-sound upgrade and the ability to find your Siri remote.",
+      "description_html": "<A HREF=\"https://www.theverge.com/tech/1009663/apple-tv-4k-siri-ai-microphones-4th-gen-announced\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i21.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p21#a261013p21\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Jennifer Pattison Tuohy / <A HREF=\"https://www.theverge.com/\">The Verge</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.theverge.com/tech/1009663/apple-tv-4k-siri-ai-microphones-4th-gen-announced\">Apple unveils the fourth-gen Apple TV 4K, with Siri AI, an A19 chip, 128GB of storage, far-field mics, Wi-Fi 7, and Bluetooth 6, shipping November 13 for $299</A></B></SPAN>&nbsp; &mdash;&nbsp; The fourth-gen streaming box also gets a surround-sound upgrade and the ability to find your Siri remote.</P>",
+      "published_at": "2026-10-13T13:08:38.000Z",
+      "discovery_url": "https://www.techmeme.com/261013/p21",
+      "direct_source_url": "https://www.theverge.com/tech/1009663/apple-tv-4k-siri-ai-microphones-4th-gen-announced",
+      "publisher": "Jennifer Pattison Tuohy/The Verge",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
-      "source_rank": 2,
+      "source_rank": 4,
       "collection_mode": "rss",
-      "score": 7.967
+      "score": 7.82
     },
     {
       "source": "Hacker News",
       "publisher": "prophitt.me",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 5,
+      "source_rank": 3,
       "title": "A Modern Web App in C",
       "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
       "direct_source_url": "https://prophitt.me/writing/a-modern-web-app-in-c",
@@ -196,252 +208,180 @@
       "summary": "",
       "published_at": "2026-10-12T16:13:10.000Z",
       "engagement": {
-        "score": 489,
-        "comments": 200
+        "score": 636,
+        "comments": 277
       },
       "collection_mode": "api",
-      "score": 7.948
+      "score": 7.778
     },
     {
-      "title": "IDC: Nvidia's AI chip shipments in China fell 44% YoY to 678K in H1 2026, as its market share slid to 34% amid US export curbs and rising domestic competition (Reuters)",
-      "url": "https://www.reuters.com/business/retail-consumer/nvidias-china-ai-chip-share-falls-huawei-closes-gap-report-finds-2026-10-13/",
-      "summary": "Reuters : IDC: Nvidia's AI chip shipments in China fell 44% YoY to 678K in H1 2026, as its market share slid to 34% amid US export curbs and rising domestic competition &mdash; Nvidia's (NVDA.O) share of China's market for data-centre AI chips fell to 34% in the first half of 2026, as US export controls restricted supplies &hellip;",
-      "description_html": "<A HREF=\"https://www.reuters.com/business/retail-consumer/nvidias-china-ai-chip-share-falls-huawei-closes-gap-report-finds-2026-10-13/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p2#a261013p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/business/retail-consumer/nvidias-china-ai-chip-share-falls-huawei-closes-gap-report-finds-2026-10-13/\">IDC: Nvidia's AI chip shipments in China fell 44% YoY to 678K in H1 2026, as its market share slid to 34% amid US export curbs and rising domestic competition</A></B></SPAN>&nbsp; &mdash;&nbsp; Nvidia's (NVDA.O) share of China's market for data-centre AI chips fell to 34% in the first half of 2026, as US export controls restricted supplies &hellip; </P>",
-      "published_at": "2026-10-13T04:45:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261013/p2",
-      "direct_source_url": "https://www.reuters.com/business/retail-consumer/nvidias-china-ai-chip-share-falls-huawei-closes-gap-report-finds-2026-10-13/",
-      "publisher": "Reuters",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 3,
-      "collection_mode": "rss",
-      "score": 7.88
-    },
-    {
-      "title": "China-based Transsion, which dominates the market for smartphones in Africa, raised $390M from a Hong Kong share sale after pricing the deal near the top end (Sangmi Cha/Bloomberg)",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-13/smartphone-maker-transsion-raises-390-million-in-hk-listing",
-      "summary": "Sangmi Cha / Bloomberg : China-based Transsion, which dominates the market for smartphones in Africa, raised $390M from a Hong Kong share sale after pricing the deal near the top end &mdash; Shenzhen Transsion Holdings Co., which dominates the market for smartphones in Africa, raised HK$3.1 billion ($390 million) &hellip;",
-      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-10-13/smartphone-maker-transsion-raises-390-million-in-hk-listing\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p1#a261013p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Sangmi Cha / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-10-13/smartphone-maker-transsion-raises-390-million-in-hk-listing\">China-based Transsion, which dominates the market for smartphones in Africa, raised $390M from a Hong Kong share sale after pricing the deal near the top end</A></B></SPAN>&nbsp; &mdash;&nbsp; Shenzhen Transsion Holdings Co., which dominates the market for smartphones in Africa, raised HK$3.1 billion ($390 million) &hellip; </P>",
-      "published_at": "2026-10-13T04:20:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261013/p1",
-      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-10-13/smartphone-maker-transsion-raises-390-million-in-hk-listing",
-      "publisher": "Sangmi Cha/Bloomberg",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 4,
-      "collection_mode": "rss",
-      "score": 7.782
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "spinellis.gr",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 8,
-      "title": "Thinking will become a hobby",
-      "url": "https://www.spinellis.gr/blog/20261008/?li261008",
-      "direct_source_url": "https://www.spinellis.gr/blog/20261008/?li261008",
-      "discovery_url": "https://news.ycombinator.com/item?id=50059204",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50059204",
-      "summary": "",
-      "published_at": "2026-10-12T16:54:08.000Z",
-      "engagement": {
-        "score": 265,
-        "comments": 362
-      },
-      "collection_mode": "api",
-      "score": 7.736
-    },
-    {
-      "title": "Anthropic says new measures like preserved thinking in Fable 5.1 and Opus 5.5 have reduced data harvesting through distillation attacks by about 90% to 99% (Anthropic)",
-      "url": "https://www.anthropic.com/research/distillation-defenses",
-      "summary": "Anthropic : Anthropic says new measures like preserved thinking in Fable 5.1 and Opus 5.5 have reduced data harvesting through distillation attacks by about 90% to 99% &mdash; In recent months, we've made substantial progress on reducing the effectiveness of distillation attacks on Claude using new methods, as we outline in this blog.",
-      "description_html": "<A HREF=\"https://www.anthropic.com/research/distillation-defenses\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261012/i46.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261012/p46#a261012p46\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.anthropic.com/\">Anthropic</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.anthropic.com/research/distillation-defenses\">Anthropic says new measures like preserved thinking in Fable 5.1 and Opus 5.5 have reduced data harvesting through distillation attacks by about 90% to 99%</A></B></SPAN>&nbsp; &mdash;&nbsp; In recent months, we've made substantial progress on reducing the effectiveness of distillation attacks on Claude using new methods, as we outline in this blog.</P>",
-      "published_at": "2026-10-13T03:45:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261012/p46",
-      "direct_source_url": "https://www.anthropic.com/research/distillation-defenses",
-      "publisher": "Anthropic",
+      "title": "Apple unveils the $149 HomePod mini 2, with an S10 chip, \"Sound Glow\" interactive lighting, and Siri AI via a future update, in five colors, shipping October 30 (Apple)",
+      "url": "https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/",
+      "summary": "Apple : Apple unveils the $149 HomePod mini 2, with an S10 chip, &ldquo;Sound Glow&rdquo; interactive lighting, and Siri AI via a future update, in five colors, shipping October 30 &mdash; With a profoundly more capable and conversational Siri AI, new ways to enjoy music, and a more immersive home theater experience &hellip;",
+      "description_html": "<A HREF=\"https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i20.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p20#a261013p20\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.apple.com/newsroom/\">Apple</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/\">Apple unveils the $149 HomePod mini 2, with an S10 chip, &ldquo;Sound Glow&rdquo; interactive lighting, and Siri AI via a future update, in five colors, shipping October 30</A></B></SPAN>&nbsp; &mdash;&nbsp; With a profoundly more capable and conversational Siri AI, new ways to enjoy music, and a more immersive home theater experience &hellip; </P>",
+      "published_at": "2026-10-13T13:05:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261013/p20",
+      "direct_source_url": "https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/",
+      "publisher": "Apple",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 5,
       "collection_mode": "rss",
-      "score": 7.678
+      "score": 7.738
+    },
+    {
+      "title": "Apple unveils the Apple Home Collection, a lineup of smart home accessories made with LG and Schneider, including cameras, thermostats, a doorbell, and a lock (Apple)",
+      "url": "https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/",
+      "summary": "Apple : Apple unveils the Apple Home Collection, a lineup of smart home accessories made with LG and Schneider, including cameras, thermostats, a doorbell, and a lock &mdash; In collaboration with LG Electronics and Schneider Electric, Apple brings the simplicity, reliability, and privacy of iPhone &hellip;",
+      "description_html": "<A HREF=\"https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i19.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p19#a261013p19\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.apple.com/newsroom/\">Apple</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/\">Apple unveils the Apple Home Collection, a lineup of smart home accessories made with LG and Schneider, including cameras, thermostats, a doorbell, and a lock</A></B></SPAN>&nbsp; &mdash;&nbsp; In collaboration with LG Electronics and Schneider Electric, Apple brings the simplicity, reliability, and privacy of iPhone &hellip; </P>",
+      "published_at": "2026-10-13T13:02:13.000Z",
+      "discovery_url": "https://www.techmeme.com/261013/p19",
+      "direct_source_url": "https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/",
+      "publisher": "Apple",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.656
     },
     {
       "source": "Hacker News",
-      "publisher": "linkedin.com",
+      "publisher": "arxiv.org",
       "source_home": "https://news.ycombinator.com/",
       "source_rank": 10,
-      "title": "'AI' Is Not a Tool by Rich Hickey",
-      "url": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
-      "direct_source_url": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
-      "discovery_url": "https://news.ycombinator.com/item?id=50060269",
+      "title": "AI models can provably hide arbitrary capabilities",
+      "url": "https://arxiv.org/abs/2610.13928",
+      "direct_source_url": "https://arxiv.org/abs/2610.13928",
+      "discovery_url": "https://news.ycombinator.com/item?id=50065692",
       "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50060269",
-      "summary": "https://gist.github.com/svieira/619d60dea942a8d4498cba3bb6b1...",
-      "published_at": "2026-10-12T18:00:25.000Z",
+      "discussion_url": "https://news.ycombinator.com/item?id=50065692",
+      "summary": "",
+      "published_at": "2026-10-13T02:07:08.000Z",
       "engagement": {
-        "score": 254,
-        "comments": 124
+        "score": 247,
+        "comments": 116
       },
       "collection_mode": "api",
-      "score": 7.622
+      "score": 7.628
     },
     {
-      "title": "Sources: NTT Data is in advanced talks to build a data center for Anthropic in Osaka of up to 500 MW, among Japan's largest, potentially costing $6.3B (Nikkei Asia)",
-      "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/ntt-to-build-first-data-center-for-anthropic-in-japan",
-      "summary": "Nikkei Asia : Sources: NTT Data is in advanced talks to build a data center for Anthropic in Osaka of up to 500 MW, among Japan's largest, potentially costing $6.3B &mdash; TOKYO/OSAKA &mdash; NTT Data Group is in the final stages of talks to build a data center in western Japan for U.S. AI company Anthropic, multiple sources have told Nikkei.",
-      "description_html": "<A HREF=\"https://asia.nikkei.com/business/technology/artificial-intelligence/ntt-to-build-first-data-center-for-anthropic-in-japan\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261012/i45.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261012/p45#a261012p45\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://asia.nikkei.com/\">Nikkei Asia</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://asia.nikkei.com/business/technology/artificial-intelligence/ntt-to-build-first-data-center-for-anthropic-in-japan\">Sources: NTT Data is in advanced talks to build a data center for Anthropic in Osaka of up to 500 MW, among Japan's largest, potentially costing $6.3B</A></B></SPAN>&nbsp; &mdash;&nbsp; TOKYO/OSAKA &mdash; NTT Data Group is in the final stages of talks to build a data center in western Japan for U.S. AI company Anthropic, multiple sources have told Nikkei.</P>",
-      "published_at": "2026-10-13T03:15:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261012/p45",
-      "direct_source_url": "https://asia.nikkei.com/business/technology/artificial-intelligence/ntt-to-build-first-data-center-for-anthropic-in-japan",
-      "publisher": "Nikkei Asia",
+      "source": "Hacker News",
+      "publisher": "intel.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 8,
+      "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
+      "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
+      "direct_source_url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
+      "discovery_url": "https://news.ycombinator.com/item?id=50063365",
       "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 6,
-      "collection_mode": "rss",
-      "score": 7.577
+      "discussion_url": "https://news.ycombinator.com/item?id=50063365",
+      "summary": "",
+      "published_at": "2026-10-12T21:35:35.000Z",
+      "engagement": {
+        "score": 271,
+        "comments": 143
+      },
+      "collection_mode": "api",
+      "score": 7.602
     },
     {
-      "title": "Q&A with Mark Zuckerberg and Alexandr Wang on the Muse app, Muse Wonder, the risks of committing $100B+ to AI, rebooting Meta's AI team, agentic commerce, more (Cheeky Pint)",
-      "url": "https://cheekypint.substack.com/p/muse-wonder-zuckerberg-and-wangs",
-      "summary": "Cheeky Pint : Q&A with Mark Zuckerberg and Alexandr Wang on the Muse app, Muse Wonder, the risks of committing $100B+ to AI, rebooting Meta's AI team, agentic commerce, more &mdash; As Meta scales its AI infrastructure past five gigawatts, Mark Zuckerberg (founder and CEO, Meta) and Alexandr Wang &hellip;",
-      "description_html": "<A HREF=\"https://cheekypint.substack.com/p/muse-wonder-zuckerberg-and-wangs\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261012/i44.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261012/p44#a261012p44\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://cheekypint.substack.com/\">Cheeky Pint</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://cheekypint.substack.com/p/muse-wonder-zuckerberg-and-wangs\">Q&amp;A with Mark Zuckerberg and Alexandr Wang on the Muse app, Muse Wonder, the risks of committing $100B+ to AI, rebooting Meta's AI team, agentic commerce, more</A></B></SPAN>&nbsp; &mdash;&nbsp; As Meta scales its AI infrastructure past five gigawatts, Mark Zuckerberg (founder and CEO, Meta) and Alexandr Wang &hellip; </P>",
-      "published_at": "2026-10-13T02:50:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261012/p44",
-      "direct_source_url": "https://cheekypint.substack.com/p/muse-wonder-zuckerberg-and-wangs",
-      "publisher": "Cheeky Pint",
+      "title": "Apple unveils the $299 Apple HomeView, a 7\" smart display with an A18 chip, tabletop and wall-mounted versions, and \"HomeView software\", shipping November 13 (Julian Chokkattu/Wired)",
+      "url": "https://www.wired.com/story/apple-homeview-smart-display/",
+      "summary": "Julian Chokkattu / Wired : Apple unveils the $299 Apple HomeView, a 7\" smart display with an A18 chip, tabletop and wall-mounted versions, and &ldquo;HomeView software&rdquo;, shipping November 13 &mdash; With customizable &ldquo;faces,&rdquo; this 7-inch smart display is a unique hybrid between an iPhone and an Apple Watch.",
+      "description_html": "<A HREF=\"https://www.wired.com/story/apple-homeview-smart-display/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i18.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p18#a261013p18\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Julian Chokkattu / <A HREF=\"http://www.wired.com/\">Wired</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wired.com/story/apple-homeview-smart-display/\">Apple unveils the $299 Apple HomeView, a 7\" smart display with an A18 chip, tabletop and wall-mounted versions, and &ldquo;HomeView software&rdquo;, shipping November 13</A></B></SPAN>&nbsp; &mdash;&nbsp; With customizable &ldquo;faces,&rdquo; this 7-inch smart display is a unique hybrid between an iPhone and an Apple Watch.</P>",
+      "published_at": "2026-10-13T12:55:05.000Z",
+      "discovery_url": "https://www.techmeme.com/261013/p18",
+      "direct_source_url": "https://www.wired.com/story/apple-homeview-smart-display/",
+      "publisher": "Julian Chokkattu/Wired",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 7,
       "collection_mode": "rss",
-      "score": 7.48
+      "score": 7.571
     },
     {
-      "title": "Japanese manufacturer Omron says it will acquire US industrial PC firm OnLogic and its parent company, Interlogic, for $675M, to boost its \"physical AI\" efforts (Anton Bridge/Reuters)",
-      "url": "https://www.reuters.com/legal/transactional/japans-omron-buy-us-industrial-pc-firm-onlogic-675-million-physical-ai-push-2026-10-13/",
-      "summary": "Anton Bridge / Reuters : Japanese manufacturer Omron says it will acquire US industrial PC firm OnLogic and its parent company, Interlogic, for $675M, to boost its &ldquo;physical AI&rdquo; efforts &mdash; Japanese manufacturer Omron (6645.T) will buy US industrial PC firm Onlogic and its parent company, Interlogic, for $675 million, the company said on Tuesday.",
-      "description_html": "<A HREF=\"https://www.reuters.com/legal/transactional/japans-omron-buy-us-industrial-pc-firm-onlogic-675-million-physical-ai-push-2026-10-13/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261012/i43.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261012/p43#a261012p43\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Anton Bridge / <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/legal/transactional/japans-omron-buy-us-industrial-pc-firm-onlogic-675-million-physical-ai-push-2026-10-13/\">Japanese manufacturer Omron says it will acquire US industrial PC firm OnLogic and its parent company, Interlogic, for $675M, to boost its &ldquo;physical AI&rdquo; efforts</A></B></SPAN>&nbsp; &mdash;&nbsp; Japanese manufacturer Omron (6645.T) will buy US industrial PC firm Onlogic and its parent company, Interlogic, for $675 million, the company said on Tuesday.</P>",
-      "published_at": "2026-10-13T01:35:00.000Z",
-      "discovery_url": "https://www.techmeme.com/261012/p43",
-      "direct_source_url": "https://www.reuters.com/legal/transactional/japans-omron-buy-us-industrial-pc-firm-onlogic-675-million-physical-ai-push-2026-10-13/",
-      "publisher": "Anton Bridge/Reuters",
+      "source": "Hacker News",
+      "publisher": "bbc.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "Citroen revives the 2CV for an electric age",
+      "url": "https://www.bbc.com/news/articles/c620r33plgppo",
+      "direct_source_url": "https://www.bbc.com/news/articles/c620r33plgppo",
+      "discovery_url": "https://news.ycombinator.com/item?id=50055220",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50055220",
+      "summary": "",
+      "published_at": "2026-10-12T12:09:09.000Z",
+      "engagement": {
+        "score": 379,
+        "comments": 425
+      },
+      "collection_mode": "api",
+      "score": 7.449
+    },
+    {
+      "title": "Sources: Anthropic and OpenAI have pushed for substantial control over what external AI evaluators can publish, out of concern that trade secrets could leak (Aditya Soni/Reuters)",
+      "url": "https://www.reuters.com/world/behind-ai-industrys-call-independent-reviews-fight-over-what-gets-made-public-2026-10-13/",
+      "summary": "Aditya Soni / Reuters : Sources: Anthropic and OpenAI have pushed for substantial control over what external AI evaluators can publish, out of concern that trade secrets could leak &mdash; Anthropic and OpenAI have sought significant control over what outside evaluators can publish, concerned that findings could reveal trade secrets &hellip;",
+      "description_html": "<A HREF=\"https://www.reuters.com/world/behind-ai-industrys-call-independent-reviews-fight-over-what-gets-made-public-2026-10-13/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261013/i17.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261013/p17#a261013p17\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Aditya Soni / <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/world/behind-ai-industrys-call-independent-reviews-fight-over-what-gets-made-public-2026-10-13/\">Sources: Anthropic and OpenAI have pushed for substantial control over what external AI evaluators can publish, out of concern that trade secrets could leak</A></B></SPAN>&nbsp; &mdash;&nbsp; Anthropic and OpenAI have sought significant control over what outside evaluators can publish, concerned that findings could reveal trade secrets &hellip; </P>",
+      "published_at": "2026-10-13T11:45:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261013/p17",
+      "direct_source_url": "https://www.reuters.com/world/behind-ai-industrys-call-independent-reviews-fight-over-what-gets-made-public-2026-10-13/",
+      "publisher": "Aditya Soni/Reuters",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 8,
       "collection_mode": "rss",
-      "score": 7.348
+      "score": 7.442
     },
     {
-      "title": "NTT Data in final talks to build Anthropic's first data centre in Japan, Nikkei reports",
-      "url": "https://www.reuters.com/business/media-telecom/ntt-data-final-talks-build-anthropics-first-data-centre-japan-nikkei-reports-2026-10-13/",
+      "title": "Intel CEO says Chinese frontier AI model adoption has been 'very fast'",
+      "url": "https://www.reuters.com/world/china/intel-ceo-says-chinese-frontier-ai-model-adoption-has-been-very-fast-2026-10-12/",
       "summary": "",
-      "published_at": "2026-10-13T02:51:16.694Z",
+      "published_at": "2026-10-12T07:44:52.914Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 10,
-      "direct_source_url": "https://www.reuters.com/business/media-telecom/ntt-data-final-talks-build-anthropics-first-data-centre-japan-nikkei-reports-2026-10-13/",
-      "discovery_url": "https://www.reuters.com/business/media-telecom/ntt-data-final-talks-build-anthropics-first-data-centre-japan-nikkei-reports-2026-10-13/",
+      "source_rank": 1,
+      "direct_source_url": "https://www.reuters.com/world/china/intel-ceo-says-chinese-frontier-ai-model-adoption-has-been-very-fast-2026-10-12/",
+      "discovery_url": "https://www.reuters.com/world/china/intel-ceo-says-chinese-frontier-ai-model-adoption-has-been-very-fast-2026-10-12/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 7.191
+      "score": 6.785
     },
     {
-      "title": "Meta lança modelos de IA Muse Wonder em desafio a Anthropic e OpenAI",
-      "url": "https://www.reuters.com/pt/tecnologia/B3P5YYSOLFMFZEQBV56OR476WQ-2026-10-12/",
+      "title": "Italia offrirà agevolazioni fiscali per investimenti settore software - Meloni",
+      "url": "https://www.reuters.com/it/azienda/italia-offrir-agevolazioni-fiscali-per-investimenti-settore-software-meloni-2026-10-12/",
       "summary": "",
-      "published_at": "2026-10-12T19:04:26.554Z",
+      "published_at": "2026-10-12T11:04:16.827Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 7,
-      "direct_source_url": "https://www.reuters.com/pt/tecnologia/B3P5YYSOLFMFZEQBV56OR476WQ-2026-10-12/",
-      "discovery_url": "https://www.reuters.com/pt/tecnologia/B3P5YYSOLFMFZEQBV56OR476WQ-2026-10-12/",
+      "source_rank": 3,
+      "direct_source_url": "https://www.reuters.com/it/azienda/italia-offrir-agevolazioni-fiscali-per-investimenti-settore-software-meloni-2026-10-12/",
+      "discovery_url": "https://www.reuters.com/it/azienda/italia-offrir-agevolazioni-fiscali-per-investimenti-settore-software-meloni-2026-10-12/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 7.107
+      "score": 6.764
     },
     {
-      "title": "IMF cuts Latin America, Caribbean growth forecasts on energy shock, little AI boost",
-      "url": "https://www.reuters.com/world/asia-pacific/imf-cuts-latin-america-caribbean-growth-forecasts-energy-shock-little-ai-boost-2026-10-13/",
+      "title": "Norway fines Microsoft's Xandr $9.6 million over Grindr data sharing",
+      "url": "https://www.reuters.com/legal/litigation/norway-fines-microsofts-xandr-96-million-over-grindr-data-sharing-2026-10-12/",
       "summary": "",
-      "published_at": "2026-10-13T02:09:57.935Z",
+      "published_at": "2026-10-12T10:54:39.235Z",
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 11,
-      "direct_source_url": "https://www.reuters.com/world/asia-pacific/imf-cuts-latin-america-caribbean-growth-forecasts-energy-shock-little-ai-boost-2026-10-13/",
-      "discovery_url": "https://www.reuters.com/world/asia-pacific/imf-cuts-latin-america-caribbean-growth-forecasts-energy-shock-little-ai-boost-2026-10-13/",
+      "source_rank": 4,
+      "direct_source_url": "https://www.reuters.com/legal/litigation/norway-fines-microsofts-xandr-96-million-over-grindr-data-sharing-2026-10-12/",
+      "discovery_url": "https://www.reuters.com/legal/litigation/norway-fines-microsofts-xandr-96-million-over-grindr-data-sharing-2026-10-12/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 7.082
-    },
-    {
-      "title": "Microsoft prevé llevar a cabo despliegue a gran escala de propios chips IA, con el objetivo de reducir costos",
-      "url": "https://www.reuters.com/latam/negocio/2SZSF47F7RJLTFZT4MHRNOALOE-2026-10-12/",
-      "summary": "",
-      "published_at": "2026-10-12T14:57:22.515Z",
-      "source": "Reuters",
-      "publisher": "Reuters",
-      "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 6,
-      "direct_source_url": "https://www.reuters.com/latam/negocio/2SZSF47F7RJLTFZT4MHRNOALOE-2026-10-12/",
-      "discovery_url": "https://www.reuters.com/latam/negocio/2SZSF47F7RJLTFZT4MHRNOALOE-2026-10-12/",
-      "link_quality": "original",
-      "collection_mode": "sitemap",
-      "score": 7.015
-    },
-    {
-      "title": "Meta releases Muse Wonder AI models to challenge Anthropic and OpenAI",
-      "url": "https://www.reuters.com/business/meta-releases-muse-wonder-ai-models-challenge-anthropic-openai-2026-10-12/",
-      "summary": "",
-      "published_at": "2026-10-12T18:26:23.312Z",
-      "source": "Reuters",
-      "publisher": "Reuters",
-      "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 8,
-      "direct_source_url": "https://www.reuters.com/business/meta-releases-muse-wonder-ai-models-challenge-anthropic-openai-2026-10-12/",
-      "discovery_url": "https://www.reuters.com/business/meta-releases-muse-wonder-ai-models-challenge-anthropic-openai-2026-10-12/",
-      "link_quality": "original",
-      "collection_mode": "sitemap",
-      "score": 7
-    },
-    {
-      "title": "Tencent sells dollar, dim sum bonds amid AI spending spree",
-      "url": "https://www.reuters.com/world/asia-pacific/tencent-markets-us-dollar-dim-sum-bonds-four-tranches-2026-10-13/",
-      "summary": "",
-      "published_at": "2026-10-13T01:17:24.630Z",
-      "source": "Reuters",
-      "publisher": "Reuters",
-      "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 12,
-      "direct_source_url": "https://www.reuters.com/world/asia-pacific/tencent-markets-us-dollar-dim-sum-bonds-four-tranches-2026-10-13/",
-      "discovery_url": "https://www.reuters.com/world/asia-pacific/tencent-markets-us-dollar-dim-sum-bonds-four-tranches-2026-10-13/",
-      "link_quality": "original",
-      "collection_mode": "sitemap",
-      "score": 6.966
-    },
-    {
-      "title": "Meta lanza los modelos de IA \"Muse Wonder\" para competir con Anthropic y OpenAI",
-      "url": "https://www.reuters.com/latam/negocio/2APXIE4VCFIQRBJPGBD6ZMFYOM-2026-10-12/",
-      "summary": "",
-      "published_at": "2026-10-12T18:31:47.318Z",
-      "source": "Reuters",
-      "publisher": "Reuters",
-      "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 9,
-      "direct_source_url": "https://www.reuters.com/latam/negocio/2APXIE4VCFIQRBJPGBD6ZMFYOM-2026-10-12/",
-      "discovery_url": "https://www.reuters.com/latam/negocio/2APXIE4VCFIQRBJPGBD6ZMFYOM-2026-10-12/",
-      "link_quality": "original",
-      "collection_mode": "sitemap",
-      "score": 6.924
+      "score": 6.677
     },
     {
       "title": "Andrew Garfield dice que \"Artificial\" pone el foco en OpenAI y los creadores del \"nuevo mundo\"",
@@ -451,18 +391,114 @@
       "source": "Reuters",
       "publisher": "Reuters",
       "source_home": "https://www.reuters.com/technology/",
-      "source_rank": 3,
+      "source_rank": 2,
       "direct_source_url": "https://www.reuters.com/latam/diversion/Z7H4TRFBNZPZTNLGC6QLKOGGQQ-2026-10-12/",
       "discovery_url": "https://www.reuters.com/latam/diversion/Z7H4TRFBNZPZTNLGC6QLKOGGQQ-2026-10-12/",
       "link_quality": "original",
       "collection_mode": "sitemap",
-      "score": 6.912
+      "score": 6.663
+    },
+    {
+      "title": "Microsoft-Präsident Smith: Milch wird strenger kontrolliert als KI",
+      "url": "https://www.reuters.com/de/welt/microsoft-prsident-smith-milch-wird-strenger-kontrolliert-als-ki-2026-10-12/",
+      "summary": "",
+      "published_at": "2026-10-12T10:26:29.773Z",
+      "source": "Reuters",
+      "publisher": "Reuters",
+      "source_home": "https://www.reuters.com/technology/",
+      "source_rank": 6,
+      "direct_source_url": "https://www.reuters.com/de/welt/microsoft-prsident-smith-milch-wird-strenger-kontrolliert-als-ki-2026-10-12/",
+      "discovery_url": "https://www.reuters.com/de/welt/microsoft-prsident-smith-milch-wird-strenger-kontrolliert-als-ki-2026-10-12/",
+      "link_quality": "original",
+      "collection_mode": "sitemap",
+      "score": 6.498
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "VIS-Ground: Video Interactive Storytelling with Contextual Grounding",
+      "url": "https://huggingface.co/papers/2610.09326",
+      "direct_source_url": "https://huggingface.co/papers/2610.09326",
+      "discovery_url": "https://huggingface.co/papers/2610.09326",
+      "link_quality": "original",
+      "summary": "Video interactive storytelling enables viewers to actively steer how a video unfolds. However, once we allow viewers to intervene during generation, a new challenge arises: The viewer's request can have latent dependencies on both the grounding source and the current rendered video state. These dependencies may not be explicitly stated in any individual input, but emerge only when the source, rendered history, and new viewer intent are considered jointly. Existing interactive video generation systems primarily emphasize following viewer instructions, while source-grounded video generation methods focus on aligning generated content with an external narrative or knowledge source. This leaves a fundamental question underexplored: What context should a generation model ground on during interactive continuation, and how can heterogeneous, unstructured inputs be transformed into such grounding context? In this work, we formulate contextual grounding as the process of transforming heterogeneous input context into an executable constraint model for video generation. To address this challenge, we introduce VIS-Ground, which performs Structured Context Abstraction to recover grounded states",
+      "published_at": "2026-10-06T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 63
+      },
+      "collection_mode": "api",
+      "score": 6.46
     },
     {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
       "source_rank": 3,
+      "title": "CrossTimeEdit: A Decade-Spanning Cross-View Dataset and Reward-Guided Editing for Historical Street-View Generation",
+      "url": "https://huggingface.co/papers/2609.36616",
+      "direct_source_url": "https://huggingface.co/papers/2609.36616",
+      "discovery_url": "https://huggingface.co/papers/2609.36616",
+      "link_quality": "original",
+      "summary": "Historical street-view imagery records urban evolution, but uneven coverage leaves substantial gaps in historical records. Generating plausible past appearances requires restoring changed structures while preserving persistent scene content. We construct VIGOR-his, a decade-spanning cross-view dataset containing 43,653 location-level quadruplets across 11 cities on three continents. Its automated pipeline performs spatial pairing, consistency screening, change classification, and the generation and validation of satellite-based change descriptions and local editing instructions. Based on VIGOR-his, we propose CrossTimeEdit, a model that reformulates historical street-view generation as editing, using recent street views to constrain viewpoint and unchanged appearance and temporal satellite differences as change evidence. Starting from FLUX.2 [Klein] 4B, we train CrossTimeEdit through supervised fine-tuning (SFT) followed by online reinforcement learning (RL). We design three street-view editing criteria, namely Instruction Alignment (IA), Background Preservation (BP), and Quality and Physical Plausibility (QP), as both RL reward dimensions and evaluation metrics. We optimize this m",
+      "published_at": "2026-09-28T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 20
+      },
+      "collection_mode": "api",
+      "score": 6.401
+    },
+    {
+      "title": "Presidente da Microsoft diz que leite tem mais regulamentações do que IA",
+      "url": "https://www.reuters.com/pt/tecnologia/J6KW7DQMEFONTH6J5HGMDYAD3E-2026-10-12/",
+      "summary": "",
+      "published_at": "2026-10-12T13:38:38.788Z",
+      "source": "Reuters",
+      "publisher": "Reuters",
+      "source_home": "https://www.reuters.com/technology/",
+      "source_rank": 9,
+      "direct_source_url": "https://www.reuters.com/pt/tecnologia/J6KW7DQMEFONTH6J5HGMDYAD3E-2026-10-12/",
+      "discovery_url": "https://www.reuters.com/pt/tecnologia/J6KW7DQMEFONTH6J5HGMDYAD3E-2026-10-12/",
+      "link_quality": "original",
+      "collection_mode": "sitemap",
+      "score": 6.391
+    },
+    {
+      "title": "Productivity gains from AI could help offset Asia's ageing population problem, IMF says",
+      "url": "https://www.reuters.com/world/asia-pacific/productivity-gains-ai-could-help-offset-asias-ageing-population-problem-imf-says-2026-10-12/",
+      "summary": "",
+      "published_at": "2026-10-12T08:24:26.445Z",
+      "source": "Reuters",
+      "publisher": "Reuters",
+      "source_home": "https://www.reuters.com/technology/",
+      "source_rank": 7,
+      "direct_source_url": "https://www.reuters.com/world/asia-pacific/productivity-gains-ai-could-help-offset-asias-ageing-population-problem-imf-says-2026-10-12/",
+      "discovery_url": "https://www.reuters.com/world/asia-pacific/productivity-gains-ai-could-help-offset-asias-ageing-population-problem-imf-says-2026-10-12/",
+      "link_quality": "original",
+      "collection_mode": "sitemap",
+      "score": 6.333
+    },
+    {
+      "title": "El presidente de Microsoft dice que la leche está más regulada que la IA",
+      "url": "https://www.reuters.com/latam/negocio/ON3NQQVF25PKHCTLT7ZUOFCCJM-2026-10-12/",
+      "summary": "",
+      "published_at": "2026-10-12T10:16:05.662Z",
+      "source": "Reuters",
+      "publisher": "Reuters",
+      "source_home": "https://www.reuters.com/technology/",
+      "source_rank": 8,
+      "direct_source_url": "https://www.reuters.com/latam/negocio/ON3NQQVF25PKHCTLT7ZUOFCCJM-2026-10-12/",
+      "discovery_url": "https://www.reuters.com/latam/negocio/ON3NQQVF25PKHCTLT7ZUOFCCJM-2026-10-12/",
+      "link_quality": "original",
+      "collection_mode": "sitemap",
+      "score": 6.33
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 7,
       "title": "AgentSWE: Can Coding Agents Build the Agent You Actually Want?",
       "url": "https://huggingface.co/papers/2610.13361",
       "direct_source_url": "https://huggingface.co/papers/2610.13361",
@@ -471,16 +507,16 @@
       "summary": "As the production of software passes into the hands of software itself, coding agents are increasingly commissioned to build agents fitted to their users' own workflows. This delegation carries a quiet assumption, that the delivered agent will faithfully serve the requirement it was built for, rather than merely appear to. No existing benchmark tests that assumption. We introduce AgentSWE, a benchmark for agent software engineering spanning three stages of the agent development lifecycle: Creation of a complete agent from a natural-language requirement, Editing of production agent codebases, and Optimization toward a measurable target. Each of its 25 tasks is framed as a commission rather than an exam: the builder iterates against a handful of illustrative cases, while acceptance exercises the frozen submission on held-out cases designed to span the full requirement, grading behavior against requirement-derived rubrics under hard pass/fail gates or, for Optimization, against the source benchmark's own objective. Evaluating a range of coding agents across models and harnesses, we find that none comes close to delivering what a requirement asks for: the gap between what a builder dem",
       "published_at": "2026-10-08T20:00:00.000Z",
       "engagement": {
-        "upvotes": 21
+        "upvotes": 196
       },
       "collection_mode": "api",
-      "score": 6.411
+      "score": 6.22
     },
     {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
-      "source_rank": 5,
+      "source_rank": 9,
       "title": "GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives",
       "url": "https://huggingface.co/papers/2609.39601",
       "direct_source_url": "https://huggingface.co/papers/2609.39601",
@@ -489,34 +525,34 @@
       "summary": "Precise grounding matters. It specifies which object is the target and where that object is, even in clutter and for tiny objects, and it has to be fast enough for closed-loop control. Yet vision-language-action (VLA) and world-action models (WAMs) take perception from general-purpose vision-language and video-generation backbones, which still fail in these settings. We introduce GroundingPI, a 4B grounding foundation model that generates points and boxes as quantized coordinates in a shared vocabulary. Training combines multimodal and spatial pretraining, supervised fine-tuning, and reinforcement learning with GRPO, using supervision from public datasets and dedicated data engines. Against 44 baselines across 34 grounding benchmarks spanning 11 perceptual capabilities, GroundingPI establishes a new state of the art, averaging 73.68%, above the larger GPT-6 Astra (71.54%). As a downstream visual backbone, GroundingPI improves performance on robotic manipulation and autonomous driving. On RoboTwin 2.0, it outperforms every mainstream backbone we evaluate in all four out-of-distribution settings, by up to 24.8% relative to the strongest backbone. On RoboCasa-GR1, GroundingPI trained",
       "published_at": "2026-09-29T20:00:00.000Z",
       "engagement": {
-        "upvotes": 42
+        "upvotes": 191
       },
       "collection_mode": "api",
-      "score": 6.38
+      "score": 6.06
     },
     {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
-      "source_rank": 6,
-      "title": "Scaling Agentic Data for Long-Horizon Terminal Intelligence",
-      "url": "https://huggingface.co/papers/2610.13166",
-      "direct_source_url": "https://huggingface.co/papers/2610.13166",
-      "discovery_url": "https://huggingface.co/papers/2610.13166",
+      "source_rank": 1,
+      "title": "Initialization Improves LLM-Driven Discovery",
+      "url": "https://huggingface.co/papers/2610.00707",
+      "direct_source_url": "https://huggingface.co/papers/2610.00707",
+      "discovery_url": "https://huggingface.co/papers/2610.00707",
       "link_quality": "original",
-      "summary": "Terminal agents are moving beyond local operations toward completing real-world professional tasks. Short trajectories can demonstrate commands and tool calls, but they do not fully show how agents accumulate evidence through exploration, use it to inform judgments, continually adjust strategies based on feedback, and turn intermediate results into final deliverables. High-quality long-horizon trajectories capture these agentic behavioral patterns and their connections within a single problem-solving process, providing richer experience for sustained autonomous work. However, environment synthesis may complete or simplify the key work underlying these patterns in advance and thus remove the need for exploration, implementation, and verification that the agent was meant to perform. To address this, we introduce TerminalHorizon, a fully automated data synthesis engine for long-horizon terminal agents. Starting from real-world professional work, it uses independent execution to identify key work omitted during construction and uses the resulting evidence to guide environment reconstruction. To extend these patterns across stages, it progressively expands tasks under the same goal, int",
-      "published_at": "2026-10-08T20:00:00.000Z",
+      "summary": "Large Language Models (LLMs) have been used for novel discovery of algorithms, theorems, drugs, and other tasks through the use of harnesses that prompt an LLM to iteratively optimize an objective. In this work, we study the relationship between the population of previous iterates and eventual discovery success. We generalize past work on harness design to develop a suite of 12 harnesses called 'Modular' and characterize their performance across 5 diverse discovery tasks, finding that discovery success is brittle and sensitive to harness design. We uncover mode collapse, characterized by a dramatic drop in the diversity of iterates, as a common failure mode. We find that popular state-of-the-art harnesses and diversity-inducing harness interventions, which aim to prolong this collapse, yield inconsistent gains. Our results instead uncover that the performance of early discoveries is predictive of eventual success. We therefore propose a universally applicable intervention that performs an initial stage of parallel exploration in order to initialize subsequent iterative optimization. Our method provides consistent gains across many harnesses and target applications, confirming the i",
+      "published_at": "2026-09-29T20:00:00.000Z",
       "engagement": {
-        "upvotes": 33
+        "upvotes": 1
       },
       "collection_mode": "api",
-      "score": 6.266
+      "score": 6.051
     },
     {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
-      "source_rank": 4,
+      "source_rank": 8,
       "title": "GroundAnything: Reconciling Parallel Decoding with Precise Visual Grounding at Flash Speed",
       "url": "https://huggingface.co/papers/2609.39600",
       "direct_source_url": "https://huggingface.co/papers/2609.39600",
@@ -525,46 +561,10 @@
       "summary": "Autoregressive (AR) grounding models serialize spatial predictions, introducing sequential latency and imposing a causal order on output tokens. We view grounding as visual evidence extraction: objects, locations, and spatial relations are jointly constrained by the image and query, yet their dependencies do not imply an intrinsic left-to-right generation order. This distinction makes bidirectional diffusion a natural fit, allowing spatial hypotheses to emerge in parallel and be jointly refined through iterative denoising. We introduce GroundAnything, a 4B-parameter grounding foundation model that reconciles fast parallel decoding with precise localization through blockwise denoising. Training combines grounding pretraining from public datasets and dedicated data engines, direct AR-to-diffusion conversion with joint AR and diffusion objectives, supervised fine-tuning, and GRPO-based reinforcement post-training. Across 30 grounding benchmarks, our autoregressive variant, GroundAnything-VLM, establishes a new overall state of the art among similarly sized models at 72.42%, remaining competitive with GPT-6 Astra (71.35%). With entropy-guided decoding, GroundAnything also surpasses the",
       "published_at": "2026-09-29T20:00:00.000Z",
       "engagement": {
-        "upvotes": 15
+        "upvotes": 19
       },
       "collection_mode": "api",
-      "score": 6.262
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 2,
-      "title": "Learning More by Training Less: Uncertainty-Guided Progressive Contraction for Efficient Reasoning Post-Training",
-      "url": "https://huggingface.co/papers/2610.12933",
-      "direct_source_url": "https://huggingface.co/papers/2610.12933",
-      "discovery_url": "https://huggingface.co/papers/2610.12933",
-      "link_quality": "original",
-      "summary": "Large language models have achieved remarkable advances in complex reasoning. However, scaling reasoning post-training with ever-larger corpora can substantially increase training cost without proportional performance gains. In this study, we therefore ask: how far can reasoning supervision be compressed without sacrificing capability? To this end, we propose an uncertainty-guided progressive contraction framework that concentrates supervision and optimization on the reasoning trajectories most valuable for learning. Specifically, rather than treating a teacher-generated chain-of-thought (CoT) as a single realized path, we construct uncertainty-profiled reasoning supervision by building Monte Carlo reasoning trees around intermediate reasoning states to expose process-level uncertainty. This uncertainty first contracts the original corpus into a compact teacher-informed pool. A second, learner-aware contraction then performs online routing during SFT, concentrating optimization according to the student's evolving learning state. Together, the two stages progressively contract both supervision and optimization, substantially reducing the student training budget. Experiments across d",
-      "published_at": "2026-10-08T20:00:00.000Z",
-      "engagement": {
-        "upvotes": 2
-      },
-      "collection_mode": "api",
-      "score": 6.059
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 1,
-      "title": "SPLATIFY: Reproduce, Discover, Innovate! From Papers and Ideas to Trainable 3DGS Code",
-      "url": "https://huggingface.co/papers/2610.09116",
-      "direct_source_url": "https://huggingface.co/papers/2610.09116",
-      "discovery_url": "https://huggingface.co/papers/2610.09116",
-      "link_quality": "original",
-      "summary": "The rapid growth of 3D Gaussian Splatting (3DGS) research demands significant effort to reimplement papers before building on them. We introduce SPLATIFY, a multi-agent framework that converts 3DGS papers into trainable gsplat-based implementations, where generic paper-to-code methods and frontier models fail. SPLATIFY achieves this through five innovations: (1) A context-free grammar for gsplat over a modular method template with extension points for losses, densification, rendering, and optimization, constraining synthesis so generated code satisfies gsplat's architectural invariants by construction. (2) Architectural elements for faithful reproduction: fork-aware citation recovery retrieving component-level code at function-level granularity, Graph-of-Thought synthesis in topological dependency order, RAG-guided in-context example selection from over 20 verified implementations, and visual feedback combining PSNR-guided regeneration, Gaussian-level structural checks, and VLM-driven patching. (3) Knowledge-driven compositional improvement that autonomously finds weaknesses and composes complementary regularizers, losses, and densification strategies to improve upon original resul",
-      "published_at": "2026-10-05T20:00:00.000Z",
-      "engagement": {
-        "upvotes": 1
-      },
-      "collection_mode": "api",
-      "score": 6.051
+      "score": 5.991
     }
   ]
 }

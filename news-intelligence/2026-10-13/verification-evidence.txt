@@ -1,0 +1,81 @@
+Here are the evidence notes for the morning briefing, based on primary source verification and ground check.
+
+---
+
+### **Strongest Candidates Recommended for Publication Today**
+
+#### **[6] Character.AI files for Chapter 11 bankruptcy; Disney enters $20M stalking-horse deal**
+* **Publisher:** Reuters / Court Filings
+* **What is confirmed:** Character Technologies Inc. (owner of Character.AI) voluntarily filed for Chapter 11 bankruptcy in Delaware on October 12, 2026. The company listed estimated assets and liabilities between $50M and $100M. It signed a $20 million "stalking horse" agreement with Walt Disney for a non-exclusive perpetual license to certain IP and transition services. 
+* **Important caveats:** Disney’s $20M offer sets a baseline for a court-supervised auction under Section 363, not a full buyout of the consumer application or operating business. While Character.AI intends to keep its app online during proceedings, the company stated the platform will be wound down if the auction fails to produce a buyer willing to continue operating it.
+* **Suitability:** **Suitable.** Major industry bankruptcy and IP deal involving a high-profile consumer AI platform.
+
+---
+
+#### **[4] Global chip stock sell-off deepens following Broadcom CEO's "casino" warning**
+* **Publisher:** Financial Times / Bloomberg
+* **What is confirmed:** Broadcom CEO Hock Tan warned at an event in Singapore on October 12, 2026, that many investors in the AI boom "have no clue what they are investing in" and compared speculative expectations to "being in a casino". His comments sparked a sharp global sell-off in semiconductor stocks on October 12–13: Samsung fell up to 8.8%, SK Hynix fell 9.4%, and Micron dropped nearly 4%.
+* **Important caveats:** Market declines reflect broader market anxieties over enterprise AI ROI and rising bond yields, not solely Tan's remarks. Broadcom simultaneously reiterated strong operational growth, forecasting its custom AI chip revenues to reach $230B by FY2028.
+* **Suitability:** **Suitable.** High-impact market move and significant public statements from a major infrastructure provider.
+
+---
+
+#### **[8] IDC report: Nvidia's China AI chip market share drops to 34% as Huawei closes gap**
+* **Publisher:** Reuters / IDC
+* **What is confirmed:** An IDC research report details that Nvidia’s share of China’s data-center AI accelerator market fell to 34% in H1 2026, down from market dominance in prior years. Nvidia shipped 678,000 units (a 44% YoY decline) due to US export restrictions and local procurement directives. Meanwhile, Huawei’s shipments rose to 572,000 units, expanding its market share to 28%.
+* **Important caveats:** Figures are sourced from an internal IDC market tracking report obtained by Reuters; IDC did not publicly specify product-level breakdowns or account for unauthorized gray-market imports.
+* **Suitability:** **Suitable.** Concrete data detailing the impact of trade policy on semiconductor market share.
+
+---
+
+#### **[11] Anthropic claims new defenses reduced model distillation attacks by 90%–99%**
+* **Publisher:** Anthropic Research Blog
+* **What is confirmed:** On October 12, 2026, Anthropic published research on anti-distillation safeguards implemented across Claude Fable 5.1 and Opus 5.5. The key feature, "preserved thinking," prevents API accounts created after August 31, 2026, from modifying prior context during API calls. Anthropic explicitly named Chinese AI labs Zhipu AI and Moonshot AI for unauthorized data harvesting and prompt-forwarding activities.
+* **Important caveats:** Metrics (90%–99% reduction in data loss, 10x–100x drop in extracted reasoning tokens) are self-reported figures from Anthropic and have not been independently audited. Anthropic acknowledged the measures introduce trade-offs, including API flexibility constraints for legitimate developers and occasional false positives.
+* **Suitability:** **Suitable.** Significant technological and regulatory update regarding frontier model IP protection.
+
+---
+
+#### **[13] / [16] NTT Data in final talks to build $6.3B, 500 MW Anthropic data center in Osaka**
+* **Publisher:** Nikkei Asia / Reuters
+* **What is confirmed:** Japanese IT group NTT Data is in advanced negotiations to construct Anthropic’s first dedicated data center in Japan, located in Osaka. The facility is projected to cost up to ¥1 trillion ($6.3 billion) with a power capacity of up to 500 megawatts. The parties aim to execute a final agreement by March 31, 2027, with partial operations targeted for 2028.
+* **Important caveats:** Based on source-informed Nikkei reporting; neither NTT Data nor Anthropic has issued a formal press announcement or signed final contracts. Due to grid power constraints, early operations may rely on on-site fuel cells and local generation.
+* **Suitability:** **Suitable.** Notable infrastructure development (must be explicitly attributed to Nikkei/Reuters reporting).
+
+---
+
+#### **[1] / [14] / [17] Meta launches Muse Wonder frontier AI models for autonomous agents**
+* **Publisher:** Meta AI Research / Reuters
+* **What is confirmed:** On October 12, 2026, Meta launched the "Muse Wonder" and "Muse Wonder Full" model series, designed specifically for multi-step personal and professional agentic workflows. The architecture introduces "Active Memory" (cross-session context persistence) and "Active Focus" (sustained task execution and error recovery). The models are available via the Meta Model API and Muse Code.
+* **Important caveats:** Capability benchmark claims and safety evaluations originate directly from Meta’s release notes and model card. Integration into the consumer Muse application is rolling out gradually to paid subscribers first.
+* **Suitability:** **Suitable.** Major foundation model release from a tier-one lab.
+
+---
+
+#### **[15] Omron acquires US industrial PC maker OnLogic for $675M**
+* **Publisher:** Omron Corporate Release / Reuters
+* **What is confirmed:** Japanese industrial automation manufacturer Omron Corporation announced on October 13, 2026, that it entered into a definitive agreement to acquire US industrial PC maker OnLogic, Inc. (and parent Interlogic, Inc.) for $675 million in cash. The deal uses a reverse triangular merger structure and is expected to close around January 2027. Omron stated the move will accelerate its "physical AI" and edge-computing footprint in factory automation.
+* **Important caveats:** Subject to standard regulatory clearances and closing conditions through early 2027.
+* **Suitability:** **Suitable.** Direct acquisition in hardware and edge industrial AI.
+
+---
+
+#### **[19] Microsoft unveils Maia 300 custom AI chip for multi-gigawatt scaling**
+* **Publisher:** Microsoft Announcement / Reuters
+* **What is confirmed:** On October 12, 2026, Microsoft officially presented Azure Maia 300, its 3rd-generation custom AI accelerator built on TSMC's 2nm (N2P) process with 288GB HBM4 memory. Microsoft announced plans for production deployments in 2027, scaling the Maia family to multi-gigawatt data center footprints to handle inference tasks (Copilot, Teams) and lower reliance on commercial GPUs.
+* **Important caveats:** Product rollout is a 2027 production roadmap rather than immediate off-the-shelf availability today. The headline performance claim (~40% higher token output per megawatt) is based on internal Microsoft benchmarks against unspecified reference GPU setups.
+* **Suitability:** **Suitable.** Core strategic announcement regarding custom hyperscaler silicon.
+
+---
+
+### **Candidates Not Recommended / Filtered Out**
+
+* **[0] Hackers activate automatic defrosting in supermarket fridges:** Marked `OUT OF SCOPE`.
+* **[2] Codex CLI installs persistent background daemon:** Marked `OUT OF SCOPE`.
+* **[3] "AI is a tool and using it well takes skill" (yyhh.org):** Individual personal opinion blog post reacting to Rich Hickey; lacks news value.
+* **[5] GLM-Legal (z.ai):** Valid specialized model launch, but secondary in priority compared to the top tier releases listed above; access is currently gated.
+* **[7] "A Modern Web App in C" (prophitt.me):** Personal developer blog post/case study; not briefing-level news.
+* **[9] Transsion HK share sale:** Marked `OUT OF SCOPE`.
+* **[10] "Thinking will become a hobby":** Marked `OUT OF SCOPE`.
+* **[12] "'AI' Is Not a Tool" (linkedin.com):** Personal essay on software philosophy; not a news event.
+* **[18] IMF Latin America growth forecast:** Broad regional economic report; lower priority for tech-focused decision briefings.

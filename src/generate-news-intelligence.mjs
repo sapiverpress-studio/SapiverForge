@@ -21,7 +21,14 @@ const esc = (value) => String(value ?? "")
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
   .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 const clean = (value) => String(value ?? "").replace(/\s+/g, " ").trim();
-const firstSentence = (value) => clean(value).match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() || clean(value);
+const firstSentence = (value) => {
+  const text = clean(value);
+  const protectedText = text
+    .replace(/\b(?:Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|Inc|Ltd|Co|Corp|vs|etc)\./gi, (match) => match.replace(".", "∯"))
+    .replace(/\b([A-Z])\.([A-Z])\./g, "$1∯$2∯");
+  const sentence = protectedText.match(/^.*?[.!?](?:\s|$)/)?.[0] || protectedText;
+  return sentence.replaceAll("∯", ".").trim();
+};
 const limitWords = (value, maximum) => {
   const words = clean(value).split(" ").filter(Boolean);
   return words.length <= maximum ? words.join(" ") : `${words.slice(0, maximum).join(" ").replace(/[,:;.!?]+$/, "")}…`;

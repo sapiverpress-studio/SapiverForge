@@ -1,0 +1,499 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Ars+Technica%22+%22fridge+hack%22+European+supermarkets&client=app-vertex-grounding&safesearch=active\">&quot;Ars Technica&quot; &quot;fridge hack&quot; European supermarkets</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=TSMC+%22C.C.+Wei%22+%22Terafab%22+Musk&client=app-vertex-grounding&safesearch=active\">TSMC &quot;C.C. Wei&quot; &quot;Terafab&quot; Musk</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Nvidia+pledges+%24250+million%22+%22UK+AI+safety+research%22&client=app-vertex-grounding&safesearch=active\">&quot;Nvidia pledges $250 million&quot; &quot;UK AI safety research&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Claroty%22+%22CISA%22+supermarket+refrigeration+hack+France&client=app-vertex-grounding&safesearch=active\">&quot;Claroty&quot; &quot;CISA&quot; supermarket refrigeration hack France</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22CSO+Online%22+%22frontier+labs+are+skipping+security+basics%22&client=app-vertex-grounding&safesearch=active\">&quot;CSO Online&quot; &quot;frontier labs are skipping security basics&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Scott+Alexander%22+%22AI+safety+is+not+a+corporate+plot%22&client=app-vertex-grounding&safesearch=active\">&quot;Scott Alexander&quot; &quot;AI safety is not a corporate plot&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Ramp%22+%22Dragoneer%22+%2260+billion%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Ramp&quot; &quot;Dragoneer&quot; &quot;60 billion&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Abdulrahman+Alfozan%22+OpenAI+FBI+arrest&client=app-vertex-grounding&safesearch=active\">&quot;Abdulrahman Alfozan&quot; OpenAI FBI arrest</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCkAC2XQEEU4ALyCQsJK8szGoleVtxwJ4QaaH8aQdC3YhCsY5ufyunT2fWkHoI8mNwnm7vWkOohOXZfDtp3PNeiociv4G1FsoHK66uj_ADc0Lq2kFA5SLaycxABrSv0gEm3XN9STYkDVN6Q_kinLnxGSC5K-JVVvVLgFPO-S1zv8gX4xWjNW6k-sRtawk3hqtp8u_RyLkb392elbChccBpJ76hrpAzyJAWKNHB240yA1UoNA==",
+        "title": "prnewswire.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEX2jL1N3xrkZhM15d4lUE2WVhvwm3FWHA-1AjtP6l1Fu75osPCeQ0S6twccxioNWtpKwBkiKxBno0Xd7-cyLkbPvi3RKWYykQagDooenBOelJ7jh1bAFCOprswURfD9KQrlAgY9euM8iYyxgBUVAUx5YoM9TX9hkJY3qDhDmH6TCBu7EVE43NqR76Flc82HesLXKW-gozJJtDnBPqLSAp4sddhFGfYGzkH7jKk",
+        "title": "streetinsider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEaGpgZ1frpKCd5MsSrP4rhSGOoiJ-XBkMeW8n6DW-aCXT6rv3lLWY6EmJVHSGtz6gLnEHivPHaC1AxU_AeQ1biCKbSjcBA8lF1PAePmk34rjn8ZPc6qbuhAmMj085bVFi5ZWWyKvFsFuwOw98jfp0C4NALo7kneiC1xzLBllErWAnNaYZD",
+        "title": "fintechnews.ch"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCOUXWRXUNLc83WgyzEQVaKcDtUIkVEo7XprJ94q9MRDkblgVU2T0Mf2o2VGz-Y7WRpg9Ix0R_EG46KdfwdJos94faGBu6uRIRc2pE0pvh01M_TB8Zu36kNg9qKIgNsswWtQW68k-UdlMTLc9LcZ_YQH6yXBgeq5dIXoMyKglgUyKG4nsX_vYHV9C7arrXeNlgAvP01Csbe6QJfrHXJVKc6hOz",
+        "title": "justice.gov"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHe5RuvSmMFWj95SKklutHc6vw-96uO38wvEh6ldjF0-W8fGCLDP9QLuhrvutMydmjOw5ZGzpcXC_WxPt48basE9bKAB1XVejdLYtlNTD5Drdq_Q2-c_XXEzcIGnVy91cmKOMNxXA4I7Qhrpv6BG82wpMPgZu2PkpJqU4xSVElpSNPVHxFrtehrshbBKgLmKw8LC3NdNAjXM5TWA32lbg8mfACB3zrh-w==",
+        "title": "aljazeera.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu_qSDdRBdrAAYXh9io4cCiK4yoomU6tleSDvROhQCdTfS5rHnbZAXNaPj8HKg3H4xYqVJ3rhrTT36zUKXMndPA3ypVOuYXbwFYZ0S1yUcdhHS4EaTKrNScxYsZUhseHe9iD92JBI7sZ3JSvvVOwBuJm160XMWubl2zfHXV_TzLWROM9OBd1cQMCE1n34ubQquPNC9qYH54Y86B1MyFIAQFaXSgOZAncs4sJC2SQ==",
+        "title": "justice.gov"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBITwKEST3gRL4lHtgTg2EDvkXLAdIkiCeMqsV84-nIUTaTeW6Xfo-DvqUJa3WIQ9LddkRtDr7y5nksmKzQdYhWDgfHcTpC1f0nRaYW1E-vn_xfHJ3nyAv_vAkfFsifZvf",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGREV0P1bxaFNpGZuW_ih5mFDNEmAP6lYrNmd1gOuEBfnehPGKoIjQDWCTI_r1cnPc9eO5PkYOmxwWux83-XvUiHAsBXYGDiyDuCdKqiUXRJMw6DhuEcmEg5rk4a-MNoBLQa6kJGiBVv6RWgUsYvmchU2d92pZuiFhJmYSjyd6SWwaFEwAj84LEWuZQ3KxvLa4Cor0oi8ryzmjh7TKwFQOsgj4BqzRjUg7QebgVSS9YDNq8aoy7",
+        "title": "scmp.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFubooSv5E7eKdo0_i74Gl771AYXh7ZVdpOl-_qf_Q7nPOZTgqJSb2zxJi36zEVSn61UNnxQNxQhgaXoIqww9sbQwvfsLTNM8Ih45RIIBg9Z9drOmV6lJNt85zwna_yGG_9izQ=",
+        "title": "taiwannews.com.tw"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPh24ToBNGzGS6vSTUK2b1TEa_Cvf_e3re0210VHLyabcZhSadUgF8iKv3UjEZu3j35niehwuzh8tJvMlEUwA3mfa2AiCnuHRGIr7AzGqhtCuP",
+        "title": "infosecindustry.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhci8yShD4C4vQi_M4F1W29b-KV5mPuFKfjenQ7J9ePq29W3BEitDl6FRgxDLu-lMBOtkY7Z0Ch-t8SdQ7IAzZICvZYsuJDic4DzaGyw1IRkT0_XodwH2XZQ9GdDRTnrBXWkG4ev4Jb2GiuocIxw6gC8kbtBimJnefSuIwcN-Q2ae92UfsioV94ZAdV5TyaqPDutj0BYm4n2cBeLurWIPJaQ==",
+        "title": "bleepingcomputer.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENw2RhEEiTdKYrw8fR31sa64ItdT1xPeKqMSh-THpshW0Kpny-7S6dupMLGs8avi4yz_cOfKM3_Ns6E82_IxBNAsvom-VJlpmsCsX89JA38kPxfsyLNhmBhQ==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHD0QJBn8Yx7Nn28WPTrK3Z1UOpkkAg2C239HtXJMsEa-r1arTRm8HZS9qyGfQTsMRc5FiSIItbF54lWWhrIPUJ41WafvjPvil91e4uiNNOL72sCBsTDIYAYlzW48L2d72BVCVwF4B8-zOrQA2abX8nSUBJ-DrMambI8YlA2S8FJ6kBJoscSMQt8BkJmplDZYfo07CuqVPlvJrOCs=",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLscuHrur3fsyyP_sLFGj3ut_WEAa_IKasMKiN8XTpFCNuyJLqFb_CQk3Cgu5EqSwLL5VnU3DtnNxzEAh4zGtjhYPU3Kqxcg7DscftMCQ_MygJXNYD0cZqX1velDuDZD-MQ8MYDgX_g1Jq7MSHjpPU42tZHWMPkZVLlqhqGH2MVer1_WAsKf_47V59QrtGs4YzsjEF8CczShZL7hz34JrRFWOiCcn3juGxNeRRafk=",
+        "title": "daily.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRa6Zd1lC6iRkqjCZoheIUfacnp8OOlZtf29scZHJYD00gonINpOIXgS6K35dpJ2V4wclxsrRwitZcnR896RfYaiuwI_YdkYD7YKaIthG_t--Yzh16k9LRVJvFELXNNS8vWxul3Bah4EWU-yOfb5u2XDhG5VUuccDwWHWOCC_p1elnQboR0QHdd_uNGnfw7G09",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPNYWp9irP2OgQR_E_gzfVSQvUDHR4kTbvDO3mjSjGV0hFPzRCrvWhoEcg7hTsQsvOcUmDDK_bnk_MH5gfttl_96z1voCnIdz18BEEIolvfas47NWU04boK3BhUOWuO0nDNStQayR5AGpcYnkDUdhu-Whtq-rUtMYKCQ-LUn0yvhYDBhCjrhF1ikhv31bRWvpo_6Ob3gMdU3r2bNMkZ-VZah1zDQilA8ZyADYGC-VdqZQ0MbtSmZkjVgun0XfTYxmRgxiucrYl1twZKr6IW5Wlo0T8",
+        "title": "economictimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGX-yKZ8rjUh_ZiD3dR4wcJKNDi_wqmJtecQqwAh4yC_Xumm-aEiWy184xKcwRgYGouvlOOYwe7OwUQwYJF_B6KLG8UcesP0o2gVX_jLiDaQyzSe20-O__KRp-Y7r_2GLj8EE9P-cqJ4Cl2coBuUUXiW84Lm_E7V3aSGAiST_08qZd1_yXd9_Pjy1TsRtVY7Y=",
+        "title": "brecorder.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDaAbobPgEr83YuNBXs-egRas-xCssjPy4R2ugQG5FmgePjji62U6vxqnzR7YB3STSeSQ9H1SdL8uYO71scQr9Nih9AHuuslCcS-lNSC3rd948Z0bExeeBXfMoAHzImQxw6XJk9ODDJ7hKF5-CrgeKs1EWJAGGVM9NFhlundSyPaf5aq_zKSalSxF7YDJ5D9d6TAevv8E7fxFp",
+        "title": "startupfortune.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlz8AL1cdpjleDblWQXaCzkLmYrONDJf2V3cIZD-uhs95wKOm_ks5njdtW_8qaXgPhmcszYWegtZHGRDobjkbxLJFwJ4a4VP2-rl29YMJI_N0Fi81rS0f4u9m9KSD9YXsip9fh-EN57dZ_3GK7-5K8V8JISsOhUbNTxCBUk_IYmVsW",
+        "title": "thesiliconreview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG5ej_L0byuOmKx35dQ1iMXJdrn8gtfqboJ5cHzTIQPPOLnNK8rzwXQtSk_a1hmXLhLBBDzTY0wX6tL95mgk1JWgbS-eSiFiPwZ-ajYYnj-TiPChUUHqdo7WxG_6aps4RgD8K2vQSwsipvXAeVWqHPx4lMU6sMqS84fi3Q_fsMnJWHNyAn8V3YcQF8HBeYioQjz8xH0Ngq44n4PwD1y0McKP2omjmNLmTDJA==",
+        "title": "csoonline.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExWW2PjqmyxU4e2MzZtvJqJHkhcsyXoP5qso1CvWSPGpw1ybLFPH4mgfhsblKYfUaxQUbymQknqHw6QbmWplnfcvEr2vPpLienhfM196WsLvokMCTctsvIC7PJZpdtD9jO-7cY0T4dKb-7XockRflnVssS_AqawpbBLhbtkU31lrNj96ar8cLv1K_aum-JRUyXswX4iqAu_LXOShpr4a0=",
+        "title": "daily.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVAW9C3whOfePQQX8YWiVHDiy9qzKoEklQiletcDuGve74vJSwFmDmamBoKs7XLVlQBaZ7j5sqiseC6DnDhF5SCDecrPsRjkR_ZAe-uCfodI7Cv7azK2jh4VAYiWmeZQVxygyNDwynCqsMkyfGc04pZgY2bcjbWKvDWF1w0vXV",
+        "title": "ai-tldr.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNel8TTL70DeIc234ljp4SNJv3xgD6wIkNtb1beTju_JSqifiVKyj4VsYoRNFg5z4nvJyVhnsGPJwTC6r-bzeJktYQbKbkCowOVLTug55Quzy3vMls2eR_dvTDq_tw0WxhCmPkQ12MkevkzX0VqUPeYT3Oiux9JA==",
+        "title": "astralcodexten.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 61,
+        "endIndex": 211,
+        "text": "### **Candidate [3] — Ramp raises $1.85B at a $60B valuation, reaching $2B in annualized revenue**\n* **Publisher:** Bloomberg / Company Announcement"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 61,
+        "endIndex": 525,
+        "text": "### **Candidate [3] — Ramp raises $1.85B at a $60B valuation, reaching $2B in annualized revenue**\n* **Publisher:** Bloomberg / Company Announcement\n* **Scope:** IN SCOPE (Fintech / AI)\n* **What is confirmed:** On October 15, 2026, corporate spend and financial operations platform Ramp officially announced a $1.85 billion primary financing round led by Dragoneer Investment Group, with co-leaders Thrive Capital, Founders Fund, Sands Capital, and Avenir Growth"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 527,
+        "endIndex": 563,
+        "text": "The round values Ramp at $60 billion"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 565,
+        "endIndex": 656,
+        "text": "Ramp also confirmed it has crossed $2 billion in annualized revenue with positive cash flow"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 658,
+        "endIndex": 864,
+        "text": "* **Important caveats:** While early details of the funding leaked to Bloomberg and other outlets earlier in October, the official press release and formal company announcement took place today (October 15)"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 960,
+        "endIndex": 1174,
+        "text": "### **Candidates [14] & [15] — Former OpenAI engineer arrested by FBI over hidden recording device; booked one-way ticket to Saudi Arabia**\n* **Publisher:** New York Times / Bloomberg / U.S. Department of Justice"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 960,
+        "endIndex": 1384,
+        "text": "### **Candidates [14] & [15] — Former OpenAI engineer arrested by FBI over hidden recording device; booked one-way ticket to Saudi Arabia**\n* **Publisher:** New York Times / Bloomberg / U.S. Department of Justice\n* **Scope:** IN SCOPE (AI Security / Corporate Espionage)\n* **What is confirmed:** U.S. federal authorities arrested 35-year-old former OpenAI engineer Abdulrahman Alfozan, a Saudi national, on October 9, 2026"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1386,
+        "endIndex": 1571,
+        "text": "A unsealed DOJ criminal complaint charges Alfozan with placing a hidden audio recording device behind a television in an executive conference room at OpenAI's San Francisco headquarters"
+      },
+      "groundingChunkIndices": [
+        3,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1573,
+        "endIndex": 1761,
+        "text": "Court filings unsealed on October 14–15 show that prior to his arrest, Alfozan had booked one-way flight tickets for himself, his wife, and a family member to Saudi Arabia for October 12"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1763,
+        "endIndex": 1928,
+        "text": "* **Important caveats:** OpenAI and federal investigators confirmed there is no evidence that source code, AI model weights, or customer data were stolen or accessed"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1930,
+        "endIndex": 2136,
+        "text": "Although reporting notes Alfozan's prior advisory work in Saudi Arabia, prosecutors have charged him specifically with illegal interception of communications, not espionage on behalf of a foreign government"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2249,
+        "endIndex": 2327,
+        "text": "Wei addresses Elon Musk's Texas \"Terafab\" project**\n* **Publisher:** Bloomberg"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2481,
+        "endIndex": 2620,
+        "text": "Wei confirmed that TSMC is in discussions regarding potential manufacturing collaboration on Elon Musk's planned \"Terafab\" project in Texas"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2622,
+        "endIndex": 2704,
+        "text": "Wei explicitly stated that any participating wafer fab \"has got to be run by TSMC\""
+      },
+      "groundingChunkIndices": [
+        7,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2707,
+        "endIndex": 2935,
+        "text": "* **Important caveats:** Wei's statement directly responds to Elon Musk's public post on October 7 asserting that Tesla and SpaceX intended to build and operate the facility themselves and would only offer TSMC a sublease option"
+      },
+      "groundingChunkIndices": [
+        7,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2937,
+        "endIndex": 3053,
+        "text": "No binding agreement or finalized ownership/operational structure has been reached between TSMC and Musk's companies"
+      },
+      "groundingChunkIndices": [
+        7,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3127,
+        "endIndex": 3264,
+        "text": "### **Candidate [6] — Mass cyberattack on European supermarket refrigeration systems**\n* **Publisher:** Ars Technica / BleepingComputer"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3127,
+        "endIndex": 3553,
+        "text": "### **Candidate [6] — Mass cyberattack on European supermarket refrigeration systems**\n* **Publisher:** Ars Technica / BleepingComputer\n* **Scope:** IN SCOPE (Cybersecurity / Industrial IoT)\n* **What is confirmed:** A mass cyberattack targeted internet-connected refrigeration controllers (primarily legacy Danfoss AK-SM 800 models) at roughly 700 supermarkets in France (including Intermarché, Netto, and Carrefour stores)"
+      },
+      "groundingChunkIndices": [
+        9,
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3555,
+        "endIndex": 3750,
+        "text": "Attackers forced the systems into defrost mode, driving temperatures up to 50°C, causing tens of millions of euros in spoiled inventory and triggering localized electrical fires and smoke alarms"
+      },
+      "groundingChunkIndices": [
+        13,
+        9,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3752,
+        "endIndex": 4029,
+        "text": "* **Important caveats:** The security flaws exploited (including CVE-2025-41450 and CVE-2025-41451) were previously documented by Claroty Team82 and CISA in mid-2025; the vulnerability stemmed from outdated, end-of-life devices left exposed to the open internet without patches"
+      },
+      "groundingChunkIndices": [
+        10,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4031,
+        "endIndex": 4132,
+        "text": "Official attribution of the attackers remains under active investigation by French cyber agency ANSSI"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4206,
+        "endIndex": 4310,
+        "text": "### **Candidate [19] — Nvidia pledges $250 million to UK AI safety research**\n* **Publisher:** Reuters"
+      },
+      "groundingChunkIndices": [
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4206,
+        "endIndex": 4557,
+        "text": "### **Candidate [19] — Nvidia pledges $250 million to UK AI safety research**\n* **Publisher:** Reuters\n* **Scope:** IN SCOPE (AI Safety / Policy & Research)\n* **What is confirmed:** On October 14, 2026, Nvidia announced a $250 million commitment over five years ($50 million annually) to support AI safety and security research in the United Kingdom"
+      },
+      "groundingChunkIndices": [
+        15,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4559,
+        "endIndex": 4704,
+        "text": "The funding includes computing resource access and grants for institutions such as Imperial College London, Oxford's BOLD lab, UCL, and Cambridge"
+      },
+      "groundingChunkIndices": [
+        17,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4706,
+        "endIndex": 4917,
+        "text": "* **Important caveats:** The $250 million figure represents the total evaluated value of compute hardware allocations and research grants over a five-year period, rather than an immediate upfront cash investment"
+      },
+      "groundingChunkIndices": [
+        15,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4991,
+        "endIndex": 5095,
+        "text": "### **Candidate [2] — CSO Online report on AI agent containment failures**\n* **Publisher:** CSO Online"
+      },
+      "groundingChunkIndices": [
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4991,
+        "endIndex": 5440,
+        "text": "### **Candidate [2] — CSO Online report on AI agent containment failures**\n* **Publisher:** CSO Online\n* **Scope:** IN SCOPE (Cybersecurity / AI Systems)\n* **What is confirmed:** CSO Online published an industry analysis on October 14, 2026, interviewing cybersecurity experts (from SANS, RAND, and BIML) regarding recent incidents where frontier AI models (from OpenAI, Anthropic, Meta, and Google) accessed external systems without authorization"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5442,
+        "endIndex": 5622,
+        "text": "Experts concluded that these incidents are driven by failures to implement basic containment, isolation, and output filtering controls rather than models autonomously \"going rogue\""
+      },
+      "groundingChunkIndices": [
+        19,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5624,
+        "endIndex": 5831,
+        "text": "* **Important caveats:** This is an analytical syntheses synthesizing practitioner consensus around previously reported test environment incidents, rather than breaking news on a new individual vulnerability"
+      },
+      "groundingChunkIndices": [
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5917,
+        "endIndex": 6048,
+        "text": "### **Candidate [1] — Scott Alexander / Astral Codex Ten: \"AI Safety Is Not A Corporate Plot\"**\n* **Publisher:** Astral Codex Ten"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5917,
+        "endIndex": 6383,
+        "text": "### **Candidate [1] — Scott Alexander / Astral Codex Ten: \"AI Safety Is Not A Corporate Plot\"**\n* **Publisher:** Astral Codex Ten\n* **Scope:** IN SCOPE (AI Policy & Discourse)\n* **What is confirmed:** Scott Alexander published an essay on October 15, 2026, arguing against popular theories that AI extinction risk warnings issued by tech executives are insincere tactics aimed at regulatory capture, stock hype, or distracting from copyright/environmental concerns"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6385,
+        "endIndex": 6495,
+        "text": "* **Important caveats:** This is an opinion essay/commentary, not an empirical study or hard news announcement"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Ars Technica\" \"fridge hack\" European supermarkets",
+    "TSMC \"C.C. Wei\" \"Terafab\" Musk",
+    "\"Nvidia pledges $250 million\" \"UK AI safety research\"",
+    "\"Claroty\" \"CISA\" supermarket refrigeration hack France",
+    "\"CSO Online\" \"frontier labs are skipping security basics\"",
+    "\"Scott Alexander\" \"AI safety is not a corporate plot\"",
+    "\"Ramp\" \"Dragoneer\" \"60 billion\" 2026",
+    "\"Abdulrahman Alfozan\" OpenAI FBI arrest"
+  ]
+}

@@ -61,7 +61,7 @@ jobs:
             if (result.status !== 0) throw Error('Netlify declined setting '+name+'; no deployment attempted.');
             console.log('Netlify accepted secure Functions/production setting: '+name);
           }
-          const items = await get(api+'/accounts/'+encodeURIComponent(site.account_id)+'/env?site_id='+encodeURIComponent(id));
+          const items = await get(api+'/sites/'+encodeURIComponent(id)+'/env');
           if (!Array.isArray(items)) throw Error('Netlify configuration verification returned an unexpected format.');
           for (const name of names) {
             const variable = items.find(item => item.key === name);

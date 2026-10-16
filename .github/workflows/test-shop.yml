@@ -8,6 +8,8 @@ on:
       - 'test/shop-page-contract.mjs'
       - 'test/etsy-prints-contract.mjs'
       - 'lib/etsy-prints.mjs'
+      - 'lib/etsy-public-feed.mjs'
+      - 'scripts/check-etsy-prints.mjs'
       - 'netlify/functions/etsy-prints.mjs'
       - 'scripts/etsy-prints-client.js'
       - '.github/workflows/etsy-prints-check.yml'
@@ -27,6 +29,8 @@ jobs:
             scripts/build-shop-page.mjs
             scripts/etsy-prints-client.js
             lib/etsy-prints.mjs
+            lib/etsy-public-feed.mjs
+            scripts/check-etsy-prints.mjs
             netlify/functions/etsy-prints.mjs
             test/etsy-prints-contract.mjs
             test/shop-page-contract.mjs

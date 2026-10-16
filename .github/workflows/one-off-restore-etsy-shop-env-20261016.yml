@@ -54,25 +54,36 @@ jobs:
           if (site.id !== id || site.name !== 'sapiverpress-puzzle-suite') throw Error('Unexpected Netlify site identity; no changes made.');
           if (!site.account_id) throw Error('Netlify site did not supply a team ID.');
           console.log('Verified exact production Netlify site identity and authorised token.');
-          for (const name of names) {
-            const args = ['--yes','netlify-cli@27.5.2','env:set',name,process.env[name],
-              '--context','production','--scope','functions','--secret','--force','--site',id];
-            const result = spawnSync('npx',args,{encoding:'utf8',stdio:'pipe',timeout:120000,maxBuffer:2_000_000,env:process.env});
-            if (result.status !== 0) throw Error('Netlify declined setting '+name+'; no deployment attempted.');
-            console.log('Netlify accepted secure Functions/production setting: '+name);
-          }
-          const items = await get(api+'/sites/'+encodeURIComponent(id)+'/env');
-          if (!Array.isArray(items)) throw Error('Netlify configuration verification returned an unexpected format.');
-          console.log('Variable metadata only: '+JSON.stringify(items.filter(item=>names.includes(item.key)).map(item=>({name:item.key,scopes:item.scopes,contexts:Array.isArray(item.values)?item.values.map(v=>v.context):[],secretFlag:item.is_secret===true}))));
-          for (const name of names) {
-            const variable = items.find(item => item.key === name);
-            if (!variable || !Array.isArray(variable.scopes) || !variable.scopes.includes('functions') ||
-                !Array.isArray(variable.values) || !variable.values.some(v=>v.context==='production' || v.context==='all')) {
-              throw Error('Netlify configuration metadata not verified for '+name+'; no deployment attempted.');
+          const endpoint=api+'/accounts/'+encodeURIComponent(site.account_id)+'/env?site_id='+encodeURIComponent(id);
+          const body=names.map(key=>({
+            key,
+            scopes:['functions'],
+            values:[{context:'production',value:process.env[key]}],
+            is_secret:true
+          }));
+          const response=await fetch(endpoint,{
+            method:'POST',
+            headers:{Authorization:'Bearer '+token,'content-type':'application/json'},
+            body:JSON.stringify(body),
+            redirect:'error',
+            signal:AbortSignal.timeout(20000)
+          });
+          if(response.status!==201)throw Error('Direct Netlify environment transfer refused (HTTP '+response.status+'); deployment blocked.');
+          console.log('Netlify confirmed creation of both site-scoped production Function secrets (201).');
+          for(const name of names){
+            const read=await fetch(api+'/accounts/'+encodeURIComponent(site.account_id)+'/env/'+name+'?site_id='+encodeURIComponent(id),{
+              headers:{Authorization:'Bearer '+token},
+              signal:AbortSignal.timeout(15000)
+            });
+            if(!read.ok)throw Error('Unable to confirm Netlify variable metadata for '+name+' (HTTP '+read.status+'); deployment blocked.');
+            const item=await read.json();
+            if(item.key!==name || item.is_secret!==true || !Array.isArray(item.scopes) ||
+               !item.scopes.includes('functions') || !item.values?.some(v=>v.context==='production')){
+              throw Error('Netlify returned inconsistent variable scope/context for '+name+'; deployment blocked.');
             }
-            console.log('Verified Netlify production Functions metadata: '+name);
+            console.log('Confirmed production Functions secret metadata: '+name);
           }
-          console.log('Both secrets were transferred without outputting their values.');
+          console.log('Transfer verified; no secret values were written to logs.');
           NODE
 
       - name: Rebuild complete existing website using established build and shop tests

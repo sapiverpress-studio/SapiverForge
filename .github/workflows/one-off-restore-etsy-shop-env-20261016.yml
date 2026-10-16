@@ -57,7 +57,7 @@ jobs:
           const endpoint=api+'/accounts/'+encodeURIComponent(site.account_id)+'/env?site_id='+encodeURIComponent(id);
           const body=names.map(key=>({
             key,
-            scopes:['functions'],
+            // Omit plan-restricted fine-grained scopes; Netlify uses its allowed site defaults.
             values:[{context:'production',value:process.env[key]}],
             is_secret:true
           }));
@@ -68,7 +68,11 @@ jobs:
             redirect:'error',
             signal:AbortSignal.timeout(20000)
           });
-          if(response.status!==201)throw Error('Direct Netlify environment transfer refused (HTTP '+response.status+'); deployment blocked.');
+          if(response.status!==201){
+            let details=(await response.text()).slice(0,700);
+            for(const key of names)details=details.replaceAll(process.env[key],'[masked]');
+            throw Error('Direct Netlify environment transfer refused (HTTP '+response.status+'): '+details+'; deployment blocked.');
+          }
           console.log('Netlify confirmed creation of both site-scoped production Function secrets (201).');
           for(const name of names){
             const read=await fetch(api+'/accounts/'+encodeURIComponent(site.account_id)+'/env/'+name+'?site_id='+encodeURIComponent(id),{

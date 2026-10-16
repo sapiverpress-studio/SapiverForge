@@ -45,7 +45,7 @@ await assert.rejects(loadSapiverPrints({keystring:'test-key',sharedSecret:''}),/
 await assert.rejects(loadSapiverPrints({keystring:'test-key',sharedSecret:'test-secret',
   fetchImpl:async()=>({ok:true,status:200,json:async()=>({results:[{shop_name:'SapiverPress',shop_id:999}]})})}),/Exact Etsy shop/);
 
-const valid = makePublicEtsyFeed(data);
+const valid = makePublicEtsyFeed({...data,activeListingIds:[42]});
 assert.equal(valid.schemaVersion,1);
 assert.equal(valid.shop,'SapiverPrints');
 assert.equal(valid.items.length,1);

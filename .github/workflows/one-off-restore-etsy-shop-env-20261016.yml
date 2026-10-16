@@ -63,6 +63,7 @@ jobs:
           }
           const items = await get(api+'/sites/'+encodeURIComponent(id)+'/env');
           if (!Array.isArray(items)) throw Error('Netlify configuration verification returned an unexpected format.');
+          console.log('Variable metadata only: '+JSON.stringify(items.filter(item=>names.includes(item.key)).map(item=>({name:item.key,scopes:item.scopes,contexts:Array.isArray(item.values)?item.values.map(v=>v.context):[],secretFlag:item.is_secret===true}))));
           for (const name of names) {
             const variable = items.find(item => item.key === name);
             if (!variable || !Array.isArray(variable.scopes) || !variable.scopes.includes('functions') ||

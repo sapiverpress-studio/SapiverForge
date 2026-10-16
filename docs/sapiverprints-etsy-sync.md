@@ -1,39 +1,26 @@
-# SapiverPrints Etsy shop synchronisation
+# SapiverPrints public catalogue (GitHub-fed)
 
-## Target and safeguards
-- Only the Etsy shop SapiverPrints: https://www.etsy.com/shop/SapiverPrints.
-- The old Sapiver Press puzzle shop is deliberately excluded.
-- All Etsy calls use documented public GET endpoints; no seller OAuth token is needed and no Etsy listing can be edited or published.
-- No API key, secret, OAuth token or listing image is checked into GitHub.
-- Amazon KDP book cards remain in data/shop-products.json.
+## Source of truth and secret separation
+- Only the Etsy shop SapiverPrints is used; the old puzzle shop is excluded.
+- Etsy public API key and shared secret remain in **SapiverForge GitHub Actions secrets**. They are never included in Netlify or the public catalogue.
+- `.github/workflows/etsy-prints-check.yml` reads active listings with photos every four hours (UTC: 00:17, 04:17, 08:17, 12:17, 16:17, 20:17) and supports a manual dispatch.
+- The workflow writes a strictly whitelisted `data/etsy-public-catalog.json`: Etsy listing ID, title, short description, first public photo and alt text, canonical Etsy purchase URL, date and shop name. No customers, credentials, orders, or supplier data.
+- A GitHub Actions failure **does not overwrite** the last successful snapshot. A missing image/partial inventory fails rather than publishing a partial catalogue.
+- The public feed is served from GitHub's **public main branch** at `https://raw.githubusercontent.com/sapiverpress-studio/SapiverForge/main/data/etsy-public-catalog.json`.
 
-## GitHub secrets (required for the daily monitor)
-In the SapiverForge repo -> Settings -> Secrets and variables -> Actions:
-- ETSY_PRINTS_KEYSTRING
-- ETSY_PRINTS_SHARED_SECRET
+## Netlify site
+- `netlify/functions/etsy-prints.mjs` reads the GitHub public feed and validates every listing and its freshness; no Netlify Etsy credentials are required.
+- The website continues calling `/api/etsy-prints` so the client does not need changing.
+- Feed max age: **5.5 hours**. The HTTP cache never extends beyond expiration. GitHub Actions scheduling can be delayed; on an overdue or unavailable feed, the website **fails closed** and shows the existing official Etsy link rather than potentially stale product data.
+- New Etsy listings normally appear after the next successful GitHub sync plus GitHub CDN propagation. Do not promise instant appearance.
+- Keep the Netlify build/deploy manual. The feed refresh workflow **never deploys Netlify**.
 
-The workflow .github/workflows/etsy-prints-check.yml runs at 05:15 UTC daily, manually via workflow_dispatch, and once on merge of that workflow to main. It verifies the exact shop and changes data/etsy-active-listing-ids.json only when listing IDs change. GitHub Actions' job summary shows counts, additions and removals. This is a monitoring snapshot, not a website product-data cache.
+## Verification and recovery
+1. Run `node test/etsy-prints-contract.mjs` and `node test/shop-page-contract.mjs` (after generating the shop page).
+2. Check GitHub Actions `SapiverPrints public catalogue refresh` has a successful run and that `data/etsy-public-catalog.json` has current `generatedAt` and expected items.
+3. Only then make **one** complete Netlify suite deployment, using the existing approved full-site procedure. Do not replace the site with a partial `public/` folder.
+4. Visit `https://suite.sapiverpress.co.uk/api/etsy-prints`. It must report `shop: SapiverPrints`, real items and valid images. Then check `https://suite.sapiverpress.co.uk/shop/`.
+5. If the endpoint returns 503, check age of public feed, GitHub sync, GitHub raw availability and Netlify function logs. Never bypass stale-feed checks to mask failures.
 
-If the action fails with HTTP 401/403, inspect the Etsy developer app's approval/status and permissions. Check GitHub Actions secrets exist under the exact names. Never paste secret values in an issue or CI log. If git push is rejected, inspect repository branch protection and workflow token write permissions. Do not disable branch protection indiscriminately.
-
-## Netlify configuration (separate from GitHub)
-Site: Sapiver Press main suite (suite.sapiverpress.co.uk, currently sapiverpress-puzzle-suite).
-Netlify -> Project configuration -> Environment variables:
-- ETSY_PRINTS_KEYSTRING
-- ETSY_PRINTS_SHARED_SECRET
-
-Set the values for Functions runtime (production). GitHub Actions secrets are NOT inherited by Netlify. After setting or changing them, make a manual production deploy of the SapiverForge build to activate the new function; the existing site's automatic deploy is intentionally disabled.
-
-Once deployed:
-1. Visit https://suite.sapiverpress.co.uk/api/etsy-prints. Expect JSON with shop:"SapiverPrints" and items from published Etsy listings; credentials must not appear in the response.
-2. Visit https://suite.sapiverpress.co.uk/shop/. The Etsy section should load the current product photographs, titles and purchase links. Amazon KDP book cards should stay unchanged.
-3. Add a published listing to Etsy and allow approximately five minutes for the public catalogue to refresh. The site itself does not need redeploying for new Etsy listings.
-4. If the Etsy API is unavailable, the website shows the official Etsy shop button instead of stale listing cards.
-
-Etsy's API terms prohibit showing listing data older than six hours, so the function's success cache is only five minutes; errors use no-store. Neither the daily GitHub ID snapshot nor the static HTML supplies potentially stale Etsy titles, photographs or prices.
-
-## Tests
-Run node scripts/apply-trust-first-site.mjs, node test/shop-page-contract.mjs and node test/etsy-prints-contract.mjs from the repository root. The latter uses mocked responses and does not require credentials. A GitHub PR test workflow performs these checks.
-
-## Remaining verification
-Live Etsy credential validation can only be completed by the GitHub Action after merge/manual dispatch; the credentials are write-only secrets and cannot be read back from the connector. The Netlify API endpoint must separately be configured and manually deployed. Do not claim the live shop is connected until those checks succeed.
+## Pinterest handoff (future separate work)
+The same public feed can support a dedicated Sapiver Prints publisher using the Comic repository's existing Pinterest API access, with a board-specific queue and Etsy-listing-ID deduplication. Pinterest posting has **not** been enabled by this catalogue change.

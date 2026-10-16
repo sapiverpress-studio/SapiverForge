@@ -1,8 +1,9 @@
-name: SapiverPrints daily Etsy check
+name: SapiverPrints public catalogue refresh
 
 on:
   schedule:
-    - cron: '15 5 * * *'
+    # Six checks/day keep the public feed under Etsy's six-hour freshness limit.
+    - cron: '17 */4 * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -32,14 +33,18 @@ jobs:
           ETSY_PRINTS_KEYSTRING: ${{ secrets.ETSY_PRINTS_KEYSTRING }}
           ETSY_PRINTS_SHARED_SECRET: ${{ secrets.ETSY_PRINTS_SHARED_SECRET }}
         run: node scripts/check-etsy-prints.mjs
-      - name: Commit changed listing IDs only
+      - name: Commit validated public products and current ID snapshot
         run: |
-          git add data/etsy-active-listing-ids.json
+          git add data/etsy-active-listing-ids.json data/etsy-public-catalog.json
           if git diff --cached --quiet; then
-            echo "No listing membership changes."
+            echo "No public catalogue changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(shop): record changed SapiverPrints active listing IDs"
-          git push origin HEAD:main
+          git commit -m "chore(shop): refresh sanitized Etsy product feed [skip ci]"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          exit 1

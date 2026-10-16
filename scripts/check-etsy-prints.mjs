@@ -1,11 +1,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadSapiverPrints } from '../lib/etsy-prints.mjs';
+import { makePublicEtsyFeed } from '../lib/etsy-public-feed.mjs';
 
 const result = await loadSapiverPrints({
   keystring: process.env.ETSY_PRINTS_KEYSTRING,
   sharedSecret: process.env.ETSY_PRINTS_SHARED_SECRET
 });
+const publicFeed = makePublicEtsyFeed(result);
+const publicPath = path.join(process.cwd(), 'data/etsy-public-catalog.json');
+// Refresh the timestamp on every successful run; never publish a stale snapshot.
+fs.writeFileSync(publicPath, JSON.stringify(publicFeed, null, 2) + '\n');
 const location = path.join(process.cwd(), 'data/etsy-active-listing-ids.json');
 let previous = null;
 if (fs.existsSync(location)) previous = JSON.parse(fs.readFileSync(location, 'utf8'));
@@ -18,7 +23,7 @@ if (JSON.stringify(data) !== JSON.stringify(previous)) {
   fs.writeFileSync(location, JSON.stringify(data, null, 2) + '\n');
 }
 const lines = [
-  '## SapiverPrints daily check',
+  '## SapiverPrints public catalogue refresh',
   '',
   '- Etsy shop: **' + result.shop + '** (ID ' + result.shopId + ')',
   '- Active listings: **' + ids.length + '**',
@@ -29,7 +34,7 @@ const lines = [
   '',
   ...(added.length ? ['New: ' + added.join(', '), ''] : []),
   ...(removed.length ? ['Removed: ' + removed.join(', '), ''] : []),
-  'The website fetches current data from Etsy; this file is monitoring only and is not used to display stale listing details.'
+  'The dated, public-only feed is consumed by the website and expires automatically. The ID snapshot is monitoring only.'
 ];
 const summary = lines.join('\n') + '\n';
 console.log(summary);

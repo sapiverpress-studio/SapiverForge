@@ -1,0 +1,129 @@
+name: One-off secure Etsy shop website recovery 2026-10-16
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/one-off-restore-etsy-shop-env-20261016.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: one-off-sapiver-etsy-shop-recovery
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      ETSY_PRINTS_KEYSTRING: ${{ secrets.ETSY_PRINTS_KEYSTRING }}
+      ETSY_PRINTS_SHARED_SECRET: ${{ secrets.ETSY_PRINTS_SHARED_SECRET }}
+      NETLIFY_SITE_ID: 47bda30e-4698-4cf5-bcd4-d59785e1f399
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Check Netlify identity and securely transfer both existing Etsy secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import { spawnSync } from 'node:child_process';
+          const id = process.env.NETLIFY_SITE_ID;
+          const token = process.env.NETLIFY_AUTH_TOKEN;
+          const names = ['ETSY_PRINTS_KEYSTRING', 'ETSY_PRINTS_SHARED_SECRET'];
+          if (!token || names.some(name => !process.env[name])) throw Error('Required GitHub secrets are unavailable; no deployment attempted.');
+          const api = 'https://api.netlify.com/api/v1';
+          const get = async (url) => {
+            const response = await fetch(url, {headers:{Authorization:'Bearer '+token},redirect:'error',signal:AbortSignal.timeout(16000)});
+            if (!response.ok) throw Error('Netlify credential validation or configuration inspection failed (HTTP '+response.status+').');
+            return response.json();
+          };
+          const site = await get(api+'/sites/'+id);
+          if (site.id !== id || site.name !== 'sapiverpress-puzzle-suite') throw Error('Unexpected Netlify site identity; no changes made.');
+          if (!site.account_id) throw Error('Netlify site did not supply a team ID.');
+          console.log('Verified exact production Netlify site identity and authorised token.');
+          for (const name of names) {
+            const args = ['--yes','netlify-cli@27.5.2','env:set',name,process.env[name],
+              '--context','production','--scope','functions','--secret','--force','--site',id];
+            const result = spawnSync('npx',args,{encoding:'utf8',stdio:'pipe',timeout:120000,maxBuffer:2_000_000,env:process.env});
+            if (result.status !== 0) throw Error('Netlify declined setting '+name+'; no deployment attempted.');
+            console.log('Netlify accepted secure Functions/production setting: '+name);
+          }
+          const items = await get(api+'/accounts/'+encodeURIComponent(site.account_id)+'/env?site_id='+encodeURIComponent(id));
+          if (!Array.isArray(items)) throw Error('Netlify configuration verification returned an unexpected format.');
+          for (const name of names) {
+            const variable = items.find(item => item.key === name);
+            if (!variable || !Array.isArray(variable.scopes) || !variable.scopes.includes('functions') ||
+                !Array.isArray(variable.values) || !variable.values.some(v=>v.context==='production' || v.context==='all')) {
+              throw Error('Netlify configuration metadata not verified for '+name+'; no deployment attempted.');
+            }
+            console.log('Verified Netlify production Functions metadata: '+name);
+          }
+          console.log('Both secrets were transferred without outputting their values.');
+          NODE
+
+      - name: Rebuild complete existing website using established build and shop tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+          node src/build-site.mjs
+          node src/build-puzzles.mjs
+          node scripts/apply-trust-first-site.mjs
+          node test/puzzle-site-contract.mjs
+          node test/shop-page-contract.mjs
+          node test/etsy-prints-contract.mjs
+          test -s public/index.html
+          test -s public/shop/index.html
+          test -s public/daily-brief/index.html
+          test -s public/parents/index.html
+          test -s public/puzzles/index.html
+          grep -q 'etsy-live' public/shop/index.html
+          echo 'Built and checked existing suite, including live Etsy catalogue client.'
+
+      - name: Deploy the complete validated site once (existing production target)
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx --yes netlify-cli@27.5.2 deploy --prod --no-build \
+            --dir=public \
+            --site="$NETLIFY_SITE_ID" \
+            --auth="$NETLIFY_AUTH_TOKEN" \
+            --message="Restore production Etsy Functions credentials; preserve full Sapiver Press suite"
+
+      - name: Confirm live Etsy catalogue and all product images
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          const base='https://suite.sapiverpress.co.uk';
+          const wait=ms=>new Promise(r=>setTimeout(r,ms));
+          let verified=false;
+          for(let attempt=1;attempt<=12;attempt++){
+            try {
+              const response=await fetch(base+'/api/etsy-prints',{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(22000)});
+              if(!response.ok){ console.log('Catalogue status '+response.status+'; retry '+attempt+'/12');await wait(7000);continue; }
+              const data=await response.json();
+              if(data.shop!=='SapiverPrints'||!Array.isArray(data.items)||data.items.length<20) throw Error('Shop mismatch or fewer than 20 validated listings.');
+              if(data.items.some(item=>!item.title||!item.image?.startsWith('https://')||!item.url?.startsWith('https://www.etsy.com/listing/'))) throw Error('Listing media or purchase-link mismatch.');
+              const shop=await fetch(base+'/shop/',{signal:AbortSignal.timeout(15000)});
+              if(!shop.ok || !(await shop.text()).includes('etsy-live')) throw Error('Website shop page missing live-product mount.');
+              console.log('VERIFIED: Live SapiverPrints catalogue exposes '+data.items.length+' Etsy products with photos and listing links; shop markup present.');
+              verified=true;
+              break;
+            }catch(error){console.log('Validation pending: '+String(error.message).slice(0,180));await wait(7000);}
+          }
+          if(!verified)throw Error('Production catalogue was not confirmed after deployment; investigate Netlify function logs.');
+          NODE

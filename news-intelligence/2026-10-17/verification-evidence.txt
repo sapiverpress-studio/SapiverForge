@@ -1,0 +1,124 @@
+Here are the evidence notes for the relevant in-scope candidates for the **2026-10-17 UK morning briefing**, evaluated against primary sources, regulatory context, and verification criteria.
+
+---
+
+### Candidate Notes
+
+#### **[0] Claude reveals ECDSA curve origins**
+* **What is confirmed:** On October 16, 2026, Anthropic published research demonstrating that an internal Claude research model solved a 25-year-old cryptography mystery by tracing the seeds of NIST's standard ECDSA curves (P-192, P-224, P-256, P-384, P-521). The seeds were generated using the standard C library's `lrand48` pseudorandom number generator initialized with 1997–1998 Unix timestamps, rather than a secret passphrase or complex hash. Cryptographer Filippo Valsorda independently verified the solution, confirming the $36,864 bounty was claimed and donated to the Internet Security Research Group (ISRG).
+* **Important caveats:** Anthropic explicitly confirmed this is **not** a cryptographic break or vulnerability in ECDSA, and users do not need to take action or change security practices. While it makes intentional backdoors far less plausible, it cannot completely rule out subtle timestamp selection filtering.
+* **Suitable for publication today:** **Yes.** Outstanding research milestone at the intersection of AI capability and cybersecurity history.
+
+---
+
+#### **[1] Interview with Benn Jordan on Flock & surveillance backlash**
+* **What is confirmed:** *The Verge* published a *Decoder* podcast interview with security researcher/YouTuber Benn Jordan discussing automated license plate reader (ALPR) vendor Flock Safety, system vulnerabilities, and broader surveillance privacy risks. This follows Jordan's formal testimony on September 23, 2026, before the US Senate Judiciary Subcommittee on Crime and Counterterrorism.
+* **Important caveats:** The candidate is a podcast/interview summarizing ongoing advocacy and prior Senate testimony rather than a new regulatory or legislative action.
+* **Suitable for publication today:** **Yes.** Relevant for tech regulation and surveillance policy coverage.
+
+---
+
+#### **[3] Mercor study: 90% of US working hours fall outside AI benchmarks**
+* **What is confirmed:** Talent and evaluation firm Mercor published an interactive "Benchmark Map of the US Economy" under its Labor Index initiative. Mapping 29 agentic AI benchmarks against the US Department of Labor's O*NET taxonomy (18,797 tasks across 923 occupations), Mercor estimates that ~90% of American working hours are spent on tasks with little to no representation in current AI benchmarks.
+* **Important caveats:** "Uncovered" means unmeasured by these 29 selected benchmarks, not that AI is incapable of performing those tasks. Mercor explicitly notes the findings are a provisional lower bound dependent on benchmark selection and automated task matching.
+* **Suitable for publication today:** **Yes.** Key economic data point for evaluating claims around workplace AI adoption and capability.
+
+---
+
+#### **[4] Profile of Alexandr Wang & Meta Superintelligence Labs**
+* **What is confirmed:** The *Financial Times* published a profile on 29-year-old Scale AI co-founder Alexandr Wang, who became Meta’s Chief AI Officer following Meta’s $14.3 billion stake in Scale AI. The report highlights Wang’s role leading Meta’s Superintelligence Labs (which recently shipped Muse Spark) and notes that sources within and close to Meta describe him as a potential long-term successor to Mark Zuckerberg.
+* **Important caveats:** The succession framing reflects internal chatter and analytical commentary rather than an official board succession process or corporate governance filing.
+* **Suitable for publication today:** **Yes.** Strong executive profile on Meta's AI restructuring.
+
+---
+
+#### **[5] Tesla Roadster 2.0 demonstration**
+* **What is confirmed:** On October 15, 2026, Tesla held a livestreamed event in Texas showcasing an updated next-generation Roadster prototype featuring SpaceX cold-gas compressed-air thrusters, active aerodynamics, and stunt demonstrations. Target production is now scheduled for 2028.
+* **Important caveats:** The Roadster was originally announced in 2017 for a 2020 release. Actual production timelines remain subject to repeated delays, and the regulatory/practical feasibility of cold-gas thruster "flight" features on public roads remains highly unverified.
+* **Suitable for publication today:** **Yes.** High-profile product announcement, though caveats regarding production history must be highlighted.
+
+---
+
+#### **[6] Reach Security raises $50M+ Series B**
+* **What is confirmed:** San Francisco-based Reach Security announced a Series B funding round of over $50 million led by Top Tier Capital Partners, with participation from Ballistic Ventures, In-Q-Tel, and Microsoft's M12. Alongside the raise, the firm launched *Reach Everywhere* to integrate its real-time security control analysis across enterprise software.
+* **Important caveats:** First announced on October 13, 2026; company valuation was not disclosed.
+* **Suitable for publication today:** **Yes.** Solid enterprise AI security funding story.
+
+---
+
+#### **[7] Research essay: "You could have invented transformers from memory"**
+* **What is confirmed:** Computer science researcher Alex Wang published a technical deep-dive on October 15/16, 2026, mathematically reframing transformer components (linear projections, MLPs, and softmax self-attention) as associative memory stores characterized by varying signal-to-noise capacity limits.
+* **Important caveats:** An educational/essay blog post rather than a peer-reviewed journal paper or major industry announcement.
+* **Suitable for publication today:** **Yes.** Strong educational candidate for technical/developer audiences.
+
+---
+
+#### **[8] Duvo raises $32M Series A led by Balderton**
+* **What is confirmed:** European AI startup Duvo (founded by former Rohlik Group CEO Tomáš Čupr) announced a $32 million Series A round led by Balderton Capital, bringing its total funding to $48 million. The company develops an "Enterprise Execution OS" that uses AI agents to interview employees, map undocumented workflows, and automate legacy software tasks.
+* **Important caveats:** Operational productivity metrics cited ($100M in customer value unlocked) are self-reported startup claims.
+* **Suitable for publication today:** **Yes.** Relevant European AI enterprise automation funding news.
+
+---
+
+#### **[10] Scanntech raises $180M Series F**
+* **What is confirmed:** Retail intelligence platform Scanntech (based in Montevideo, Uruguay) raised $180 million in Series F funding led by L Catterton and Partners Group, with participation from Bradesco, SPX, and Warburg Pincus. The company processes point-of-sale receipt data across Latin America for market intelligence.
+* **Important caveats:** Approximately half of the $180 million funding consists of secondary share sales (allowing early backer Warburg Pincus to partially exit) rather than direct balance-sheet growth capital.
+* **Suitable for publication today:** **Yes.** Significant global retail data/analytics deal.
+
+---
+
+#### **[11] Apple ML Research: Muse Spark Open with MLX on Mac Studio**
+* **What is confirmed:** On October 15, 2026, Apple Machine Learning Research published technical benchmarks demonstrating local inference of Meta's 816-billion parameter Muse Spark Open model. Using Apple’s MLX framework and a new RDMA-over-Thunderbolt driver (`jaccl` backend), Apple demonstrated tensor parallelization across a cluster of four M5 Ultra Mac Studios, generating over 36 tokens per second.
+* **Important caveats:** Running an 816B model locally requires an enterprise-class cluster of high-end Mac Studios costing upwards of $20,000.
+* **Suitable for publication today:** **Yes.** Important technical demonstration of local distributed LLM execution on consumer silicon.
+
+---
+
+#### **[13] Scarlet raises $50M Series B for AI medical device certification**
+* **What is confirmed:** London startup Scarlet raised a $50 million Series B round led by Headline, with participation from Notion Capital, Atomico, and Creandum. Scarlet is a government-designated body (holding designations from the EU, UK MHRA, and US FDA) specializing in certifying AI and software-based medical devices.
+* **Important caveats:** First reported earlier in the week (October 12).
+* **Suitable for publication today:** **Yes.** Notable European AI healthcare regulatory story.
+
+---
+
+#### **[14] Kioxia loses two-thirds of peak market value**
+* **What is confirmed:** Nikkei Asia reported on October 15/16, 2026, that Japanese NAND memory maker Kioxia Holdings' market capitalization has dropped to one-third of its June 2026 peak. The decline is driven by expanding supply from Chinese memory chipmakers and debt/interest-rate pressures affecting data center expansions.
+* **Important caveats:** Kioxia's upcoming April–September earnings (due October 30) are still projected to show near-term profit gains due to AI demand; the stock drop reflects longer-term competitive re-rating.
+* **Suitable for publication today:** **Yes.** Major semiconductor and supply-chain market story.
+
+---
+
+#### **[15] Mistlabs raises $26M & launches Ambi on Apple devices**
+* **What is confirmed:** Ambient AI startup Mistlabs brought its Ambi system out of beta across iOS, macOS, and watchOS on October 12, 2026, supported by $26 million in pre-Series A funding co-led by Luminous Ventures and device manufacturer Huaqin Technology.
+* **Important caveats:** Continuous ambient audio monitoring raises notable privacy and consent considerations; Mistlabs states audio recordings are not stored and capture can be toggled off.
+* **Suitable for publication today:** **Yes.** Relevant ambient AI computing launch.
+
+---
+
+#### **[16] Research Paper: "Behavioral Compositionality of Sparse Autoencoder Representations"**
+* **What is confirmed:** Researchers from the University of Wisconsin–Madison published an arXiv paper (`arXiv:2610.21261`) introducing "SAE Additivity Residuals" (SAR) to measure behavioral non-additivity in Sparse Autoencoders. Testing across 18 model/behavior settings, they showed SAE features support better compositional explanations than random baselines, but pairwise feature interactions are still required for accurate behavioral modeling and steering.
+* **Important caveats:** Represents theoretical research claims made by paper authors on arXiv.
+* **Suitable for publication today:** **Yes.** Valuable update for readers tracking AI interpretability and mechanistics.
+
+---
+
+#### **[18] NYC Comptroller urges Anthropic to pause US IPO**
+* **What is confirmed:** New York City Comptroller Mark Levine sent an official letter to Anthropic CEO Dario Amodei on October 14/15, 2026, urging the company to pause its planned US IPO. Levine cited concerns over AI safety, governance, and the speed of frontier model development.
+* **Important caveats:** The Comptroller oversees NYC public pension funds; the letter represents political and institutional investor advocacy rather than a binding legal injunction.
+* **Suitable for publication today:** **Yes.** Significant governance and financial policy story for frontier AI labs.
+
+---
+
+#### **[19] Reuters Analysis: AI market rout shifts capital into government bonds**
+* **What is confirmed:** Reuters published a financial market analysis detailing how recent volatility and debt/capex concerns surrounding major AI tech stocks led institutional investors to shift capital into government bonds, driving down 10-year US Treasury yields.
+* **Important caveats:** Analysis piece reflecting short-term market rotations rather than a corporate event or policy ruling.
+* **Suitable for publication today:** **Yes.** Useful macro context regarding AI capital expenditure and public market sentiment.
+
+---
+
+### Excluded / Weak Candidates
+
+* **[2] How the Claude Code team does code review:** Marked **OUT OF SCOPE** in candidate metadata.
+* **[9] I love software rendering:** Niche retro-computing personal essay; weak daily news signal.
+* **[12] JPEG XL vs. AVIF for web use-cases:** Marked **OUT OF SCOPE** in candidate metadata.
+* **[17] European shares hit two-week high:** Marked **OUT OF SCOPE** in candidate metadata.

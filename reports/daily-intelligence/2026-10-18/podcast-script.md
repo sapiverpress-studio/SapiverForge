@@ -1,27 +1,23 @@
-# OpenCode's Console breach: Who needs to act?
+# The Power Cut: Why Microsoft Just Walked Away from Essex
 
-OpenCode has disclosed a security incident involving a small, specific group of Console accounts. Here is what is confirmed, what remains uncertain, and how to respond without unnecessary alarm.
+Microsoft has cancelled its plans for a major AI data centre in Loughton, Essex, after learning the site won't have enough electricity until the 2030s. We look at what this means for the UK's AI ambitions.
 
-## What OpenCode says happened
+## The Reality of the Grid
 
-On 17 October, OpenCode said a breach connected to what it called a large-scale distillation attack had affected 1.4 per cent of OpenCode Console users. That figure refers to the hosted Console service, not all developers using the OpenCode coding tool. According to the company, only Console accounts connected to external AI providers were involved. It said it emailed everyone in the affected group and was working with Anthropic, OpenAI and Google on remediation.
+The plan was for Nscale to host a massive cluster of 23,000 Nvidia AI chips. For Microsoft, this was meant to be a significant piece of infrastructure. But the project has been plagued by delays, and the final nail in the coffin was the news from the local grid operator. Waiting until the next decade for the necessary power capacity is, apparently, not an option for Microsoft’s current scaling timelines. It is a stark reminder that the digital future is entirely tethered to the physical reality of our local power distribution.
 
-The company's public statement did not specify the number of exposed keys or describe the access obtained by the attackers in detail. Some people sharing what they say are notification emails report that stored provider keys may have been exposed. Those reports are a reason for affected users to act, but they should not be mistaken for a published forensic account.
+## Why This Matters
 
-## Why linked API keys matter
+This isn't just a story about a cancelled construction project; it is a signal of the physical limits of the AI boom. We are seeing a collision between the hyper-speed requirements of high-density GPU clusters and the slow, deliberate pace of national grid infrastructure. When a company with the resources of Microsoft decides that a site is no longer viable, it tells us that the bottleneck for AI isn't just software or talent—it is the sheer, brute-force demand for electricity that our current grid is struggling to accommodate.
 
-API keys can authorise requests to paid model services. If an attacker obtains a working key, they may be able to make requests that consume the key owner's credits or generate charges. That does not mean every OpenCode user is affected, or that an attacker gained access to every linked account's private data. The limits of the incident are still being investigated.
+## The Uncertain Bits
 
-This is also a useful distinction between a tool running locally and credentials held in a hosted Console. Two products may share a name without sharing the same exposure.
+While the headline is clear, the ripple effects are less so. We don't know exactly how this will impact Nscale’s broader plans for the site, or whether Microsoft will simply pivot to another location in the UK or look elsewhere entirely. The situation highlights a broader uncertainty: how many other major tech projects are currently sitting in a queue, waiting for a grid upgrade that might be years away? It’s a quiet crisis of capacity that doesn't make for a flashy press release.
 
-## Who should do what?
+## A Practical Takeaway
 
-If you received the breach notice, open each affected model provider's dashboard directly. Revoke and replace the linked API key, check recent usage and billing, and follow any incident instructions from that provider. Save evidence of suspicious charges and contact provider support if you find them. Changing the key inside a tool without revoking the old one at its issuer is not sufficient.
+If you are involved in any industry that relies on high-performance computing or large-scale digital infrastructure, take this as a lesson in geography. The 'cloud' is actually a series of very heavy, very power-hungry buildings. Before you bank on a specific location for your own digital scaling, check the local power capacity first. It seems that in 2026, the most important piece of tech infrastructure isn't a GPU—it's a transformer.
 
-If you did not receive a notice, OpenCode says you were not in the affected group. You can still check which services hold credentials, apply restricted permissions and spending alerts, and use separate keys for separate tools. Avoid sharing long-lived, high-privilege keys when a narrower integration would work.
+## What to Watch Next
 
-## What to watch next
-
-The company has described the incident as ongoing. Further statements may clarify which data was actually accessed and whether provider-side remediation has invalidated affected credentials. Until those details are public, careful, targeted action is more useful than headlines suggesting that all API keys are compromised.
-
-The bigger lesson is not that developer tools should never store credentials. It is that credentials should be scoped, revocable and monitored, and that a clear incident-response process matters when an integration fails.
+Keep an eye on how the government and grid operators respond to this kind of friction. We are likely to see more pressure on the planning system to fast-track energy infrastructure for 'strategic' tech projects. The question is whether the grid can actually be upgraded quickly enough to keep up with the demands of the tech sector, or if we are going to see more of these high-profile walkaways as the reality of our power limits sets in.

@@ -1,8 +1,5 @@
-# Sources for OpenCode's Console breach: Who needs to act?
+# Sources for The Power Cut: Why Microsoft Just Walked Away from Essex
 
-- [OpenCode statement independently transcribed (17 October 2026)](https://artificialwatch.com/wire/opencode-console-breach-distillation-attack)
-- [Timeline distinguishing confirmed scope from reported key exposure](https://hackerlogs.pages.dev/blog/opencode-console-key-clock/)
-- The reported 1.4% covers Console accounts, not every OpenCode user.
-- Full credential exposure details have not yet been published by OpenCode.
+- [James Titcomb/Telegraph: Microsoft cancels its deal with Nscale to serve as the anchor tenant and rent 23K Nvidia AI chips at a planned data center facing repeated delays in Essex, UK (James Titcomb/Telegraph)](https://www.telegraph.co.uk/business/2026/10/18/microsoft-axes-ai-deal-setback-uk-data-centre-pioneer/)
 - Daily Brief date: 2026-10-18
-- Editorial correction made following original publication.
+- Confidence: 0.95

@@ -1,5 +1,8 @@
-# Sources for The OpenCode Breach: When Convenience Becomes a Liability
+# Sources for OpenCode's Console breach: Who needs to act?
 
-- [Walter Schulze/Startup Fortune: Anomaly Innovations, behind coding agent OpenCode, says a breach hit ~1.4% of OpenCode Console users and their API keys, in a "large scale distillation attack" (Walter Schulze/Startup Fortune)](https://startupfortune.com/opencode-breach-exposes-stored-openai-and-anthropic-keys-prompts-urgent-key-rotation/)
+- [OpenCode statement independently transcribed (17 October 2026)](https://artificialwatch.com/wire/opencode-console-breach-distillation-attack)
+- [Timeline distinguishing confirmed scope from reported key exposure](https://hackerlogs.pages.dev/blog/opencode-console-key-clock/)
+- The reported 1.4% covers Console accounts, not every OpenCode user.
+- Full credential exposure details have not yet been published by OpenCode.
 - Daily Brief date: 2026-10-18
-- Confidence: 0.95
+- Editorial correction made following original publication.

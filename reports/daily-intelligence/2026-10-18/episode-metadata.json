@@ -1,7 +1,7 @@
 {
   "episode": {
-    "episode_title": "The OpenCode Breach: When Convenience Becomes a Liability",
-    "episode_description": "Anomaly Innovations reports a security breach affecting OpenCode Console users. We look at the risks of storing API keys in developer tools and what this means for your workflows.",
+    "episode_title": "OpenCode's Console breach: Who needs to act?",
+    "episode_description": "OpenCode reports a breach affecting 1.4% of its Console users. We distinguish confirmed facts from key-exposure reports and explain targeted next steps.",
     "date": "2026-10-18",
     "published_at": "2026-10-18T07:00:00+01:00",
     "estimated_duration_minutes": 5,
@@ -11,18 +11,19 @@
   "date": "2026-10-18",
   "slug": "2026-10-18-daily-intelligence",
   "selected_story": {
-    "headline": "OpenCode breach exposes user API keys",
-    "source": "Walter Schulze/Startup Fortune",
-    "source_title": "Anomaly Innovations, behind coding agent OpenCode, says a breach hit ~1.4% of OpenCode Console users and their API keys, in a \"large scale distillation attack\" (Walter Schulze/Startup Fortune)",
-    "source_url": "https://startupfortune.com/opencode-breach-exposes-stored-openai-and-anthropic-keys-prompts-urgent-key-rotation/",
-    "confidence": 0.95
+    "headline": "OpenCode reports breach affecting some Console users",
+    "source": "OpenCode statement (via Techmeme and independent reporting)",
+    "source_title": "OpenCode reported a breach involving 1.4% of Console users linked to external providers; the incident remained under investigation",
+    "source_url": "https://artificialwatch.com/wire/opencode-console-breach-distillation-attack",
+    "confidence": 0.9
   },
   "short": {
-    "title": "OpenCode breach exposes user API keys",
-    "description": "This incident serves as a stark reminder that storing third-party API keys in developer tools creates a single point of failure, potentially allowing attackers to hijack expensive or sensitive AI agent workflows.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "script": "OpenCode breach exposes user API keys. Anomaly Innovations reported a security breach affecting 1.4% of OpenCode Console users, resulting in the exposure of stored OpenAI, Anthropic, and Google API keys. Read the Sapiver Forge Daily Brief."
+    "title": "OpenCode Console breach: what is confirmed?",
+    "description": "OpenCode reports that 1.4% of Console users were affected. Here is what is known, what is not, and targeted steps for notified users. Read Sapiver Forge: https://suite.sapiverpress.co.uk/daily-brief/",
+    "script": "OpenCode reports a breach affecting 1.4 per cent of its Console users, specifically accounts linked to external model providers. It says affected users were emailed. If you received that notice, revoke linked API keys and check provider usage. Read the Sapiver Forge Daily Brief."
   },
-  "word_count": 549,
+  "word_count": 461,
   "human_approval_required": true,
-  "approved_for_automatic_publication": false
+  "approved_for_automatic_publication": false,
+  "media_regeneration_required_after_correction": true
 }

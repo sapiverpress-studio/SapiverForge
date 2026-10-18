@@ -1,0 +1,109 @@
+name: Prepare corrected 18 October email (DRAFT ONLY)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'news-intelligence/2026-10-18/editorial-revision.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prepare-corrected-2026-10-18-email
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Verify revised editorial content and email script
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check src/send-daily-newsletter-brevo.mjs
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const base = 'news-intelligence/2026-10-18/';
+          const manifest = JSON.parse(fs.readFileSync(base+'manifest.json','utf8'));
+          const metadata = JSON.parse(fs.readFileSync(base+'newsletter-metadata.json','utf8'));
+          const html = fs.readFileSync(base+'newsletter.html','utf8');
+          if (manifest.editorial_revision !== '2026-10-18-correction-1') throw Error('Incorrect editorial revision');
+          if (metadata.status !== 'sent' || !metadata.sent_at || metadata.brevo_campaign_id !== 92) throw Error('Expected original sent campaign 92');
+          for(const required of [
+            'That total includes a $30 million retention pool',
+            'If you received an OpenCode Console breach notice',
+            'Anthropic examines safeguards for AI-agent negotiation',
+            'OpenCode reports breach affecting some Console users'
+          ]) if (!html.includes(required)) throw Error('Missing required corrected email text: '+required);
+          for(const forbidden of [
+            '$180M over three years, plus a $30M',
+            'rotate your API keys immediately if you have not done so recently',
+            'resulting in the exposure of stored OpenAI'
+          ]) if(html.includes(forbidden)) throw Error('Uncorrected statement remains: '+forbidden);
+          console.log('Corrected HTML and original-send receipt verified.');
+          NODE
+
+      - name: Refresh dated bridge and podcast integrity hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import { createHash } from 'node:crypto';
+          const src = 'news-intelligence/2026-10-18/';
+          const bridge = 'bridge/news-intelligence/latest/';
+          const files = ['manifest.json','daily-brief.md','newsletter.html','newsletter-metadata.json','social.json','sources.json','human-review.html'];
+          fs.mkdirSync(bridge,{recursive:true});
+          const hashes={};
+          for (const name of files) {
+            const data = fs.readFileSync(src+name);
+            fs.writeFileSync(bridge+name,data);
+            hashes[name]=createHash('sha256').update(data).digest('hex');
+          }
+          fs.writeFileSync(bridge+'file-hashes.json',JSON.stringify(hashes,null,2)+'\n');
+          const dir='reports/daily-intelligence/2026-10-18/';
+          const manifestPath=dir+'candidate-manifest.json';
+          const manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
+          for (const file of Object.keys(manifest.file_hashes || {})){
+            manifest.file_hashes[file]=createHash('sha256').update(fs.readFileSync(path.join(dir,file))).digest('hex');
+          }
+          manifest.editorial_revision='2026-10-18-correction-1';
+          fs.writeFileSync(manifestPath,JSON.stringify(manifest,null,2)+'\n');
+          console.log('Bridge synchronised; podcast integrity hashes refreshed.');
+          NODE
+
+      - name: Create or refresh verified Brevo correction DRAFT
+        env:
+          NEWS_INTELLIGENCE_DATE: '2026-10-18'
+          BREVO_SEND_MODE: draft
+          BREVO_CORRECTION_MODE: 'true'
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+        run: node src/send-daily-newsletter-brevo.mjs
+
+      - name: Commit verified corrected draft receipt and bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "sapiver-forge-intelligence-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add news-intelligence/2026-10-18/newsletter-metadata.json bridge/news-intelligence/latest reports/daily-intelligence/2026-10-18/candidate-manifest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Sync corrected 18 Oct bridge and verified Brevo draft [skip ci]"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          git push origin HEAD:main

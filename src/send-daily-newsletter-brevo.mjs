@@ -31,6 +31,70 @@ if (!fs.existsSync(htmlPath) || !fs.existsSync(metaPath)) throw new Error(`Missi
 const metadata = JSON.parse(fs.readFileSync(metaPath, "utf8"));
 if (metadata.status === "blocked") throw new Error("Newsletter is blocked because the intelligence edition did not meet verification thresholds.");
 if (mode === "send" && !approved) throw new Error("Live newsletter send blocked: NEWSLETTER_APPROVED=true is required from an explicit human release run.");
+
+if (String(process.env.BREVO_CORRECTION_MODE || "false").toLowerCase() === "true") {
+  // A previously sent campaign cannot be edited. A corrected edition gets a separate DRAFT.
+  if (mode !== "draft") throw new Error("Correction mode only prepares a draft. Send it manually from Brevo after review.");
+  if (metadata.status !== "sent" || !metadata.sent_at) throw new Error("Correction mode requires an already-sent original campaign.");
+  const manifest = JSON.parse(fs.readFileSync(path.join(dir, "manifest.json"), "utf8"));
+  if (!manifest.editorial_revision) throw new Error("Correction revision marker is missing.");
+  const html = fs.readFileSync(htmlPath, "utf8");
+  if (!html.includes("That total includes a $30 million retention pool") ||
+      !html.includes("If you received an OpenCode Console breach notice") ||
+      html.includes("$180M over three years, plus a $30M")) {
+    throw new Error("Corrected Brevo HTML failed the editorial content gate; no draft was created.");
+  }
+  const listId = targetListName
+    ? await resolveBrevoListId({ apiKey, fallbackListId, targetListName })
+    : fallbackListId;
+  const subject = "Updated: Sapiver Forge Daily Brief — " + date;
+  const headers = { "api-key": apiKey, "content-type": "application/json", accept: "application/json" };
+  let correctedId = Number(metadata.correction_campaign_id || 0) || null;
+  const payload = {
+    name: "Sapiver Forge Daily Brief " + date + " — corrected edition",
+    subject,
+    sender: { name: senderName, email: senderEmail },
+    htmlContent: html,
+    recipients: { listIds: [listId] }
+  };
+  if (!correctedId) Object.assign(payload, {
+    type: "classic", inlineImageActivation: false, mirrorActive: true,
+    footer: "You received this because you subscribed to Sapiver Forge."
+  });
+  const url = "https://api.brevo.com/v3/emailCampaigns" + (correctedId ? "/" + correctedId : "");
+  const response = await fetch(url, {
+    method: correctedId ? "PUT" : "POST",
+    headers,
+    body: JSON.stringify(payload)
+  });
+  const responseText = await response.text();
+  if (!response.ok) throw new Error("Brevo corrected-draft " + (correctedId ? "update" : "creation") +
+    " failed (" + response.status + "): " + responseText);
+  if (!correctedId) {
+    correctedId = Number(JSON.parse(responseText).id);
+    if (!Number.isInteger(correctedId) || correctedId < 1) throw new Error("Brevo did not provide a new draft id.");
+  }
+  const verify = await fetch("https://api.brevo.com/v3/emailCampaigns/" + correctedId, { headers });
+  const verifyText = await verify.text();
+  if (!verify.ok) throw new Error("Brevo draft readback failed (" + verify.status + "): " + verifyText);
+  const draft = JSON.parse(verifyText);
+  if (draft.status !== "draft" ||
+      !String(draft.htmlContent || "").includes("That total includes a $30 million retention pool") ||
+      !String(draft.htmlContent || "").includes("If you received an OpenCode Console breach notice")) {
+    throw new Error("Brevo draft readback did not confirm corrected content and draft status.");
+  }
+  Object.assign(metadata, {
+    correction_campaign_id: correctedId,
+    correction_campaign_status: "draft_verified",
+    correction_subject: subject,
+    correction_revision: manifest.editorial_revision,
+    correction_campaign_updated_at: new Date().toISOString()
+  });
+  fs.writeFileSync(metaPath, JSON.stringify(metadata, null, 2) + "\n");
+  console.log("Brevo corrected campaign " + correctedId + " verified as DRAFT. Original sent campaign " +
+    metadata.brevo_campaign_id + " preserved. NO EMAIL SENT.");
+  process.exit(0);
+}
 if (metadata.status === "sent") {
   console.log(`Daily Brief ${date} is already marked sent; refusing duplicate delivery.`);
   process.exit(0);
@@ -92,7 +156,32 @@ if (!campaignId) {
 }
 
 if (mode === "draft") {
-  console.log(`Brevo campaign ${campaignId} remains a draft pending human approval.`);
+  // Synchronise actual Brevo draft content with the current repository source.
+  // Previously this path returned early and left existing drafts stale.
+  const updateResponse = await fetch(`https://api.brevo.com/v3/emailCampaigns/${campaignId}`, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify({
+      name: `Sapiver Forge Daily Brief ${date}`,
+      subject: metadata.subject || `Sapiver Forge Daily Brief — ${date}`,
+      sender: { name: senderName, email: senderEmail },
+      htmlContent,
+      recipients: { listIds: [listId] }
+    })
+  });
+  const updateText = await updateResponse.text();
+  if (!updateResponse.ok) throw new Error(`Brevo draft sync failed (${updateResponse.status}): ${updateText}`);
+  const verifyResponse = await fetch(`https://api.brevo.com/v3/emailCampaigns/${campaignId}`, { headers });
+  const verifyText = await verifyResponse.text();
+  if (!verifyResponse.ok) throw new Error(`Brevo draft verification failed (${verifyResponse.status}): ${verifyText}`);
+  const verified = JSON.parse(verifyText);
+  if (verified.status !== "draft" || !verified.htmlContent ||
+      !String(verified.htmlContent).includes("<main")) {
+    throw new Error("Brevo draft verification failed: expected a draft containing the repository newsletter HTML.");
+  }
+  Object.assign(metadata, { campaign_updated_at: new Date().toISOString(), status: "brevo_draft" });
+  fs.writeFileSync(metaPath, JSON.stringify(metadata, null, 2) + "\n");
+  console.log(`Brevo campaign ${campaignId} is an updated, verified draft pending human approval.`);
   process.exit(0);
 }
 

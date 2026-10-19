@@ -1,0 +1,126 @@
+name: Verify 19 October Daily Brief and sync Brevo draft (NO SEND)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'news-intelligence/2026-10-19/editorial-review-ready.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reviewed-2026-10-19-newsletter
+  cancel-in-progress: false
+
+jobs:
+  verify-and-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Verify source edition and scripts
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check src/send-daily-newsletter-brevo.mjs
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const root='news-intelligence/2026-10-19/';
+          const m=JSON.parse(fs.readFileSync(root+'manifest.json','utf8'));
+          const meta=JSON.parse(fs.readFileSync(root+'newsletter-metadata.json','utf8'));
+          const html=fs.readFileSync(root+'newsletter.html','utf8');
+          const md=fs.readFileSync(root+'newsletter.md','utf8');
+          const podcast=fs.readFileSync('reports/daily-intelligence/2026-10-19/COPY_PASTE_INTO_ELEVENLABS.txt','utf8');
+          if(m.editorial_revision!=='2026-10-19-review-1'||!m.newsletter_ready_for_human_approval||m.stories.length!==4) throw Error('Editorial review not ready');
+          if(meta.brevo_campaign_id!==95||meta.status!=='brevo_draft'||meta.sent_at!==null) throw Error('Brevo 95 must remain an unsent draft');
+          if(meta.candidate_id!==m.candidate_id)throw Error('Candidate mismatch');
+          for(const required of ['Intel&#039;s own card has 160GB','partner-built versions may offer up to 480GB','subject to shareholder approval','Fortune could not independently verify','not a free or invisible scratchpad']){
+            // HTML may use &#039; entities; compare decoded presentation text where necessary.
+            const decoded=html.replaceAll('&#039;',String.fromCharCode(39)).replaceAll('&quot;','"').replaceAll('&amp;','&');
+            if(!decoded.includes(required.replaceAll('&#039;',String.fromCharCode(39))))throw Error('Corrected email missing: '+required);
+          }
+          for(const bad of ['caregiving','scratchpad that doesn','Intel has launched','Anthropic Commits 5% Equity','claims an 85% prediction match in its internal backtests']){
+            if(html.includes(bad)||md.includes(bad))throw Error('Uncorrected wording: '+bad);
+          }
+          if(!podcast.includes('one hundred and sixty gigabytes')||!podcast.includes('four hundred and eighty gigabytes')) throw Error('Detailed audio script inaccurate');
+          console.log('Editorial content and unsent Brevo campaign 95 verified.');
+          NODE
+
+      - name: Sync corrected draft to Brevo via API
+        env:
+          NEWS_INTELLIGENCE_DATE: '2026-10-19'
+          BREVO_SEND_MODE: draft
+          NEWSLETTER_APPROVED: 'false'
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+        run: node src/send-daily-newsletter-brevo.mjs
+
+      - name: Read back actual Brevo 95 HTML and verify corrections
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const meta=JSON.parse(fs.readFileSync('news-intelligence/2026-10-19/newsletter-metadata.json','utf8'));
+          const response=await fetch('https://api.brevo.com/v3/emailCampaigns/'+meta.brevo_campaign_id,{headers:{'api-key':process.env.BREVO_API_KEY,accept:'application/json'}});
+          if(!response.ok)throw Error('Brevo GET failed: '+response.status);
+          const remote=await response.json();
+          if(remote.id!==95||remote.status!=='draft')throw Error('Brevo campaign 95 was not a draft');
+          const html=String(remote.htmlContent||'').replaceAll('&#039;',String.fromCharCode(39));
+          const checks=[
+            'Intel\'s own card has 160GB',
+            'partner-built versions may offer up to 480GB',
+            'subject to shareholder approval',
+            'Fortune could not independently verify',
+            'not a free or invisible scratchpad'
+          ];
+          for(const s of checks)if(!html.includes(s))throw Error('Brevo 95 missing corrected phrase: '+s);
+          for(const s of ['caregiving','scratchpad that doesn','Intel has launched'])if(html.includes(s))throw Error('Brevo 95 contains stale text: '+s);
+          Object.assign(meta,{draft_editorial_revision:'2026-10-19-review-1',brevo_content_verified:true,brevo_verified_at:new Date().toISOString()});
+          fs.writeFileSync('news-intelligence/2026-10-19/newsletter-metadata.json',JSON.stringify(meta,null,2)+'\n');
+          console.log('Brevo campaign 95 contents verified; DRAFT remains unsent.');
+          NODE
+
+      - name: Refresh bridge and podcast file hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { createHash } from 'node:crypto';
+          const d='news-intelligence/2026-10-19/';
+          const bridge='bridge/news-intelligence/latest/';
+          const files=['manifest.json','daily-brief.md','newsletter.html','newsletter-metadata.json','social.json','sources.json','human-review.html'];
+          const hash={};
+          fs.mkdirSync(bridge,{recursive:true});
+          for(const name of files){const buf=fs.readFileSync(d+name);fs.writeFileSync(bridge+name,buf);hash[name]=createHash('sha256').update(buf).digest('hex');}
+          fs.writeFileSync(bridge+'file-hashes.json',JSON.stringify(hash,null,2)+'\n');
+          const p='reports/daily-intelligence/2026-10-19/candidate-manifest.json';
+          const manifest=JSON.parse(fs.readFileSync(p,'utf8'));
+          for(const name of Object.keys(manifest.file_hashes||{})){manifest.file_hashes[name]=createHash('sha256').update(fs.readFileSync('reports/daily-intelligence/2026-10-19/'+name)).digest('hex');}
+          manifest.editorial_revision='2026-10-19-review-1';
+          fs.writeFileSync(p,JSON.stringify(manifest,null,2)+'\n');
+          NODE
+
+      - name: Commit Brevo verification and synced source bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name sapiver-forge-intelligence-bot
+          git config user.email actions@users.noreply.github.com
+          git add news-intelligence/2026-10-19/newsletter-metadata.json bridge/news-intelligence/latest reports/daily-intelligence/2026-10-19/candidate-manifest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Verify Brevo 95 draft and sync 19 Oct edition [skip ci]"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          git push origin HEAD:main

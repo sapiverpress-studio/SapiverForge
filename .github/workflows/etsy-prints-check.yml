@@ -63,7 +63,9 @@ jobs:
           test -n "${GH_TOKEN:-}" || { echo 'Missing existing cross-repo GitHub token; hourly Comic fallback will apply.'; exit 1; }
           node --input-type=module <<'NODE'
           import { dispatchComic } from './lib/cross-repo-dispatch.mjs';
-          const { route } = await dispatchComic({kind:'etsy',token:process.env.GH_TOKEN});
+          import { execFileSync } from 'node:child_process';
+          const feed_sha=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
+          const { route } = await dispatchComic({kind:'etsy',inputs:{feed_sha},token:process.env.GH_TOKEN});
           console.log('Etsy product Pin handoff accepted via '+route);
           NODE
           echo "Requested Comic Etsy Pinterest batch for ${{ steps.etsy.outputs.pinterest_new_count }} new active listing(s)."

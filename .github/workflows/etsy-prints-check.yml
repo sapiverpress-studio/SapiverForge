@@ -61,5 +61,9 @@ jobs:
         run: |
           set -euo pipefail
           test -n "${GH_TOKEN:-}" || { echo 'Missing existing cross-repo GitHub token; hourly Comic fallback will apply.'; exit 1; }
-          gh workflow run sapiverprints-pinterest.yml --repo sapiverpress-studio/SapiverPress_comic_public --ref main
+          node --input-type=module <<'NODE'
+          import { dispatchComic } from './lib/cross-repo-dispatch.mjs';
+          const { route } = await dispatchComic({kind:'etsy',token:process.env.GH_TOKEN});
+          console.log('Etsy product Pin handoff accepted via '+route);
+          NODE
           echo "Requested Comic Etsy Pinterest batch for ${{ steps.etsy.outputs.pinterest_new_count }} new active listing(s)."

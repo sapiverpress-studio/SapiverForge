@@ -1,0 +1,34 @@
+name: Verify Comic repository dispatch permission (no social posts)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/check-comic-dispatch-access.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify cross-repo Contents-write using unhandled no-op event
+        env:
+          GH_TOKEN: ${{ secrets.CROSS_REPO_GITHUB_TOKEN }}
+        run: |
+          node --input-type=module <<'NODE'
+          // NO receiving Comic workflow listens for this probe event.
+          // This cannot publish an Etsy Pin, Daily Brief, YouTube video or newsletter.
+          const token=String(process.env.GH_TOKEN||'').trim();
+          if(!token)throw Error('CROSS_REPO_GITHUB_TOKEN missing. Must permit Comic Contents:write.');
+          const response=await fetch('https://api.github.com/repos/sapiverpress-studio/SapiverPress_comic_public/dispatches',{
+            method:'POST',
+            headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'},
+            body:JSON.stringify({event_type:'sapiver_permissions_probe_no_handler_20261020',client_payload:{probe:'permissions-only'}}),
+            signal:AbortSignal.timeout(20000)
+          });
+          if(response.status!==204)throw Error('Comic Contents-scoped dispatch permission check returned HTTP '+response.status+'. Update the existing CROSS_REPO_GITHUB_TOKEN with Contents:write on SapiverPress_comic_public; no posts were attempted.');
+          console.log('Comic Contents-scoped repository_dispatch authorised. No downstream workflow matches probe event and no posts were sent.');
+          NODE

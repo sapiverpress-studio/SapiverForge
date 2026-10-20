@@ -2,7 +2,8 @@ name: SapiverPrints public catalogue refresh
 
 on:
   schedule:
-    # Detect newly active Etsy listings within approximately 30 minutes (Actions may be delayed).
+    # Detect new active Etsy listings within approximately 30 minutes; allow slow GitHub checkout.
+    # Public feed is refreshed every hour to stay well below Comic's 5.5-hour stale-feed cap.
     - cron: '7,37 * * * *'
   workflow_dispatch:
   push:
@@ -20,7 +21,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:

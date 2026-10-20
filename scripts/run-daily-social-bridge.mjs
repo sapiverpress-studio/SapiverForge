@@ -65,6 +65,6 @@ try {
 if (process.env.GITHUB_STEP_SUMMARY) {
   const receipt = fs.existsSync(socialReceipt) ? read(socialReceipt) : {};
   const yt = fs.existsSync(youtubePath) ? read(youtubePath) : {};
-  fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `\nEdition ${date}\n\nFacebook: ${receipt.facebook?.id || 'FAILED'}\n\nPinterest: ${receipt.pinterest?.id || 'FAILED'}\n\nYouTube: ${yt.video_id || yt.id || 'FAILED'}\n`);
+  fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `\nEdition ${date}\n\nFacebook: ${receipt.facebook?.id || 'FAILED'}\n\nPinterest: ${process.env.FORGE_PINTEREST_DISABLED === 'true' ? 'SKIPPED (retired board)' : (receipt.pinterest?.id || 'FAILED')}\n\nYouTube: ${yt.video_id || yt.id || 'FAILED'}\n`);
 }
 if (failed) process.exitCode = 1;

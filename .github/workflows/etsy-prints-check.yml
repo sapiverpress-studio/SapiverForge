@@ -2,7 +2,8 @@ name: SapiverPrints public catalogue refresh
 
 on:
   schedule:
-    # Detect newly active Etsy listings within approximately 30 minutes (Actions may be delayed).
+    # Detect new active Etsy listings within approximately 30 minutes; allow slow GitHub checkout.
+    # Public feed is refreshed every hour to stay well below Comic's 5.5-hour stale-feed cap.
     - cron: '7,37 * * * *'
   workflow_dispatch:
   push:
@@ -20,7 +21,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -60,5 +61,9 @@ jobs:
         run: |
           set -euo pipefail
           test -n "${GH_TOKEN:-}" || { echo 'Missing existing cross-repo GitHub token; hourly Comic fallback will apply.'; exit 1; }
-          gh workflow run sapiverprints-pinterest.yml --repo sapiverpress-studio/SapiverPress_comic_public --ref main
+          node --input-type=module <<'NODE'
+          import { dispatchComic } from './lib/cross-repo-dispatch.mjs';
+          const { route } = await dispatchComic({kind:'etsy',token:process.env.GH_TOKEN});
+          console.log('Etsy product Pin handoff accepted via '+route);
+          NODE
           echo "Requested Comic Etsy Pinterest batch for ${{ steps.etsy.outputs.pinterest_new_count }} new active listing(s)."

@@ -340,11 +340,20 @@ jobs:
         run: |
           set -euo pipefail
           test -n "$GH_TOKEN" || { echo "::error::CROSS_REPO_GITHUB_TOKEN is unavailable."; exit 1; }
-          gh workflow run daily-brief-social-bridge.yml \
-            --repo sapiverpress-studio/SapiverPress_comic_public --ref main \
-            -f edition_date="$NEWS_INTELLIGENCE_DATE" \
-            -f source_sha="$(git rev-parse HEAD)" \
-            -f candidate_id="$NEWS_INTELLIGENCE_CANDIDATE_ID" -f confirm=SEND
+          node --input-type=module <<'NODE'
+          import { execFileSync } from 'node:child_process';
+          import { dispatchComic } from './lib/cross-repo-dispatch.mjs';
+          const { route } = await dispatchComic({
+            kind:'forge', token:process.env.GH_TOKEN,
+            inputs:{
+              edition_date:process.env.NEWS_INTELLIGENCE_DATE,
+              source_sha:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),
+              candidate_id:process.env.NEWS_INTELLIGENCE_CANDIDATE_ID,
+              confirm:'SEND'
+            }
+          });
+          console.log('Approved Sapiver Forge social handoff accepted via '+route);
+          NODE
           echo 'Social handoff accepted. Check the comic repository social workflow for individual posting results.' >> "$GITHUB_STEP_SUMMARY"
 
       - name: Report incomplete media or bridge release

@@ -7,6 +7,10 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
 const social = manifest.social || {};
 const pageUrl = `https://suite.sapiverpress.co.uk/daily-brief/intelligence/${manifest.date}/`;
 const receipt = fs.existsSync(receiptPath) ? JSON.parse(fs.readFileSync(receiptPath, "utf8")) : { date: manifest.date };
+// The old Sapiver Forge/Clearforge Pinterest boards were deliberately removed.
+// The approved Comic bridge sets this flag so daily news cannot target a deleted board
+// or mistakenly use the protected Sapiver Prints product board.
+const forgePinterestDisabled = process.env.FORGE_PINTEREST_DISABLED === 'true';
 
 function first(...values) { return values.map((value) => String(value || "").trim()).find(Boolean) || ""; }
 
@@ -109,6 +113,14 @@ async function postPinterest() {
 
 // Save each channel immediately and retain IDs when another channel fails.
 for (const [channel, post] of [["facebook", postFacebook], ["pinterest", postPinterest]]) {
+  if (channel === "pinterest" && forgePinterestDisabled) {
+    receipt.pinterest_disabled = true;
+    delete receipt.pinterest_error;
+    receipt.updated_at = new Date().toISOString();
+    fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2) + "\n");
+    console.log("Daily Brief Pinterest intentionally disabled; the owner deleted its board. Sapiver Prints product/video Pins are separate.");
+    continue;
+  }
   try {
     receipt[channel] = await post();
     delete receipt[`${channel}_error`];
@@ -119,4 +131,4 @@ for (const [channel, post] of [["facebook", postFacebook], ["pinterest", postPin
   fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2) + "\n");
 }
 console.log(JSON.stringify(receipt, null, 2));
-if (!receipt.facebook?.id || !receipt.pinterest?.id) process.exitCode = 1;
+if (!receipt.facebook?.id || (!forgePinterestDisabled && !receipt.pinterest?.id)) process.exitCode = 1;

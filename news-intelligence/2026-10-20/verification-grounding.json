@@ -1,0 +1,562 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Blackwall%22+Series+C+100M+valuation+TechCrunch+2026&client=app-vertex-grounding&safesearch=active\">&quot;Blackwall&quot; Series C 100M valuation TechCrunch 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22TorchNeuron%22+PyTorch+Amazon+custom+AI+chips+reuters+2026&client=app-vertex-grounding&safesearch=active\">&quot;TorchNeuron&quot; PyTorch Amazon custom AI chips reuters 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22UK+CMA%22+Apple+contactless+payments+October+20+2026+reuters&client=app-vertex-grounding&safesearch=active\">&quot;UK CMA&quot; Apple contactless payments October 20 2026 reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Google+Cloud%22+Revolut+outage+London+October+20+2026+bloomberg&client=app-vertex-grounding&safesearch=active\">&quot;Google Cloud&quot; Revolut outage London October 20 2026 bloomberg</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22ByteDance%22+%22Alibaba%22+%22Tencent%22+%22RTX+PRO+5500%22+Nvidia+reuters+2026&client=app-vertex-grounding&safesearch=active\">&quot;ByteDance&quot; &quot;Alibaba&quot; &quot;Tencent&quot; &quot;RTX PRO 5500&quot; Nvidia reuters 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22WhatsApp%22+%22help+pages%22+%22don%27t+recommend+a+regulator%22+redact.dev+2026&client=app-vertex-grounding&safesearch=active\">&quot;WhatsApp&quot; &quot;help pages&quot; &quot;don&#39;t recommend a regulator&quot; redact.dev 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Anthropic%22+%22leaked%22+%22FRONTIER+Act%22+Transformer+2026&client=app-vertex-grounding&safesearch=active\">&quot;Anthropic&quot; &quot;leaked&quot; &quot;FRONTIER Act&quot; Transformer 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Amazon%22+Germany+16+billion+2027+bloomberg+October+20+2026&client=app-vertex-grounding&safesearch=active\">&quot;Amazon&quot; Germany 16 billion 2027 bloomberg October 20 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Albert+Heijn%22+cyber+incident+online+deliveries+October+19+2026+reuters&client=app-vertex-grounding&safesearch=active\">&quot;Albert Heijn&quot; cyber incident online deliveries October 19 2026 reuters</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Pew+Research+%221+in+5+Americans+regularly+get+news+on+TikTok%22+2026&client=app-vertex-grounding&safesearch=active\">Pew Research &quot;1 in 5 Americans regularly get news on TikTok&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Subaru+software-defined+vehicle+2020s+late+reuters+2026&client=app-vertex-grounding&safesearch=active\">Subaru software-defined vehicle 2020s late reuters 2026</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhroOy2S0sOZxwG414_g5Ho-E7wtYvrAi5DIW6woCSHUSs4iyNht5iHzAFzDU4HgdD_zXnihQ5MAj2a1tTgTRGiv33iz-HB3A46WtR-f3_NEh_17Jbf_N7eFX31pQQoVyV1Mx3A7vUiF4HzDOuPIsr03eZ8ha5NXJz3OExZ-7D1A==",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgmRtcoyeZcLF9bhw8AsS5Nhes9qxdeCcj1gdgsgu_AO2j1V2haiRM75yjukdK1zoat4-3ZCWtHJVudtHz9oH_iIaAf0Y8VbVlXzKrMdd_lrvgxmxoKSHd-jt4GhzF_5VWHOQH4WMZI1lyIaK7ssYfBFadbJReFc27_lbAZ_RvDGBKRhd87Kro4RthJ-tKhAk_29tL0eHZ4vdAv2sv25vs6TlS7EsKrN7kKILxYQDIo01UjL1V",
+        "title": "theguardian.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_s1rKWS-rz7eqqy1duMQMBlSj_Za7u2QyrrF8gbXWXWqNfWyn4psXw2G8UKQ7NCZHWaF_vdtwT8TPL7wdT1vl9aMYAOJzabSq6-pqr6ROwxZTtj6FWanvxGt2ZnaxHPAN_Ov3qfnk-Zutu0wnWkXqFAd5tZWcXfOymkdZOENaCYlaAODLCqsjO0LW22e0e7w=",
+        "title": "businessinsider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZaFU-jjgOQl6nFPvvVilAiPyLnjnu9V4Fw8F2thgaoappiA17vrP5N9soPMAHD1yVoDv6k_KSkx8u51BWbRK8Ih0mSqg2A5NE9h8HbOd0zo6YHRwhmbW7Yj1TAuY=",
+        "title": "theedgemalaysia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoWE9Q9xh6A9t3F7lmzn9t6qrdQflvLy4wfd9fUFGkZpVBcrEPSNZ0W8PO_1NBbiIN4CxgInS9SCY17SVQ0F7nEBBAl6B3BiMGnjcjsNUBRedPGURElK_h71mSlgd8dkfzpKq1GPat5e3VuUgcmbKScESZFwCFRRItubAXg5REUr-FAwk4lLGW5UW3RkTEkSpSTzWT9BerhhT4y2OfUsy8NIjL__SN3pikczKya_HxUhbjOYsIgZuIRhqPSWRWf-ja7838yhdFUQmjYv8O28-wv4uMtF0Se2w=",
+        "title": "streetinsider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBgMgWY9r63IrYVwpcU1o2ucYgHXI9tm96xR23xyNIiPZrPk7eIcDMZOl9tE2WmxF_ieDGb3XrwLtK9NhFwgzhtD4f3iq9X4xGfGc-rDRndT_SiQZ8Rya_t4effbqx4Kj5n-k8uQFEICElVD0--6MAKHjcoRrNqJNfvCF6irazkvGgjuaarP0wNMijTRevEXsYsgHPK88tfEmKiPS0PWeoThggGcN-EWE19zO1RkK472I_5G2hLrrZzMKxSWdqj3dzoA75eE1zFnYCJjghR1eAmjIkmzoMmjCs",
+        "title": "tradingview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHH5QIHkaX5x73H93Aol9FhE4-nFYq-YQ9JNQ1ZvAtrclhh5OoxAAosF3EqMkmeQBCCvUQqLt0NCURYXP5fx3U_D-VqrTBcqal9iDPJMjY2bg4Plmj1O4s60nKfXjLCddV89itw1b6y0GSjxLiYhklFuZQ09uALD6UTt5E52O2h3CT3H6kptXcG-VDMUT8xnOBwIDHz8Yitd3zoxnyKg4dcJChTtXZsIIaeCKDufOv_hWgNU597",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBE09AxyMrHF7XN8I5zqC_4CDuZKNUI-ymMhr_drgjQqQfhhQOMAY6vtg2YAWhYiLHwD64mfB3SUXin2cAjHOKv2zzlS_MfA2i7_9OMGEJXGGlgY2tb8zJQH_w5jeu5pNhLcfK4ZjyWfSZCEFQJIrrAIiM1bMFZisvnDZBdGt6FcdYSf0__5gR7VNXNynI2jv0tyv737Uvc0qaiLyMVCNeRLiD37VCDE_JlzUrpMQdvve5BvY=",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEASqLWvuIgNib2AP06TE-9lT9kgGsOyzv3JUScVRKo-KKkGGS71zajP9x0Cggk0OnyFjXcTMTOQ4CVNgqbZggfXKrkGTRjTkrobK-Jjh0i7G6ebQSqo7fuY5Q53lsUDm2IqQmXCGNchvjUAZ4n2vojFjNlM5vM_lxJ9v5rKrouraUaCp4C7iiEtP88QBYlvwejSuUoMVH-ZZL68ONBR-m26_KNvkX5niNKkMc_LfVJuQvtqg8=",
+        "title": "invezz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZ6O4NtLiExPP4842Bi4JnXuBMEw7x7No6xc59520IZlmW8qUFA5ZjHkZwmJBJGVaqdsoEkNE1e_4FKrxdn4jUrvh1HpCAsfQwQGyPiuDWFZDDuRev9cQMUBrEMe-TwkZx8MgJdZEONZxT0BDRpHTCi3R94R_7SP1mVnxJzLPg6ToE1k0yGYTjpYfnnhKUaRaJ5A-Err_LfEy2QzHA25b47OPMH_Ry7LGO6g==",
+        "title": "benzinga.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrhRCTD4MfJvtmVNfivaesr-i9GpQ5SGiuZmQzEkyv4WNgL5vpzOnDo0XFG3wbvbHTtVh-uQ3eLGZBE5wIFK28-DE6MyhsA2fnX1-9W6oJ_8STekNcQYa9J6dUD31_cUXz_olnDVfZv-VrMAiG1ZubX1MvNkRlraHN00vkjvcJuCM94g==",
+        "title": "daringfireball.net"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESOXw21ymUl5SDOhi3LmDa_bQJBLKIApCzyajaOTWJDceMAzXKi5QukY7zrXqBeuQGvRgcfm5Lftp_oGU5Ofx-2ZJHn1yVfZjbmB5MIWucay1f7IPPRJwkSQ46av4nXgUjaCNlsmcSvpOnbTN1yh-x_YyViL6zWaWvRdP-KTbj8mmTjIkvxOa_zZ6FbWg3tiQvW86uQvo_H99Euhjq",
+        "title": "gadgets360.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWuo9JIGAN8pM9NzPQYLSIjJ-YZOW-CBavVtpQND_1sSnMy8lC4ElzJofWvKSL-YjVWjg3UGC2BQr2_xjzPTUGsiYIMtphqrlxuoAkOlzzM2BtUHW7_D4JwFy_n_Hq7A==",
+        "title": "theedgemarkets.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBvYWKYfd4D0_4wEcV3Y6WrIIUgIvQjnS7iN6br41k0G3xEF2JC3v-zwx3EH08lBi059AeD3iULZHf-iv5jVmquc6TRvy6JrJWW2yt662miN8_LPQX9By8e069jjZ0nfBYEaYM8NYvB_TWG4oH9jnb4CyGYfDTR98x-rjOcyML4oJTRkSjV9Y8EVOZMhN9fYOoGRX9VbH3rFjWCYpCUappJZXGiN4blZiAT5F9",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHz-Fku91iGQMCuTacolt6vxl54DUEFCiTZbUCz-JtdhEgzBkxSBukur_s8xfr7Mp7ngMIRepoRRV2WUbmAplKrbPSsLG9wkVWo2f0lw-JsDXLhjSq-IJ_f8mI5a3PotPofg98lxUuIkDSXLEVZ2VPa-lIo1lvrKV5j9A==",
+        "title": "ai-tldr.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGc_HbkprlruhVQ5qOKKIPbcnRGf2sh8UOzh-8GONhsmyvnxG2IuiRQC6mJiILPFeDX6K7aI9ftsv_pw0nzgR4S3e3oKYtYbDrjZB0EVRcjUvBokwZuUSr_Rsma0jjMwuU2dXpcPgU0hXGrH7GfIficZNqI2KukA==",
+        "title": "redact.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgDFUFwniSk488y86eEc_kCyJI6kyqdVw1ezu2h5yG0JGNceZPr3xPhd8vZWsYxQzroaNiNTdJuNVZEQHiZMpfAFqzdVjY9p5LwxljykQ7A6o_duITzefqw8WSuRB_eFh6rw==",
+        "title": "ycombinator.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEaoIhvGzpuCvEI-_lhj0N8lSwGSXT-yi0uD4lqSY9gR5yyJuVJqFBzabT5-AyzHbmU69-90-KqROfNQeUxUxUGfSwJRY0_r4IztohF28_Bphal92kwTNcy4YahIak0QdO_GCdRozjLw4yVC42T2BmDK3B2cQxuh29rSRZwNNJq6f2SshB_jgDhE72rOoorow==",
+        "title": "transformernews.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH612aWttIxpa9PX27idJ2AgogDeeIZjee9IU4P_IkXLj1IWYJ56T0XtU8R4KRbE6-L_liso21yta1Q96K2OxVkxBcKhCXTjFcDbMgXGl4vHhdlt5J3UslT",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvnE3Ljqh5sNQaKCnsIHcblU_bBqKAAoI8Zh4ehh6APiN2aG0kJL4AepguUJEDtb5AjeGHQIH02SfwpCsZzhydwwkKqrteXPccv44SOCJKxaYl4CqACRGOopXpuxm6OmEEhw==",
+        "title": "synapsenegar.ir"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWGU0yiIErLSiQBSIYafmJbsk2JojF66D3Zfhb1guXl4C0vdIiyoO44ZJpLvYFfZE_PicnlNltS_JPq59ifzoFqtPmdN1FmgBuSxv13WZj9E1YFvRy3oMhBKn1Edk2YOIR0KaWQL2cchBpphZvPDRuHPMBJihRrI9FWauRn3ylZRX_Q-LlDkD0jSL_uw9tikkwix0XqA==",
+        "title": "aboutamazon.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLFp51AQ4_F_yyWLywcqRY0dpe0B1dCv1NQCCAgc5sULjmbWRIO7v4RLz5u5maNRvaKmGHFpN_JyUE_q-cRxA27J3vh6K9QO18mkmBk8fJ6pT3KSJT5NV-GIADwe9RBHxFjvc7a8dyLHT9O5IOJQ8vpBwbej1Unpxxr8iYD_DXEJaWMXm74jx7rwgB-vQN4UJTwdtTleIny6B39kkPxQ0O5cRu_UBIegkMEb7UWBDD6aKdQJ9Lyafx_I6C",
+        "title": "business-standard.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWs8TuFt92LHEfYurQJDBz6kxgY1go5SWaMjCPy2nfLcTR6gUkOqAHgJTyyaemTXxITKr6RygPUWtoJMlD3ENE24cjD9680tC3lSU9J4OMNoyyxkQyBbIyENque0YvWQNWx4auccTd8_zSu3FPxoPfj-fzL7huT3y7O-WIOs6oo8b7MMcd-66phIsC6-ZQFmYmpmc7HL-YAYmhGNV8G4tNdxfiMQ==",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBaNXPcwaOjR2NqFFA9-H1hAiQrVY1qmEuCPkabZC0X6j2szu5YsmS-GTE6aTrn0eK6rDqCwgl-iR0kBYPkkpbdEtznOq6SnBK3V6OGIFwauA5eAMeJ7HXYe9oL2RI5TVOfwg18w87s80YI1MZUlD5W8gINykAIWH77Xq6BphT5oni",
+        "title": "atlabyte.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1cD52zU_JjWCw0yC4xtEabJ6yalr0qe7iTQXVGLSiRbBj1zkLkrcovyM9RfUNXIF0PH1V7ig495luWwTQiuNYB3c8g4qQC-1Mok9pi9QYpYz2L9fxD41KVmhBQvn5j-YxwydtgSeVZpvfWcOOI9iOflziHQiBA9EcVToj46BdKXIwbk3GKESmajNi",
+        "title": "vectorheadlines.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsI_t88Ngv81eS_XUf4iVRWi8elGgtvk2Vg2-0RUKtXnbdPGWeXcaTCcuba4XrVW1DHlJ8fC0skiCAFSfxxEu5I1mzAeyPVAPCAJfiijdi-Ho3_vZxbd8ev2JmNhaKs23OgvE0s0W0Xc3TlBHDKjYgHXkl9i7FID9W9Lqc8ACrRlP1cM1K3IbUAJ5IfvsLmjutCfuUd_w=",
+        "title": "pewresearch.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLEYmEhwPnrNtPao0I0nLMwNUYTKnndrpeiPWYObXVU0oOT5YTBkdBpCva1zSQjJcFO3IQDKLedqcf_LwKuWZMmZhjl2f3X8T6FzizKDr5pP8UTOq-_lBVauJMh8dU",
+        "title": "pewresearch.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGH2x9LaTeYHZtWFojeCGyqWn5yj4fkkmZs_loeT_U5rvWLdHHgY2GtU9sXRHVERVBHBv7JOI4sTUueZqbP-U-DIed5FxYEL2_7_hZzxuQfcZ32g1dK797aQmJpQhKgSw9DyUtMRtKp4k5Izd-VOrDjVxg0EAmCSC6x3XklWs4_ieg9CMfGlZ_z83HMlaa4ccN5N6oneTQfiBtX0kc0tOuTv1EJsnJxiCi2dP88PdY=",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7s3evLj1mFj1wiLEkM2VoflDdAgE5HfOxzu7eqaAmMhA-r7KfoVRjFMm6ecvdCIh2V3Lf7HX_0OE-ZHiM_YnUHPeeF4dlSj8hA1oNMf58Qr-FI_37X9XmTz_LvyQQzjb9v-DaYyQolkadKU8tZAOnB9m9le75xOfKq6yvUcdFL9DHRcMXGKO6Vjjtwv2FRWBRD-6v90f0Bzh1TB4OAkaJ8Qusb7PA7RE=",
+        "title": "thestar.com.my"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNLQGVWkArxyRSFO6O-9dy4He8QJa-2spUbkGsz_cZNEC08XUqYVsrQHdm3Sc0DzlOSyY1QFBcT_VllIbeszJ9ElKeApVAJslXuRLH0d2KC4vRultZEcxYgFTSBa8=",
+        "title": "brecorder.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3Gg7lhxO-c_NlqlzlTRJPPaS9E6JjYC-e7pPvboesF4CJj4_J2fDJFl5LIBtQhqdKuR4hs3sKbEHjQIXlT8Kp9m977oJa5WySeLpgeAkIbzlT5WoczjJ1-7V-dQEFWJIkUpJY7vCJKxoghU3xmQRqqwcfqUx8kaYV6niV2DLHVCIPGUk0DAh3ixb-Jc1O",
+        "title": "autotech.news"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 576,
+        "endIndex": 769,
+        "text": "**What is Confirmed:** Early on Tuesday, October 20, 2026, Google Cloud experienced elevated error rates and network failures across its `europe-west2` (London) region starting around 06:08 GMT"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 771,
+        "endIndex": 992,
+        "text": "The disruption caused widespread service outages for UK digital bank Revolut (impacting card payments, transfers, and app access), budgeting app Emma, and online services for traditional banks including Halifax and Lloyds"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 994,
+        "endIndex": 1091,
+        "text": "Revolut confirmed customer funds and data remain safe while engineering teams work on restoration"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1095,
+        "endIndex": 1224,
+        "text": "**Important Caveats:** Google Cloud's status dashboard noted multiple affected services (Compute Engine, Cloud Storage, BigQuery)"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1095,
+        "endIndex": 1277,
+        "text": "**Important Caveats:** Google Cloud's status dashboard noted multiple affected services (Compute Engine, Cloud Storage, BigQuery), but Google has not publicly detailed the root cause"
+      },
+      "groundingChunkIndices": [
+        0,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1592,
+        "endIndex": 1785,
+        "text": "**What is Confirmed:** ByteDance, Alibaba, and Tencent have placed combined orders for over 3 million units of Nvidia’s RTX PRO 5500 GPUs, carrying a total sticker price exceeding $35 billion"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1787,
+        "endIndex": 1906,
+        "text": "The RTX PRO 5500 is a workstation GPU that complies with current US export regulations on high-end data center AI chips"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1910,
+        "endIndex": 2108,
+        "text": "**Important Caveats:** Nvidia informed customers that global production capacity for the RTX PRO 5500 in 2027 is capped at ~3 million units, while total Chinese orders have surpassed 6 million units"
+      },
+      "groundingChunkIndices": [
+        6,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2110,
+        "endIndex": 2171,
+        "text": "Customers may receive only 5% to 10% of requested allocations"
+      },
+      "groundingChunkIndices": [
+        6,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2173,
+        "endIndex": 2224,
+        "text": "Commercial shipments are not expected until Q1 2027"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2796,
+        "endIndex": 2878,
+        "text": "The proposal also addresses steering restrictions for off-platform payment options"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3068,
+        "endIndex": 3163,
+        "text": "Apple continues to oppose mandatory third-party NFC opening, citing security and fraud concerns"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3398,
+        "endIndex": 3571,
+        "text": "**What is Confirmed:** Amazon announced at the *Invest in Germany* summit in Berlin on October 20, 2026, plans to invest over €16 billion (~$18 billion) in Germany in 2027"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3573,
+        "endIndex": 3838,
+        "text": "Key allocations include €4.8 billion to expand AWS cloud and AI data center infrastructure in Frankfurt, funding for the Amazon Leo satellite broadband program, a new Berlin robotics and AI research lab, and logistics infrastructure expected to create 3,000+ jobs"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3842,
+        "endIndex": 3937,
+        "text": "**Important Caveats:** This represents a forward-looking capital deployment commitment for 2027"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3939,
+        "endIndex": 4012,
+        "text": "It builds upon a previously announced €10 billion package from mid-2024"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4234,
+        "endIndex": 4401,
+        "text": "**What is Confirmed:** Security research published by Redact revealed 102 hidden code blocks across 80 WhatsApp help pages (tagged under `HelpContentGalaxyLLMInclude`)"
+      },
+      "groundingChunkIndices": [
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4403,
+        "endIndex": 4628,
+        "text": "Invisible to human visitors, the text contained system prompts instructing Meta's support AI not to recommend data protection authorities/regulators or cite privacy frameworks (such as GDPR or CCPA) when legal inquiries arose"
+      },
+      "groundingChunkIndices": [
+        15,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4630,
+        "endIndex": 4836,
+        "text": "Meta acknowledged the code was intended for support chatbots to prevent giving unauthorized legal advice and claimed the text was exposed on web pages due to a rendering bug, which was patched by October 18"
+      },
+      "groundingChunkIndices": [
+        16,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4840,
+        "endIndex": 5027,
+        "text": "**Important Caveats:** Meta maintains that the visibility of the raw system prompts was an unintentional technical glitch rather than a deliberate attempt to deceive web visitors directly"
+      },
+      "groundingChunkIndices": [
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5301,
+        "endIndex": 5424,
+        "text": "**What is Confirmed:** A draft federal AI bill circulated to US lawmakers by Anthropic was leaked and published by Politico"
+      },
+      "groundingChunkIndices": [
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5426,
+        "endIndex": 5584,
+        "text": "The draft has drawn criticism from AI safety researchers and policy advocates for proposing standards weaker than the bipartisan Trahan-Obernolte FRONTIER Act"
+      },
+      "groundingChunkIndices": [
+        17,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5586,
+        "endIndex": 5743,
+        "text": "Key points of contention include omitting mandatory licensing for third-party evaluators and restricting judicial avenues to halt dangerous model deployments"
+      },
+      "groundingChunkIndices": [
+        17,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5747,
+        "endIndex": 5886,
+        "text": "**Important Caveats:** The document is an early discussion draft being circulated to lawmakers, not a formally introduced or sponsored bill"
+      },
+      "groundingChunkIndices": [
+        17,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6134,
+        "endIndex": 6393,
+        "text": "**What is Confirmed:** Amazon's Annapurna Labs announced TorchNeuron, a free, open-source software tool designed to allow developers to run native PyTorch code directly on AWS Trainium AI processors with minimal configuration changes and without code rewrites"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6395,
+        "endIndex": 6498,
+        "text": "The release is timed around the PyTorch Conference and released under an Apache 2.0 open-source license"
+      },
+      "groundingChunkIndices": [
+        20,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6502,
+        "endIndex": 6716,
+        "text": "**Important Caveats:** While aiming to lower barriers for switching away from Nvidia’s CUDA ecosystem, early versions skip a subset of PyTorch integration test cases and lack full support for dynamic input shapes"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7020,
+        "endIndex": 7198,
+        "text": "**What is Confirmed:** Tallinn-based web security company Blackwall (formerly BotGuard) raised a $100 million Series C round led by AVP, quadrupling its valuation to $2.2 billion"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7200,
+        "endIndex": 7341,
+        "text": "The company provides reverse-proxy web traffic filtering, DDoS protection, and automated bot/AI-agent shielding directly to hosting providers"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7345,
+        "endIndex": 7458,
+        "text": "**Important Caveats:** Valuation figures and financial metrics are private, self-reported venture capital figures"
+      },
+      "groundingChunkIndices": [
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7604,
+        "endIndex": 7774,
+        "text": "**Candidate [13] (Pew Research - TikTok News Consumption):** Confirmed survey data shows 20% of US adults regularly get news on TikTok, climbing to 39% among ages 18–29"
+      },
+      "groundingChunkIndices": [
+        25,
+        26
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7834,
+        "endIndex": 8093,
+        "text": "**Candidate [18] (Albert Heijn Cyber Incident):** Confirmed Dutch supermarket chain Albert Heijn's online deliveries remain offline through at least Thursday following a major cybersecurity incident that forced IT system shutdowns across Ahold Delhaize brands"
+      },
+      "groundingChunkIndices": [
+        27,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8384,
+        "endIndex": 8557,
+        "text": "**Candidate [19] (Subaru SDV Roadmap):** Subaru announced a late-2020s launch timeline for software-defined vehicles using custom AMD/Infineon chips to cut R&D cycles by 40%"
+      },
+      "groundingChunkIndices": [
+        29,
+        30
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Blackwall\" Series C 100M valuation TechCrunch 2026",
+    "\"TorchNeuron\" PyTorch Amazon custom AI chips reuters 2026",
+    "\"UK CMA\" Apple contactless payments October 20 2026 reuters",
+    "\"Google Cloud\" Revolut outage London October 20 2026 bloomberg",
+    "\"ByteDance\" \"Alibaba\" \"Tencent\" \"RTX PRO 5500\" Nvidia reuters 2026",
+    "\"WhatsApp\" \"help pages\" \"don't recommend a regulator\" redact.dev 2026",
+    "\"Anthropic\" \"leaked\" \"FRONTIER Act\" Transformer 2026",
+    "\"Amazon\" Germany 16 billion 2027 bloomberg October 20 2026",
+    "\"Albert Heijn\" cyber incident online deliveries October 19 2026 reuters",
+    "Pew Research \"1 in 5 Americans regularly get news on TikTok\" 2026",
+    "Subaru software-defined vehicle 2020s late reuters 2026"
+  ]
+}

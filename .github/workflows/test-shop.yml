@@ -10,6 +10,11 @@ on:
       - 'lib/etsy-prints.mjs'
       - 'lib/etsy-public-feed.mjs'
       - 'lib/etsy-pinterest-sync.mjs'
+      - 'lib/cross-repo-dispatch.mjs'
+      - 'test/cross-repo-dispatch.test.mjs'
+      - '.github/workflows/release-daily-newsletter.yml'
+      - '.github/workflows/retry-daily-media-social.yml'
+      - 'scripts/post-daily-brief-social.mjs'
       - 'test/etsy-pinterest-handoff.test.mjs'
       - 'scripts/check-etsy-prints.mjs'
       - 'netlify/functions/etsy-prints.mjs'
@@ -33,10 +38,12 @@ jobs:
             lib/etsy-prints.mjs
             lib/etsy-public-feed.mjs
             lib/etsy-pinterest-sync.mjs
+            lib/cross-repo-dispatch.mjs
             scripts/check-etsy-prints.mjs
             netlify/functions/etsy-prints.mjs
             test/etsy-prints-contract.mjs
             test/etsy-pinterest-handoff.test.mjs
+            test/cross-repo-dispatch.test.mjs
             test/shop-page-contract.mjs
           sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v4
@@ -52,3 +59,5 @@ jobs:
         run: |
           node --check scripts/check-etsy-prints.mjs
           node --test test/etsy-pinterest-handoff.test.mjs
+      - name: Verify cross-repo social dispatch and 403 fallback without publishing
+        run: node --test test/cross-repo-dispatch.test.mjs

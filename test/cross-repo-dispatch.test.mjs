@@ -26,10 +26,12 @@ test('Actions 403 transparently falls back to Contents-permission repository_dis
 });
 test('Etsy dispatch requires no caller-supplied listing IDs or other uncontrolled payload',async()=>{
  const x=fake(403,204);
- assert.equal((await dispatchComic({kind:'etsy',token:'private',fetchImpl:x.fetchImpl})).route,'repository_dispatch');
+ assert.equal((await dispatchComic({kind:'etsy',inputs:{feed_sha:'d'.repeat(40)},token:'private',fetchImpl:x.fetchImpl})).route,'repository_dispatch');
  assert.equal(x.requests[0].url.endsWith('sapiverprints-pinterest.yml/dispatches'),true);
  assert.equal(x.requests[1].body.event_type,'sapiver_prints_new_listing');
- await assert.rejects(dispatchComic({kind:'etsy',inputs:{listing:123},token:'private',fetchImpl:x.fetchImpl}),/no untrusted inputs/);
+ assert.equal(x.requests[1].body.client_payload.feed_sha,'d'.repeat(40));
+ await assert.rejects(dispatchComic({kind:'etsy',inputs:{listing:123},token:'private',fetchImpl:x.fetchImpl}),/requires only/);
+ await assert.rejects(dispatchComic({kind:'etsy',inputs:{feed_sha:'main'},token:'private',fetchImpl:x.fetchImpl}),/requires only/);
 });
 test('never dispatch unapproved, malformed or partial release identity',async()=>{
  const x=fake(204);

@@ -9,6 +9,8 @@ on:
       - 'test/etsy-prints-contract.mjs'
       - 'lib/etsy-prints.mjs'
       - 'lib/etsy-public-feed.mjs'
+      - 'lib/etsy-pinterest-sync.mjs'
+      - 'test/etsy-pinterest-handoff.test.mjs'
       - 'scripts/check-etsy-prints.mjs'
       - 'netlify/functions/etsy-prints.mjs'
       - 'scripts/etsy-prints-client.js'
@@ -30,9 +32,11 @@ jobs:
             scripts/etsy-prints-client.js
             lib/etsy-prints.mjs
             lib/etsy-public-feed.mjs
+            lib/etsy-pinterest-sync.mjs
             scripts/check-etsy-prints.mjs
             netlify/functions/etsy-prints.mjs
             test/etsy-prints-contract.mjs
+            test/etsy-pinterest-handoff.test.mjs
             test/shop-page-contract.mjs
           sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v4
@@ -44,3 +48,7 @@ jobs:
         run: node test/shop-page-contract.mjs
       - name: Test Etsy API read-only logic and Netlify responses
         run: node test/etsy-prints-contract.mjs
+      - name: Test immediate Pinterest listing handoff and catalogue change detection
+        run: |
+          node --check scripts/check-etsy-prints.mjs
+          node --test test/etsy-pinterest-handoff.test.mjs

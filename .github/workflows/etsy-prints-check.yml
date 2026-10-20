@@ -2,8 +2,8 @@ name: SapiverPrints public catalogue refresh
 
 on:
   schedule:
-    # Six checks/day keep the public feed under Etsy's six-hour freshness limit.
-    - cron: '17 */4 * * *'
+    # Detect newly active Etsy listings within approximately 30 minutes (Actions may be delayed).
+    - cron: '7,37 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -28,7 +28,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Test catalogue change detection before any Etsy API calls
+        run: node --test test/etsy-pinterest-handoff.test.mjs
       - name: Verify credentials and check exact SapiverPrints active inventory
+        id: etsy
         env:
           ETSY_PRINTS_KEYSTRING: ${{ secrets.ETSY_PRINTS_KEYSTRING }}
           ETSY_PRINTS_SHARED_SECRET: ${{ secrets.ETSY_PRINTS_SHARED_SECRET }}
@@ -48,3 +51,14 @@ jobs:
             git pull --rebase origin main
           done
           exit 1
+
+      - name: Notify Comic immediately when new published Etsy products are detected
+        if: steps.etsy.outputs.pinterest_new_listings == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.CROSS_REPO_GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GH_TOKEN:-}" || { echo 'Missing existing cross-repo GitHub token; hourly Comic fallback will apply.'; exit 1; }
+          gh workflow run sapiverprints-pinterest.yml --repo sapiverpress-studio/SapiverPress_comic_public --ref main
+          echo "Requested Comic Etsy Pinterest batch for ${{ steps.etsy.outputs.pinterest_new_count }} new active listing(s)."

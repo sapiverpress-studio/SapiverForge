@@ -32,3 +32,9 @@ The same public feed can support a dedicated Sapiver Prints publisher using the 
 - Comic limits each batch to 20 Pins with 30 seconds between posts, and existing listing-ID receipts/remote-board checks stop repeat Pins. Existing music videos, newsletters, Etsy uploader, PrintShrimp, and site deployment process are untouched.
 - Timing: generally within 30 minutes plus GitHub scheduling, Etsy API propagation and Pinterest latency; not guaranteed instantaneous. Cross-repo dispatch success, real Pins and backlog drain still require live verification.
 - Files: .github/workflows/etsy-prints-check.yml, .github/workflows/test-shop.yml, scripts/check-etsy-prints.mjs, lib/etsy-pinterest-sync.mjs, test/etsy-pinterest-handoff.test.mjs.
+
+## Release confirmation — 2026-10-20 05:21 BST
+- PR #137 squash merged to main as c1ed51892d54090244a01d82a15413cc637d810c with [skip netlify]. Verify Shop page run 39368895795 SUCCESS: existing shop/retailer/Etsy tests passed and eight of eight new handoff tests passed.
+- First live SapiverPrints catalogue run 39369033723 SUCCESS: correct existing Etsy shop, all 32 published products with approved public images, fresh timestamp 2026-10-20T04:21:39.014Z committed to main. No new product IDs in that run, so the new cross-repository Comic dispatch was correctly skipped. The ability to hand off a future NEW product is implemented but not yet verified live.
+- Paired Comic PR #43 merged after freshness confirmation. Its push-triggered first batch run is 39369252389; actual Pinterest Pin success and receipt persistence must be verified separately. Not an instant Etsy webhook: half-hour API check + GitHub queue time.
+- No Netlify deployment, Etsy write, Pinterest credentials relocation, PrintShrimp ordering or video-publishing changes. Documentation update [skip netlify] avoids additional release.

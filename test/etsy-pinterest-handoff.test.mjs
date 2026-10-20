@@ -19,8 +19,8 @@ test('ordinary half-hour poll does not cause a needless GitHub feed commit or di
  assert.equal(result.needsRefresh,false);
  assert.equal(result.shouldDispatch,false);
 });
-test('unchanged feed refreshes at four hours to stay within 5.5h expiry',()=>{
- const result=plan(feed([101],now-4*3600000),feed([101]),[101]);
+test('unchanged feed refreshes after one hour, with margin before Pinterest 5.5h expiry',()=>{
+ const result=plan(feed([101],now-60*60000),feed([101]),[101]);
  assert.equal(result.needsRefresh,true);
  assert.equal(result.shouldDispatch,false);
 });
@@ -51,4 +51,11 @@ test('first valid catalogue includes active IDs and triggers handoff for any mis
  const result=plan(null,feed([101,102]),[]);
  assert.deepEqual(result.newIds,[101,102]);
  assert.equal(result.shouldDispatch,true);
+});
+
+test('unchanged feed still refreshes at 61 minutes but no unneeded Pinterest post is triggered',()=>{
+ const old=feed([101],now-61*60000);
+ const result=plan(old,feed([101]),[101]);
+ assert.equal(result.needsRefresh,true);
+ assert.equal(result.shouldDispatch,false);
 });

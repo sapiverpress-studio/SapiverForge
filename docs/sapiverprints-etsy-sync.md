@@ -24,3 +24,11 @@
 
 ## Pinterest handoff (future separate work)
 The same public feed can support a dedicated Sapiver Prints publisher using the Comic repository's existing Pinterest API access, with a board-specific queue and Etsy-listing-ID deduplication. Pinterest posting has **not** been enabled by this catalogue change.
+
+## 2026-10-20 — Automatic Pinterest after active Etsy listing detection (STAGED)
+- Owner goal: Every newly published SapiverPrints Etsy listing receives its own Pin with original Etsy listing image, short description and direct listing link, without additional owner action.
+- Etsy read-only check is scheduled twice hourly (minute :07 and :37 UTC). Successful verified active-listing changes refresh/commit the sanitised feed, then dispatch the Comic Pinterest backlog workflow with the existing CROSS_REPO_GITHUB_TOKEN. GitHub failing a commit prevents dispatch. Dispatch failure appears as a failed Forge run; Comic hourly schedule provides fallback.
+- The new pure catalogue-change helper suppresses unnecessary 30-minute timestamp-only commits. Unchanged feed is still refreshed at 4 hours, before the 5.5-hour expiry applied by the public shop and Comic. Description/photo updates refresh feed immediately. Unverified/draft/private listings are not shared.
+- Comic limits each batch to 20 Pins with 30 seconds between posts, and existing listing-ID receipts/remote-board checks stop repeat Pins. Existing music videos, newsletters, Etsy uploader, PrintShrimp, and site deployment process are untouched.
+- Timing: generally within 30 minutes plus GitHub scheduling, Etsy API propagation and Pinterest latency; not guaranteed instantaneous. Cross-repo dispatch success, real Pins and backlog drain still require live verification.
+- Files: .github/workflows/etsy-prints-check.yml, .github/workflows/test-shop.yml, scripts/check-etsy-prints.mjs, lib/etsy-pinterest-sync.mjs, test/etsy-pinterest-handoff.test.mjs.

@@ -1,0 +1,446 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Eric+Schmidt%22+%221%25%22+Anthropic+Bloomberg+Reuters+October+2026&client=app-vertex-grounding&safesearch=active\">&quot;Eric Schmidt&quot; &quot;1%&quot; Anthropic Bloomberg Reuters October 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Google%22+%22Temasek%22+%22Bain%22+SE+Asia+digital+economy+2026+368B&client=app-vertex-grounding&safesearch=active\">&quot;Google&quot; &quot;Temasek&quot; &quot;Bain&quot; SE Asia digital economy 2026 368B</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Nscale+Josh+Payne+FT+100B+contracted+revenue&client=app-vertex-grounding&safesearch=active\">Nscale Josh Payne FT 100B contracted revenue</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=OpenEvidence+FT+physicians+400M+ad+revenue&client=app-vertex-grounding&safesearch=active\">OpenEvidence FT physicians 400M ad revenue</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Voxtral+3+Mistral+AI&client=app-vertex-grounding&safesearch=active\">Voxtral 3 Mistral AI</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=NextDC+stock+FT+earnings+forecast+2026&client=app-vertex-grounding&safesearch=active\">NextDC stock FT earnings forecast 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Arnaud+Bertrand%22+Substack+%22suicidal+mistake%22+%22machinization+of+humans%22+AI&client=app-vertex-grounding&safesearch=active\">&quot;Arnaud Bertrand&quot; Substack &quot;suicidal mistake&quot; &quot;machinization of humans&quot; AI</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22teddysvoronos.com%22+Apple+broke+presentation+feature+iPads&client=app-vertex-grounding&safesearch=active\">&quot;teddysvoronos.com&quot; Apple broke presentation feature iPads</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDG-7WvDDECVVa_KlgpbwApgn27ElUU8SFp69Uxn0gszp0NZmpGv96oJGUtikUwYrzZWVFr8BGhHFMJYMULa3TBEhLFrsuHDfCQIL8PX4RjbqBnwsjJKA=",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFggOIUZh5BJaD5tylqz_-k3IdFlh2FZXGkBytxZi2syhERkuWGlg4-IYRtsHza0evw43nXME630TWfz43P2Gv9dvexAI_Wjy1wb3nF6AqMQqjbJXZ5QaMa8oeYzLteWXtXlSTTJw84TwKLOOZRtL9oD0Q=",
+        "title": "implicator.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwOV10LM6t219gS7bBhAWv_FZHO1dnz5e9t2ihC_4dVkUeb_MWUWuVNs6x6b8eAuOhv88CKRNlqaejPTxvZZ0kaUfYZ6AzKP0pSybxFLv51xX1B17V47A_jfKsK8aeGeyyauJTttB6l7cwNQY-pXsO7wfKsoTP40IVXhf8ibsrBrfpQhkhNkJdl98ddg730mKG4QTBCwGgBpjgy0iz5JR8oYrC18ST",
+        "title": "britishpedia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXXhRKYP5EFsp-5qp151kHJYAsWgzNuEygqHw3c5YEeVsI85lbqMrXP8VtTjBbB_x4BWKrqzyVdRNMAPxOxgJinXI2aYf_5aaEfvpju-xF7bbeT_AhK8xKngZflq4cdRt_6wAP0oVmYvw6u7dKsgCjmJIz2idpaYt4xZ6Pyw9QfNLXCgm-Gync",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdmUY6J34cNK0LQW2tB-MLdBe07jU66rxmSdAF4VjFgKwsZvrRArRBu5VVNCfw1WQpvgmqZxKpTX3y0a3X8f-W-AR9N_kW-vAuzQZBJ8dK0BVmLZoZcb6eJmJORveBL0EExQ==",
+        "title": "mrkt30.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUHU0ZwPtfQW8cIZfBCUUsBD8Z5FmYMCHkuIESKliHqxKWk_HMpIJwWxROTLMy2Tnu7r9lwfEnaU8CgOmqJYQv8n7DxPik3lH_ddV7tI2xapN-57LDatM=",
+        "title": "mistral.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGj0Sq5Y7CzS0ARnLEVTibdRIn6bWSikohrkzlSkMfzySP4bwNzaj4hcvsL75gqsUPpUVdC6qlxoCbF6AoEPWajznrzwlcn-_F5iQOuVhNaWqiP_8gPlrhGBfZMrSl9dK7eV5mvdGJBUoYWjF2T8LWIeChDQ7RjacPH2gI5Zr0EpuGh0LTeLy9g5kJfs9bPUNf6guuTCg==",
+        "title": "daily.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkMnHTFQYLbuYMM26r50pJsLMHIM5LDSqm681LXM-SglMLu_mjjSV0BroDLMf-RThT-9JbLmUGc9qEyrqLxZh0V-kbAVGQsm3pR9R9BX2ZhGtyLXA_ZtbQRGm2Gv9ExWDebusClgf0M5aOSjYmlelysw7g0O_uoB6KSdCfD7yanSg_aANc7tZV8WVU1zFPvDBkMzoe1g-J0QGPGBP2xrBm_HxcDKGFRrMa",
+        "title": "superpowerdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHukJLda9Xgkn2UcJWqh25U18JtapaX20-dzDMOOKJrzql7Y3nZ6GZ8lTeHbCG_9J91Ey3F35F2kEe0Ia2em-cuuNksa9R4AQQeJ3tK_KHw6Bix7MgNVA7-5Yo5S2rk3cVsAT2qUyh4OUs9JzL8jMb6",
+        "title": "mistral.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2c3CwJwmFYcOtBE4gTgF9NRMVT-YOYuq1jpl5Fg3GHpHrO-w0fan1OpVr_kSq4w93xb48tbkPntiIRywFLohUHsYw19qlUQ5-3rGMZD2vvdlE9tN5KalyFGkEGWBUEUKJ7abfHWJw72WRoZG2tj5-egKcudro4NNGs5OLI2bMCTDmSTSJj70Tdb6HrbMwMugWNrSR9Zq2z4gob6LPDWMVSRynclfqKhzYIwqktp5xpkaJY8HpIJ-WxdxFqIOYXUpoD07XldFg662Qkrc=",
+        "title": "medium.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhVoypvnTaV4dTWy9MkKbEzj0QPGXh_NSzkjqTH_FEBSB9XtItvSxjMpT6NZGc84q9gbHzUwJBQya4jmvV-tTkA8Wa0G-MBg2Avt-RX8wQpFpj_wlGzbpWmSPEL220KeYE8QzVlIxTPUQy5eu1nN614uhYBulrvju2ZRwX0gBJ5KLscwC_CEXP0-4NLRh1S2kTPUSOiw==",
+        "title": "tradersunion.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSDgVF0rmQwxhqOYK3HIbM7reRujmx-d_I7IG1IH5HmMhxgSGXk3JDtje47OwKtmNz7FeadIEgoZV1E1ovfgF8DEoOC6GRFp8HgM22gzi76l6lpVwBYfjJ2yV4wTvJzFp3hbxAQ6EdU_hFjRJEOfnDeIQLwqU_kRFdAdjqrz3uvbyY7w==",
+        "title": "ft.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRoavQaA8xe_aIwALpI-UDLTBD5U1rimwp-WQa3tencu_2SQ9khBAr5S4najOcNTJghZLvlg3zm8fmhGKN7Fp2VfbMJwxPzdfBkuvrIHWEUbqCvh3W7v2V0dKWcWlRQWGzCcbwK_B9oQL5GxVgkzdcWRS7zJ0pM8z_DD8SQshnY2_pow_9oZKNkOdnnFZVy8uoExhwEgPx7DTaEs4oqBqPvhffFmlG2Qyl-O6AAqfmhSh8Cgr6BvI8VPDkywyY",
+        "title": "business-standard.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkDfGy09AYZDWU4NYVViFtjFFfXvPFF8bQGxGYc4GU8CoFOdP0IvCUQVNc__NR85YgZU8TEmeZr3eRt-ypmG4dsDjTmqgO-TBtvlGdTvmzPO9gUq6TI3CogpdWVazvACekTKH35AHJpBjd1blT4OjGHw_SngM-ndWNGHzbH_1eZhYzDOzYSJy37hXNmf3PO88RJYFX9qRqt17Ntih9BruZ9peMYYSLWPIJo-egvn1R0pYvziLpyPcpoffrqwRXalhX4w4O_Td35EJz",
+        "title": "temasek.com.sg"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzMenCWbokbn3uUOfldrWOLkBiQL85dxEO395uA9NFJkPnyz8mF1P5kQaf2hAAelOFAJX9GO3N_L460CJbs9Ul0Px9Ey65I5Kr1aDLtZ-Sg81qTKcDHZzC7Ql9POvUw96rlmLH06rTtVwejyFg4Fqp_uaaLbG--ZZdD_PyypLEU7khEbX44MeeSyRA5bwzhq_YWzK4ADqhVRPn51spS8vw0QOByBm8u-w8GRmVyN6v",
+        "title": "superpowerdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHquQje70x82ypjHsgTyJHHaMBguArdVCaMbdZzfn1CDCd-CmrNr2BHyQWLdkJHpVcE6nv7i5WZVIYk5aE5o6K6Bo0kaMXLMbw7k7S-poZzM4ctzIIcXJ-sNhbMijU3L99r88-o2FIj8wNhmX73aJNaYjUp3UKRU4_wO0YyRAS9rTsDojd7IyCetZEeKtUURX0=",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfXnp6BTXkUDHCVa3G56XG1TAj7tWapO8p1f05QrlCeQyZmeM5ouGIvyOwzx07hgL_MErUt70c1YTPxkN88duKvHCqdlDqhGMDfntZqNDIlJS0sPf2UyR6MYgW9bSAfQ-Jat8Taw45hUethIJ4vKsNJKRY9-ow7AIxdT8=",
+        "title": "emergent.sh"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSvJKxI3XeH6BcPMXpfkG6UUw8H-Un5jPvq0HdWrpwxzZrlNZi3fZVGkq0eMswEoFYIrZbXG4KASFRlzUyauVjSJ5FuQCCqdPFKimhVS5SPeX0W_ICpZYfaVZHmyXzp2-FSJLvlWELcbLf2o21MrPJeDOhBBcDRRHdSbFu2ZLVg_C2pg==",
+        "title": "ft.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiG004sC_1YJIJcHwjlWvZ3a0mlrEgwBc7EinYdgZIDQOYd1Of9-RSxvxYxD_2Vys4_9G9eMn53o-OvIJ-c3nfS1_e60jUMRxzogmi1yfWqLvdHc5CcDk9gFUPLYPE1dfxJyZgq4iPlMYxpeZ0ViVxvsMfFw9_8HemGt_FZpHXxUjIqHrdyKYdJcL3pBam07sHsqeIurROusbQdjftnVrjubOTPQ==",
+        "title": "gurufocus.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEz8yCpUlgI_J87HQYHYadjJnFSDWUh0y8QpLfB4SdOXtyP70eUcQGPpZQTvfHziAwDkckirzFATfqvQHZLOlP0gHbgg3aVEjs_2bS1R3whkDk7JsLuZZ-Ir4mR65RYu_YjApdR2MBr4xqhYqfDNgYFEVY-4Ex1Vg8DSBKAuUoKGqCvI3nxyXZlXpl1xvL1-cXisvFdmeaxBYoP0QRNZ5H6",
+        "title": "seekingalpha.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhodo8m03VCMbf2qxJtONvf1a8PURTYjwPGiMv91gyUzB2L6rSW_Xs6uPrEzC5N6RteLCY4F4FxaAizkAvtotrvhmq5nrfscW6QIz1h5g-VXaSb-qaIQZN7IXeeZ5r2AsrLiTG2XsQXTz6icQMrOQYbygJvy1arJebVs-ZQXyfqy3bYL9wHgNuN9UHyb8JtjqW0Cb__u_XgsSEWl6QfI_gbswOqdyo-RJWVzMvZyg=",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHB9iEJWHb6oikq0rQITX-CrwnCIk4IHenF8qsNJ4anzOC_EDMfVkEr5onvd_mPjm6rsU_oNqU0kfvC_gvF1JKIt0xPFGZFiFVGsO8qQEXB-biEU4eJJDwB5t8p0Ta8YHMKdSK8A74yhYztQfAy0pMmx2wGdISyaJKl5TW__A==",
+        "title": "substack.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-iVftPIgkDVZYoL47KxnHLlg2YzubSQQHCb_RdJJZdGIVQpmr36X4mNDpvtjRAWFwz2_-RZTHsv6WD91CK0CGw-6_d0pScpHSZQJ2w7kthRmNtOpS8CCtkD8jVBQcHdLiSrHW96xPYLhImK0PV7tS_Bi-3r_MOFWj1QoHHUhBFCraWZrQHWdy7nbF3cmuQ7v78Q==",
+        "title": "teddysvoronos.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEthmVVrlf-fjpDvZDdtaBFooCtNsxqhiqcTJoLmjzZej_eLTLbt3e9fmExQvgnKBigoKyEwLxfydOWoYs6FzpMR1ssPlxoWH32NSQ2vcTY4NL-fxFmAgEFn0pd17zMoNLkuLZu_XGz_bvHlxj6S4x5xW8e-8=",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6vb-Oh6hMxK8Hf2Md9s4B71TUvXs1aa61zRYos-iz4cFv6s0CrlMNdUSusX50aSCKo-Q3YxOuLZcoOPv7WXVPyAUGJds9ZYyJhHuRtpSh6bsEJ61ye8OPhV9aTnnuCaQkbrJCKcjSYsNRUQCa3d8OkuA9LJ6Qb7qeN18QJGrLgjQic9XsZo-camGmY9JKSg5WnBfDSf_cseAkPUAiZKEhQtJcz0HZqhCfP97Ys1r5oo84wtSif1CECGhbP2mcq5qp3HqIZocVD_29C0WqamvTDz1nUJR1-5Qj",
+        "title": "tradingview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoqvkVOt1UNHljqHJvBzBartgr_9G4xIwcds19fTAP13b9MU4lJE4O22pVgNqN4XX-lRR7zm_H4CgV_IOpGPslmD836AsolW46tbszPCtTn9CFYOQ=",
+        "title": "techmeme.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 199,
+        "endIndex": 255,
+        "text": "**Publisher / Source:** Kieran Smith / *Financial Times*"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 258,
+        "endIndex": 439,
+        "text": "**What is confirmed:** The *Financial Times* reported that Nscale CEO Josh Payne circulated an internal memo stating the company holds over $100B ($103.4B) in total contracted value"
+      },
+      "groundingChunkIndices": [
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 441,
+        "endIndex": 533,
+        "text": "Sources confirm Nscale is targeting an IPO by late 2026 at a valuation between $30B and $35B"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 537,
+        "endIndex": 746,
+        "text": "**Important caveats:** The $100B+ figure represents multi-year Total Contract Value (TCV) across long-term commitments, not realized revenue (actual trailing revenue is vastly lower, e.g., ~$140.6M in H1 2026)"
+      },
+      "groundingChunkIndices": [
+        1,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 748,
+        "endIndex": 896,
+        "text": "Furthermore, Microsoft recently backed out of Nscale’s Loughton (UK) data center project due to grid power upgrade delays extending into the 2030s"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1136,
+        "endIndex": 1170,
+        "text": "**Publisher / Source:** Mistral.ai"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1173,
+        "endIndex": 1273,
+        "text": "**What is confirmed:** Mistral AI officially announced its Voxtral 3 model suite and Voice Agent SDK"
+      },
+      "groundingChunkIndices": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1275,
+        "endIndex": 1493,
+        "text": "Key releases include flagship transcription models (`Voxtral Small Transcribe 3`), sub-500ms real-time audio variants, and text-to-speech tools across 35–50+ languages, available via EU-hosted APIs or self-deployment"
+      },
+      "groundingChunkIndices": [
+        5,
+        8,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1497,
+        "endIndex": 1639,
+        "text": "**Important caveats:** Benchmark claims (such as FLEURS transcription error rates) and real-time latency specs are company-reported benchmarks"
+      },
+      "groundingChunkIndices": [
+        9,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1907,
+        "endIndex": 1968,
+        "text": "**Publisher / Source:** Rafe Rosner-Uddin / *Financial Times*"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1971,
+        "endIndex": 2137,
+        "text": "**What is confirmed:** The *Financial Times* reported that OpenEvidence claims nearly two-thirds (~660,000) of US doctors actively use its AI clinical search platform"
+      },
+      "groundingChunkIndices": [
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2139,
+        "endIndex": 2282,
+        "text": "A source indicates the startup is projecting $400M–$500M in annualized 2026 ad revenue following its recent funding round at a $15B valuation"
+      },
+      "groundingChunkIndices": [
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2286,
+        "endIndex": 2429,
+        "text": "**Important caveats:** Physician user counts reflect self-reported company metrics, and ad revenue figures come from anonymous source estimates"
+      },
+      "groundingChunkIndices": [
+        0,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2431,
+        "endIndex": 2560,
+        "text": "Independent clinical studies on accuracy remain mixed, triggering industry debates around ad-supported medical decision platforms"
+      },
+      "groundingChunkIndices": [
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2832,
+        "endIndex": 2882,
+        "text": "**Publisher / Source:** Gabrielle Ng / *Bloomberg*"
+      },
+      "groundingChunkIndices": [
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2940,
+        "endIndex": 3176,
+        "text": "released their 11th annual *e-Conomy SEA 2026* report, projecting Southeast Asia’s digital economy to expand 17% YoY to $368B in Gross Merchandise Value (GMV) in 2026, driven by rapid generative AI integration across consumer services"
+      },
+      "groundingChunkIndices": [
+        13,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3180,
+        "endIndex": 3337,
+        "text": "**Important caveats:** The headline $368B metric measures Gross Merchandise Value (total transaction volume), not the net revenue earned by digital platforms"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3339,
+        "endIndex": 3457,
+        "text": "The 17% growth rate reflects a slight moderation from prior years due to regional inflation and macroeconomic pressure"
+      },
+      "groundingChunkIndices": [
+        16,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3705,
+        "endIndex": 3759,
+        "text": "**Publisher / Source:** Nic Fildes / *Financial Times*"
+      },
+      "groundingChunkIndices": [
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3762,
+        "endIndex": 4008,
+        "text": "**What is confirmed:** Australian data center operator NextDC (ASX: NXT) saw its shares plummet up to 44% after cutting its FY27 net revenue forecast to A$475M–A$500M (down from A$615M–A$640M) and slashing EBITDA guidance by more than a third"
+      },
+      "groundingChunkIndices": [
+        18,
+        19,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4012,
+        "endIndex": 4192,
+        "text": "**Important caveats:** The severe guidance cut was directly caused by grid infrastructure delays from local utility Jemena at NextDC's M3 Melbourne facility amid community pushback"
+      },
+      "groundingChunkIndices": [
+        19,
+        20,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4516,
+        "endIndex": 4605,
+        "text": "* Valuable context, but it is an opinion/synthesis Substack post rather than primary news"
+      },
+      "groundingChunkIndices": [
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4711,
+        "endIndex": 4769,
+        "text": "* A personal blog post documenting an iPadOS windowing bug"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4883,
+        "endIndex": 4941,
+        "text": "* Originally reported on Oct 19 based on Bloomberg reports"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5186,
+        "endIndex": 5226,
+        "text": "* Secondary source reporting from Oct 20"
+      },
+      "groundingChunkIndices": [
+        0,
+        25
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Eric Schmidt\" \"1%\" Anthropic Bloomberg Reuters October 2026",
+    "\"Google\" \"Temasek\" \"Bain\" SE Asia digital economy 2026 368B",
+    "Nscale Josh Payne FT 100B contracted revenue",
+    "OpenEvidence FT physicians 400M ad revenue",
+    "Voxtral 3 Mistral AI",
+    "NextDC stock FT earnings forecast 2026",
+    "\"Arnaud Bertrand\" Substack \"suicidal mistake\" \"machinization of humans\" AI",
+    "\"teddysvoronos.com\" Apple broke presentation feature iPads"
+  ]
+}

@@ -94,7 +94,18 @@ jobs:
             '8.2.35, 8.3.36, 8.4.27 or 8.5.12'
           ]) if(!html.toLowerCase().includes(phrase.toLowerCase()))throw Error('Brevo lacks corrected phrase '+phrase);
           if(html.includes('does not could support refunds')||html.includes('payout is currently on hold'))throw Error('Brevo content is stale');
-          if(normalise(local)!==html)throw Error('Brevo HTML differs from reviewed repository newsletter');
+          // Brevo may normalise HTML and its tracking markup, so do not require byte-identical markup.
+          // Verify every reviewed headline and the specific corrected claims against the stored draft.
+          const manifest=JSON.parse(fs.readFileSync(dir+'manifest.json','utf8'));
+          for(const story of manifest.stories) {
+            if(!html.includes(story.headline))throw Error('Brevo draft missing reviewed story: '+story.headline);
+          }
+          for(const detail of [
+            '$25 billion in civil penalties',
+            'may have accessed encrypted customer environment variables',
+            'including when an agent behaves unexpectedly',
+            'AWS cautioned that it was unclear'
+          ]) if(!html.includes(detail))throw Error('Brevo draft missing reviewed fact: '+detail);
           Object.assign(meta,{
             draft_editorial_revision:'2026-10-22-review-1',
             brevo_content_verified:true,

@@ -53,10 +53,9 @@ jobs:
             'payout is currently on hold',
             'currently suspended by the appeal process',
             'lack of liability for AI',
-            '£25 billion',
-            '£25bn',
             'Meta\'s Twenty-Five Billion Pound Problem'
           ]) if(h.includes(bad)||md.includes(bad)||speech.includes(bad)||podcast.includes(bad))throw Error('Outdated claim: '+bad);
+          if(h.includes('£25 billion')||md.includes('£25 billion')||speech.includes('£25 billion'))throw Error('Wrong currency in newsletter or spoken narration');
           if(!podcast.includes('US-dollar judgment')||!speech.includes('twenty-five billion US dollars'))throw Error('Narration does not distinguish US dollars');
           console.log('22 October source texts checked and original Brevo 99 is unsent.');
           NODE

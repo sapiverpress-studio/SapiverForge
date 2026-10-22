@@ -42,6 +42,11 @@ jobs:
           if(manifest.date!=='2026-10-22'||manifest.editorial_revision!=='2026-10-22-review-1'||manifest.stories.length!==4||!manifest.newsletter_ready_for_human_approval)throw Error('Unreviewed or incomplete edition');
           if(meta.status!=='brevo_draft'||meta.brevo_campaign_id!==99||meta.sent_at!==null||meta.approved!==false||meta.candidate_id!==manifest.candidate_id)throw Error('Expected original, unsent Brevo campaign 99');
           const h=normalise(html);
+          for(const story of manifest.stories) {
+            if(!h.includes('href="'+story.url+'"'))throw Error('Newsletter HTML has missing or malformed source URL: '+story.headline);
+            if(!md.includes(']('+story.url+')'))throw Error('Newsletter Markdown has missing or malformed source URL: '+story.headline);
+          }
+          if(h.includes('https://www.Reuters')||md.includes('https://www.Reuters'))throw Error('Broken Meta source URL');
           for(const phrase of [
             'an appeal does not by itself establish that the judgment has been stayed',
             'the company advised all customers',
@@ -94,6 +99,7 @@ jobs:
             '8.2.35, 8.3.36, 8.4.27 or 8.5.12'
           ]) if(!html.toLowerCase().includes(phrase.toLowerCase()))throw Error('Brevo lacks corrected phrase '+phrase);
           if(html.includes('does not could support refunds')||html.includes('payout is currently on hold'))throw Error('Brevo content is stale');
+          if(!html.includes('https://www.reuters.com/business/meta-ordered-pay-25-billion-new-mexico-after-jury-finds-company-misled-consumers-2026-10-21/'))throw Error('Brevo Meta source URL not corrected');
           // Brevo may normalise HTML and its tracking markup, so do not require byte-identical markup.
           // Verify every reviewed headline and the specific corrected claims against the stored draft.
           const manifest=JSON.parse(fs.readFileSync(dir+'manifest.json','utf8'));

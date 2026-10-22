@@ -10,7 +10,7 @@ Today: a $25 billion privacy judgment against Meta, Railway's warning about poss
 
 **Sapiver Forge interpretation:** The case illustrates why historic platform practices can create exposure years after an incident. The amount may change on appeal, and a future court ruling—not this headline alone—will determine the final liability.
 
-**Source:** [Reuters / New Mexico court reporting](https://www.Reuters / New Mexico court reporting/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html) · discovered via Hacker News · confidence 96%
+**Source:** [Reuters / New Mexico court reporting](https://www.reuters.com/business/meta-ordered-pay-25-billion-new-mexico-after-jury-finds-company-misled-consumers-2026-10-21/) · discovered via Hacker News · confidence 96%
 
 ## 2. Railway warns customers to rotate secrets after environment-variable incident
 

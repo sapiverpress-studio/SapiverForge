@@ -1,0 +1,556 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=PHP2Shell+AWS+Wired+Lily+Hay+Newman+2026&client=app-vertex-grounding&safesearch=active\">PHP2Shell AWS Wired Lily Hay Newman 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Walmart+%22Agent+Gateway%22+MCP+server+AI+agents+shop+website+TechCrunch&client=app-vertex-grounding&safesearch=active\">Walmart &quot;Agent Gateway&quot; MCP server AI agents shop website TechCrunch</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Meta%22+%22New+Mexico%22+%22Cambridge+Analytica%22+penalty+2026+OR+25B+OR+25+billion&client=app-vertex-grounding&safesearch=active\">&quot;Meta&quot; &quot;New Mexico&quot; &quot;Cambridge Analytica&quot; penalty 2026 OR 25B OR 25 billion</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=DeepSeek+raised+15+billion+Bloomberg+Tencent+CATL+2026&client=app-vertex-grounding&safesearch=active\">DeepSeek raised 15 billion Bloomberg Tencent CATL 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22GM%22+%22OnStar+AI%22+Cadillac+Lyriq+Wired+Aarian+Marshall+2026&client=app-vertex-grounding&safesearch=active\">&quot;GM&quot; &quot;OnStar AI&quot; Cadillac Lyriq Wired Aarian Marshall 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=SpaceX+Tesla+merger+Trump+Bloomberg+2026&client=app-vertex-grounding&safesearch=active\">SpaceX Tesla merger Trump Bloomberg 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Railway+blog+%22security+disclosure%22+October+21+2026&client=app-vertex-grounding&safesearch=active\">Railway blog &quot;security disclosure&quot; October 21 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=AuxoAI+20.7M+NTTVC+Series+A+2026&client=app-vertex-grounding&safesearch=active\">AuxoAI 20.7M NTTVC Series A 2026</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr6dHfxRjO0TPIJPikCiUT_O_7Xd6AUvXkekHAg2Yio5Q5iujlfJc0JtlR-T0PmjILuYxtscZ_oH2tRd59urvxihox6PkXN69RS4fiF4EFIjfoi_YR_Si8Y4J4G3LkcI_6A3HKQ8dg2JYqTlJ46lonnryYSc_WKW1xTuVqgA==",
+        "title": "cnn.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBlABtZxe2K7_dUYM9srcESvemyAXvKXn6rKDzhaHW6K9XvtJC5Ajk6mAn7ZTu-ZARPa41gkveElppyfmKPdXV-yV3mAM24G6HtcGWZGTNhMhvM5mT_1XxsuBNsk3Q5bE5ClpsADkhHnXC9bdqgWWLZQMtvuRynXV9eEN-Q6dRFOZgFfvr_yPqZpdLrMeUp0E-mw==",
+        "title": "foxbusiness.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBKmFoWDblQiNO6lqb6dauQm7Turg1-WVKSINBvmPtX--8r1l5_9dDvRJSFGk-eu9OsAmveN-EnbhuBEEaI2y7UNM68tdmW8VutnGUFsOOC1VlpjXI7bUHjQwIAQcb6s0KK3yUdHfy1UZhfNtVnh14_mFjtL48ZUg4jd_1T6MSvY3BqwqOFHZF5yyO_y66Wo0_xoSYqzYi1Yk=",
+        "title": "businessinsider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRoQi4omq2EWCErJl7j730oybCjhGGajklGajasjcRnq6D5B-Y5rs_PXYfiytEL59PoAA2ONCjbuWinaLRfwieYZL5tcWmjh6Hl4VE59mznZ2mQri1CBA4JTQjaqQ3vJn28kqVk8zfVao13rjspj7Wh4AFDPxDlrLOM4XdqIdUgEFmGjJSbOvUZuJgHQK2Af840-TkQsnwgrFHaBh8_LUJikZJkePcsL201mjIHYFehXji7iqzQptgFhP8jejr4w==",
+        "title": "pbs.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4jPyoKcTi96l756iARKhotULjFflXqIAMQhyyiA2Hw3-G2DOobSSKrefvaNoaFcfDb85sMRBgQsQJoqj0R-eg2oqffHCTGQ_Iif1-ivRlRy6fg8Yz98lc7pfhmKHCuKzYAW3goTvCzWQ4NMyCoOyL6vaQCF39dnOOn_rIUQ==",
+        "title": "cbsnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8pn3E7Na7NvRQbOjszwr54HQ896GzUkcGdz6pq8whVihnCjOB_JyG6yzxU8Y1-385FMTmGKZWGYhuZm7L-QksS6WzdCK3Fr7fUjEEFfDFhjs_B7r9V7Xe08eZMZH5ZwpTIsD8LJ5_RayAQSSusBvowAj_jHS_1xqBWUlXlSYLXNKB8Ez6Pl2qs5yV_3wLO3tJydMWhwnkTNFg3HvFPcw=",
+        "title": "ua.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyD1knHytXzxB-_eM4hF7U1GK9p30085t0TEFqtUwplsXQLtLN9MGns4j1hF8NEbYZ3JnzRwTWq7m_0dzP_PN053ZdKrrBm48_-ankRLxyGyakLQ6UAN_maWHsS6329FQvfkuVfaU4lpvIefu3bdY7ZGc=",
+        "title": "hyper.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlHHFdWG4-gSRhjfAyRRKCy0OG6MB8vjXZ1AZ9PUtrRIhspylhY6aVh4S3qQMcfVFIPVm-xzKtMptn6YsLbi7IM7zOI_DSfI2dWwZf0LxxzOxe0NIyaGtDaQPWHqxHctaK1rvYK5hiQdMWfO0qCzC6tOwraMnTNhXuObMJcL3-CSmSuQRQu6O6Vw0B7D4=",
+        "title": "tradersunion.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRPSOtFGFYIy45dSFuGvB1Nqz-4AyjUppF4n4EXjQnWURIz7qqqfRfF59agNg0ltwkO35_e4xmBsOPskz3-bAC7xyNKDTY5UUd0RXoT81P2pVvVKmRMAxxHN1HWr_bXPPgvAmVcC4-UdGuxhj-uLoqMcm7ArQ5lj2CHs4q_R-EYG_-z_Bm8csU-Qw5LjU6TmS9Eyg2P1qVQYIGngidyQ==",
+        "title": "superpowerdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOvAoY21kaqbtfisuJfpETczfK4gfvsIm9jp8Sr6smMVxEK0GpcojL9TuNpFcT1jDMHErjsx2dGNYUFBMNESpD2hL9W_Qq6MsXjdiw7IkPs0Y1R4N4riskC2FCmASMh_-nT60h029pw6pVH64hwsPrDB-Yl5i0nTqVVGx6BxVGqophoeUop0r-917NI5IIk4-6cwgxc10=",
+        "title": "ksl.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfaABMYy9zvY4d2ighxglo-aAIwgeZt1C4hnNZprF-8jkFexOt58j7C6XCiQPjNewZF1WckM6UNo6efH92jbIJw2G2VOlzPaHy87ykbefJ8hnQvxBHlSqjRQKuHaeS7_A6Zwp5qwjEQX8EdE3jPy6-NPMR_zUL72H7btSqmJIDo8NlMfqp0Wgf2wlBcZV5mfBBSOBByIHDozHKLrlrXArUyz14x27gFkm2RYN_2cnbeyEeSniy",
+        "title": "channelnewsasia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHTieV5TQ-mGt_G03Gwv2HqyMQ36vUSNkllcjzWSGsKI0L9ad44dEyICBYe9bcZYwcnJfoWbkZxzvYwX6hBM3cjaynudCeHllksKXWXbj_bavtbZaqsSLCXbWf_YNEelnzWIM5s1z7YptFemyrJmNFeLiQwdvnvTEqni8jL2mDWA5MgmB7MOY7hpm7GQQ5EQycLhPqmAbgXaJZsBzp7WYonRneBVtvODfmkDZhry3iMzDIeY4=",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHscl52JNzaJCt9W144aALs-TZSU8QLEpq-ymYhA_QoGhW4gkoCjpSbQRJvxq8xF2Tv5FCLY29AzwLcj1teNN2t1eOB7JUeMMFFwJ73e1clnOHruxI82FP9495RL1zUgmohfstWGURWl80_Y0k_59uCyu44xZVq_4uE",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH16ZDNlGdsxBt5NMpyQsCzDDHNFAUS7Ck5IXh4m8M8j2M5jCkcSnL3LydFp71G7sFIiYCAAubcPOp9MZdhZBQNZTTPTjwD5TYPchzc6hfgBcNta6TEiYB5YCqeunz4vTHzraNEx3O9NhSRLsTtoqBLhUR6WAqt5l_YrcJZ-peg_qRtH4BX3PxaJAoXUiH3-TQU7FwJyq7793QKJh2tQWv-IeBrLvteKzi7ZWG3UaVLv9tCb1vvSOZo5VKiCHYKIw==",
+        "title": "amazon.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFX3TcnqAN_AqWEnjYayPOcYn9WAR7TkYikPD7QH6i1BqNQ-vhVzF8Qzamjsf9yP1SkrN29CWB_qOqeeviVRZ7aUNIpP9dQxTajKdTHw-tPFOikgmydkJOYviNpf6C1ZYJJNbp2ci4QtEr7cPbNK3g-b81TJ0RpMmqlblbBIIQLzCsjnIyg2m2bjHA6-gIZz6DfrqOMrhlPHrDPZhv0tfsBvkoCtTDiVloVBQp_lVP8oL9fdiorXpo=",
+        "title": "aws.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnkSCIKYQhiIXP00tM293v1cFZUvmNbTg_0uLX6APnK1l1KLrgzss54XOpGuQH_hgyBmkFKuMZalhuqnv8BCNUTSgyvThX1jSMrMYqdA9qd2i8uuGPYsWQBLhXQSPOTx_znVHdtWM-ey36DAaIVBh5Tc2YEOar",
+        "title": "amazon.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYaPFl6mRTip1mcPL5ouLSQmr_BNhP0wYhfyFmgZMgLUhh_yboFqtu5x2eIDv8ktQkjLZXZSqQ2XcrmZCYDEGAm98SVqDmvhr74j-tHaBnA3-s7xmraPgx1KU=",
+        "title": "sansec.io"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGv37rScszx2iXvwYlYxkjVIBGHLhL6tdCatxE-X3iq3Dqa0Fhgnr9FcTpkt_pS50du09AkAEiDAmJf2mXmtPvCT60GitozJrUmEvtvd-Pm5GcwB1xNbbXTAWAWM9o-y6wrz5JXV3uZ9FoupDoJbYG2xC13LVz_dLiTvYplVL9-wLLzt0Dy8j6Mlp4wXedrWP9_kZr2QmNac-lP4re3B_jdPX92Zz76hpcRrnFpxDFFtDLjzHyRbN6X6-5vTkahZQA=",
+        "title": "newsquawk.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGv3ES5hZ5bu1yqO8UbWQoP8EglSHzU3lF78ob0dPIOYSoJEi2ObWlYF6VXFmFAbn7JcpvW-AL-yH7tgKOqN62NYa7tgj9DtAJKenND0YNqs7ifkzJEG4pICgSxyd8xsI9zutiOEbDq2XH3gjYcUUMtlkaMlrq1S_vVDxhIFwOW_evOpmGI0gEOto_VpTOEQzVS3p3SpPC7PaH0-EimFvILfkMn0MGm1R3nbblbiV1jXb69kOhA1Pi_kpYrdgBsipvvxt2gf6E5skGalvgpluQmShdtLRKLplGveB4kgRidk1fWhwwpGxRAShoq",
+        "title": "tradingview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGINhwL9xDlQ0YWE2SmDAmDZ3Mx5lQiwvAQ_cZWXWnOEzqmLcE0mAYS3LcBKIvm4LOl7xhReaV0uBpjciS0j6JT9b1AK5ApspzXpsizyKRbCy8UZRW7wjYjPi7vNm9inj3_",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDgs-JnxbyAXhJwuMdHiUISL0CvYJzimiBpj2hKfo0kTCeB-NrXCoFzDjXYR4f7jyd5C8FG4hoZZNaLI0-Vw499hmr3tjXv5pG4jwNT9XWaz50zxkLR2849PAU-cUKXc1pgh1HsMwXGZA8Qra8b2LMBg==",
+        "title": "cbsnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4IKNCFxLYunBjo1V4X1lodZMQ-cRdIdKgYARw0vNEFvYvzK5Gmkc8vd1S3x4wtwbl_65010RIb1fIASwMk-bXKaaMWqe5S32R3rlkpgNDyIWMWLb-kgD_kRkPVorVVZR4TAzvJ_IrfkDfMiwITN737HSB_gUki5kj4iU=",
+        "title": "railway.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFosz6DyMVGLaZJ4NStL5zqeE6iLb7QkpRBWN0AW_JdFg9CuLXlU4nFGtZy3i-esdT4u2IuTaN71Wu-Asx7veBR1E6HqGNOAHpEh5nArFqqxOEF3S7rmXT2b01PSobHr5j9lPwVy7yL2H12Nhks1Q==",
+        "title": "cybersecuritynews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo24f7-vjYHPJQbCt1Ue9Aq5rDhGiZ4YRlBg9yYwphOKUmfWhuZPFS9YiV74X6Yr3hXEnoEif6EfinaU5t1r4mLpkDxh3L7UfPRbnbsK9-UMwhQCqimgIU3XwMsjKItt6ldm5QeHOa7g==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyk8MKcRZTM-nh8BQxMEjb7SVfZruAmKrvpvGmWA1K975DMrBv1G-UYrfpclOAeN3_me5Uk1-mWWN70YEjMHXTUxFUsBcTo-WNG-o6CRPclKlw-LDDQAqtah412qSxl8eLxNmXMcgLPn7zdJwQyA8BVR-R291XCkCcaByCX14=",
+        "title": "layerbase.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGR4hDZsfBDSrnLMWwXGsG3Ti1Ps-EgIzxlWm4xdq4oTCLPCO1o_AgB0i56FIzzQZUwMdaawBqchuiuZ9EooxrxqppcF1f0r2Qdl-LbON-ECJAqXXTJRfP4Uw==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtVCBdfVFJirK8JPyeZgwWjOyYgkWiSSEm-ISB88w0b8qrMqs2OHZR45b15jEXdOCj-c30zVBA8eoTTDhpB58hyJEi-IMTaQlZuG_Fnu--0rkRjfQpX6YfoGc=",
+        "title": "toolify.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZS-hAHM-E4Ly0WzlTQsjp9bBtb_waonknDIG6FeRf0RtpsjO-M6Y0qKRdH2vC_Noh_WO8fXRBNYVM_RKZCMd6LNZroWmXX7eCae1t4fKqju690-t1UTRb",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuUgx-ImCW6nB-Wf_kSy0QtixruivuLl5iu8AoEb37sn0fOxFkeoUjrPFw25Xyv7bVK8JLy9LbOV-uqyZtIeu0ecWXiYuBB1yu6CPirqXARqA0-zmN8uR409pkryP1jVd7z0eERroip2rlPw==",
+        "title": "auxoai.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 523,
+        "endIndex": 745,
+        "text": "**What is confirmed:** New Mexico State District Court Judge Francis Mathew ordered Meta Platforms to pay $25 billion in civil penalties following a jury verdict finding Meta liable under the state’s Unfair Practices Act"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 747,
+        "endIndex": 896,
+        "text": "The case stemmed from deceptive data-privacy statements linked to the Cambridge Analytica scandal, with jurors finding tens of millions of violations"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 900,
+        "endIndex": 1070,
+        "text": "**Important caveats:** Meta announced it will appeal the ruling, arguing the penalty is legally flawed and effectively imposes an unconstitutional restriction on business"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1072,
+        "endIndex": 1146,
+        "text": "Financial payout will be delayed indefinitely pending appellate litigation"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1150,
+        "endIndex": 1274,
+        "text": "**Suitable for publication today:** **YES** — Major legal landmark and record regulatory penalty against a major tech firm"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1393,
+        "endIndex": 1614,
+        "text": "**What is confirmed:** Walmart launched \"Agent Gateway,\" an Anthropic-derived Model Context Protocol (MCP) server enabling approved AI agents to search inventory and complete online purchases across Walmart and Sam's Club"
+      },
+      "groundingChunkIndices": [
+        5,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1616,
+        "endIndex": 1749,
+        "text": "Rolling out in November 2026, \"Agent Profiles\" will allow shoppers to set spending limits and manage individual transaction approvals"
+      },
+      "groundingChunkIndices": [
+        5,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1753,
+        "endIndex": 1908,
+        "text": "**Important caveats:** Walmart's open approach to agentic commerce directly contrasts with major rivals (such as Amazon) actively blocking AI shopping bots"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1910,
+        "endIndex": 2017,
+        "text": "Standard return rules apply, but Walmart does not guarantee automatic refunds for user-side AI agent errors"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2021,
+        "endIndex": 2131,
+        "text": "**Suitable for publication today:** **YES** — High-impact development in AI-driven e-commerce infrastructure"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2231,
+        "endIndex": 2398,
+        "text": "**What is confirmed:** Bloomberg and Reuters corroborated that Hangzhou-based AI startup DeepSeek raised ~100 billion yuan ($15 billion USD) in a private funding round"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2400,
+        "endIndex": 2487,
+        "text": "Major strategic backers include battery giant CATL and WeChat operator Tencent Holdings"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2491,
+        "endIndex": 2614,
+        "text": "**Important caveats:** Details originate from single-source financial reporting citing people familiar with the transaction"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2616,
+        "endIndex": 2743,
+        "text": "DeepSeek, CATL, and Tencent have not yet published formal press releases or official disclosures confirming the final cap table"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2747,
+        "endIndex": 2875,
+        "text": "**Suitable for publication today:** **YES** — Significant geopolitical and competitive shift in global AI model capitalization"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2995,
+        "endIndex": 3328,
+        "text": "**What is confirmed:** Amazon Threat Intelligence published telemetry showing an unknown threat actor began exploiting critical PHP remote code execution flaws (CVE-2026-109618 & CVE-2026-109619, dubbed \"PHP2Shell\") against AWS MadPot honeypots on October 17, 2026—four days prior to the official public patch release on October 21"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3330,
+        "endIndex": 3417,
+        "text": "Active exploitation across the web intensified immediately after patches were published"
+      },
+      "groundingChunkIndices": [
+        13,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3421,
+        "endIndex": 3508,
+        "text": "**Important caveats:** AWS confirmed its internal managed services were not compromised"
+      },
+      "groundingChunkIndices": [
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3510,
+        "endIndex": 3668,
+        "text": "Technical evaluation is ongoing to determine whether pre-disclosure probe attempts successfully breached live production servers outside honeypot environments"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3672,
+        "endIndex": 3787,
+        "text": "**Suitable for publication today:** **YES** — Critical cybersecurity incident impacting global Web infrastructure"
+      },
+      "groundingChunkIndices": [
+        15,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3894,
+        "endIndex": 4036,
+        "text": "**What is confirmed:** Advisers across Elon Musk's entities are pushing to combine Tesla and SpaceX, aiming for a deal announcement in H1 2027"
+      },
+      "groundingChunkIndices": [
+        17,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4038,
+        "endIndex": 4153,
+        "text": "Musk acknowledged on corporate calls that independent special committees have been established to explore synergies"
+      },
+      "groundingChunkIndices": [
+        19,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4157,
+        "endIndex": 4252,
+        "text": "**Important caveats:** This remains an unannounced proposal based on internal exploratory talks"
+      },
+      "groundingChunkIndices": [
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4254,
+        "endIndex": 4378,
+        "text": "Musk noted that a combination is not guaranteed and would require approval from at least 50% of all Tesla outstanding shares"
+      },
+      "groundingChunkIndices": [
+        18,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4382,
+        "endIndex": 4512,
+        "text": "**Suitable for publication today:** **YES** — High market interest regarding corporate governance and AI/aerospace consolidation"
+      },
+      "groundingChunkIndices": [
+        17,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4655,
+        "endIndex": 4806,
+        "text": "**What is confirmed:** Cloud platform Railway issued a security notice confirming unauthorized access to systems storing customer environment variables"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4808,
+        "endIndex": 4911,
+        "text": "In certain instances, attackers obtained decrypted credentials (e.g., API keys, database access tokens)"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4913,
+        "endIndex": 5027,
+        "text": "Third-party providers (including Anthropic and Stripe) began notifying affected developers of compromised API keys"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5031,
+        "endIndex": 5135,
+        "text": "**Important caveats:** Railway has temporarily paused deployment pipelines while investigation continues"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5137,
+        "endIndex": 5242,
+        "text": "The total number of impacted accounts and the exact initial breach vector have not been publicly detailed"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5246,
+        "endIndex": 5371,
+        "text": "**Suitable for publication today:** **YES** — Immediate operational impact for developer and cloud infrastructure audiences"
+      },
+      "groundingChunkIndices": [
+        22,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5468,
+        "endIndex": 5572,
+        "text": "GM unveiled plans for voice-controlled in-car assistant \"OnStar AI\" launching on the 2027 Cadillac Lyriq"
+      },
+      "groundingChunkIndices": [
+        25,
+        26
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5682,
+        "endIndex": 5775,
+        "text": "SAP reported Q3 cloud revenue up 25% YoY to €6.67B, beating analyst expectations (€6.57B)"
+      },
+      "groundingChunkIndices": [
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5890,
+        "endIndex": 5946,
+        "text": "AuxoAI formally announced a $20.7M Series A led by NTTVC"
+      },
+      "groundingChunkIndices": [
+        28
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "PHP2Shell AWS Wired Lily Hay Newman 2026",
+    "Walmart \"Agent Gateway\" MCP server AI agents shop website TechCrunch",
+    "\"Meta\" \"New Mexico\" \"Cambridge Analytica\" penalty 2026 OR 25B OR 25 billion",
+    "DeepSeek raised 15 billion Bloomberg Tencent CATL 2026",
+    "\"GM\" \"OnStar AI\" Cadillac Lyriq Wired Aarian Marshall 2026",
+    "SpaceX Tesla merger Trump Bloomberg 2026",
+    "Railway blog \"security disclosure\" October 21 2026",
+    "AuxoAI 20.7M NTTVC Series A 2026"
+  ]
+}

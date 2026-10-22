@@ -44,7 +44,7 @@ jobs:
           const h=normalise(html);
           for(const phrase of [
             'an appeal does not by itself establish that the judgment has been stayed',
-            'Railway advised all customers',
+            'the company advised all customers',
             'standard returns process applies',
             '8.2.35, 8.3.36, 8.4.27 or 8.5.12'
           ]) if(!h.toLowerCase().includes(phrase.toLowerCase()))throw Error('Email missing correction: '+phrase);
@@ -91,7 +91,7 @@ jobs:
           for(const phrase of [
             'standard returns process applies',
             'an appeal does not by itself establish that the judgment has been stayed',
-            'Railway advised all customers',
+            'the company advised all customers',
             '8.2.35, 8.3.36, 8.4.27 or 8.5.12'
           ]) if(!html.toLowerCase().includes(phrase.toLowerCase()))throw Error('Brevo lacks corrected phrase '+phrase);
           if(html.includes('does not could support refunds')||html.includes('payout is currently on hold'))throw Error('Brevo content is stale');

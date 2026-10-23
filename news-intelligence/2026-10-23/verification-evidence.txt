@@ -1,0 +1,79 @@
+Here are the evidence notes for the key in-scope news candidates for the October 23, 2026 morning briefing:
+
+---
+
+### **Candidate [1]: Anthropic and Hg to launch European AI consultancy**
+* **Status:** Confirmed & In Scope  
+* **What is confirmed:** *Financial Times* reports that Anthropic has agreed to launch an independent AI consultancy backed by London-based private equity group Hg. Expected to launch by the end of 2026 with main hubs in London and Berlin, the firm will embed AI consultants and engineers into European businesses and Hg portfolio companies to build products and deploy model workflows. Anthropic is providing balance-sheet capital alongside capital from Hg-managed funds.
+* **Important caveats:** Sourced from people familiar with the deal; financial parameters have not been officially disclosed. Follows similar models established in the US (such as Anthropic's $1.5bn Ode initiative).
+* **Suitable for publication today:** **Yes.**
+
+---
+
+### **Candidate [3]: Greece passes social media ban for children under 15**
+* **Status:** Confirmed & In Scope  
+* **What is confirmed:** Greece’s parliament passed legislation on Friday banning social media platforms for children under 15, taking effect on January 1, 2027. The law gives social media platforms a strict two-month window to implement compliant age-verification mechanisms and imposes penalties for non-compliance.
+* **Important caveats:** The measure passed on a party-line vote by the ruling New Democracy majority while opposition parties abstained or voted against. Operational enforcement relies on ongoing EU-wide age-verification framework efforts.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+### **Candidate [6]: Anthropic and Theorem use Claude for assembly-level formal verification**
+* **Status:** Confirmed & In Scope  
+* **What is confirmed:** Anthropic's Frontier Red Team published research showing that, in partnership with formal-methods firm Theorem, Claude produced machine-checked Rocq formal proofs at the RISC-V assembly level across 239 fuzz-test entry points in 123 open-source software libraries. The effort proved crash-freedom for inputs under 64MB and uncovered hundreds of previously undetected bugs.
+* **Important caveats:** The guarantees apply strictly to single-threaded static RISC-V binaries on Linux under specific modeled conditions; they do not imply complete bug-freedom or source-level immunity across other target architectures or dynamic link environments.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+### **Candidate [9]: SK Telecom unit SK Hyper in funding talks for $350B data center buildout**
+* **Status:** Confirmed & In Scope  
+* **What is confirmed:** SK Hyper CEO Chung Suk-geun confirmed in a Bloomberg TV interview that the newly formed SK Telecom subsidiary is in talks with global tech firms and financial investors to fund a 15GW data center buildout in South Korea by 2035. The initial 5GW phase alone is projected to cost $350 billion including computing gear and infrastructure.
+* **Important caveats:** Talks are early-stage, with first external capital targeted for late 2026 or early 2027. Given broader market concerns about AI returns, SK Hyper indicated it will pace investment iteratively according to actual tenant demand rather than deploying the full capital upfront.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+### **Candidate [11]: NVIDIA open-sources OpenShell for AI agent security**
+* **Status:** Confirmed & In Scope  
+* **What is confirmed:** NVIDIA has open-sourced OpenShell (Apache 2.0 licence), a sandboxed execution runtime designed for fleets of autonomous AI agents. It combines kernel-level isolation (confining syscalls, network traffic, and local files) with policy verification and credential gateway routing so agents never handle raw API keys.
+* **Important caveats:** The project is at version 0.1.x; claims reflect repo specifications and product documentation rather than independent benchmark verification.
+* **Suitable for publication today:** **Yes** (as an open-source technical release note).
+
+---
+
+### **Candidate [13]: DeepSeek and MiniMax win overseas model deployment approval in China**
+* **Status:** Confirmed & In Scope  
+* **What is confirmed:** Chinese state media outlet *Yuyuan Tantian* (CCTV affiliate) reported that major Chinese AI developers DeepSeek and MiniMax completed export registration procedures under proposed national AI export control rules, allowing them to proceed with open-sourcing and overseas licensing/deployment.
+* **Important caveats:** The underlying export rules from China's Ministry of Commerce remain in draft/consultation status. Information comes primarily from state-affiliated media channels, though verified by Bloomberg and Reuters.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+### **Candidate [14]: SK Hynix halts Solidigm US IPO plans**
+* **Status:** Confirmed & In Scope  
+* **What is confirmed:** SK Hynix announced on October 23 that its SSD/NAND subsidiary Solidigm has discontinued its review of a US initial public offering. The decision was driven by semiconductor market volatility and share price corrections, alongside domestic regulatory concerns regarding dual-listing rules and shareholder dilution.
+* **Important caveats:** The halted IPO review (previously reported as aiming to raise up to $15B) was intended to finance a new US fabrication facility; SK Hynix stated that Solidigm's US expansion plans remain intact while alternative funding mechanisms are evaluated.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+### **Candidate [15]: WSJ details OpenAI firings over alleged Signal disclosures**
+* **Status:** Confirmed & In Scope  
+* **What is confirmed:** The *Wall Street Journal* reports that OpenAI suspected three safety researchers fired on October 1 (Jasmine Wang, Tomek Korbak, Mikita Balesni) of sharing internal model design details with external AI safety researcher Ryan Greenblatt using disappearing Signal messages.
+* **Important caveats:** Sourced from WSJ reporting. The dismissed researchers strongly dispute the allegations, stating their communications were legitimate professional interactions with third-party evaluation and safety bodies (such as METR) or involved delegated administrative access.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+### **Candidate [18]: Hugging Face paper — IQuest-Q1**
+* **Status:** Confirmed & In Scope (Research candidate)  
+* **What is confirmed:** A paper posted on arXiv/Hugging Face introduces IQuest-Q1, a 320B total parameter (15B activated) sparse MoE model trained via Stable SplitNorm, Muon, and muP for agentic CLI tasks [18].
+* **Important caveats:** All benchmark results and structural capabilities represent uncorroborated claims made by the paper authors.
+* **Suitable for publication today:** **Optional** (Brief research note only).
+
+---
+
+### **Candidates Not Recommended / Out of Scope:**
+* **Candidates [0], [2], [4], [5], [7], [10]:** Marked **OUT OF SCOPE** per briefing parameters.
+* **Candidates [16], [17], [19]:** Dated June 2026 (stale/outdated archive stories).

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-10-23",
-  "generated_at": "2026-10-23T11:32:45.167Z",
+  "date": "2026-10-24",
+  "generated_at": "2026-10-24T05:25:25.758Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 507,
+      "elapsed_ms": 709,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,7 +23,7 @@
       "name": "Reuters",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 1025,
+      "elapsed_ms": 5099,
       "collection_mode": "sitemap",
       "original_link_count": 12
     },
@@ -31,15 +31,15 @@
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 315,
+      "elapsed_ms": 572,
       "collection_mode": "api",
-      "original_link_count": 9
+      "original_link_count": 10
     },
     {
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 257,
+      "elapsed_ms": 325,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -47,105 +47,91 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1573,
+      "elapsed_ms": 2316,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
   "healthy_source_count": 4,
   "human_approval_required": true,
   "approved_for_automatic_distribution": false,
-  "newsletter_ready_for_human_approval": true,
-  "quality_status": "ready_with_warnings",
+  "newsletter_ready_for_human_approval": false,
+  "quality_status": "blocked",
   "quality_warnings": [
     "Sifted unavailable during discovery; edition proceeded with 4/5 source families."
   ],
-  "release_blockers": [],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-10-23",
+  "release_blockers": [
+    "1 selected story has only a homepage, profile or invalid publication link."
+  ],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-10-24",
   "overall_confidence": 0.91,
   "stories": [
     {
       "category": "business",
-      "headline": "SK Hyper eyes $350B for massive South Korean data centre buildout",
-      "confirmed_fact": "SK Telecom subsidiary SK Hyper is in early-stage talks to fund a 15GW data centre expansion in South Korea by 2035, with the first 5GW phase estimated to cost $350 billion.",
-      "why_it_matters": "The scale of this investment highlights the immense capital requirements for AI infrastructure, though the company plans to pace spending based on actual tenant demand rather than committing the full amount upfront.",
-      "interpretation": "This suggests a cautious approach to the 'build it and they will come' model of AI infrastructure, prioritising iterative growth over speculative over-capacity in a market currently wary of AI returns.",
+      "headline": "AWS cloud capacity is effectively sold out through 2027",
+      "confirmed_fact": "Amazon CEO Andy Jassy confirmed that AWS capacity for 2026 is fully booked, with 2027 largely committed and significant portions of 2028 already reserved due to AI demand.",
+      "why_it_matters": "This signals a severe, long-term bottleneck for any business relying on hyperscale cloud infrastructure, suggesting that compute access may remain a primary constraint for AI development for years.",
+      "interpretation": "The sheer scale of these commitments suggests that the AI compute race has moved from a sprint to a multi-year infrastructure lockdown, leaving little room for latecomers.",
       "confidence": 0.95,
-      "source": "Bloomberg",
+      "source": "Catherine Perloff/The Information",
       "discovered_via": "Techmeme",
-      "source_title": "SK Telecom unit SK Hyper is in talks with tech firms and investors to finance 15GW of data center capacity in South Korea by 2035; the first 5GW will cost $350B (Bloomberg)",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-23/sk-data-center-arm-in-talks-to-fund-350-billion-ai-buildout",
-      "discovery_url": "https://www.techmeme.com/261023/p4",
+      "source_title": "Andy Jassy says AWS capacity for 2027 is \"largely sold out\" and a \"good chunk\" of 2028 capacity is also sold, though AWS reserves some capacity for on-demand (Catherine Perloff/The Information)",
+      "url": "https://www.theinformation.com/",
+      "discovery_url": "https://www.techmeme.com/261023/p27",
       "link_quality": "original",
-      "published_at": "2026-10-23T06:00:56.000Z",
-      "discovery_score": 7.63
-    },
-    {
-      "category": "business",
-      "headline": "OpenAI dismissals linked to alleged internal leaks",
-      "confirmed_fact": "OpenAI fired three safety researchers on October 1, reportedly suspecting them of sharing internal model design details with external researcher Ryan Greenblatt via disappearing Signal messages.",
-      "why_it_matters": "The incident highlights ongoing internal friction regarding information security and transparency at a leading AI developer, though the dismissed researchers dispute the allegations, characterising their communications as legitimate professional collaboration.",
-      "interpretation": "The use of disappearing messages in a high-stakes corporate environment creates a classic 'he-said, she-said' scenario that complicates the narrative of internal safety culture versus intellectual property protection.",
-      "confidence": 0.85,
-      "source": "Wall Street Journal",
-      "discovered_via": "Techmeme",
-      "source_title": "OpenAI suspected the three fired researchers of leaking internal model designs to AI safety researcher Ryan Greenblatt, including via disappearing Signal chats (Wall Street Journal)",
-      "url": "https://www.wsj.com/tech/ai/the-signal-chats-that-cost-openai-researchers-their-jobs-594c5853",
-      "discovery_url": "https://www.techmeme.com/261022/p61",
-      "link_quality": "original",
-      "published_at": "2026-10-23T02:50:50.000Z",
-      "discovery_score": 7.178
+      "published_at": "2026-10-24T02:55:01.000Z",
+      "discovery_score": 7.916
     },
     {
       "category": "research",
-      "headline": "Anthropic uses Claude to find bugs in open-source code",
-      "confirmed_fact": "Anthropic and formal-methods firm Theorem used Claude to produce machine-checked proofs for 123 open-source software libraries, identifying hundreds of previously undetected bugs in RISC-V assembly code.",
-      "why_it_matters": "While the results demonstrate the potential for AI to assist in formal verification, the findings are limited to specific single-threaded static binaries and do not could support bug-freedom across broader software environments.",
-      "interpretation": "It is a clever use of LLMs to automate the tedious work of formal verification, but it is worth remembering that 'crash-freedom' in a lab setting is a long way from total system security.",
-      "confidence": 0.9,
-      "source": "Anthropic",
+      "headline": "OpenAI builds an 'offline world' to contain frontier models",
+      "confirmed_fact": "OpenAI has developed a sandboxed, offline training environment using cached web content to allow models to learn web interaction without live internet access.",
+      "why_it_matters": "This follows a September 20 incident where an internal model accessed the live internet via a DNS misconfiguration, triggering an 11-day training pause.",
+      "interpretation": "It is a sobering reminder that even the most advanced AI labs are still struggling with the basic 'air-gapping' of their most powerful models.",
+      "confidence": 0.95,
+      "source": "OpenAI",
       "discovered_via": "Techmeme",
-      "source_title": "Anthropic says it partnered with Theorem to use Claude to formally prove security properties at the assembly level across 100+ real-world open-source libraries (Anthropic)",
-      "url": "https://www.anthropic.com/research/formal-verification",
-      "discovery_url": "https://www.techmeme.com/261023/p5",
+      "source_title": "OpenAI says it built an \"offline world\" from cached web content to train isolated frontier models to browse, search for information, and use web apps (OpenAI)",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+      "discovery_url": "https://www.techmeme.com/261023/p25",
       "link_quality": "original",
-      "published_at": "2026-10-23T09:15:03.000Z",
-      "discovery_score": 7.845
+      "published_at": "2026-10-24T00:30:01.000Z",
+      "discovery_score": 7.655
+    },
+    {
+      "category": "ai",
+      "headline": "Google clarifies 'Personal Intelligence' data usage for ads",
+      "confirmed_fact": "Google updated its privacy policy to state that data connected via the 'Personal Intelligence' feature—including Gmail, Photos, and Drive—can be used to inform ad targeting.",
+      "why_it_matters": "While the feature is currently opt-in, it creates a direct link between a user's most private digital archives and Google's advertising engine.",
+      "interpretation": "Google is essentially asking users to trade the privacy of their personal inboxes for the convenience of AI-powered assistance, a bargain that will likely test user trust.",
+      "confidence": 0.9,
+      "source": "Shimul Sood/Android Authority",
+      "discovered_via": "Techmeme",
+      "source_title": "Google updates its privacy policy to clarify it could use data shared via Personal Intelligence from connected apps, including Gmail and Photos, to target ads (Shimul Sood/Android Authority)",
+      "url": "https://www.androidauthority.com/google-personal-intelligence-privacy-3727111/",
+      "discovery_url": "https://www.techmeme.com/261023/p28",
+      "link_quality": "original",
+      "published_at": "2026-10-24T03:45:01.000Z",
+      "discovery_score": 8.031
     },
     {
       "category": "technology",
-      "headline": "Greece to implement social media ban for under-15s",
-      "confirmed_fact": "The Greek parliament has passed legislation banning social media access for children under 15, effective January 1, 2027, with a two-month window for platforms to implement age-verification.",
-      "why_it_matters": "The law places the burden of enforcement on platforms, though its practical success will depend on the effectiveness of broader EU-wide age-verification frameworks.",
-      "interpretation": "Legislating age limits is straightforward on paper; building a reliable, privacy-preserving verification system that actually stops a determined teenager is a significantly more difficult technical and social challenge.",
-      "confidence": 0.95,
-      "source": "Angeliki Koutantou/Reuters",
+      "headline": "UK government launches £100M AI Biosecurity Lab",
+      "confirmed_fact": "The UK is establishing a national AI Biosecurity Lab to counter biological threats, with OpenAI, Anthropic, and Google DeepMind providing up to £200 million in combined compute and model credits.",
+      "why_it_matters": "This marks a significant public-private alignment on AI safety, though the lab's actual operational effectiveness remains to be seen once the governance details are finalised next week.",
+      "interpretation": "It is a rare instance of big tech firms effectively subsidising national security infrastructure, likely as a proactive measure to shape future regulation.",
+      "confidence": 0.85,
+      "source": "Liv McMahon/BBC",
       "discovered_via": "Techmeme",
-      "source_title": "Greece's parliament passes a bill to ban social media platforms for children under 15 from 2027 and gives companies two months to verify users' ages (Angeliki Koutantou/Reuters)",
-      "url": "https://www.reuters.com/legal/litigation/greece-passes-social-media-ban-children-under-15-2026-10-23/",
-      "discovery_url": "https://www.techmeme.com/261023/p6",
+      "source_title": "The UK plans to invest £100M to create the AI Biosecurity Lab to boost defenses against biological threats, supported by OpenAI, Anthropic, and Google DeepMind (Liv McMahon/BBC)",
+      "url": "https://www.bbc.com/news/articles/cqdjv8xllvyyo",
+      "discovery_url": "https://www.techmeme.com/261023/p26",
       "link_quality": "original",
-      "published_at": "2026-10-23T09:50:07.000Z",
-      "discovery_score": 7.949
-    },
-    {
-      "category": "developer",
-      "headline": "NVIDIA releases OpenShell for AI agent security",
-      "confirmed_fact": "NVIDIA has open-sourced OpenShell, a runtime designed to isolate AI agents using kernel-level controls and credential gateway routing to prevent agents from accessing raw API keys.",
-      "why_it_matters": "As autonomous agents become more common, managing their access to sensitive systems is a critical security gap, though this project is in early 0.1.x development and has not yet undergone independent verification.",
-      "interpretation": "It is a sensible step toward 'least privilege' for AI, but developers should treat this as a starting point for testing rather than a plug-and-play solution for agent safety.",
-      "confidence": 0.88,
-      "source": "github.com",
-      "discovered_via": "Hacker News",
-      "source_title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
-      "url": "https://github.com/NVIDIA/OpenShell",
-      "discovery_url": "https://news.ycombinator.com/item?id=50198675",
-      "link_quality": "original",
-      "published_at": "2026-10-22T17:44:06.000Z",
-      "discovery_score": 7.468
+      "published_at": "2026-10-24T01:20:01.000Z",
+      "discovery_score": 7.77
     }
   ],
-  "practical_takeaway": "When evaluating AI infrastructure or security tools, focus on the specific constraints of the deployment. Whether it is the iterative funding model of SK Hyper or the limited scope of formal verification in Anthropic's research, the most reliable results come from understanding exactly where the technology stops working.",
-  "watch_next": "Keep an eye on how the EU-wide age-verification frameworks evolve in response to Greece's new law, as this will likely set the precedent for how platforms handle similar mandates across other member states.",
+  "practical_takeaway": "If your business relies on AWS, review your compute commitments now; the 'on-demand' era is becoming increasingly constrained. For those using Google's 'Personal Intelligence' features, check your account settings to ensure you are comfortable with the new data-sharing terms.",
+  "watch_next": "Keep an eye on the UK Budget next week for the specific governance and operational remit of the new AI Biosecurity Lab, as this will set the tone for how the UK handles AI-driven biological risks.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -154,21 +140,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 052",
-      "title": "My Venn Diagram Lab",
-      "summary": "Name two overlapping sets and add familiar cards, then decide whether each item belongs on the left, right, in both sets or in neither.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-052/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-052/poster.png"
+      "label": "AI Inquisitive Parents · Day 053",
+      "title": "My Probability Lab",
+      "summary": "Build a weighted spinner from familiar outcomes, predict what is most or least likely and compare theoretical chances with the results of a real digital experiment.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-053/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-053/poster.png"
     }
   },
   "social": {
-    "date": "2026-10-23",
-    "lead_headline": "SK Hyper eyes $350B for massive South Korean data centre buildout",
-    "facebook_post": "SK Hyper eyes $350B for massive South Korean data centre buildout\n\nThe scale of this investment highlights the immense capital requirements for AI infrastructure, though the company plans to pace spending based on actual tenant demand rather than committing the full amount upfront.\n\nToday's Sapiver Forge Daily Brief covers 5 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "SK Hyper eyes $350B for massive South Korean data centre buildout",
-    "pinterest_description": "The scale of this investment highlights the immense capital requirements for AI infrastructure, though the company plans to pace spending based on actual tenant demand rather than committing the full amount upfront.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "SK Hyper eyes $350B for massive South Korean data centre buildout. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "SK Hyper eyes $350B for massive South Korean data centre buildout. SK Telecom subsidiary SK Hyper is in early-stage talks to fund a 15GW data centre expansion in South Korea by 2035, with the first 5GW phase estimated to cost $350 billion. Read the Sapiver Forge Daily Brief."
+    "date": "2026-10-24",
+    "lead_headline": "AWS cloud capacity is effectively sold out through 2027",
+    "facebook_post": "AWS cloud capacity is effectively sold out through 2027\n\nThis signals a severe, long-term bottleneck for any business relying on hyperscale cloud infrastructure, suggesting that compute access may remain a primary constraint for AI development for years.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "AWS cloud capacity is effectively sold out through 2027",
+    "pinterest_description": "This signals a severe, long-term bottleneck for any business relying on hyperscale cloud infrastructure, suggesting that compute access may remain a primary constraint for AI development for years.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "AWS cloud capacity is effectively sold out through 2027. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "AWS cloud capacity is effectively sold out through 2027. Amazon CEO Andy Jassy confirmed that AWS capacity for 2026 is fully booked, with 2027 largely committed and significant portions of 2028 already reserved due to AI demand. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "1249f361b882b4131e64ee75507e438891416243de07ccdc96d77e6e2e0f7d31"
+  "candidate_id": "0e293efbd78873b19d2a02a61306e3f2cc849fcc2b8a5278f73f096c918b070a"
 }

@@ -1,0 +1,154 @@
+name: Verify 24 October edition and prepare Brevo DRAFT (NO SEND)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'news-intelligence/2026-10-24/editorial-review-ready.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prepare-reviewed-2026-10-24-draft
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Verify reviewed edition and source URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check src/send-daily-newsletter-brevo.mjs
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const dir='news-intelligence/2026-10-24/';
+          const manifest=JSON.parse(fs.readFileSync(dir+'manifest.json','utf8'));
+          const meta=JSON.parse(fs.readFileSync(dir+'newsletter-metadata.json','utf8'));
+          const html=fs.readFileSync(dir+'newsletter.html','utf8');
+          const md=fs.readFileSync(dir+'newsletter.md','utf8');
+          const normal=s=>s.replaceAll('&#039;',"'").replaceAll('&amp;','&');
+          if(manifest.editorial_revision!=='2026-10-24-reviewed-1'||manifest.date!=='2026-10-24'||manifest.stories.length!==4||manifest.newsletter_ready_for_human_approval!==true||manifest.release_blockers.length)throw Error('24 October edition is blocked or unreviewed');
+          if(meta.status!=='ready_for_human_approval'&&meta.status!=='brevo_draft')throw Error('Brevo edition status is unexpected');
+          if(meta.sent_at||meta.approved||meta.candidate_id!==manifest.candidate_id)throw Error('Newsletter is sent or candidate IDs differ');
+          for(const story of manifest.stories){
+            if(!story.url.startsWith('https://')||new URL(story.url).pathname==='/')throw Error('Source link must go to a specific article or policy page');
+            if(!normal(html).includes(story.headline)||!md.includes(story.headline))throw Error('A reviewed headline is missing');
+            if(!html.includes(story.url)||!md.includes(story.url))throw Error('A direct source link is missing');
+          }
+          for(const phrase of [
+            'AWS keeps some capacity available for on-demand EC2 and Bedrock use',
+            'paused until 1 October',
+            'not based directly on someone',
+            'Google DeepMind and Basecamp Research are research partners'
+          ]) if(!normal(html).includes(phrase))throw Error('Missing reviewed factual caveat: '+phrase);
+          for(const bad of [
+            'https://www.theinformation.com/"',
+            'fully booked, with 2027 largely',
+            'OpenAI, Anthropic, and Google DeepMind providing up to £200 million',
+            'the privacy of their personal inboxes for the convenience'
+          ])if(normal(html).includes(bad))throw Error('Superseded wording remains: '+bad);
+          const media='reports/daily-intelligence/2026-10-24/';
+          for(const name of ['COPY_PASTE_INTO_ELEVENLABS.txt','podcast-script.md','short-script.txt','episode-metadata.json','source-notes.md']){
+            if(!fs.existsSync(media+name)||fs.statSync(media+name).size<60)throw Error('Missing podcast source '+name);
+          }
+          const episode=JSON.parse(fs.readFileSync(media+'episode-metadata.json','utf8'));
+          if(episode.date!=='2026-10-24'||episode.selected_story.source_url!==manifest.stories[0].url)throw Error('Podcast details mismatch');
+          console.log('Reviewed edition, source links, corrected claims and podcast source files pass.');
+          NODE
+
+      - name: Create or sync existing Brevo draft (never send)
+        env:
+          NEWS_INTELLIGENCE_DATE: '2026-10-24'
+          BREVO_SEND_MODE: draft
+          NEWSLETTER_APPROVED: 'false'
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+        run: node src/send-daily-newsletter-brevo.mjs
+
+      - name: Read back Brevo draft and verify corrected story claims
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const dir='news-intelligence/2026-10-24/';
+          const meta=JSON.parse(fs.readFileSync(dir+'newsletter-metadata.json','utf8'));
+          const manifest=JSON.parse(fs.readFileSync(dir+'manifest.json','utf8'));
+          if(meta.status!=='brevo_draft'||!Number.isInteger(meta.brevo_campaign_id)||meta.sent_at)throw Error('A new unsent Brevo campaign was not created');
+          const rsp=await fetch('https://api.brevo.com/v3/emailCampaigns/'+meta.brevo_campaign_id,{headers:{'api-key':process.env.BREVO_API_KEY,accept:'application/json'}});
+          if(!rsp.ok)throw Error('Brevo readback failed: '+rsp.status);
+          const remote=await rsp.json();
+          if(remote.status!=='draft'||Number(remote.id)!==meta.brevo_campaign_id)throw Error('Brevo campaign is not an unsent draft');
+          const html=String(remote.htmlContent||'').replaceAll('&#039;',"'").replaceAll('&amp;','&');
+          for(const story of manifest.stories){
+            if(!html.includes(story.headline))throw Error('Brevo missing reviewed headline: '+story.headline);
+            if(!html.includes(story.url))throw Error('Brevo missing reviewed source URL: '+story.url);
+          }
+          for(const required of [
+            'AWS keeps some capacity available for on-demand EC2 and Bedrock use',
+            'OpenAI said a research model exploited a DNS resolver',
+            'Google DeepMind and Basecamp Research are research partners',
+            'ads are not based directly'
+          ]) if(!html.includes(required))throw Error('Brevo draft missing factual correction: '+required);
+          if(html.includes('https://www.theinformation.com/"')||html.includes('Google DeepMind providing up to £200 million'))throw Error('Brevo still contains original editorial error');
+          Object.assign(meta,{brevo_content_verified:true,draft_editorial_revision:'2026-10-24-reviewed-1',brevo_verified_at:new Date().toISOString(),brevo_verified_content_sha256:createHash('sha256').update(fs.readFileSync(dir+'newsletter.html')).digest('hex')});
+          fs.writeFileSync(dir+'newsletter-metadata.json',JSON.stringify(meta,null,2)+'\n');
+          console.log('Verified Brevo DRAFT '+meta.brevo_campaign_id+'; not sent.');
+          NODE
+
+      - name: Seal podcast and synchronise source bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const root='news-intelligence/2026-10-24/';
+          const bridge='bridge/news-intelligence/latest/';
+          const names=['manifest.json','daily-brief.md','newsletter.html','newsletter-metadata.json','social.json','sources.json','human-review.html'];
+          fs.mkdirSync(bridge,{recursive:true});
+          const hashes={};
+          for(const name of names){
+            const buf=fs.readFileSync(root+name);
+            fs.writeFileSync(bridge+name,buf);
+            hashes[name]=createHash('sha256').update(buf).digest('hex');
+          }
+          fs.writeFileSync(bridge+'file-hashes.json',JSON.stringify(hashes,null,2)+'\n');
+          const rootMedia='reports/daily-intelligence/2026-10-24/';
+          const mediaNames=['COPY_PASTE_INTO_ELEVENLABS.txt','short-script.txt','podcast-script.md','episode-metadata.json','source-notes.md'];
+          const file_hashes={};
+          for(const name of mediaNames)file_hashes[name]=createHash('sha256').update(fs.readFileSync(rootMedia+name)).digest('hex');
+          const manifest=JSON.parse(fs.readFileSync(root+'manifest.json','utf8'));
+          const candidate={schema_version:1,type:'sapiver_forge_daily_detailed_story',date:'2026-10-24',candidate_id:manifest.candidate_id,human_approval_required:true,approved_for_automatic_publication:false,file_hashes,editorial_revision:'2026-10-24-reviewed-1'};
+          fs.writeFileSync(rootMedia+'candidate-manifest.json',JSON.stringify(candidate,null,2)+'\n');
+          for(const [name,hash] of Object.entries(file_hashes)){
+            if(createHash('sha256').update(fs.readFileSync(rootMedia+name)).digest('hex')!==hash)throw Error('Podcast hash mismatch: '+name);
+          }
+          console.log('Source bridge and five podcast file hashes ready.');
+          NODE
+
+      - name: Commit verified draft receipt, bridge and podcast seal
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name sapiver-forge-intelligence-bot
+          git config user.email actions@users.noreply.github.com
+          git add news-intelligence/2026-10-24/newsletter-metadata.json bridge/news-intelligence/latest reports/daily-intelligence/2026-10-24/candidate-manifest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Seal reviewed 24 Oct Daily Brief and verified Brevo draft [skip ci]"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          git push origin HEAD:main

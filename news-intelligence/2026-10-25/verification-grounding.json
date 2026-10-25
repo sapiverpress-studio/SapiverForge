@@ -1,0 +1,566 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=Kimi+K3.1+Pro+VentureBeat+Moonshot+influencer&client=app-vertex-grounding&safesearch=active\">Kimi K3.1 Pro VentureBeat Moonshot influencer</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22LSEG%22+OR+%22London+Stock+Exchange+Group%22+Octus+3.54+billion+OR+3.5B&client=app-vertex-grounding&safesearch=active\">&quot;LSEG&quot; OR &quot;London Stock Exchange Group&quot; Octus 3.54 billion OR 3.5B</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Fierce+Healthcare+Baba+40M+Series+A+FirstMark&client=app-vertex-grounding&safesearch=active\">Fierce Healthcare Baba 40M Series A FirstMark</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=CapitalOS+21.9+million+Series+A+LGVP+Axios&client=app-vertex-grounding&safesearch=active\">CapitalOS 21.9 million Series A LGVP Axios</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Instagram+launches+Apple+TV+app+MacRumors&client=app-vertex-grounding&safesearch=active\">Instagram launches Apple TV app MacRumors</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Axios+Maria+Curi+AI+CEOs+political+liability+Washington&client=app-vertex-grounding&safesearch=active\">Axios Maria Curi AI CEOs political liability Washington</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Roku+developer+blog+gitlab+move&client=app-vertex-grounding&safesearch=active\">Roku developer blog gitlab move</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Bloomberg+Blackstone+CoreWeave+chip+backed+debt+private+credit&client=app-vertex-grounding&safesearch=active\">Bloomberg Blackstone CoreWeave chip backed debt private credit</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUyDDrGuLPcUPINb5rc7R4KTJgrx_kQDXcbuZFcTO3ZjYJCdBcGGPyvjJk44z2LGpQgSpyaGC9KW47nHPvu5G3L1NPmgsSvzvdlfGMac44JUZvw8c=",
+        "title": "digg.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfapzL2fbxcIzzrbcsfyW-fQMstC5yyxXoCnG_30A3n6XNBgCouovj2WAu7JgZEIfQxEeGCPPvJIW4TbL62thGcmFin2c9fSm2hp1V5w2LXCgnObIBPHVUzmqrKB8ttL3gAArMfT_CTGlAwykq1o6BsY0f5VvSFRGepIv6Pba1Q_NM6l5-QIZXHiF0inkR1UZVUNqLaHUMBSz5spV2np8iCcrBb2UPhVmDvrAhPY48kXSLgXzPmahjTfb-KtqS3VnyT6msbccS2fa0SDDWmuiPssPCMQ==",
+        "title": "finanznachrichten.de"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEem9eGH9PL40-r4VBpLl6WZrYFHoo7hFikNn5ikvWdHCh1VLinJTsm48uAtlNvb37V6FIWA6Pun8lu6XaQapDGm76NIRVDTOBxk_Ki9W34sY7ZCWD_fytn-Th7KE2oOaXhnXLUOysZe66pue4NassxSqHg608sCI_RpqIj_fpd2k343GPCSSH8FtOkHNoMQB3NLgExF3xpRy2Y93fu5ilzAiI=",
+        "title": "thepaypers.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQQ3W2EyAYPbxMxHPELwK_WkV7CNSDMGwIAzLZ_30VeR-moTlKSQhN3WewXQiwbrEywBnSGQN7kjzIx5db_RsWb9_7tbXAmrJ8JdC1KrV0iyjn0uiEqZEO8FLFgKiXRqCG6KWvh-6IGleMnsyELs9lMC0AeWxz80mbsgkdzGKmcfnTsvIFIRK1ASMop1xYXaZk1UZ6ys_VL-Lx8vemXs0lHnTiJNCWn3-q_EYN1_7ptzFG",
+        "title": "the-independent.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFp7QBltpND1LTiRcqpZ-9jWyG2FW0AdX-I9-nCmzJBjZSJFi7b6sbRGvPX1TVmytg6lc7wm4eDBib1jCe33LLunC7253QQ4WSB0JFieog5w60ftK9JBjUT7MisgS3YqI=",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGONPHmIrV0AeF35SXZDxHX9xlHiGU2LRKExHuQh9Kg_-CYH17P7c5C-YAZV96_YWYDpwlCn0sZiiicsEJuv_aCN4hqnxw61Q7C7MwMRdngHBj2-0WyorjXrhHi80lLFNvYerVwsHKMhR3lThOTFDPqW0GEqcskbPrKj7R4dHLWK79IK1y3PoRXUUI1Kc3tksoNkPb_vmH_ph1tFJaSwpnexsUfrqKNrL-cww==",
+        "title": "futunn.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWbt73LzotK2cp-7tM_IMgUna30mXML24yQPvPN64tbWbz-X8c4YAB8juyDrWYSurhIB449ZJhgz1AjcEb3hTAVKp9dywQzhDB7oQUDq26QgT18wuxd1hJoREPZWw=",
+        "title": "instagram.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEONXcuDf2uu__tKmQ09R6bYIkrV8RtCr8WKssn5LJwl3vJnlCy3pCgLAtQeLPAm_noMxbqHXERaBReoDnsF4Xl5I7DIEV4i1lbebTOeDkYCcnSmsz-n8A0HiadVXn2ugAu_dosJOmYbYbIOb-olpCCNdAQsz2Cqq__fQ67jUtAfBXpxV1jyHn635asd3j_xJ1QBoG2J9lJ-rMG_JIieiyqzQ==",
+        "title": "privateequitywire.co.uk"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKgmqWysYJugVh_fk_F5Vqu-2-VUv-WKYL75lXvBjq9oRNM_fLpqkeaWXK91tt5C3np4ADvTXNOuER_w-ncLbJwDdZLtDwAC7l_X8UUrmRGth_MAaOx7AxlSmSj6_Gknba3Q_9sna8bMjWiZqMDct8PEkQZaJwg8-vSG2L16Py4AfqnZM=",
+        "title": "goldenera.si"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwQeNMzbvb4MbADucypydDCaMIiecA9NHFfeHHbxr9umSWu6S9UMfZ5zfKZj4o4WwJsFwvAcunYn1If8B5UpOPbd8yzvPObFHYSoffggxUS9DxSk02ZztFsyxWnU33X4e6rvjqFyWtpyJ0cm9q6U6-9dugApsMEkkdif8JKPmSCfKzvoDJlrn2lK8VUViDUxXRqD60d9aPiwWAEqcMrr8AeHx_sb-cpDCyj-cRq9w7VudjqDqY4OufGRBTDmXx",
+        "title": "venturebeat.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEicGh3moUKMF3N4BDtjWbi-epjma6Yyu0o07v_-yN2Fhhrf23tNJx_cSoYheeOyu0F8ntnE3klABWZp2ZVylyuCu5Lglqqyk0lKhTZ-f6kQxQwht6fxNYT4clfgEqEw3hPmaszKzqdA0Hx1YGHO-sMwS-Z-vq0eVV-QUmMCrZbOHFFlOf2w6oJ7F_xMKVUTll9Rg==",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgGD_gDwoLe62HTUxPj4MaL-S_bY5dDjKXvNe4YLgoTqXD5OJAwJGMBq3yO5E5B_4U-R5n7pBR1HQkgPuUtxL0XCY-8W_BPrMnmG2CvHKZEYCymZ4gl4LBZMGC4z9XxuIm",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2c0nIHfvnXks3Rn-NDI30e4aDER3YoN7P_mJh-gwodaBBaJbmBlviyRrXOMsh0e1-jFrpBNMHxftadJT01sO0_bWPVkk67AXm0jxQPKaZcfCpk-wYJ-BmgI8Ox0lLXwlciutLQYYXwvwfF_cAIyR5nFleg7mqK7mLzIqabVLJH3HxK0qWHjb553QZfDgZta4kUvR9YivdgR7fCVO506Ia",
+        "title": "explainx.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFl3LhgbQ2fWtztQEHPcTtyzYBpBHvgAjMgBbSqC8cwVbTiXEPy-C188tSFYd8g_tgezNTUzQBv5D4wCR1q9USsxMKRKAl08RGWDnH3kdU4yZG8M8vYNekAeVa0-JFkMkmVxpBF8Ep-2s764Ucv8PdouEW3SXs2LeDuAh7d",
+        "title": "axios.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMgsAh8d5oRp-6uJ1lOX1JQ966pm-fUUVjX4makvrdwTUzASgQlaRWnWbV2YrpPqz9yvek68ExpgwBBQoTwhYnPJFa_vnDsuU-yOIV_N76nJAfgWR4Q7C04S7GCRvOBIPhS9vlB_gwKBZJEt_VrHC1nyhdz-MeyLN7Nra3AkxahdVeGfWv91aTXb4B3m3A1YtFlkl01K78qy4lpqlO58RO0VrB0vcjVvutheCmLS9wOllZY7Q=",
+        "title": "fiercehealthcare.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHIpEGZnWITuDQYmqIvz-JY-krsqWhqt_11Gh4uSlMPuW6orIfShhu1-cUV8EkTGQ5g1Eg477No7ObZyKkkrfzKzpNHQbbgpg_VaKWlCO6RdTqCntMVZSaSlIGe4Wvrbz4QHLwF1jJtg8OYqfno4bl2YTgNhhrekSMqr0MFn2U-CaXvXy-ub3CP-JVJNlgVtGIrcHYUDBdhXbo0SeQpoWj5E9ch0l53VDJBDfvR0lVlW2ArH4M5SNmgYUZpMoWomxpolaI5TUqIp6YSlSRnDHvFhGI",
+        "title": "globenewswire.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzmGPsnf3e9NcN65K1Y7kTe9ngHyzNXBSubvQjxCcyIPQiZZsOst0kJ0c5aHZlQ5L9tAeZxcApSf_mb5IQcYTzEUOzc2QYRGAXuafwjoeBEVCicABe1xL79Q8IY4016JqoszcfE2nv05mBMWZ8H7UswY86_WHwcJHZvus=",
+        "title": "firstmark.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3X54JY7zuvEzcp3TdDs_oIaNbXVkGcfna_PDIp1nurlP0Ut_7KLqPnVwR0G8_X30uaJcNFMkj2Ioou58wYHxd7hcr0aBHFIX53qDrowPTh5S8VGfjbyXNCoNxwlcrRMG4u4_ZCcgzGhi-_xhogtwQHQKYdW_NYKyEZ3FyF6Igm6jPPBWDpvO0r8WhRryxyRy9wEVjrZtp48v61Ds7doJPZF3OjsiV_Kcfd_-DjIRQ3kv1nqh9Z-aF",
+        "title": "hitconsultant.net"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGguNjcsdv9ktx6YOxR6CQoiXy8HK3YbNSEvoDJB10eqKp8oSzsJfCOfPpuJp6pjcCQ2TAvRC9aZIqPXbL0ERJBbtg9WXq8pxKMEwM12AENYazAZXmeXQA6KRZMmk34fgQm_Z9Pjw-gB-7-ob-pPL0Y8AIIhnZR8772d7N_6z_3eD6TNx4=",
+        "title": "finsmes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHu_9mKmnjKltQjEPA0dDX4I1BwzXdGllYGvrVDxA8FG_Lf8jUQDoZzzJdGBLVlVtApcEAOHxCS1wlnbdjnx4K2o3PaLgWVbTgqQX5XZhsVkskZN4f9tmDDfN0RUOGVt3ZuQAgDg718YcJWJlXBUfmMZ8ftr65eUigLSmFepkq1tCDJr0Dr_l0YYa4AmTFfezsnPTw3Bc0Ln-_nXjBQemrsey_1WHnRdJo2_aIYnq8oG_s7Zw==",
+        "title": "citybiz.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjiYHlje050OuFeF22r8t0AgFLTzQVAYxodQzlE1Mq5RMtRqBBAWElH3QLQIA5MzzUdb9qkeNnPPTlhTxa2ftYlANTe3U92tGi5D4vipdvc2CUQV-SVbiJNHrwQaCGB2ovEXwK5AV2KJru8Npis2FFFtJqfye0sk-hehXkJrTuFCm0JmEME7VD2O2EIVLejL4MkQuWuBsAILpeBVy68sX-9qxlQL1LBpohkapMwzTx",
+        "title": "yourinfodaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnzm9VfjTQGelhDa_9KgDFQjxiBhPe9_6eOW3mucVCB1TAxs3P6QvtBnkVbt3VrrddYsUBlPJOPkjrvxjlrX6hrawXR4B8irrwxNY5S7mC9gifnnbhbpX0TMhbmq3cBnnNir-nHnzqMzWyWZ-yHfqhvGGUapD1UnFzDw4=",
+        "title": "macrumors.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBa3DBoL0W7JOKWVzFNRn0TwY87bPqg_hj83Qjx98rWyplyDZElB0COjOsDpthoDSTVUwKpG_R3_G-1YffDVqcXut5WvBr7fZ1zQOGtyTa8nGKKzLrtibVCT8BrNevmizjz6G1m894CLQ=",
+        "title": "androidpure.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE876-Ybu1LPHlFewU7IsfN8uP_yccouBjJgMbrtI_Op7Mfr4i3jZMA5M9K-4x1PY-YxxLErrPmln_BDnKsSXySkxiC3EKKliWnIn7pd1HSS4LkRbkUGuEoPWsxT7ptD9Jb",
+        "title": "roku.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEs2cq8Rnm5ISD9EwesvZELs7eNcA3ZJu41elXwUUgguOWf1Cmztv4nU5zYnA-e4BtXbypJtibc7n27oX2DN601Otage34_P_DceK5804JVoE_1n48c3gAam66eb_jCMgrZBaNFLtdrGxS_gcUvkOCM-rMyZfLwrUK_BEADTPUn9veT72BamwVEQh63amEXw==",
+        "title": "roku.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIuIAOTXXN5f8Cxp-3H-0g_dUiHo29Gaa-5ePUbXhdMx_X-SzmZvUdecyWF_RSAwfK5_d57h7NvcTnRP2Cgm4WXFwgmPzIB7iYwDl1s17j-TDI1I7YmZOSpaEobV9dHP1juUI=",
+        "title": "ycombinator.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 366,
+        "endIndex": 563,
+        "text": "London Stock Exchange Group (LSEG) announced a definitive agreement to acquire New York-based credit analytics and data provider Octus for $3.535 billion in cash from Permira and company management"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 569,
+        "endIndex": 668,
+        "text": "Octus provides structured data and intelligence on private, illiquid, and distressed credit markets"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 674,
+        "endIndex": 818,
+        "text": "The transaction is LSEG’s largest acquisition since its 2019 Refinitiv deal and is slated to close in H1 2027, subject to regulatory approvals"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 849,
+        "endIndex": 914,
+        "text": "Completion remains subject to antitrust and regulatory clearances"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 916,
+        "endIndex": 995,
+        "text": "Revenue growth projections ($300M+ projected for 2026) are management estimates"
+      },
+      "groundingChunkIndices": [
+        0,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1056,
+        "endIndex": 1120,
+        "text": "** High relevance for a UK-focused financial technology briefing"
+      },
+      "groundingChunkIndices": [
+        2,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1368,
+        "endIndex": 1537,
+        "text": "A landmark $2.3 billion private credit deal led by Blackstone for CoreWeave in 2023 established GPU-collateralized borrowing as a blueprint for funding AI infrastructure"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1543,
+        "endIndex": 1641,
+        "text": "Broad market reports show chip-backed debt expanding rapidly toward a projected $1 trillion market"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1647,
+        "endIndex": 1742,
+        "text": "CoreWeave, which now holds over $50 billion in total debt, is experiencing public market stress"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1647,
+        "endIndex": 1905,
+        "text": "CoreWeave, which now holds over $50 billion in total debt, is experiencing public market stress: default swap (CDS) spreads recently surged past 1,000–1,200 basis points, and bond yields rose to 15%–16% amid investor scrutiny of AI infrastructure returns"
+      },
+      "groundingChunkIndices": [
+        6,
+        8,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1936,
+        "endIndex": 2098,
+        "text": "The $1 trillion overall market figure represents forward-looking forecasts by investment banks and private capital analysts rather than settled historical figures"
+      },
+      "groundingChunkIndices": [
+        5,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2159,
+        "endIndex": 2272,
+        "text": "** Excellent structural story detailing the financial mechanics and credit risks behind the AI computing buildout"
+      },
+      "groundingChunkIndices": [
+        5,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2618,
+        "endIndex": 2792,
+        "text": "1 Pro, which achieved a top score of 55 on Artificial Analysis's Intelligence Index, outperforming major proprietary models on complex coding and multi-step agent evaluations"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2798,
+        "endIndex": 2894,
+        "text": "Moonshot announced plans to release open weights for the model under license on November 4, 2026"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2900,
+        "endIndex": 3086,
+        "text": "Concurrently, tech creator `@elshayib_` leaked promotional briefs alleged to be from Moonshot or its agency instructing creators not to tag promotional posts with paid partnership labels"
+      },
+      "groundingChunkIndices": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3117,
+        "endIndex": 3273,
+        "text": "The leaked promotional brief screenshots have not been independently authenticated by third parties, and Moonshot has not issued an official public response"
+      },
+      "groundingChunkIndices": [
+        10,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3275,
+        "endIndex": 3365,
+        "text": "Benchmark performance claims, however, were independently validated by Artificial Analysis"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3426,
+        "endIndex": 3530,
+        "text": "** Combines major technical benchmark results with important disclosure and marketing compliance context"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3767,
+        "endIndex": 3892,
+        "text": "Bipartisan lawmakers and Hill staffers report growing political fatigue and skepticism toward frontier AI executive briefings"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3898,
+        "endIndex": 4153,
+        "text": "Policymakers express frustration that AI leadership alternates between promises of hyper-growth and public warnings of existential doom or digital sentience, which complicate practical regulatory efforts around cybersecurity and practical safety standards"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4184,
+        "endIndex": 4322,
+        "text": "Based on background interviews and sentiment from legislative staff and advisers rather than formal statutory proposals or committee votes"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4383,
+        "endIndex": 4463,
+        "text": "** Useful political pulse-check on legislative sentiment toward frontier AI labs"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4675,
+        "endIndex": 4848,
+        "text": "Applied AI care platform Baba raised $40 million in Series A funding led by FirstMark Capital, with participation from CVS Health Ventures, Valtruis, and returning investors"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4854,
+        "endIndex": 5011,
+        "text": "Baba pairs AI agents with human care teams to assist Medicare and Medicaid beneficiaries with care navigation, scheduling, and insurance administrative tasks"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5017,
+        "endIndex": 5091,
+        "text": "The company was previously selected for CMS’s 10-year ACCESS model trial"
+      },
+      "groundingChunkIndices": [
+        14,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5122,
+        "endIndex": 5217,
+        "text": "Usage metrics (10,000 active patients and 100,000-person waitlist) are startup-reported numbers"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5278,
+        "endIndex": 5379,
+        "text": "** Strong funding signal for specialized vertical AI agents tackling healthcare administrative burden"
+      },
+      "groundingChunkIndices": [
+        15,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5599,
+        "endIndex": 5755,
+        "text": "B2B infrastructure startup CapitalOS secured $21.9 million in Series A funding led by LGVP, with participation from WEX Venture Capital, Group11, and others"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5761,
+        "endIndex": 5935,
+        "text": "The platform provides white-label card issuing, bill payment, and automated underwriting infrastructure via AI agents to help vertical software vendors embed spend management"
+      },
+      "groundingChunkIndices": [
+        19,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5966,
+        "endIndex": 6060,
+        "text": "Reported transaction volume growth numbers (1,000% over 18 months) are unaudited vendor claims"
+      },
+      "groundingChunkIndices": [
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6394,
+        "endIndex": 6553,
+        "text": "Meta has officially launched an Instagram app for tvOS (requiring tvOS 26.0 or later), bringing Reels, longer-form creator videos, and live streams to Apple TV"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6559,
+        "endIndex": 6687,
+        "text": "This completes a multi-device television strategy following earlier releases on Amazon Fire TV, Google TV, and Samsung smart TVs"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6718,
+        "endIndex": 6829,
+        "text": "Consumer-facing platform update; focuses on living-room video consumption rather than structural developer APIs"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7194,
+        "endIndex": 7359,
+        "text": "Roku completed the migration of all developer documentation, sample apps, SDK resources, and public tooling repositories from GitHub to GitLab (`gitlab.com/rokudev`)"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7390,
+        "endIndex": 7520,
+        "text": "Primary corporate blog post was published on October 15, 2026, though it recirculated heavily on developer forums over the weekend"
+      },
+      "groundingChunkIndices": [
+        23,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7578,
+        "endIndex": 7637,
+        "text": "** Note that the official migration post occurred mid-month"
+      },
+      "groundingChunkIndices": [
+        23
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "Kimi K3.1 Pro VentureBeat Moonshot influencer",
+    "\"LSEG\" OR \"London Stock Exchange Group\" Octus 3.54 billion OR 3.5B",
+    "Fierce Healthcare Baba 40M Series A FirstMark",
+    "CapitalOS 21.9 million Series A LGVP Axios",
+    "Instagram launches Apple TV app MacRumors",
+    "Axios Maria Curi AI CEOs political liability Washington",
+    "Roku developer blog gitlab move",
+    "Bloomberg Blackstone CoreWeave chip backed debt private credit"
+  ]
+}

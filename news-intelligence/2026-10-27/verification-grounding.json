@@ -1,0 +1,473 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Hyphenate%22+%22Series+A%22+Nexus+Venture+Partners&client=app-vertex-grounding&safesearch=active\">&quot;Hyphenate&quot; &quot;Series A&quot; Nexus Venture Partners</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%2222one%22+%22Sequoia%22+%22Lux%22+startup+valuation&client=app-vertex-grounding&safesearch=active\">&quot;22one&quot; &quot;Sequoia&quot; &quot;Lux&quot; startup valuation</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22anthropic%22+S-1+filing+SEC+2026&client=app-vertex-grounding&safesearch=active\">&quot;anthropic&quot; S-1 filing SEC 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Exponential+Time+Hypothesis+Is+False%22+openai+math&client=app-vertex-grounding&safesearch=active\">&quot;Exponential Time Hypothesis Is False&quot; openai math</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22building+scientific+understanding+with+academic+communities%22+openai&client=app-vertex-grounding&safesearch=active\">&quot;building scientific understanding with academic communities&quot; openai</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Microsoft+offers+mass+buyouts%22+%22seattle+times%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Microsoft offers mass buyouts&quot; &quot;seattle times&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Anthropic%22+%22Ben+Mann%22+%22Continuing+Founders%22+S-1&client=app-vertex-grounding&safesearch=active\">&quot;Anthropic&quot; &quot;Ben Mann&quot; &quot;Continuing Founders&quot; S-1</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Broadcom%22+%22Hock+Tan%22+%22Anthropic%22+%2263B%22+debt+deal&client=app-vertex-grounding&safesearch=active\">&quot;Broadcom&quot; &quot;Hock Tan&quot; &quot;Anthropic&quot; &quot;63B&quot; debt deal</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOQ298IQ2r9bT3pjgybhIqbbBdP8Kl0_JBhKdZOny6RcPIOt0sAMAjU4RfMG7Si5TLowRYtSJ4Z9cHStkIokYqFPaD1pLBq6b4OwnbYFhFV9FEm1A-9jUxBlAFpXkrAap9",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4ba92vOrVApU1_w2yl-MSClKQ1sP3Im6zWWr2w-fD6SA-dfzcXxljWLGvqC6yKWbJ3jlllvB--nARu4yhRwbpoOIfuKe3OS5KOmZyUva4bSNe8eNaL6YkZTXEsvAP0Y2Ye0dK8TawVvl8u9hTZnp80f2w3-kwLLWM3nAv0XjHvU3Zd6dmheTKcm3U",
+        "title": "openai.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHGbkOdOa0YLg3s5EYpxi1zWc8rN3p4e2Dojm5rNtZAjbFdAclhSYfZTl8iQSFeYtzhMWyOrk6ppRFAgHyCL4L27AxsxTGeKJSDG9AT5EXOJmhyKwCNaWjiJRhE9HH0qWpPGeYRFGJn-PyH9CYTDGSLXamXD03t5IhBweBhywXHmqKQf3JeCGTN2JkxxYmxIOAkqTt81MOZQ9F8FtHKg==",
+        "title": "scalevise.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmgFz4QtbP5LnM_uftOWIA-SGWUnBZxnhI-tE-FOHozXeVHKVjXLemGjtyeUJiqYugxv17SHkUIkvxrz9b3C_YBPr7aJQfwN1CUXTxMDAK33-J9fANBeiF53orZ4dotZQbzWkszsIpJxKgIJusQAF_uw==",
+        "title": "threadreaderapp.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXJT2xuk66i3NZjRAsdKpHRShKdpyOwEYFGDBZaQ9kLLAmUY8OBVJLrJcO9CW80waALgkQh3OdG4ArBTG5rvcmXRZkl1ykyssJpCCoFWoWDp2j29BAOf156IF8gvYo3Ps=",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLq2y2J-qL8uBbw8ivNld-lHdeg6RPptYRMDTP1PgxaJCAsoCpIebOONVaVdNch5mlljabMf2AJefXCuslLof8syRh6JqDUmcGydgcYG3Tq5O2fC6gDzos8Z09jMhqpnXmKUzTKxwDjEDMf4sI4cE7uyXQBa7NvsulBWzJz9V5NkEQKjH6yuQkcpx_Sxu_Nf_ZNpethLm8jxz1fOOxlIo_CyKc6_QdOHqIPGfFklUvo4UuXY2Sh4lUdLkD-7nNrzCcM2ZoKJxpgF7BbUEbHKgiVo9Dd6sqmI_PqcZY5r-WyzpzGScYLKt8QMT-G4qgsj7ISYbpwO9QCzL3KOxb44sM2A-FYEdqqizt1cW8RPSnB3PmlO1PXZuqBxa02OsawMWcWLYVFrJmLXJMzzL5OFAaPGc4C4IgCAmHTJfRHjJzRVvZ",
+        "title": "newsquawk.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGauBl4NDq_LMHayPtfDWmm9VJn2mqjN1xC9mMZjDVaR2Ib_anhxD8okASkdP07XnaFZSOCGOetS-XQDDktOr8UK3qKXcITMItGEdk85gVfx0uZvIgLi2jEZsfgzxiNlSiT3CgXEGxNK20RvHI_Uk8i2Ej-thQrN6_8RMGKr18lfMKrkfrxMtjEpWAoo1I=",
+        "title": "sec.gov"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiSTwaZihFyq-amUiXOwjo7RR12qWCKAS9mjFjF2gNBt6a88hqee2LgVaLezF_uoAwDwsYre_S8FUhw7vXDKiv3xPxDoN8FJKpVqZtHQqcqqku9ViI4hhXety7",
+        "title": "anthropic.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxbi0Of69TSRBS-W5tKkoHQKf-It3B6Ev1nEb5Fc8P9EU015Q2HssbLt9o3vLdC4Wd7Y_bstjCVoMjy7pMBcTihlRt1Bv_xTnxP3HeayXpTbgKEn2n-j5RJwE_Om7JQw-5QhQ_RAaref_KOfF6LL8HQgDjt-Sl5IQThDLKCg1LNg==",
+        "title": "morningstar.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBVGgu-Uk8eOUZoP9fE6Ni67RxAb9tCk6qIzeu8Y6cFf5fis3T_wt06EllpXMl-TyC7Z8JEc7PJO8bbIHMOk8RLFvPoBEGdmcuFScRsYA7xvl7Ukvxl5KB",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0aQ67ZxYxTGzRqxaRe2Q2k93s5FzeMs_xIlf4HZWNZORdvTsMM6CV8me9ft5TJe1-LLjyQIDkT9vK3oC5fcqXuv6BOlBm6Xb98okWw7znKegrMwr8kNJLRuc=",
+        "title": "toolify.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0aQ67ZxYxTGzRqxaRe2Q2k93s5FzeMs_xIlf4HZWNZORdvTsMM6CV8me9ft5TJe1-LLjyQIDkT9vK3oC5fcqXuv6BOlBm6Xb98okWw7znKegrMwr8kNJLRuc=",
+        "title": "toolify.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFiYSL7Ykw73Gat47Akcxy7aGp55HBCbSDNQnidDcW7buHMhnlf2reJp7vL3gTvQ5wor5ArN4AG6z17Irt318mbNi8DecM0UbV083biV_Pk4y9I_NehWft8kzNfBQimiBMvoXRadStYbfRwVxQ5X07dSUyAfkDLFlKkjkaHd9xFiolGKwcBR_l--mT5ONbsI_hcfsSQESnUys22wJEL6Zhp9FW_TKTlhN8mpgEY1l6m6bxu58WTuaqGXBVGXv0-vDIl77Nc92-R5vmbSbZlC5xqmw==",
+        "title": "tradingview.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsqlERXh8-NTysnz-q38bYSd06SP4bED5kCkNO0Y8Enk3a7DVUq92p8rnIYNG53xY2LyOWngqEF4dilPM3B8-CXMAaOhpAOWU5k2OZKXQK85eadE62ksTNdND-DUtV5MkCBd1QqHHvDvJWek0QGjnvaHFAVu-WemqUP_GEcSpfMSA0VaNjrhdSb1m0n1Yn7aPtPBVTbaahsH8k7M3uD144YJ026Ag2yXaPNWWfRL9YPvRsvGGp6Co=",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9gOnt457DwRMM774lzlR8eQ9jMZ0yhgzvyOySWjdzZk-FUbm58aj0mKuVchVOscA-1VUUQxk1DCKf1RFdPkmI6gxyRpqnFqoZNB-tq46NyK00lUq8HasYGRVLloCnuQ-sl0tur5CPBAHaoqUNah0fkrQ_zPPE5smdZ4BQ3N7_rOaUdHzXvUlgcbe6",
+        "title": "aichatdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-hPPeaAZrFRj1xwpjzZflwwUEnHZ344qtsnCyAv42XFekaaC0D7exlNNbDkPRW1Ea8k6qqjUJJW4oPow7i0lz6lxdgZnp5rieoQKHixYGPwP3P2WUTo3_9mNdDATOWB86siSTRx9W3BuVG9HeaNIq-vT9R7vsiUJRnyUuJhcdNLG1GqNKQcfWjlIYOk2HJEK51Iy0-LVS5MJYzqTgm1tN77yEPOs_IA==",
+        "title": "seekingalpha.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_plROwQx1nIJKFTG7ow8B1mPizFp92GKJgAW_B4F5n0LmhB2jMM33xbLLW0HuaVPbs5Gm1lJpF-RB4oDiDEvHPSE0W-7OBKswfkTLlmItiRF5EPg265jU20goXsCKe6d6trat0q98hMv9m7cd0on_jXOM-lP5edyWGF5jt-TbfSLUk_JjHxi6LhmY-ri6djrVuRWrtF5uiPwt8LDWKbEx07HMTBCb-BSGLfRckEdO7PcJKihYpT-sf1XucPOAIk1yOkJO0XnLG6BD6DhK6G5ySg==",
+        "title": "newscord.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlb5TbYab_OAV_1X4-2d9xh0d0KetnYkVLqfNVoINgzhpw9Afjd43VzgbgBqGttmt2aUS254aDUQhu0K8EdrH4bU3xdM1sZlL686uK2ZPRdJ1ymELjIKvXMlsZwnUl-dPXLMRz78bR691jKF9h97fRBaJlQX1e42-JYWXM3yy_czTImZEO0gmK-_zOYPBkSBsCaFpmgAccv3OH51OKTGPedLee8vD-1j-ICJQ504Nc-FXiu5DXRB3jtRIVNKlTvJtoYiLa5EjEFgAWGSOJVappcNaEFT9UQZm4_o5L5qGdOJAJbv9yeDdXSBALZsRe4CTuap4Mug==",
+        "title": "wa.gov"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKF7EUMiWYarIlfJawf67LjphiKpMB6HwjMF4OV6FKUNQ2MRoNg6nYy3dOnD6ryDA0ktkDrPLPITBx5pzhCm9qWrrmMtTIQgvlkYnUNGeZsjuygDPySNj3NpT8vQLM2nHlx4Chvk_-Xm76LgtF",
+        "title": "arcamax.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvtYv69qeU_Fx-toTV-yB74NKqR6FZdRv35hYsGHaMxOpadYuRpSbDpeEKjXiztqwpcYSL-xBZo2EjNF1MyUOoPmbAVTfQFin_OmIAusK7Hai0blyRzObwoeAaA3YfB_Qp6xPLqnrV72oWWHUBVg8S8ZQ9zNUYu125Ox-kVXhcMmIpJp2_ZUmZPjv2yYKjn8--PKfzjWtWmHpzHhlMP5G6tuLHOLRjS6BkSEwKqTc4OYFSoA==",
+        "title": "kiro7.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9Mv177HU7TkN-ETG0Vm8SaxVpKQeXXvCVg5udpdaVKyG4FeK2_yUkX_9N_jNK0rJ80Psq_caijKIaSrknmkMm0l6UGRWStMVTsDj5l5Vx4LxizL5F0Z23u4NfymT4Nityc1NvEtFZsYmrOMCvxHi69GyluwRNuTNPCaOpz68fiucluqqpIw==",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHePbRTvPZ3p7HUOmK_nrHqSw7Y0Z5KE3nCkqnJMEc6dvrPvQS_vP8FLj6aXl-6hBctDN1WSuhz0-ct6Nma5oZVjpJvAE7Q3JWNwU4kbYosBIY7wef01PKRPzPk0ffzFqJAwTtwTzNKTrdoD6zNc5Tjs_XZbAgNwLlgFKz6AF36f_yW5dg=",
+        "title": "ft.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhm6m4mLq_wroysXUmP-o4h4bv2lQoK4PvFBjLLFk7UbkMIcc9d2tbVUNY_r68dCg_GSkG-DV4RAZrymR0r5CrECfYZ8Htq8aDV7blCF12G8ZHLGNatOMoz5aIHwhWJiy1iDIDosHmk1ovKLs78kOlU3vi6QOgYV4=",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5hRvA_YUj7vZFSWuvvEZ5XdDTFAqecYkFnA1yr4bHrMOisVa4NhZFX3XkO6RbZvBu3m7Tl4N4cgg21tlvTSM31A8wksRwxNer5OF7ddRqScNYKoML19onN-qrc79MXQQL3B-DRT4ELX2gVNuxhj_uQ0SQkBg5eAxetcbtrSvtzaxrqfKa7Y6lk5frJxIzcRm6BI6vQZz9d8pc4LqY",
+        "title": "headliner.nl"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 668,
+        "endIndex": 1009,
+        "text": "**What is confirmed:** On October 26, 2026, OpenAI published a blog post and preprints on GitHub claiming three AI-generated breakthroughs from an unreleased internal model across theoretical computer science (a disproof of the Exponential Time Hypothesis), harmonic analysis (local smoothing for the wave equation), and quantum field theory"
+      },
+      "groundingChunkIndices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1011,
+        "endIndex": 1141,
+        "text": "The company outlined a new \"shepherding\" model engaging academic external groups to review and explain the AI-generated raw output"
+      },
+      "groundingChunkIndices": [
+        1,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1145,
+        "endIndex": 1237,
+        "text": "**Important caveats:** These are unrefereed vendor claims produced by an unreleased AI model"
+      },
+      "groundingChunkIndices": [
+        0,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1239,
+        "endIndex": 1279,
+        "text": "While OpenAI notes formalization in Lean"
+      },
+      "groundingChunkIndices": [
+        4,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1239,
+        "endIndex": 1456,
+        "text": "While OpenAI notes formalization in Lean, academic complexity theorists (including Impagliazzo, Paturi, and Williams) caution that external participation does not constitute formal certification or peer-reviewed proof"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1522,
+        "endIndex": 1670,
+        "text": "** Excellent focal story on frontier AI reasoning claims, provided it is framed carefully around unverified vendor claims awaiting academic scrutiny"
+      },
+      "groundingChunkIndices": [
+        0,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1780,
+        "endIndex": 1960,
+        "text": "**What is confirmed:** On October 26, 2026, Anthropic, PBC officially filed its Form S-1 registration statement with the SEC for an initial public offering on Nasdaq (ticker `ANT`)"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1962,
+        "endIndex": 2106,
+        "text": "S-1 disclosures show Anthropic's compute and infrastructure cost per dollar of revenue improved from ~$2.50 in Q1 2025 to under $0.50 in Q2 2026"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2108,
+        "endIndex": 2282,
+        "text": "The filing also details governance terms, excluding Anthropic Labs co-lead Ben Mann from formal \"Continuing Founders\" legal entities while maintaining his title as co-founder"
+      },
+      "groundingChunkIndices": [
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2286,
+        "endIndex": 2417,
+        "text": "**Important caveats:** Estimated price ranges, share counts, and exact IPO execution timing are omitted from the initial prospectus"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2668,
+        "endIndex": 2897,
+        "text": "**What is confirmed:** Bank of America, Citigroup, Morgan Stanley, and Blackstone announced a $63 billion special purpose vehicle (SPV) financing package to deploy Broadcom XPU accelerators and networking gear leased to Anthropic"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2899,
+        "endIndex": 2959,
+        "text": "Broadcom is providing residual value support for senior debt"
+      },
+      "groundingChunkIndices": [
+        13,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2961,
+        "endIndex": 3130,
+        "text": "WSJ reported that Broadcom CEO Hock Tan held 11th-hour negotiations over the weekend, agreeing to higher interest rates and loan guarantees to retain participating banks"
+      },
+      "groundingChunkIndices": [
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3134,
+        "endIndex": 3264,
+        "text": "**Important caveats:** Details regarding 11th-hour bank hesitation rely on anonymous sources reported by the *Wall Street Journal*"
+      },
+      "groundingChunkIndices": [
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3134,
+        "endIndex": 3342,
+        "text": "**Important caveats:** Details regarding 11th-hour bank hesitation rely on anonymous sources reported by the *Wall Street Journal*, though the $63B transaction itself was officially confirmed by press release"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3558,
+        "endIndex": 3788,
+        "text": "**What is confirmed:** On October 26, 2026, Microsoft announced a voluntary exit buyout program offered to roughly 60,000 employees (~27% of its workforce) at the vice president level and below across the US, Canada, UK, and India"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3790,
+        "endIndex": 3884,
+        "text": "The effort aims to control headcount costs while reallocating capital toward AI infrastructure"
+      },
+      "groundingChunkIndices": [
+        16,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3888,
+        "endIndex": 4080,
+        "text": "**Important caveats:** This is a voluntary exit buyout scheme rather than compulsory layoffs, though the pool of eligible staff represents a substantial portion of Microsoft's global workforce"
+      },
+      "groundingChunkIndices": [
+        19,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4274,
+        "endIndex": 4544,
+        "text": "**What is confirmed:** *Financial Times* reported that UK stealth startup 22one—founded by former Merseyside Police detective chief superintendent Steven Richardson—raised funding at an almost $400M valuation from Sequoia, Lux Capital, General Catalyst, and Creandum"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4546,
+        "endIndex": 4624,
+        "text": "The startup builds AI software and workflow tools for law enforcement agencies"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4628,
+        "endIndex": 4766,
+        "text": "**Important caveats:** Specific investment dollar figures and full terms rely on anonymous sources, as the startup remains in stealth mode"
+      },
+      "groundingChunkIndices": [
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5020,
+        "endIndex": 5261,
+        "text": "(formerly Maximor), founded by ex-Microsoft engineers Ramnandan Krishnamurthy and Ajay Krishna Amudan, raised a $45M Series A round led by Nexus Venture Partners with B Capital, Foundation Capital, and BoldCap, bringing total funding to $54M"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5263,
+        "endIndex": 5367,
+        "text": "The company develops reinforcement learning AI agents to automate corporate finance and accounting tasks"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5371,
+        "endIndex": 5527,
+        "text": "**Important caveats:** Operational metrics (such as customer hours saved and 86-fold revenue expansion) are startup-reported figures via Bloomberg reporting"
+      },
+      "groundingChunkIndices": [
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5727,
+        "endIndex": 5875,
+        "text": "**What is confirmed:** PayPal released Q3 2026 earnings reporting net revenue of $8.58B (up 2% YoY) and Total Payment Volume of $487.14B (up 6% YoY)"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5877,
+        "endIndex": 5941,
+        "text": "The company raised its full-year adjusted EPS forecast to ~$5.60"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5945,
+        "endIndex": 6085,
+        "text": "**Important caveats:** Q3 revenue slightly missed Wall Street consensus estimates ($8.71B) despite the bottom-line earnings guidance upgrade"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6291,
+        "endIndex": 6467,
+        "text": "**What is confirmed:** A CNBC analysis of campaign finance filings shows AI-focused political groups spent $78.5 million on US federal candidates during the 2026 election cycle"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6469,
+        "endIndex": 6583,
+        "text": "Spending was divided between AI accelerationist groups ($34M) and safety/safeguard-focused political groups ($39M)"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Hyphenate\" \"Series A\" Nexus Venture Partners",
+    "\"22one\" \"Sequoia\" \"Lux\" startup valuation",
+    "\"anthropic\" S-1 filing SEC 2026",
+    "\"Exponential Time Hypothesis Is False\" openai math",
+    "\"building scientific understanding with academic communities\" openai",
+    "\"Microsoft offers mass buyouts\" \"seattle times\" 2026",
+    "\"Anthropic\" \"Ben Mann\" \"Continuing Founders\" S-1",
+    "\"Broadcom\" \"Hock Tan\" \"Anthropic\" \"63B\" debt deal"
+  ]
+}

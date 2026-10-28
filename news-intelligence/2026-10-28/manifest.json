@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T12:44:24.713Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 481,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 237,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 250,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 203,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1654,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": false,
+  "quality_status": "blocked",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [
+    "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
+    "Overall confidence 0% is below the 78% release threshold."
+  ],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-10-28",
+  "overall_confidence": 0,
+  "stories": [
+    {
+      "category": "lead",
+      "headline": "Samsung unveils the $229 Galaxy Buds On, its first open-fit, C-shaped cuff earbuds to compete with Sony and Bose, designed with AI's help, shipping November 6 (Chris Welch/Bloomberg)",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "Chris Welch/Bloomberg",
+      "discovered_via": "Techmeme",
+      "source_title": "Samsung unveils the $229 Galaxy Buds On, its first open-fit, C-shaped cuff earbuds to compete with Sony and Bose, designed with AI's help, shipping November 6 (Chris Welch/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-28/samsung-unveils-galaxy-buds-on-clip-on-earbuds-for-229",
+      "discovery_url": "https://www.techmeme.com/261028/p25",
+      "link_quality": "original",
+      "published_at": "2026-10-28T12:25:01.000Z",
+      "discovery_score": 8.087
+    },
+    {
+      "category": "worth-knowing",
+      "headline": "Ghostty 1.4",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "ghostty.org",
+      "discovered_via": "Hacker News",
+      "source_title": "Ghostty 1.4",
+      "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+      "discovery_url": "https://news.ycombinator.com/item?id=50261998",
+      "link_quality": "original",
+      "published_at": "2026-10-27T16:51:22.000Z",
+      "discovery_score": 8.021
+    },
+    {
+      "category": "worth-knowing",
+      "headline": "Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "Hugging Face",
+      "discovered_via": "Hugging Face",
+      "source_title": "Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?",
+      "url": "https://huggingface.co/papers/2610.37662",
+      "discovery_url": "https://huggingface.co/papers/2610.37662",
+      "link_quality": "original",
+      "published_at": "2026-10-26T20:00:00.000Z",
+      "discovery_score": 6.38
+    }
+  ],
+  "practical_takeaway": "Do not publish this edition until verification succeeds.",
+  "watch_next": "Re-run the intelligence workflow or review the source links manually.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 057",
+      "title": "My Circuit Lab",
+      "summary": "Choose prediction or repair missions, then test simple battery–wire–switch–bulb circuits and learn why a complete loop matters.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-057/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-057/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-10-28",
+    "lead_headline": "Samsung unveils the $229 Galaxy Buds On, its first open-fit, C-shaped cuff earbuds to compete with Sony and Bose, designed with AI's help, shipping November 6 (Chris Welch/Bloomberg)",
+    "facebook_post": "Samsung unveils the $229 Galaxy Buds On, its first open-fit, C-shaped cuff earbuds to compete with Sony and Bose, designed with AI's help, shipping November 6 (Chris Welch/Bloomberg)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Samsung unveils the $229 Galaxy Buds On, its first open-fit, C-shaped cuff earbuds to compete with Sony and Bose, designed with AI's help, shipping November 6 (Chris Welch/Bloomberg)",
+    "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Samsung unveils the $229 Galaxy Buds On, its first open-fit, C-shaped cuff earbuds to compete with Sony and Bose, designed with AI's help, shipping November 6 (Chris Welch/Bloomberg). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Samsung unveils the $229 Galaxy Buds On, its first open-fit, C-shaped cuff earbuds to compete with Sony and Bose, designed with AI's help, shipping November 6 (Chris Welch/Bloomberg). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "6c67a1b96f648f3ad99c8833c7ca5e93a49f1f57574923ff6b674a0b7d1ed250"
+}

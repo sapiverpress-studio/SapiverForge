@@ -1,4 +1,4 @@
-# Sapiver Forge Daily Brief — 2026-10-28
+# Sapiver Forge Daily Brief — 2026-10-29
 
 Automated verification did not complete: Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {
   "error": {
@@ -9,7 +9,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 }
  This edition is a source index only and must not be sent as a newsletter.
 
-## 1. Samsung unveils the $229 Galaxy Buds On, its first open-fit, C-shaped cuff earbuds to compete with Sony and Bose, designed with AI's help, shipping November 6 (Chris Welch/Bloomberg)
+## 1. Q&A with Sam Altman on finding PHP bugs, sandboxing superhuman models as an unsolved safety dilemma, robotics scaling data centers, math, agent swarms, and more (John Collison/Cheeky Pint)
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -17,19 +17,9 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Chris Welch/Bloomberg](https://www.bloomberg.com/news/articles/2026-10-28/samsung-unveils-galaxy-buds-on-clip-on-earbuds-for-229) · discovered via Techmeme · confidence 0%
+**Source:** [John Collison/Cheeky Pint](https://cheekypint.substack.com/p/why-sam-altman-is-against-a-single) · discovered via Techmeme · confidence 0%
 
-## 2. Ghostty 1.4
-
-**Confirmed:** Headline collected from the named source; claim verification is incomplete.
-
-**Why it matters:** Human review required before any interpretation or distribution.
-
-**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
-
-**Source:** [ghostty.org](https://ghostty.org/docs/install/release-notes/1-4-0) · discovered via Hacker News · confidence 0%
-
-## 3. Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?
+## 2. StackOverflow now gets fewer than 1000 questions a month
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -37,7 +27,17 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Hugging Face](https://huggingface.co/papers/2610.37662) · confidence 0%
+**Source:** [data.stackexchange.com](https://data.stackexchange.com/stackoverflow/query/1926661) · discovered via Hacker News · confidence 0%
+
+## 3. TauIndianBankBench: Procedure-Aware, Action-Oriented Evaluation of Tool-Using Conversational Agents
+
+**Confirmed:** Headline collected from the named source; claim verification is incomplete.
+
+**Why it matters:** Human review required before any interpretation or distribution.
+
+**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
+
+**Source:** [Hugging Face](https://huggingface.co/papers/2610.30161) · confidence 0%
 
 ## Practical takeaway
 

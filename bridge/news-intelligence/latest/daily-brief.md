@@ -1,4 +1,4 @@
-# Sapiver Forge Daily Brief — 2026-10-30
+# Sapiver Forge Daily Brief — 2026-10-31
 
 Automated verification did not complete: Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {
   "error": {
@@ -9,7 +9,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 }
  This edition is a source index only and must not be sent as a newsletter.
 
-## 1. CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of ~$8.17B, swinging to profitability on the back of rising AI-driven memory chip prices (Reuters)
+## 1. A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash (Gaby Del Valle/The Verge)
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -17,19 +17,9 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Reuters](https://www.reuters.com/world/asia-pacific/cxmt-turns-third-quarter-net-profit-544-billion-yuan-2026-10-30/) · discovered via Techmeme · confidence 0%
+**Source:** [Gaby Del Valle/The Verge](https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc/?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6InFkdzJEQktYdUkiLCJwIjoiL2NzL2ZlYXR1cmVzLzEwMTY2NTAvYXJpem9uYS13YXRlci1kYXRhLWNlbnRlci10c21jIiwiZXhwIjoxNzkzNzE2ODI5LCJpYXQiOjE3OTMyODQ4Mjl9.2I3Q8YF72YlZ82qB1jITu1Pv_2X6WPGXSrMtVpL9JTE) · discovered via Techmeme · confidence 0%
 
-## 2. Binance-hacker-1029 – $5.6B stolen from Binance
-
-**Confirmed:** Headline collected from the named source; claim verification is incomplete.
-
-**Why it matters:** Human review required before any interpretation or distribution.
-
-**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
-
-**Source:** [arkm.com](https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8) · discovered via Hacker News · confidence 0%
-
-## 3. Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities
+## 2. Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -37,7 +27,17 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Hugging Face](https://huggingface.co/papers/2610.39301) · confidence 0%
+**Source:** [bostonglobe.com](https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/) · discovered via Hacker News · confidence 0%
+
+## 3. Proving and Improving the Platonic Representation Hypothesis with JEPAs
+
+**Confirmed:** Headline collected from the named source; claim verification is incomplete.
+
+**Why it matters:** Human review required before any interpretation or distribution.
+
+**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
+
+**Source:** [Hugging Face](https://huggingface.co/papers/2610.39302) · confidence 0%
 
 ## Practical takeaway
 

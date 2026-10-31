@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-10-30",
-  "generated_at": "2026-10-30T12:45:20.197Z",
+  "date": "2026-10-31",
+  "generated_at": "2026-10-31T12:17:11.088Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 408,
+      "elapsed_ms": 471,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,14 +23,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 427,
+      "elapsed_ms": 240,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 1288,
+      "elapsed_ms": 276,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -38,7 +38,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 345,
+      "elapsed_ms": 250,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 2689,
+      "elapsed_ms": 1730,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -62,56 +62,56 @@
     "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
     "Overall confidence 0% is below the 78% release threshold."
   ],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-10-30",
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-10-31",
   "overall_confidence": 0,
   "stories": [
     {
       "category": "lead",
-      "headline": "CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of ~$8.17B, swinging to profitability on the back of rising AI-driven memory chip prices (Reuters)",
+      "headline": "A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash (Gaby Del Valle/The Verge)",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "Reuters",
+      "source": "Gaby Del Valle/The Verge",
       "discovered_via": "Techmeme",
-      "source_title": "CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of ~$8.17B, swinging to profitability on the back of rising AI-driven memory chip prices (Reuters)",
-      "url": "https://www.reuters.com/world/asia-pacific/cxmt-turns-third-quarter-net-profit-544-billion-yuan-2026-10-30/",
-      "discovery_url": "https://www.techmeme.com/261030/p12",
+      "source_title": "A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash (Gaby Del Valle/The Verge)",
+      "url": "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc/?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6InFkdzJEQktYdUkiLCJwIjoiL2NzL2ZlYXR1cmVzLzEwMTY2NTAvYXJpem9uYS13YXRlci1kYXRhLWNlbnRlci10c21jIiwiZXhwIjoxNzkzNzE2ODI5LCJpYXQiOjE3OTMyODQ4Mjl9.2I3Q8YF72YlZ82qB1jITu1Pv_2X6WPGXSrMtVpL9JTE",
+      "discovery_url": "https://www.techmeme.com/261031/p7",
       "link_quality": "original",
-      "published_at": "2026-10-30T12:20:02.000Z",
-      "discovery_score": 8.082
+      "published_at": "2026-10-31T09:25:55.000Z",
+      "discovery_score": 7.981
     },
     {
       "category": "worth-knowing",
-      "headline": "Binance-hacker-1029 – $5.6B stolen from Binance",
+      "headline": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "arkm.com",
+      "source": "bostonglobe.com",
       "discovered_via": "Hacker News",
-      "source_title": "Binance-hacker-1029 – $5.6B stolen from Binance",
-      "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
-      "discovery_url": "https://news.ycombinator.com/item?id=50296470",
+      "source_title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
+      "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50309647",
       "link_quality": "original",
-      "published_at": "2026-10-29T21:38:59.000Z",
-      "discovery_score": 8.141
+      "published_at": "2026-10-30T20:23:30.000Z",
+      "discovery_score": 7.948
     },
     {
       "category": "worth-knowing",
-      "headline": "Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities",
+      "headline": "Proving and Improving the Platonic Representation Hypothesis with JEPAs",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
       "source": "Hugging Face",
       "discovered_via": "Hugging Face",
-      "source_title": "Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities",
-      "url": "https://huggingface.co/papers/2610.39301",
-      "discovery_url": "https://huggingface.co/papers/2610.39301",
+      "source_title": "Proving and Improving the Platonic Representation Hypothesis with JEPAs",
+      "url": "https://huggingface.co/papers/2610.39302",
+      "discovery_url": "https://huggingface.co/papers/2610.39302",
       "link_quality": "original",
       "published_at": "2026-10-28T20:00:00.000Z",
-      "discovery_score": 6.129
+      "discovery_score": 6.14
     }
   ],
   "practical_takeaway": "Do not publish this edition until verification succeeds.",
@@ -124,21 +124,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 059",
-      "title": "My Shadow Lab",
-      "summary": "Use the Sun’s position to predict a shadow’s direction and length, then reveal the result in a personalised interactive experiment.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-059/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-059/poster.png"
+      "label": "AI Inquisitive Parents · Day 060",
+      "title": "Our Family Tree Builder",
+      "summary": "Create a private visual family tree, connect each person to parents or carers, search the family and print the finished generations.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-060/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-060/poster.png"
     }
   },
   "social": {
-    "date": "2026-10-30",
-    "lead_headline": "CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of ~$8.17B, swinging to profitability on the back of rising AI-driven memory chip prices (Reuters)",
-    "facebook_post": "CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of ~$8.17B, swinging to profitability on the back of rising AI-driven memory chip prices (Reuters)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of ~$8.17B, swinging to profitability on the back of rising AI-driven memory chip prices (Reuters)",
+    "date": "2026-10-31",
+    "lead_headline": "A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash (Gaby Del Valle/The Verge)",
+    "facebook_post": "A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash (Gaby Del Valle/The Verge)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash (Gaby Del Valle/The Verge)",
     "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of ~$8.17B, swinging to profitability on the back of rising AI-driven memory chip prices (Reuters). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of ~$8.17B, swinging to profitability on the back of rising AI-driven memory chip prices (Reuters). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+    "tiktok_caption": "A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash (Gaby Del Valle/The Verge). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash (Gaby Del Valle/The Verge). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "81c31cf4387ce4eb47aa54dc85d562e73d61388357e8581e5d6576ad0093caf4"
+  "candidate_id": "0fc0eb68f9fd6da369529ccd3da7d367b0ef5d6a47dbed2976603ee04bbfb454"
 }

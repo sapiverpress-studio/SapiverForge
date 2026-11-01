@@ -1,4 +1,4 @@
-# Sapiver Forge Daily Brief — 2026-10-31
+# Sapiver Forge Daily Brief — 2026-11-01
 
 Automated verification did not complete: Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {
   "error": {
@@ -9,7 +9,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 }
  This edition is a source index only and must not be sent as a newsletter.
 
-## 1. A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash (Gaby Del Valle/The Verge)
+## 1. Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -17,9 +17,9 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Gaby Del Valle/The Verge](https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc/?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6InFkdzJEQktYdUkiLCJwIjoiL2NzL2ZlYXR1cmVzLzEwMTY2NTAvYXJpem9uYS13YXRlci1kYXRhLWNlbnRlci10c21jIiwiZXhwIjoxNzkzNzE2ODI5LCJpYXQiOjE3OTMyODQ4Mjl9.2I3Q8YF72YlZ82qB1jITu1Pv_2X6WPGXSrMtVpL9JTE) · discovered via Techmeme · confidence 0%
+**Source:** [Gunjan Banerji/Wall Street Journal](https://www.wsj.com/finance/stocks/ai-investors-are-racing-to-get-insurance-on-the-biggest-market-bet-in-history-a60e296f?st=AXJFTG) · discovered via Techmeme · confidence 0%
 
-## 2. Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man
+## 2. HackerTube: YouTube built from videos recommended by HN
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -27,7 +27,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [bostonglobe.com](https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/) · discovered via Hacker News · confidence 0%
+**Source:** [karpathy.bearblog.dev](https://karpathy.bearblog.dev/hacker-tube/) · discovered via Hacker News · confidence 0%
 
 ## 3. Proving and Improving the Platonic Representation Hypothesis with JEPAs
 

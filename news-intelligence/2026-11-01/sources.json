@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-01T13:18:27.122Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 323,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 434,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 356,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 249,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 2503,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "karpathy.bearblog.dev",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "HackerTube: YouTube built from videos recommended by HN",
+      "url": "https://karpathy.bearblog.dev/hacker-tube/",
+      "direct_source_url": "https://karpathy.bearblog.dev/hacker-tube/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50319510",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50319510",
+      "summary": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007. https://hackertube.org/",
+      "published_at": "2026-10-31T19:56:53.000Z",
+      "engagement": {
+        "score": 1511,
+        "comments": 405
+      },
+      "collection_mode": "api",
+      "score": 8.477
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "visitnorway.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "Norway makes shithouses great again",
+      "url": "https://www.visitnorway.com/plan-your-trip/travel-tips-a-z/norwegian-scenic-routes/worlds-best-toilets/",
+      "direct_source_url": "https://www.visitnorway.com/plan-your-trip/travel-tips-a-z/norwegian-scenic-routes/worlds-best-toilets/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50324388",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50324388",
+      "summary": "",
+      "published_at": "2026-11-01T10:47:58.000Z",
+      "engagement": {
+        "score": 315,
+        "comments": 151
+      },
+      "collection_mode": "api",
+      "score": 8.345
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "smithsonianmag.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "An Italian farmer found some unknown seeds in his attic and planted them",
+      "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
+      "direct_source_url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50320963",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50320963",
+      "summary": "",
+      "published_at": "2026-10-31T22:41:06.000Z",
+      "engagement": {
+        "score": 531,
+        "comments": 163
+      },
+      "collection_mode": "api",
+      "score": 8.081
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "atlasum.net",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+      "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+      "direct_source_url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+      "discovery_url": "https://news.ycombinator.com/item?id=50319143",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50319143",
+      "summary": "",
+      "published_at": "2026-10-31T19:16:30.000Z",
+      "engagement": {
+        "score": 558,
+        "comments": 255
+      },
+      "collection_mode": "api",
+      "score": 8.019
+    },
+    {
+      "title": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)",
+      "url": "https://www.wsj.com/finance/stocks/ai-investors-are-racing-to-get-insurance-on-the-biggest-market-bet-in-history-a60e296f?st=AXJFTG",
+      "summary": "Gunjan Banerji / Wall Street Journal : Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 &mdash; With trillions riding on the artificial-intelligence trade, investors, traders and tech executives alike are hunting for high-stakes protection",
+      "description_html": "<A HREF=\"https://www.wsj.com/finance/stocks/ai-investors-are-racing-to-get-insurance-on-the-biggest-market-bet-in-history-a60e296f?st=AXJFTG\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261101/i8.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261101/p8#a261101p8\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Gunjan Banerji / <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/finance/stocks/ai-investors-are-racing-to-get-insurance-on-the-biggest-market-bet-in-history-a60e296f?st=AXJFTG\">Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021</A></B></SPAN>&nbsp; &mdash;&nbsp; With trillions riding on the artificial-intelligence trade, investors, traders and tech executives alike are hunting for high-stakes protection</P>",
+      "published_at": "2026-11-01T11:00:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261101/p8",
+      "direct_source_url": "https://www.wsj.com/finance/stocks/ai-investors-are-racing-to-get-insurance-on-the-biggest-market-bet-in-history-a60e296f?st=AXJFTG",
+      "publisher": "Gunjan Banerji/Wall Street Journal",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.004
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "twitter.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "Anthropic blocks users for anything touching training larger models",
+      "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+      "direct_source_url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+      "discovery_url": "https://news.ycombinator.com/item?id=50319358",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50319358",
+      "summary": "",
+      "published_at": "2026-10-31T19:39:19.000Z",
+      "engagement": {
+        "score": 396,
+        "comments": 226
+      },
+      "collection_mode": "api",
+      "score": 7.874
+    },
+    {
+      "title": "A look at a crude campaign of cyberattacks by Russia-linked hacktivist groups that have caused physical damage in NATO-aligned countries over the past two years (Ryan Gallagher/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/features/2026-10-27/russia-linked-hackers-are-turning-cyberattacks-into-a-physical-threat?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MzI5NTc0NywiZXhwIjoxNzkzOTAwNTQ3LCJhcnRpY2xlSWQiOiJUTkw0NTNLR1pBSVYwMCIsImJjb25uZWN0SWQiOiJENTY5QzIyNzE4NUM0NkM4OTgxMjBGMUI2QTBFNDIwQSJ9.ZsPKeMVARRn7ayeTBSLo-FlCJ4yJhExizj_0dCtnLq4",
+      "summary": "Ryan Gallagher / Bloomberg : A look at a crude campaign of cyberattacks by Russia-linked hacktivist groups that have caused physical damage in NATO-aligned countries over the past two years &mdash; Cyberattacks causing physical damage are on the rise in NATO countries, and the hackers carrying them out don't always understand what they're doing.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/features/2026-10-27/russia-linked-hackers-are-turning-cyberattacks-into-a-physical-threat?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MzI5NTc0NywiZXhwIjoxNzkzOTAwNTQ3LCJhcnRpY2xlSWQiOiJUTkw0NTNLR1pBSVYwMCIsImJjb25uZWN0SWQiOiJENTY5QzIyNzE4NUM0NkM4OTgxMjBGMUI2QTBFNDIwQSJ9.ZsPKeMVARRn7ayeTBSLo-FlCJ4yJhExizj_0dCtnLq4\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261101/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261101/p7#a261101p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Ryan Gallagher / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/features/2026-10-27/russia-linked-hackers-are-turning-cyberattacks-into-a-physical-threat?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MzI5NTc0NywiZXhwIjoxNzkzOTAwNTQ3LCJhcnRpY2xlSWQiOiJUTkw0NTNLR1pBSVYwMCIsImJjb25uZWN0SWQiOiJENTY5QzIyNzE4NUM0NkM4OTgxMjBGMUI2QTBFNDIwQSJ9.ZsPKeMVARRn7ayeTBSLo-FlCJ4yJhExizj_0dCtnLq4\">A look at a crude campaign of cyberattacks by Russia-linked hacktivist groups that have caused physical damage in NATO-aligned countries over the past two years</A></B></SPAN>&nbsp; &mdash;&nbsp; Cyberattacks causing physical damage are on the rise in NATO countries, and the hackers carrying them out don't always understand what they're doing.</P>",
+      "published_at": "2026-11-01T06:00:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261101/p7",
+      "direct_source_url": "https://www.bloomberg.com/news/features/2026-10-27/russia-linked-hackers-are-turning-cyberattacks-into-a-physical-threat?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MzI5NTc0NywiZXhwIjoxNzkzOTAwNTQ3LCJhcnRpY2xlSWQiOiJUTkw0NTNLR1pBSVYwMCIsImJjb25uZWN0SWQiOiJENTY5QzIyNzE4NUM0NkM4OTgxMjBGMUI2QTBFNDIwQSJ9.ZsPKeMVARRn7ayeTBSLo-FlCJ4yJhExizj_0dCtnLq4",
+      "publisher": "Ryan Gallagher/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.716
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 8,
+      "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+      "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+      "direct_source_url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+      "discovery_url": "https://news.ycombinator.com/item?id=50320995",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50320995",
+      "summary": "",
+      "published_at": "2026-10-31T22:46:12.000Z",
+      "engagement": {
+        "score": 294,
+        "comments": 136
+      },
+      "collection_mode": "api",
+      "score": 7.684
+    },
+    {
+      "title": "Lumaril, which develops AI software for optimizing industrial production by connecting to existing control systems, raised a $66M Series A at a $400M valuation (Sarah Klearman/Wall Street Journal)",
+      "url": "https://www.wsj.com/pro/venture-capital/ai-startup-lumaril-wants-to-make-factories-the-best-version-of-themselves-b65ea83d",
+      "summary": "Sarah Klearman / Wall Street Journal : Lumaril, which develops AI software for optimizing industrial production by connecting to existing control systems, raised a $66M Series A at a $400M valuation &mdash; The AI-for-manufacturers company has raised $66 million at a $400 million valuation &mdash; Think of running a production line on a factory floor as a kind of art.",
+      "description_html": "<A HREF=\"https://www.wsj.com/pro/venture-capital/ai-startup-lumaril-wants-to-make-factories-the-best-version-of-themselves-b65ea83d\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261101/i6.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261101/p6#a261101p6\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Sarah Klearman / <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/pro/venture-capital/ai-startup-lumaril-wants-to-make-factories-the-best-version-of-themselves-b65ea83d\">Lumaril, which develops AI software for optimizing industrial production by connecting to existing control systems, raised a $66M Series A at a $400M valuation</A></B></SPAN>&nbsp; &mdash;&nbsp; The AI-for-manufacturers company has raised $66 million at a $400 million valuation&nbsp; &mdash;&nbsp; Think of running a production line on a factory floor as a kind of art.</P>",
+      "published_at": "2026-11-01T06:35:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261101/p6",
+      "direct_source_url": "https://www.wsj.com/pro/venture-capital/ai-startup-lumaril-wants-to-make-factories-the-best-version-of-themselves-b65ea83d",
+      "publisher": "Sarah Klearman/Wall Street Journal",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.66
+    },
+    {
+      "title": "Binance says it plans to resume withdrawals in phases starting Sunday, after covering 95% of the ~$6.3B in tokens stolen in the hack, including BTC and ETH (Reuters)",
+      "url": "https://www.reuters.com/legal/government/binance-resume-withdrawals-after-recovering-bulk-6-billion-stolen-funds-2026-11-01/",
+      "summary": "Reuters : Binance says it plans to resume withdrawals in phases starting Sunday, after covering 95% of the ~$6.3B in tokens stolen in the hack, including BTC and ETH &mdash; Binance, the world's biggest cryptocurrency exchange, said it would resume withdrawals in phases after covering 95% of the $6.3 billion &hellip;",
+      "description_html": "<A HREF=\"https://www.reuters.com/legal/government/binance-resume-withdrawals-after-recovering-bulk-6-billion-stolen-funds-2026-11-01/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261101/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261101/p5#a261101p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/legal/government/binance-resume-withdrawals-after-recovering-bulk-6-billion-stolen-funds-2026-11-01/\">Binance says it plans to resume withdrawals in phases starting Sunday, after covering 95% of the ~$6.3B in tokens stolen in the hack, including BTC and ETH</A></B></SPAN>&nbsp; &mdash;&nbsp; Binance, the world's biggest cryptocurrency exchange, said it would resume withdrawals in phases after covering 95% of the $6.3 billion &hellip; </P>",
+      "published_at": "2026-11-01T06:30:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261101/p5",
+      "direct_source_url": "https://www.reuters.com/legal/government/binance-resume-withdrawals-after-recovering-bulk-6-billion-stolen-funds-2026-11-01/",
+      "publisher": "Reuters",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.576
+    },
+    {
+      "title": "Shanghai-based NeuroXess, which is developing BCI technology for movement support, speech decoding, and control of external devices, raised a ~$105M Series B (TechNode)",
+      "url": "https://technode.com/",
+      "summary": "TechNode : Shanghai-based NeuroXess, which is developing BCI technology for movement support, speech decoding, and control of external devices, raised a ~$105M Series B &mdash; Chinese brain-computer interface startup NeuroXess has raised RMB 700 million in Series B funding, co-led by SDIC Juli, Shenzhen Capital Group and Qinzhi Capital.",
+      "description_html": "<P><A HREF=\"https://www.techmeme.com/261101/p4#a261101p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://technode.com/\">TechNode</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://technode.com/2026/10/28/brain-computer-interface-startup-neuroxess-raises-rmb-700-million-in-series-b-funding/\">Shanghai-based NeuroXess, which is developing BCI technology for movement support, speech decoding, and control of external devices, raised a ~$105M Series B</A></B></SPAN>&nbsp; &mdash;&nbsp; Chinese brain-computer interface startup NeuroXess has raised RMB 700 million in Series B funding, co-led by SDIC Juli, Shenzhen Capital Group and Qinzhi Capital.</P>",
+      "published_at": "2026-11-01T06:25:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261101/p4",
+      "direct_source_url": "https://technode.com/",
+      "publisher": "TechNode",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.493
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "help.openai.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 10,
+      "title": "ChatGPT and Codex usage limits merging",
+      "url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+      "direct_source_url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+      "discovery_url": "https://news.ycombinator.com/item?id=50320588",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50320588",
+      "summary": "",
+      "published_at": "2026-10-31T21:49:07.000Z",
+      "engagement": {
+        "score": 183,
+        "comments": 118
+      },
+      "collection_mode": "api",
+      "score": 7.417
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "parameter.ai",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "Do the math: How we took over ChatGPT accounts",
+      "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+      "direct_source_url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+      "discovery_url": "https://news.ycombinator.com/item?id=50314699",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50314699",
+      "summary": "",
+      "published_at": "2026-10-31T10:30:11.000Z",
+      "engagement": {
+        "score": 346,
+        "comments": 168
+      },
+      "collection_mode": "api",
+      "score": 7.413
+    },
+    {
+      "title": "Enterprise voice AI tools provider Deepgram acquires Daily, which has raised $62M+ and develops open-source voice AI framework Pipecat, for an undisclosed sum (Ivan Mehta/TechCrunch)",
+      "url": "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/",
+      "summary": "Ivan Mehta / TechCrunch : Enterprise voice AI tools provider Deepgram acquires Daily, which has raised $62M+ and develops open-source voice AI framework Pipecat, for an undisclosed sum &mdash; The voice AI sector is hot, and top players are trying to consolidate their position as more business models come to the fore through partnerships and acquisitions.",
+      "description_html": "<A HREF=\"https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261101/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261101/p3#a261101p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Ivan Mehta / <A HREF=\"http://techcrunch.com/\">TechCrunch</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/\">Enterprise voice AI tools provider Deepgram acquires Daily, which has raised $62M+ and develops open-source voice AI framework Pipecat, for an undisclosed sum</A></B></SPAN>&nbsp; &mdash;&nbsp; The voice AI sector is hot, and top players are trying to consolidate their position as more business models come to the fore through partnerships and acquisitions.</P>",
+      "published_at": "2026-11-01T06:15:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261101/p3",
+      "direct_source_url": "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/",
+      "publisher": "Ivan Mehta/TechCrunch",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.406
+    },
+    {
+      "title": "DeepSeek open sources Super-Agent as a research prototype, a proactive coding agent it says can monitor group chats for coding issues and suggest solutions (Debby Wu/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-01/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic",
+      "summary": "Debby Wu / Bloomberg : DeepSeek open sources Super-Agent as a research prototype, a proactive coding agent it says can monitor group chats for coding issues and suggest solutions &mdash; DeepSeek has released a prototype of a more autonomous coding agent as it seeks to challenge Anthropic PBC's popular Claude Code.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-01/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261101/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261101/p2#a261101p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Debby Wu / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-01/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic\">DeepSeek open sources Super-Agent as a research prototype, a proactive coding agent it says can monitor group chats for coding issues and suggest solutions</A></B></SPAN>&nbsp; &mdash;&nbsp; DeepSeek has released a prototype of a more autonomous coding agent as it seeks to challenge Anthropic PBC's popular Claude Code.</P>",
+      "published_at": "2026-11-01T06:00:13.000Z",
+      "discovery_url": "https://www.techmeme.com/261101/p2",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-01/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic",
+      "publisher": "Debby Wu/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.316
+    },
+    {
+      "title": "Insurance software maker Guidewire agrees to acquire Hyperexponential, which makes AI-powered insurance underwriting and pricing software, for $1.7B in cash (Anzar Mehraj/Reuters)",
+      "url": "https://www.reuters.com/legal/litigation/guidewire-buy-uk-insurance-ai-firm-hyperexponential-deal-worth-up-21-billion-2026-10-27/",
+      "summary": "Anzar Mehraj / Reuters : Insurance software maker Guidewire agrees to acquire Hyperexponential, which makes AI-powered insurance underwriting and pricing software, for $1.7B in cash &mdash; Insurance software maker Guidewire (GWRE.N) said on Tuesday it would buy hyperexponential for $1.7 billion in cash and up to $400 million &hellip;",
+      "description_html": "<A HREF=\"https://www.reuters.com/legal/litigation/guidewire-buy-uk-insurance-ai-firm-hyperexponential-deal-worth-up-21-billion-2026-10-27/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261101/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261101/p1#a261101p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Anzar Mehraj / <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/legal/litigation/guidewire-buy-uk-insurance-ai-firm-hyperexponential-deal-worth-up-21-billion-2026-10-27/\">Insurance software maker Guidewire agrees to acquire Hyperexponential, which makes AI-powered insurance underwriting and pricing software, for $1.7B in cash</A></B></SPAN>&nbsp; &mdash;&nbsp; Insurance software maker Guidewire (GWRE.N) said on Tuesday it would buy hyperexponential for $1.7 billion in cash and up to $400 million &hellip; </P>",
+      "published_at": "2026-11-01T05:50:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261101/p1",
+      "direct_source_url": "https://www.reuters.com/legal/litigation/guidewire-buy-uk-insurance-ai-firm-hyperexponential-deal-worth-up-21-billion-2026-10-27/",
+      "publisher": "Anzar Mehraj/Reuters",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.229
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 8,
+      "title": "Proving and Improving the Platonic Representation Hypothesis with JEPAs",
+      "url": "https://huggingface.co/papers/2610.39302",
+      "direct_source_url": "https://huggingface.co/papers/2610.39302",
+      "discovery_url": "https://huggingface.co/papers/2610.39302",
+      "link_quality": "original",
+      "summary": "Whether models trained on different modalities converge to the same representation of the world is central to AI. The Platonic Representation Hypothesis (PRH) conjectures that they do as they scale, but without a proof it offers neither a guarantee nor a recipe. We turn the hypothesis into a theorem. First, we prove a Platonic Representation Theorem: Joint-Embedding Predictive Architectures (JEPAs) trained separately on any number of modalities learn the same representation up to one rotation whenever their positive pairs are two observations of one scene--good views--and their misalignment is bounded otherwise. Second, we show that next-token prediction is a JEPA with bad views, parts of a single document, which explains why language models align with vision only through scale. Third, we validate the theory from 145k captions to the texts of 940M web images, and uncover a scaling law of alignment that predicts unseen runs within seed noise. Good views need 42 times fewer training samples than next-token prediction on the same corpus to reach the same alignment, and a 109M-parameter text JEPA aligns with DINOv2 and CLIP's image encoders better than every language model we evaluated",
+      "published_at": "2026-10-28T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 60
+      },
+      "collection_mode": "api",
+      "score": 6.14
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "EPSBench: Benchmarking LLM Agents for Earnings Forecasting",
+      "url": "https://huggingface.co/papers/2610.38293",
+      "direct_source_url": "https://huggingface.co/papers/2610.38293",
+      "discovery_url": "https://huggingface.co/papers/2610.38293",
+      "link_quality": "original",
+      "summary": "Quarterly earnings forecasting requires an agent to connect financial evidence to the income-statement line items that produce a company's reported earnings. We introduce EPSBench, a benchmark for studying this ability across 149 firm-quarters from 86 US companies. Agents read a fixed collection of filings, earnings-call transcripts, and news, then estimate company-specific income-statement drivers with cited evidence. A shared accounting calculator converts these estimates into GAAP diluted earnings per share (EPS), providing a common basis for comparing forecast assumptions. We evaluate six models under a common harness, assessing point forecast error relative to date-matched analyst consensus and checking whether their prediction intervals achieve the stated coverage. Three models show no detectable paired difference in point forecast error from consensus, and three have higher error. Across all six models, nominal 80% intervals contain reported EPS in only 37--70% of runs that return an interval, and most misses fall above the upper bound because the forecasts run low. The driver records trace most of the error gap between models to operating-income estimates.",
+      "published_at": "2026-10-28T01:24:11.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 6.139
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "Weaken to Strengthen: Weakening-Induced On-Policy Self-Distillation for Large Reasoning Models",
+      "url": "https://huggingface.co/papers/2610.38681",
+      "direct_source_url": "https://huggingface.co/papers/2610.38681",
+      "discovery_url": "https://huggingface.co/papers/2610.38681",
+      "link_quality": "original",
+      "summary": "Self-distillation offers a way to improve reasoning models when a suitable external teacher is unavailable. However, common approaches rely on privileged information to construct a stronger self-teacher, limiting their use when only unlabeled prompts are available. In this paper, we introduce Weakening-Induced On-Policy Self-Distillation (WISD), which instead constructs a weaker counterpart of the original model and uses the contrast between the two as a training signal without requiring privileged information. We explore two ways to construct the weaker model: low-bit quantization and magnitude pruning. We evaluate WISD across diverse architectures and scales on mathematical and coding reasoning tasks. Across these benchmarks, quantization and pruning improve average accuracy over the original models by 4.0 and 5.5 percentage points, respectively, achieving state-of-the-art performance even without privileged information. Notably, pruning raises Qwen3.5-4B's accuracy from 57.7% to 70.5% on HMMT 2025 and from 39.1% to 56.7% on LiveCodeBench v6. Quantization raises Qwen3.6-35B-A3B's accuracy from 68.5% to 74.6% and from 61.8% to 69.5% on the same benchmarks, respectively. These resu",
+      "published_at": "2026-10-27T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 6.059
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Matched Capabilities, Different Behaviors: A Controlled Study of MCP and CLI Interfaces for Language Agents",
+      "url": "https://huggingface.co/papers/2610.34298",
+      "direct_source_url": "https://huggingface.co/papers/2610.34298",
+      "discovery_url": "https://huggingface.co/papers/2610.34298",
+      "link_quality": "original",
+      "summary": "Language agents increasingly act through external tools and interactive environments, making the interface between the model and its executable capabilities part of the decision process. Model Context Protocol (MCP) and command-line interfaces (CLI) can expose the same semantic operations through markedly different model-facing representations. We study whether these representational differences change agent behavior when executable capabilities are matched. We introduce Matched Interface Comparison and Analysis (MICA), which renders MCP and CLI from a shared semantic action contract and routes decoded actions through the same runtime. Across six models and three interactive environments, matched interfaces produce substantial differences in task performance and interaction cost. These effects extend beyond surface validity to semantic action selection, failure pathways, and recovery. Matched-state probes localize sensitivity to capability presentation, realization, and feedback. Paired natural trajectories reveal structured divergence in 94.3% of 2,004 episodes and show that early differences propagate through subsequent interaction. This analysis identifies interface realization",
+      "published_at": "2026-10-24T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 4
+      },
+      "collection_mode": "api",
+      "score": 6.009
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "Unlocking Any-Order Generation in Pretrained Autoregressive Image Models",
+      "url": "https://huggingface.co/papers/2610.39293",
+      "direct_source_url": "https://huggingface.co/papers/2610.39293",
+      "discovery_url": "https://huggingface.co/papers/2610.39293",
+      "link_quality": "original",
+      "summary": "Autoregressive (AR) image generators are powerful in principle but inflexible in practice: training with a fixed raster-scan order hardcodes a single factorization of the image distribution into the model, leaving it unable to inpaint, outpaint, or edit at inference time. Existing solutions, including the modern discrete-diffusion family, train from scratch on a mixture of token orderings, paying roughly 3x the compute of standard raster-scan training; discrete diffusion further sacrifices compatibility with the AR inference ecosystem (KV caching, vLLM) by construction. We argue that this cost is unnecessary. A pretrained raster-scan AR model has already learned the joint distribution over image tokens; what it lacks is not knowledge but the ability to express that knowledge through non-sequential conditional pathways. We propose a recipe for adapting pretrained raster-scan models into any-order generators using two components: future-aware positional embeddings that resolve a target-position identifiability problem at negligible overhead, and an ordering curriculum that traces a stable optimization path from the pretrained solution to a good any-order basin. Applied to four base m",
+      "published_at": "2026-10-28T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 5.979
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 6,
+      "title": "Training Foundation Models with a Single Algorithm",
+      "url": "https://huggingface.co/papers/2610.40564",
+      "direct_source_url": "https://huggingface.co/papers/2610.40564",
+      "discovery_url": "https://huggingface.co/papers/2610.40564",
+      "link_quality": "original",
+      "summary": "Foundation models are typically trained in stages: pretraining, midtraining, supervised fine-tuning (SFT), and reinforcement learning (RL), with changes in both data and learning algorithms. We show that this algorithmic separation is not fundamental. By deriving suitable RL objectives as maximum-likelihood fitting to model-generated target distributions, we place all of these stages under a single likelihood-based training algorithm, unified training. This perspective turns the foundation-model training lifecycle into a problem of choosing which data to train on, in what proportions, and when, with conventional staged training as a special case. We instantiate this framework in a unified training system that mixes static data and RL generations within a single trainer. Across controlled and real-world experiments, unified training improves the accuracy-compute tradeoff and task coverage while preserving broader capabilities, and provides a stronger starting point for continual learning. This work lays the groundwork for a unified science of foundation-model training, connecting mathematical principles, training infrastructure, and the development of model capabilities.",
+      "published_at": "2026-10-28T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 8
+      },
+      "collection_mode": "api",
+      "score": 5.977
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "Broken on Arrival: Non-Functional Quantized LLM Artifacts in Public Model Registries and How to Catch Them",
+      "url": "https://huggingface.co/papers/2609.05881",
+      "direct_source_url": "https://huggingface.co/papers/2609.05881",
+      "discovery_url": "https://huggingface.co/papers/2609.05881",
+      "link_quality": "original",
+      "summary": "Developers download quantized large language models (LLMs) from public registries to run them locally. None of the registries we examined documented functional testing of their files. We tested all 305 eligible code-capable GGUF tags (the llama.cpp format) across 15 model lines in the official Ollama library, plus 22 popular Hugging Face community files. A 15-task code screen identified suspects, which we retested on all 164 HumanEval+ tasks. Seven official tags (2.3%) solved at most six of them. All were low-bit quantizations of models with at most four billion parameters. We rebuilt five suspect files from the original weights. All five registry files matched our uncalibrated rebuilds tensor for tensor, so none was corrupted. Exact reproducibility did not imply function. With the weights, toolchain and tensor mix held fixed, adding an importance matrix raised three Qwen2.5-Coder-3B builds from zero to 76-113 solved tasks. The same uncalibrated recipe left the smaller Qwen2.5-Coder-1.5B functional, showing that the recipe alone does not predict failure. None of 66 sampled tags that passed the screen was non-functional. We release the audit data and the quantcheck tool and recommen",
+      "published_at": "2026-10-24T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 5
+      },
+      "collection_mode": "api",
+      "score": 5.969
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 7,
+      "title": "ABF-Bench: A Verifiable Benchmark for Agentic Blockchain Forensics",
+      "url": "https://huggingface.co/papers/2610.23656",
+      "direct_source_url": "https://huggingface.co/papers/2610.23656",
+      "discovery_url": "https://huggingface.co/papers/2610.23656",
+      "link_quality": "original",
+      "summary": "Blockchain forensics is adversarial and open-ended: money launderers split, swap, and bridge funds, cut their trail at mixers or custodial services, and change tactics from one incident to the next. Investigators must keep adapting their tracing in response. Yet the immutability of public ledgers preserves every recorded movement in public view, making much of the investigation independently verifiable. We introduce ABF-Bench, an interactive benchmark that makes evidence-backed fund tracing a verifiable agent task, in which every claimed movement must cite ledger records the agent retrieved. A case-to-task pipeline builds well-posed tasks across ledgers: conservative rules halt tracing wherever the records leave a continuation unresolved, and each task's reference graph is the answer those rules determine. Built from real laundering activity, the tasks combine multi-hop transfers, DeFi exchanges, cross-chain round trips, custodial and mixer deposits, and address poisoning. We also propose the ABF agent harness, built around a working memory, and evaluate it alongside general-purpose agents and fixed-order tracers. The harness reaches 75% edge recall, against 47% for Codex with the",
+      "published_at": "2026-10-15T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 3
+      },
+      "collection_mode": "api",
+      "score": 5.721
+    }
+  ]
+}

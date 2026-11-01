@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-01",
+  "generated_at": "2026-11-01T13:18:27.302Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 323,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 434,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 356,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 249,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 2503,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": false,
+  "quality_status": "blocked",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [
+    "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
+    "Overall confidence 0% is below the 78% release threshold."
+  ],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-01",
+  "overall_confidence": 0,
+  "stories": [
+    {
+      "category": "lead",
+      "headline": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "Gunjan Banerji/Wall Street Journal",
+      "discovered_via": "Techmeme",
+      "source_title": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)",
+      "url": "https://www.wsj.com/finance/stocks/ai-investors-are-racing-to-get-insurance-on-the-biggest-market-bet-in-history-a60e296f?st=AXJFTG",
+      "discovery_url": "https://www.techmeme.com/261101/p8",
+      "link_quality": "original",
+      "published_at": "2026-11-01T11:00:01.000Z",
+      "discovery_score": 8.004
+    },
+    {
+      "category": "worth-knowing",
+      "headline": "HackerTube: YouTube built from videos recommended by HN",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "karpathy.bearblog.dev",
+      "discovered_via": "Hacker News",
+      "source_title": "HackerTube: YouTube built from videos recommended by HN",
+      "url": "https://karpathy.bearblog.dev/hacker-tube/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50319510",
+      "link_quality": "original",
+      "published_at": "2026-10-31T19:56:53.000Z",
+      "discovery_score": 8.477
+    },
+    {
+      "category": "worth-knowing",
+      "headline": "Proving and Improving the Platonic Representation Hypothesis with JEPAs",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "Hugging Face",
+      "discovered_via": "Hugging Face",
+      "source_title": "Proving and Improving the Platonic Representation Hypothesis with JEPAs",
+      "url": "https://huggingface.co/papers/2610.39302",
+      "discovery_url": "https://huggingface.co/papers/2610.39302",
+      "link_quality": "original",
+      "published_at": "2026-10-28T20:00:00.000Z",
+      "discovery_score": 6.14
+    }
+  ],
+  "practical_takeaway": "Do not publish this edition until verification succeeds.",
+  "watch_next": "Re-run the intelligence workflow or review the source links manually.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 061",
+      "title": "Our Pet Care Board",
+      "summary": "Create recurring care tasks for each family pet, see what is due or overdue, assign responsibility and keep a private completion history.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-061/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-061/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-01",
+    "lead_headline": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)",
+    "facebook_post": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)",
+    "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "acbc54e16059130561e838501037e9bfb729b1b23020efd47ddc80f450156772"
+}

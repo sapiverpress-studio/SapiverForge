@@ -1,4 +1,4 @@
-# Sapiver Forge Daily Brief — 2026-11-01
+# Sapiver Forge Daily Brief — 2026-11-02
 
 Automated verification did not complete: Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {
   "error": {
@@ -9,7 +9,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 }
  This edition is a source index only and must not be sent as a newsletter.
 
-## 1. Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)
+## 1. Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -17,19 +17,9 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Gunjan Banerji/Wall Street Journal](https://www.wsj.com/finance/stocks/ai-investors-are-racing-to-get-insurance-on-the-biggest-market-bet-in-history-a60e296f?st=AXJFTG) · discovered via Techmeme · confidence 0%
+**Source:** [New York Times](https://www.nytimes.com/2026/11/02/technology/anthropic-ai-computing-power.html) · discovered via Techmeme · confidence 0%
 
-## 2. HackerTube: YouTube built from videos recommended by HN
-
-**Confirmed:** Headline collected from the named source; claim verification is incomplete.
-
-**Why it matters:** Human review required before any interpretation or distribution.
-
-**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
-
-**Source:** [karpathy.bearblog.dev](https://karpathy.bearblog.dev/hacker-tube/) · discovered via Hacker News · confidence 0%
-
-## 3. Proving and Improving the Platonic Representation Hypothesis with JEPAs
+## 2. WTF Ubuntu?
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -37,7 +27,17 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Hugging Face](https://huggingface.co/papers/2610.39302) · confidence 0%
+**Source:** [chalmovsky.com](https://chalmovsky.com/posts/wtf-ubuntu) · discovered via Hacker News · confidence 0%
+
+## 3. OSWAM: An Effective World Action Model with One-Step Action Generation
+
+**Confirmed:** Headline collected from the named source; claim verification is incomplete.
+
+**Why it matters:** Human review required before any interpretation or distribution.
+
+**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
+
+**Source:** [Hugging Face](https://huggingface.co/papers/2610.35850) · confidence 0%
 
 ## Practical takeaway
 

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-11-01",
-  "generated_at": "2026-11-01T13:18:27.302Z",
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T15:40:50.980Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 323,
+      "elapsed_ms": 729,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,22 +23,22 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 434,
+      "elapsed_ms": 315,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 356,
+      "elapsed_ms": 478,
       "collection_mode": "api",
-      "original_link_count": 10
+      "original_link_count": 9
     },
     {
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 249,
+      "elapsed_ms": 311,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 2503,
+      "elapsed_ms": 1822,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -62,56 +62,56 @@
     "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
     "Overall confidence 0% is below the 78% release threshold."
   ],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-01",
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-02",
   "overall_confidence": 0,
   "stories": [
     {
       "category": "lead",
-      "headline": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)",
+      "headline": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "Gunjan Banerji/Wall Street Journal",
+      "source": "New York Times",
       "discovered_via": "Techmeme",
-      "source_title": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)",
-      "url": "https://www.wsj.com/finance/stocks/ai-investors-are-racing-to-get-insurance-on-the-biggest-market-bet-in-history-a60e296f?st=AXJFTG",
-      "discovery_url": "https://www.techmeme.com/261101/p8",
+      "source_title": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)",
+      "url": "https://www.nytimes.com/2026/11/02/technology/anthropic-ai-computing-power.html",
+      "discovery_url": "https://www.techmeme.com/261102/p26",
       "link_quality": "original",
-      "published_at": "2026-11-01T11:00:01.000Z",
-      "discovery_score": 8.004
+      "published_at": "2026-11-02T15:20:25.000Z",
+      "discovery_score": 8.086
     },
     {
       "category": "worth-knowing",
-      "headline": "HackerTube: YouTube built from videos recommended by HN",
+      "headline": "WTF Ubuntu?",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "karpathy.bearblog.dev",
+      "source": "chalmovsky.com",
       "discovered_via": "Hacker News",
-      "source_title": "HackerTube: YouTube built from videos recommended by HN",
-      "url": "https://karpathy.bearblog.dev/hacker-tube/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50319510",
+      "source_title": "WTF Ubuntu?",
+      "url": "https://chalmovsky.com/posts/wtf-ubuntu",
+      "discovery_url": "https://news.ycombinator.com/item?id=50337608",
       "link_quality": "original",
-      "published_at": "2026-10-31T19:56:53.000Z",
-      "discovery_score": 8.477
+      "published_at": "2026-11-02T14:52:00.000Z",
+      "discovery_score": 8.176
     },
     {
       "category": "worth-knowing",
-      "headline": "Proving and Improving the Platonic Representation Hypothesis with JEPAs",
+      "headline": "OSWAM: An Effective World Action Model with One-Step Action Generation",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
       "source": "Hugging Face",
       "discovered_via": "Hugging Face",
-      "source_title": "Proving and Improving the Platonic Representation Hypothesis with JEPAs",
-      "url": "https://huggingface.co/papers/2610.39302",
-      "discovery_url": "https://huggingface.co/papers/2610.39302",
+      "source_title": "OSWAM: An Effective World Action Model with One-Step Action Generation",
+      "url": "https://huggingface.co/papers/2610.35850",
+      "discovery_url": "https://huggingface.co/papers/2610.35850",
       "link_quality": "original",
-      "published_at": "2026-10-28T20:00:00.000Z",
-      "discovery_score": 6.14
+      "published_at": "2026-10-25T20:00:00.000Z",
+      "discovery_score": 6.139
     }
   ],
   "practical_takeaway": "Do not publish this edition until verification succeeds.",
@@ -124,21 +124,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 061",
-      "title": "Our Pet Care Board",
-      "summary": "Create recurring care tasks for each family pet, see what is due or overdue, assign responsibility and keep a private completion history.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-061/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-061/poster.png"
+      "label": "AI Inquisitive Parents · Day 062",
+      "title": "Our Family Subscriptions",
+      "summary": "Track the recurring services, clubs and apps a family pays for, compare monthly and yearly costs, and see what renews next.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-062/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-062/poster.png"
     }
   },
   "social": {
-    "date": "2026-11-01",
-    "lead_headline": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)",
-    "facebook_post": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)",
+    "date": "2026-11-02",
+    "lead_headline": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)",
+    "facebook_post": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)",
     "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+    "tiktok_caption": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "acbc54e16059130561e838501037e9bfb729b1b23020efd47ddc80f450156772"
+  "candidate_id": "89a8d1c0ccc6822dd248c7994297e8410bf09f75aebad79267835449842033af"
 }

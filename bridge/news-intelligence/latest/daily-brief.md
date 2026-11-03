@@ -1,4 +1,4 @@
-# Sapiver Forge Daily Brief — 2026-11-02
+# Sapiver Forge Daily Brief — 2026-11-03
 
 Automated verification did not complete: Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {
   "error": {
@@ -9,7 +9,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 }
  This edition is a source index only and must not be sent as a newsletter.
 
-## 1. Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)
+## 1. How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -17,19 +17,9 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [New York Times](https://www.nytimes.com/2026/11/02/technology/anthropic-ai-computing-power.html) · discovered via Techmeme · confidence 0%
+**Source:** [David Freedlander/New York Magazine](https://nymag.com/intelligencer/article/alex-bores-who-decides-pac-ai-2028-democratic-presidential-primary.html) · discovered via Techmeme · confidence 0%
 
-## 2. WTF Ubuntu?
-
-**Confirmed:** Headline collected from the named source; claim verification is incomplete.
-
-**Why it matters:** Human review required before any interpretation or distribution.
-
-**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
-
-**Source:** [chalmovsky.com](https://chalmovsky.com/posts/wtf-ubuntu) · discovered via Hacker News · confidence 0%
-
-## 3. OSWAM: An Effective World Action Model with One-Step Action Generation
+## 2. Astra can read and write weights to improve Qwen
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -37,7 +27,17 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Hugging Face](https://huggingface.co/papers/2610.35850) · confidence 0%
+**Source:** [rikiyat.github.io](https://rikiyat.github.io/blog/weight-space-programming/) · discovered via Hacker News · confidence 0%
+
+## 3. Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning
+
+**Confirmed:** Headline collected from the named source; claim verification is incomplete.
+
+**Why it matters:** Human review required before any interpretation or distribution.
+
+**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
+
+**Source:** [Hugging Face](https://huggingface.co/papers/2611.03602) · confidence 0%
 
 ## Practical takeaway
 

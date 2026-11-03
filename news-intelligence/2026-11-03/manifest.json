@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T08:55:27.952Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 482,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 274,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 280,
+      "collection_mode": "api",
+      "original_link_count": 8
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 206,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1090,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": false,
+  "quality_status": "blocked",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [
+    "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
+    "Overall confidence 0% is below the 78% release threshold."
+  ],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-03",
+  "overall_confidence": 0,
+  "stories": [
+    {
+      "category": "lead",
+      "headline": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "David Freedlander/New York Magazine",
+      "discovered_via": "Techmeme",
+      "source_title": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)",
+      "url": "https://nymag.com/intelligencer/article/alex-bores-who-decides-pac-ai-2028-democratic-presidential-primary.html",
+      "discovery_url": "https://www.techmeme.com/261103/p3",
+      "link_quality": "original",
+      "published_at": "2026-11-03T08:40:02.000Z",
+      "discovery_score": 8.089
+    },
+    {
+      "category": "worth-knowing",
+      "headline": "Astra can read and write weights to improve Qwen",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "rikiyat.github.io",
+      "discovered_via": "Hacker News",
+      "source_title": "Astra can read and write weights to improve Qwen",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50341174",
+      "link_quality": "original",
+      "published_at": "2026-11-02T18:21:28.000Z",
+      "discovery_score": 8.243
+    },
+    {
+      "category": "worth-knowing",
+      "headline": "Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "Hugging Face",
+      "discovered_via": "Hugging Face",
+      "source_title": "Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning",
+      "url": "https://huggingface.co/papers/2611.03602",
+      "discovery_url": "https://huggingface.co/papers/2611.03602",
+      "link_quality": "original",
+      "published_at": "2026-11-02T13:41:14.000Z",
+      "discovery_score": 6.986
+    }
+  ],
+  "practical_takeaway": "Do not publish this edition until verification succeeds.",
+  "watch_next": "Re-run the intelligence workflow or review the source links manually.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 063",
+      "title": "Our Warranty & Receipt Tracker",
+      "summary": "Keep household purchase details, receipt locations and warranty dates together, then see which warranties are approaching their end.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-063/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-063/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-03",
+    "lead_headline": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)",
+    "facebook_post": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)",
+    "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "e34e3cd93830067812791693b33116ab340da91a294c022153267f04e1366c17"
+}

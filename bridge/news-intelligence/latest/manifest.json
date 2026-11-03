@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-11-02",
-  "generated_at": "2026-11-02T15:40:50.980Z",
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T08:55:27.952Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 729,
+      "elapsed_ms": 482,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,22 +23,22 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 315,
+      "elapsed_ms": 274,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 478,
+      "elapsed_ms": 280,
       "collection_mode": "api",
-      "original_link_count": 9
+      "original_link_count": 8
     },
     {
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 311,
+      "elapsed_ms": 206,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1822,
+      "elapsed_ms": 1090,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -62,56 +62,56 @@
     "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
     "Overall confidence 0% is below the 78% release threshold."
   ],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-02",
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-03",
   "overall_confidence": 0,
   "stories": [
     {
       "category": "lead",
-      "headline": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)",
+      "headline": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "New York Times",
+      "source": "David Freedlander/New York Magazine",
       "discovered_via": "Techmeme",
-      "source_title": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)",
-      "url": "https://www.nytimes.com/2026/11/02/technology/anthropic-ai-computing-power.html",
-      "discovery_url": "https://www.techmeme.com/261102/p26",
+      "source_title": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)",
+      "url": "https://nymag.com/intelligencer/article/alex-bores-who-decides-pac-ai-2028-democratic-presidential-primary.html",
+      "discovery_url": "https://www.techmeme.com/261103/p3",
       "link_quality": "original",
-      "published_at": "2026-11-02T15:20:25.000Z",
-      "discovery_score": 8.086
+      "published_at": "2026-11-03T08:40:02.000Z",
+      "discovery_score": 8.089
     },
     {
       "category": "worth-knowing",
-      "headline": "WTF Ubuntu?",
+      "headline": "Astra can read and write weights to improve Qwen",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "chalmovsky.com",
+      "source": "rikiyat.github.io",
       "discovered_via": "Hacker News",
-      "source_title": "WTF Ubuntu?",
-      "url": "https://chalmovsky.com/posts/wtf-ubuntu",
-      "discovery_url": "https://news.ycombinator.com/item?id=50337608",
+      "source_title": "Astra can read and write weights to improve Qwen",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50341174",
       "link_quality": "original",
-      "published_at": "2026-11-02T14:52:00.000Z",
-      "discovery_score": 8.176
+      "published_at": "2026-11-02T18:21:28.000Z",
+      "discovery_score": 8.243
     },
     {
       "category": "worth-knowing",
-      "headline": "OSWAM: An Effective World Action Model with One-Step Action Generation",
+      "headline": "Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
       "source": "Hugging Face",
       "discovered_via": "Hugging Face",
-      "source_title": "OSWAM: An Effective World Action Model with One-Step Action Generation",
-      "url": "https://huggingface.co/papers/2610.35850",
-      "discovery_url": "https://huggingface.co/papers/2610.35850",
+      "source_title": "Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning",
+      "url": "https://huggingface.co/papers/2611.03602",
+      "discovery_url": "https://huggingface.co/papers/2611.03602",
       "link_quality": "original",
-      "published_at": "2026-10-25T20:00:00.000Z",
-      "discovery_score": 6.139
+      "published_at": "2026-11-02T13:41:14.000Z",
+      "discovery_score": 6.986
     }
   ],
   "practical_takeaway": "Do not publish this edition until verification succeeds.",
@@ -124,21 +124,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 062",
-      "title": "Our Family Subscriptions",
-      "summary": "Track the recurring services, clubs and apps a family pays for, compare monthly and yearly costs, and see what renews next.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-062/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-062/poster.png"
+      "label": "AI Inquisitive Parents · Day 063",
+      "title": "Our Warranty & Receipt Tracker",
+      "summary": "Keep household purchase details, receipt locations and warranty dates together, then see which warranties are approaching their end.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-063/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-063/poster.png"
     }
   },
   "social": {
-    "date": "2026-11-02",
-    "lead_headline": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)",
-    "facebook_post": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times)",
+    "date": "2026-11-03",
+    "lead_headline": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)",
+    "facebook_post": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)",
     "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Sources detail Anthropic's compute deal spree: 3.5GW+ in expected capacity in 2026, expanding direct hardware procurement to include Nvidia and AMD, and more (New York Times). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+    "tiktok_caption": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "89a8d1c0ccc6822dd248c7994297e8410bf09f75aebad79267835449842033af"
+  "candidate_id": "e34e3cd93830067812791693b33116ab340da91a294c022153267f04e1366c17"
 }

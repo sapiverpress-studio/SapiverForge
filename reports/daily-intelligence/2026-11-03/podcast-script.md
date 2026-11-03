@@ -1,0 +1,27 @@
+# AI security needs a working fix
+
+OpenAI's planned security sprint, its published engineering lessons and the difference between a proposed patch and a verified repair.
+
+OpenAI is planning another security sprint, this time bringing in researchers from Cathedral to work alongside its own teams. That is the announcement. The useful part is what happens after an AI system points at a possible problem. Does the weakness really exist? Does the proposed repair work? And has that repair reached the system people actually use?
+
+## A plan, with results still to come
+
+OpenAI's post is dated the second of November. It describes researchers using its models to challenge the company's defences. It does not give the results of this upcoming sprint. That distinction sounds small, but it stops us turning an intention into an achievement. OpenAI also describes an earlier sprint in which engineers used Codex to investigate possible weaknesses, reproduce them in isolated environments and prepare patches for review. The interesting part of that account is the sequence. Finding something suspicious was only the beginning.
+
+## Reproduce the problem before accepting the answer
+
+In its separate Defense Factory account, OpenAI describes a workflow that maps systems, investigates findings, checks whether a suspected vulnerability can be reproduced, assigns responsibility and verifies repairs. The company also reports practical difficulties, including duplicate findings and test environments with missing dependencies. These are useful admissions because an AI system can produce a convincing explanation while the surrounding evidence remains incomplete. Imagine a tool saying a locked cupboard can be opened. You would want to know which cupboard, what permission the person already had and whether the claimed method actually worked. A security report needs that sort of specificity. A test that cannot run is an unresolved test.
+
+## A merged patch is another checkpoint
+
+OpenAI says follow-up checks exposed a gap between patches being merged and fixes reaching systems across its fleet. Its published process therefore includes independently checking deployed fixes. For a small business using software, that is a practical distinction. There can be several versions of an application in circulation. A correction in the source repository may still be waiting for a release, or may have reached only part of a service. The general lesson is to describe the result precisely: proposed, tested, released or checked in use. Each word tells the next person something different. A reassuring status label cannot substitute for the check it claims to represent.
+
+## What the bigger rewards mean
+
+A second OpenAI announcement raises bug bounty rewards. It says a critical vulnerability in core products can earn up to thirty thousand US dollars. Exceptional critical findings remain eligible for a base award of up to one hundred thousand dollars, with bonuses potentially taking that to one hundred and seventy-two thousand. Those are different categories, rather than the standard payment for any reported bug. The programme also rewards useful reports and repeat contributions. The wider point is that outside researchers can find weaknesses internal testing misses. Rewarding a report is still separate from confirming that the underlying issue has been repaired.
+
+## A proportionate step for ordinary work
+
+You do not need to copy a large company's security operation to use the underlying discipline. If you use an AI tool to suggest a change, keep the original version, test the change on a safe copy and record what result you expected. If you cannot check a claim, leave it unresolved. Where a system contains customer information or supports important work, make sure the person responsible knows what is being changed. These are suggestions for a cautious workflow, not a claim that today's announcement makes any particular product safer. The strongest conclusion available now is modest: OpenAI has described its next exercise and shared lessons from previous work. We still need to see the new results.
+
+The practical takeaway is to keep the evidence attached to the claim. A possible weakness, a tested patch and a verified repair deserve different labels. We will watch for the findings from the next sprint. You can read the original announcements and the engineering account through today's Sapiver Forge Daily Brief.

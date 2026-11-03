@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-03",
+  "method": "direct_source_review",
+  "reviewer": "Codex",
+  "reviewed_at": "2026-11-03T09:17:14.634Z",
+  "confidence_scope": "Editorial confidence concerns accurate attribution to the checked sources; it is not a statistical measure and does not validate company or research performance claims.",
+  "sources": [
+    {
+      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai/",
+      "title": "Preparing our next security sprint to harden OpenAI",
+      "published_at": "2026-11-02",
+      "checked_claims": [
+        "The next sprint is planned, with Cathedral working alongside OpenAI teams.",
+        "No findings or completion of the upcoming sprint are established."
+      ],
+      "retrieval": "Original OpenAI announcement read."
+    },
+    {
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "title": "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights",
+      "published_at": "2026-11-02",
+      "checked_claims": [
+        "Qwen3.5-0.8B results concern a targeted correction of reasoning loops.",
+        "The largest reported result used 50 evaluation passes.",
+        "The Gemma 3 270M comparison did not establish similar improvement."
+      ],
+      "retrieval": "Author's full research post including experiments 8 and the additional Gemma comparison read.",
+      "limitations": [
+        "Experiments were not reproduced during this review."
+      ]
+    },
+    {
+      "url": "https://nymag.com/intelligencer/article/alex-bores-who-decides-pac-ai-2028-democratic-presidential-primary.html",
+      "title": "Alex Bores Is Shaping Democrats' 2028 AI Agenda",
+      "published_at": "2026-11-02",
+      "checked_claims": [
+        "Who Decides is described as an advocacy organisation working on a 2028 Democratic AI agenda.",
+        "The profile concerns an existing organisation, not a launch on 3 November."
+      ],
+      "retrieval": "Original New York Magazine reporting retrieved through search.",
+      "limitations": [
+        "No electoral outcome or change in law is inferred."
+      ]
+    },
+    {
+      "url": "https://openai.com/the-defense-factory/",
+      "title": "Defense Factory",
+      "checked_claims": [
+        "The published workflow includes reproducing findings and independently verifying deployed fixes.",
+        "The company describes duplicate findings, environment problems and gaps between merged and deployed patches."
+      ],
+      "retrieval": "Original OpenAI engineering account read.",
+      "usage": "Detailed-story podcast only; company-reported operational lessons."
+    },
+    {
+      "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties/",
+      "title": "Rewarding defenders with bigger bug bounties",
+      "published_at": "2026-11-02",
+      "checked_claims": [
+        "Critical core-product findings: up to $30,000.",
+        "Exceptional critical findings: up to $100,000 base, up to $172,000 with bonuses."
+      ],
+      "retrieval": "Original OpenAI announcement read.",
+      "usage": "Detailed-story podcast only; distinct reward categories retained."
+    }
+  ],
+  "removed_items": [
+    {
+      "title": "Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning",
+      "reason": "Could not inspect the original paper during this review; excluded rather than publishing a discovery summary as verified reporting."
+    }
+  ],
+  "recovery": {
+    "original_candidate_id": "e34e3cd93830067812791693b33116ab340da91a294c022153267f04e1366c17",
+    "original_failure": "Gemini returned HTTP 402 RESOURCE_EXHAUSTED with depleted prepaid credits.",
+    "billing_resolved": false,
+    "additional_model_api_calls": false,
+    "scope": "Manual recovery of today's publication package. No provider or billing configuration changed."
+  }
+}

@@ -83,7 +83,14 @@ meta=read('newsletter-metadata.json');
 assert(meta.status==='brevo_draft'&&Number.isInteger(meta.brevo_campaign_id)&&!meta.sent_at,'An unsent Brevo draft was not created.');
 const remote=await api('/'+meta.brevo_campaign_id);
 assert(remote.status==='draft'&&remote.subject===meta.subject,'Brevo status or subject does not match.');
-assert(normal(remote.htmlContent)===normal(html),'Brevo HTML differs from the reviewed repository newsletter.');
+if(normal(remote.htmlContent)!==normal(html)){
+ fs.writeFileSync(path.join(dir,'brevo-readback.html'),String(remote.htmlContent||''));
+ const expected=normal(html),actual=normal(remote.htmlContent);
+ let at=0;while(at<Math.min(expected.length,actual.length)&&expected[at]===actual[at])at++;
+ const safe=s=>s.replace(/https?:\/\/[^\s<>"']+/g,'<source-url>');
+ console.log(JSON.stringify({repository_length:expected.length,brevo_length:actual.length,first_difference:at,repository_excerpt:safe(expected.slice(Math.max(0,at-80),at+350)),brevo_excerpt:safe(actual.slice(Math.max(0,at-80),at+350))}));
+ throw Error('Brevo HTML differs from the reviewed repository newsletter; readback retained for diagnosis.');
+}
 const verifiedAt=new Date().toISOString();
 Object.assign(meta,{approved:false,pending_human_release:true,campaign_status:'draft_verified',verified_at:verifiedAt,html_sha256:sha(html),normalised_html_sha256:sha(normal(html)),brevo_normalised_html_sha256:sha(normal(remote.htmlContent))});
 write(path.join(dir,'newsletter-metadata.json'),meta);

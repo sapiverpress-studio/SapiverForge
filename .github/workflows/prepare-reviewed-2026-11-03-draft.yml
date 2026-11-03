@@ -20,6 +20,13 @@ jobs:
     timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            src
+            scripts
+            news-intelligence/2026-11-03
+            reports/daily-intelligence/2026-11-03
+            bridge/news-intelligence/latest
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -52,5 +59,6 @@ jobs:
           path: |
             news-intelligence/2026-11-03/newsletter-metadata.json
             news-intelligence/2026-11-03/draft-verification.json
+            news-intelligence/2026-11-03/brevo-readback.html
           if-no-files-found: warn
           retention-days: 14

@@ -77,5 +77,11 @@
     "billing_resolved": false,
     "additional_model_api_calls": false,
     "scope": "Manual recovery of today's publication package. No provider or billing configuration changed."
+  },
+  "email_html_storage_normalisation": {
+    "campaign_id": 106,
+    "difference": "Brevo decoded one ampersand entity in the Warranty & Receipt Tracker link label.",
+    "verification": "Full original/readback comparison found exactly that encoding difference; no text, link, style or other markup difference.",
+    "action": "Adopted the reviewed Brevo encoding in repository newsletter HTML; strict readback comparison retained."
   }
 }

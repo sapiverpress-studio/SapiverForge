@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-03T08:55:27.736Z",
+  "collected_at": "2026-11-03T14:04:57.100Z",
   "expected_sources": [
     "Techmeme",
     "Reuters",
@@ -13,7 +13,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 482,
+      "elapsed_ms": 1576,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -21,14 +21,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 274,
+      "elapsed_ms": 399,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 280,
+      "elapsed_ms": 480,
       "collection_mode": "api",
       "original_link_count": 8
     },
@@ -36,7 +36,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 206,
+      "elapsed_ms": 387,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -44,11 +44,47 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1090,
+      "elapsed_ms": 1282,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
   "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "hackertimes.ca",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "Show HN: Hacker Times, a New York Times-inspired version of Hacker News",
+      "url": "https://hackertimes.ca/",
+      "direct_source_url": "https://hackertimes.ca/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50346981",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50346981",
+      "summary": "I thought it would be fun to browse HN as if it were a newspaper. The site updates once an hour. Enjoy!",
+      "published_at": "2026-11-03T01:53:34.000Z",
+      "engagement": {
+        "score": 359,
+        "comments": 113
+      },
+      "collection_mode": "api",
+      "score": 8.372
+    },
+    {
+      "title": "New England-based autonomous submarine startup Corridian emerges from stealth with a $38M seed led by Point72 Ventures and plans to unveil its first AUV in 2027 (Colin Demarest/Axios)",
+      "url": "https://www.axios.com/2026/11/03/corridian-seed-auv-new-england",
+      "summary": "Colin Demarest / Axios : New England-based autonomous submarine startup Corridian emerges from stealth with a $38M seed led by Point72 Ventures and plans to unveil its first AUV in 2027 &mdash; Corridian, a New England-based robo-submarine maker, exited stealth Tuesday morning alongside word of its $38 million seed.",
+      "description_html": "<A HREF=\"https://www.axios.com/2026/11/03/corridian-seed-auv-new-england\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261103/i14.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261103/p14#a261103p14\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Colin Demarest / <A HREF=\"https://www.axios.com/\">Axios</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.axios.com/2026/11/03/corridian-seed-auv-new-england\">New England-based autonomous submarine startup Corridian emerges from stealth with a $38M seed led by Point72 Ventures and plans to unveil its first AUV in 2027</A></B></SPAN>&nbsp; &mdash;&nbsp; Corridian, a New England-based robo-submarine maker, exited stealth Tuesday morning alongside word of its $38 million seed.</P>",
+      "published_at": "2026-11-03T14:01:26.000Z",
+      "discovery_url": "https://www.techmeme.com/261103/p14",
+      "direct_source_url": "https://www.axios.com/2026/11/03/corridian-seed-auv-new-england",
+      "publisher": "Colin Demarest/Axios",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.098
+    },
     {
       "source": "Hacker News",
       "publisher": "rikiyat.github.io",
@@ -63,17 +99,17 @@
       "summary": "",
       "published_at": "2026-11-02T18:21:28.000Z",
       "engagement": {
-        "score": 2527,
-        "comments": 781
+        "score": 2853,
+        "comments": 862
       },
       "collection_mode": "api",
-      "score": 8.243
+      "score": 8.028
     },
     {
       "source": "Hacker News",
       "publisher": "news.ycombinator.com",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 3,
+      "source_rank": 2,
       "title": "Show HN: Subvocal – Talk to your computer without making noise",
       "url": "https://news.ycombinator.com/item?id=50340088",
       "direct_source_url": null,
@@ -83,129 +119,69 @@
       "summary": "Hi HN, we're Aarush and Arnav from The Subvocal Company (YC F26) ( https://subvocal.company/ ). We’re building smart glasses that let you talk to your computer without talking out loud. You can mouth words silently and discreetly and the glasses decode them to text at the speed of speech. Here's a video of Dave from YC trying it out: https://www.youtube.com/watch?v=9QdX1eObVYI (Edit: you don't actually have to move your lips or even open your mouth for this to work! Since the RF can see inside y",
       "published_at": "2026-11-02T17:16:17.000Z",
       "engagement": {
-        "score": 676,
-        "comments": 336
+        "score": 756,
+        "comments": 355
       },
       "collection_mode": "api",
-      "score": 8.138
+      "score": 8.003
     },
     {
       "source": "Hacker News",
-      "publisher": "hackertimes.ca",
+      "publisher": "honnibal.dev",
       "source_home": "https://news.ycombinator.com/",
       "source_rank": 10,
-      "title": "Show HN: Hacker Times, a New York Times-inspired version of Hacker News",
-      "url": "https://hackertimes.ca/",
-      "direct_source_url": "https://hackertimes.ca/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50346981",
+      "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+      "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+      "direct_source_url": "https://honnibal.dev/blog/astra-read-write-misleading",
+      "discovery_url": "https://news.ycombinator.com/item?id=50351111",
       "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50346981",
-      "summary": "I thought it would be fun to browse HN as if it were a newspaper. The site updates once an hour. Enjoy!",
-      "published_at": "2026-11-03T01:53:34.000Z",
-      "engagement": {
-        "score": 231,
-        "comments": 73
-      },
-      "collection_mode": "api",
-      "score": 8.137
-    },
-    {
-      "title": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)",
-      "url": "https://nymag.com/intelligencer/article/alex-bores-who-decides-pac-ai-2028-democratic-presidential-primary.html",
-      "summary": "David Freedlander / New York Magazine : How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence &mdash; In early November, in that exceedingly brief window between the midterm election and presidential-primary season &hellip;",
-      "description_html": "<A HREF=\"https://nymag.com/intelligencer/article/alex-bores-who-decides-pac-ai-2028-democratic-presidential-primary.html\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261103/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261103/p3#a261103p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> David Freedlander / <A HREF=\"http://www.nymag.com/\">New York Magazine</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://nymag.com/intelligencer/article/alex-bores-who-decides-pac-ai-2028-democratic-presidential-primary.html\">How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence</A></B></SPAN>&nbsp; &mdash;&nbsp; In early November, in that exceedingly brief window between the midterm election and presidential-primary season &hellip; </P>",
-      "published_at": "2026-11-03T08:40:02.000Z",
-      "discovery_url": "https://www.techmeme.com/261103/p3",
-      "direct_source_url": "https://nymag.com/intelligencer/article/alex-bores-who-decides-pac-ai-2028-democratic-presidential-primary.html",
-      "publisher": "David Freedlander/New York Magazine",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 1,
-      "collection_mode": "rss",
-      "score": 8.089
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "chalmovsky.com",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 2,
-      "title": "WTF Ubuntu?",
-      "url": "https://chalmovsky.com/posts/wtf-ubuntu",
-      "direct_source_url": "https://chalmovsky.com/posts/wtf-ubuntu",
-      "discovery_url": "https://news.ycombinator.com/item?id=50337608",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50337608",
+      "discussion_url": "https://news.ycombinator.com/item?id=50351111",
       "summary": "",
-      "published_at": "2026-11-02T14:52:00.000Z",
+      "published_at": "2026-11-03T12:21:17.000Z",
       "engagement": {
-        "score": 1494,
-        "comments": 626
+        "score": 243,
+        "comments": 50
       },
       "collection_mode": "api",
-      "score": 8.018
+      "score": 7.979
     },
     {
-      "title": "OpenAI partners with Cathedral to test its security defenses and revamps its Security Bug Bounty program, including quadrupling rewards for critical findings (OpenAI)",
-      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
-      "summary": "OpenAI : OpenAI partners with Cathedral to test its security defenses and revamps its Security Bug Bounty program, including quadrupling rewards for critical findings &mdash; We're planning our next internal security sprint at OpenAI, bringing new researchers and security partners together with our own teams &hellip;",
-      "description_html": "<A HREF=\"https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261103/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261103/p2#a261103p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://openai.com/\">OpenAI</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai\">OpenAI partners with Cathedral to test its security defenses and revamps its Security Bug Bounty program, including quadrupling rewards for critical findings</A></B></SPAN>&nbsp; &mdash;&nbsp; We're planning our next internal security sprint at OpenAI, bringing new researchers and security partners together with our own teams &hellip; </P>",
-      "published_at": "2026-11-03T07:20:00.000Z",
-      "discovery_url": "https://www.techmeme.com/261103/p2",
-      "direct_source_url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
-      "publisher": "OpenAI",
+      "title": "Shopify reports Q3 revenue up 32% YoY to $3.74B, vs. $3.75B est., GMV up 29% to $119.1B, net income up 75% to $462M, and adjusted EPS of $0.49; SHOP falls 15%+ (Adriano Marchese/Wall Street Journal)",
+      "url": "https://www.wsj.com/business/earnings/shopify-profit-revenue-up-as-merchant-volume-rises-4614feba?st=NdjCdK&reflink=desktopwebshare_permalink",
+      "summary": "Adriano Marchese / Wall Street Journal : Shopify reports Q3 revenue up 32% YoY to $3.74B, vs. $3.75B est., GMV up 29% to $119.1B, net income up 75% to $462M, and adjusted EPS of $0.49; SHOP falls 15%+ &mdash; The ecommerce company's third-quarter revenue rose to $3.74 billion from $2.84 billion &mdash; Shopify reported higher third-quarter profit &hellip;",
+      "description_html": "<A HREF=\"https://www.wsj.com/business/earnings/shopify-profit-revenue-up-as-merchant-volume-rises-4614feba?st=NdjCdK&reflink=desktopwebshare_permalink\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261103/i13.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261103/p13#a261103p13\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Adriano Marchese / <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/business/earnings/shopify-profit-revenue-up-as-merchant-volume-rises-4614feba?st=NdjCdK&reflink=desktopwebshare_permalink\">Shopify reports Q3 revenue up 32% YoY to $3.74B, vs. $3.75B est., GMV up 29% to $119.1B, net income up 75% to $462M, and adjusted EPS of $0.49; SHOP falls 15%+</A></B></SPAN>&nbsp; &mdash;&nbsp; The ecommerce company's third-quarter revenue rose to $3.74 billion from $2.84 billion&nbsp; &mdash;&nbsp; Shopify reported higher third-quarter profit &hellip; </P>",
+      "published_at": "2026-11-03T12:40:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261103/p13",
+      "direct_source_url": "https://www.wsj.com/business/earnings/shopify-profit-revenue-up-as-merchant-volume-rises-4614feba?st=NdjCdK&reflink=desktopwebshare_permalink",
+      "publisher": "Adriano Marchese/Wall Street Journal",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 2,
       "collection_mode": "rss",
-      "score": 7.954
+      "score": 7.961
     },
     {
-      "source": "Hacker News",
-      "publisher": "freenode.net",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 5,
-      "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
-      "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
-      "direct_source_url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
-      "discovery_url": "https://news.ycombinator.com/item?id=50341462",
+      "title": "US data center operators and power developers are repurposing jet engines to secure power in as little as two years, bypassing multi-year grid-connection delays (New York Times)",
+      "url": "https://www.nytimes.com/2026/11/03/climate/jet-engines-ai-data-center-generators-boneyard.html",
+      "summary": "New York Times : US data center operators and power developers are repurposing jet engines to secure power in as little as two years, bypassing multi-year grid-connection delays &mdash; Across wide stretches of the sun-bleached Sonoran desert in Arizona, thousands of retired aircraft sit nose-to-tail in graveyards of metal known as boneyards.",
+      "description_html": "<A HREF=\"https://www.nytimes.com/2026/11/03/climate/jet-engines-ai-data-center-generators-boneyard.html\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261103/i12.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261103/p12#a261103p12\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.nytimes.com/\">New York Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.nytimes.com/2026/11/03/climate/jet-engines-ai-data-center-generators-boneyard.html\">US data center operators and power developers are repurposing jet engines to secure power in as little as two years, bypassing multi-year grid-connection delays</A></B></SPAN>&nbsp; &mdash;&nbsp; Across wide stretches of the sun-bleached Sonoran desert in Arizona, thousands of retired aircraft sit nose-to-tail in graveyards of metal known as boneyards.</P>",
+      "published_at": "2026-11-03T12:10:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261103/p12",
+      "direct_source_url": "https://www.nytimes.com/2026/11/03/climate/jet-engines-ai-data-center-generators-boneyard.html",
+      "publisher": "New York Times",
       "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50341462",
-      "summary": "",
-      "published_at": "2026-11-02T18:39:38.000Z",
-      "engagement": {
-        "score": 472,
-        "comments": 135
-      },
-      "collection_mode": "api",
-      "score": 7.936
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "techpolicy.press",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 7,
-      "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
-      "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
-      "direct_source_url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50344919",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50344919",
-      "summary": "",
-      "published_at": "2026-11-02T22:30:47.000Z",
-      "engagement": {
-        "score": 333,
-        "comments": 248
-      },
-      "collection_mode": "api",
-      "score": 7.936
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.86
     },
     {
       "source": "Hacker News",
       "publisher": "p.migdal.pl",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 8,
+      "source_rank": 6,
       "title": "Show HN: Warsaw in voxels – An interactive 3D map of the city centre",
       "url": "https://p.migdal.pl/warsaw-vibe-voxel/",
       "direct_source_url": "https://p.migdal.pl/warsaw-vibe-voxel/",
@@ -215,33 +191,89 @@
       "summary": "Explore central Warsaw in voxels - slightly inspired by Minecraft, and MagicaVoxel. You can change the date, time of day and weather, explore the city, or click on a pedestrian to control them (here a bit of inspiration from Dungeon Keeper). Works best on desktop, but I tried to make it usable on mobile too. The initial load can take a while. It's based on several open datasets, including: - OpenStreetMap ( https://www.openstreetmap.org/#map=6/52.02/19.14 ) - buildings, streets, sidewalks, tram",
       "published_at": "2026-11-02T16:25:26.000Z",
       "engagement": {
-        "score": 265,
-        "comments": 42
+        "score": 299,
+        "comments": 48
       },
       "collection_mode": "api",
-      "score": 7.861
+      "score": 7.82
     },
     {
-      "title": "Sources: Nvidia verbally told cloud compute clients to sell 51%+ of their services to non-Chinese companies, imposing new limits on China's access to AI chips (Financial Times)",
-      "url": "https://www.ft.com/content/1902df70-1380-4588-bad5-171352b575f2",
-      "summary": "Financial Times : Sources: Nvidia verbally told cloud compute clients to sell 51%+ of their services to non-Chinese companies, imposing new limits on China's access to AI chips &mdash; Nvidia is ordering its data centre partners to reduce exposure to Chinese customers in a move that further restrains China's ability &hellip;",
-      "description_html": "<A HREF=\"https://www.ft.com/content/1902df70-1380-4588-bad5-171352b575f2\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261103/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261103/p1#a261103p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/1902df70-1380-4588-bad5-171352b575f2\">Sources: Nvidia verbally told cloud compute clients to sell 51%+ of their services to non-Chinese companies, imposing new limits on China's access to AI chips</A></B></SPAN>&nbsp; &mdash;&nbsp; Nvidia is ordering its data centre partners to reduce exposure to Chinese customers in a move that further restrains China's ability &hellip; </P>",
-      "published_at": "2026-11-03T06:00:40.000Z",
-      "discovery_url": "https://www.techmeme.com/261103/p1",
-      "direct_source_url": "https://www.ft.com/content/1902df70-1380-4588-bad5-171352b575f2",
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 7,
+      "title": "DiscImageStudio: burn visible artwork onto CDs, DVDs and Blu-ray discs",
+      "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+      "direct_source_url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+      "discovery_url": "https://news.ycombinator.com/item?id=50346849",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50346849",
+      "summary": "",
+      "published_at": "2026-11-03T01:33:43.000Z",
+      "engagement": {
+        "score": 295,
+        "comments": 58
+      },
+      "collection_mode": "api",
+      "score": 7.791
+    },
+    {
+      "title": "John Ternus' first earnings call was a timid, scripted affair, as Apple faces a challenging Christmas quarter and a difficult 2027; AAPL falls 4%+ pre-market (Dave Lee/Bloomberg)",
+      "url": "https://www.bloomberg.com/opinion/articles/2026-11-03/apple-earnings-tight-lipped-ceo-john-ternus-fails-to-inspire",
+      "summary": "Dave Lee / Bloomberg : John Ternus' first earnings call was a timid, scripted affair, as Apple faces a challenging Christmas quarter and a difficult 2027; AAPL falls 4%+ pre-market &mdash; Apple Inc. investors and fans hoping to get an insight into the philosophy of new Chief Executive Officer John Ternus on Monday were left sorely disappointed.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/opinion/articles/2026-11-03/apple-earnings-tight-lipped-ceo-john-ternus-fails-to-inspire\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261103/i11.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261103/p11#a261103p11\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Dave Lee / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/opinion/articles/2026-11-03/apple-earnings-tight-lipped-ceo-john-ternus-fails-to-inspire\">John Ternus' first earnings call was a timid, scripted affair, as Apple faces a challenging Christmas quarter and a difficult 2027; AAPL falls 4%+ pre-market</A></B></SPAN>&nbsp; &mdash;&nbsp; Apple Inc. investors and fans hoping to get an insight into the philosophy of new Chief Executive Officer John Ternus on Monday were left sorely disappointed.</P>",
+      "published_at": "2026-11-03T11:50:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261103/p11",
+      "direct_source_url": "https://www.bloomberg.com/opinion/articles/2026-11-03/apple-earnings-tight-lipped-ceo-john-ternus-fails-to-inspire",
+      "publisher": "Dave Lee/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.766
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "namedaisy.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "US boy names that became girl names and vice versa",
+      "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
+      "direct_source_url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
+      "discovery_url": "https://news.ycombinator.com/item?id=50339397",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50339397",
+      "summary": "",
+      "published_at": "2026-11-02T16:34:36.000Z",
+      "engagement": {
+        "score": 441,
+        "comments": 420
+      },
+      "collection_mode": "api",
+      "score": 7.714
+    },
+    {
+      "title": "Chainalysis and Elliptic expect North Korean hackers to take months to launder the Binance proceeds, utilizing scripted automation and DeFi lending protocols (Financial Times)",
+      "url": "https://www.ft.com/content/a6212e33-2175-4957-91d1-8f8f6bc3918b",
+      "summary": "Financial Times : Chainalysis and Elliptic expect North Korean hackers to take months to launder the Binance proceeds, utilizing scripted automation and DeFi lending protocols &mdash; North Korean hackers are expected to take months to launder the billions of dollars of tokens they stole last week from crypto exchange Binance &hellip;",
+      "description_html": "<A HREF=\"https://www.ft.com/content/a6212e33-2175-4957-91d1-8f8f6bc3918b\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261103/i10.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261103/p10#a261103p10\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/a6212e33-2175-4957-91d1-8f8f6bc3918b\">Chainalysis and Elliptic expect North Korean hackers to take months to launder the Binance proceeds, utilizing scripted automation and DeFi lending protocols</A></B></SPAN>&nbsp; &mdash;&nbsp; North Korean hackers are expected to take months to launder the billions of dollars of tokens they stole last week from crypto exchange Binance &hellip; </P>",
+      "published_at": "2026-11-03T11:40:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261103/p10",
+      "direct_source_url": "https://www.ft.com/content/a6212e33-2175-4957-91d1-8f8f6bc3918b",
       "publisher": "Financial Times",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
-      "source_rank": 3,
+      "source_rank": 5,
       "collection_mode": "rss",
-      "score": 7.819
+      "score": 7.679
     },
     {
       "source": "Hacker News",
       "publisher": "blog.mistys-internet.website",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 4,
+      "source_rank": 3,
       "title": "If you love a website, back it up",
       "url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
       "direct_source_url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
@@ -251,235 +283,203 @@
       "summary": "",
       "published_at": "2026-11-02T13:25:35.000Z",
       "engagement": {
-        "score": 527,
-        "comments": 115
+        "score": 607,
+        "comments": 143
       },
       "collection_mode": "api",
-      "score": 7.798
+      "score": 7.663
     },
     {
-      "title": "Google expands Dreambeans to India, its first market outside the US, offering AI-generated visual stories from users' digital activity in 13 local languages (Jagmeet Singh/TechCrunch)",
-      "url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/",
-      "summary": "Jagmeet Singh / TechCrunch : Google expands Dreambeans to India, its first market outside the US, offering AI-generated visual stories from users' digital activity in 13 local languages &mdash; Google has launched its experimental AI app Dreambeans in India, its first market outside the U.S., as the company looks to tap &hellip;",
-      "description_html": "<A HREF=\"https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261102/i51.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261102/p51#a261102p51\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Jagmeet Singh / <A HREF=\"http://techcrunch.com/\">TechCrunch</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/\">Google expands Dreambeans to India, its first market outside the US, offering AI-generated visual stories from users' digital activity in 13 local languages</A></B></SPAN>&nbsp; &mdash;&nbsp; Google has launched its experimental AI app Dreambeans in India, its first market outside the U.S., as the company looks to tap &hellip; </P>",
-      "published_at": "2026-11-03T04:35:00.000Z",
-      "discovery_url": "https://www.techmeme.com/261102/p51",
-      "direct_source_url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/",
-      "publisher": "Jagmeet Singh/TechCrunch",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 4,
-      "collection_mode": "rss",
-      "score": 7.679
-    },
-    {
-      "title": "Sources: Huawei told some clients that a large share of its upcoming flagship AI chip, Ascend 960DT, will run largely on HBM made by Samsung and SK Hynix (The Information)",
-      "url": "https://www.theinformation.com/articles/smugglers-get-expensive-memory-chips-china-south-korea",
-      "summary": "The Information : Sources: Huawei told some clients that a large share of its upcoming flagship AI chip, Ascend 960DT, will run largely on HBM made by Samsung and SK Hynix &mdash; For an illustration of how porous U.S. restrictions on the shipment of AI chips to China can be, consider a technique that has begun &hellip;",
-      "description_html": "<A HREF=\"https://www.theinformation.com/articles/smugglers-get-expensive-memory-chips-china-south-korea\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261102/i50.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261102/p50#a261102p50\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.theinformation.com/\">The Information</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.theinformation.com/articles/smugglers-get-expensive-memory-chips-china-south-korea\">Sources: Huawei told some clients that a large share of its upcoming flagship AI chip, Ascend 960DT, will run largely on HBM made by Samsung and SK Hynix</A></B></SPAN>&nbsp; &mdash;&nbsp; For an illustration of how porous U.S. restrictions on the shipment of AI chips to China can be, consider a technique that has begun &hellip; </P>",
-      "published_at": "2026-11-03T03:25:00.000Z",
-      "discovery_url": "https://www.techmeme.com/261102/p50",
-      "direct_source_url": "https://www.theinformation.com/articles/smugglers-get-expensive-memory-chips-china-south-korea",
-      "publisher": "The Information",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 5,
-      "collection_mode": "rss",
-      "score": 7.551
-    },
-    {
-      "title": "Larridin, which helps companies track how AI affects employee output and identifies areas for better AI adoption, raised a $30M Series A led by Pelion Ventures (Aditi Bharade/Business Insider)",
-      "url": "https://www.businessinsider.com/larridin-ai-spending-measurement-series-a-30-million-2026-11",
-      "summary": "Aditi Bharade / Business Insider : Larridin, which helps companies track how AI affects employee output and identifies areas for better AI adoption, raised a $30M Series A led by Pelion Ventures &mdash; Companies went all in on AI this year, and are now reckoning with heavy bills. One startup wants to get under the hood and figure out which ones are worth it.",
-      "description_html": "<A HREF=\"https://www.businessinsider.com/larridin-ai-spending-measurement-series-a-30-million-2026-11\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261102/i49.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261102/p49#a261102p49\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Aditi Bharade / <A HREF=\"https://www.businessinsider.com/\">Business Insider</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.businessinsider.com/larridin-ai-spending-measurement-series-a-30-million-2026-11\">Larridin, which helps companies track how AI affects employee output and identifies areas for better AI adoption, raised a $30M Series A led by Pelion Ventures</A></B></SPAN>&nbsp; &mdash;&nbsp; Companies went all in on AI this year, and are now reckoning with heavy bills.&nbsp; One startup wants to get under the hood and figure out which ones are worth it.</P>",
-      "published_at": "2026-11-03T03:10:00.000Z",
-      "discovery_url": "https://www.techmeme.com/261102/p49",
-      "direct_source_url": "https://www.businessinsider.com/larridin-ai-spending-measurement-series-a-30-million-2026-11",
-      "publisher": "Aditi Bharade/Business Insider",
+      "title": "OpenAI hires former US Army Secretary Dan Driscoll to oversee national security modernization, as it pushes to secure government contracts and shape policy (Gareth Vipers/Wall Street Journal)",
+      "url": "https://www.wsj.com/politics/national-security/openai-hires-former-army-secretary-dan-driscoll-to-cybersecurity-role-0e5cc0a1?st=cfNEPb&reflink=desktopwebshare_permalink",
+      "summary": "Gareth Vipers / Wall Street Journal : OpenAI hires former US Army Secretary Dan Driscoll to oversee national security modernization, as it pushes to secure government contracts and shape policy &mdash; Driscoll will advise on ways AI could bolster U.S. security capabilities and cyber defenses &mdash; OpenAI has appointed former U.S &hellip;",
+      "description_html": "<A HREF=\"https://www.wsj.com/politics/national-security/openai-hires-former-army-secretary-dan-driscoll-to-cybersecurity-role-0e5cc0a1?st=cfNEPb&reflink=desktopwebshare_permalink\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261103/i9.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261103/p9#a261103p9\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Gareth Vipers / <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/politics/national-security/openai-hires-former-army-secretary-dan-driscoll-to-cybersecurity-role-0e5cc0a1?st=cfNEPb&reflink=desktopwebshare_permalink\">OpenAI hires former US Army Secretary Dan Driscoll to oversee national security modernization, as it pushes to secure government contracts and shape policy</A></B></SPAN>&nbsp; &mdash;&nbsp; Driscoll will advise on ways AI could bolster U.S. security capabilities and cyber defenses&nbsp; &mdash;&nbsp; OpenAI has appointed former U.S &hellip; </P>",
+      "published_at": "2026-11-03T11:25:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261103/p9",
+      "direct_source_url": "https://www.wsj.com/politics/national-security/openai-hires-former-army-secretary-dan-driscoll-to-cybersecurity-role-0e5cc0a1?st=cfNEPb&reflink=desktopwebshare_permalink",
+      "publisher": "Gareth Vipers/Wall Street Journal",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 6,
       "collection_mode": "rss",
-      "score": 7.46
+      "score": 7.589
     },
     {
-      "title": "Salesforce plans to acquire Cresta, a provider of AI-powered contact center automation software; a source says Salesforce agreed to pay $2.7B for Cresta (The Information)",
-      "url": "https://www.theinformation.com/",
-      "summary": "The Information : Salesforce plans to acquire Cresta, a provider of AI-powered contact center automation software; a source says Salesforce agreed to pay $2.7B for Cresta &mdash; Salesforce extended its recent shopping spree, announcing on Monday plans to acquire Cresta, a nine-year-old provider of AI-powered contact center automation software.",
-      "description_html": "<P><A HREF=\"https://www.techmeme.com/261102/p48#a261102p48\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.theinformation.com/\">The Information</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.theinformation.com/briefings/exclusive-salesforce-acquires-startup-cresta-2-7-billion\">Salesforce plans to acquire Cresta, a provider of AI-powered contact center automation software; a source says Salesforce agreed to pay $2.7B for Cresta</A></B></SPAN>&nbsp; &mdash;&nbsp; Salesforce extended its recent shopping spree, announcing on Monday plans to acquire Cresta, a nine-year-old provider of AI-powered contact center automation software.</P>",
-      "published_at": "2026-11-03T01:20:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261102/p48",
-      "direct_source_url": "https://www.theinformation.com/",
-      "publisher": "The Information",
+      "title": "China plans to roll out broad AI safety standards covering development through deployment, targeting domestic AI model makers, after global security incidents (Bloomberg)",
+      "url": "https://www.bloomberg.com/",
+      "summary": "Bloomberg : China plans to roll out broad AI safety standards covering development through deployment, targeting domestic AI model makers, after global security incidents &mdash; China plans to roll out a broad set of standards governing the AI safety from development through deployment &hellip;",
+      "description_html": "<P><A HREF=\"https://www.techmeme.com/261103/p8#a261103p8\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-03/china-plans-broad-ai-guardrails-after-global-security-lapses\">China plans to roll out broad AI safety standards covering development through deployment, targeting domestic AI model makers, after global security incidents</A></B></SPAN>&nbsp; &mdash;&nbsp; China plans to roll out a broad set of standards governing the AI safety from development through deployment &hellip; </P>",
+      "published_at": "2026-11-03T11:15:03.000Z",
+      "discovery_url": "https://www.techmeme.com/261103/p8",
+      "direct_source_url": "https://www.bloomberg.com/",
+      "publisher": "Bloomberg",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 7,
       "collection_mode": "rss",
-      "score": 7.304
+      "score": 7.502
     },
     {
-      "title": "John Ternus says Apple expects memory costs to increase into December and beyond; Apple's inventory grew to $14.54B in Q4, up 31.1% QoQ and 154.3% YoY (Sarah Perez/TechCrunch)",
-      "url": "https://techcrunch.com/2026/11/02/apples-inventory-surges-154-as-memory-chip-costs-climb/",
-      "summary": "Sarah Perez / TechCrunch : John Ternus says Apple expects memory costs to increase into December and beyond; Apple's inventory grew to $14.54B in Q4, up 31.1% QoQ and 154.3% YoY &mdash; Apple's stockpiling of inventory, particularly computer memory, continued in its fiscal fourth-quarter, according to earnings reported Monday.",
-      "description_html": "<A HREF=\"https://techcrunch.com/2026/11/02/apples-inventory-surges-154-as-memory-chip-costs-climb/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261102/i47.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261102/p47#a261102p47\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Sarah Perez / <A HREF=\"http://techcrunch.com/\">TechCrunch</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://techcrunch.com/2026/11/02/apples-inventory-surges-154-as-memory-chip-costs-climb/\">John Ternus says Apple expects memory costs to increase into December and beyond; Apple's inventory grew to $14.54B in Q4, up 31.1% QoQ and 154.3% YoY</A></B></SPAN>&nbsp; &mdash;&nbsp; Apple's stockpiling of inventory, particularly computer memory, continued in its fiscal fourth-quarter, according to earnings reported Monday.</P>",
-      "published_at": "2026-11-03T01:15:02.000Z",
-      "discovery_url": "https://www.techmeme.com/261102/p47",
-      "direct_source_url": "https://techcrunch.com/2026/11/02/apples-inventory-surges-154-as-memory-chip-costs-climb/",
-      "publisher": "Sarah Perez/TechCrunch",
+      "title": "The UK NCSC says AI is \"transforming cyber operations\" and expects China and Russia to \"routinely use AI cyber to achieve their geopolitical goals\" by 2028 (Tom Wilson/Financial Times)",
+      "url": "https://www.ft.com/content/131d9506-04b1-49b8-ba79-b0d783219c40",
+      "summary": "Tom Wilson / Financial Times : The UK NCSC says AI is &ldquo;transforming cyber operations&rdquo; and expects China and Russia to &ldquo;routinely use AI cyber to achieve their geopolitical goals&rdquo; by 2028 &mdash; Head of National Cyber Security Centre set to warn security defences, particularly for critical infrastructure, are inadequate",
+      "description_html": "<A HREF=\"https://www.ft.com/content/131d9506-04b1-49b8-ba79-b0d783219c40\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261103/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261103/p7#a261103p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Tom Wilson / <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/131d9506-04b1-49b8-ba79-b0d783219c40\">The UK NCSC says AI is &ldquo;transforming cyber operations&rdquo; and expects China and Russia to &ldquo;routinely use AI cyber to achieve their geopolitical goals&rdquo; by 2028</A></B></SPAN>&nbsp; &mdash;&nbsp; Head of National Cyber Security Centre set to warn security defences, particularly for critical infrastructure, are inadequate</P>",
+      "published_at": "2026-11-03T11:05:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261103/p7",
+      "direct_source_url": "https://www.ft.com/content/131d9506-04b1-49b8-ba79-b0d783219c40",
+      "publisher": "Tom Wilson/Financial Times",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 8,
       "collection_mode": "rss",
-      "score": 7.22
+      "score": 7.415
     },
     {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
-      "source_rank": 4,
-      "title": "Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning",
-      "url": "https://huggingface.co/papers/2611.03602",
-      "direct_source_url": "https://huggingface.co/papers/2611.03602",
-      "discovery_url": "https://huggingface.co/papers/2611.03602",
+      "source_rank": 6,
+      "title": "SWE-Trail: History-Guided Trajectory Collection for Coding Agent Training",
+      "url": "https://huggingface.co/papers/2611.02074",
+      "direct_source_url": "https://huggingface.co/papers/2611.02074",
+      "discovery_url": "https://huggingface.co/papers/2611.02074",
       "link_quality": "original",
-      "summary": "Multimodal large language models (MLLMs) can generate detailed video captions, yet they may overemphasize minor details while overlooking essential context and key events. We argue that not all visual evidence deserves equal attention, as the importance of visual information depends on the content of each video. Motivated by this observation, we propose Reviso, an agentic video captioning framework that learns what to observe and how to gather relevant visual evidence. From a low-frame-rate global preview, Reviso constructs a hierarchical Context--Focus--Points (CFP) observation plan that identifies the video context, prioritizes key aspects, and defines concrete observation targets and corresponding tools. Guided by this plan, Reviso performs goal-directed active perception by selectively revisiting temporal segments and combining tools for fine-grained inspection. It interprets the acquired evidence, updates its plan as needed, and integrates global and local information to generate the final caption. To learn this observation strategy, we develop a verification-guided pipeline that constructs high-quality training trajectories through factual verification and teacher-guided refi",
-      "published_at": "2026-11-02T13:41:14.000Z",
+      "summary": "Coding agents solve repository issues through long sequences of exploration, editing, and validation. These trajectories are increasingly used as post-training data, so how they are collected shapes what the trained model learns. A common approach is to sample multiple trajectories independently for each issue and then select or curate them. However, as more trajectories are sampled independently, later trajectories become increasingly redundant, even though earlier trajectories could guide where subsequent collection effort should be spent. A natural way to use this history is to expose it to the coding agent as advice. But training on such trajectories can make the model rely on advice that is unavailable at test time, creating a train-test mismatch. Instead, we argue that history should guide where collection effort is spent, while the coding agent decides what to generate. We introduce SWE-Trail, a trajectory collector that uses earlier trajectories to guide subsequent collection while keeping that history outside the coding agent's context. During a new rollout, SWE-Trail uses history to identify a state where additional collection effort may be useful. There, the coding agent",
+      "published_at": "2026-10-31T20:00:00.000Z",
       "engagement": {
-        "upvotes": 17
+        "upvotes": 22
       },
       "collection_mode": "api",
-      "score": 6.986
+      "score": 6.181
     },
     {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
-      "source_rank": 5,
-      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
-      "url": "https://huggingface.co/papers/2611.03178",
-      "direct_source_url": "https://huggingface.co/papers/2611.03178",
-      "discovery_url": "https://huggingface.co/papers/2611.03178",
+      "source_rank": 8,
+      "title": "Advances in Agentic Computer Graphics",
+      "url": "https://huggingface.co/papers/2611.01860",
+      "direct_source_url": "https://huggingface.co/papers/2611.01860",
+      "discovery_url": "https://huggingface.co/papers/2611.01860",
       "link_quality": "original",
-      "summary": "Rapid advances in cowork agents are shifting human-AI collaboration toward real-world automation, delivering software, designs, and other artifacts. However, such productivity work demands both high-quality delivery on complex productivity tasks and continued monitoring and decision-making over long horizons, a combination that remains an open challenge. We introduce CoworkOS, a general-purpose harness for long-horizon work that separates task strategy from execution management: the model decides actions, delegation, and acceptance, while the runtime maintains state and feedback. Its three-layer architecture enables direct execution or delegation to Subagents, synchronously or asynchronously, under stable responsibilities. Through a shared application layer, humans and agents inspect and revise the same evolving documents, presentations, CAD models, and Blender scenes, so human-in-the-loop participation can enter both through conversation and through direct modification of the work itself. To sustain continuity across agents and sessions, CoworkOS further introduces hierarchical workspaces and persistent semantic memory, so working files, key decisions, and long-running Job logs re",
-      "published_at": "2026-11-02T09:15:11.000Z",
+      "summary": "Computer graphics is built on code. Large language model (LLM) agents can now generate graphics code and iteratively refine it through various feedback. This capability opens the door to a potentially new paradigm of computer graphics, with graphics algorithms increasingly built around agentic systems to automate progressively complex tasks. Over the past years, research on agentic graphics has expanded rapidly across a diverse range of tasks. This rapid growth makes it increasingly difficult for manual literature reviews to keep pace with new developments. At the same time, similar ideas are often described using different terminology across these tasks, further complicating efforts to develop a systematic understanding of the field. In this report, we address these challenges through two contributions. First, we introduce a unified taxonomy for characterizing agentic systems across diverse computer graphics tasks. Second, we develop an agentic literature system that can assist human researchers in analyzing existing and newly published papers at scale. Building on these contributions, we analyze emerging research trends and discuss open challenges in coordinating agents and tools",
+      "published_at": "2026-10-31T20:00:00.000Z",
       "engagement": {
-        "upvotes": 49
+        "upvotes": 62
       },
       "collection_mode": "api",
-      "score": 6.894
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 9,
-      "title": "CUA-Master: Scaling Computer-use Agents through Open-World Recursive Improvements",
-      "url": "https://huggingface.co/papers/2611.03126",
-      "direct_source_url": "https://huggingface.co/papers/2611.03126",
-      "discovery_url": "https://huggingface.co/papers/2611.03126",
-      "link_quality": "original",
-      "summary": "Despite recent advances in CUAs, their development remains constrained by the limited diversity, controllability, and reliability of interaction data. Moreover, conventional optimization pipelines lack iterative feedback, while existing recursive improvement approaches often rely on self-generated experiences, limiting ability expansion and yielding diminishing returns. To address these challenges, we introduce CUA-Master, a nested double-loop recursive improvement framework. At the system level, an outer world-data-model flywheel continuously incorporates open-world corpus and leverages evolving model weaknesses to guide subsequent data construction and optimization iterations. At the data level, an inner flywheel couples open-world seeding and autocatalytic propagation. The former mines authentic workflows as seed tasks from instructional videos, and employs visual-semantic dual-path trajectory reconstruction; The latter transforms these seeds into reusable primitives for controllable synthesis of diverse, complex, and verifiable tasks. To enable efficient and reliable trajectory collection, we further introduce a feedback-guided snapshot-rollback retry mechanism in various real",
-      "published_at": "2026-11-02T08:41:14.000Z",
-      "engagement": {
-        "upvotes": 36
-      },
-      "collection_mode": "api",
-      "score": 6.534
+      "score": 6.14
     },
     {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
       "source_rank": 1,
-      "title": "Lab2Sim: Turning Real-World Experiment Videos into Interactive Virtual Experiments",
-      "url": "https://huggingface.co/papers/2611.02928",
-      "direct_source_url": "https://huggingface.co/papers/2611.02928",
-      "discovery_url": "https://huggingface.co/papers/2611.02928",
+      "title": "DAMI: Dual-Axis Memory Initialization for Enhanced Long-Context Retrieval in Gated Linear Attention",
+      "url": "https://huggingface.co/papers/2610.41994",
+      "direct_source_url": "https://huggingface.co/papers/2610.41994",
+      "discovery_url": "https://huggingface.co/papers/2610.41994",
       "link_quality": "original",
-      "summary": "Science experiment videos demonstrate how experiments are performed, but offer no direct interaction for learners. Turning them into virtual experiments requires not only reproducing the observed apparatus and state changes, but also enforcing the preconditions governing each operation. We introduce Lab2Sim, a benchmark of 218 science experiment videos with evidence-grounded specifications and 11,881 rubric items. To address this task, we propose EduVideo2Code, which extracts experimental procedures hierarchically, encodes them as explicit state machines to guide code generation, and refines the resulting pages through execution-based verification. Experiments show that existing multimodal models readily generate runnable pages but struggle to faithfully reconstruct experimental apparatus. EduVideo2Code consistently improves all four evaluation dimensions across two backbone models, with apparatus fidelity gains of 24.15 points.",
-      "published_at": "2026-11-02T05:56:06.000Z",
+      "summary": "Linear attention scales linearly with sequence length, but its finite-state memory can limit long-context retrieval. In gated linear recurrences, memory retention depends on state decay, which is shaped jointly by gate parameters A_log and dt_bias and by input activations. In controlled Gated DeltaNet (GDN) experiments, both parameters remain highly correlated with their initial values after training, highlighting the importance of initialization. Therefore, we introduce Dual-Axis Memory Initialization (DAMI), which jointly configures these parameters before training. DAMI assigns geometric timescales across heads for varied retrieval distances and a low-high-low input-sensitivity profile across layers. A small activation sample calibrates the GDN-family implementation to match both behavioral targets without adding trainable parameters. Across GDN, KDA, GDN2, Mamba-2, and RWKV-7, DAMI improves average RULER-style retrieval accuracy by 5.29 to 16.71 percentage points over the corresponding random-initialization baselines. Performance on language modeling, commonsense reasoning, and 2K real-world retrieval remains broadly comparable to those baselines. Our code is available at https",
+      "published_at": "2026-10-29T20:00:00.000Z",
       "engagement": {
         "upvotes": 1
       },
       "collection_mode": "api",
-      "score": 6.426
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 2,
-      "title": "FLAMIA: FLAsh MIcroscaling Attention for Fast and Causally Safe Training on Blackwell",
-      "url": "https://huggingface.co/papers/2611.03344",
-      "direct_source_url": "https://huggingface.co/papers/2611.03344",
-      "discovery_url": "https://huggingface.co/papers/2611.03344",
-      "link_quality": "original",
-      "summary": "Attention remains a substantial computational cost in Transformer training, particularly at long context lengths. NVIDIA Blackwell GPUs provide high-throughput low-precision matrix multiplication, but exploiting it in attention requires addressing quantization overhead, causal information leakage through shared scales, and numerical inconsistencies between the forward and backward passes. We present FLAMIA, a family of attention kernels for Blackwell with MXFP8 and mixed NVFP4/FP8 training paths. Our design combines token-block scaling that reuses quantized operands across matrix orientations, targeted safeguards against scale-induced leakage, and consistent forward and backward computations. Fused quantization and architecture-specific kernel optimizations reduce overhead, while document-local scaling and workload-aware scheduling support variable-length documents directly in packed layouts without repacking. Across various causal packed-document workloads, the MXFP8 path accelerates the combined forward and backward attention call, including quantization, by factors of 1.10--1.40times on B200 and 1.06--1.42times on B300 relative to the fastest evaluated baseline for each workload",
-      "published_at": "2026-11-02T11:00:12.000Z",
-      "engagement": {
-        "upvotes": 0
-      },
-      "collection_mode": "api",
-      "score": 6.407
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 7,
-      "title": "Library of Layers (LoL): Adaptively Ordering Transformer Layers at Runtime",
-      "url": "https://huggingface.co/papers/2611.03526",
-      "direct_source_url": "https://huggingface.co/papers/2611.03526",
-      "discovery_url": "https://huggingface.co/papers/2611.03526",
-      "link_quality": "original",
-      "summary": "Computer programmers chain together the same reusable computational primitives, for example, conditional statements or loops, but in different orders to implement different algorithms. In contrast, existing language model architectures always execute their layers in the same order. We introduce Library of Layers (LoL), an architecture that dynamically orders its layers during inference to solve the problem at hand. LoL has a single hyperparameter, the size of its global library of transformer blocks, that allows it to transition seamlessly between parameter reuse and sparsity, generalizing the parameter-efficiency and FLOPs-efficiency tradeoffs of dense, depth-recurrent, and mixture of experts architectures in one unified family. We show that LoL achieves competitive performance with all three above baselines when pretrained on text data. On synthetic sudoku and maze data, we observe that the model employs distinct layer orderings to implement different solution strategies, and we can intervene on routing to force a model to apply a specific solution strategy to a problem instance. In a multilingual natural language setting, we find that LoL chooses different layer order patterns b",
-      "published_at": "2026-11-02T12:57:53.000Z",
-      "engagement": {
-        "upvotes": 2
-      },
-      "collection_mode": "api",
-      "score": 6.327
+      "score": 6.051
     },
     {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
       "source_rank": 3,
-      "title": "Measuring AI Agents as Teammates with Collaborative Intelligence",
-      "url": "https://huggingface.co/papers/2611.02633",
-      "direct_source_url": "https://huggingface.co/papers/2611.02633",
-      "discovery_url": "https://huggingface.co/papers/2611.02633",
+      "title": "Cross-Primitive Consistency in Jev",
+      "url": "https://huggingface.co/papers/2610.38623",
+      "direct_source_url": "https://huggingface.co/papers/2610.38623",
+      "discovery_url": "https://huggingface.co/papers/2610.38623",
       "link_quality": "original",
-      "summary": "Progress in AI is often measured by what a single model can do on its own. Yet teams of AI agents are starting to make breakthroughs and discoveries in science, medicine, mathematics and software engineering. As AI begins to work in teams of agents and people, the ability to collaborate becomes a core part of their intelligence. Research on human teams has measured this ability for decades. Inspired by this, we introduce the Collaborative Intelligence Benchmark, which measures how well an AI agent works as a teammate. It contains 240 tasks across 8 dimensions of teamwork, from refusing an unsafe shortcut to checking the work that a weaker model leaves behind. Each task comes from a real record or an existing benchmark, from aviation accident reports and clinical cases to coding tasks and negotiations, and has a programmatically verifiable outcome. To isolate teamwork from individual capability, models are scored only on tasks that they can solve by themselves when they have full information. We evaluate 18 closed- and open-weight models and find that every model, across sizes and families, has clear weaknesses as a teammate, with the best model scoring only 82.2 out of 100. Frontie",
-      "published_at": "2026-11-02T01:59:08.000Z",
+      "summary": "Jev enables efficient decision-making with large language models (LLMs) through typed querying primitives, allowing the same semantic state to be expressed in different formats, such as binary and multiple-choice queries. However, the consistency of decisions across primitives has not been systematically evaluated. This work introduces PrimaCons, a four-axis benchmark for assessing cross-primitive consistency while preserving the semantics of the query. Evaluations across three Jev sizes reveal consistency violations across all four axes. Our analysis shows that these violations follow systematic patterns and that cross-primitive discrepancies predict decision failure with a ROC-AUC of 0.91. To mitigate these inconsistencies, we propose the Cross-Primitive Residual Calibrator (CPRC), which attaches a lightweight residual network to a frozen backbone and jointly optimizes predictive accuracy and cross-primitive consistency. Under a leave-one-domain-out protocol, CPRC reduces cross-primitive inconsistency by 58.57% and improves accuracy by +2.97%., demonstrating its effectiveness in both in-domain and out-of-domain settings. Our findings establish cross-primitive consistency as a key",
+      "published_at": "2026-10-27T20:00:00.000Z",
       "engagement": {
-        "upvotes": 3
+        "upvotes": 2
       },
       "collection_mode": "api",
-      "score": 6.252
+      "score": 5.979
     },
     {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
-      "source_rank": 8,
-      "title": "CrossSWE: Benchmarking Cross-Repository Joint Development for Coding Agents",
-      "url": "https://huggingface.co/papers/2611.01484",
-      "direct_source_url": "https://huggingface.co/papers/2611.01484",
-      "discovery_url": "https://huggingface.co/papers/2611.01484",
+      "source_rank": 2,
+      "title": "DR Pixel: Page-Native Deep Research with Vision-Language Models",
+      "url": "https://huggingface.co/papers/2611.03097",
+      "direct_source_url": "https://huggingface.co/papers/2611.03097",
+      "discovery_url": "https://huggingface.co/papers/2611.03097",
       "link_quality": "original",
-      "summary": "As coding agents achieve increasingly high success rates on software engineering benchmarks, recent efforts have sought to increase task complexity through longer horizons and more extensive code modifications. However, real-world software development often spans multiple interdependent repositories, introducing additional challenges in dependency reasoning, change propagation, and interface consistency. Rather than further increasing complexity within individual repositories, we introduce CrossSWE, a benchmark for cross-repository joint development comprising 171 real-world instances spanning 165 repositories, 20 technical domains, and 13 programming languages. CrossSWE verifies the necessity of coordinated changes by testing whether partial repository modifications are insufficient to achieve the intended behavior. Our evaluation of five LLMs reveals substantial challenges, with the strongest model, GPT-6.1 Sol, achieving only 58.48% Pass@1. Furthermore, cross-repository inconsistencies emerge as the most prevalent failure mode (44.2%), highlighting the difficulty of maintaining consistency across interdependent repositories.",
-      "published_at": "2026-10-31T23:16:52.000Z",
+      "summary": "Complex documents such as scientific papers contain rich information in tables, figures, and equations; however, existing deep research (DR) agents typically reduce papers to OCR-extracted text. We instead ask whether vision-language models (VLMs) can enable page-native deep research: directly retrieving and reasoning over rendered document page images. We introduce DR Pixel, the first open-source end-to-end multimodal DR agent that uses rendered page images as its sole retrieval and reasoning unit, operating over a corpus of 1.06M pages. To evaluate this setting, we construct DRPixelBench, a benchmark on scientific papers requiring reasoning over text, figures, tables, and equations. Surprisingly, page-native DR already works well without training, outperforming OCR-based baselines across state-of-the-art models like GPT-5.4, Gemini-3.5-Flash, and Qwen3.6-27B, while requiring fewer tool calls. We next turn to DR training. A key challenge is that teacher trajectories for agentic supervised finetuning are noisy, mixing critical reasoning and action steps with redundant or failed attempts. To address this, we introduce counterfactual credit reweighting, a fine-grained credit assignme",
+      "published_at": "2026-11-01T19:00:00.000Z",
       "engagement": {
-        "upvotes": 19
+        "upvotes": 1
       },
       "collection_mode": "api",
-      "score": 5.991
+      "score": 5.971
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 9,
+      "title": "When Does Latent Prediction Error Support Physical Surprise Claims in Video World Models?",
+      "url": "https://huggingface.co/papers/2611.01815",
+      "direct_source_url": "https://huggingface.co/papers/2611.01815",
+      "discovery_url": "https://huggingface.co/papers/2611.01815",
+      "link_quality": "original",
+      "summary": "Prediction errors from video world models are often treated as physical surprise, but they can also reflect appearance, static content, motion, or ordinary prediction difficulty. We present an evaluation framework that separates what frozen representations contain, how they organize appearance and physical differences, and what changes a model's own prediction error. On IntPhys2, a benchmark of physically possible and impossible events, we compare representations from latent prediction, masked pixel reconstruction, and simple visual statistics. Appearance remains easy to decode, while V-JEPA2 exposes modest information about whether events are possible or impossible. Looking at the latent geometry, appearance changes become smaller compared with differences between videos, their directions line up more consistently across scenes, and their overlap with physical changes decreases in deeper layers. Across action-conditioned models, incorrect actions raise prediction error, while appearance changes also produce substantial responses. In Physion++ video clips, repeating a single frame can produce higher error than the original clip, while changing color throughout the clip can lower it",
+      "published_at": "2026-11-01T06:31:09.000Z",
+      "engagement": {
+        "upvotes": 18
+      },
+      "collection_mode": "api",
+      "score": 5.899
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Multi-Agent Relay Thinking",
+      "url": "https://huggingface.co/papers/2610.35219",
+      "direct_source_url": "https://huggingface.co/papers/2610.35219",
+      "discovery_url": "https://huggingface.co/papers/2610.35219",
+      "link_quality": "original",
+      "summary": "Existing multi-agent collaboration (MAC) methods have primarily explored a group thinking collaboration topology, where agents independently generate solutions and aggregate their outputs. In this work, we investigate an alternative relay thinking topology, where reasoning ownership is dynamically transferred across agents, allowing subsequent agents to inherit and refine an evolving reasoning trajectory. We introduce Multi-Agent Confidence-guided Relay (MACR), a framework that enables dynamical relay collaboration among agents. The key challenge is determining when reasoning should be relayed and which agent should continue the process. method addresses this challenge through confidence-guided relay triggering and a bidding mechanism that selects the next agent based on its confidence. Experiments on four benchmarks show that method outperforms the strongest single-model strategies in accuracy, e.g., +3.3% on MathVista and +3.9% on MMStar, and remains on par with multi-agent strategies while consuming 6.0x less token overhead on HallusionBench and MMStar. Further analysis demonstrates that relay collaboration enables heterogeneous agents to progressively integrate complementary in",
+      "published_at": "2026-10-26T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.811
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 11,
+      "title": "PhotoGuider: Composition-Aware Cropping and 360^{circ} View Framing with Explainable Photographic Assessments",
+      "url": "https://huggingface.co/papers/2611.02897",
+      "direct_source_url": "https://huggingface.co/papers/2611.02897",
+      "discovery_url": "https://huggingface.co/papers/2611.02897",
+      "link_quality": "original",
+      "summary": "Traditional image cropping assumes the photograph already contains the composition worth keeping, and asks only where to crop. A full 360^{circ} scene offers no such guarantee: the viewing direction in a scene has to be discovered before anything can be framed. We present PhotoGuider, a measure-then-frame method that answers both questions with compact learned scorers over one shared set of composition-aware features. The designed features are extracted using foundation and task-specific vision models and structured into four photographic tokens: Subject, Composition, Aesthetics, and Integrity. Our MLLM explainer is fine-tuned to generate composition-related explanations conditioned on images and measured token assessments. To our knowledge, PhotoGuider is the first method to combine explicit composition-based direction selection in 360^{circ} panoramas with refined framing, camera-parameter output for native re-rendering, and measurement-conditioned explanations. On two standard 2D cropping benchmarks, PhotoGuider achieves the highest average mIoU performance against ground-truth crops. In a blind ranking study, 120 participants ranked three cropping methods over 100 panoramic sce",
+      "published_at": "2026-11-01T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 24
+      },
+      "collection_mode": "api",
+      "score": 5.799
     }
   ]
 }

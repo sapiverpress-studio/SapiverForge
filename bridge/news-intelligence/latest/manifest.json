@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-11-03",
-  "generated_at": "2026-11-03T14:04:57.735Z",
+  "date": "2026-11-04",
+  "generated_at": "2026-11-04T14:24:48.525Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 1576,
+      "elapsed_ms": 225,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,22 +23,22 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 399,
+      "elapsed_ms": 392,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 480,
+      "elapsed_ms": 500,
       "collection_mode": "api",
-      "original_link_count": 8
+      "original_link_count": 10
     },
     {
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 387,
+      "elapsed_ms": 264,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1282,
+      "elapsed_ms": 2573,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -60,59 +60,58 @@
   ],
   "release_blockers": [
     "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
-    "Overall confidence 0% is below the 78% release threshold.",
-    "1 selected story has only a homepage, profile or invalid publication link."
+    "Overall confidence 0% is below the 78% release threshold."
   ],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-03",
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-04",
   "overall_confidence": 0,
   "stories": [
     {
       "category": "lead",
-      "headline": "New England-based autonomous submarine startup Corridian emerges from stealth with a $38M seed led by Point72 Ventures and plans to unveil its first AUV in 2027 (Colin Demarest/Axios)",
+      "headline": "UK AI Minister Kanishka Narayan says AI is set to add £55B to £140B to the economy by 2030, below a £400B estimate from a Google-led report touted by officials (Ben Gartside/Wired)",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "Colin Demarest/Axios",
+      "source": "Ben Gartside/Wired",
       "discovered_via": "Techmeme",
-      "source_title": "New England-based autonomous submarine startup Corridian emerges from stealth with a $38M seed led by Point72 Ventures and plans to unveil its first AUV in 2027 (Colin Demarest/Axios)",
-      "url": "https://www.axios.com/2026/11/03/corridian-seed-auv-new-england",
-      "discovery_url": "https://www.techmeme.com/261103/p14",
+      "source_title": "UK AI Minister Kanishka Narayan says AI is set to add £55B to £140B to the economy by 2030, below a £400B estimate from a Google-led report touted by officials (Ben Gartside/Wired)",
+      "url": "https://www.wired.com/story/uk-officials-said-ai-would-add-400-billion-to-the-economy-that-figure-mainly-came-from-google/",
+      "discovery_url": "https://www.techmeme.com/261104/p32",
       "link_quality": "original",
-      "published_at": "2026-11-03T14:01:26.000Z",
-      "discovery_score": 8.098
+      "published_at": "2026-11-04T14:20:04.000Z",
+      "discovery_score": 8.097
     },
     {
       "category": "worth-knowing",
-      "headline": "Show HN: Hacker Times, a New York Times-inspired version of Hacker News",
+      "headline": "Postman silently auto-installs AI plugins and attempts to share all API data",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "hackertimes.ca",
+      "source": "github.com",
       "discovered_via": "Hacker News",
-      "source_title": "Show HN: Hacker Times, a New York Times-inspired version of Hacker News",
-      "url": "https://hackertimes.ca/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50346981",
+      "source_title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+      "discovery_url": "https://news.ycombinator.com/item?id=50354960",
       "link_quality": "original",
-      "published_at": "2026-11-03T01:53:34.000Z",
-      "discovery_score": 8.372
+      "published_at": "2026-11-03T17:22:37.000Z",
+      "discovery_score": 7.973
     },
     {
       "category": "worth-knowing",
-      "headline": "SWE-Trail: History-Guided Trajectory Collection for Coding Agent Training",
+      "headline": "Factorized MLLM Embeddings for Composed Image Retrieval",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
       "source": "Hugging Face",
       "discovered_via": "Hugging Face",
-      "source_title": "SWE-Trail: History-Guided Trajectory Collection for Coding Agent Training",
-      "url": "https://huggingface.co/papers/2611.02074",
-      "discovery_url": "https://huggingface.co/papers/2611.02074",
+      "source_title": "Factorized MLLM Embeddings for Composed Image Retrieval",
+      "url": "https://huggingface.co/papers/2611.05193",
+      "discovery_url": "https://huggingface.co/papers/2611.05193",
       "link_quality": "original",
-      "published_at": "2026-10-31T20:00:00.000Z",
-      "discovery_score": 6.181
+      "published_at": "2026-11-02T19:00:00.000Z",
+      "discovery_score": 6.45
     }
   ],
   "practical_takeaway": "Do not publish this edition until verification succeeds.",
@@ -125,21 +124,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 063",
-      "title": "Our Warranty & Receipt Tracker",
-      "summary": "Keep household purchase details, receipt locations and warranty dates together, then see which warranties are approaching their end.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-063/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-063/poster.png"
+      "label": "AI Inquisitive Parents · Day 064",
+      "title": "Our Home Stock-Up Board",
+      "summary": "Track household essentials against family-chosen minimum levels, update quantities quickly and build one automatic restocking list.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-064/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-064/poster.png"
     }
   },
   "social": {
-    "date": "2026-11-03",
-    "lead_headline": "New England-based autonomous submarine startup Corridian emerges from stealth with a $38M seed led by Point72 Ventures and plans to unveil its first AUV in 2027 (Colin Demarest/Axios)",
-    "facebook_post": "New England-based autonomous submarine startup Corridian emerges from stealth with a $38M seed led by Point72 Ventures and plans to unveil its first AUV in 2027 (Colin Demarest/Axios)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "New England-based autonomous submarine startup Corridian emerges from stealth with a $38M seed led by Point72 Ventures and plans to unveil its first AUV in 2027 (Colin Demarest/Axios)",
+    "date": "2026-11-04",
+    "lead_headline": "UK AI Minister Kanishka Narayan says AI is set to add £55B to £140B to the economy by 2030, below a £400B estimate from a Google-led report touted by officials (Ben Gartside/Wired)",
+    "facebook_post": "UK AI Minister Kanishka Narayan says AI is set to add £55B to £140B to the economy by 2030, below a £400B estimate from a Google-led report touted by officials (Ben Gartside/Wired)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "UK AI Minister Kanishka Narayan says AI is set to add £55B to £140B to the economy by 2030, below a £400B estimate from a Google-led report touted by officials (Ben Gartside/Wired)",
     "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "New England-based autonomous submarine startup Corridian emerges from stealth with a $38M seed led by Point72 Ventures and plans to unveil its first AUV in 2027 (Colin Demarest/Axios). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "New England-based autonomous submarine startup Corridian emerges from stealth with a $38M seed led by Point72 Ventures and plans to unveil its first AUV in 2027 (Colin Demarest/Axios). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+    "tiktok_caption": "UK AI Minister Kanishka Narayan says AI is set to add £55B to £140B to the economy by 2030, below a £400B estimate from a Google-led report touted by officials (Ben Gartside/Wired). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "UK AI Minister Kanishka Narayan says AI is set to add £55B to £140B to the economy by 2030, below a £400B estimate from a Google-led report touted by officials (Ben Gartside/Wired). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "6c12ead0bd090ad9394f803a43a08eec4c6cc4b95cc4b384fe1c09e454bc8f6a"
+  "candidate_id": "48e517d331e41b87f99a8b4f1f085e3afb5888344022adc285f007938e419660"
 }

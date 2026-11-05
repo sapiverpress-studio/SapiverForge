@@ -1,4 +1,4 @@
-# Sapiver Forge Daily Brief — 2026-11-04
+# Sapiver Forge Daily Brief — 2026-11-05
 
 Automated verification did not complete: Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {
   "error": {
@@ -9,7 +9,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 }
  This edition is a source index only and must not be sent as a newsletter.
 
-## 1. UK AI Minister Kanishka Narayan says AI is set to add £55B to £140B to the economy by 2030, below a £400B estimate from a Google-led report touted by officials (Ben Gartside/Wired)
+## 1. MacBook Pro with PROLED XDR Display review: gorgeous screen, touch is useful, strong performance and speakers, and a Dynamic Island, but pricey and no Face ID (Andrew E. Freedman/Tom's Hardware)
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -17,19 +17,9 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Ben Gartside/Wired](https://www.wired.com/story/uk-officials-said-ai-would-add-400-billion-to-the-economy-that-figure-mainly-came-from-google/) · discovered via Techmeme · confidence 0%
+**Source:** [Andrew E. Freedman/Tom's Hardware](https://www.tomshardware.com/laptops/macbooks/apple-macbook-pro-with-proled-xdr-display-review) · discovered via Techmeme · confidence 0%
 
-## 2. Postman silently auto-installs AI plugins and attempts to share all API data
-
-**Confirmed:** Headline collected from the named source; claim verification is incomplete.
-
-**Why it matters:** Human review required before any interpretation or distribution.
-
-**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
-
-**Source:** [github.com](https://github.com/postmanlabs/postman-app-support/issues/14370) · discovered via Hacker News · confidence 0%
-
-## 3. Factorized MLLM Embeddings for Composed Image Retrieval
+## 2. Sshole
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -37,7 +27,17 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Hugging Face](https://huggingface.co/papers/2611.05193) · confidence 0%
+**Source:** [sshhole.com](https://sshhole.com/) · discovered via Hacker News · confidence 0%
+
+## 3. Why Pay for Long Reasoning When Rewrite Do Trick? Causal Effects of Reasoning History Compaction on Future Generation and Agent Cost
+
+**Confirmed:** Headline collected from the named source; claim verification is incomplete.
+
+**Why it matters:** Human review required before any interpretation or distribution.
+
+**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
+
+**Source:** [Hugging Face](https://huggingface.co/papers/2611.03852) · confidence 0%
 
 ## Practical takeaway
 

@@ -1,0 +1,99 @@
+name: Import Reviewed Daily Brief ZIP (Draft Only)
+on:
+  workflow_dispatch:
+    inputs:
+      edition_date:
+        description: Edition date YYYY-MM-DD
+        required: true
+        type: string
+      upload_sha256:
+        description: SHA-256 of uploaded ZIP
+        required: true
+        type: string
+      zip_base64:
+        description: Compressed ZIP encoded as base64, maximum 40 KB
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reviewed-daily-brief-${{ inputs.edition_date }}
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Test secure ZIP parser and importer
+        run: |
+          node --check scripts/import-reviewed-daily-brief-zip.mjs
+          node --check scripts/verify-reviewed-daily-brief-brevo.mjs
+          node test/reviewed-brief-zip-contract.mjs
+      - name: Inspect ZIP and import exact reviewed content (no publishing)
+        id: stage
+        env:
+          EDITION_DATE: ${{ inputs.edition_date }}
+          UPLOAD_SHA256: ${{ inputs.upload_sha256 }}
+          UPLOAD_B64: ${{ inputs.zip_base64 }}
+        run: node scripts/import-reviewed-daily-brief-zip.mjs
+      - name: Create or update UNSENT Brevo draft for complete validated publication ZIP
+        if: steps.stage.outputs.kind == 'publication_candidate'
+        env:
+          NEWS_INTELLIGENCE_DATE: ${{ inputs.edition_date }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+          BREVO_SEND_MODE: draft
+          NEWSLETTER_APPROVED: 'false'
+          BREVO_CORRECTION_MODE: 'false'
+        run: node src/send-daily-newsletter-brevo.mjs
+      - name: Compare exact Brevo draft to imported newsletter and record verification
+        if: steps.stage.outputs.kind == 'publication_candidate'
+        env:
+          EDITION_DATE: ${{ inputs.edition_date }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: node scripts/verify-reviewed-daily-brief-brevo.mjs
+      - name: Commit reviewed upload and evidence; NEVER send or deploy
+        shell: bash
+        env:
+          EDITION_DATE: ${{ inputs.edition_date }}
+        run: |
+          set -euo pipefail
+          git config user.name sapiver-daily-runner
+          git config user.email actions@users.noreply.github.com
+          git add "news-intelligence/$EDITION_DATE"
+          if [ -d "reports/daily-intelligence/$EDITION_DATE" ]; then
+            git add "reports/daily-intelligence/$EDITION_DATE"
+          fi
+          if [ -d "reports/weekly-intelligence/$EDITION_DATE" ]; then
+            git add "reports/weekly-intelligence/$EDITION_DATE"
+          fi
+          git add bridge/news-intelligence/latest
+          if git diff --cached --quiet; then
+            echo 'Identical validated ZIP already imported; nothing to commit.'
+            exit 0
+          fi
+          git commit -m "Import reviewed Daily Brief ZIP $EDITION_DATE as unsent draft [skip ci] [skip netlify]"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          echo 'Could not persist ZIP import: concurrent repository changes.' >&2
+          exit 1
+      - name: Show editorial handoff result
+        if: always()
+        env:
+          EDITION_DATE: ${{ inputs.edition_date }}
+          IMPORT_RESULT: ${{ steps.stage.outputs.kind }}
+        run: |
+          echo "ZIP import result: $IMPORT_RESULT" >> "$GITHUB_STEP_SUMMARY"
+          echo "Edition: $EDITION_DATE" >> "$GITHUB_STEP_SUMMARY"
+          echo "No email sent, no production deploy and no Comic dispatch." >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-06",
+  "method": "direct_source_review",
+  "reviewer": "ChatGPT",
+  "reviewed_at": "2026-11-06T09:40:00Z",
+  "confidence_scope": "Qualitative judgement that story text fairly attributes primary-source statements; not independent validation of vendor or author outcomes.",
+  "sources": [
+    {
+      "url": "https://openai.com/index/introducing-images-2-6/",
+      "title": "Introducing Images 2.6",
+      "published_at": "2026-11-04",
+      "checked_claims": [
+        "On 4 November, OpenAI announced Images 2.6 for ChatGPT, Codex and the API. It says the release adds GIF animation, SVG export and markup-guided editing through the API; its faster-generation claims are company-reported."
+      ],
+      "limitations": [
+        "Original-source review; vendor reports or preprint experimental results have not been independently reproduced."
+      ]
+    },
+    {
+      "url": "https://www.alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
+      "title": "Security advisory: openssh-server password authentication bypass",
+      "published_at": "2026-11-05",
+      "checked_claims": [
+        "Alpine Linux published a security advisory on 5 November for an OpenSSH password-authentication bypass affecting specific musl and account configurations, including systems running without PAM. Patched packages are available and sshd must be restarted after updating."
+      ],
+      "limitations": [
+        "Original-source review; vendor reports or preprint experimental results have not been independently reproduced."
+      ]
+    },
+    {
+      "url": "https://www.binance.com/en-NG/blog/community/3229153443759566763",
+      "title": "29 October 2026 Binance Security Incident: Initial Findings and Response Update",
+      "published_at": "2026-11-03",
+      "checked_claims": [
+        "Binance states that its 29 October security incident affected roughly US$6.34 billion in digital assets, with approximately US$2.85 billion frozen or intercepted by its 3 November update. The company describes compromised wallet-signing services and Ethereum EIP-7702 delegation as part of the attack."
+      ],
+      "limitations": [
+        "Original-source review; vendor reports or preprint experimental results have not been independently reproduced."
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.06741",
+      "title": "TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing",
+      "published_at": "2026-11-04",
+      "checked_claims": [
+        "In a 4 November arXiv preprint, TailSteer researchers describe concentrating preservation corrections late in the denoising trajectory. They report lower drift across 15–20 editing turns in experiments with FLUX, SenseNova and Qwen model families."
+      ],
+      "limitations": [
+        "Original-source review; vendor reports or preprint experimental results have not been independently reproduced."
+      ]
+    }
+  ],
+  "recovery": {
+    "original_candidate_id": "ae8976b0a9346f2cc839284b9b64d43a6c779b5bd9d62d92188e13f9154f3861",
+    "original_failure": "Gemini credits depleted; manual source-checked editorial recovery from review ZIP.",
+    "billing_resolved": false,
+    "additional_model_api_calls": false,
+    "human_release_required": true
+  }
+}

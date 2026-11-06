@@ -31,6 +31,7 @@ globalThis.fetch=async(url,options)=>{
    newsletter_blob_sha:'metadata-sha',reviewed_at:'2026-11-06T07:00:00Z'},'review-sha')):
    new Response('Missing',{status:404});
  }
+ if(pathname.endsWith('/zip-upload-status.json'))return new Response('Missing',{status:404});
  if(pathname.endsWith('/netlify-release.json'))return new Response('Missing',{status:404});
  throw Error('Unmocked request: '+pathname);
 };

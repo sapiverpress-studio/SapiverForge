@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { handler } from '../netlify/functions/daily-brief-runner.mjs';
+import { handler } from '../private-runner/netlify/functions/daily-brief-runner.mjs';
 
 process.env.DAILY_RUNNER_PASSWORD='this-is-a-test-only-password-123';
 process.env.DAILY_RUNNER_GITHUB_TOKEN='mock-token';

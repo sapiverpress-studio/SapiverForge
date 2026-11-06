@@ -6,6 +6,7 @@ on:
     paths:
       - 'private-runner/**'
       - 'test/daily-brief-runner-contract.mjs'
+      - 'test/daily-brief-runner-ui-contract.mjs'
       - 'test/reviewed-brief-zip-contract.mjs'
       - 'scripts/import-reviewed-daily-brief-zip.mjs'
       - 'scripts/verify-reviewed-daily-brief-brevo.mjs'

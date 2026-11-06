@@ -31,6 +31,9 @@ jobs:
         run: |
           node --check private-runner/netlify/functions/daily-brief-runner.mjs
           node test/daily-brief-runner-contract.mjs
+          node --check scripts/import-reviewed-daily-brief-zip.mjs
+          node --check scripts/verify-reviewed-daily-brief-brevo.mjs
+          node test/reviewed-brief-zip-contract.mjs
           test -s private-runner/public/index.html
           test ! -e public/daily-brief/runner/index.html
           test ! -e netlify/functions/daily-brief-runner.mjs

@@ -1,0 +1,48 @@
+name: Install Daily Intelligence Runner (no publishing)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'netlify/functions/daily-brief-runner.mjs'
+      - 'public/daily-brief/runner/index.html'
+      - 'test/daily-brief-runner-contract.mjs'
+      - '.github/workflows/install-daily-brief-runner.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sapiver-runner-install
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check runner syntax and security gates
+        run: |
+          node --check netlify/functions/daily-brief-runner.mjs
+          node test/daily-brief-runner-contract.mjs
+          test -s public/daily-brief/runner/index.html
+      - name: Prepare Netlify function dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Deploy runner only (never send or publish content)
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          test -n "$NETLIFY_AUTH_TOKEN"
+          npx --yes netlify-cli@27.5.2 deploy \
+            --prod \
+            --no-build \
+            --dir=public \
+            --functions=netlify/functions \
+            --site=47bda30e-4698-4cf5-bcd4-d59785e1f399 \
+            --auth="$NETLIFY_AUTH_TOKEN" \
+            --message="Install password-gated Daily Intelligence runner only"

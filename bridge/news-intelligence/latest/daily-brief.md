@@ -1,4 +1,4 @@
-# Sapiver Forge Daily Brief — 2026-11-05
+# Sapiver Forge Daily Brief — 2026-11-06
 
 Automated verification did not complete: Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {
   "error": {
@@ -9,7 +9,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 }
  This edition is a source index only and must not be sent as a newsletter.
 
-## 1. MacBook Pro with PROLED XDR Display review: gorgeous screen, touch is useful, strong performance and speakers, and a Dynamic Island, but pricey and no Face ID (Andrew E. Freedman/Tom's Hardware)
+## 1. Blockaid: Binance hackers stole ~$2.5B, or 40% of the $6.3B haul, in a single Ethereum transaction using wallet permissions that cost just $15 to set up (Sidhartha Shukla/Bloomberg)
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -17,9 +17,9 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Andrew E. Freedman/Tom's Hardware](https://www.tomshardware.com/laptops/macbooks/apple-macbook-pro-with-proled-xdr-display-review) · discovered via Techmeme · confidence 0%
+**Source:** [Sidhartha Shukla/Bloomberg](https://www.bloomberg.com/news/articles/2026-11-06/hackers-paid-15-to-drain-2-5-billion-from-binance-in-one-hit) · discovered via Techmeme · confidence 0%
 
-## 2. Sshole
+## 2. sshole
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -29,7 +29,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Source:** [sshhole.com](https://sshhole.com/) · discovered via Hacker News · confidence 0%
 
-## 3. Why Pay for Long Reasoning When Rewrite Do Trick? Causal Effects of Reasoning History Compaction on Future Generation and Agent Cost
+## 3. TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -37,7 +37,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Hugging Face](https://huggingface.co/papers/2611.03852) · confidence 0%
+**Source:** [Hugging Face](https://huggingface.co/papers/2611.06741) · confidence 0%
 
 ## Practical takeaway
 

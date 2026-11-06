@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-06T09:00:14.653Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 391,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 263,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 465,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 264,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1727,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "sshhole.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "sshole",
+      "url": "https://sshhole.com/",
+      "direct_source_url": "https://sshhole.com/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50378228",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50378228",
+      "summary": "Related: https://hachyderm.io/@damienmiller/117563026759098135 / https://news.ycombinator.com/item?id=50377221 https://www.openssh.org/releasenotes.html#10.6p2 https://alpinelinux.org/posts/2026-11-05-openssh-password-au...",
+      "published_at": "2026-11-05T12:19:02.000Z",
+      "engagement": {
+        "score": 2662,
+        "comments": 634
+      },
+      "collection_mode": "api",
+      "score": 8.338
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "Claude Code sends your email address to websites",
+      "url": "https://github.com/anthropics/claude-code/issues/107757",
+      "direct_source_url": "https://github.com/anthropics/claude-code/issues/107757",
+      "discovery_url": "https://news.ycombinator.com/item?id=50385272",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50385272",
+      "summary": "",
+      "published_at": "2026-11-05T22:17:15.000Z",
+      "engagement": {
+        "score": 1071,
+        "comments": 334
+      },
+      "collection_mode": "api",
+      "score": 8.323
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "kagi.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "Search for everyone",
+      "url": "https://kagi.com/changelog",
+      "direct_source_url": "https://kagi.com/changelog",
+      "discovery_url": "https://news.ycombinator.com/item?id=50383740",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50383740",
+      "summary": "",
+      "published_at": "2026-11-05T20:03:34.000Z",
+      "engagement": {
+        "score": 664,
+        "comments": 338
+      },
+      "collection_mode": "api",
+      "score": 8.151
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "salon.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "Goodbye from Salon",
+      "url": "https://www.salon.com/2026/11/05/goodbye-from-salon/",
+      "direct_source_url": "https://www.salon.com/2026/11/05/goodbye-from-salon/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50383739",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50383739",
+      "summary": "",
+      "published_at": "2026-11-05T20:03:29.000Z",
+      "engagement": {
+        "score": 570,
+        "comments": 217
+      },
+      "collection_mode": "api",
+      "score": 8.071
+    },
+    {
+      "title": "Blockaid: Binance hackers stole ~$2.5B, or 40% of the $6.3B haul, in a single Ethereum transaction using wallet permissions that cost just $15 to set up (Sidhartha Shukla/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-06/hackers-paid-15-to-drain-2-5-billion-from-binance-in-one-hit",
+      "summary": "Sidhartha Shukla / Bloomberg : Blockaid: Binance hackers stole ~$2.5B, or 40% of the $6.3B haul, in a single Ethereum transaction using wallet permissions that cost just $15 to set up &mdash; The hackers who stole $6.3 billion from Binance last week found a way to take 40% of the stolen cryptocurrency in one hit &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-06/hackers-paid-15-to-drain-2-5-billion-from-binance-in-one-hit\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261106/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261106/p5#a261106p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Sidhartha Shukla / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-06/hackers-paid-15-to-drain-2-5-billion-from-binance-in-one-hit\">Blockaid: Binance hackers stole ~$2.5B, or 40% of the $6.3B haul, in a single Ethereum transaction using wallet permissions that cost just $15 to set up</A></B></SPAN>&nbsp; &mdash;&nbsp; The hackers who stole $6.3 billion from Binance last week found a way to take 40% of the stolen cryptocurrency in one hit &hellip; </P>",
+      "published_at": "2026-11-06T07:25:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261106/p5",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-06/hackers-paid-15-to-drain-2-5-billion-from-binance-in-one-hit",
+      "publisher": "Sidhartha Shukla/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.034
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "cve.org",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "MS Paint Remote Code Execution Vulnerability",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+      "direct_source_url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+      "discovery_url": "https://news.ycombinator.com/item?id=50384233",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50384233",
+      "summary": "",
+      "published_at": "2026-11-05T20:43:42.000Z",
+      "engagement": {
+        "score": 525,
+        "comments": 189
+      },
+      "collection_mode": "api",
+      "score": 8.019
+    },
+    {
+      "title": "NY-based Kalepa, whose AI platform supports insurance underwriting, pricing, and portfolio management, raised a $75M Series B led by Updata at a $470M valuation (Manya Saini/Reuters)",
+      "url": "https://www.reuters.com/legal/transactional/ai-powered-insurance-startup-kalepa-valued-470-million-new-funding-round-2026-11-05/",
+      "summary": "Manya Saini / Reuters : NY-based Kalepa, whose AI platform supports insurance underwriting, pricing, and portfolio management, raised a $75M Series B led by Updata at a $470M valuation &mdash; Insurance startup Kalepa said on Thursday it had raised $75 million at a $470 million valuation, as investors bet that AI solutions &hellip;",
+      "description_html": "<A HREF=\"https://www.reuters.com/legal/transactional/ai-powered-insurance-startup-kalepa-valued-470-million-new-funding-round-2026-11-05/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261106/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261106/p4#a261106p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Manya Saini / <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/legal/transactional/ai-powered-insurance-startup-kalepa-valued-470-million-new-funding-round-2026-11-05/\">NY-based Kalepa, whose AI platform supports insurance underwriting, pricing, and portfolio management, raised a $75M Series B led by Updata at a $470M valuation</A></B></SPAN>&nbsp; &mdash;&nbsp; Insurance startup Kalepa said on Thursday it had raised $75 million at a $470 million valuation, as investors bet that AI solutions &hellip; </P>",
+      "published_at": "2026-11-06T06:50:13.000Z",
+      "discovery_url": "https://www.techmeme.com/261106/p4",
+      "direct_source_url": "https://www.reuters.com/legal/transactional/ai-powered-insurance-startup-kalepa-valued-470-million-new-funding-round-2026-11-05/",
+      "publisher": "Manya Saini/Reuters",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.93
+    },
+    {
+      "title": "Sources: China's top memory maker YMTC plans to source up to 70% of equipment for its fourth chip factory locally, up from just over 50% for its third factory (Reuters)",
+      "url": "https://www.reuters.com/world/china/chinas-top-flash-memory-chipmaker-targets-more-homegrown-tools-new-factory-2026-11-06/",
+      "summary": "Reuters : Sources: China's top memory maker YMTC plans to source up to 70% of equipment for its fourth chip factory locally, up from just over 50% for its third factory &mdash; China's largest flash memory chipmaker, Yangtze Memory Technologies Co (YMTC), plans to source as much as 70% of the equipment &hellip;",
+      "description_html": "<A HREF=\"https://www.reuters.com/world/china/chinas-top-flash-memory-chipmaker-targets-more-homegrown-tools-new-factory-2026-11-06/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261106/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261106/p3#a261106p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/world/china/chinas-top-flash-memory-chipmaker-targets-more-homegrown-tools-new-factory-2026-11-06/\">Sources: China's top memory maker YMTC plans to source up to 70% of equipment for its fourth chip factory locally, up from just over 50% for its third factory</A></B></SPAN>&nbsp; &mdash;&nbsp; China's largest flash memory chipmaker, Yangtze Memory Technologies Co (YMTC), plans to source as much as 70% of the equipment &hellip; </P>",
+      "published_at": "2026-11-06T06:20:13.000Z",
+      "discovery_url": "https://www.techmeme.com/261106/p3",
+      "direct_source_url": "https://www.reuters.com/world/china/chinas-top-flash-memory-chipmaker-targets-more-homegrown-tools-new-factory-2026-11-06/",
+      "publisher": "Reuters",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.829
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "motorolanews.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "Motorola Signature 27 with GrapheneOS support",
+      "url": "https://motorolanews.com/motorola-signature-27-2/",
+      "direct_source_url": "https://motorolanews.com/motorola-signature-27-2/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50380810",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50380810",
+      "summary": "",
+      "published_at": "2026-11-05T16:01:34.000Z",
+      "engagement": {
+        "score": 476,
+        "comments": 342
+      },
+      "collection_mode": "api",
+      "score": 7.743
+    },
+    {
+      "title": "Asian tech stocks plunge amid fears US Democrats may delay data centers; Taiwan's Taiex sees a record intraday point drop, Kospi falls 8.7%, and Nikkei 6.7% (Jada Nagumo/Nikkei Asia)",
+      "url": "https://asia.nikkei.com/business/markets/taiwan-stocks-in-steepest-ever-fall-south-korea-halts-trading-amid-ai-rout",
+      "summary": "Jada Nagumo / Nikkei Asia : Asian tech stocks plunge amid fears US Democrats may delay data centers; Taiwan's Taiex sees a record intraday point drop, Kospi falls 8.7%, and Nikkei 6.7% &mdash; TOKYO &mdash; Asian stock markets tied to the artificial intelligence boom plummeted on Friday morning following a tech sell-off &hellip;",
+      "description_html": "<A HREF=\"https://asia.nikkei.com/business/markets/taiwan-stocks-in-steepest-ever-fall-south-korea-halts-trading-amid-ai-rout\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261106/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261106/p2#a261106p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Jada Nagumo / <A HREF=\"https://asia.nikkei.com/\">Nikkei Asia</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://asia.nikkei.com/business/markets/taiwan-stocks-in-steepest-ever-fall-south-korea-halts-trading-amid-ai-rout\">Asian tech stocks plunge amid fears US Democrats may delay data centers; Taiwan's Taiex sees a record intraday point drop, Kospi falls 8.7%, and Nikkei 6.7%</A></B></SPAN>&nbsp; &mdash;&nbsp; TOKYO &mdash; Asian stock markets tied to the artificial intelligence boom plummeted on Friday morning following a tech sell-off &hellip; </P>",
+      "published_at": "2026-11-06T05:40:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261106/p2",
+      "direct_source_url": "https://asia.nikkei.com/business/markets/taiwan-stocks-in-steepest-ever-fall-south-korea-halts-trading-amid-ai-rout",
+      "publisher": "Jada Nagumo/Nikkei Asia",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.721
+    },
+    {
+      "title": "Potential Sciences, an AI startup building large-scale chemical data sets, secured backing from the UK's Sovereign AI Fund, as part of an eight-figure raise (Joel Khalili/Wired)",
+      "url": "https://www.wired.com/story/finding-new-drugs-is-laborious-this-ai-startup-is-skipping-the-lab-work/",
+      "summary": "Joel Khalili / Wired : Potential Sciences, an AI startup building large-scale chemical data sets, secured backing from the UK's Sovereign AI Fund, as part of an eight-figure raise &mdash; Potential Sciences, a startup backed by the UK government, is betting that training AI models on computer-generated biochemical data &hellip;",
+      "description_html": "<A HREF=\"https://www.wired.com/story/finding-new-drugs-is-laborious-this-ai-startup-is-skipping-the-lab-work/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261106/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261106/p1#a261106p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Joel Khalili / <A HREF=\"http://www.wired.com/\">Wired</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wired.com/story/finding-new-drugs-is-laborious-this-ai-startup-is-skipping-the-lab-work/\">Potential Sciences, an AI startup building large-scale chemical data sets, secured backing from the UK's Sovereign AI Fund, as part of an eight-figure raise</A></B></SPAN>&nbsp; &mdash;&nbsp; Potential Sciences, a startup backed by the UK government, is betting that training AI models on computer-generated biochemical data &hellip; </P>",
+      "published_at": "2026-11-06T05:00:13.000Z",
+      "discovery_url": "https://www.techmeme.com/261106/p1",
+      "direct_source_url": "https://www.wired.com/story/finding-new-drugs-is-laborious-this-ai-startup-is-skipping-the-lab-work/",
+      "publisher": "Joel Khalili/Wired",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.613
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "rakhim.exotext.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 7,
+      "title": "I wish tech companies knew more about me",
+      "url": "https://rakhim.exotext.com/i-wish-tech-companies-knew-more-about-me",
+      "direct_source_url": "https://rakhim.exotext.com/i-wish-tech-companies-knew-more-about-me",
+      "discovery_url": "https://news.ycombinator.com/item?id=50378942",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50378942",
+      "summary": "",
+      "published_at": "2026-11-05T13:40:52.000Z",
+      "engagement": {
+        "score": 405,
+        "comments": 344
+      },
+      "collection_mode": "api",
+      "score": 7.565
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "naut.ca",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 10,
+      "title": "The Hackintosh Reborn",
+      "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/",
+      "direct_source_url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50383057",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50383057",
+      "summary": "",
+      "published_at": "2026-11-05T19:08:22.000Z",
+      "engagement": {
+        "score": 305,
+        "comments": 165
+      },
+      "collection_mode": "api",
+      "score": 7.552
+    },
+    {
+      "title": "Google rolls out Gemini Omni 1.2 Flash, which creates clips up to 15 seconds, vs. 10 seconds with Omni 1.1, has better reference adherence, and costs 30% less (Matthias Bastian/The Decoder)",
+      "url": "https://the-decoder.com/googles-gemini-omni-1-2-flash-stretches-ai-video-clips-to-15-seconds-and-cuts-pricing-by-30-percent/",
+      "summary": "Matthias Bastian / The Decoder : Google rolls out Gemini Omni 1.2 Flash, which creates clips up to 15 seconds, vs. 10 seconds with Omni 1.1, has better reference adherence, and costs 30% less &mdash; Ask about this article... Google says Gemini Omni 1.2 Flash is rolling out through the Gemini API, Google AI Studio &hellip;",
+      "description_html": "<A HREF=\"https://the-decoder.com/googles-gemini-omni-1-2-flash-stretches-ai-video-clips-to-15-seconds-and-cuts-pricing-by-30-percent/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261105/i70.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261105/p70#a261105p70\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Matthias Bastian / <A HREF=\"https://the-decoder.com/\">The Decoder</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://the-decoder.com/googles-gemini-omni-1-2-flash-stretches-ai-video-clips-to-15-seconds-and-cuts-pricing-by-30-percent/\">Google rolls out Gemini Omni 1.2 Flash, which creates clips up to 15 seconds, vs. 10 seconds with Omni 1.1, has better reference adherence, and costs 30% less</A></B></SPAN>&nbsp; &mdash;&nbsp; Ask about this article...&nbsp; Google says Gemini Omni 1.2 Flash is rolling out through the Gemini API, Google AI Studio &hellip; </P>",
+      "published_at": "2026-11-06T04:05:09.000Z",
+      "discovery_url": "https://www.techmeme.com/261105/p70",
+      "direct_source_url": "https://the-decoder.com/googles-gemini-omni-1-2-flash-stretches-ai-video-clips-to-15-seconds-and-cuts-pricing-by-30-percent/",
+      "publisher": "Matthias Bastian/The Decoder",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.495
+    },
+    {
+      "title": "Perplexity rolls out Teammates, an always-on AI agent system that integrates with Computer to handle multiple roles and execute large-scale tasks simultaneously (Emma Roth/The Verge)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
+      "summary": "Emma Roth / The Verge : Perplexity rolls out Teammates, an always-on AI agent system that integrates with Computer to handle multiple roles and execute large-scale tasks simultaneously &mdash; Like OpenAI's Dots and Claude Duet, Perplexity's Teammates can perform an array of tasks while running 24/7.",
+      "description_html": "<A HREF=\"https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261105/i69.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261105/p69#a261105p69\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Emma Roth / <A HREF=\"https://www.theverge.com/\">The Verge</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work\">Perplexity rolls out Teammates, an always-on AI agent system that integrates with Computer to handle multiple roles and execute large-scale tasks simultaneously</A></B></SPAN>&nbsp; &mdash;&nbsp; Like OpenAI's Dots and Claude Duet, Perplexity's Teammates can perform an array of tasks while running 24/7.</P>",
+      "published_at": "2026-11-06T03:15:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261105/p69",
+      "direct_source_url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
+      "publisher": "Emma Roth/The Verge",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.38
+    },
+    {
+      "title": "Sources: UK neobank Monzo is exploring a new fundraising round valuing it at ~£7.5B after failing to be acquired by Nu Holdings and struggling to sell a stake (Financial Times)",
+      "url": "https://www.ft.com/content/6553ec40-00a8-4832-8ca5-c528b9da224a",
+      "summary": "Financial Times : Sources: UK neobank Monzo is exploring a new fundraising round valuing it at ~&pound;7.5B after failing to be acquired by Nu Holdings and struggling to sell a stake &mdash; Lender had shifted focus to talks with buyout groups after failing to clinch a &pound;10bn takeover by Brazilian fintech Nubank",
+      "description_html": "<A HREF=\"https://www.ft.com/content/6553ec40-00a8-4832-8ca5-c528b9da224a\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261105/i68.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261105/p68#a261105p68\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/6553ec40-00a8-4832-8ca5-c528b9da224a\">Sources: UK neobank Monzo is exploring a new fundraising round valuing it at ~&pound;7.5B after failing to be acquired by Nu Holdings and struggling to sell a stake</A></B></SPAN>&nbsp; &mdash;&nbsp; Lender had shifted focus to talks with buyout groups after failing to clinch a &pound;10bn takeover by Brazilian fintech Nubank</P>",
+      "published_at": "2026-11-06T02:25:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261105/p68",
+      "direct_source_url": "https://www.ft.com/content/6553ec40-00a8-4832-8ca5-c528b9da224a",
+      "publisher": "Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.266
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing",
+      "url": "https://huggingface.co/papers/2611.06741",
+      "direct_source_url": "https://huggingface.co/papers/2611.06741",
+      "discovery_url": "https://huggingface.co/papers/2611.06741",
+      "link_quality": "original",
+      "summary": "Strong single-turn editing performance does not guarantee reliable multi-turn interaction: as edited outputs are repeatedly reused, small unintended changes can accumulate into severe visual drift. This long-term drift is often mitigated through training on multi-turn data or cross-turn rollouts, potentially altering pretrained priors, or through specialized inference-time mechanisms that are difficult to scale to foundation models. We introduce TailSteer, a final-stage training framework that improves multi-turn robustness while retaining the generative and editing capabilities acquired through earlier training. TailSteer follows a simple principle: keep early denoising dynamics close to those of the base model and concentrate preservation corrections near the trajectory tail, where fine-grained deviations can be suppressed. These corrections are learned from the editor's own on-policy denoising rollouts, using unchanged source content as a preservation reference without requiring curated ground-truth editing pairs. Experiments across the FLUX, SenseNova, and Qwen families show that TailSteer substantially reduces cumulative drift over 15-20 editing turns while largely preserving",
+      "published_at": "2026-11-03T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 27
+      },
+      "collection_mode": "api",
+      "score": 6.624
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "EvoMemState: Evolving Memory State for Personal Agents",
+      "url": "https://huggingface.co/papers/2611.03743",
+      "direct_source_url": "https://huggingface.co/papers/2611.03743",
+      "discovery_url": "https://huggingface.co/papers/2611.03743",
+      "link_quality": "original",
+      "summary": "Long-term memory enables large language model (LLM) agents to provide continuous personalized assistance by retaining user information across interactions. Existing systems support this process through fact extraction, organization, updating, and retrieval, but largely maintain memories as independent facts. This fact-centric paradigm may overlook how new facts update, constrain, or conflict with earlier ones, while leaving their applicability, role, and priority for the current request implicit. In this paper, we introduce EvoMemState, a state-centric framework that augments persistent facts with two complementary states: Relational States that capture how facts remain valid and relate to one another as memory evolves, and a Reasoning State that determines how these facts should be applied to the current request. Specifically, EvoMemState consists of three key components: (i) Ontology-Guided Memory State Induction extracts Persistent Facts and constructs Relational States that maintain their validity, scope, and evolving relations. (ii) RL-Based State Evolution internalizes memory-use experience into a policy through reinforcement learning to generate a request-specific Reasoning",
+      "published_at": "2026-11-01T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 11
+      },
+      "collection_mode": "api",
+      "score": 6.28
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 8,
+      "title": "VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding",
+      "url": "https://huggingface.co/papers/2611.08449",
+      "direct_source_url": "https://huggingface.co/papers/2611.08449",
+      "discovery_url": "https://huggingface.co/papers/2611.08449",
+      "link_quality": "original",
+      "summary": "Models for physical AI tasks, such as robotics and autonomous driving, need not reason solely in language. They can use visual plans--points, bounding boxes, and trajectories--to represent spatial goals and anticipate motion. However, autoregressive vision-language models generate these plans one coordinate token at a time, making richer predictions increasingly costly. We introduce VFlash, a method for fast, accurate visual planning through Flash Primitive Decoding. VFlash exploits the known structure of visual primitives to predict their coordinates jointly, using a lightweight drafter that generates an entire primitive in one forward pass. The layout adapts to the primitive's type, dimensionality, and length, supporting compact boxes and long, variable-length trajectories. Crucially, spatial accuracy need not require reproducing an autoregressive model's exact token sequence. VFlash therefore trains on annotated primitives and directly accepts structurally valid predictions without target-token agreement. Across the evaluated 2D and 3D robot trajectory tasks, VFlash consistently reduces prediction errors relative to autoregressive decoding. Preliminary single-rollout measurement",
+      "published_at": "2026-11-04T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 54
+      },
+      "collection_mode": "api",
+      "score": 6.14
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "SLA: Scaling Spatial-Language-Action Model via Continual Pre-training",
+      "url": "https://huggingface.co/papers/2611.08373",
+      "direct_source_url": "https://huggingface.co/papers/2611.08373",
+      "discovery_url": "https://huggingface.co/papers/2611.08373",
+      "link_quality": "original",
+      "summary": "Reliable robotic manipulation requires both semantic understanding and precise control in three-dimensional space. However, vision-language-action (VLA) foundations largely inherit visual representations from 2D vision-language pre-training, while spatial supervision is often introduced only during task-specific adaptation. Developing spatial understanding as a transferable foundation-model capability therefore calls for learning from broader robot experience. We present SLA, a Spatial-Language-Action Model that scales implicit spatial alignment to continual pre-training and maintains it during downstream post-training. Initialized from a pretrained pi05 policy, SLA jointly optimizes action prediction and alignment between intermediate visual embeddings and spatial representations from a frozen 3D perception model. We curate and unify heterogeneous robot datasets to support spatial learning across diverse embodiments, tasks, and scenes. To accommodate this diversity, we introduce feature-dependent gates that adaptively aggregate visual embeddings from multiple VLA layers for spatial supervision. The teacher further exploits partially available depth and camera calibration alongside",
+      "published_at": "2026-11-04T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 9
+      },
+      "collection_mode": "api",
+      "score": 6.08
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Decode Before You Hear: Speculative Listening for Chunk-Interleaved Full-Duplex Speech Language Models",
+      "url": "https://huggingface.co/papers/2611.06982",
+      "direct_source_url": "https://huggingface.co/papers/2611.06982",
+      "discovery_url": "https://huggingface.co/papers/2611.06982",
+      "link_quality": "original",
+      "summary": "Chunk-interleaved full-duplex speech language models listen and speak in fixed time chunks, and each chunk must be processed before the next one arrives. Their workload is asymmetric across chunks: listen chunks leave compute idle while awaiting audio, and speak and tool-call chunks require serial generation, which delays responses and tool calls. Using the idle compute for the next chunk requires decoding it before its audio arrives, under an assumed input. Taking silence as the assumed input and comparing the output with the output under real audio on four models, we observe two properties. First, the next audio chunk does not change the output in 95.3% of chunks. Second, 88% of changes begin at the first output token. Building on these properties, we propose Speculative Listening, a training-free, lossless framework for input-time self-speculative decoding. During idle time, the model drafts the next chunk under silence and, for changes at the first token, a second branch from the runner-up first token. It keeps all drafts in a cross-chunk hypothesis pool and verifies them when the audio arrives. On our eight-task benchmark TickTock-Bench, Speculative Listening speeds up speak c",
+      "published_at": "2026-11-03T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 5
+      },
+      "collection_mode": "api",
+      "score": 6.049
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 9,
+      "title": "Harness-S: Learning from Sibling Harnesses for Generalizable Agent Training",
+      "url": "https://huggingface.co/papers/2611.04277",
+      "direct_source_url": "https://huggingface.co/papers/2611.04277",
+      "discovery_url": "https://huggingface.co/papers/2611.04277",
+      "link_quality": "original",
+      "summary": "Harness evolution from a common base exhibits Locality, Complementarity, and Nonstationarity: variants repair different failures, and their utility changes as the policy learns. Rather than seeking a universally superior harness, we introduce Harness-S to selectively rescue failures of a base execution system through sibling harnesses and transfer the resulting capabilities into a single policy that remains effective under the original harness. Directional Harness Evolution develops specialized sibling harnesses along distinct repair directions, forming a reusable Sibling Harness Pool that remains fixed during policy training. Complementary Harness Rescue Training invokes this pool only when all initial attempts under the base harness fail. The same policy generates fresh rollouts under selected auxiliary harnesses, and these trajectories replace the failed group for reinforcement learning. An Adaptive Harness Router selects the Top-k variants using Harness Behavior Profiles and voting across multiple LLMs. Policy-aware profile re-anchoring refreshes this evidence as the policy learns. Across AppWorld, SWE-Gym, and DBBench, the trained policy substantially outperforms policy-only t",
+      "published_at": "2026-11-02T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 32
+      },
+      "collection_mode": "api",
+      "score": 6.019
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "From Autonomous Agents to Cognitive Symbionts: Toward AI-Augmented Human Intelligence",
+      "url": "https://huggingface.co/papers/2611.05376",
+      "direct_source_url": "https://huggingface.co/papers/2611.05376",
+      "discovery_url": "https://huggingface.co/papers/2611.05376",
+      "link_quality": "original",
+      "summary": "For a decade, progress in artificial intelligence has been measured by how much a machine can do on its own. Large foundation models now write code and run multistep tasks, and personal agents act on a person's behalf. Yet people still forget what they once knew, miss what they are not looking at, fail to find the right words, and face hard choices without the benefit of their own history, because the machine that could help stands outside the situation. As AI moves into the physical world, attention has settled on one kind of intelligent individual, the embodied robot; we argue that the era of Physical AI holds a second kind of equal importance, the person augmented by AI. Alongside artificial general intelligence, which asks how intelligent a machine can be, stands AI-augmented human intelligence (AHI), which asks how much intelligence a machine can enable in a particular person. Realizing it calls for a new kind of system, a cognitive symbiont: a lifelong, embedded, real-time, private, low-friction, and proactive companion that senses what the person senses through external devices, keeps their context across years, models their situation and their mind, takes part in their thin",
+      "published_at": "2026-11-03T13:59:52.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.971
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 11,
+      "title": "WeLM-Image: A Unified Image Generation Model towards Visual Intelligence",
+      "url": "https://huggingface.co/papers/2611.07392",
+      "direct_source_url": "https://huggingface.co/papers/2611.07392",
+      "discovery_url": "https://huggingface.co/papers/2611.07392",
+      "link_quality": "original",
+      "summary": "We present WeLM-Image, a unified image foundation model that integrates multimodal understanding into text-to-image generation, instruction-guided editing, and multi-reference synthesis. Designed for single-GPU deployment in WeChat's large-scale consumer applications, the model processes text, reference images, and target latents as one interleaved sequence. A Mixture-of-Transformers (MoT) backbone combines shared attention with independent understanding and generation parameters to limit optimization interference. Equipping each path with Mixture-of-Experts (MoE) modules provides sparse capacity, with 31.7B stored parameters and approximately 5.4B generation parameters activated per target latent token. A generation-oriented data engine combines a knowledge-grounded visual vocabulary with large-scale visual clustering to balance semantic coverage and editing tasks, while training-time evaluation guides iterative data refinement. Bilingual annotations and verified editing supervision support progressive training up to native 1.5K resolution. We optimize generation and editing separately with rubric- and checklist-based rewards, then consolidate the specialized policies through nois",
+      "published_at": "2026-11-04T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 25
+      },
+      "collection_mode": "api",
+      "score": 5.807
+    }
+  ]
+}

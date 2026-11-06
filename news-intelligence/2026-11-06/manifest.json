@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T09:00:14.875Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 391,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 263,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 465,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 264,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1727,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": false,
+  "quality_status": "blocked",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [
+    "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
+    "Overall confidence 0% is below the 78% release threshold.",
+    "1 selected story has only a homepage, profile or invalid publication link."
+  ],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-06",
+  "overall_confidence": 0,
+  "stories": [
+    {
+      "category": "lead",
+      "headline": "Blockaid: Binance hackers stole ~$2.5B, or 40% of the $6.3B haul, in a single Ethereum transaction using wallet permissions that cost just $15 to set up (Sidhartha Shukla/Bloomberg)",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "Sidhartha Shukla/Bloomberg",
+      "discovered_via": "Techmeme",
+      "source_title": "Blockaid: Binance hackers stole ~$2.5B, or 40% of the $6.3B haul, in a single Ethereum transaction using wallet permissions that cost just $15 to set up (Sidhartha Shukla/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-06/hackers-paid-15-to-drain-2-5-billion-from-binance-in-one-hit",
+      "discovery_url": "https://www.techmeme.com/261106/p5",
+      "link_quality": "original",
+      "published_at": "2026-11-06T07:25:00.000Z",
+      "discovery_score": 8.034
+    },
+    {
+      "category": "worth-knowing",
+      "headline": "sshole",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "sshhole.com",
+      "discovered_via": "Hacker News",
+      "source_title": "sshole",
+      "url": "https://sshhole.com/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50378228",
+      "link_quality": "original",
+      "published_at": "2026-11-05T12:19:02.000Z",
+      "discovery_score": 8.338
+    },
+    {
+      "category": "worth-knowing",
+      "headline": "TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "Hugging Face",
+      "discovered_via": "Hugging Face",
+      "source_title": "TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing",
+      "url": "https://huggingface.co/papers/2611.06741",
+      "discovery_url": "https://huggingface.co/papers/2611.06741",
+      "link_quality": "original",
+      "published_at": "2026-11-03T19:00:00.000Z",
+      "discovery_score": 6.624
+    }
+  ],
+  "practical_takeaway": "Do not publish this edition until verification succeeds.",
+  "watch_next": "Re-run the intelligence workflow or review the source links manually.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 066",
+      "title": "My Secret Code Studio",
+      "summary": "Turn family words, facts and jokes into personalised symbol-code puzzles with difficulty levels, hints, scores and streaks.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-066/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-066/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-06",
+    "lead_headline": "Blockaid: Binance hackers stole ~$2.5B, or 40% of the $6.3B haul, in a single Ethereum transaction using wallet permissions that cost just $15 to set up (Sidhartha Shukla/Bloomberg)",
+    "facebook_post": "Blockaid: Binance hackers stole ~$2.5B, or 40% of the $6.3B haul, in a single Ethereum transaction using wallet permissions that cost just $15 to set up (Sidhartha Shukla/Bloomberg)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Blockaid: Binance hackers stole ~$2.5B, or 40% of the $6.3B haul, in a single Ethereum transaction using wallet permissions that cost just $15 to set up (Sidhartha Shukla/Bloomberg)",
+    "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Blockaid: Binance hackers stole ~$2.5B, or 40% of the $6.3B haul, in a single Ethereum transaction using wallet permissions that cost just $15 to set up (Sidhartha Shukla/Bloomberg). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Blockaid: Binance hackers stole ~$2.5B, or 40% of the $6.3B haul, in a single Ethereum transaction using wallet permissions that cost just $15 to set up (Sidhartha Shukla/Bloomberg). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "ae8976b0a9346f2cc839284b9b64d43a6c779b5bd9d62d92188e13f9154f3861"
+}

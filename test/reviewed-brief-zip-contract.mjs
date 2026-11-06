@@ -34,6 +34,6 @@ assert.throws(()=>stage(zip({'../outside.txt':'danger'}),date,{write:false}),/Un
 assert.throws(()=>stage(zip({'review.txt':'no manifest'}),date,{write:false}),/Missing publication file/);
 assert.throws(()=>stage(zip({'news-intelligence/2026-11-06/manifest.json':'{}'}),date,{write:false}),/Missing publication file/);
 assert.throws(()=>extractZip(Buffer.from('not zip')),/ZIP/);
-const incorrect=Buffer.from(review);incorrect[35]^=1;
+const incorrect=Buffer.from(review);incorrect[40]^=1;
 assert.throws(()=>extractZip(incorrect),/ZIP|checksum/);
 console.log('ZIP upload validates review-only, edition match, missing release materials and ZIP safety.');

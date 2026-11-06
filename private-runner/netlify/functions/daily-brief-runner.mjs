@@ -41,7 +41,7 @@ async function edition(date){
  const p='news-intelligence/'+date+'/';
  const [manifest,meta,review,receipt]=await Promise.all([file(p+'manifest.json'),file(p+'newsletter-metadata.json'),file(p+'runner-review.json'),file(p+'netlify-release.json')]);
  const candidate=String(manifest?.data?.candidate_id||'');
- const ready=!!(candidate&&manifest.data.newsletter_ready_for_human_approval===true&&meta?.data?.candidate_id===candidate&&meta.data.status==='draft'&&meta.data.brevo_campaign_id);
+ const ready=!!(candidate&&manifest.data.newsletter_ready_for_human_approval===true&&meta?.data?.candidate_id===candidate&&['brevo_draft','draft'].includes(meta.data.status)&&meta.data.brevo_campaign_id);
  const edited=!!(ready&&review?.data?.date===date&&review.data.status==='verified'&&review.data.candidate_id===candidate&&review.data.brevo_draft_verified===true&&review.data.manifest_blob_sha===manifest.sha&&review.data.newsletter_blob_sha===meta.sha&&review.data.reviewed_at);
  const deployed=!!(receipt?.data?.status==='deployed'&&receipt.data.candidate_id===candidate);
  const sent=!!(meta?.data?.status==='sent'&&meta.data.sent_at);

@@ -10,7 +10,7 @@ const req=(action,method='GET',b={},cookie='',params={})=>({
  httpMethod:method,headers:headers(cookie),queryStringParameters:{action,...params},
  body:JSON.stringify(b)
 });
-let reviewed=false,dispatches=[];
+let reviewed=false,dispatches=[],campaignStatus='draft';
 const item=(data,sha)=>({sha,encoding:'base64',content:Buffer.from(JSON.stringify(data)).toString('base64')});
 globalThis.fetch=async(url,options)=>{
  const {pathname}=new URL(url);
@@ -23,7 +23,7 @@ globalThis.fetch=async(url,options)=>{
   candidate_id:candidate,newsletter_ready_for_human_approval:true,quality_status:'ready'
  },'manifest-sha'));
  if(pathname.endsWith('/newsletter-metadata.json'))return ok(item({
-  candidate_id:candidate,status:'draft',brevo_campaign_id:456
+  candidate_id:candidate,status:campaignStatus,brevo_campaign_id:456
  },'metadata-sha'));
  if(pathname.endsWith('/runner-review.json')){
   return reviewed?ok(item({date:'2026-11-06',status:'verified',candidate_id:candidate,
@@ -53,6 +53,9 @@ assert.equal(dispatches.length,1);
 reviewed=true;
 status=await handler(req('status','GET',{},cookie,{date:'2026-11-06'}));
 assert.equal(JSON.parse(status.body).state.edited,true);
+campaignStatus='brevo_draft';
+status=await handler(req('status','GET',{},cookie,{date:'2026-11-06'}));
+assert.equal(JSON.parse(status.body).state.edited,true,'Brevo workflow stores status brevo_draft');
 assert.equal((await handler(req('deploy','POST',{date:'2026-11-06'},cookie))).statusCode,202);
 assert.equal(dispatches.length,2);
 const forged={...req('deploy','POST',{date:'2026-11-06'},cookie),

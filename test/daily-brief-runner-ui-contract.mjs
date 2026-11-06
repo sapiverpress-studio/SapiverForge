@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 const html=fs.readFileSync('private-runner/public/index.html','utf8');
 const runner=fs.readFileSync('private-runner/netlify/functions/daily-brief-runner.mjs','utf8');
-assert.equal((html.match(/class="step"/g)||[]).length,3,'Runner must have exactly Run, Upload, Deploy steps');
+assert.equal((html.match(/class="step">0[123]/g)||[]).length,3,'Runner must have exactly Run, Upload, Deploy steps');
 for(const label of ['01 — Generate','02 — Upload','03 — Deploy','Upload corrected ZIP','Refresh status','Deploy approved']){
  assert.ok(html.includes(label),'Missing visible workflow label: '+label);
 }

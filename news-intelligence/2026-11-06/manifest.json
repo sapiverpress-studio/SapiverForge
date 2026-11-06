@@ -2,7 +2,7 @@
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T09:40:00Z",
+  "generated_at": "2026-11-06T14:11:45.630Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 391,
+      "elapsed_ms": 500,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,14 +23,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 263,
+      "elapsed_ms": 254,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 465,
+      "elapsed_ms": 270,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -38,7 +38,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 264,
+      "elapsed_ms": 197,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,78 +46,77 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1727,
+      "elapsed_ms": 1737,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
   "healthy_source_count": 3,
   "human_approval_required": true,
   "approved_for_automatic_distribution": false,
-  "newsletter_ready_for_human_approval": true,
-  "quality_status": "ready_with_warnings",
+  "newsletter_ready_for_human_approval": false,
+  "quality_status": "blocked",
   "quality_warnings": [
-    "Reuters and Sifted feeds unavailable during automated collection; manual recovery used primary publisher or author sources.",
-    "Binance findings are company-reported and TailSteer experiments are authors’ preprint results; independent validation is not established."
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
   ],
-  "release_blockers": [],
+  "release_blockers": [
+    "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
+    "Overall confidence 0% is below the 78% release threshold.",
+    "1 selected story has only a homepage, profile or invalid publication link."
+  ],
   "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-06",
-  "overall_confidence": 0.92,
+  "overall_confidence": 0,
   "stories": [
     {
       "category": "lead",
-      "headline": "Images 2.6 brings GIF creation, SVG export and more precise edits",
-      "confirmed_fact": "On 4 November, OpenAI announced Images 2.6 for ChatGPT, Codex and the API. It says the release adds GIF animation, SVG export and markup-guided editing through the API; its faster-generation claims are company-reported.",
-      "why_it_matters": "Artists and small businesses can test whether one image remains consistent across edits, animation and print-ready formats rather than treating a feature announcement as proof of production reliability.",
-      "interpretation": "Test one recognisable artwork through an initial image, a revision, SVG export and a short GIF. Compare the details that must remain unchanged before scaling production.",
-      "confidence": 0.98,
-      "source": "OpenAI",
-      "source_title": "Introducing Images 2.6",
-      "url": "https://openai.com/index/introducing-images-2-6/",
+      "headline": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "Eric Geller/Cybersecurity Dive",
+      "discovered_via": "Techmeme",
+      "source_title": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)",
+      "url": "https://www.cybersecuritydive.com/news/congress-cybersecurity-democrats-agenda-cisa-ai/873883/",
+      "discovery_url": "https://www.techmeme.com/261106/p11",
       "link_quality": "original",
-      "published_at": "2026-11-04T00:00:00Z"
+      "published_at": "2026-11-06T13:20:44.000Z",
+      "discovery_score": 8.065
     },
     {
-      "category": "security",
-      "headline": "Alpine warns of a configuration-specific OpenSSH authentication bypass",
-      "confirmed_fact": "Alpine Linux published a security advisory on 5 November for an OpenSSH password-authentication bypass affecting specific musl and account configurations, including systems running without PAM. Patched packages are available and sshd must be restarted after updating.",
-      "why_it_matters": "An installed patch may not protect a running server until its daemon is restarted. The issue does not apply to every Linux or OpenSSH deployment.",
-      "interpretation": "Operators of Alpine hosts running sshd should compare their configuration with the official advisory, apply the patch and verify the running service has restarted. Keep a working key-login path before disabling password authentication.",
-      "confidence": 0.98,
-      "source": "Alpine Linux",
-      "source_title": "Security advisory: openssh-server password authentication bypass",
-      "url": "https://www.alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
+      "category": "worth-knowing",
+      "headline": "sshole",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "sshhole.com",
+      "discovered_via": "Hacker News",
+      "source_title": "sshole",
+      "url": "https://sshhole.com/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50378228",
       "link_quality": "original",
-      "published_at": "2026-11-05T00:00:00Z"
+      "published_at": "2026-11-05T12:19:02.000Z",
+      "discovery_score": 8.122
     },
     {
-      "category": "security",
-      "headline": "Binance reports a multibillion-dollar security incident involving delegated wallet permissions",
-      "confirmed_fact": "Binance states that its 29 October security incident affected roughly US$6.34 billion in digital assets, with approximately US$2.85 billion frozen or intercepted by its 3 November update. The company describes compromised wallet-signing services and Ethereum EIP-7702 delegation as part of the attack.",
-      "why_it_matters": "Delegated blockchain permissions can continue operating outside a normal withdrawal interface, so stopping withdrawals alone may not cancel authorisations previously given on-chain.",
-      "interpretation": "Signing controls and delegation revocation need separate incident-response procedures. The amounts, investigation account and response results remain Binance statements pending independent review.",
-      "confidence": 0.95,
-      "source": "Binance",
-      "source_title": "29 October 2026 Binance Security Incident: Initial Findings and Response Update",
-      "url": "https://www.binance.com/en-NG/blog/community/3229153443759566763",
+      "category": "worth-knowing",
+      "headline": "Decoupled Predictive Decision Making: A Shared Conditional Predictor for Agents",
+      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
+      "why_it_matters": "Human review required before any interpretation or distribution.",
+      "interpretation": "No Sapiver Forge interpretation generated.",
+      "confidence": 0,
+      "source": "Hugging Face",
+      "discovered_via": "Hugging Face",
+      "source_title": "Decoupled Predictive Decision Making: A Shared Conditional Predictor for Agents",
+      "url": "https://huggingface.co/papers/2611.02075",
+      "discovery_url": "https://huggingface.co/papers/2611.02075",
       "link_quality": "original",
-      "published_at": "2026-11-03T00:00:00Z"
-    },
-    {
-      "category": "research",
-      "headline": "TailSteer researchers report less drift over repeated image edits",
-      "confirmed_fact": "In a 4 November arXiv preprint, TailSteer researchers describe concentrating preservation corrections late in the denoising trajectory. They report lower drift across 15–20 editing turns in experiments with FLUX, SenseNova and Qwen model families.",
-      "why_it_matters": "Repeated image editing can alter details that the user intended to keep, affecting character sets, product imagery and consistent visual identities.",
-      "interpretation": "Treat these results as authors’ reported research, not independently replicated performance. A practical comparison is to preserve the same character, background and text across ten sequential edits.",
-      "confidence": 0.91,
-      "source": "arXiv (author preprint)",
-      "source_title": "TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing",
-      "url": "https://arxiv.org/abs/2611.06741",
-      "link_quality": "original",
-      "published_at": "2026-11-04T16:23:24Z"
+      "published_at": "2026-10-31T20:00:00.000Z",
+      "discovery_score": 6.3
     }
   ],
-  "practical_takeaway": "Choose the test that matches your work: compare the same visual across repeated image edits; check whether an Alpine SSH service is exposed and restarted after patching; or review how delegated permissions can be revoked during an incident.",
-  "watch_next": "Watch for independent Images 2.6 and TailSteer benchmarks, Alpine security updates and further independently reviewed findings about the Binance incident.",
+  "practical_takeaway": "Do not publish this edition until verification succeeds.",
+  "watch_next": "Re-run the intelligence workflow or review the source links manually.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -135,13 +134,12 @@
   },
   "social": {
     "date": "2026-11-06",
-    "lead_headline": "Images 2.6 brings GIF creation, SVG export and more precise edits",
-    "facebook_post": "Images 2.6 brings GIF creation, SVG export and more precise edits\n\nArtists and small businesses can test whether one image remains consistent across edits, animation and print-ready formats rather than treating a feature announcement as proof of production reliability.\n\nToday's Sapiver Forge Daily Brief also covers Alpine/OpenSSH, delegated wallet permissions and TailSteer research.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Images 2.6 brings GIF creation, SVG export and more precise edits",
-    "pinterest_description": "Artists and small businesses can test whether one image remains consistent across edits, animation and print-ready formats rather than treating a feature announcement as proof of production reliability. Read the source-checked edition: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Images 2.6 adds new creative formats. We look at what is confirmed and what still needs testing. #SapiverForge #CreativeAI #ImageEditing",
-    "spoken_script": "OpenAI announced Images 2.6, including GIF creation, SVG export and more editing controls. Those features are company-announced. Test character consistency across several revisions before using them in a repeatable design workflow. Read the Sapiver Forge Daily Brief."
+    "lead_headline": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)",
+    "facebook_post": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)",
+    "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
   },
-  "editorial_revision": "2026-11-06-manual-recovery-1",
-  "candidate_id": "d9ef6981025766fff88ea90533e3c5506d7cdb7f54cfb47906f4908bb4431bb4"
+  "candidate_id": "4c2e7c9041988d39b29100d6e65658dfaf04bae574ed7336884433ccacf270bd"
 }

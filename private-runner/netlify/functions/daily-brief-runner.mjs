@@ -4,6 +4,7 @@ const repo='sapiverpress-studio/SapiverForge';
 const root='https://api.github.com/repos/'+repo;
 const generation='daily-news-intelligence.yml';
 const publishing='release-daily-newsletter.yml';
+const importer='import-reviewed-daily-brief-zip.yml';
 const name='sapiver_daily_runner';
 const json=(statusCode,data,headers={})=>({statusCode,headers:{'Content-Type':'application/json','Cache-Control':'no-store, private','X-Content-Type-Options':'nosniff',...headers},body:JSON.stringify(data)});
 const password=()=>String(process.env.DAILY_RUNNER_PASSWORD||'');
@@ -13,7 +14,7 @@ const signature=v=>crypto.createHmac('sha256','sapiver-runner:'+password()).upda
 const dateToday=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 function validDate(s){return /^\d{4}-\d{2}-\d{2}$/.test(s)&&new Date(s+'T12:00:00Z').toISOString().slice(0,10)===s;}
 function originOK(e){const h=e.headers||{};return !!(h.origin&&h.host&&h.origin==='https://'+h.host);}
-function body(e){if(!e.body||e.body.length>4096)return {};try{return JSON.parse(e.body);}catch{return {};}}
+function body(e,limit=4096){if(!e.body||e.body.length>limit)return {};try{return JSON.parse(e.body);}catch{return {};}}
 function authorised(e){
  if(password().length<12)return false;
  const header=String(e.headers?.cookie||'');
@@ -82,10 +83,27 @@ export const handler=async event=>{
   }
   if(!authorised(event))return json(401,{error:'Sign in required'});
   if(!token())return json(503,{error:'GitHub token setup required'});
-  const b=method==='POST'?body(event):{};
+  const b=method==='POST'?body(event,action==='upload'?60000:4096):{};
   const date=String((method==='POST'?b.date:event.queryStringParameters?.date)||dateToday());
   if(!validDate(date))return json(400,{error:'Invalid edition date'});
   if(method==='POST'&&!originOK(event))return json(403,{error:'Invalid request origin'});
+  if(action==='upload'&&method==='POST'){
+   const raw=String(b.zip_base64||''),filename=String(b.filename||'');
+   if(!/^[a-zA-Z0-9._-]{1,120}\.zip$/i.test(filename))return json(400,{error:'Select a ZIP file'});
+   if(!/^[a-zA-Z0-9+/]+={0,2}$/.test(raw)||raw.length>55000)return json(413,{error:'Review ZIP exceeds 40 KB; this initial uploader supports editorial ZIPs only'});
+   const bytes=Buffer.from(raw,'base64');
+   if(bytes.length<22||bytes.length>40000||bytes.toString('base64')!==raw)return json(400,{error:'Invalid or oversized ZIP'});
+   if(bytes.subarray(0,4).toString('hex')!=='504b0304')return json(400,{error:'File is not a ZIP'});
+   const sha=crypto.createHash('sha256').update(bytes).digest('hex');
+   if(sha!==b.sha256)return json(400,{error:'ZIP checksum mismatch'});
+   const existing=await edition(date);
+   if(existing.deployed||existing.sent)return json(409,{error:'This edition has already been published; refusing to overwrite'});
+   const since=new Date().toISOString();
+   await gh('/actions/workflows/'+importer+'/dispatches','POST',{ref:'main',inputs:{
+    edition_date:date,upload_sha256:sha,zip_base64:raw
+   }});
+   return json(202,{date,since,sha256:sha,message:'ZIP accepted for validation. The publishing button stays locked until complete release files and Brevo draft are verified.'});
+  }
   if(action==='start'&&method==='POST'){
    const since=new Date().toISOString();
    await gh('/actions/workflows/'+generation+'/dispatches','POST',{ref:'main',inputs:{edition_date:date}});
@@ -94,8 +112,9 @@ export const handler=async event=>{
   if(action==='status'&&method==='GET'){
    const since=String(event.queryStringParameters?.since||'');
    const releaseSince=String(event.queryStringParameters?.release_since||'');
-   const [state,daily,release]=await Promise.all([edition(date),run(generation,since),run(publishing,releaseSince)]);
-   return json(200,{date,state,daily,release,artifact:await artifact(daily,date)});
+   const uploadSince=String(event.queryStringParameters?.upload_since||'');
+   const [state,daily,release,upload,receipt]=await Promise.all([edition(date),run(generation,since),run(publishing,releaseSince),run(importer,uploadSince),file('news-intelligence/'+date+'/zip-upload-status.json')]);
+   return json(200,{date,state,daily,release,upload,upload_receipt:receipt?.data||null,artifact:await artifact(daily,date)});
   }
   if(action==='download'&&method==='GET'){
    const daily=await run(generation,String(event.queryStringParameters?.since||''));

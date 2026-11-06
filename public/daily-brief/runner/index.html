@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#0d1927">
+<title>Sapiver Daily Intelligence Runner</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#0d1825;color:#e8f1fa}
+*{box-sizing:border-box}body{margin:0}main{max-width:670px;margin:0 auto;padding:25px 17px 65px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 24px}
+h1{font-size:1.45rem;margin:0;letter-spacing:-.025em}h2{font-size:1.05rem;margin:4px 0 8px}
+p{margin:8px 0 0;color:#bacbd9;line-height:1.45}.small{font-size:.82rem;color:#a8bcca}
+.card{background:#17283b;border:1px solid #3b536c;border-radius:17px;padding:19px;margin:14px 0}
+.step{font-size:.7rem;font-weight:750;letter-spacing:.11em;color:#accbe5;text-transform:uppercase}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pill{border:1px solid #66839e;border-radius:999px;padding:5px 9px;font-size:.73rem;white-space:nowrap;color:#cee3f5}
+label{display:block;margin:14px 0 7px;font-weight:650}input{width:100%;height:47px;border-radius:10px;border:1px solid #526d85;background:#0c1825;color:white;font-size:1rem;padding:0 12px}
+button{border-radius:10px;min-height:45px;background:#253a50;border:1px solid #5b7893;color:white;padding:9px 16px;font-weight:700;cursor:pointer;font-size:.95rem}
+button.primary{background:#9ccdf1;color:#0b1c29;border-color:#9ccdf1}
+button:disabled{opacity:.38;cursor:not-allowed}button.full{width:100%;margin-top:15px}
+.status{font-size:.9rem;color:#cee3ef;margin:11px 0 0;min-height:18px}
+#notice{border-radius:10px;padding:13px;border:1px solid #708ba1;margin-bottom:14px;background:#1a2d40;white-space:pre-wrap;font-size:.91rem}
+#notice.good{border-color:#489c77;color:#b4f2cc}#notice.error{border-color:#aa6d6d;color:#ffd0d0}
+[hidden]{display:none!important}footer{font-size:.77rem;color:#94aabe;margin-top:28px;line-height:1.5}
+</style></head><body><main>
+<header><div><h1>Sapiver Daily Intelligence</h1><p class="small">Private workflow runner</p></div><button id="logout" hidden>Sign out</button></header>
+<div id="notice" role="status" hidden></div>
+<section id="login" class="card"><p class="step">Private access</p><h2>Sign in</h2>
+<form id="loginForm"><label for="password">Password</label><input id="password" type="password" minlength="16" autocomplete="current-password" required>
+<button class="primary full" type="submit">Sign in</button></form>
+<p class="small">Workflow controls are unavailable until the password and GitHub connection are configured.</p></section>
+<div id="dashboard" hidden>
+<section class="card"><div class="top"><h2>Daily brief edition</h2><span class="pill">Europe/London</span></div><label for="edition">Date</label><input type="date" id="edition"></section>
+<section class="card"><p class="step">01 — Generate</p><div class="top"><h2>Run workflow</h2><span class="pill" id="generateTag">Not started</span></div>
+<p>Uses the existing GitHub Actions generator and prepares the ZIP for review.</p>
+<button class="primary full" id="run">Run workflow</button><p class="status" id="generateStatus"></p>
+<button class="full" id="download" disabled>Download ZIP</button>
+<p class="small">The download will be attempted automatically when ready. If your phone blocks it, press Download ZIP. Attach the ZIP in our chat for editing.</p></section>
+<section class="card"><p class="step">02 — Edit</p><div class="top"><h2>Daily brief edited</h2><span class="pill" id="reviewTag">Awaiting review</span></div>
+<p id="reviewStatus" class="status">Repository and Brevo draft must both be verified.</p>
+<button class="full" id="refresh">Refresh status</button></section>
+<section class="card"><p class="step">03 — Deploy</p><div class="top"><h2>Deploy approved</h2><span class="pill" id="deployTag">Locked</span></div>
+<p>One approval runs the existing website release, Brevo send and approved Comic handoff. No second Comic deploy required.</p>
+<button class="primary full" id="deploy" disabled>Deploy approved (includes Comic)</button>
+<p class="status" id="deployStatus"></p></section></div>
+<footer>Generated content never publishes automatically. The final button unlocks only after the exact edition and Brevo draft are verified.</footer>
+</main><script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const base='/.netlify/functions/daily-brief-runner';
+const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+$('edition').value=today;
+let start='',releaseStart='',poll=null,busy=false,downloaded=false;
+const key='sapiver-daily-runner';
+try{const saved=JSON.parse(localStorage.getItem(key)||'{}');if(saved.date===today){start=saved.start||'';releaseStart=saved.releaseStart||'';}}catch{}
+function save(){try{localStorage.setItem(key,JSON.stringify({date:$('edition').value,start,releaseStart}));}catch{}}
+function message(s,kind){$('notice').hidden=!s;$('notice').textContent=s||'';$('notice').className=kind||'';}
+function show(logged){$('dashboard').hidden=!logged;$('login').hidden=logged;$('logout').hidden=!logged;}
+async function request(action,method='GET',body={},query={}){
+ const search=new URLSearchParams({action,...query});
+ const r=await fetch(base+'?'+search.toString(),{method,credentials:'same-origin',cache:'no-store',
+ headers:method==='POST'?{'Content-Type':'application/json'}:{},
+ ...(method==='POST'?{body:JSON.stringify(body)}:{})});
+ let data={};try{data=await r.json();}catch{}
+ if(!r.ok){const e=new Error(data.error||'Request failed');e.code=r.status;throw e;}
+ return data;
+}
+function zip(){
+ const a=document.createElement('a');
+ a.href=base+'?'+new URLSearchParams({action:'download',date:$('edition').value,since:start});
+ a.download='sapiver-daily-intelligence.zip';document.body.append(a);a.click();a.remove();
+}
+async function refresh(){
+ if(busy)return;
+ busy=true;
+ try{
+  const data=await request('status','GET',{}, {date:$('edition').value,since:start,release_since:releaseStart});
+  show(true);
+  const run=data.daily,release=data.release,state=data.state;
+  $('generateTag').textContent=run?(run.status==='completed'?(run.conclusion||'Complete'):'Running'):'Not started';
+  $('generateStatus').textContent=run?('Run #'+run.number+': '+run.status+(run.conclusion?' / '+run.conclusion:'')):(start?'Waiting for run to appear…':'');
+  $('download').disabled=!data.artifact;
+  if(data.artifact&&!downloaded){downloaded=true;zip();message('Review ZIP ready — attach it here for corrections.','good');}
+  $('reviewTag').textContent=state.edited?'Edited':state.blocked?'Blocked':state.sent&&state.deployed?'Published':'Awaiting review';
+  $('reviewStatus').textContent=state.message;
+  $('deploy').disabled=!state.edited||!!releaseStart;
+  $('deployTag').textContent=release?(release.status==='completed'?(release.conclusion||'Complete'):'Publishing'):(state.deployed&&state.sent?'Released':releaseStart?'Queued':'Locked');
+  $('deployStatus').textContent=release?'Release #'+release.number+': '+release.status+(release.conclusion?' / '+release.conclusion:''):(releaseStart?'Waiting for release…':'');
+  if(state.edited&&!releaseStart)message('Daily brief edited. Deploy approved is now available.','good');
+  if(release&&release.status==='completed')message(release.conclusion==='success'?'Release workflow completed. Comic channel receipts must still be checked.':'Release did not complete successfully; inspect its workflow result.',release.conclusion==='success'?'good':'error');
+  clearTimeout(poll);
+  if((start&&(!run||run.status!=='completed'))||(releaseStart&&(!release||release.status!=='completed')))poll=setTimeout(refresh,8000);
+ }catch(e){if(e.code===401)show(false);message(e.message,'error');clearTimeout(poll);
+ if(e.code!==401&&(start||releaseStart))poll=setTimeout(refresh,14000);}
+ finally{busy=false;}
+}
+$('loginForm').addEventListener('submit',async e=>{
+ e.preventDefault();try{await request('login','POST',{password:$('password').value});$('password').value='';show(true);message('','');await refresh();}catch(e){message(e.message,'error');}
+});
+$('logout').addEventListener('click',async()=>{try{await request('logout','POST',{});}catch{}clearTimeout(poll);show(false);message('Signed out.');});
+$('edition').addEventListener('change',()=>{start='';releaseStart='';downloaded=false;clearTimeout(poll);save();refresh();});
+$('run').addEventListener('click',async()=>{
+ $('run').disabled=true;
+ try{const d=await request('start','POST',{date:$('edition').value});start=d.since;releaseStart='';downloaded=false;save();message('Workflow requested. Checking for ZIP…');await refresh();}
+ catch(e){message(e.message,'error');}finally{$('run').disabled=false;}
+});
+$('download').addEventListener('click',zip);
+$('refresh').addEventListener('click',refresh);
+$('deploy').addEventListener('click',async()=>{
+ if(!confirm('Publish the approved edition, send the Brevo campaign and dispatch Comic?'))return;
+ $('deploy').disabled=true;
+ try{const d=await request('deploy','POST',{date:$('edition').value});releaseStart=d.since;save();message('Approved release queued.','good');await refresh();}
+ catch(e){message(e.message,'error');$('deploy').disabled=false;}
+});
+refresh();
+})();
+</script></body></html>

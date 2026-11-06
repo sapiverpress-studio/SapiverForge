@@ -31,3 +31,20 @@ Netlify visitor access is currently set to SSO/team login for every private runn
 - The public-suite cleanup is gated to the **single initial relocation commit**. It uses the exact previously published public-site snapshot, minus runner files/function. Future runner deploys cannot redeploy the public website.
 - No release workflow runs during runner installation or relocation.
 - A workflow dispatch acknowledgment is not confirmation of a completed release. Individual Comic channel receipts remain separately verifiable.
+
+
+## Corrected ZIP upload and publication source
+
+The private runner offers **Upload corrected ZIP** immediately after the original GitHub ZIP download. This dispatches `.github/workflows/import-reviewed-daily-brief-zip.yml` through the existing Actions-only token, without granting Netlify write access to GitHub Contents. The upload function rejects files over 40 KB, non-ZIP files and mismatched SHA-256 values. The Actions importer checks the ZIP directory, rejects traversal paths, symlinks, duplicate files, invalid checksums and oversized decompressed entries.
+
+**Two accepted editorial package types:**
+
+- **Review-only ZIP**, including `corrected-daily-brief.md`, `corrected-newsletter-preview.html` and `verification-report.json` with `editorial_status=source_checked_draft_not_publication_ready`. It is recorded under the edition's `reviewed-upload/` directory. The publishing button stays locked. **The 6 November reviewed_draft ZIP is of this type.**
+- **Complete publication ZIP**, with exact dated `news-intelligence/YYYY-MM-DD/` canonical files (manifest, newsletter HTML/Markdown, social copy, metadata, source evidence and review) plus the complete dated `reports/daily-intelligence/YYYY-MM-DD/` candidate with five matching media hashes. The manifest must be internally sealed and publish-ready; uploaded metadata must be unsent and unapproved. The workflow imports the uploaded files as the source of truth, creates/updates an **unsent Brevo draft**, checks that the remote HTML matches the uploaded newsletter, creates `runner-review.json` bound to Git blob hashes and leaves the final **Deploy approved** click to the site owner.
+
+No ZIP, including a source-checked draft, can bypass the existing daily story/media requirements. No automatic email sends, website deployments or Comic handoffs occur from the import workflow.
+
+For the initial version, the ZIP is limited to **40 KB compressed**, enough for the usual editorial text bundles. Larger audio/video ZIPs are explicitly rejected and would need a separate chunked-upload/storage design.
+
+The importer places review content in the existing **public** `SapiverForge` GitHub repository, not in a private storage service. Do not upload passwords, personal data or unpublished confidential material in the ZIP.
+

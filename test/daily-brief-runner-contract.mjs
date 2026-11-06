@@ -34,6 +34,10 @@ globalThis.fetch=async(url,options)=>{
  if(pathname.endsWith('/netlify-release.json'))return new Response('Missing',{status:404});
  throw Error('Unmocked request: '+pathname);
 };
+process.env.DAILY_RUNNER_PASSWORD='ElevenChar!';
+assert.equal((await handler(req('login','POST',{password:process.env.DAILY_RUNNER_PASSWORD}))).statusCode,503);
+process.env.DAILY_RUNNER_PASSWORD='TwelveChars!';
+assert.equal(process.env.DAILY_RUNNER_PASSWORD.length,12);
 assert.equal((await handler(req('deploy','POST',{date:'2026-11-06'}))).statusCode,401);
 assert.equal((await handler(req('login','POST',{password:'wrong'}))).statusCode,401);
 const login=await handler(req('login','POST',{password:process.env.DAILY_RUNNER_PASSWORD}));

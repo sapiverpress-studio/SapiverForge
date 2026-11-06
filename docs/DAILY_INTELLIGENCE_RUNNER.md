@@ -12,7 +12,7 @@ The private site is deployed from `private-runner/public`, with only its dedicat
 ## Password and GitHub token
 
 Configure ONLY in the private Netlify project, production Functions scope:
-- `DAILY_RUNNER_PASSWORD`: choose a unique password at least 16 characters. The private login is enforced by the function, not by a password on the public suite.
+- `DAILY_RUNNER_PASSWORD`: choose a unique password at least 12 characters. The private login is enforced by the function, not by a password on the public suite.
 - `DAILY_RUNNER_GITHUB_TOKEN`: fine-grained token limited to `sapiverpress-studio/SapiverForge` with Actions read/write and Contents read-only.
 
 Netlify visitor access is currently set to SSO/team login for every private runner deployment. This is a temporary second layer; do not disable it until the private login works.

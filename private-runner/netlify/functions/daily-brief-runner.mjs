@@ -15,7 +15,7 @@ function validDate(s){return /^\d{4}-\d{2}-\d{2}$/.test(s)&&new Date(s+'T12:00:0
 function originOK(e){const h=e.headers||{};return !!(h.origin&&h.host&&h.origin==='https://'+h.host);}
 function body(e){if(!e.body||e.body.length>4096)return {};try{return JSON.parse(e.body);}catch{return {};}}
 function authorised(e){
- if(password().length<16)return false;
+ if(password().length<12)return false;
  const header=String(e.headers?.cookie||'');
  const m=header.match(/(?:^|;\s*)sapiver_daily_runner=([^;]+)/);
  if(!m)return false;
@@ -67,7 +67,7 @@ export const handler=async event=>{
  try{
   if(action==='login'&&method==='POST'){
    if(!originOK(event))return json(403,{error:'Invalid request origin'});
-   if(password().length<16)return json(503,{error:'Password setup required'});
+   if(password().length<12)return json(503,{error:'Password setup required'});
    const pass=body(event).password;
    if(typeof pass!=='string'||!equal(pass,password())){
     await new Promise(resolve=>setTimeout(resolve,650));

@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-06",
+  "editorial_status": "source_checked_draft_not_publication_ready",
+  "provider_error": "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
+  "gemini_credits_resolved": false,
+  "brevo_draft_verified": false,
+  "podcast_candidate_exists_in_original_zip": false,
+  "source_system_warning": "Reuters failed 401; Sifted failed 404; 3 of 5 feed families usable",
+  "stories": [
+    {
+      "headline": "Images 2.6 adds GIF creation, SVG export and more precise editing",
+      "source": "OpenAI product announcement",
+      "url": "https://openai.com/index/introducing-images-2-6/",
+      "source_date": "2026-11-04",
+      "scope": "Primary vendor announcement; capabilities confirmed as announced, performance improvement not independently verified."
+    },
+    {
+      "headline": "Alpine Linux warns of an OpenSSH password-authentication bypass",
+      "source": "Alpine Linux security advisory",
+      "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
+      "source_date": "2026-11-05",
+      "scope": "Primary maintainer security advisory; product-specific applicability depends on local deployment settings."
+    },
+    {
+      "headline": "Binance reports a $6.34bn security incident involving delegated wallet permissions",
+      "source": "Binance incident report",
+      "url": "https://www.binance.com/en-AU/blog/community/3229153443759566763",
+      "source_date": "2026-11-03",
+      "scope": "Primary company incident report, not an independent forensic audit."
+    },
+    {
+      "headline": "TailSteer researchers propose a way to reduce drift across repeated image edits",
+      "source": "TailSteer arXiv preprint",
+      "url": "https://arxiv.org/abs/2611.06741",
+      "source_date": "2026-11-04",
+      "scope": "Authors’ self-reported experimental findings in a preprint; no independent replication checked."
+    }
+  ],
+  "outstanding": [
+    "Gemini API billing/prepayment unresolved",
+    "No Brevo campaign draft in supplied ZIP",
+    "No validated detailed-story candidate for release",
+    "Friday podcast not supplied",
+    "Runner publication gate must remain locked"
+  ]
+}

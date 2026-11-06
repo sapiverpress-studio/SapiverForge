@@ -34,10 +34,18 @@ button:disabled{opacity:.38;cursor:not-allowed}button.full{width:100%;margin-top
 <button class="primary full" id="run">Run workflow</button><p class="status" id="generateStatus"></p>
 <button class="full" id="download" disabled>Download ZIP</button>
 <p class="small">The download will be attempted automatically when ready. If your phone blocks it, press Download ZIP. Attach the ZIP in our chat for editing.</p></section>
-<section class="card"><p class="step">02 — Edit</p><div class="top"><h2>Daily brief edited</h2><span class="pill" id="reviewTag">Awaiting review</span></div>
+<section class="card"><p class="step">02 — Replace reviewed draft</p>
+<div class="top"><h2>Upload corrected ZIP</h2><span class="pill" id="uploadTag">Not uploaded</span></div>
+<p>Upload the corrected ZIP from ChatGPT. The website checks it and imports its exact editorial files into SapiverForge. A review-only ZIP is stored for further work; it cannot unlock publication.</p>
+<label for="corrected">Corrected ZIP (maximum 40 KB)</label>
+<input id="corrected" type="file" accept=".zip,application/zip">
+<button class="primary full" id="upload" disabled>Upload corrected ZIP</button>
+<p class="status" id="uploadStatus" aria-live="polite">No replacement uploaded.</p>
+</section>
+<section class="card"><p class="step">03 — Edit</p><div class="top"><h2>Daily brief edited</h2><span class="pill" id="reviewTag">Awaiting review</span></div>
 <p id="reviewStatus" class="status">Repository and Brevo draft must both be verified.</p>
 <button class="full" id="refresh">Refresh status</button></section>
-<section class="card"><p class="step">03 — Deploy</p><div class="top"><h2>Deploy approved</h2><span class="pill" id="deployTag">Locked</span></div>
+<section class="card"><p class="step">04 — Deploy</p><div class="top"><h2>Deploy approved</h2><span class="pill" id="deployTag">Locked</span></div>
 <p>One approval runs the existing website release, Brevo send and approved Comic handoff. No second Comic deploy required.</p>
 <button class="primary full" id="deploy" disabled>Deploy approved (includes Comic)</button>
 <p class="status" id="deployStatus"></p></section></div>
@@ -49,10 +57,10 @@ const $=id=>document.getElementById(id);
 const base='/.netlify/functions/daily-brief-runner';
 const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 $('edition').value=today;
-let start='',releaseStart='',poll=null,busy=false,downloaded=false;
+let start='',releaseStart='',uploadStart='',poll=null,busy=false,downloaded=false;
 const key='sapiver-daily-runner';
-try{const saved=JSON.parse(localStorage.getItem(key)||'{}');if(saved.date===today){start=saved.start||'';releaseStart=saved.releaseStart||'';}}catch{}
-function save(){try{localStorage.setItem(key,JSON.stringify({date:$('edition').value,start,releaseStart}));}catch{}}
+try{const saved=JSON.parse(localStorage.getItem(key)||'{}');if(saved.date===today){start=saved.start||'';releaseStart=saved.releaseStart||'';uploadStart=saved.uploadStart||'';}}catch{}
+function save(){try{localStorage.setItem(key,JSON.stringify({date:$('edition').value,start,releaseStart,uploadStart}));}catch{}}
 function message(s,kind){$('notice').hidden=!s;$('notice').textContent=s||'';$('notice').className=kind||'';}
 function show(logged){$('dashboard').hidden=!logged;$('login').hidden=logged;$('logout').hidden=!logged;}
 async function request(action,method='GET',body={},query={}){
@@ -73,13 +81,16 @@ async function refresh(){
  if(busy)return;
  busy=true;
  try{
-  const data=await request('status','GET',{}, {date:$('edition').value,since:start,release_since:releaseStart});
+  const data=await request('status','GET',{}, {date:$('edition').value,since:start,release_since:releaseStart,upload_since:uploadStart});
   show(true);
   const run=data.daily,release=data.release,state=data.state;
   $('generateTag').textContent=run?(run.status==='completed'?(run.conclusion||'Complete'):'Running'):'Not started';
   $('generateStatus').textContent=run?('Run #'+run.number+': '+run.status+(run.conclusion?' / '+run.conclusion:'')):(start?'Waiting for run to appear…':'');
   $('download').disabled=!data.artifact;
   if(data.artifact&&!downloaded){downloaded=true;zip();message('Review ZIP ready — attach it here for corrections.','good');}
+  const imported=data.upload,receipt=data.upload_receipt;
+  $('uploadTag').textContent=imported?(imported.status==='completed'?(imported.conclusion||'Completed'):'Importing'):receipt?.kind==='review_only'?'Review stored':receipt?.ready_to_publish?'Draft verified':'Not uploaded';
+  $('uploadStatus').textContent=imported?('ZIP import #'+imported.number+': '+imported.status+(imported.conclusion?' / '+imported.conclusion:'')+(receipt?.message?' — '+receipt.message:'')):(receipt?.message||'Select and upload a corrected ZIP to replace the review files.');
   $('reviewTag').textContent=state.edited?'Edited':state.blocked?'Blocked':state.sent&&state.deployed?'Published':'Awaiting review';
   $('reviewStatus').textContent=state.message;
   $('deploy').disabled=!state.edited||!!releaseStart;
@@ -88,20 +99,38 @@ async function refresh(){
   if(state.edited&&!releaseStart)message('Daily brief edited. Deploy approved is now available.','good');
   if(release&&release.status==='completed')message(release.conclusion==='success'?'Release workflow completed. Comic channel receipts must still be checked.':'Release did not complete successfully; inspect its workflow result.',release.conclusion==='success'?'good':'error');
   clearTimeout(poll);
-  if((start&&(!run||run.status!=='completed'))||(releaseStart&&(!release||release.status!=='completed')))poll=setTimeout(refresh,8000);
+  if((start&&(!run||run.status!=='completed'))||(releaseStart&&(!release||release.status!=='completed'))||(uploadStart&&(!imported||imported.status!=='completed')))poll=setTimeout(refresh,8000);
  }catch(e){if(e.code===401)show(false);message(e.message,'error');clearTimeout(poll);
- if(e.code!==401&&(start||releaseStart))poll=setTimeout(refresh,14000);}
+ if(e.code!==401&&(start||releaseStart||uploadStart))poll=setTimeout(refresh,14000);}
  finally{busy=false;}
 }
 $('loginForm').addEventListener('submit',async e=>{
  e.preventDefault();try{await request('login','POST',{password:$('password').value});$('password').value='';show(true);message('','');await refresh();}catch(e){message(e.message,'error');}
 });
 $('logout').addEventListener('click',async()=>{try{await request('logout','POST',{});}catch{}clearTimeout(poll);show(false);message('Signed out.');});
-$('edition').addEventListener('change',()=>{start='';releaseStart='';downloaded=false;clearTimeout(poll);save();refresh();});
+$('edition').addEventListener('change',()=>{start='';releaseStart='';uploadStart='';downloaded=false;clearTimeout(poll);save();refresh();});
 $('run').addEventListener('click',async()=>{
  $('run').disabled=true;
  try{const d=await request('start','POST',{date:$('edition').value});start=d.since;releaseStart='';downloaded=false;save();message('Workflow requested. Checking for ZIP…');await refresh();}
  catch(e){message(e.message,'error');}finally{$('run').disabled=false;}
+});
+$('corrected').addEventListener('change',()=>{$('upload').disabled=!$('corrected').files?.length;});
+$('upload').addEventListener('click',async()=>{
+ const file=$('corrected').files?.[0];if(!file)return;
+ if(!/\.zip$/i.test(file.name)){message('Choose a ZIP file.','error');return;}
+ if(file.size<22||file.size>40000){message('This uploader accepts corrected editorial ZIPs up to 40 KB.','error');return;}
+ $('upload').disabled=true;
+ try{
+  const bytes=await file.arrayBuffer();
+  const hash=await crypto.subtle.digest('SHA-256',bytes);
+  const sha=[...new Uint8Array(hash)].map(x=>x.toString(16).padStart(2,'0')).join('');
+  const base64=btoa(String.fromCharCode(...new Uint8Array(bytes)));
+  const result=await request('upload','POST',{date:$('edition').value,filename:file.name,sha256:sha,zip_base64:base64});
+  uploadStart=result.since;save();
+  message('Corrected ZIP submitted for validation. This does not publish anything.','good');
+  $('corrected').value='';await refresh();
+ }catch(e){message(e.message,'error');}
+ finally{$('upload').disabled=false;}
 });
 $('download').addEventListener('click',zip);
 $('refresh').addEventListener('click',refresh);

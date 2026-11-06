@@ -31,7 +31,7 @@ assert.equal(extractZip(review).size,4);
 assert.equal(stage(review,date,{write:false}).kind,'review_only');
 assert.throws(()=>stage(review,'2026-11-05',{write:false}),/Review status/);
 assert.throws(()=>stage(zip({'../outside.txt':'danger'}),date,{write:false}),/Unsafe ZIP path/);
-assert.throws(()=>stage(zip({'review.txt':'no manifest'}),date,{write:false}),/Missing publication file/);
+assert.throws(()=>stage(zip({'review.txt':'no manifest'}),date,{write:false}),/Unexpected release package file/);
 assert.throws(()=>stage(zip({'news-intelligence/2026-11-06/manifest.json':'{}'}),date,{write:false}),/Missing publication file/);
 assert.throws(()=>extractZip(Buffer.from('not zip')),/ZIP/);
 const incorrect=Buffer.from(review);incorrect[40]^=1;

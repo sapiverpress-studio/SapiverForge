@@ -34,21 +34,22 @@ button:disabled{opacity:.38;cursor:not-allowed}button.full{width:100%;margin-top
 <button class="primary full" id="run">Run workflow</button><p class="status" id="generateStatus"></p>
 <button class="full" id="download" disabled>Download ZIP</button>
 <p class="small">The download will be attempted automatically when ready. If your phone blocks it, press Download ZIP. Attach the ZIP in our chat for editing.</p></section>
-<section class="card"><p class="step">02 — Replace reviewed draft</p>
+<section class="card"><p class="step">02 — Upload</p>
 <div class="top"><h2>Upload corrected ZIP</h2><span class="pill" id="uploadTag">Not uploaded</span></div>
-<p>Upload the corrected ZIP from ChatGPT. The website checks it and imports its exact editorial files into SapiverForge. A review-only ZIP is stored for further work; it cannot unlock publication.</p>
+<p>Upload the replacement ZIP from ChatGPT. The uploaded files are checked and used as the publication source. Only a complete verified package can be deployed.</p>
 <label for="corrected">Corrected ZIP (maximum 40 KB)</label>
 <input id="corrected" type="file" accept=".zip,application/zip">
 <button class="primary full" id="upload" disabled>Upload corrected ZIP</button>
 <p class="status" id="uploadStatus" aria-live="polite">No replacement uploaded.</p>
+<p class="small" id="uploadDetail" aria-live="polite"></p>
+<button class="full" id="refresh">Refresh status</button>
+<p class="small" id="checkedAt" aria-live="polite">Not checked yet</p>
+<a id="uploadRunLink" class="small" href="#" target="_blank" rel="noopener noreferrer" hidden>View GitHub import details</a>
 </section>
-<section class="card"><p class="step">03 — Edit</p><div class="top"><h2>Daily brief edited</h2><span class="pill" id="reviewTag">Awaiting review</span></div>
-<p id="reviewStatus" class="status">Repository and Brevo draft must both be verified.</p>
-<button class="full" id="refresh">Refresh status</button></section>
-<section class="card"><p class="step">04 — Deploy</p><div class="top"><h2>Deploy approved</h2><span class="pill" id="deployTag">Locked</span></div>
-<p>One approval runs the existing website release, Brevo send and approved Comic handoff. No second Comic deploy required.</p>
+<section class="card"><p class="step">03 — Deploy</p><div class="top"><h2>Deploy approved</h2><span class="pill" id="deployTag">Locked</span></div>
+<p>When the corrected ZIP is verified and its unsent Brevo draft matches, this button publishes the approved website and email and hands off to Comic.</p>
 <button class="primary full" id="deploy" disabled>Deploy approved (includes Comic)</button>
-<p class="status" id="deployStatus"></p></section></div>
+<p class="status" id="deployStatus" aria-live="polite">Upload a complete corrected ZIP to enable publishing.</p></section></div>
 <footer>Generated content never publishes automatically. The final button unlocks only after the exact edition and Brevo draft are verified.</footer>
 </main><script>
 (function(){
@@ -57,19 +58,22 @@ const $=id=>document.getElementById(id);
 const base='/.netlify/functions/daily-brief-runner';
 const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 $('edition').value=today;
-let start='',releaseStart='',uploadStart='',poll=null,busy=false,downloaded=false;
+let start='',releaseStart='',uploadStart='',uploadHash='',poll=null,busy=false,queued=false,downloaded=false;
 const key='sapiver-daily-runner';
-try{const saved=JSON.parse(localStorage.getItem(key)||'{}');if(saved.date===today){start=saved.start||'';releaseStart=saved.releaseStart||'';uploadStart=saved.uploadStart||'';}}catch{}
-function save(){try{localStorage.setItem(key,JSON.stringify({date:$('edition').value,start,releaseStart,uploadStart}));}catch{}}
+try{
+ const saved=JSON.parse(localStorage.getItem(key)||'{}');
+ if(saved.date===today){start=saved.start||'';releaseStart=saved.releaseStart||'';uploadStart=saved.uploadStart||'';uploadHash=saved.uploadHash||'';}
+}catch{}
+function save(){try{localStorage.setItem(key,JSON.stringify({date:$('edition').value,start,releaseStart,uploadStart,uploadHash}));}catch{}}
 function message(s,kind){$('notice').hidden=!s;$('notice').textContent=s||'';$('notice').className=kind||'';}
 function show(logged){$('dashboard').hidden=!logged;$('login').hidden=logged;$('logout').hidden=!logged;}
 async function request(action,method='GET',body={},query={}){
- const search=new URLSearchParams({action,...query});
- const r=await fetch(base+'?'+search.toString(),{method,credentials:'same-origin',cache:'no-store',
- headers:method==='POST'?{'Content-Type':'application/json'}:{},
- ...(method==='POST'?{body:JSON.stringify(body)}:{})});
- let data={};try{data=await r.json();}catch{}
- if(!r.ok){const e=new Error(data.error||'Request failed');e.code=r.status;throw e;}
+ const q=new URLSearchParams({action,...query});
+ const response=await fetch(base+'?'+q.toString(),{method,credentials:'same-origin',cache:'no-store',
+  headers:method==='POST'?{'Content-Type':'application/json'}:{},
+  ...(method==='POST'?{body:JSON.stringify(body)}:{})});
+ let data={};try{data=await response.json();}catch{}
+ if(!response.ok){const e=new Error(data.error||'Request failed');e.code=response.status;throw e;}
  return data;
 }
 function zip(){
@@ -77,68 +81,144 @@ function zip(){
  a.href=base+'?'+new URLSearchParams({action:'download',date:$('edition').value,since:start});
  a.download='sapiver-daily-intelligence.zip';document.body.append(a);a.click();a.remove();
 }
+function uploadPhase(data){
+ const run=data.upload,receipt=data.upload_receipt,ready=data.state.edited;
+ const matchingReceipt=!!receipt&&(!uploadHash||receipt.sha256===uploadHash);
+ const linked=run?.url;
+ $('uploadRunLink').hidden=!linked;
+ if(linked)$('uploadRunLink').href=linked;
+ if(uploadStart&&(!run||run.status!=='completed')){
+  $('uploadTag').textContent='Importing';
+  $('uploadStatus').textContent=run?'GitHub import #'+run.number+' is '+run.status+'.':'Waiting for GitHub to start the import.';
+  $('uploadDetail').textContent='Your ZIP is being checked and saved. Deploy remains locked.';
+  return 'processing';
+ }
+ if(run?.status==='completed'&&run.conclusion!=='success'){
+  $('uploadTag').textContent='Import failed';
+  $('uploadStatus').textContent='GitHub rejected or could not import the ZIP.';
+  $('uploadDetail').textContent='Open the GitHub import details for the reason. The previous edition remains unchanged.';
+  return 'failed';
+ }
+ if(ready){
+  $('uploadTag').textContent='Ready to deploy';
+  $('uploadStatus').textContent='Corrected edition and unsent Brevo draft verified.';
+  $('uploadDetail').textContent='The uploaded publication is ready. Press Deploy approved when you want it published.';
+  return 'ready';
+ }
+ if(matchingReceipt&&receipt.kind==='review_only'){
+  $('uploadTag').textContent='Draft uploaded';
+  $('uploadStatus').textContent='ZIP received and saved successfully.';
+  $('uploadDetail').textContent='This ZIP contains a review preview, not the complete publication files. A full corrected release ZIP is required before Deploy can be used.';
+  return 'review';
+ }
+ if(matchingReceipt&&receipt.status==='awaiting_brevo_draft_verification'){
+  $('uploadTag').textContent='Preparing draft';
+  $('uploadStatus').textContent='Publication files imported. Checking the unsent Brevo draft.';
+  $('uploadDetail').textContent='Deploy will unlock once the draft has been verified against the uploaded newsletter.';
+  return 'preparing';
+ }
+ if(matchingReceipt&&receipt.status==='brevo_draft_verified'){
+  $('uploadTag').textContent='Verifying';
+  $('uploadStatus').textContent='The Brevo draft is verified. Checking the final publication receipt.';
+  $('uploadDetail').textContent=receipt.message||'';
+  return 'preparing';
+ }
+ $('uploadTag').textContent=uploadStart?'Checking import':'No corrected ZIP';
+ $('uploadStatus').textContent=uploadStart?'Checking the new ZIP import…':'Select a corrected ZIP above.';
+ $('uploadDetail').textContent=uploadStart?'The previous edition is preserved until the new upload passes validation.':'';
+ return 'empty';
+}
 async function refresh(){
- if(busy)return;
- busy=true;
+ if(busy){queued=true;$('checkedAt').textContent='Refresh queued — finishing the current check.';return;}
+ busy=true;clearTimeout(poll);
+ $('refresh').disabled=true;$('refresh').textContent='Checking GitHub…';
+ $('checkedAt').textContent='Checking live GitHub status…';
  try{
-  const data=await request('status','GET',{}, {date:$('edition').value,since:start,release_since:releaseStart,upload_since:uploadStart});
+  const data=await request('status','GET',{},{
+   date:$('edition').value,since:start,release_since:releaseStart,upload_since:uploadStart
+  });
   show(true);
   const run=data.daily,release=data.release,state=data.state;
   $('generateTag').textContent=run?(run.status==='completed'?(run.conclusion||'Complete'):'Running'):'Not started';
-  $('generateStatus').textContent=run?('Run #'+run.number+': '+run.status+(run.conclusion?' / '+run.conclusion:'')):(start?'Waiting for run to appear…':'');
+  $('generateStatus').textContent=run?('Run #'+run.number+': '+run.status+(run.conclusion?' / '+run.conclusion:'')):(start?'Waiting for workflow to start…':'');
   $('download').disabled=!data.artifact;
-  if(data.artifact&&!downloaded){downloaded=true;zip();message('Review ZIP ready — attach it here for corrections.','good');}
-  const imported=data.upload,receipt=data.upload_receipt;
-  $('uploadTag').textContent=imported?(imported.status==='completed'?(imported.conclusion||'Completed'):'Importing'):receipt?.kind==='review_only'?'Review stored':receipt?.ready_to_publish?'Draft verified':'Not uploaded';
-  $('uploadStatus').textContent=imported?('ZIP import #'+imported.number+': '+imported.status+(imported.conclusion?' / '+imported.conclusion:'')+(receipt?.message?' — '+receipt.message:'')):(receipt?.message||'Select and upload a corrected ZIP to replace the review files.');
-  $('reviewTag').textContent=state.edited?'Edited':state.blocked?'Blocked':state.sent&&state.deployed?'Published':'Awaiting review';
-  $('reviewStatus').textContent=state.message;
-  $('deploy').disabled=!state.edited||!!releaseStart;
-  $('deployTag').textContent=release?(release.status==='completed'?(release.conclusion||'Complete'):'Publishing'):(state.deployed&&state.sent?'Released':releaseStart?'Queued':'Locked');
-  $('deployStatus').textContent=release?'Release #'+release.number+': '+release.status+(release.conclusion?' / '+release.conclusion:''):(releaseStart?'Waiting for release…':'');
-  if(state.edited&&!releaseStart)message('Daily brief edited. Deploy approved is now available.','good');
-  if(release&&release.status==='completed')message(release.conclusion==='success'?'Release workflow completed. Comic channel receipts must still be checked.':'Release did not complete successfully; inspect its workflow result.',release.conclusion==='success'?'good':'error');
-  clearTimeout(poll);
-  if((start&&(!run||run.status!=='completed'))||(releaseStart&&(!release||release.status!=='completed'))||(uploadStart&&(!imported||imported.status!=='completed')))poll=setTimeout(refresh,8000);
- }catch(e){if(e.code===401)show(false);message(e.message,'error');clearTimeout(poll);
- if(e.code!==401&&(start||releaseStart||uploadStart))poll=setTimeout(refresh,14000);}
- finally{busy=false;}
+  if(data.artifact&&!downloaded){downloaded=true;zip();message('Original ZIP is ready. Attach it to ChatGPT for corrections.','good');}
+  const phase=uploadPhase(data);
+  $('deploy').disabled=!state.edited||!!releaseStart||phase==='processing'||phase==='failed';
+  $('deployTag').textContent=release?(release.status==='completed'?(release.conclusion||'Completed'):'Publishing'):(state.deployed&&state.sent?'Published':state.edited?'Ready':'Locked');
+  $('deployStatus').textContent=release?('Release #'+release.number+': '+release.status+(release.conclusion?' / '+release.conclusion:'')):
+   state.edited?'The corrected publication and Brevo draft are verified.':'Upload a complete corrected release ZIP to unlock Deploy. A review-only ZIP is saved but cannot be published.';
+  if(state.edited&&!releaseStart)message('The corrected edition is ready for your final Deploy approval.','good');
+  if(release?.status==='completed')message(release.conclusion==='success'?
+   'Release workflow completed. Check Comic posting receipts for individual channels.':
+   'Release failed. Open GitHub to check why.',release.conclusion==='success'?'good':'error');
+  $('checkedAt').textContent='Checked GitHub at '+new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  const pending=(start&&(!run||run.status!=='completed'))||
+   (releaseStart&&(!release||release.status!=='completed'))||
+   (uploadStart&&(!data.upload||data.upload.status!=='completed'))||
+   (phase==='preparing');
+  if(pending)poll=setTimeout(refresh,8000);
+ }catch(e){
+  if(e.code===401)show(false);
+  message('Status check failed: '+e.message,'error');
+  $('checkedAt').textContent='Status unavailable. Press Refresh status to retry.';
+  if(e.code!==401&&(start||releaseStart||uploadStart))poll=setTimeout(refresh,15000);
+ }finally{
+  busy=false;$('refresh').disabled=false;$('refresh').textContent='Refresh status';
+  if(queued){queued=false;queueMicrotask(refresh);}
+ }
 }
 $('loginForm').addEventListener('submit',async e=>{
- e.preventDefault();try{await request('login','POST',{password:$('password').value});$('password').value='';show(true);message('','');await refresh();}catch(e){message(e.message,'error');}
+ e.preventDefault();
+ try{await request('login','POST',{password:$('password').value});$('password').value='';show(true);message('','');await refresh();}
+ catch(e){message(e.message,'error');}
 });
-$('logout').addEventListener('click',async()=>{try{await request('logout','POST',{});}catch{}clearTimeout(poll);show(false);message('Signed out.');});
-$('edition').addEventListener('change',()=>{start='';releaseStart='';uploadStart='';downloaded=false;clearTimeout(poll);save();refresh();});
+$('logout').addEventListener('click',async()=>{
+ try{await request('logout','POST',{});}catch{}
+ clearTimeout(poll);show(false);message('Signed out.','');
+});
+$('edition').addEventListener('change',()=>{
+ start='';releaseStart='';uploadStart='';uploadHash='';downloaded=false;
+ clearTimeout(poll);save();refresh();
+});
 $('run').addEventListener('click',async()=>{
  $('run').disabled=true;
- try{const d=await request('start','POST',{date:$('edition').value});start=d.since;releaseStart='';downloaded=false;save();message('Workflow requested. Checking for ZIP…');await refresh();}
- catch(e){message(e.message,'error');}finally{$('run').disabled=false;}
+ try{
+  const result=await request('start','POST',{date:$('edition').value});
+  start=result.since;releaseStart='';downloaded=false;save();
+  message('Generation queued. The ZIP will appear when GitHub finishes.','good');await refresh();
+ }catch(e){message(e.message,'error');}
+ finally{$('run').disabled=false;}
 });
 $('corrected').addEventListener('change',()=>{$('upload').disabled=!$('corrected').files?.length;});
 $('upload').addEventListener('click',async()=>{
  const file=$('corrected').files?.[0];if(!file)return;
  if(!/\.zip$/i.test(file.name)){message('Choose a ZIP file.','error');return;}
- if(file.size<22||file.size>40000){message('This uploader accepts corrected editorial ZIPs up to 40 KB.','error');return;}
- $('upload').disabled=true;
+ if(file.size<22||file.size>40000){message('Maximum ZIP size is 40 KB.','error');return;}
+ $('upload').disabled=true;$('uploadTag').textContent='Uploading';$('uploadStatus').textContent='Sending ZIP securely to GitHub…';
  try{
   const bytes=await file.arrayBuffer();
   const hash=await crypto.subtle.digest('SHA-256',bytes);
   const sha=[...new Uint8Array(hash)].map(x=>x.toString(16).padStart(2,'0')).join('');
   const base64=btoa(String.fromCharCode(...new Uint8Array(bytes)));
   const result=await request('upload','POST',{date:$('edition').value,filename:file.name,sha256:sha,zip_base64:base64});
-  uploadStart=result.since;save();
-  message('Corrected ZIP submitted for validation. This does not publish anything.','good');
+  uploadStart=result.since;uploadHash=sha;save();
+  message('ZIP accepted for validation. Nothing has been published.','good');
   $('corrected').value='';await refresh();
- }catch(e){message(e.message,'error');}
+ }catch(e){message(e.message,'error');$('uploadStatus').textContent='Upload failed: '+e.message;}
  finally{$('upload').disabled=false;}
 });
 $('download').addEventListener('click',zip);
-$('refresh').addEventListener('click',refresh);
+$('refresh').addEventListener('click',()=>{
+ $('checkedAt').textContent='Refreshing…';refresh();
+});
 $('deploy').addEventListener('click',async()=>{
- if(!confirm('Publish the approved edition, send the Brevo campaign and dispatch Comic?'))return;
+ if(!confirm('Publish this verified edition, send the Brevo email and hand off to Comic?'))return;
  $('deploy').disabled=true;
- try{const d=await request('deploy','POST',{date:$('edition').value});releaseStart=d.since;save();message('Approved release queued.','good');await refresh();}
- catch(e){message(e.message,'error');$('deploy').disabled=false;}
+ try{
+  const result=await request('deploy','POST',{date:$('edition').value});
+  releaseStart=result.since;save();message('Release requested. Tracking the outcome…','good');await refresh();
+ }catch(e){message(e.message,'error');$('deploy').disabled=false;}
 });
 refresh();
 })();

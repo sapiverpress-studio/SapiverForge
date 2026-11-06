@@ -40,14 +40,17 @@ async function file(path){
 }
 async function edition(date){
  const p='news-intelligence/'+date+'/';
- const [manifest,meta,review,receipt]=await Promise.all([file(p+'manifest.json'),file(p+'newsletter-metadata.json'),file(p+'runner-review.json'),file(p+'netlify-release.json')]);
+ const [manifest,meta,review,receipt,uploadReceipt]=await Promise.all([file(p+'manifest.json'),file(p+'newsletter-metadata.json'),file(p+'runner-review.json'),file(p+'netlify-release.json'),file(p+'zip-upload-status.json')]);
  const candidate=String(manifest?.data?.candidate_id||'');
  const ready=!!(candidate&&manifest.data.newsletter_ready_for_human_approval===true&&meta?.data?.candidate_id===candidate&&['brevo_draft','draft'].includes(meta.data.status)&&meta.data.brevo_campaign_id);
  const edited=!!(ready&&review?.data?.date===date&&review.data.status==='verified'&&review.data.candidate_id===candidate&&review.data.brevo_draft_verified===true&&review.data.manifest_blob_sha===manifest.sha&&review.data.newsletter_blob_sha===meta.sha&&review.data.reviewed_at);
  const deployed=!!(receipt?.data?.status==='deployed'&&receipt.data.candidate_id===candidate);
  const sent=!!(meta?.data?.status==='sent'&&meta.data.sent_at);
  const blocked=!!(manifest?.data?.quality_status==='blocked'||meta?.data?.status==='blocked');
- return {date,edited,ready,deployed,sent,blocked,message:edited?'Daily brief edited — repository and email draft verified':deployed&&sent?'Already released':blocked?'Brief blocked; corrections required':ready?'Awaiting verified corrections':'Awaiting an approved-quality draft'};
+ const uploaded=uploadReceipt?.data;
+ const reviewSaved=uploaded?.kind==='review_only'&&uploaded?.status==='stored_for_editorial_review';
+ return {date,edited,ready,deployed,sent,blocked:blocked&&!reviewSaved,original_blocked:blocked,upload_kind:uploaded?.kind||null,
+ message:edited?'Corrected edition and Brevo draft verified':deployed&&sent?'Already published':reviewSaved?'Corrected review ZIP safely stored; awaiting complete publication package':blocked?'Original generated edition failed verification':ready?'Awaiting Brevo and repository verification':'Awaiting a publish-ready corrected ZIP'};
 }
 async function run(workflow,since){
  const t=Date.parse(since||'');if(!Number.isFinite(t))return null;

@@ -38,6 +38,7 @@ jobs:
           node --check scripts/import-reviewed-daily-brief-zip.mjs
           node --check scripts/verify-reviewed-daily-brief-brevo.mjs
           node test/reviewed-brief-zip-contract.mjs
+          node test/runner-review-blob-sha-contract.mjs
       - name: Inspect ZIP and import exact reviewed content (no publishing)
         id: stage
         env:

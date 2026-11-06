@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { gitBlobSha } from './git-blob-sha.mjs';
 
 const date=String(process.env.EDITION_DATE||'');
 if(!/^\d{4}-\d{2}-\d{2}$/.test(date))throw Error('Edition date missing');
@@ -20,7 +21,7 @@ const remote=await r.json();
 const norm=s=>String(s||'').replace(/\r\n/g,'\n').trim();
 if(remote.status!=='draft'||remote.subject!==meta.subject||norm(remote.htmlContent)!==norm(html))throw Error('Brevo draft HTML/subject/status does not exactly match uploaded newsletter');
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
-const blob=file=>sha(Buffer.concat([Buffer.from('blob '+fs.statSync(file).size+'\0'),fs.readFileSync(file)]));
+const blob=file=>gitBlobSha(fs.readFileSync(file));
 const review={
  date,status:'verified',candidate_id:manifest.candidate_id,brevo_draft_verified:true,
  manifest_blob_sha:blob(path.join(dir,'manifest.json')),

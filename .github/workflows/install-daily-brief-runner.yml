@@ -10,6 +10,8 @@ on:
       - 'test/reviewed-brief-zip-contract.mjs'
       - 'scripts/import-reviewed-daily-brief-zip.mjs'
       - 'scripts/verify-reviewed-daily-brief-brevo.mjs'
+      - 'scripts/git-blob-sha.mjs'
+      - 'test/runner-review-blob-sha-contract.mjs'
       - '.github/workflows/install-daily-brief-runner.yml'
       - 'public/daily-brief/runner/**'
       - 'netlify/functions/daily-brief-runner.mjs'
@@ -39,6 +41,7 @@ jobs:
           node --check scripts/verify-reviewed-daily-brief-brevo.mjs
           node test/reviewed-brief-zip-contract.mjs
           node test/daily-brief-runner-ui-contract.mjs
+          node test/runner-review-blob-sha-contract.mjs
           test -s private-runner/public/index.html
           test ! -e public/daily-brief/runner/index.html
           test ! -e netlify/functions/daily-brief-runner.mjs

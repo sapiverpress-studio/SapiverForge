@@ -6,6 +6,9 @@ on:
     paths:
       - 'private-runner/**'
       - 'test/daily-brief-runner-contract.mjs'
+      - 'test/reviewed-brief-zip-contract.mjs'
+      - 'scripts/import-reviewed-daily-brief-zip.mjs'
+      - 'scripts/verify-reviewed-daily-brief-brevo.mjs'
       - '.github/workflows/install-daily-brief-runner.yml'
       - 'public/daily-brief/runner/**'
       - 'netlify/functions/daily-brief-runner.mjs'

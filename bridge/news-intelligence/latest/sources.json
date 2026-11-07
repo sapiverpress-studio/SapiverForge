@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-07T12:54:18.855Z",
+  "collected_at": "2026-11-07T16:36:03.145Z",
   "expected_sources": [
     "Techmeme",
     "Reuters",
@@ -13,7 +13,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 377,
+      "elapsed_ms": 547,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -21,14 +21,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 205,
+      "elapsed_ms": 313,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 378,
+      "elapsed_ms": 417,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -36,7 +36,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 256,
+      "elapsed_ms": 271,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -44,16 +44,72 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 2343,
+      "elapsed_ms": 2193,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
   "candidates": [
     {
       "source": "Hacker News",
+      "publisher": "nfsu2.xyz",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "Need for Speed Underground 2 online in the browser",
+      "url": "https://nfsu2.xyz/",
+      "direct_source_url": "https://nfsu2.xyz/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50403052",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50403052",
+      "summary": "",
+      "published_at": "2026-11-07T09:36:36.000Z",
+      "engagement": {
+        "score": 436,
+        "comments": 140
+      },
+      "collection_mode": "api",
+      "score": 8.319
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "8rank.ai",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "Every Mac comes with an (undocumented) family member classifier",
+      "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+      "direct_source_url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+      "discovery_url": "https://news.ycombinator.com/item?id=50403097",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50403097",
+      "summary": "",
+      "published_at": "2026-11-07T09:46:03.000Z",
+      "engagement": {
+        "score": 375,
+        "comments": 213
+      },
+      "collection_mode": "api",
+      "score": 8.165
+    },
+    {
+      "title": "Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees \"shaky\" projects killed (Cecile Daurat/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-06/data-center-pullback-may-shield-real-economy-from-ai-bubble",
+      "summary": "Cecile Daurat / Bloomberg : Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees &ldquo;shaky&rdquo; projects killed &mdash; Guardrails against data-center expansion in states won by Democrats may help spread investment over time.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/newsletters/2026-11-06/data-center-pullback-may-shield-real-economy-from-ai-bubble\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i11.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p11#a261107p11\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Cecile Daurat / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/newsletters/2026-11-06/data-center-pullback-may-shield-real-economy-from-ai-bubble\">Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees &ldquo;shaky&rdquo; projects killed</A></B></SPAN>&nbsp; &mdash;&nbsp; Guardrails against data-center expansion in states won by Democrats may help spread investment over time.</P>",
+      "published_at": "2026-11-07T16:35:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p11",
+      "direct_source_url": "https://www.bloomberg.com/news/newsletters/2026-11-06/data-center-pullback-may-shield-real-economy-from-ai-bubble",
+      "publisher": "Cecile Daurat/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.099
+    },
+    {
+      "source": "Hacker News",
       "publisher": "mitchellh.com",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 3,
+      "source_rank": 2,
       "title": "Libghostty 1.0",
       "url": "https://mitchellh.com/writing/libghostty-1-0",
       "direct_source_url": "https://mitchellh.com/writing/libghostty-1-0",
@@ -63,11 +119,103 @@
       "summary": "",
       "published_at": "2026-11-06T23:30:52.000Z",
       "engagement": {
-        "score": 730,
-        "comments": 121
+        "score": 881,
+        "comments": 145
       },
       "collection_mode": "api",
-      "score": 8.132
+      "score": 8.058
+    },
+    {
+      "title": "Chicago-based data analytics company Ocient raised a $100M Series C co-led by Boka Capital and OCA Ventures to grow its agentic AI analytics business (Paul Gillin/SiliconANGLE)",
+      "url": "https://siliconangle.com/2026/11/05/ocient-raises-100-million-as-agentic-ai-drives-growth-in-large-scale-analytics/",
+      "summary": "Paul Gillin / SiliconANGLE : Chicago-based data analytics company Ocient raised a $100M Series C co-led by Boka Capital and OCA Ventures to grow its agentic AI analytics business &mdash; Ocient Inc., the maker of a speedy data analytics platform, today said it has raised $100 million in a Series C funding to expand &hellip;",
+      "description_html": "<A HREF=\"https://siliconangle.com/2026/11/05/ocient-raises-100-million-as-agentic-ai-drives-growth-in-large-scale-analytics/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i10.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p10#a261107p10\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Paul Gillin / <A HREF=\"http://siliconangle.com/\">SiliconANGLE</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://siliconangle.com/2026/11/05/ocient-raises-100-million-as-agentic-ai-drives-growth-in-large-scale-analytics/\">Chicago-based data analytics company Ocient raised a $100M Series C co-led by Boka Capital and OCA Ventures to grow its agentic AI analytics business</A></B></SPAN>&nbsp; &mdash;&nbsp; Ocient Inc., the maker of a speedy data analytics platform, today said it has raised $100 million in a Series C funding to expand &hellip; </P>",
+      "published_at": "2026-11-07T15:30:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p10",
+      "direct_source_url": "https://siliconangle.com/2026/11/05/ocient-raises-100-million-as-agentic-ai-drives-growth-in-large-scale-analytics/",
+      "publisher": "Paul Gillin/SiliconANGLE",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.974
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "uploadyourram.org",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 9,
+      "title": "Upload Your RAM",
+      "url": "https://uploadyourram.org/",
+      "direct_source_url": "https://uploadyourram.org/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50403214",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50403214",
+      "summary": "",
+      "published_at": "2026-11-07T10:15:26.000Z",
+      "engagement": {
+        "score": 234,
+        "comments": 215
+      },
+      "collection_mode": "api",
+      "score": 7.931
+    },
+    {
+      "title": "Investigation: some Chinese companies approved by the US Commerce Department to handle Nvidia's H200 chips have empty offices and ties to firms under sanctions (New York Times)",
+      "url": "https://www.nytimes.com/2026/11/07/business/economy/nvidia-chips-chinese-firms.html",
+      "summary": "New York Times : Investigation: some Chinese companies approved by the US Commerce Department to handle Nvidia's H200 chips have empty offices and ties to firms under sanctions &mdash; The Commerce Department has approved dozens of Chinese companies to handle Nvidia's H200 chips, some of which have ties to firms under sanctions over national security.",
+      "description_html": "<A HREF=\"https://www.nytimes.com/2026/11/07/business/economy/nvidia-chips-chinese-firms.html\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i9.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p9#a261107p9\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.nytimes.com/\">New York Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.nytimes.com/2026/11/07/business/economy/nvidia-chips-chinese-firms.html\">Investigation: some Chinese companies approved by the US Commerce Department to handle Nvidia's H200 chips have empty offices and ties to firms under sanctions</A></B></SPAN>&nbsp; &mdash;&nbsp; The Commerce Department has approved dozens of Chinese companies to handle Nvidia's H200 chips, some of which have ties to firms under sanctions over national security.</P>",
+      "published_at": "2026-11-07T14:30:04.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p9",
+      "direct_source_url": "https://www.nytimes.com/2026/11/07/business/economy/nvidia-chips-chinese-firms.html",
+      "publisher": "New York Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.853
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "hightouch.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+      "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+      "direct_source_url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+      "discovery_url": "https://news.ycombinator.com/item?id=50397429",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50397429",
+      "summary": "",
+      "published_at": "2026-11-06T19:48:51.000Z",
+      "engagement": {
+        "score": 537,
+        "comments": 133
+      },
+      "collection_mode": "api",
+      "score": 7.824
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "nbcnews.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "Tesla to wind down Cybertruck production",
+      "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+      "direct_source_url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+      "discovery_url": "https://news.ycombinator.com/item?id=50391456",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50391456",
+      "summary": "",
+      "published_at": "2026-11-06T12:13:51.000Z",
+      "engagement": {
+        "score": 1096,
+        "comments": 1951
+      },
+      "collection_mode": "api",
+      "score": 7.668
     },
     {
       "title": "Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia)",
@@ -81,137 +229,9 @@
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
-      "source_rank": 1,
-      "collection_mode": "rss",
-      "score": 8.048
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "hightouch.com",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 4,
-      "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
-      "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
-      "direct_source_url": "https://hightouch.com/blog/llm-judges-identity-resolution",
-      "discovery_url": "https://news.ycombinator.com/item?id=50397429",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50397429",
-      "summary": "",
-      "published_at": "2026-11-06T19:48:51.000Z",
-      "engagement": {
-        "score": 507,
-        "comments": 121
-      },
-      "collection_mode": "api",
-      "score": 7.898
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "asahilinux.org",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 9,
-      "title": "Asahi Linux Progress Linux 7.3",
-      "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
-      "direct_source_url": "https://asahilinux.org/2026/11/progress-report-7-3/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50401867",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50401867",
-      "summary": "",
-      "published_at": "2026-11-07T05:20:18.000Z",
-      "engagement": {
-        "score": 208,
-        "comments": 174
-      },
-      "collection_mode": "api",
-      "score": 7.855
-    },
-    {
-      "title": "How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies (Gillian Tett/Financial Times)",
-      "url": "https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7",
-      "summary": "Gillian Tett / Financial Times : How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies &mdash; Voter hostility to Big Tech helped shape the US midterms, and similar fears are spreading through the west.",
-      "description_html": "<A HREF=\"https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p7#a261107p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Gillian Tett / <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7\">How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies</A></B></SPAN>&nbsp; &mdash;&nbsp; Voter hostility to Big Tech helped shape the US midterms, and similar fears are spreading through the west.</P>",
-      "published_at": "2026-11-07T07:40:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261107/p7",
-      "direct_source_url": "https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7",
-      "publisher": "Gillian Tett/Financial Times",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 2,
-      "collection_mode": "rss",
-      "score": 7.802
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "planned-obsolescence.org",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 6,
-      "title": "AI is dramatically accelerating AI research",
-      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
-      "direct_source_url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
-      "discovery_url": "https://news.ycombinator.com/item?id=50397994",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50397994",
-      "summary": "",
-      "published_at": "2026-11-06T20:27:23.000Z",
-      "engagement": {
-        "score": 329,
-        "comments": 291
-      },
-      "collection_mode": "api",
-      "score": 7.765
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "nbcnews.com",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 2,
-      "title": "Tesla to wind down Cybertruck production",
-      "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
-      "direct_source_url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
-      "discovery_url": "https://news.ycombinator.com/item?id=50391456",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50391456",
-      "summary": "",
-      "published_at": "2026-11-06T12:13:51.000Z",
-      "engagement": {
-        "score": 1045,
-        "comments": 1898
-      },
-      "collection_mode": "api",
-      "score": 7.742
-    },
-    {
-      "title": "Global tablet shipments fell 23% YoY to 32M units in Q3 2026, their lowest level in nearly three years; Apple's iPad shipments fell 27.5% YoY to ~11.58M (Omdia)",
-      "url": "https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026",
-      "summary": "Omdia : Global tablet shipments fell 23% YoY to 32M units in Q3 2026, their lowest level in nearly three years; Apple's iPad shipments fell 27.5% YoY to ~11.58M &mdash; The global tablet market fell 23% year-over-year (YoY) to 32 million units in Q3 2026, marking its lowest shipment level in nearly three years &hellip;",
-      "description_html": "<A HREF=\"https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i6.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p6#a261107p6\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://omdia.tech.informa.com/\">Omdia</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026\">Global tablet shipments fell 23% YoY to 32M units in Q3 2026, their lowest level in nearly three years; Apple's iPad shipments fell 27.5% YoY to ~11.58M</A></B></SPAN>&nbsp; &mdash;&nbsp; The global tablet market fell 23% year-over-year (YoY) to 32 million units in Q3 2026, marking its lowest shipment level in nearly three years &hellip; </P>",
-      "published_at": "2026-11-07T07:30:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261107/p6",
-      "direct_source_url": "https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026",
-      "publisher": "Omdia",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 3,
-      "collection_mode": "rss",
-      "score": 7.715
-    },
-    {
-      "title": "Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July (Zack Whittaker/TechCrunch)",
-      "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
-      "summary": "Zack Whittaker / TechCrunch : Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July &mdash; Security researchers have discovered hundreds of copies of a Chinese-made AI hacking tool publicly exposed to the internet for anyone to access &hellip;",
-      "description_html": "<A HREF=\"https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p5#a261107p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Zack Whittaker / <A HREF=\"http://techcrunch.com/\">TechCrunch</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/\">Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July</A></B></SPAN>&nbsp; &mdash;&nbsp; Security researchers have discovered hundreds of copies of a Chinese-made AI hacking tool publicly exposed to the internet for anyone to access &hellip; </P>",
-      "published_at": "2026-11-07T07:01:02.000Z",
-      "discovery_url": "https://www.techmeme.com/261107/p5",
-      "direct_source_url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
-      "publisher": "Zack Whittaker/TechCrunch",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
       "source_rank": 4,
       "collection_mode": "rss",
-      "score": 7.615
+      "score": 7.654
     },
     {
       "source": "Hacker News",
@@ -227,43 +247,43 @@
       "summary": "",
       "published_at": "2026-11-06T19:33:38.000Z",
       "engagement": {
-        "score": 254,
-        "comments": 110
+        "score": 267,
+        "comments": 114
       },
       "collection_mode": "api",
-      "score": 7.567
+      "score": 7.413
     },
     {
-      "title": "Shenzhen, home to tech giants and an illicit trade of smuggled chips and stolen iPhones, is clearing out its illegitimate markets ahead of the APEC summit (William Langley/Financial Times)",
-      "url": "https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862",
-      "summary": "William Langley / Financial Times : Shenzhen, home to tech giants and an illicit trade of smuggled chips and stolen iPhones, is clearing out its illegitimate markets ahead of the APEC summit &mdash; Shenzhen clears out illicit markets for smuggled chips and stolen iPhones as it prepares to host gathering of international leaders",
-      "description_html": "<A HREF=\"https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p4#a261107p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> William Langley / <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862\">Shenzhen, home to tech giants and an illicit trade of smuggled chips and stolen iPhones, is clearing out its illegitimate markets ahead of the APEC summit</A></B></SPAN>&nbsp; &mdash;&nbsp; Shenzhen clears out illicit markets for smuggled chips and stolen iPhones as it prepares to host gathering of international leaders</P>",
-      "published_at": "2026-11-07T06:35:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261107/p4",
-      "direct_source_url": "https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862",
-      "publisher": "William Langley/Financial Times",
+      "title": "How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies (Gillian Tett/Financial Times)",
+      "url": "https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7",
+      "summary": "Gillian Tett / Financial Times : How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies &mdash; Voter hostility to Big Tech helped shape the US midterms, and similar fears are spreading through the west.",
+      "description_html": "<A HREF=\"https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p7#a261107p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Gillian Tett / <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7\">How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies</A></B></SPAN>&nbsp; &mdash;&nbsp; Voter hostility to Big Tech helped shape the US midterms, and similar fears are spreading through the west.</P>",
+      "published_at": "2026-11-07T07:40:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p7",
+      "direct_source_url": "https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7",
+      "publisher": "Gillian Tett/Financial Times",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 5,
       "collection_mode": "rss",
-      "score": 7.517
+      "score": 7.408
     },
     {
-      "title": "Huawei unveils HarmonyOS-powered Qinyun HM650 series desktop PCs for enterprise and government users, saying they use \"100% domestically made\" components (Iris Deng/South China Morning Post)",
-      "url": "https://www.scmp.com/tech/tech-trends/article/3373435/no-intel-no-qualcomm-huawei-unveils-desktop-built-entirely-china-made-components",
-      "summary": "Iris Deng / South China Morning Post : Huawei unveils HarmonyOS-powered Qinyun HM650 series desktop PCs for enterprise and government users, saying they use &ldquo;100% domestically made&rdquo; components &mdash; Huawei Technologies has launched its first desktop computer powered by its proprietary operating system, HarmonyOS &hellip;",
-      "description_html": "<A HREF=\"https://www.scmp.com/tech/tech-trends/article/3373435/no-intel-no-qualcomm-huawei-unveils-desktop-built-entirely-china-made-components\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p3#a261107p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Iris Deng / <A HREF=\"http://www.scmp.com/\">South China Morning Post</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.scmp.com/tech/tech-trends/article/3373435/no-intel-no-qualcomm-huawei-unveils-desktop-built-entirely-china-made-components\">Huawei unveils HarmonyOS-powered Qinyun HM650 series desktop PCs for enterprise and government users, saying they use &ldquo;100% domestically made&rdquo; components</A></B></SPAN>&nbsp; &mdash;&nbsp; Huawei Technologies has launched its first desktop computer powered by its proprietary operating system, HarmonyOS &hellip; </P>",
-      "published_at": "2026-11-07T06:25:07.000Z",
-      "discovery_url": "https://www.techmeme.com/261107/p3",
-      "direct_source_url": "https://www.scmp.com/tech/tech-trends/article/3373435/no-intel-no-qualcomm-huawei-unveils-desktop-built-entirely-china-made-components",
-      "publisher": "Iris Deng/South China Morning Post",
+      "title": "Global tablet shipments fell 23% YoY to 32M units in Q3 2026, their lowest level in nearly three years; Apple's iPad shipments fell 27.5% YoY to ~11.58M (Omdia)",
+      "url": "https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026",
+      "summary": "Omdia : Global tablet shipments fell 23% YoY to 32M units in Q3 2026, their lowest level in nearly three years; Apple's iPad shipments fell 27.5% YoY to ~11.58M &mdash; The global tablet market fell 23% year-over-year (YoY) to 32 million units in Q3 2026, marking its lowest shipment level in nearly three years &hellip;",
+      "description_html": "<A HREF=\"https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i6.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p6#a261107p6\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://omdia.tech.informa.com/\">Omdia</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026\">Global tablet shipments fell 23% YoY to 32M units in Q3 2026, their lowest level in nearly three years; Apple's iPad shipments fell 27.5% YoY to ~11.58M</A></B></SPAN>&nbsp; &mdash;&nbsp; The global tablet market fell 23% year-over-year (YoY) to 32 million units in Q3 2026, marking its lowest shipment level in nearly three years &hellip; </P>",
+      "published_at": "2026-11-07T07:30:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p6",
+      "direct_source_url": "https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026",
+      "publisher": "Omdia",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 6,
       "collection_mode": "rss",
-      "score": 7.43
+      "score": 7.321
     },
     {
       "source": "Hacker News",
@@ -279,63 +299,43 @@
       "summary": "",
       "published_at": "2026-11-06T13:35:27.000Z",
       "engagement": {
-        "score": 344,
-        "comments": 233
+        "score": 353,
+        "comments": 243
       },
       "collection_mode": "api",
-      "score": 7.399
+      "score": 7.245
     },
     {
-      "source": "Hacker News",
-      "publisher": "github.com",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 1,
-      "title": "Claude Code sends your email address to websites",
-      "url": "https://github.com/anthropics/claude-code/issues/107757",
-      "direct_source_url": "https://github.com/anthropics/claude-code/issues/107757",
-      "discovery_url": "https://news.ycombinator.com/item?id=50385272",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50385272",
-      "summary": "",
-      "published_at": "2026-11-05T22:17:15.000Z",
-      "engagement": {
-        "score": 1578,
-        "comments": 504
-      },
-      "collection_mode": "api",
-      "score": 7.35
-    },
-    {
-      "title": "Axon invests $1.2B in Skydio, whose autonomous drones are used by public safety agencies, the US military, and 32 allied nations, at a $5.2B pre-money valuation (Carly Page/Resilience Media)",
-      "url": "https://resiliencemedia.co/axon-invests-1-2bn-in-skydio-after-companies-reject-acquisition/",
-      "summary": "Carly Page / Resilience Media : Axon invests $1.2B in Skydio, whose autonomous drones are used by public safety agencies, the US military, and 32 allied nations, at a $5.2B pre-money valuation &mdash; The investment gives Axon a minority stake in the US drone manufacturer and strengthens an exclusive public safety partnership &hellip;",
-      "description_html": "<A HREF=\"https://resiliencemedia.co/axon-invests-1-2bn-in-skydio-after-companies-reject-acquisition/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p2#a261107p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Carly Page / <A HREF=\"https://resiliencemedia.co/\">Resilience Media</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://resiliencemedia.co/axon-invests-1-2bn-in-skydio-after-companies-reject-acquisition/\">Axon invests $1.2B in Skydio, whose autonomous drones are used by public safety agencies, the US military, and 32 allied nations, at a $5.2B pre-money valuation</A></B></SPAN>&nbsp; &mdash;&nbsp; The investment gives Axon a minority stake in the US drone manufacturer and strengthens an exclusive public safety partnership &hellip; </P>",
-      "published_at": "2026-11-07T06:00:00.000Z",
-      "discovery_url": "https://www.techmeme.com/261107/p2",
-      "direct_source_url": "https://resiliencemedia.co/axon-invests-1-2bn-in-skydio-after-companies-reject-acquisition/",
-      "publisher": "Carly Page/Resilience Media",
+      "title": "Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July (Zack Whittaker/TechCrunch)",
+      "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+      "summary": "Zack Whittaker / TechCrunch : Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July &mdash; Security researchers have discovered hundreds of copies of a Chinese-made AI hacking tool publicly exposed to the internet for anyone to access &hellip;",
+      "description_html": "<A HREF=\"https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p5#a261107p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Zack Whittaker / <A HREF=\"http://techcrunch.com/\">TechCrunch</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/\">Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July</A></B></SPAN>&nbsp; &mdash;&nbsp; Security researchers have discovered hundreds of copies of a Chinese-made AI hacking tool publicly exposed to the internet for anyone to access &hellip; </P>",
+      "published_at": "2026-11-07T07:01:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p5",
+      "direct_source_url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+      "publisher": "Zack Whittaker/TechCrunch",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 7,
       "collection_mode": "rss",
-      "score": 7.332
+      "score": 7.221
     },
     {
-      "title": "Beijing-based Sand.ai, an AI startup specializing in video generation, raised a $200M Series A+, bringing its total funding over the past 10 months to $300M (Eudora Wang/DealStreetAsia)",
-      "url": "https://www.dealstreetasia.com/stories/sand-ai-enters-unicorn-club-500283/",
-      "summary": "Eudora Wang / DealStreetAsia : Beijing-based Sand.ai, an AI startup specializing in video generation, raised a $200M Series A+, bringing its total funding over the past 10 months to $300M &mdash; Sand.ai, a Chinese artificial intelligence (AI) startup specialising in video generation, announced on Thursday the completion &hellip;",
-      "description_html": "<A HREF=\"https://www.dealstreetasia.com/stories/sand-ai-enters-unicorn-club-500283/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p1#a261107p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Eudora Wang / <A HREF=\"http://www.dealstreetasia.com/\">DealStreetAsia</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.dealstreetasia.com/stories/sand-ai-enters-unicorn-club-500283/\">Beijing-based Sand.ai, an AI startup specializing in video generation, raised a $200M Series A+, bringing its total funding over the past 10 months to $300M</A></B></SPAN>&nbsp; &mdash;&nbsp; Sand.ai, a Chinese artificial intelligence (AI) startup specialising in video generation, announced on Thursday the completion &hellip; </P>",
-      "published_at": "2026-11-07T05:45:02.000Z",
-      "discovery_url": "https://www.techmeme.com/261107/p1",
-      "direct_source_url": "https://www.dealstreetasia.com/stories/sand-ai-enters-unicorn-club-500283/",
-      "publisher": "Eudora Wang/DealStreetAsia",
+      "title": "Shenzhen, home to tech giants and an illicit trade of smuggled chips and stolen iPhones, is clearing out its illegitimate markets ahead of the APEC summit (William Langley/Financial Times)",
+      "url": "https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862",
+      "summary": "William Langley / Financial Times : Shenzhen, home to tech giants and an illicit trade of smuggled chips and stolen iPhones, is clearing out its illegitimate markets ahead of the APEC summit &mdash; Shenzhen clears out illicit markets for smuggled chips and stolen iPhones as it prepares to host gathering of international leaders",
+      "description_html": "<A HREF=\"https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p4#a261107p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> William Langley / <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862\">Shenzhen, home to tech giants and an illicit trade of smuggled chips and stolen iPhones, is clearing out its illegitimate markets ahead of the APEC summit</A></B></SPAN>&nbsp; &mdash;&nbsp; Shenzhen clears out illicit markets for smuggled chips and stolen iPhones as it prepares to host gathering of international leaders</P>",
+      "published_at": "2026-11-07T06:35:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p4",
+      "direct_source_url": "https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862",
+      "publisher": "William Langley/Financial Times",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 8,
       "collection_mode": "rss",
-      "score": 7.242
+      "score": 7.123
     },
     {
       "source": "Hugging Face",
@@ -440,10 +440,10 @@
       "summary": "Large language models (LLMs) have shown increasing promise in research-level problem solving, yet a comprehensive collection of such problems is still missing, and evaluating them on research-level problems remains challenging. We introduce OpenFrontiers, a cross-disciplinary resource that combines a structured corpus of open research problems with a retrospective benchmark of recently resolved problems in mathematics. The corpus records problem statements, context, progress, and other information for 12,151 problems. The benchmark contains 200 problems, 110 resolved in 2026 and 90 still open, each with a Lean~4 statement checked by automated probes and two independent reviews; a subset HQ-50 further filters based on quality score, etc. Our evaluation protocol grades formal proofs with two independent checkers in an isolated sandbox under closed-book, frozen-retrieval, and live-web conditions. Evaluating seven LLM agents on the HQ-50 subset under a standardized budget, we find that closed-book rediscovery is rare, at most 7 of 40 resolved problems, whereas live-web success mostly reflects retrieval of published solutions. By linking a broad research-problem corpus to a formally gra",
       "published_at": "2026-10-26T20:00:00.000Z",
       "engagement": {
-        "upvotes": 3
+        "upvotes": 4
       },
       "collection_mode": "api",
-      "score": 5.881
+      "score": 5.929
     },
     {
       "source": "Hugging Face",

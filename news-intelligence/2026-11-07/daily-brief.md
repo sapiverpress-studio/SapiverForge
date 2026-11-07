@@ -9,7 +9,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 }
  This edition is a source index only and must not be sent as a newsletter.
 
-## 1. Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia)
+## 1. Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees "shaky" projects killed (Cecile Daurat/Bloomberg)
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -17,9 +17,9 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Sayan Chakraborty/Nikkei Asia](https://asia.nikkei.com/editor-s-picks/interview/india-s-it-lobby-chief-warns-grads-could-struggle-to-find-jobs-due-to-ai) · discovered via Techmeme · confidence 0%
+**Source:** [Cecile Daurat/Bloomberg](https://www.bloomberg.com/news/newsletters/2026-11-06/data-center-pullback-may-shield-real-economy-from-ai-bubble) · discovered via Techmeme · confidence 0%
 
-## 2. Libghostty 1.0
+## 2. Need for Speed Underground 2 online in the browser
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -27,7 +27,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [mitchellh.com](https://mitchellh.com/writing/libghostty-1-0) · discovered via Hacker News · confidence 0%
+**Source:** [nfsu2.xyz](https://nfsu2.xyz/) · discovered via Hacker News · confidence 0%
 
 ## 3. Tools Need Not Speak in Text: Latent Context Compression for Agents
 

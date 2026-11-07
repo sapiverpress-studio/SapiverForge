@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-07T12:54:18.855Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 377,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 205,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 378,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 256,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 2343,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "mitchellh.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "Libghostty 1.0",
+      "url": "https://mitchellh.com/writing/libghostty-1-0",
+      "direct_source_url": "https://mitchellh.com/writing/libghostty-1-0",
+      "discovery_url": "https://news.ycombinator.com/item?id=50399933",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50399933",
+      "summary": "",
+      "published_at": "2026-11-06T23:30:52.000Z",
+      "engagement": {
+        "score": 730,
+        "comments": 121
+      },
+      "collection_mode": "api",
+      "score": 8.132
+    },
+    {
+      "title": "Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia)",
+      "url": "https://asia.nikkei.com/editor-s-picks/interview/india-s-it-lobby-chief-warns-grads-could-struggle-to-find-jobs-due-to-ai",
+      "summary": "Sayan Chakraborty / Nikkei Asia : Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul &mdash; BENGALURU &mdash; Recent college graduates in India could struggle to land technology jobs as companies automate entry-level coding &hellip;",
+      "description_html": "<A HREF=\"https://asia.nikkei.com/editor-s-picks/interview/india-s-it-lobby-chief-warns-grads-could-struggle-to-find-jobs-due-to-ai\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i8.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p8#a261107p8\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Sayan Chakraborty / <A HREF=\"https://asia.nikkei.com/\">Nikkei Asia</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://asia.nikkei.com/editor-s-picks/interview/india-s-it-lobby-chief-warns-grads-could-struggle-to-find-jobs-due-to-ai\">Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul</A></B></SPAN>&nbsp; &mdash;&nbsp; BENGALURU &mdash; Recent college graduates in India could struggle to land technology jobs as companies automate entry-level coding &hellip; </P>",
+      "published_at": "2026-11-07T11:40:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p8",
+      "direct_source_url": "https://asia.nikkei.com/editor-s-picks/interview/india-s-it-lobby-chief-warns-grads-could-struggle-to-find-jobs-due-to-ai",
+      "publisher": "Sayan Chakraborty/Nikkei Asia",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.048
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "hightouch.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+      "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+      "direct_source_url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+      "discovery_url": "https://news.ycombinator.com/item?id=50397429",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50397429",
+      "summary": "",
+      "published_at": "2026-11-06T19:48:51.000Z",
+      "engagement": {
+        "score": 507,
+        "comments": 121
+      },
+      "collection_mode": "api",
+      "score": 7.898
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "asahilinux.org",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 9,
+      "title": "Asahi Linux Progress Linux 7.3",
+      "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+      "direct_source_url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50401867",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50401867",
+      "summary": "",
+      "published_at": "2026-11-07T05:20:18.000Z",
+      "engagement": {
+        "score": 208,
+        "comments": 174
+      },
+      "collection_mode": "api",
+      "score": 7.855
+    },
+    {
+      "title": "How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies (Gillian Tett/Financial Times)",
+      "url": "https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7",
+      "summary": "Gillian Tett / Financial Times : How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies &mdash; Voter hostility to Big Tech helped shape the US midterms, and similar fears are spreading through the west.",
+      "description_html": "<A HREF=\"https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p7#a261107p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Gillian Tett / <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7\">How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies</A></B></SPAN>&nbsp; &mdash;&nbsp; Voter hostility to Big Tech helped shape the US midterms, and similar fears are spreading through the west.</P>",
+      "published_at": "2026-11-07T07:40:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p7",
+      "direct_source_url": "https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232?accessToken=zwAAAaG04JwkkdOvl1haM4FCqdODi5ogWrgSMg.MEUCIQCIovxjLVzUSHQWyCMTaYOm0TJDSd7ol5iVEl7H4vY1zQIgb9x_ne7L2NI491-fZw0UyShWOkqlydwm2Nt-FGuKvBc&sharetype=gift&token=d741a183-368c-48f8-b401-12390f56a3d7",
+      "publisher": "Gillian Tett/Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.802
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "planned-obsolescence.org",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "AI is dramatically accelerating AI research",
+      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+      "direct_source_url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+      "discovery_url": "https://news.ycombinator.com/item?id=50397994",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50397994",
+      "summary": "",
+      "published_at": "2026-11-06T20:27:23.000Z",
+      "engagement": {
+        "score": 329,
+        "comments": 291
+      },
+      "collection_mode": "api",
+      "score": 7.765
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "nbcnews.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "Tesla to wind down Cybertruck production",
+      "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+      "direct_source_url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+      "discovery_url": "https://news.ycombinator.com/item?id=50391456",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50391456",
+      "summary": "",
+      "published_at": "2026-11-06T12:13:51.000Z",
+      "engagement": {
+        "score": 1045,
+        "comments": 1898
+      },
+      "collection_mode": "api",
+      "score": 7.742
+    },
+    {
+      "title": "Global tablet shipments fell 23% YoY to 32M units in Q3 2026, their lowest level in nearly three years; Apple's iPad shipments fell 27.5% YoY to ~11.58M (Omdia)",
+      "url": "https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026",
+      "summary": "Omdia : Global tablet shipments fell 23% YoY to 32M units in Q3 2026, their lowest level in nearly three years; Apple's iPad shipments fell 27.5% YoY to ~11.58M &mdash; The global tablet market fell 23% year-over-year (YoY) to 32 million units in Q3 2026, marking its lowest shipment level in nearly three years &hellip;",
+      "description_html": "<A HREF=\"https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i6.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p6#a261107p6\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://omdia.tech.informa.com/\">Omdia</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026\">Global tablet shipments fell 23% YoY to 32M units in Q3 2026, their lowest level in nearly three years; Apple's iPad shipments fell 27.5% YoY to ~11.58M</A></B></SPAN>&nbsp; &mdash;&nbsp; The global tablet market fell 23% year-over-year (YoY) to 32 million units in Q3 2026, marking its lowest shipment level in nearly three years &hellip; </P>",
+      "published_at": "2026-11-07T07:30:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p6",
+      "direct_source_url": "https://omdia.tech.informa.com/pr/2026/nov/global-tablet-shipments-fall-23percent-to-32-million-in-q3-2026",
+      "publisher": "Omdia",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.715
+    },
+    {
+      "title": "Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July (Zack Whittaker/TechCrunch)",
+      "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+      "summary": "Zack Whittaker / TechCrunch : Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July &mdash; Security researchers have discovered hundreds of copies of a Chinese-made AI hacking tool publicly exposed to the internet for anyone to access &hellip;",
+      "description_html": "<A HREF=\"https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p5#a261107p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Zack Whittaker / <A HREF=\"http://techcrunch.com/\">TechCrunch</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/\">Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July</A></B></SPAN>&nbsp; &mdash;&nbsp; Security researchers have discovered hundreds of copies of a Chinese-made AI hacking tool publicly exposed to the internet for anyone to access &hellip; </P>",
+      "published_at": "2026-11-07T07:01:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p5",
+      "direct_source_url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+      "publisher": "Zack Whittaker/TechCrunch",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.615
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "pwn.ai",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 8,
+      "title": "Firecracker VM Escape: PwnEscape Part 2",
+      "url": "https://pwn.ai/blog/firecracker-escape",
+      "direct_source_url": "https://pwn.ai/blog/firecracker-escape",
+      "discovery_url": "https://news.ycombinator.com/item?id=50397219",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50397219",
+      "summary": "",
+      "published_at": "2026-11-06T19:33:38.000Z",
+      "engagement": {
+        "score": 254,
+        "comments": 110
+      },
+      "collection_mode": "api",
+      "score": 7.567
+    },
+    {
+      "title": "Shenzhen, home to tech giants and an illicit trade of smuggled chips and stolen iPhones, is clearing out its illegitimate markets ahead of the APEC summit (William Langley/Financial Times)",
+      "url": "https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862",
+      "summary": "William Langley / Financial Times : Shenzhen, home to tech giants and an illicit trade of smuggled chips and stolen iPhones, is clearing out its illegitimate markets ahead of the APEC summit &mdash; Shenzhen clears out illicit markets for smuggled chips and stolen iPhones as it prepares to host gathering of international leaders",
+      "description_html": "<A HREF=\"https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p4#a261107p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> William Langley / <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862\">Shenzhen, home to tech giants and an illicit trade of smuggled chips and stolen iPhones, is clearing out its illegitimate markets ahead of the APEC summit</A></B></SPAN>&nbsp; &mdash;&nbsp; Shenzhen clears out illicit markets for smuggled chips and stolen iPhones as it prepares to host gathering of international leaders</P>",
+      "published_at": "2026-11-07T06:35:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p4",
+      "direct_source_url": "https://www.ft.com/content/ea2ab632-1f5c-4e22-8fe2-f513e36a6862",
+      "publisher": "William Langley/Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.517
+    },
+    {
+      "title": "Huawei unveils HarmonyOS-powered Qinyun HM650 series desktop PCs for enterprise and government users, saying they use \"100% domestically made\" components (Iris Deng/South China Morning Post)",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3373435/no-intel-no-qualcomm-huawei-unveils-desktop-built-entirely-china-made-components",
+      "summary": "Iris Deng / South China Morning Post : Huawei unveils HarmonyOS-powered Qinyun HM650 series desktop PCs for enterprise and government users, saying they use &ldquo;100% domestically made&rdquo; components &mdash; Huawei Technologies has launched its first desktop computer powered by its proprietary operating system, HarmonyOS &hellip;",
+      "description_html": "<A HREF=\"https://www.scmp.com/tech/tech-trends/article/3373435/no-intel-no-qualcomm-huawei-unveils-desktop-built-entirely-china-made-components\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p3#a261107p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Iris Deng / <A HREF=\"http://www.scmp.com/\">South China Morning Post</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.scmp.com/tech/tech-trends/article/3373435/no-intel-no-qualcomm-huawei-unveils-desktop-built-entirely-china-made-components\">Huawei unveils HarmonyOS-powered Qinyun HM650 series desktop PCs for enterprise and government users, saying they use &ldquo;100% domestically made&rdquo; components</A></B></SPAN>&nbsp; &mdash;&nbsp; Huawei Technologies has launched its first desktop computer powered by its proprietary operating system, HarmonyOS &hellip; </P>",
+      "published_at": "2026-11-07T06:25:07.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p3",
+      "direct_source_url": "https://www.scmp.com/tech/tech-trends/article/3373435/no-intel-no-qualcomm-huawei-unveils-desktop-built-entirely-china-made-components",
+      "publisher": "Iris Deng/South China Morning Post",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.43
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "blog.google",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 7,
+      "title": "Gemini Omni 1.2 Flash",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "direct_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50392118",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50392118",
+      "summary": "",
+      "published_at": "2026-11-06T13:35:27.000Z",
+      "engagement": {
+        "score": 344,
+        "comments": 233
+      },
+      "collection_mode": "api",
+      "score": 7.399
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "Claude Code sends your email address to websites",
+      "url": "https://github.com/anthropics/claude-code/issues/107757",
+      "direct_source_url": "https://github.com/anthropics/claude-code/issues/107757",
+      "discovery_url": "https://news.ycombinator.com/item?id=50385272",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50385272",
+      "summary": "",
+      "published_at": "2026-11-05T22:17:15.000Z",
+      "engagement": {
+        "score": 1578,
+        "comments": 504
+      },
+      "collection_mode": "api",
+      "score": 7.35
+    },
+    {
+      "title": "Axon invests $1.2B in Skydio, whose autonomous drones are used by public safety agencies, the US military, and 32 allied nations, at a $5.2B pre-money valuation (Carly Page/Resilience Media)",
+      "url": "https://resiliencemedia.co/axon-invests-1-2bn-in-skydio-after-companies-reject-acquisition/",
+      "summary": "Carly Page / Resilience Media : Axon invests $1.2B in Skydio, whose autonomous drones are used by public safety agencies, the US military, and 32 allied nations, at a $5.2B pre-money valuation &mdash; The investment gives Axon a minority stake in the US drone manufacturer and strengthens an exclusive public safety partnership &hellip;",
+      "description_html": "<A HREF=\"https://resiliencemedia.co/axon-invests-1-2bn-in-skydio-after-companies-reject-acquisition/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p2#a261107p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Carly Page / <A HREF=\"https://resiliencemedia.co/\">Resilience Media</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://resiliencemedia.co/axon-invests-1-2bn-in-skydio-after-companies-reject-acquisition/\">Axon invests $1.2B in Skydio, whose autonomous drones are used by public safety agencies, the US military, and 32 allied nations, at a $5.2B pre-money valuation</A></B></SPAN>&nbsp; &mdash;&nbsp; The investment gives Axon a minority stake in the US drone manufacturer and strengthens an exclusive public safety partnership &hellip; </P>",
+      "published_at": "2026-11-07T06:00:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p2",
+      "direct_source_url": "https://resiliencemedia.co/axon-invests-1-2bn-in-skydio-after-companies-reject-acquisition/",
+      "publisher": "Carly Page/Resilience Media",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.332
+    },
+    {
+      "title": "Beijing-based Sand.ai, an AI startup specializing in video generation, raised a $200M Series A+, bringing its total funding over the past 10 months to $300M (Eudora Wang/DealStreetAsia)",
+      "url": "https://www.dealstreetasia.com/stories/sand-ai-enters-unicorn-club-500283/",
+      "summary": "Eudora Wang / DealStreetAsia : Beijing-based Sand.ai, an AI startup specializing in video generation, raised a $200M Series A+, bringing its total funding over the past 10 months to $300M &mdash; Sand.ai, a Chinese artificial intelligence (AI) startup specialising in video generation, announced on Thursday the completion &hellip;",
+      "description_html": "<A HREF=\"https://www.dealstreetasia.com/stories/sand-ai-enters-unicorn-club-500283/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p1#a261107p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Eudora Wang / <A HREF=\"http://www.dealstreetasia.com/\">DealStreetAsia</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.dealstreetasia.com/stories/sand-ai-enters-unicorn-club-500283/\">Beijing-based Sand.ai, an AI startup specializing in video generation, raised a $200M Series A+, bringing its total funding over the past 10 months to $300M</A></B></SPAN>&nbsp; &mdash;&nbsp; Sand.ai, a Chinese artificial intelligence (AI) startup specialising in video generation, announced on Thursday the completion &hellip; </P>",
+      "published_at": "2026-11-07T05:45:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p1",
+      "direct_source_url": "https://www.dealstreetasia.com/stories/sand-ai-enters-unicorn-club-500283/",
+      "publisher": "Eudora Wang/DealStreetAsia",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.242
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+      "url": "https://huggingface.co/papers/2611.06500",
+      "direct_source_url": "https://huggingface.co/papers/2611.06500",
+      "discovery_url": "https://huggingface.co/papers/2611.06500",
+      "link_quality": "original",
+      "summary": "Large language model (LLM) agents typically append raw tool outputs to their context. Over multi-step interactions, long and noisy observations incur substantial context overhead and dilute the agent's attention to task-relevant information. Existing token pruning and summarization methods remain constrained by discrete text representations, limiting the achievable compression ratios. In this work, we challenge the prevailing assumption that agents must consume tool observations as explicit text tokens. To this end, we propose Coca-Cola, a continuous latent context compression model for LLM agents. Coca-Cola compresses tool observations into latent tokens and embeds them into the input embedding space of the agent. We further introduce Action-Preserving Training, which aligns the agent's next-action distributions under full and compressed observations. This trains the compression model to learn action-sufficient latent tokens that retain decision-critical information. Experiments with web-search agents on four QA benchmarks and two model families show that Coca-Cola reduces the agent's token consumption by 70.01%-89.24% and end-to-end runtime by 24.45%-55.97%, while consistently im",
+      "published_at": "2026-11-03T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 6.139
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "StepX-OPD: Rethinking Multi-Teacher On-Policy Distillation in Diffusion Models",
+      "url": "https://huggingface.co/papers/2611.04386",
+      "direct_source_url": "https://huggingface.co/papers/2611.04386",
+      "discovery_url": "https://huggingface.co/papers/2611.04386",
+      "link_quality": "original",
+      "summary": "A deployable text-to-image diffusion model must hold several capabilities at once, such as instruction following, text rendering and human preference, and must sample in a few steps. Capabilities and few-step sampling are built in separate stages: a full-step model first consolidates capabilities through multi-teacher on-policy distillation, then serves as a fixed teacher for step distillation. Every full-step model we evaluate scores lower once compressed, and the second stage cannot begin until the first finishes. We introduce StepX-OPD, which merges the two stages: one student acquires every capability while learning to sample in a few steps, so frozen specialists supervise it on the states its own rollout visits rather than on a longer trajectory it never runs. Because a decomposition of the rollout's KL weights velocity mismatch most heavily near the clean end, we also regress the student's velocity on the low-noise part of the rollout. Separately, we find that capability integration makes models write prompt words into images on prompts that never asked for text, and we give a variant that lowers it. We evaluate on SD3.5-Medium and FLUX.1-dev across instruction following, tex",
+      "published_at": "2026-11-02T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 4
+      },
+      "collection_mode": "api",
+      "score": 6.089
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+      "url": "https://huggingface.co/papers/2611.08483",
+      "direct_source_url": "https://huggingface.co/papers/2611.08483",
+      "discovery_url": "https://huggingface.co/papers/2611.08483",
+      "link_quality": "original",
+      "summary": "LLM-guided evolutionary search uses AI agents to improve programs for mathematical and computational problems by iteratively refining solutions and combining high-scoring methods. However, the process is often slow because the LLM generates a long textual chain of thought for each round and must repeat this generation many times to maintain population diversity. We present SwarmEvolve, a framework in which hundreds of low-cost agents per round work in swarms, reason in latent space without decoding to text, and share information by passing KV caches. Each swarm studies the problem from a different angle. A novelty filter keeps the most distinct agent ideas by directly measuring the distances between the agents' hidden state vectors. Crossover of ideas happens naturally in latent space, as a summarizer agent receives the combined KV caches of all swarm members. On 21 problems in mathematical discovery and scientific computing, SwarmEvolve gets the highest average score and needs a median of only 3 to 8 minutes to reach the best scores that other state-of-the-art frameworks reach in 60 minutes. On several problems, SwarmEvolve with Qwen3 8B improves on the solutions that AlphaEvolve",
+      "published_at": "2026-11-04T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 6
+      },
+      "collection_mode": "api",
+      "score": 6.083
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "Signed but Steerable: Measuring and Closing the Text-Vector Integrity Gap in Offline Retrieval-Augmented Generation",
+      "url": "https://huggingface.co/papers/2611.06498",
+      "direct_source_url": "https://huggingface.co/papers/2611.06498",
+      "discovery_url": "https://huggingface.co/papers/2611.06498",
+      "link_quality": "original",
+      "summary": "Offline retrieval-augmented generation (RAG) on edge devices is updated through signed knowledge packs that carry text and precomputed embedding vectors. A signature proves who published a pack, not that its vectors encode its text. We study this text-vector integrity gap. A verifier that recomputes vectors and accepts them within a cosine tolerance concedes a predictable share of queries to an attacker who controls the vectors: the hijack rate equals the distribution of angular retrieval margins at the tolerance (the margin law). Margins are small in five corpora and two embedding models, so an idealised tolerance at the level of floating-point noise leaves up to 5.5% of queries exposed (at most 1.2% in any corpus once exact duplicate documents are excluded), and a threshold calibrated from our CPU INT8-FP32 comparison of a small embedding model (at the empirical 0.1% quantile of honest cosines) leaves 98-100% exposed; on a Raspberry Pi 5 running a local language model, such an attack lowers correct answers from 0.75 to 0.39. Integrity audits of compressed vector stores fare no better: on a FAISS product-quantisation index over 57,638 documents, tampered vectors that all pass the",
+      "published_at": "2026-11-04T08:32:04.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 6.059
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 6,
+      "title": "Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling",
+      "url": "https://huggingface.co/papers/2611.08237",
+      "direct_source_url": "https://huggingface.co/papers/2611.08237",
+      "discovery_url": "https://huggingface.co/papers/2611.08237",
+      "link_quality": "original",
+      "summary": "Mathematical modeling turns an open-ended real-world problem into assumptions, a model, a solution, and a defended recommendation, and its answers matter only if they are both close to a credible reference and physically feasible; existing benchmarks either score solver fragments or grade reports with an LLM judge, leaving those numbers unchecked. We introduce TB-MathModel (the Terminal-style Mathematical Modeling Bench), the first benchmark to make complete contest-style modeling problems agentic, verifiable, and terminal at once, over 18 real CUMCM and MCM problems (2023--2025). Each task ships the verbatim statement, official attachments, and figures in a containerized terminal; the agent returns one JSON artifact, scored on the numeric core of the final question against a reproduction of the Outstanding-award paper. Two design choices distinguish it: direction-aware, one-sided scoring, which never penalises beating the anchor, and two-layer feasibility verification---a programmatic gate over six decidable invariant forms plus 624 Lean~4 obligations---with a hard gate that zeroes infeasible answers. Each task is scored against a panel of human outstanding papers rather than one,",
+      "published_at": "2026-11-05T11:18:35.000Z",
+      "engagement": {
+        "upvotes": 9
+      },
+      "collection_mode": "api",
+      "score": 6
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "OpenFrontiers: A Collection of Open Research Problems and a Benchmark for Scientific Rediscovery",
+      "url": "https://huggingface.co/papers/2610.37739",
+      "direct_source_url": "https://huggingface.co/papers/2610.37739",
+      "discovery_url": "https://huggingface.co/papers/2610.37739",
+      "link_quality": "original",
+      "summary": "Large language models (LLMs) have shown increasing promise in research-level problem solving, yet a comprehensive collection of such problems is still missing, and evaluating them on research-level problems remains challenging. We introduce OpenFrontiers, a cross-disciplinary resource that combines a structured corpus of open research problems with a retrospective benchmark of recently resolved problems in mathematics. The corpus records problem statements, context, progress, and other information for 12,151 problems. The benchmark contains 200 problems, 110 resolved in 2026 and 90 still open, each with a Lean~4 statement checked by automated probes and two independent reviews; a subset HQ-50 further filters based on quality score, etc. Our evaluation protocol grades formal proofs with two independent checkers in an isolated sandbox under closed-book, frozen-retrieval, and live-web conditions. Evaluating seven LLM agents on the HQ-50 subset under a standardized budget, we find that closed-book rediscovery is rare, at most 7 of 40 resolved problems, whereas live-web success mostly reflects retrieval of published solutions. By linking a broad research-problem corpus to a formally gra",
+      "published_at": "2026-10-26T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 3
+      },
+      "collection_mode": "api",
+      "score": 5.881
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 7,
+      "title": "Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Readout",
+      "url": "https://huggingface.co/papers/2611.08376",
+      "direct_source_url": "https://huggingface.co/papers/2611.08376",
+      "discovery_url": "https://huggingface.co/papers/2611.08376",
+      "link_quality": "original",
+      "summary": "Linear attention compresses context into a fixed-size key-value state for linear-time training and constant-memory inference. Gated delta-rule models decay this state and erase its prediction for an incoming key before writing a new value; Gated DeltaNet-2 (GDN-2) generalizes this with channel-wise decay and decoupled, full-rank erase and write gates. However, we show that state updates are far less sensitive to erasure than to writes: key activation and unit normalization concentrate key energy onto a sparse subset of channels, whereas value writes scale all channels, so the erase gate can be parameterized at lower rank. Furthermore, slow-decaying state rows accumulate much larger norms than fast rows, dominating unweighted readout and forcing stronger write-time erasure to suppress interference. Guided by this analysis, we introduce Muir, which fuses all gates into a sensitivity-allocated low-rank projection, re-weights state rows with a matched-filter readout gate, and reinvests the saved parameters in a wider feed-forward network. Because standard chunkwise algorithms become numerically unstable at the large chunk sizes needed to saturate wide matrix units, we design a parallel",
+      "published_at": "2026-11-05T12:53:49.000Z",
+      "engagement": {
+        "upvotes": 6
+      },
+      "collection_mode": "api",
+      "score": 5.843
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 11,
+      "title": "On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer",
+      "url": "https://huggingface.co/papers/2611.06976",
+      "direct_source_url": "https://huggingface.co/papers/2611.06976",
+      "discovery_url": "https://huggingface.co/papers/2611.06976",
+      "link_quality": "original",
+      "summary": "Prefill-to-Autoregressive Cross-model Transfer (PACT), a form of latent communication between language models, combines a larger model's prompt representations with a smaller model's efficient generation, offering a promising way to balance capability and inference cost. However, existing systems provide limited support for independently evaluating large-small model collaboration, and improved task performance alone does not establish whether the receiver benefits from the sender's information. We introduce PLatour, an open-source PACT framework that connects frozen models through lightweight, zero-initialized linear bridges trained directly with task rewards and supports hybrid-attention architectures. PLatour significantly outperforms open-source baselines on generation tasks and surpasses Mostik's reported results on shared mathematics and coding benchmarks using a substantially smaller sender. However, controlled experiments show that the gains on some tasks can be reproduced by uninformative sender signals, self-communication, or receiver-only training. We find that trainable bridges can act as parameter-efficient adaptation mechanisms without exploiting useful sender informat",
+      "published_at": "2026-11-04T08:33:47.000Z",
+      "engagement": {
+        "upvotes": 13
+      },
+      "collection_mode": "api",
+      "score": 5.673
+    }
+  ]
+}

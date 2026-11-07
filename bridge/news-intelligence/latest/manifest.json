@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-11-06",
-  "generated_at": "2026-11-06T14:11:45.630Z",
+  "date": "2026-11-07",
+  "generated_at": "2026-11-07T12:54:19.032Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 500,
+      "elapsed_ms": 377,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,14 +23,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 254,
+      "elapsed_ms": 205,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 270,
+      "elapsed_ms": 378,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -38,7 +38,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 197,
+      "elapsed_ms": 256,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1737,
+      "elapsed_ms": 2343,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -60,59 +60,58 @@
   ],
   "release_blockers": [
     "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
-    "Overall confidence 0% is below the 78% release threshold.",
-    "1 selected story has only a homepage, profile or invalid publication link."
+    "Overall confidence 0% is below the 78% release threshold."
   ],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-06",
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-07",
   "overall_confidence": 0,
   "stories": [
     {
       "category": "lead",
-      "headline": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)",
+      "headline": "Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia)",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "Eric Geller/Cybersecurity Dive",
+      "source": "Sayan Chakraborty/Nikkei Asia",
       "discovered_via": "Techmeme",
-      "source_title": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)",
-      "url": "https://www.cybersecuritydive.com/news/congress-cybersecurity-democrats-agenda-cisa-ai/873883/",
-      "discovery_url": "https://www.techmeme.com/261106/p11",
+      "source_title": "Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia)",
+      "url": "https://asia.nikkei.com/editor-s-picks/interview/india-s-it-lobby-chief-warns-grads-could-struggle-to-find-jobs-due-to-ai",
+      "discovery_url": "https://www.techmeme.com/261107/p8",
       "link_quality": "original",
-      "published_at": "2026-11-06T13:20:44.000Z",
-      "discovery_score": 8.065
+      "published_at": "2026-11-07T11:40:01.000Z",
+      "discovery_score": 8.048
     },
     {
       "category": "worth-knowing",
-      "headline": "sshole",
+      "headline": "Libghostty 1.0",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "sshhole.com",
+      "source": "mitchellh.com",
       "discovered_via": "Hacker News",
-      "source_title": "sshole",
-      "url": "https://sshhole.com/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50378228",
+      "source_title": "Libghostty 1.0",
+      "url": "https://mitchellh.com/writing/libghostty-1-0",
+      "discovery_url": "https://news.ycombinator.com/item?id=50399933",
       "link_quality": "original",
-      "published_at": "2026-11-05T12:19:02.000Z",
-      "discovery_score": 8.122
+      "published_at": "2026-11-06T23:30:52.000Z",
+      "discovery_score": 8.132
     },
     {
       "category": "worth-knowing",
-      "headline": "Decoupled Predictive Decision Making: A Shared Conditional Predictor for Agents",
+      "headline": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
       "source": "Hugging Face",
       "discovered_via": "Hugging Face",
-      "source_title": "Decoupled Predictive Decision Making: A Shared Conditional Predictor for Agents",
-      "url": "https://huggingface.co/papers/2611.02075",
-      "discovery_url": "https://huggingface.co/papers/2611.02075",
+      "source_title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+      "url": "https://huggingface.co/papers/2611.06500",
+      "discovery_url": "https://huggingface.co/papers/2611.06500",
       "link_quality": "original",
-      "published_at": "2026-10-31T20:00:00.000Z",
-      "discovery_score": 6.3
+      "published_at": "2026-11-03T19:00:00.000Z",
+      "discovery_score": 6.139
     }
   ],
   "practical_takeaway": "Do not publish this edition until verification succeeds.",
@@ -125,21 +124,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 066",
-      "title": "My Secret Code Studio",
-      "summary": "Turn family words, facts and jokes into personalised symbol-code puzzles with difficulty levels, hints, scores and streaks.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-066/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-066/poster.png"
+      "label": "AI Inquisitive Parents · Day 067",
+      "title": "My Comic Strip Studio",
+      "summary": "Create named family characters, build a three-panel digital comic, add speech and narration, then save, print or download the finished story.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-067/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-067/poster.png"
     }
   },
   "social": {
-    "date": "2026-11-06",
-    "lead_headline": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)",
-    "facebook_post": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)",
+    "date": "2026-11-07",
+    "lead_headline": "Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia)",
+    "facebook_post": "Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia)",
     "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+    "tiktok_caption": "Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "4c2e7c9041988d39b29100d6e65658dfaf04bae574ed7336884433ccacf270bd"
+  "candidate_id": "56459154bb83c320af0187277f554340ecec07e11f0f0c1aa556ad3e97b2521d"
 }

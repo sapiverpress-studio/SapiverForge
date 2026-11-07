@@ -1,4 +1,4 @@
-# Sapiver Forge Daily Brief — 2026-11-06
+# Sapiver Forge Daily Brief — 2026-11-07
 
 Automated verification did not complete: Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {
   "error": {
@@ -9,7 +9,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 }
  This edition is a source index only and must not be sent as a newsletter.
 
-## 1. Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)
+## 1. Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia)
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -17,19 +17,9 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Eric Geller/Cybersecurity Dive](https://www.cybersecuritydive.com/news/congress-cybersecurity-democrats-agenda-cisa-ai/873883/) · discovered via Techmeme · confidence 0%
+**Source:** [Sayan Chakraborty/Nikkei Asia](https://asia.nikkei.com/editor-s-picks/interview/india-s-it-lobby-chief-warns-grads-could-struggle-to-find-jobs-due-to-ai) · discovered via Techmeme · confidence 0%
 
-## 2. sshole
-
-**Confirmed:** Headline collected from the named source; claim verification is incomplete.
-
-**Why it matters:** Human review required before any interpretation or distribution.
-
-**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
-
-**Source:** [sshhole.com](https://sshhole.com/) · discovered via Hacker News · confidence 0%
-
-## 3. Decoupled Predictive Decision Making: A Shared Conditional Predictor for Agents
+## 2. Libghostty 1.0
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -37,7 +27,17 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Hugging Face](https://huggingface.co/papers/2611.02075) · confidence 0%
+**Source:** [mitchellh.com](https://mitchellh.com/writing/libghostty-1-0) · discovered via Hacker News · confidence 0%
+
+## 3. Tools Need Not Speak in Text: Latent Context Compression for Agents
+
+**Confirmed:** Headline collected from the named source; claim verification is incomplete.
+
+**Why it matters:** Human review required before any interpretation or distribution.
+
+**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
+
+**Source:** [Hugging Face](https://huggingface.co/papers/2611.06500) · confidence 0%
 
 ## Practical takeaway
 

@@ -53,70 +53,72 @@
   "healthy_source_count": 3,
   "human_approval_required": true,
   "approved_for_automatic_distribution": false,
-  "newsletter_ready_for_human_approval": false,
-  "quality_status": "blocked",
+  "newsletter_ready_for_human_approval": true,
+  "quality_status": "ready_with_warnings",
   "quality_warnings": [
-    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+    "Reuters discovery endpoint returned 401 and Sifted discovery returned 404; Reuters articles were reviewed manually on its publisher site, rather than through the failed feed.",
+    "The OpenAI financing item relies on Reuters reporting and its sources; reported transaction terms were not independently audited.",
+    "The Coca-Cola efficiency figures are claims from an arXiv preprint and are not independent production benchmarks."
   ],
-  "release_blockers": [
-    "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
-    "Overall confidence 0% is below the 78% release threshold.",
-    "1 selected story has only a homepage, profile or invalid publication link."
-  ],
+  "release_blockers": [],
   "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-07",
-  "overall_confidence": 0,
+  "overall_confidence": 0.93,
   "stories": [
     {
       "category": "lead",
-      "headline": "Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees \"shaky\" projects killed (Cecile Daurat/Bloomberg)",
-      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
-      "why_it_matters": "Human review required before any interpretation or distribution.",
-      "interpretation": "No Sapiver Forge interpretation generated.",
-      "confidence": 0,
-      "source": "Cecile Daurat/Bloomberg",
-      "discovered_via": "Techmeme",
-      "source_title": "Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees \"shaky\" projects killed (Cecile Daurat/Bloomberg)",
-      "url": "https://www.bloomberg.com/news/newsletters/2026-11-06/data-center-pullback-may-shield-real-economy-from-ai-bubble",
-      "discovery_url": "https://www.techmeme.com/261107/p11",
+      "headline": "US data-centre backlash creates uncertainty for AI construction plans",
+      "confirmed_fact": "Reuters reported on 4 November that opponents of new data centres gained political influence in several US state elections. Goldman Sachs analysts suggested temporary pauses could affect around 45% of planned US capacity expansion, but the scale and duration of any restrictions remain uncertain.",
+      "why_it_matters": "More AI infrastructure is not simply a question of chip availability. Electricity, water, planning permission and local support may affect the pace and cost of building capacity.",
+      "interpretation": "For businesses relying on AI, avoid assuming either uninterrupted expansion or an imminent shortage. Monitor service pricing and availability, and keep a workable fallback for essential tasks.",
+      "confidence": 0.95,
+      "source": "Reuters",
+      "source_title": "US midterm results underscore the power of data-centre opponents",
+      "url": "https://www.reuters.com/world/us/trumps-midterm-drubbing-demonstrates-power-data-centre-opponents-2026-11-04/",
       "link_quality": "original",
-      "published_at": "2026-11-07T16:35:01.000Z",
-      "discovery_score": 8.099
+      "published_at": "2026-11-04T09:57:00Z"
     },
     {
-      "category": "worth-knowing",
-      "headline": "Need for Speed Underground 2 online in the browser",
-      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
-      "why_it_matters": "Human review required before any interpretation or distribution.",
-      "interpretation": "No Sapiver Forge interpretation generated.",
-      "confidence": 0,
-      "source": "nfsu2.xyz",
-      "discovered_via": "Hacker News",
-      "source_title": "Need for Speed Underground 2 online in the browser",
-      "url": "https://nfsu2.xyz/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50403052",
+      "category": "finance",
+      "headline": "Reuters reports an initial $11 billion OpenAI financing at a $1.25 trillion valuation",
+      "confirmed_fact": "On 6 November, Reuters reported, citing a person familiar with the matter, that OpenAI had closed $11 billion in new financing as an initial portion of a larger round valuing it at $1.25 trillion. Reuters cited investors who said the financing was below an earlier target and valuation.",
+      "why_it_matters": "Large capital commitments do not remove the need for AI providers to demonstrate sustainable economics. Reported valuations are not a measure of how well an individual AI product will serve customers.",
+      "interpretation": "Compare paid AI services on reliability, task quality, control and total operating cost. Avoid making a critical workflow dependent on one vendor because of its fundraising headline.",
+      "confidence": 0.94,
+      "source": "Reuters",
+      "source_title": "OpenAI gets $11 billion funding at $1.25 trillion valuation, source says",
+      "url": "https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06/",
       "link_quality": "original",
-      "published_at": "2026-11-07T09:36:36.000Z",
-      "discovery_score": 8.319
+      "published_at": "2026-11-06T21:12:00Z"
     },
     {
-      "category": "worth-knowing",
-      "headline": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
-      "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
-      "why_it_matters": "Human review required before any interpretation or distribution.",
-      "interpretation": "No Sapiver Forge interpretation generated.",
-      "confidence": 0,
-      "source": "Hugging Face",
-      "discovered_via": "Hugging Face",
+      "category": "infrastructure",
+      "headline": "Google takes over a Wyoming data-centre site after announcing a $17 billion project",
+      "confirmed_fact": "Reuters reported on 6 November that Google acquired a southeast Wyoming data-centre site from AI infrastructure company Crusoe. Google had announced a $17 billion investment in the project the previous day. Reuters said the site transaction price was not disclosed.",
+      "why_it_matters": "New construction investment continues alongside political and planning concerns. Capital announcements and actual operational capacity are distinct milestones.",
+      "interpretation": "When assessing the AI infrastructure boom, distinguish announced budgets, acquired land, permitted construction and commissioned data centres. They provide different evidence about supply coming online.",
+      "confidence": 0.97,
+      "source": "Reuters",
+      "source_title": "Google acquires Wyoming data center site from AI infrastructure firm Crusoe",
+      "url": "https://www.reuters.com/business/google-acquires-wyoming-data-center-site-ai-infrastructure-firm-crusoe-2026-11-06/",
+      "link_quality": "original",
+      "published_at": "2026-11-06T20:00:00Z"
+    },
+    {
+      "category": "research",
+      "headline": "Research proposes compressing AI agents’ tool results into latent tokens",
+      "confirmed_fact": "A 4 November arXiv preprint introduces a method called Coca-Cola for compressing tool observations into latent representations. Its authors report 70.01%–89.24% lower token consumption and 24.45%–55.97% shorter runtime on their tested web-search agent benchmarks.",
+      "why_it_matters": "Large tool outputs can waste context, delay decisions and increase operating costs. Research into compressed observations could make some multi-step AI agents more efficient.",
+      "interpretation": "The reported gains are from the authors’ benchmarks, not established production savings. An appropriate test would compare actual task completion, missed facts and cost against a conventional text-summary baseline.",
+      "confidence": 0.96,
+      "source": "arXiv (author preprint)",
       "source_title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
-      "url": "https://huggingface.co/papers/2611.06500",
-      "discovery_url": "https://huggingface.co/papers/2611.06500",
+      "url": "https://arxiv.org/abs/2611.06500",
       "link_quality": "original",
-      "published_at": "2026-11-03T19:00:00.000Z",
-      "discovery_score": 6.139
+      "published_at": "2026-11-04T13:32:36Z"
     }
   ],
-  "practical_takeaway": "Do not publish this edition until verification succeeds.",
-  "watch_next": "Re-run the intelligence workflow or review the source links manually.",
+  "practical_takeaway": "If a digital service matters to your income or daily operations, record its current cost and performance, document a fallback and test whether the proposed improvement works before changing the whole workflow.",
+  "watch_next": "Watch for actual state-level data-centre permitting decisions, confirmed construction progress in Wyoming, independently disclosed AI financing terms and outside replications of latent agent-compression benchmarks.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -134,12 +136,14 @@
   },
   "social": {
     "date": "2026-11-07",
-    "lead_headline": "Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees \"shaky\" projects killed (Cecile Daurat/Bloomberg)",
-    "facebook_post": "Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees \"shaky\" projects killed (Cecile Daurat/Bloomberg)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees \"shaky\" projects killed (Cecile Daurat/Bloomberg)",
-    "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees \"shaky\" projects killed (Cecile Daurat/Bloomberg). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees \"shaky\" projects killed (Cecile Daurat/Bloomberg). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+    "lead_headline": "US data-centre backlash creates uncertainty for AI construction plans",
+    "facebook_post": "AI data-centre growth has a new constraint: local approval. Reuters reports that opposition to new US projects gained political force, but the practical impact on construction is still uncertain.\n\nToday's Sapiver Forge Daily Brief also examines OpenAI's reported financing, Google's Wyoming investment and new AI-agent efficiency research.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/intelligence/2026-11-07/",
+    "pinterest_title": "AI data centres: investment, local approval and the real bottlenecks",
+    "pinterest_description": "The AI infrastructure story is not just about computing chips. We separate reported investment, local planning pressures and research findings. Read the 7 November Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/intelligence/2026-11-07/",
+    "tiktok_caption": "AI data-centre plans face tougher local scrutiny. Why it matters, and what remains uncertain. #SapiverForge #AIInfrastructure #Technology #Business",
+    "spoken_script": "New data centres need more than money and chips. Reuters reports that opponents of expansion gained influence in several US state elections, while analysts remain divided about how much construction could be delayed. For AI users, it is a reason to track costs and reliability, not a reason to panic. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "80c385a73c4502f29fd850a64f0316228bf91f3f23587db0d49f2a6776d0eda5"
+  "editorial_revision": "2026-11-07-manual-source-recovery-1",
+  "manual_recovery_from": "original generator failed with Gemini prepayment-credit exhaustion; manual publisher-source review",
+  "candidate_id": "c48e06b044303c30ec180c842f334c99f5ca3f5f7c27823a24115fdd4174618f"
 }

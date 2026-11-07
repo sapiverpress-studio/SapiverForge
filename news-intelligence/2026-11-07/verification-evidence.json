@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-07",
+  "method": "manual_publisher_article_and_preprint_review",
+  "reviewer": "ChatGPT",
+  "reviewed_at": "2026-11-07T16:40:00Z",
+  "confidence_scope": "Confidence scores refer to accuracy of attribution and paraphrase, not an independent confirmation of financing terms, future permitting outcomes or experimental effects.",
+  "sources": [
+    {
+      "url": "https://www.reuters.com/world/us/trumps-midterm-drubbing-demonstrates-power-data-centre-opponents-2026-11-04/",
+      "title": "Reuters: Data-centre opponents gain political influence after US midterms",
+      "published_at": "2026-11-04",
+      "checked_claims": [
+        "Reuters reported on 4 November that opponents of new data centres gained political influence in several US state elections. Goldman Sachs analysts suggested temporary pauses could affect around 45% of planned US capacity expansion, but the scale and duration of any restrictions remain uncertain."
+      ],
+      "limitations": [
+        "Goldman Sachs estimate is an analyst scenario, not a verified count of paused projects.",
+        "The potential effect of election results remains uncertain."
+      ]
+    },
+    {
+      "url": "https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06/",
+      "title": "OpenAI gets $11 billion funding at $1.25 trillion valuation, source says",
+      "published_at": "2026-11-06",
+      "checked_claims": [
+        "On 6 November, Reuters reported, citing a person familiar with the matter, that OpenAI had closed $11 billion in new financing as an initial portion of a larger round valuing it at $1.25 trillion. Reuters cited investors who said the financing was below an earlier target and valuation."
+      ],
+      "limitations": [
+        "Reuters attributes deal and valuation to informed sources; no independent review of final investment documentation."
+      ]
+    },
+    {
+      "url": "https://www.reuters.com/business/google-acquires-wyoming-data-center-site-ai-infrastructure-firm-crusoe-2026-11-06/",
+      "title": "Google acquires Wyoming data center site from AI infrastructure firm Crusoe",
+      "published_at": "2026-11-06",
+      "checked_claims": [
+        "Reuters reported on 6 November that Google acquired a southeast Wyoming data-centre site from AI infrastructure company Crusoe. Google had announced a $17 billion investment in the project the previous day. Reuters said the site transaction price was not disclosed."
+      ],
+      "limitations": [
+        "Reported $17 billion is an investment announcement, not evidence that the campus is operating or complete."
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.06500",
+      "title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+      "published_at": "2026-11-04",
+      "checked_claims": [
+        "A 4 November arXiv preprint introduces a method called Coca-Cola for compressing tool observations into latent representations. Its authors report 70.01%–89.24% lower token consumption and 24.45%–55.97% shorter runtime on their tested web-search agent benchmarks."
+      ],
+      "limitations": [
+        "Author preprint; results not independently replicated or proven in Sapiver Forge production."
+      ]
+    }
+  ],
+  "recovery": {
+    "original_candidate_id": "80c385a73c4502f29fd850a64f0316228bf91f3f23587db0d49f2a6776d0eda5",
+    "original_failure": "Gemini model credit depleted; Reuters 401 and Sifted 404 discovery feed failures; selected original stories were not sufficiently verified.",
+    "billing_resolved": false,
+    "additional_model_api_calls": false,
+    "human_release_required": true,
+    "original_newsletter_published": false
+  }
+}

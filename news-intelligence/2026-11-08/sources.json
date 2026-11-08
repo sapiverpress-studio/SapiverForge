@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-08T13:16:21.638Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 859,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 507,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 558,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 411,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 2312,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "hunch.net",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "The end of Microsoft Research's AI Frontiers group",
+      "url": "https://hunch.net/?p=13764006",
+      "direct_source_url": "https://hunch.net/?p=13764006",
+      "discovery_url": "https://news.ycombinator.com/item?id=50406563",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50406563",
+      "summary": "https://archive.is/AaY5O https://businessexaminer.ca/victoria-articles/item/microsoft...",
+      "published_at": "2026-11-07T18:02:17.000Z",
+      "engagement": {
+        "score": 472,
+        "comments": 282
+      },
+      "collection_mode": "api",
+      "score": 8.079
+    },
+    {
+      "title": "Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash (SemiAnalysis)",
+      "url": "https://newsletter.semianalysis.com/p/we-visited-chinas-stargate-in-inner",
+      "summary": "SemiAnalysis : Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash &mdash; A wind-powered 800MW campus, 120MW built within a year, a 5MW SST-native 800V DC pilot and a cooling design without central chillers",
+      "description_html": "<A HREF=\"https://newsletter.semianalysis.com/p/we-visited-chinas-stargate-in-inner\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261108/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261108/p7#a261108p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://newsletter.semianalysis.com/\">SemiAnalysis</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://newsletter.semianalysis.com/p/we-visited-chinas-stargate-in-inner\">Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash</A></B></SPAN>&nbsp; &mdash;&nbsp; A wind-powered 800MW campus, 120MW built within a year, a 5MW SST-native 800V DC pilot and a cooling design without central chillers</P>",
+      "published_at": "2026-11-08T11:00:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261108/p7",
+      "direct_source_url": "https://newsletter.semianalysis.com/p/we-visited-chinas-stargate-in-inner",
+      "publisher": "SemiAnalysis",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.005
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "blog.bosscher.ch",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "What I run on my $10 USD OpenStick homelab",
+      "url": "https://blog.bosscher.ch/posts/openstick/",
+      "direct_source_url": "https://blog.bosscher.ch/posts/openstick/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50406670",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50406670",
+      "summary": "",
+      "published_at": "2026-11-07T18:12:12.000Z",
+      "engagement": {
+        "score": 641,
+        "comments": 118
+      },
+      "collection_mode": "api",
+      "score": 7.895
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "caleb.software",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 8,
+      "title": "Goodbye Claude, Hello Pi",
+      "url": "https://caleb.software/posts/claude-to-pi.html",
+      "direct_source_url": "https://caleb.software/posts/claude-to-pi.html",
+      "discovery_url": "https://news.ycombinator.com/item?id=50410107",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50410107",
+      "summary": "",
+      "published_at": "2026-11-08T03:11:48.000Z",
+      "engagement": {
+        "score": 407,
+        "comments": 259
+      },
+      "collection_mode": "api",
+      "score": 7.87
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "theguardian.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "Apple’s grey list: Words and phrases your iPhone won’t help you spell",
+      "url": "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you",
+      "direct_source_url": "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you",
+      "discovery_url": "https://news.ycombinator.com/item?id=50406111",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50406111",
+      "summary": "",
+      "published_at": "2026-11-07T17:06:36.000Z",
+      "engagement": {
+        "score": 490,
+        "comments": 307
+      },
+      "collection_mode": "api",
+      "score": 7.77
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "apiiro.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "direct_source_url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "discovery_url": "https://news.ycombinator.com/item?id=50407882",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50407882",
+      "summary": "",
+      "published_at": "2026-11-07T20:45:32.000Z",
+      "engagement": {
+        "score": 447,
+        "comments": 314
+      },
+      "collection_mode": "api",
+      "score": 7.762
+    },
+    {
+      "title": "Major environmental groups are embracing AI to analyze climate data, track forest fires, and more, even as they warn of the environmental impact of data centers (Valerie Volcovici/Reuters)",
+      "url": "https://www.reuters.com/sustainability/cop/environmental-groups-embrace-ai-even-they-warn-data-center-impacts-2026-11-07/",
+      "summary": "Valerie Volcovici / Reuters : Major environmental groups are embracing AI to analyze climate data, track forest fires, and more, even as they warn of the environmental impact of data centers &mdash; Environmental groups worldwide are using artificial intelligence to analyze climate data, track forest fires and count endangered wildlife &hellip;",
+      "description_html": "<A HREF=\"https://www.reuters.com/sustainability/cop/environmental-groups-embrace-ai-even-they-warn-data-center-impacts-2026-11-07/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261108/i6.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261108/p6#a261108p6\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Valerie Volcovici / <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/sustainability/cop/environmental-groups-embrace-ai-even-they-warn-data-center-impacts-2026-11-07/\">Major environmental groups are embracing AI to analyze climate data, track forest fires, and more, even as they warn of the environmental impact of data centers</A></B></SPAN>&nbsp; &mdash;&nbsp; Environmental groups worldwide are using artificial intelligence to analyze climate data, track forest fires and count endangered wildlife &hellip; </P>",
+      "published_at": "2026-11-08T07:01:10.000Z",
+      "discovery_url": "https://www.techmeme.com/261108/p6",
+      "direct_source_url": "https://www.reuters.com/sustainability/cop/environmental-groups-embrace-ai-even-they-warn-data-center-impacts-2026-11-07/",
+      "publisher": "Valerie Volcovici/Reuters",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.759
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "nfsu2.xyz",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "Need for Speed Underground 2 online in the browser",
+      "url": "https://nfsu2.xyz/",
+      "direct_source_url": "https://nfsu2.xyz/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50403052",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50403052",
+      "summary": "",
+      "published_at": "2026-11-07T09:36:36.000Z",
+      "engagement": {
+        "score": 1034,
+        "comments": 257
+      },
+      "collection_mode": "api",
+      "score": 7.697
+    },
+    {
+      "title": "Internal documents leaked by Cisco workers angry over the company's ties to Israel's military show how it expanded its business as the war in Gaza dragged on (Alice Speri/The Guardian)",
+      "url": "https://www.theguardian.com/world/2026/nov/07/israel-intelligence-cisco-gaza-palestine",
+      "summary": "Alice Speri / The Guardian : Internal documents leaked by Cisco workers angry over the company's ties to Israel's military show how it expanded its business as the war in Gaza dragged on &mdash; Tech giant leaped to shore up relationship even as company was roiled by worker protest over its role in the war",
+      "description_html": "<A HREF=\"https://www.theguardian.com/world/2026/nov/07/israel-intelligence-cisco-gaza-palestine\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261108/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261108/p5#a261108p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Alice Speri / <A HREF=\"http://www.theguardian.com/\">The Guardian</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.theguardian.com/world/2026/nov/07/israel-intelligence-cisco-gaza-palestine\">Internal documents leaked by Cisco workers angry over the company's ties to Israel's military show how it expanded its business as the war in Gaza dragged on</A></B></SPAN>&nbsp; &mdash;&nbsp; Tech giant leaped to shore up relationship even as company was roiled by worker protest over its role in the war</P>",
+      "published_at": "2026-11-08T06:50:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261108/p5",
+      "direct_source_url": "https://www.theguardian.com/world/2026/nov/07/israel-intelligence-cisco-gaza-palestine",
+      "publisher": "Alice Speri/The Guardian",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.672
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "8rank.ai",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "Every Mac comes with an (undocumented) family member classifier",
+      "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+      "direct_source_url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+      "discovery_url": "https://news.ycombinator.com/item?id=50403097",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50403097",
+      "summary": "",
+      "published_at": "2026-11-07T09:46:03.000Z",
+      "engagement": {
+        "score": 758,
+        "comments": 407
+      },
+      "collection_mode": "api",
+      "score": 7.624
+    },
+    {
+      "title": "The crypto industry is bracing for a reckoning after Democrats won the US midterms and vowed to investigate the Trump family and its ties to the industry (Financial Times)",
+      "url": "https://www.ft.com/content/f1b98a61-4103-447c-bb9a-3dccc0819f61",
+      "summary": "Financial Times : The crypto industry is bracing for a reckoning after Democrats won the US midterms and vowed to investigate the Trump family and its ties to the industry &mdash; Democrats have vowed to start investigation into president's family after sweeping victory in midterms",
+      "description_html": "<A HREF=\"https://www.ft.com/content/f1b98a61-4103-447c-bb9a-3dccc0819f61\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261108/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261108/p4#a261108p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/f1b98a61-4103-447c-bb9a-3dccc0819f61\">The crypto industry is bracing for a reckoning after Democrats won the US midterms and vowed to investigate the Trump family and its ties to the industry</A></B></SPAN>&nbsp; &mdash;&nbsp; Democrats have vowed to start investigation into president's family after sweeping victory in midterms</P>",
+      "published_at": "2026-11-08T06:35:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261108/p4",
+      "direct_source_url": "https://www.ft.com/content/f1b98a61-4103-447c-bb9a-3dccc0819f61",
+      "publisher": "Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.581
+    },
+    {
+      "title": "Nous Research unveils Arete-27B, a post-trained Qwen3.8-27B model that reinforces Western values, saying the underlying Chinese model's bias layer is shallow (Nous Research)",
+      "url": "https://nousresearch.com/arete",
+      "summary": "Nous Research : Nous Research unveils Arete-27B, a post-trained Qwen3.8-27B model that reinforces Western values, saying the underlying Chinese model's bias layer is shallow &mdash; We post-trained over Alibaba's Qwen3.8-27B to reinforce Western values on a Chinese-trained model. We call this new model Arete-27B.",
+      "description_html": "<A HREF=\"https://nousresearch.com/arete\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261108/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261108/p3#a261108p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://nousresearch.com/\">Nous Research</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://nousresearch.com/arete\">Nous Research unveils Arete-27B, a post-trained Qwen3.8-27B model that reinforces Western values, saying the underlying Chinese model's bias layer is shallow</A></B></SPAN>&nbsp; &mdash;&nbsp; We post-trained over Alibaba's Qwen3.8-27B to reinforce Western values on a Chinese-trained model.&nbsp; We call this new model Arete-27B.</P>",
+      "published_at": "2026-11-08T06:20:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261108/p3",
+      "direct_source_url": "https://nousresearch.com/arete",
+      "publisher": "Nous Research",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.491
+    },
+    {
+      "title": "Beijing-based GenRobot AI, which develops equipment and software for collecting human demonstrations that can be used to train robots, raised a $100M Series A+ (TechNode)",
+      "url": "https://technode.com/",
+      "summary": "TechNode : Beijing-based GenRobot AI, which develops equipment and software for collecting human demonstrations that can be used to train robots, raised a $100M Series A+ &mdash; GenRobot AI, a Beijing-based company providing data infrastructure for robot development, has completed a $100 million Series A+ funding round.",
+      "description_html": "<P><A HREF=\"https://www.techmeme.com/261108/p2#a261108p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://technode.com/\">TechNode</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://technode.com/2026/11/02/robot-training-data-startup-genrobot-ai-raises-100-million-in-series-a-funding/\">Beijing-based GenRobot AI, which develops equipment and software for collecting human demonstrations that can be used to train robots, raised a $100M Series A+</A></B></SPAN>&nbsp; &mdash;&nbsp; GenRobot AI, a Beijing-based company providing data infrastructure for robot development, has completed a $100 million Series A+ funding round.</P>",
+      "published_at": "2026-11-08T06:05:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261108/p2",
+      "direct_source_url": "https://technode.com/",
+      "publisher": "TechNode",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.4
+    },
+    {
+      "title": "Filings: Apple saved $2.7B in taxes this year by routing up to $50B in profits through Singapore, exceeding the $2.6B in tax savings it achieved via Ireland (Financial Times)",
+      "url": "https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede",
+      "summary": "Financial Times : Filings: Apple saved $2.7B in taxes this year by routing up to $50B in profits through Singapore, exceeding the $2.6B in tax savings it achieved via Ireland &mdash; City-state overtakes Ireland as iPhone maker's biggest tax shelter according to new disclosures &mdash; Apple shaved $2.7bn off &hellip;",
+      "description_html": "<A HREF=\"https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261108/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261108/p1#a261108p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede\">Filings: Apple saved $2.7B in taxes this year by routing up to $50B in profits through Singapore, exceeding the $2.6B in tax savings it achieved via Ireland</A></B></SPAN>&nbsp; &mdash;&nbsp; City-state overtakes Ireland as iPhone maker's biggest tax shelter according to new disclosures&nbsp; &mdash;&nbsp; Apple shaved $2.7bn off &hellip; </P>",
+      "published_at": "2026-11-08T05:55:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261108/p1",
+      "direct_source_url": "https://www.ft.com/content/49453406-99f2-4f5b-8f5d-01dc8cac5ede",
+      "publisher": "Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.314
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "maxxbench.unlap.ai",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 10,
+      "title": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+      "url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+      "direct_source_url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50406222",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50406222",
+      "summary": "",
+      "published_at": "2026-11-07T17:19:00.000Z",
+      "engagement": {
+        "score": 334,
+        "comments": 91
+      },
+      "collection_mode": "api",
+      "score": 7.289
+    },
+    {
+      "title": "How a small, wealthy AI-safety network that organized in Signal chats grew into a coalition that beat the $100M super PAC Leading the Future in the midterms (Politico)",
+      "url": "https://www.politico.com/news/magazine/2026/11/06/ai-big-tech-2026-midterms-anthropic-openai-01152312",
+      "summary": "Politico : How a small, wealthy AI-safety network that organized in Signal chats grew into a coalition that beat the $100M super PAC Leading the Future in the midterms &mdash; For years, the policy debate over artificial intelligence belonged to those who counted progress in decades.",
+      "description_html": "<A HREF=\"https://www.politico.com/news/magazine/2026/11/06/ai-big-tech-2026-midterms-anthropic-openai-01152312\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261107/i18.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261107/p18#a261107p18\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.politico.com/\">Politico</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.politico.com/news/magazine/2026/11/06/ai-big-tech-2026-midterms-anthropic-openai-01152312\">How a small, wealthy AI-safety network that organized in Signal chats grew into a coalition that beat the $100M super PAC Leading the Future in the midterms</A></B></SPAN>&nbsp; &mdash;&nbsp; For years, the policy debate over artificial intelligence belonged to those who counted progress in decades.</P>",
+      "published_at": "2026-11-08T02:45:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261107/p18",
+      "direct_source_url": "https://www.politico.com/news/magazine/2026/11/06/ai-big-tech-2026-midterms-anthropic-openai-01152312",
+      "publisher": "Politico",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.102
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+      "url": "https://huggingface.co/papers/2611.06500",
+      "direct_source_url": "https://huggingface.co/papers/2611.06500",
+      "discovery_url": "https://huggingface.co/papers/2611.06500",
+      "link_quality": "original",
+      "summary": "Large language model (LLM) agents typically append raw tool outputs to their context. Over multi-step interactions, long and noisy observations incur substantial context overhead and dilute the agent's attention to task-relevant information. Existing token pruning and summarization methods remain constrained by discrete text representations, limiting the achievable compression ratios. In this work, we challenge the prevailing assumption that agents must consume tool observations as explicit text tokens. To this end, we propose Coca-Cola, a continuous latent context compression model for LLM agents. Coca-Cola compresses tool observations into latent tokens and embeds them into the input embedding space of the agent. We further introduce Action-Preserving Training, which aligns the agent's next-action distributions under full and compressed observations. This trains the compression model to learn action-sufficient latent tokens that retain decision-critical information. Experiments with web-search agents on four QA benchmarks and two model families show that Coca-Cola reduces the agent's token consumption by 70.01%-89.24% and end-to-end runtime by 24.45%-55.97%, while consistently im",
+      "published_at": "2026-11-03T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 5
+      },
+      "collection_mode": "api",
+      "score": 6.289
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "Signed but Steerable: Measuring and Closing the Text-Vector Integrity Gap in Offline Retrieval-Augmented Generation",
+      "url": "https://huggingface.co/papers/2611.06498",
+      "direct_source_url": "https://huggingface.co/papers/2611.06498",
+      "discovery_url": "https://huggingface.co/papers/2611.06498",
+      "link_quality": "original",
+      "summary": "Offline retrieval-augmented generation (RAG) on edge devices is updated through signed knowledge packs that carry text and precomputed embedding vectors. A signature proves who published a pack, not that its vectors encode its text. We study this text-vector integrity gap. A verifier that recomputes vectors and accepts them within a cosine tolerance concedes a predictable share of queries to an attacker who controls the vectors: the hijack rate equals the distribution of angular retrieval margins at the tolerance (the margin law). Margins are small in five corpora and two embedding models, so an idealised tolerance at the level of floating-point noise leaves up to 5.5% of queries exposed (at most 1.2% in any corpus once exact duplicate documents are excluded), and a threshold calibrated from our CPU INT8-FP32 comparison of a small embedding model (at the empirical 0.1% quantile of honest cosines) leaves 98-100% exposed; on a Raspberry Pi 5 running a local language model, such an attack lowers correct answers from 0.75 to 0.39. Integrity audits of compressed vector stores fare no better: on a FAISS product-quantisation index over 57,638 documents, tampered vectors that all pass the",
+      "published_at": "2026-11-04T08:32:04.000Z",
+      "engagement": {
+        "upvotes": 4
+      },
+      "collection_mode": "api",
+      "score": 6.169
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+      "url": "https://huggingface.co/papers/2611.08483",
+      "direct_source_url": "https://huggingface.co/papers/2611.08483",
+      "discovery_url": "https://huggingface.co/papers/2611.08483",
+      "link_quality": "original",
+      "summary": "LLM-guided evolutionary search uses AI agents to improve programs for mathematical and computational problems by iteratively refining solutions and combining high-scoring methods. However, the process is often slow because the LLM generates a long textual chain of thought for each round and must repeat this generation many times to maintain population diversity. We present SwarmEvolve, a framework in which hundreds of low-cost agents per round work in swarms, reason in latent space without decoding to text, and share information by passing KV caches. Each swarm studies the problem from a different angle. A novelty filter keeps the most distinct agent ideas by directly measuring the distances between the agents' hidden state vectors. Crossover of ideas happens naturally in latent space, as a summarizer agent receives the combined KV caches of all swarm members. On 21 problems in mathematical discovery and scientific computing, SwarmEvolve gets the highest average score and needs a median of only 3 to 8 minutes to reach the best scores that other state-of-the-art frameworks reach in 60 minutes. On several problems, SwarmEvolve with Qwen3 8B improves on the solutions that AlphaEvolve",
+      "published_at": "2026-11-04T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 9
+      },
+      "collection_mode": "api",
+      "score": 6.16
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "StepX-OPD: Rethinking Multi-Teacher On-Policy Distillation in Diffusion Models",
+      "url": "https://huggingface.co/papers/2611.04386",
+      "direct_source_url": "https://huggingface.co/papers/2611.04386",
+      "discovery_url": "https://huggingface.co/papers/2611.04386",
+      "link_quality": "original",
+      "summary": "A deployable text-to-image diffusion model must hold several capabilities at once, such as instruction following, text rendering and human preference, and must sample in a few steps. Capabilities and few-step sampling are built in separate stages: a full-step model first consolidates capabilities through multi-teacher on-policy distillation, then serves as a fixed teacher for step distillation. Every full-step model we evaluate scores lower once compressed, and the second stage cannot begin until the first finishes. We introduce StepX-OPD, which merges the two stages: one student acquires every capability while learning to sample in a few steps, so frozen specialists supervise it on the states its own rollout visits rather than on a longer trajectory it never runs. Because a decomposition of the rollout's KL weights velocity mismatch most heavily near the clean end, we also regress the student's velocity on the low-noise part of the rollout. Separately, we find that capability integration makes models write prompt words into images on prompts that never asked for text, and we give a variant that lowers it. We evaluate on SD3.5-Medium and FLUX.1-dev across instruction following, tex",
+      "published_at": "2026-11-02T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 4
+      },
+      "collection_mode": "api",
+      "score": 6.089
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 6,
+      "title": "Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling",
+      "url": "https://huggingface.co/papers/2611.08237",
+      "direct_source_url": "https://huggingface.co/papers/2611.08237",
+      "discovery_url": "https://huggingface.co/papers/2611.08237",
+      "link_quality": "original",
+      "summary": "Mathematical modeling turns an open-ended real-world problem into assumptions, a model, a solution, and a defended recommendation, and its answers matter only if they are both close to a credible reference and physically feasible; existing benchmarks either score solver fragments or grade reports with an LLM judge, leaving those numbers unchecked. We introduce TB-MathModel (the Terminal-style Mathematical Modeling Bench), the first benchmark to make complete contest-style modeling problems agentic, verifiable, and terminal at once, over 18 real CUMCM and MCM problems (2023--2025). Each task ships the verbatim statement, official attachments, and figures in a containerized terminal; the agent returns one JSON artifact, scored on the numeric core of the final question against a reproduction of the Outstanding-award paper. Two design choices distinguish it: direction-aware, one-sided scoring, which never penalises beating the anchor, and two-layer feasibility verification---a programmatic gate over six decidable invariant forms plus 624 Lean~4 obligations---with a hard gate that zeroes infeasible answers. Each task is scored against a panel of human outstanding papers rather than one,",
+      "published_at": "2026-11-05T11:18:35.000Z",
+      "engagement": {
+        "upvotes": 11
+      },
+      "collection_mode": "api",
+      "score": 6.04
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "OpenFrontiers: A Collection of Open Research Problems and a Benchmark for Scientific Rediscovery",
+      "url": "https://huggingface.co/papers/2610.37739",
+      "direct_source_url": "https://huggingface.co/papers/2610.37739",
+      "discovery_url": "https://huggingface.co/papers/2610.37739",
+      "link_quality": "original",
+      "summary": "Large language models (LLMs) have shown increasing promise in research-level problem solving, yet a comprehensive collection of such problems is still missing, and evaluating them on research-level problems remains challenging. We introduce OpenFrontiers, a cross-disciplinary resource that combines a structured corpus of open research problems with a retrospective benchmark of recently resolved problems in mathematics. The corpus records problem statements, context, progress, and other information for 12,151 problems. The benchmark contains 200 problems, 110 resolved in 2026 and 90 still open, each with a Lean~4 statement checked by automated probes and two independent reviews; a subset HQ-50 further filters based on quality score, etc. Our evaluation protocol grades formal proofs with two independent checkers in an isolated sandbox under closed-book, frozen-retrieval, and live-web conditions. Evaluating seven LLM agents on the HQ-50 subset under a standardized budget, we find that closed-book rediscovery is rare, at most 7 of 40 resolved problems, whereas live-web success mostly reflects retrieval of published solutions. By linking a broad research-problem corpus to a formally gra",
+      "published_at": "2026-10-26T20:00:00.000Z",
+      "engagement": {
+        "upvotes": 6
+      },
+      "collection_mode": "api",
+      "score": 6.003
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 7,
+      "title": "Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Readout",
+      "url": "https://huggingface.co/papers/2611.08376",
+      "direct_source_url": "https://huggingface.co/papers/2611.08376",
+      "discovery_url": "https://huggingface.co/papers/2611.08376",
+      "link_quality": "original",
+      "summary": "Linear attention compresses context into a fixed-size key-value state for linear-time training and constant-memory inference. Gated delta-rule models decay this state and erase its prediction for an incoming key before writing a new value; Gated DeltaNet-2 (GDN-2) generalizes this with channel-wise decay and decoupled, full-rank erase and write gates. However, we show that state updates are far less sensitive to erasure than to writes: key activation and unit normalization concentrate key energy onto a sparse subset of channels, whereas value writes scale all channels, so the erase gate can be parameterized at lower rank. Furthermore, slow-decaying state rows accumulate much larger norms than fast rows, dominating unweighted readout and forcing stronger write-time erasure to suppress interference. Guided by this analysis, we introduce Muir, which fuses all gates into a sensitivity-allocated low-rank projection, re-weights state rows with a matched-filter readout gate, and reinvests the saved parameters in a wider feed-forward network. Because standard chunkwise algorithms become numerically unstable at the large chunk sizes needed to saturate wide matrix units, we design a parallel",
+      "published_at": "2026-11-05T12:53:49.000Z",
+      "engagement": {
+        "upvotes": 12
+      },
+      "collection_mode": "api",
+      "score": 5.977
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 11,
+      "title": "On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer",
+      "url": "https://huggingface.co/papers/2611.06976",
+      "direct_source_url": "https://huggingface.co/papers/2611.06976",
+      "discovery_url": "https://huggingface.co/papers/2611.06976",
+      "link_quality": "original",
+      "summary": "Prefill-to-Autoregressive Cross-model Transfer (PACT), a form of latent communication between language models, combines a larger model's prompt representations with a smaller model's efficient generation, offering a promising way to balance capability and inference cost. However, existing systems provide limited support for independently evaluating large-small model collaboration, and improved task performance alone does not establish whether the receiver benefits from the sender's information. We introduce PLatour, an open-source PACT framework that connects frozen models through lightweight, zero-initialized linear bridges trained directly with task rewards and supports hybrid-attention architectures. PLatour significantly outperforms open-source baselines on generation tasks and surpasses Mostik's reported results on shared mathematics and coding benchmarks using a substantially smaller sender. However, controlled experiments show that the gains on some tasks can be reproduced by uninformative sender signals, self-communication, or receiver-only training. We find that trainable bridges can act as parameter-efficient adaptation mechanisms without exploiting useful sender informat",
+      "published_at": "2026-11-04T08:33:47.000Z",
+      "engagement": {
+        "upvotes": 15
+      },
+      "collection_mode": "api",
+      "score": 5.702
+    }
+  ]
+}

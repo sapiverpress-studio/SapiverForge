@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-11-08",
-  "generated_at": "2026-11-08T13:16:21.814Z",
+  "date": "2026-11-09",
+  "generated_at": "2026-11-09T16:06:23.440Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 859,
+      "elapsed_ms": 422,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,22 +23,22 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 507,
+      "elapsed_ms": 399,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 558,
+      "elapsed_ms": 600,
       "collection_mode": "api",
-      "original_link_count": 10
+      "original_link_count": 9
     },
     {
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 411,
+      "elapsed_ms": 458,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 2312,
+      "elapsed_ms": 2353,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -60,59 +60,58 @@
   ],
   "release_blockers": [
     "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
-    "Overall confidence 0% is below the 78% release threshold.",
-    "1 selected story has only a homepage, profile or invalid publication link."
+    "Overall confidence 0% is below the 78% release threshold."
   ],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-08",
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-09",
   "overall_confidence": 0,
   "stories": [
     {
       "category": "lead",
-      "headline": "Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash (SemiAnalysis)",
+      "headline": "An interview with ex-Shein Executive Chair Donald Tang who insists it was his decision to step down ahead of the troubled IPO, Shein's valuation rout, and more (Patrick Jenkins/Financial Times)",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "SemiAnalysis",
+      "source": "Patrick Jenkins/Financial Times",
       "discovered_via": "Techmeme",
-      "source_title": "Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash (SemiAnalysis)",
-      "url": "https://newsletter.semianalysis.com/p/we-visited-chinas-stargate-in-inner",
-      "discovery_url": "https://www.techmeme.com/261108/p7",
+      "source_title": "An interview with ex-Shein Executive Chair Donald Tang who insists it was his decision to step down ahead of the troubled IPO, Shein's valuation rout, and more (Patrick Jenkins/Financial Times)",
+      "url": "https://www.ft.com/content/109aa143-93b4-4b39-9ccd-4ae5a0cf3004",
+      "discovery_url": "https://www.techmeme.com/261109/p30",
       "link_quality": "original",
-      "published_at": "2026-11-08T11:00:01.000Z",
-      "discovery_score": 8.005
+      "published_at": "2026-11-09T16:01:27.000Z",
+      "discovery_score": 8.097
     },
     {
       "category": "worth-knowing",
-      "headline": "The end of Microsoft Research's AI Frontiers group",
+      "headline": "Nvidia CEO Jensen Huang's letter to staff about affair",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "hunch.net",
+      "source": "nvidianews.nvidia.com",
       "discovered_via": "Hacker News",
-      "source_title": "The end of Microsoft Research's AI Frontiers group",
-      "url": "https://hunch.net/?p=13764006",
-      "discovery_url": "https://news.ycombinator.com/item?id=50406563",
+      "source_title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+      "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+      "discovery_url": "https://news.ycombinator.com/item?id=50418016",
       "link_quality": "original",
-      "published_at": "2026-11-07T18:02:17.000Z",
-      "discovery_score": 8.079
+      "published_at": "2026-11-08T22:20:09.000Z",
+      "discovery_score": 8.46
     },
     {
       "category": "worth-knowing",
-      "headline": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+      "headline": "LowRAM: Low-Rank Keys and Amortised Values for Composable KV Cache Compression at Test-Time",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
       "source": "Hugging Face",
       "discovered_via": "Hugging Face",
-      "source_title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
-      "url": "https://huggingface.co/papers/2611.06500",
-      "discovery_url": "https://huggingface.co/papers/2611.06500",
+      "source_title": "LowRAM: Low-Rank Keys and Amortised Values for Composable KV Cache Compression at Test-Time",
+      "url": "https://huggingface.co/papers/2611.07025",
+      "discovery_url": "https://huggingface.co/papers/2611.07025",
       "link_quality": "original",
-      "published_at": "2026-11-03T19:00:00.000Z",
-      "discovery_score": 6.289
+      "published_at": "2026-11-04T14:00:06.000Z",
+      "discovery_score": 6.384
     }
   ],
   "practical_takeaway": "Do not publish this edition until verification succeeds.",
@@ -125,21 +124,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 068",
-      "title": "My Music Loop Studio",
-      "summary": "Build a personalised 16-step music loop with drums, bass and bells, adjust tempo and swing, then save or download the finished pattern.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-068/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-068/poster.png"
+      "label": "AI Inquisitive Parents · Day 069",
+      "title": "My Typing Sprint",
+      "summary": "Turn family names, interests and current learning into personalised typing practice with live speed, accuracy and saved progress.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-069/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-069/poster.png"
     }
   },
   "social": {
-    "date": "2026-11-08",
-    "lead_headline": "Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash (SemiAnalysis)",
-    "facebook_post": "Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash (SemiAnalysis)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash (SemiAnalysis)",
+    "date": "2026-11-09",
+    "lead_headline": "An interview with ex-Shein Executive Chair Donald Tang who insists it was his decision to step down ahead of the troubled IPO, Shein's valuation rout, and more (Patrick Jenkins/Financial Times)",
+    "facebook_post": "An interview with ex-Shein Executive Chair Donald Tang who insists it was his decision to step down ahead of the troubled IPO, Shein's valuation rout, and more (Patrick Jenkins/Financial Times)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "An interview with ex-Shein Executive Chair Donald Tang who insists it was his decision to step down ahead of the troubled IPO, Shein's valuation rout, and more (Patrick Jenkins/Financial Times)",
     "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash (SemiAnalysis). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash (SemiAnalysis). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+    "tiktok_caption": "An interview with ex-Shein Executive Chair Donald Tang who insists it was his decision to step down ahead of the troubled IPO, Shein's valuation rout, and more (Patrick Jenkins/Financial Times). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "An interview with ex-Shein Executive Chair Donald Tang who insists it was his decision to step down ahead of the troubled IPO, Shein's valuation rout, and more (Patrick Jenkins/Financial Times). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "a02c4bb4889bfc259f72fd49c6b62757648403dd4b5aef051172fc4854c7025d"
+  "candidate_id": "d50cc7e2199be8a987988f01656d92efb88174a6b032d68b59fc4d02b5c25714"
 }

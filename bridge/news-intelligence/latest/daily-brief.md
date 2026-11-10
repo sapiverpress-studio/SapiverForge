@@ -1,4 +1,4 @@
-# Sapiver Forge Daily Brief — 2026-11-09
+# Sapiver Forge Daily Brief — 2026-11-10
 
 Automated verification did not complete: Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {
   "error": {
@@ -9,7 +9,7 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 }
  This edition is a source index only and must not be sent as a newsletter.
 
-## 1. An interview with ex-Shein Executive Chair Donald Tang who insists it was his decision to step down ahead of the troubled IPO, Shein's valuation rout, and more (Patrick Jenkins/Financial Times)
+## 1. TSMC plans to invest up to $500M in Anthropic at its IPO price and up to $500M in OpenAI to acquire preferred stock (Reuters)
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -17,19 +17,9 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Patrick Jenkins/Financial Times](https://www.ft.com/content/109aa143-93b4-4b39-9ccd-4ae5a0cf3004) · discovered via Techmeme · confidence 0%
+**Source:** [Reuters](https://www.reuters.com/world/china/tsmc-invest-up-1-billion-anthropic-openai-2026-11-10/) · discovered via Techmeme · confidence 0%
 
-## 2. Nvidia CEO Jensen Huang's letter to staff about affair
-
-**Confirmed:** Headline collected from the named source; claim verification is incomplete.
-
-**Why it matters:** Human review required before any interpretation or distribution.
-
-**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
-
-**Source:** [nvidianews.nvidia.com](https://nvidianews.nvidia.com/news/a-message-to-our-company) · discovered via Hacker News · confidence 0%
-
-## 3. LowRAM: Low-Rank Keys and Amortised Values for Composable KV Cache Compression at Test-Time
+## 2. Amazon saves millions by replacing Sonnet 4.6 with Strands Decider
 
 **Confirmed:** Headline collected from the named source; claim verification is incomplete.
 
@@ -37,7 +27,17 @@ Automated verification did not complete: Editorial generation failed: Gemini gem
 
 **Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
 
-**Source:** [Hugging Face](https://huggingface.co/papers/2611.07025) · confidence 0%
+**Source:** [strandsagents.com](https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/) · discovered via Hacker News · confidence 0%
+
+## 3. LCM-Promo: An LLM-Based Uplift Model for Promotion Allocation
+
+**Confirmed:** Headline collected from the named source; claim verification is incomplete.
+
+**Why it matters:** Human review required before any interpretation or distribution.
+
+**Sapiver Forge interpretation:** No Sapiver Forge interpretation generated.
+
+**Source:** [Hugging Face](https://huggingface.co/papers/2610.37570) · confidence 0%
 
 ## Practical takeaway
 

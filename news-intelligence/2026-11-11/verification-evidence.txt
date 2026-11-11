@@ -1,0 +1,96 @@
+### Verification Overview & Evidence Notes
+
+---
+
+### [8] DeepMind AlphaProof Code Formally Verifies Signal Protocol
+* **Publisher:** deepmind.google / GitHub Pages
+* **Editorial Scope:** IN SCOPE (AI Research & Cybersecurity)
+* **Confirmed:** Google DeepMind released research introducing **AlphaProof Code**, a multi-agent AI system powered by Gemini Carbon. DeepMind used the system to generate roughly 6.5 million lines of machine-checked Lean proof code to formally verify key security properties (including post-quantum handshake and secrecy guarantees) of `libsignal` (Signal’s core cryptographic library) down to compiled AArch64 machine code.
+* **Important Caveats:** Formal verification proves that machine code accurately satisfies the written formal specifications; it does not guarantee that specifications themselves are flaw-free. Human experts still had to review all formal specifications (approximately 1% of the codebase was flagged for human review).
+* **Publication Verdict:** **Suitable for publication today.** High-impact milestone in combining LLM agentic workflows with formal software verification.
+
+---
+
+### [13] PLA-Linked Chinese University Obtained Nvidia H200 AI Chips
+* **Publisher:** Reuters (Eduardo Baptista)
+* **Editorial Scope:** IN SCOPE (AI Tech Regulation & Trade Control)
+* **Confirmed:** Public Chinese procurement records reviewed by Reuters reveal that Northwestern Polytechnical University—a defense-focused university on the US Entity List—purchased two Nvidia H200 GPUs in October 2026 for 874,700 yuan (~$123,000) from domestic supplier Shaanxi Bosuan Network Technology. Records also show the university signed five separate contracts in 2026 to rent Nvidia GPU computing capacity (including H200, A100, and A800 GPUs).
+* **Important Caveats:** Transactions were conducted via domestic third-party vendors and cloud rental arrangements. There is no evidence of direct sales or export control violations by Nvidia.
+* **Publication Verdict:** **Suitable for publication today.** Major investigative reporting demonstrating enforcement gaps in US technology export bans.
+
+---
+
+### [6] FT Investigates Singapore Networks Evading US Chip Controls
+* **Publisher:** Financial Times (Owen Walker)
+* **Editorial Scope:** IN SCOPE (AI Hardware & Trade Policy)
+* **Confirmed:** The Financial Times detailed ongoing investigations into Singapore-based intermediaries (e.g., Luxuriate Your Life, Aperia Cloud Services, Megaspeed) involved in routing advanced US AI servers containing Nvidia GPUs to Chinese entities via third-country routes (such as Malaysia) or local cloud services. Singapore authorities have seized S$55m in assets and charged local executives with fraud and money laundering.
+* **Important Caveats:** Legal proceedings and US Commerce Department reviews remain active; accused individuals and entities have denied wrongdoing or pleaded not guilty.
+* **Publication Verdict:** **Suitable for publication today.** Strong investigative piece highlighting the role of Southeast Asian hub networks in bypassing AI hardware export controls.
+
+---
+
+### [5] VulnCheck Audit of Anthropic's Project Glasswing
+* **Publisher:** vulncheck.com (Patrick Garrity)
+* **Editorial Scope:** IN SCOPE (AI Security & Open-Source Infrastructure)
+* **Confirmed:** Seven months after Anthropic launched its AI vulnerability scanner "Project Glasswing", VulnCheck tracked 442 CVEs attributed to Anthropic (~0.5% of all 2026 CVEs), with only 2 identified as exploited in the wild. Anthropic's public ledger lists 37,966 total findings, but only 7,349 are public and 217 marked fixed. Open-source maintainers (e.g., `curl`) report high false-positive rates (19 of 34 submitted reports rejected as non-vulnerabilities).
+* **Important Caveats:** Independent audit based on public registries and Anthropic's ledger; does not invalidate AI bug discovery but highlights maintainer triage bottlenecks.
+* **Publication Verdict:** **Suitable for publication today.** Provides valuable empirical counter-narrative data on automated AI vulnerability discovery.
+
+---
+
+### [9] Rapidus Misses 2nm SRAM Production Milestone
+* **Publisher:** Bloomberg (Takashi Mochizuki)
+* **Editorial Scope:** IN SCOPE (Semiconductor Manufacturing)
+* **Confirmed:** Bloomberg reports that Japanese government-backed chip venture Rapidus Corp. missed an internal deadline (set for summer 2026) to produce functioning SRAM memory cells on its 2nm process node.
+* **Important Caveats:** Based on anonymous sources. Rapidus has not publicly altered its official schedule to achieve 2nm mass production by early 2028.
+* **Publication Verdict:** **Suitable for publication today.** Significant indicator of technical hurdles facing Japan's state-backed semiconductor effort.
+
+---
+
+### [15] Apple Support Community Forums Closing Permanently
+* **Publisher:** 9to5Mac (Marcus Mendes) / Apple Support
+* **Editorial Scope:** IN SCOPE (Digital Business & Consumer Platforms)
+* **Confirmed:** Apple notified users that its official Apple Support Community forum became read-only on November 10, 2026, and will permanently close on November 20, 2026.
+* **Important Caveats:** Apple has not fully detailed how user support will be restructured across its official support apps or customer service channels.
+* **Publication Verdict:** **Suitable for publication today.** Notable operational change ending decades of user-generated community support on Apple's domain.
+
+---
+
+### [2] Jaron Lanier NYT Op-Ed on AI & Data Center "Sacrifice Zones"
+* **Publisher:** New York Times / Jaron Lanier
+* **Editorial Scope:** IN SCOPE (AI Industry Strategy & Opinion)
+* **Confirmed:** VR pioneer Jaron Lanier published a New York Times op-ed criticizing Silicon Valley's framing of AI, arguing that current pitches oscillate between unhelpful existential doom and exaggerated claims, while warning that local communities are being turned into infrastructure "sacrifice zones" for data center energy and water demands.
+* **Important Caveats:** Opinion/commentary piece rather than hard news.
+* **Publication Verdict:** **Suitable for publication today** as a commentary highlight on AI infrastructure debates.
+
+---
+
+### [10] Personal Blog: "AI usage generates a fragile codebase"
+* **Publisher:** evanxmerz.com (Evan X. Merz)
+* **Editorial Scope:** IN SCOPE (Software Engineering)
+* **Confirmed:** Former Meta engineer Evan X. Merz published an essay detailing personal experiences where high developer reliance on LLMs generated architectural technical debt and fragile codebases due to narrow context windows.
+* **Important Caveats:** Anecdotal opinion piece based on personal experience, not a systematic study or empirical industry research.
+* **Publication Verdict:** **Optional / Deprioritize** against breaking investigative reporting and verified scientific papers.
+
+---
+
+### Hugging Face Preprints ([16], [17], [18], [19])
+* **Scope & Status:** All four candidates are IN SCOPE academic research preprints published on arXiv/Hugging Face.
+  * **[16] FINCOSMOS:** Open-world evaluation paradigm for financial agents.
+  * **[17] WaveGen:** End-to-end text-to-waveform audio generation via spectral forcing.
+  * **[18] EarthRecord:** Multimodal agent benchmark on 40 years of satellite land-change data.
+  * **[19] MMDM:** Multi-task decision-making benchmark for non-autoregressive "System-1" models.
+* **Caveats:** Claims are made solely by paper authors and lack independent peer evaluation.
+* **Publication Verdict:** Suitable as technical research briefs, but secondary to major corporate, regulatory, and technical announcements.
+
+---
+
+### Summary of Excluded Candidates
+* **[0] .name Grandfathered:** OUT OF SCOPE (Personal TLD blog).
+* **[1] Smart home offline opinion:** Low priority developer opinion post with no breaking news hook.
+* **[3] Scion / Kei Truck:** OUT OF SCOPE (Niche automotive consumer news).
+* **[4] Zelda Remake Sales:** OUT OF SCOPE (Entertainment / Video game commercial sales).
+* **[7] Starlink Mini 2:** OUT OF SCOPE (Consumer satellite hardware page update).
+* **[11] Alice Huang Profile:** Covered under Candidate [6] (Focus is on core chip export networks).
+* **[12] Synaptics DisplayLink Patent:** OUT OF SCOPE (Niche driver/patent dispute).
+* **[14] Grok Build Leak:** OUT OF SCOPE (App-specific vulnerability report).

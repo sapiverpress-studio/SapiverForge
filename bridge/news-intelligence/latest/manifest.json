@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-11-10",
-  "generated_at": "2026-11-10T14:48:20.100Z",
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T08:04:14.885Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 484,
+      "elapsed_ms": 499,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,14 +23,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 214,
+      "elapsed_ms": 321,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 496,
+      "elapsed_ms": 501,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -38,7 +38,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 203,
+      "elapsed_ms": 271,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 2041,
+      "elapsed_ms": 2099,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -62,56 +62,56 @@
     "Editorial generation failed: Gemini gemini-3.6-flash request failed (402): {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
     "Overall confidence 0% is below the 78% release threshold."
   ],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-10",
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-11",
   "overall_confidence": 0,
   "stories": [
     {
       "category": "lead",
-      "headline": "TSMC plans to invest up to $500M in Anthropic at its IPO price and up to $500M in OpenAI to acquire preferred stock (Reuters)",
+      "headline": "VR pioneer Jaron Lanier says Silicon Valley is sabotaging itself by poorly pitching AI and treating areas designated for data centers as sacrifice zones (Jaron Lanier/New York Times)",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "Reuters",
+      "source": "Jaron Lanier/New York Times",
       "discovered_via": "Techmeme",
-      "source_title": "TSMC plans to invest up to $500M in Anthropic at its IPO price and up to $500M in OpenAI to acquire preferred stock (Reuters)",
-      "url": "https://www.reuters.com/world/china/tsmc-invest-up-1-billion-anthropic-openai-2026-11-10/",
-      "discovery_url": "https://www.techmeme.com/261110/p24",
+      "source_title": "VR pioneer Jaron Lanier says Silicon Valley is sabotaging itself by poorly pitching AI and treating areas designated for data centers as sacrifice zones (Jaron Lanier/New York Times)",
+      "url": "https://www.nytimes.com/2026/11/09/opinion/ai-anthropic-doom-conscious.html?unlocked_article_code=1.PlE.e7Fx.YuauO1QXRsR3&smid=url-share",
+      "discovery_url": "https://www.techmeme.com/261111/p9",
       "link_quality": "original",
-      "published_at": "2026-11-10T14:46:04.000Z",
-      "discovery_score": 8.098
+      "published_at": "2026-11-11T07:50:21.000Z",
+      "discovery_score": 8.09
     },
     {
       "category": "worth-knowing",
-      "headline": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+      "headline": ".name Grandfathered",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
-      "source": "strandsagents.com",
+      "source": "neil.fraser.name",
       "discovered_via": "Hacker News",
-      "source_title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
-      "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50436640",
+      "source_title": ".name Grandfathered",
+      "url": "https://neil.fraser.name/news/2026/11/10/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50442736",
       "link_quality": "original",
-      "published_at": "2026-11-10T06:01:08.000Z",
-      "discovery_score": 8.164
+      "published_at": "2026-11-10T16:37:44.000Z",
+      "discovery_score": 8.477
     },
     {
       "category": "worth-knowing",
-      "headline": "LCM-Promo: An LLM-Based Uplift Model for Promotion Allocation",
+      "headline": "FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance",
       "confirmed_fact": "Headline collected from the named source; claim verification is incomplete.",
       "why_it_matters": "Human review required before any interpretation or distribution.",
       "interpretation": "No Sapiver Forge interpretation generated.",
       "confidence": 0,
       "source": "Hugging Face",
       "discovered_via": "Hugging Face",
-      "source_title": "LCM-Promo: An LLM-Based Uplift Model for Promotion Allocation",
-      "url": "https://huggingface.co/papers/2610.37570",
-      "discovery_url": "https://huggingface.co/papers/2610.37570",
+      "source_title": "FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance",
+      "url": "https://huggingface.co/papers/2611.07464",
+      "discovery_url": "https://huggingface.co/papers/2611.07464",
       "link_quality": "original",
-      "published_at": "2026-10-27T13:15:15.000Z",
-      "discovery_score": 6.121
+      "published_at": "2026-11-04T19:00:00.000Z",
+      "discovery_score": 6.139
     }
   ],
   "practical_takeaway": "Do not publish this edition until verification succeeds.",
@@ -124,21 +124,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 070",
-      "title": "My Reflex Rally",
-      "summary": "Create a personalised family reaction-time game with random colour or symbol cues, false-start detection and a private local scoreboard.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-070/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-070/poster.png"
+      "label": "AI Inquisitive Parents · Day 071",
+      "title": "My Pixel Animation Studio",
+      "summary": "Draw personalised frame-by-frame pixel animations, preview them at adjustable speed and export a transparent PNG frame or sprite sheet.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-071/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-071/poster.png"
     }
   },
   "social": {
-    "date": "2026-11-10",
-    "lead_headline": "TSMC plans to invest up to $500M in Anthropic at its IPO price and up to $500M in OpenAI to acquire preferred stock (Reuters)",
-    "facebook_post": "TSMC plans to invest up to $500M in Anthropic at its IPO price and up to $500M in OpenAI to acquire preferred stock (Reuters)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "TSMC plans to invest up to $500M in Anthropic at its IPO price and up to $500M in OpenAI to acquire preferred stock (Reuters)",
+    "date": "2026-11-11",
+    "lead_headline": "VR pioneer Jaron Lanier says Silicon Valley is sabotaging itself by poorly pitching AI and treating areas designated for data centers as sacrifice zones (Jaron Lanier/New York Times)",
+    "facebook_post": "VR pioneer Jaron Lanier says Silicon Valley is sabotaging itself by poorly pitching AI and treating areas designated for data centers as sacrifice zones (Jaron Lanier/New York Times)\n\nHuman review required before any interpretation or distribution.\n\nToday's Sapiver Forge Daily Brief covers 3 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "VR pioneer Jaron Lanier says Silicon Valley is sabotaging itself by poorly pitching AI and treating areas designated for data centers as sacrifice zones (Jaron Lanier/New York Times)",
     "pinterest_description": "Human review required before any interpretation or distribution.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "TSMC plans to invest up to $500M in Anthropic at its IPO price and up to $500M in OpenAI to acquire preferred stock (Reuters). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "TSMC plans to invest up to $500M in Anthropic at its IPO price and up to $500M in OpenAI to acquire preferred stock (Reuters). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
+    "tiktok_caption": "VR pioneer Jaron Lanier says Silicon Valley is sabotaging itself by poorly pitching AI and treating areas designated for data centers as sacrifice zones (Jaron Lanier/New York Times). Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "VR pioneer Jaron Lanier says Silicon Valley is sabotaging itself by poorly pitching AI and treating areas designated for data centers as sacrifice zones (Jaron Lanier/New York Times). Headline collected from the named source; claim verification is incomplete. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "7b7a3562f32574926edab7a60d87c6ac56353128c86f415e4c481988efd3b39b"
+  "candidate_id": "75a9a758adc8a5891082ea58d430f8efc025486c8ccd272549d8e0de02b99f20"
 }

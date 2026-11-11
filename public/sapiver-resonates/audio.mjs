@@ -1,19 +1,25 @@
-import { sounds } from './catalog.mjs';
-import { gain, makeBed, randomFrom } from './soundscapes.mjs';
-
-const sources = {
-  rain: [{ file: 'rain.mp3', level: 0.86 }],
-  coast: [{ file: 'coast.mp3', level: 0.93 }],
-  woodland: [{ file: 'forest.mp3', level: 0.67 }, { file: 'fire.mp3', level: 0.26 }],
+const recordings = {
+  chapel: [{ file: 'choir.mp3', level: 1, seam: 1.6 }],
+  piano: [{ file: 'piano.mp3', level: 1, seam: 1.2 }],
+  strings: [{ file: 'cello.mp3', level: 1, seam: 1.4 }],
+  rain: [{ file: 'rain.mp3', level: .86, seam: .8 }],
+  coast: [{ file: 'coast.mp3', level: .86, seam: .8 }],
+  woodland: [{ file: 'forest.mp3', level: .74, seam: .8 }, { file: 'fire.mp3', level: .28, seam: .65 }],
 };
 
-const encoded = new Map();
-const decoded = new Map();
+const audioCache = new Map();
 const fadeOutSeconds = 1.6;
-const scheduleLead = 28;
+let decoder;
 
-function loopBuffer(context, audio) {
-  const overlap = Math.min(Math.floor(audio.sampleRate * 0.8), Math.floor(audio.length / 6));
+function gain(context, target, level = 1) {
+  const node = context.createGain();
+  node.gain.value = level;
+  node.connect(target);
+  return node;
+}
+
+function loopBuffer(context, audio, seam) {
+  const overlap = Math.min(Math.floor(audio.sampleRate * seam), Math.floor(audio.length / 6));
   const length = audio.length - overlap;
   const buffer = context.createBuffer(audio.numberOfChannels, length, audio.sampleRate);
   for (let channel = 0; channel < audio.numberOfChannels; channel++) {
@@ -28,42 +34,35 @@ function loopBuffer(context, audio) {
   return buffer;
 }
 
-async function loadTexture(context, file) {
-  const key = context.sampleRate + '/' + file;
-  if (!encoded.has(file)) {
-    const url = new URL('./audio/' + file, import.meta.url);
+function loadTexture(context, track) {
+  const Offline = globalThis.OfflineAudioContext || globalThis.webkitOfflineAudioContext;
+  const audioContext = Offline ? (decoder ??= new Offline(2, 1, 32000)) : context;
+  const key = audioContext.sampleRate + '/' + track.file;
+  if (!audioCache.has(key)) {
+    const url = new URL('./audio/' + track.file, import.meta.url);
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 9000);
-    const data = fetch(url, { signal: controller.signal }).then(response => {
+    const timeout = setTimeout(() => controller.abort(), 18000);
+    const promise = fetch(url, { signal: controller.signal }).then(response => {
       if (!response.ok) throw new Error('Audio source unavailable.');
       return response.arrayBuffer();
+    }).then(bytes => audioContext.decodeAudioData(bytes)).then(audio => {
+      return loopBuffer(audioContext, audio, track.seam);
     }).catch(error => {
-      encoded.delete(file);
+      audioCache.delete(key);
       throw error;
     }).finally(() => clearTimeout(timeout));
-    encoded.set(file, data);
+    audioCache.set(key, promise);
   }
-  if (!decoded.has(key)) {
-    const data = await encoded.get(file);
-    // Decoding consumes its ArrayBuffer. Retain the original bytes for offline renders.
-    if (!decoded.has(key)) {
-      const audio = context.decodeAudioData(data.slice(0)).then(buffer => loopBuffer(context, buffer)).catch(error => {
-        decoded.delete(key);
-        throw error;
-      });
-      decoded.set(key, audio);
-    }
-  }
-  return decoded.get(key);
+  return audioCache.get(key);
 }
 
-export async function loadSound(context, scene) {
-  const list = sources[scene] ?? [];
-  const results = await Promise.allSettled(list.map(async ({ file, level }) => ({
-    buffer: await loadTexture(context, file), level,
+export async function loadLayers(context, layers) {
+  const wanted = Object.keys(layers).flatMap(scene => (recordings[scene] ?? []).map(track => ({ ...track, scene })));
+  const results = await Promise.allSettled(wanted.map(async track => ({
+    ...track, buffer: await loadTexture(context, track),
   })));
-  const tracks = results.flatMap(result => result.status === 'fulfilled' ? [result.value] : []);
-  return { tracks, complete: tracks.length === list.length };
+  const tracks = results.filter(result => result.status === 'fulfilled').map(result => result.value);
+  return { tracks, complete: tracks.length === wanted.length };
 }
 
 function makeReverb(context) {
@@ -72,11 +71,12 @@ function makeReverb(context) {
   const buffer = context.createBuffer(2, length, context.sampleRate);
   for (let channel = 0; channel < 2; channel++) {
     const data = buffer.getChannelData(channel);
-    const random = randomFrom(2981 + channel * 743);
+    let seed = 2981 + channel * 743;
     let smooth = 0;
     for (let i = 0; i < length; i++) {
       const fade = (1 - i / length) ** 2.05;
-      smooth = smooth * .52 + (random() * 2 - 1) * .48;
+      seed = (Math.imul(1664525, seed) + 1013904223) >>> 0;
+      smooth = smooth * .52 + (seed / 2147483648 - 1) * .48;
       data[i] = smooth * fade * Math.min(i / 600, 1);
     }
   }
@@ -126,13 +126,12 @@ function ease(parameter, value, now, speed = .05) {
 export function createEngine(context, settings, length = Infinity) {
   const finite = Number.isFinite(length);
   let mix = settings;
-  let bed;
-  let bedGain;
+  const voices = new Map();
   let nextBell;
   let bellIndex = 0;
   const began = context.currentTime;
   const finish = began + length;
-  const glue = compressor(context, -17, 15, 2.1, .015, .32);
+  const glue = compressor(context, -12, 9, 1.65, .015, .32);
   const limiter = compressor(context, -4.5, 1, 16, .002, .13);
   glue.connect(limiter);
   limiter.connect(context.destination);
@@ -140,7 +139,7 @@ export function createEngine(context, settings, length = Infinity) {
   // Separate transport and level gains let the volume move during a fade.
   const transport = gain(context, glue, 0);
   const volume = gain(context, transport, 0);
-  const dry = gain(context, volume, .88);
+  const dry = gain(context, volume, .94);
   const reverb = makeReverb(context);
   const wet = gain(context, volume, 0);
   reverb.connect(wet);
@@ -165,7 +164,7 @@ export function createEngine(context, settings, length = Infinity) {
     const now = context.currentTime;
     const set = (parameter, value) => initial ? parameter.setValueAtTime(value, now) : ease(parameter, value, now);
     set(volume.gain, next.volume ? 1.46 * (next.volume / 100) ** 1.23 : 0);
-    set(wet.gain, (.1 + next.space / 100 * .43) * sounds[next.scene].reverb);
+    set(wet.gain, next.space / 100 * .24);
     set(rhythm.frequency, next.rhythm === 'gamma' ? next.pulse : next.pace / 60);
     set(rhythmDepth.gain, next.rhythm === 'breath' ? .175 : next.rhythm === 'gamma' ? .043 : 0);
     set(left.frequency, next.pitch);
@@ -173,6 +172,10 @@ export function createEngine(context, settings, length = Infinity) {
     const level = .105 * (next.toneLevel / 100) ** 1.15;
     set(pure.gain, next.tone === 'pure' ? level : 0);
     set(binaural.gain, next.tone === 'binaural' ? level : 0);
+    const weight = Math.sqrt(Math.max(1, Object.values(next.layers).reduce((sum, level) => sum + (level / 100) ** 2, 0)));
+    for (const { track, channel } of voices.values()) {
+      set(channel.gain, (next.layers[track.scene] ?? 0) / 100 * track.level / weight);
+    }
     if (mix.bells !== next.bells) nextBell = undefined;
     mix = next;
   }
@@ -188,9 +191,7 @@ export function createEngine(context, settings, length = Infinity) {
     }
   }
 
-  function schedule(horizon = context.currentTime + scheduleLead) {
-    if (!bed) return;
-    bed.schedule(Math.min(horizon, finish));
+  function schedule() {
     if (mix.bells === 'off') return;
     const interval = mix.bells === 'frequent' ? 11.5 : 24;
     const now = context.currentTime;
@@ -198,32 +199,41 @@ export function createEngine(context, settings, length = Infinity) {
     // Schedule one bell at a time, so changes to the accent control are heard quickly.
     const limit = finite ? finish - fadeOutSeconds : now + 1;
     while (nextBell < limit) {
-      bell(context, input, sounds[mix.scene].pitch ?? 110, nextBell, bellIndex++);
+      bell(context, input, 110, nextBell, bellIndex++);
       nextBell += interval;
     }
   }
 
   apply(mix, true);
   return {
-    selectScene(scene, tracks) {
+    setTracks(tracks) {
       const now = context.currentTime;
-      if (bed) {
-        ease(bedGain.gain, 0, now, .115);
-        bed.stop(now + .75);
-        const oldGain = bedGain;
-        setTimeout(() => oldGain.disconnect(), 1000);
+      const wanted = new Set(tracks.map(track => track.file));
+      for (const [file, voice] of voices) {
+        if (wanted.has(file)) continue;
+        ease(voice.channel.gain, 0, now, .08);
+        voice.node.stop(now + .5);
+        voices.delete(file);
       }
-      bedGain = gain(context, bedInput, 0);
-      bedGain.gain.setValueAtTime(0, now);
-      bedGain.gain.linearRampToValueAtTime(1, now + .72);
-      bed = makeBed(context, bedGain, scene, tracks, now);
-      schedule(finite ? finish : undefined);
+      for (const track of tracks) {
+        if (voices.has(track.file)) continue;
+        const channel = gain(context, bedInput, 0);
+        const node = context.createBufferSource();
+        node.buffer = track.buffer;
+        node.loop = true;
+        node.connect(channel);
+        node.addEventListener('ended', () => channel.disconnect(), { once: true });
+        node.start(now);
+        voices.set(track.file, { track, channel, node });
+      }
+      apply(mix);
+      schedule();
     },
     apply,
     schedule,
     start: openFade,
     quiet(value) { ease(transport.gain, value ? 0 : 1, context.currentTime, .045); },
-    ring() { bell(context, input, sounds[mix.scene].pitch ?? 110, context.currentTime + .03, bellIndex++); },
+    ring() { bell(context, input, 110, context.currentTime + .03, bellIndex++); },
   };
 }
 

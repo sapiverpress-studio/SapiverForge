@@ -41,7 +41,7 @@ jobs:
           for file in public/sapiver-resonates/*.mjs; do node --check "$file"; done
           grep -Fq 'href="/sapiver-resonates/"' public/index.html
           test -s public/sapiver-resonates/index.html
-          for file in coast fire forest rain; do test -s "public/sapiver-resonates/audio/$file.mp3"; done
+          for file in coast fire forest rain choir piano cello; do test -s "public/sapiver-resonates/audio/$file.mp3"; done
           node test/puzzle-site-contract.mjs
           node test/shop-page-contract.mjs
       - name: Publish the committed website and functions
@@ -51,4 +51,4 @@ jobs:
         run: |
           set -euo pipefail
           test -n "${NETLIFY_AUTH_TOKEN:-}"
-          npx --yes netlify-cli@27.5.2 deploy --prod --no-build --dir=public --site="$NETLIFY_SITE_ID" --message="Publish Sapiver Resonates piano balance"
+          npx --yes netlify-cli@27.5.2 deploy --prod --no-build --dir=public --site="$NETLIFY_SITE_ID" --message="Publish Sapiver Resonates recording mixer"

@@ -179,7 +179,7 @@ export function makeBed(context, target, scene, tracks, start) {
           const arpeggio = [0, 1, 3, 2, 4];
           const delays = [.2, 1.25, 2.55, 4.5, 6.15];
           arpeggio.forEach((note, i) => makePianoNote(context, target, PIANO[index][note],
-            chordTime + delays[i], [.105, .085, .079, .069, .052][i], (note - 2) * .17, playOscillator));
+            chordTime + delays[i], [.284, .23, .213, .186, .14][i], (note - 2) * .17, playOscillator));
         } else if (scene === 'woodland') {
           for (let i = 0; i < 3; i++) {
             const when = chordTime + i * 2.3 + random();

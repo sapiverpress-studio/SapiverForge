@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-11",
+  "kind": "human_editorial_verification",
+  "checked_on": "2026-11-11",
+  "source_family_health": {
+    "healthy": 3,
+    "expected": 5,
+    "unavailable": [
+      "Reuters RSS discovery feed",
+      "Sifted RSS discovery feed"
+    ]
+  },
+  "sources": [
+    {
+      "story": 1,
+      "publisher": "Reuters",
+      "title": "PLA-linked Chinese university bought Nvidia H200 chips despite US blacklist",
+      "url": "https://www.reuters.com/world/pla-linked-chinese-university-bought-nvidia-h200-chips-despite-us-blacklist-2026-11-11/",
+      "published": "2026-11-11",
+      "supports": "Procurement record for two H200 processors at 874,700 yuan and five rental contracts; no automatic legal finding"
+    },
+    {
+      "story": 2,
+      "publisher": "Google DeepMind",
+      "title": "AlphaProof Code technical paper",
+      "url": "https://google-deepmind.github.io/code-verification/",
+      "published": "2026-11-10",
+      "supports": "About 6.5 million Lean proof lines and trusted specification/machine semantics; constrained verification scope"
+    },
+    {
+      "story": 2,
+      "publisher": "Google DeepMind",
+      "title": "Introducing AlphaProof Code",
+      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+      "published": "2026-11-10",
+      "supports": "Independent description of project scope and human review from the research organisation"
+    },
+    {
+      "story": 3,
+      "publisher": "Financial Times",
+      "title": "US commerce department delays Megaspeed’s inclusion on trade blacklist",
+      "url": "https://www.ft.com/content/afb6c960-a910-4d67-9588-73ba3bea5b06",
+      "published": "2026-11-11",
+      "supports": "Reported delay and nature of chip-diversion suspicion; publisher access partly restricted"
+    },
+    {
+      "story": 3,
+      "publisher": "Singapore Police Force",
+      "title": "Clarification Statement on Wall Street Journal’s Article",
+      "url": "https://www.police.gov.sg/media-hub/news/2026/10/20261030_clarification_statement_on_wall_street_journals_article",
+      "published": "2026-10-30",
+      "supports": "Official confirmation investigation into Megaspeed ongoing; separate fraud charges must not be misattributed"
+    },
+    {
+      "story": 4,
+      "publisher": "VulnCheck",
+      "title": "After 7 months, Glasswing Overwhelms Maintainers with Underwhelming Findings",
+      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+      "published": "2026-11-09",
+      "supports": "Dated ledger counts and breakdown of curl reports; this is VulnCheck’s analysis"
+    },
+    {
+      "story": 5,
+      "publisher": "Apple Support Community",
+      "title": "Official community closure notice",
+      "url": "https://discussions.apple.com/welcome",
+      "published": "2026-11-10",
+      "supports": "Notice of read-only status and intended 20 November closure; future archive accessibility unspecified"
+    },
+    {
+      "story": 5,
+      "publisher": "MacRumors",
+      "title": "Apple Support Community permanently closing on November 20",
+      "url": "https://www.macrumors.com/2026/11/10/apple-support-community-closing-november-20/",
+      "published": "2026-11-10",
+      "supports": "Secondary verification of Apple notice and uncertainty about archive retention"
+    }
+  ],
+  "noted_limitations": [
+    "Verification covers material statements cited in this edition; it does not independently establish wrongdoing in ongoing investigations.",
+    "Financial Times subscriber-restricted text evaluated against accessible reporting and separate official Singapore Police statement.",
+    "Numbers describing Project Glasswing are a dated assessment by VulnCheck.",
+    "The public Sapiver learning resources are confirmed present in the repository, but live deployment was not verified."
+  ]
+}

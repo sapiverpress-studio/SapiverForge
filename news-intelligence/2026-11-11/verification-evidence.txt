@@ -1,96 +1,80 @@
-### Verification Overview & Evidence Notes
+### Out-of-Scope Candidates
+The following candidates fall outside the editorial scope of Sapiver Forge (AI, technology, digital business, research, technology regulation, and adjacent innovation) or represent generic/consumer technical posts without significant news value:
+* **[0] .name Grandfathered** (*neil.fraser.name / HN*) — Top-level domain administration notice; marked out of scope [0].
+* **[5] Scion is back and is going to sell a kei truck in America** (*theautopian.com / HN*) — Automotive news; marked out of scope [5].
+* **[8] Show HN: Get your coding agent off ~2019 JavaScript** (*github.com / HN*) — Developer repository tool/guidance; marked out of scope [8].
+* **[10] Starlink Mini 2** (*starlink.com / HN*) — Product listing page; marked out of scope [10].
+* **[12] Synaptics patent claims stop work on DisplayLink drivers** (*lwn.net / HN*) — Linux driver mailing list maintenance detail; marked out of scope [12].
 
 ---
 
-### [8] DeepMind AlphaProof Code Formally Verifies Signal Protocol
-* **Publisher:** deepmind.google / GitHub Pages
-* **Editorial Scope:** IN SCOPE (AI Research & Cybersecurity)
-* **Confirmed:** Google DeepMind released research introducing **AlphaProof Code**, a multi-agent AI system powered by Gemini Carbon. DeepMind used the system to generate roughly 6.5 million lines of machine-checked Lean proof code to formally verify key security properties (including post-quantum handshake and secrecy guarantees) of `libsignal` (Signal’s core cryptographic library) down to compiled AArch64 machine code.
-* **Important Caveats:** Formal verification proves that machine code accurately satisfies the written formal specifications; it does not guarantee that specifications themselves are flaw-free. Human experts still had to review all formal specifications (approximately 1% of the codebase was flagged for human review).
-* **Publication Verdict:** **Suitable for publication today.** High-impact milestone in combining LLM agentic workflows with formal software verification.
+### Evidence Notes for Strongest In-Scope Candidates
+
+#### **[Candidate 6] London-based AI chip startup Fractile raises $720M at $7B valuation**
+* **Confirmed Facts:** UK-headquartered AI chip startup Fractile raised $720 million in new funding led by Thrive Capital and Founders Fund, raising its valuation to $7 billion (up from ~$1.1 billion in May 2026). The startup develops custom semiconductor hardware optimized for AI inference.
+* **Important Caveats:** The valuation and detailed funding tranches are reported via sources familiar with the transaction in the *Financial Times* [6].
+* **Publication Verdict:** **Suitable for publication today.** This is a top-tier lead story for a UK morning briefing, highlighting major capital flows into the UK semiconductor ecosystem.
 
 ---
 
-### [13] PLA-Linked Chinese University Obtained Nvidia H200 AI Chips
-* **Publisher:** Reuters (Eduardo Baptista)
-* **Editorial Scope:** IN SCOPE (AI Tech Regulation & Trade Control)
-* **Confirmed:** Public Chinese procurement records reviewed by Reuters reveal that Northwestern Polytechnical University—a defense-focused university on the US Entity List—purchased two Nvidia H200 GPUs in October 2026 for 874,700 yuan (~$123,000) from domestic supplier Shaanxi Bosuan Network Technology. Records also show the university signed five separate contracts in 2026 to rent Nvidia GPU computing capacity (including H200, A100, and A800 GPUs).
-* **Important Caveats:** Transactions were conducted via domestic third-party vendors and cloud rental arrangements. There is no evidence of direct sales or export control violations by Nvidia.
-* **Publication Verdict:** **Suitable for publication today.** Major investigative reporting demonstrating enforcement gaps in US technology export bans.
+#### **[Candidate 2] Anthropic’s IPO draws massive oversubscription ahead of Amodei–Dimon event**
+* **Confirmed Facts:** Bloomberg reports that Anthropic’s initial public offering is multiple times oversubscribed, driven by large anchor order commitments from institutional investors. Chief Executive Dario Amodei and JPMorgan Chase CEO Jamie Dimon are scheduled to host a joint livestreamed investor event on Friday.
+* **Important Caveats:** The oversubscription status relies on anonymous sources familiar with the order book. Final pricing, share allocation, and retail distribution parameters remain subject to adjustment prior to listing.
+* **Publication Verdict:** **Suitable for publication today.** High reader interest; directly affects public market valuation benchmarks across the AI sector.
 
 ---
 
-### [6] FT Investigates Singapore Networks Evading US Chip Controls
-* **Publisher:** Financial Times (Owen Walker)
-* **Editorial Scope:** IN SCOPE (AI Hardware & Trade Policy)
-* **Confirmed:** The Financial Times detailed ongoing investigations into Singapore-based intermediaries (e.g., Luxuriate Your Life, Aperia Cloud Services, Megaspeed) involved in routing advanced US AI servers containing Nvidia GPUs to Chinese entities via third-country routes (such as Malaysia) or local cloud services. Singapore authorities have seized S$55m in assets and charged local executives with fraud and money laundering.
-* **Important Caveats:** Legal proceedings and US Commerce Department reviews remain active; accused individuals and entities have denied wrongdoing or pleaded not guilty.
-* **Publication Verdict:** **Suitable for publication today.** Strong investigative piece highlighting the role of Southeast Asian hub networks in bypassing AI hardware export controls.
+#### **[Candidate 3] Torus raises $500M Series C to launch modular AI data center units**
+* **Confirmed Facts:** Salt Lake City-based energy storage company Torus announced a $500 million Series C funding round led by Magnetar Capital. The funds will support production of "Foundry", prefabricated shipping container-sized units integrating battery storage, cooling, and AI compute capacity (1MW to 20MW) designed to plug into existing commercial power infrastructure. Early customers include AI cloud provider Hydra Host.
+* **Important Caveats:** Company valuation was not disclosed. Commercial scaling for containerized compute remains early, with only a limited number of public customer commitments.
+* **Publication Verdict:** **Suitable for publication today.** Strongly highlights the growing convergence between energy storage hardware and distributed AI inference infrastructure.
 
 ---
 
-### [5] VulnCheck Audit of Anthropic's Project Glasswing
-* **Publisher:** vulncheck.com (Patrick Garrity)
-* **Editorial Scope:** IN SCOPE (AI Security & Open-Source Infrastructure)
-* **Confirmed:** Seven months after Anthropic launched its AI vulnerability scanner "Project Glasswing", VulnCheck tracked 442 CVEs attributed to Anthropic (~0.5% of all 2026 CVEs), with only 2 identified as exploited in the wild. Anthropic's public ledger lists 37,966 total findings, but only 7,349 are public and 217 marked fixed. Open-source maintainers (e.g., `curl`) report high false-positive rates (19 of 34 submitted reports rejected as non-vulnerabilities).
-* **Important Caveats:** Independent audit based on public registries and Anthropic's ledger; does not invalidate AI bug discovery but highlights maintainer triage bottlenecks.
-* **Publication Verdict:** **Suitable for publication today.** Provides valuable empirical counter-narrative data on automated AI vulnerability discovery.
+#### **[Candidate 13] Google DeepMind introduces AlphaProof Code, formally verifying Signal protocol**
+* **Confirmed Facts:** Google DeepMind published research detailing AlphaProof Code, an agentic multi-model framework that generated over 6.5 million lines of machine-checked Lean proofs. The framework verified key security properties (including forward secrecy and post-compromise security) of the Signal protocol's compiled AArch64 machine code implementation (*libsignal*).
+* **Important Caveats:** This is a research breakthrough rather than a commercial software release. Human domain experts were required to write and verify ~26,000 lines of Lean specifications. The project verified existing protocol correctness and did not uncover new zero-day vulnerabilities in Signal.
+* **Publication Verdict:** **Suitable for publication today.** High technical significance representing a milestone in AI-assisted formal verification for cybersecurity.
 
 ---
 
-### [9] Rapidus Misses 2nm SRAM Production Milestone
-* **Publisher:** Bloomberg (Takashi Mochizuki)
-* **Editorial Scope:** IN SCOPE (Semiconductor Manufacturing)
-* **Confirmed:** Bloomberg reports that Japanese government-backed chip venture Rapidus Corp. missed an internal deadline (set for summer 2026) to produce functioning SRAM memory cells on its 2nm process node.
-* **Important Caveats:** Based on anonymous sources. Rapidus has not publicly altered its official schedule to achieve 2nm mass production by early 2028.
-* **Publication Verdict:** **Suitable for publication today.** Significant indicator of technical hurdles facing Japan's state-backed semiconductor effort.
+#### **[Candidate 9] VulnCheck audit finds gap between Anthropic’s Glasswing claims and maintainer fixes**
+* **Confirmed Facts:** Vulnerability intelligence firm VulnCheck published a 7-month audit of Anthropic’s Project Glasswing. VulnCheck tracked 442 CVEs attributed to Anthropic (0.5% of 2026 total CVEs), of which only 2 are listed as exploited in the wild. While Anthropic’s internal disclosure ledger lists 37,966 findings, only 7,349 have been made public and 217 marked fixed. Open-source projects (e.g., *curl*) reported high rates of non-actionable or rejected reports.
+* **Important Caveats:** VulnCheck’s methodology counts publicly credited CVE advisories, which differs from Anthropic’s internal evaluation metrics (where Anthropic claims a 94.2% true-positive rate). Open-source maintainers report varying experiences depending on codebase complexity.
+* **Publication Verdict:** **Suitable for publication today.** Provides crucial independent scrutiny on vendor safety claims regarding automated AI bug hunting.
 
 ---
 
-### [15] Apple Support Community Forums Closing Permanently
-* **Publisher:** 9to5Mac (Marcus Mendes) / Apple Support
-* **Editorial Scope:** IN SCOPE (Digital Business & Consumer Platforms)
-* **Confirmed:** Apple notified users that its official Apple Support Community forum became read-only on November 10, 2026, and will permanently close on November 20, 2026.
-* **Important Caveats:** Apple has not fully detailed how user support will be restructured across its official support apps or customer service channels.
-* **Publication Verdict:** **Suitable for publication today.** Notable operational change ending decades of user-generated community support on Apple's domain.
+#### **[Candidate 15] German defense unicorn Helsing launches Clarity AI platform**
+* **Confirmed Facts:** Munich-based defense technology firm Helsing announced "Clarity", an AI-native software intelligence platform. The system uses customized autonomous AI agents to integrate satellite, sensor, and drone data to assist military operators with battlefield targeting and threat identification.
+* **Important Caveats:** Product launch announcement positioned directly against established defense software suites (Palantir Maven, Anduril Lattice); operational deployment efficacy cannot be independently verified from vendor statements.
+* **Publication Verdict:** **Suitable for publication today.** Notable expansion of European sovereign defense AI technology capabilities.
 
 ---
 
-### [2] Jaron Lanier NYT Op-Ed on AI & Data Center "Sacrifice Zones"
-* **Publisher:** New York Times / Jaron Lanier
-* **Editorial Scope:** IN SCOPE (AI Industry Strategy & Opinion)
-* **Confirmed:** VR pioneer Jaron Lanier published a New York Times op-ed criticizing Silicon Valley's framing of AI, arguing that current pitches oscillate between unhelpful existential doom and exaggerated claims, while warning that local communities are being turned into infrastructure "sacrifice zones" for data center energy and water demands.
-* **Important Caveats:** Opinion/commentary piece rather than hard news.
-* **Publication Verdict:** **Suitable for publication today** as a commentary highlight on AI infrastructure debates.
+#### **[Candidate 14] House House AI usage in *Big Walk* triggers Independent Games Festival juror debate**
+* **Confirmed Facts:** Game developer House House confirmed it used LLMs sparingly (affecting under 0.1% of game code to resolve a specific Unity rendering performance bug) during late-stage development of *Big Walk*. The disclosure sparked controversy within the Independent Games Festival (IGF), leading 19 jurors to sign a statement declining to vote for entries utilizing generative AI.
+* **Important Caveats:** AI was used exclusively for debugging code rather than generating artwork, audio, or narrative assets. The boycott represents a stance taken by individual jurors, not an official IGF festival-wide rule or disqualification.
+* **Publication Verdict:** **Suitable for publication today.** Captures the debate surrounding AI tool usage standards across creative and indie development industries.
 
 ---
 
-### [10] Personal Blog: "AI usage generates a fragile codebase"
-* **Publisher:** evanxmerz.com (Evan X. Merz)
-* **Editorial Scope:** IN SCOPE (Software Engineering)
-* **Confirmed:** Former Meta engineer Evan X. Merz published an essay detailing personal experiences where high developer reliance on LLMs generated architectural technical debt and fragile codebases due to narrow context windows.
-* **Important Caveats:** Anecdotal opinion piece based on personal experience, not a systematic study or empirical industry research.
-* **Publication Verdict:** **Optional / Deprioritize** against breaking investigative reporting and verified scientific papers.
+#### **[Candidate 1] Semafor analysis: Jensen Huang’s public stance on China export rules shifted post-2022**
+* **Confirmed Facts:** A Semafor media audit of 42 interviews given by Nvidia CEO Jensen Huang since 2022 tracks a marked quantitative and qualitative shift in his public statements. Following US export restrictions, Huang’s public remarks became noticeably more critical of export controls and more complimentary toward Chinese engineering capabilities.
+* **Important Caveats:** This is a qualitative press trend analysis summarizing public interview transcripts rather than a breaking corporate policy update [1].
+* **Publication Verdict:** **Suitable for inclusion as a background/analysis item.**
 
 ---
 
-### Hugging Face Preprints ([16], [17], [18], [19])
-* **Scope & Status:** All four candidates are IN SCOPE academic research preprints published on arXiv/Hugging Face.
-  * **[16] FINCOSMOS:** Open-world evaluation paradigm for financial agents.
-  * **[17] WaveGen:** End-to-end text-to-waveform audio generation via spectral forcing.
-  * **[18] EarthRecord:** Multimodal agent benchmark on 40 years of satellite land-change data.
-  * **[19] MMDM:** Multi-task decision-making benchmark for non-autoregressive "System-1" models.
-* **Caveats:** Claims are made solely by paper authors and lack independent peer evaluation.
-* **Publication Verdict:** Suitable as technical research briefs, but secondary to major corporate, regulatory, and technical announcements.
+#### **[Candidate 11] Dario Amodei IPO roadshow remarks on disease elimination**
+* **Confirmed Facts:** Anthropic’s official IPO roadshow video features CEO Dario Amodei stating his belief that AI advances will make major human diseases (cancer, Alzheimer’s, mental illness) "relics of the past" in "less than a decade" [11].
+* **Important Caveats:** Promotional forward-looking executive sentiment designed for investor marketing, not a scientific or peer-reviewed milestone [11].
+* **Publication Verdict:** **Suitable for publication only as a context sidebar** alongside Candidate [2] (Anthropic IPO details).
 
 ---
 
-### Summary of Excluded Candidates
-* **[0] .name Grandfathered:** OUT OF SCOPE (Personal TLD blog).
-* **[1] Smart home offline opinion:** Low priority developer opinion post with no breaking news hook.
-* **[3] Scion / Kei Truck:** OUT OF SCOPE (Niche automotive consumer news).
-* **[4] Zelda Remake Sales:** OUT OF SCOPE (Entertainment / Video game commercial sales).
-* **[7] Starlink Mini 2:** OUT OF SCOPE (Consumer satellite hardware page update).
-* **[11] Alice Huang Profile:** Covered under Candidate [6] (Focus is on core chip export networks).
-* **[12] Synaptics DisplayLink Patent:** OUT OF SCOPE (Niche driver/patent dispute).
-* **[14] Grok Build Leak:** OUT OF SCOPE (App-specific vulnerability report).
+### Secondary Research Papers (Candidates 16–19)
+* **[16] Auditing Decision Provenance in Biomedical Research Agents (BioAgent-DF)** — *Preprint/Conference paper (NeurIPS Workshop).* Audits tool-state restoration in biomedical agents. **Verdict:** Suitable for a dedicated technical research roundup; treat findings as paper claims.
+* **[17] Deleting Weights in LLM Post-Training ("Deletion Tuning")** — *Preprint.* Demonstrates zeroing <0.05% of weights matches full fine-tuning while reducing catastrophic forgetting [17]. **Verdict:** Treat as academic paper claim; suitable for technical readers.
+* **[18] Evidence-Linked Memory (WikiTrace)** — *Preprint.* Proposes linking distilled LLM agent lessons to original execution trajectories [18]. **Verdict:** Academic benchmark paper; low urgency.
+* **[19] TorchCurves Library** — *Open-source PyTorch release.* Library for differentiable parametric curves [19]. **Verdict:** Open-source release announcement; suitable for developer tool coverage.

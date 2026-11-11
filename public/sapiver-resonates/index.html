@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101815">
+  <meta name="description" content="Build a soundscape for quiet listening with choir, piano and nature sounds, adjustable breathing cues and stereo tones.">
+  <link rel="canonical" href="https://suite.sapiverpress.co.uk/sapiver-resonates/">
+  <title>Sapiver Resonates | Sapiver Forge</title>
+  <link rel="stylesheet" href="./studio.css">
+  <script type="module" src="./studio.mjs"></script>
+</head>
+<body>
+  <header class="masthead shell">
+    <a class="back" href="../">← Sapiver Forge</a>
+    <a class="brand" href="./"><span class="mark" aria-hidden="true">≈</span> Sapiver Resonates</a>
+    <a class="jump" href="#sound-settings">Sound settings ↓</a>
+  </header>
+
+  <main class="shell">
+    <div class="intro">
+      <h1>Sapiver <em>Resonates</em></h1>
+      <p>Choose a sound, then make it yours.</p>
+    </div>
+
+    <div class="layout">
+      <section class="player panel" id="player" aria-label="Sound player">
+        <div class="player-meta">
+          <span class="live"><span class="dot" aria-hidden="true"></span><span id="playState">Ready to listen</span></span>
+          <span id="timer">10:00</span>
+        </div>
+        <div class="canvas-wrap" id="canvasWrap">
+          <canvas id="visualizer" aria-hidden="true"></canvas>
+          <div class="orb" id="orb" aria-hidden="true">
+            <span id="orbLabel">Listening mode</span>
+            <strong id="orbValue">Still</strong>
+            <small id="orbUnit">Sound only</small>
+          </div>
+        </div>
+        <div class="now-playing">
+          <h2 id="sceneTitle">Chapel Choir</h2>
+          <p id="sceneDetail">Wordless harmony in a quiet space</p>
+        </div>
+        <div class="transport">
+          <button type="button" class="round" id="stop" aria-label="Stop listening" disabled>■</button>
+          <button type="button" class="play" id="play"><span aria-hidden="true" id="playIcon">▶</span><span id="playLabel">Begin listening</span></button>
+          <button type="button" class="round" id="bell" aria-label="Sound a soft bell" title="Sound a soft bell" disabled>♧</button>
+        </div>
+        <div class="player-volume">
+          <div class="control-label"><label for="volume">Listening volume</label><output id="volumeValue" for="volume">45%</output></div>
+          <input type="range" id="volume" min="0" max="100" value="45">
+        </div>
+      </section>
+
+      <div class="studio-controls" id="sound-settings">
+        <section class="panel control-panel" aria-labelledby="experienceHeading">
+          <div class="panel-title">
+            <h2 id="experienceHeading">Choose an experience</h2>
+          </div>
+          <div class="experiences" id="experiences" role="group" aria-label="Listening experiences"></div>
+        </section>
+
+        <section class="panel control-panel" aria-labelledby="soundHeading">
+          <div class="panel-title"><h2 id="soundHeading">Find your sound</h2></div>
+          <div class="sounds" id="sounds" role="group" aria-label="Soundscapes"></div>
+        </section>
+
+        <section class="panel control-panel" aria-labelledby="tuningHeading">
+          <div class="panel-title"><h2 id="tuningHeading">Pace and frequency</h2></div>
+          <div class="settings-grid">
+            <div class="field">
+              <label for="rhythm">Rhythm</label>
+              <select id="rhythm">
+                <option value="off">Sound only</option>
+                <option value="breath">Breathing cue</option>
+                <option value="gamma">Fast pulse</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="tone">Tone layer</label>
+              <select id="tone">
+                <option value="off">Off</option>
+                <option value="pure">Pure tone</option>
+                <option value="binaural">Binaural beat</option>
+              </select>
+            </div>
+          </div>
+          <div class="setting" id="breathSettings" hidden>
+            <div class="control-label"><label for="pace">Breathing pace</label><output for="pace" id="paceValue">6.0 breaths/min</output></div>
+            <input id="pace" type="range" min="4.5" max="7.5" step="0.1" value="6">
+            <p class="hint" id="paceHint"></p>
+          </div>
+          <div class="setting" id="gammaSettings" hidden>
+            <div class="control-label"><label for="pulse">Pulse frequency</label><output for="pulse" id="pulseValue">40 Hz</output></div>
+            <input id="pulse" type="range" min="30" max="60" step="1" value="40">
+          </div>
+          <div class="setting pitch-settings" id="toneSettings" hidden>
+            <div class="control-label"><label for="pitch">Tone frequency</label><div class="exact"><label for="pitchNumber" class="sr-only">Exact tone frequency in Hz</label><input id="pitchNumber" type="number" inputmode="decimal" min="80" max="1000" step="0.1" value="180"><span>Hz</span></div></div>
+            <input id="pitch" type="range" min="80" max="1000" step="0.1" value="180">
+            <button type="button" id="matchPitch" class="text-button" hidden>Tune to this sound</button>
+            <div class="setting" id="beatSettings" hidden>
+              <div class="control-label"><label for="beat">Binaural beat frequency</label><output for="beat" id="beatValue">6.0 Hz</output></div>
+              <input id="beat" type="range" min="1" max="20" step="0.1" value="6">
+              <p class="hint" id="headphoneTip"></p>
+            </div>
+            <div class="setting">
+              <div class="control-label"><label for="toneLevel">Tone level</label><output for="toneLevel" id="toneLevelValue">30%</output></div>
+              <input id="toneLevel" type="range" min="0" max="100" value="30">
+            </div>
+          </div>
+        </section>
+
+        <section class="panel control-panel" aria-labelledby="sessionHeading">
+          <div class="panel-title"><h2 id="sessionHeading">Your session</h2></div>
+          <div class="settings-grid">
+            <div class="field">
+              <label for="duration">Duration</label>
+              <select id="duration">
+                <option value="300">5 minutes</option>
+                <option value="600">10 minutes</option>
+                <option value="900">15 minutes</option>
+                <option value="1200">20 minutes</option>
+                <option value="1800">30 minutes</option>
+                <option value="0">No time limit</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bells">Bell accents</label>
+              <select id="bells">
+                <option value="off">Off</option>
+                <option value="gentle">Occasional</option>
+                <option value="frequent">More frequent</option>
+              </select>
+            </div>
+          </div>
+          <div class="setting">
+            <div class="control-label"><label for="space">Room sound</label><output for="space" id="spaceValue">65%</output></div>
+            <input type="range" id="space" min="0" max="100" value="65">
+          </div>
+          <div class="recording">
+            <button type="button" class="outline" id="download">↓ Save a 30-second WAV sample</button>
+            <button type="button" class="outline" id="purchase" hidden>Buy this recording</button>
+            <p id="exportStatus" class="hint" role="status"></p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>Start with the volume low, especially with headphones.</span>
+      <details>
+        <summary>About the audio</summary>
+        <p>Breathing cues and tones follow your chosen settings. The player uses stereo sound for binaural beats.</p>
+        <div id="credits"></div>
+      </details>
+    </footer>
+    <noscript><p class="notice">Turn on JavaScript to play and adjust the soundscapes.</p></noscript>
+  </main>
+  <div id="notice" class="notice" role="status" hidden></div>
+</body>
+</html>
+

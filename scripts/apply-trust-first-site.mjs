@@ -104,6 +104,7 @@ ${header()}
       <article class="trust-card"><h3>Shop prints &amp; books</h3><p>Explore Sapiver Prints educational posters on Etsy and our children’s books on Amazon.</p><a class="text-link" href="/shop/">Browse our shop</a></article>
       <article class="trust-card"><h3>Daily Brief</h3><p>Checked AI stories, practical context and a deeper daily story without the hype.</p><a class="text-link" href="/daily-brief/">Open the Daily Brief</a></article>
       <article class="trust-card"><h3>Sapiver Forge AI Briefing</h3><p>Short audio episodes for when reading is not convenient.</p><a class="text-link" href="/podcast/">Open the podcast</a></article>
+      <article class="trust-card"><h3>Sapiver Resonates</h3><p>Make a quiet listening session with choir, piano, nature sounds and adjustable frequencies.</p><a class="text-link" href="/sapiver-resonates/">Open Sapiver Resonates</a></article>
       <article class="trust-card"><h3>Sapiver Learn</h3><p>Short daily lessons that build practical AI understanding from the foundations upward.</p><a class="text-link" href="/learn/">Open Sapiver Learn</a></article>
       <article class="trust-card"><h3>AI Inquisitive Parents</h3><p>Family-friendly projects and ideas that show what small, useful AI-assisted builds can look like.</p><a class="text-link" href="/parents/">Explore family projects</a></article>
       <article class="trust-card"><h3>Reports &amp; resources</h3><p>Longer guides, topic collections and checked learning material when you want more depth.</p><a class="text-link" href="/resources/">Browse resources</a></article>
@@ -251,3 +252,4 @@ for (const required of [
 
 await import("./build-shop-page.mjs");
 console.log("Applied Sapiver Press trust-first website presentation and updated Shop page.");
+

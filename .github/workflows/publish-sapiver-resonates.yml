@@ -1,0 +1,45 @@
+name: Publish Sapiver Resonates
+
+on:
+  push:
+    branches:
+      - publish-sapiver-resonates-20261111
+    paths:
+      - '.github/workflows/publish-sapiver-resonates.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sapiver-forge-daily-newsletter-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'sapiverpress-studio/SapiverForge'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify the website files
+        run: |
+          set -euo pipefail
+          for file in public/sapiver-resonates/*.mjs; do node --check "$file"; done
+          grep -Fq 'href="/sapiver-resonates/"' public/index.html
+          test -s public/sapiver-resonates/index.html
+          for file in coast fire forest rain; do test -s "public/sapiver-resonates/audio/$file.mp3"; done
+          node test/puzzle-site-contract.mjs
+          node test/shop-page-contract.mjs
+      - name: Install the website dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Publish the committed website and functions
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: '47bda30e-4698-4cf5-bcd4-d59785e1f399'
+        run: |
+          set -euo pipefail
+          test -n "${NETLIFY_AUTH_TOKEN:-}"
+          npx --yes netlify-cli@27.5.2 deploy --prod --no-build --dir=public --site="$NETLIFY_SITE_ID" --message="Publish Sapiver Resonates"

@@ -7,20 +7,20 @@
   <meta name="description" content="Build a soundscape for quiet listening with choir, piano and nature sounds, adjustable breathing cues and stereo tones.">
   <link rel="canonical" href="https://suite.sapiverpress.co.uk/sapiver-resonates/">
   <title>Sapiver Resonates | Sapiver Forge</title>
-  <link rel="stylesheet" href="./studio.css">
-  <script type="module" src="./studio.mjs"></script>
+  <link rel="stylesheet" href="./studio.css?v=2">
+  <script type="module" src="./studio.mjs?v=2"></script>
 </head>
 <body>
   <header class="masthead shell">
     <a class="back" href="../">← Sapiver Forge</a>
     <a class="brand" href="./"><span class="mark" aria-hidden="true">≈</span> Sapiver Resonates</a>
-    <a class="jump" href="#sound-settings">Sound settings ↓</a>
+    <a class="jump" href="#sound-settings">Make your own mix ↓</a>
   </header>
 
   <main class="shell">
     <div class="intro">
       <h1>Sapiver <em>Resonates</em></h1>
-      <p>Choose a sound, then make it yours.</p>
+      <p>Mix real recordings and add a tone at the frequency you choose.</p>
     </div>
 
     <div class="layout">
@@ -28,6 +28,17 @@
         <div class="player-meta">
           <span class="live"><span class="dot" aria-hidden="true"></span><span id="playState">Ready to listen</span></span>
           <span id="timer">10:00</span>
+        </div>
+        <div class="player-tools">
+          <form id="manualHz" class="manual-hz">
+            <label for="pitchNumber">Manual frequency <span class="sr-only">in Hz</span></label>
+            <div class="manual-row">
+              <div class="exact"><input id="pitchNumber" type="number" inputmode="decimal" min="20" max="1000" step="0.1" value="180" required><span aria-hidden="true">Hz</span></div>
+              <button type="submit" id="applyPitch" class="outline">Add tone</button>
+              <button type="button" id="turnToneOff" class="text-button" hidden>Turn off</button>
+            </div>
+          </form>
+          <a href="#sound-settings" class="mix-link">Make your own mix ↓</a>
         </div>
         <div class="canvas-wrap" id="canvasWrap">
           <canvas id="visualizer" aria-hidden="true"></canvas>
@@ -39,7 +50,7 @@
         </div>
         <div class="now-playing">
           <h2 id="sceneTitle">Chapel Choir</h2>
-          <p id="sceneDetail">Wordless harmony in a quiet space</p>
+          <p id="sceneDetail">Palestrina sung by The Tudor Consort</p>
         </div>
         <div class="transport">
           <button type="button" class="round" id="stop" aria-label="Stop listening" disabled>■</button>
@@ -52,17 +63,24 @@
         </div>
       </section>
 
-      <div class="studio-controls" id="sound-settings">
+      <div class="studio-controls">
+        <section class="panel control-panel" id="sound-settings" aria-labelledby="soundHeading">
+          <div class="panel-title mixer-heading"><h2 id="soundHeading">Make your own mix</h2><button type="button" class="text-button" id="clearMix">Start from silence</button></div>
+          <p class="mixer-hint">Add sounds and set the level of each one.</p>
+          <div class="sounds" id="sounds" role="group" aria-label="Sound mixer"></div>
+          <div class="recording">
+            <button type="button" class="outline mix-transport" id="mixPlay">Play mix</button>
+            <button type="button" class="outline" id="download">↓ Save a 30-second WAV sample</button>
+            <button type="button" class="outline" id="purchase" hidden>Buy this recording</button>
+          </div>
+          <p id="exportStatus" class="hint" role="status"></p>
+        </section>
+
         <section class="panel control-panel" aria-labelledby="experienceHeading">
           <div class="panel-title">
             <h2 id="experienceHeading">Choose an experience</h2>
           </div>
           <div class="experiences" id="experiences" role="group" aria-label="Listening experiences"></div>
-        </section>
-
-        <section class="panel control-panel" aria-labelledby="soundHeading">
-          <div class="panel-title"><h2 id="soundHeading">Find your sound</h2></div>
-          <div class="sounds" id="sounds" role="group" aria-label="Soundscapes"></div>
         </section>
 
         <section class="panel control-panel" aria-labelledby="tuningHeading">
@@ -95,9 +113,8 @@
             <input id="pulse" type="range" min="30" max="60" step="1" value="40">
           </div>
           <div class="setting pitch-settings" id="toneSettings" hidden>
-            <div class="control-label"><label for="pitch">Tone frequency</label><div class="exact"><label for="pitchNumber" class="sr-only">Exact tone frequency in Hz</label><input id="pitchNumber" type="number" inputmode="decimal" min="80" max="1000" step="0.1" value="180"><span>Hz</span></div></div>
-            <input id="pitch" type="range" min="80" max="1000" step="0.1" value="180">
-            <button type="button" id="matchPitch" class="text-button" hidden>Tune to this sound</button>
+            <div class="control-label"><label for="pitch">Tone frequency</label><output for="pitch" id="pitchValue">180 Hz</output></div>
+            <input id="pitch" type="range" min="20" max="1000" step="0.1" value="180">
             <div class="setting" id="beatSettings" hidden>
               <div class="control-label"><label for="beat">Binaural beat frequency</label><output for="beat" id="beatValue">6.0 Hz</output></div>
               <input id="beat" type="range" min="1" max="20" step="0.1" value="6">
@@ -136,11 +153,6 @@
           <div class="setting">
             <div class="control-label"><label for="space">Room sound</label><output for="space" id="spaceValue">65%</output></div>
             <input type="range" id="space" min="0" max="100" value="65">
-          </div>
-          <div class="recording">
-            <button type="button" class="outline" id="download">↓ Save a 30-second WAV sample</button>
-            <button type="button" class="outline" id="purchase" hidden>Buy this recording</button>
-            <p id="exportStatus" class="hint" role="status"></p>
           </div>
         </section>
       </div>

@@ -1,5 +1,5 @@
 import { normaliseMix } from './catalog.mjs';
-import { createEngine, loadSound } from './audio.mjs';
+import { createEngine, loadLayers } from './audio.mjs';
 import { credits } from './credits.mjs';
 
 export const sampleSeconds = 30;
@@ -10,7 +10,7 @@ export const startCheckout = null;
 export function recordingRequest(mix, preview = false) {
   const settings = normaliseMix(mix);
   return {
-    version: 1,
+    version: 2,
     settings,
     seconds: preview ? sampleSeconds : settings.duration || 1200,
     format: preview ? 'wav' : 'mp3',
@@ -71,12 +71,13 @@ export async function renderSample(mix) {
   const request = recordingRequest(mix, true);
   const rate = 44100;
   const context = new Offline(2, rate * request.seconds, rate);
-  const { tracks } = await loadSound(context, request.settings.scene);
+  const { tracks, complete } = await loadLayers(context, request.settings.layers);
+  if (!complete) throw new Error('A selected recording could not load.');
   const engine = createEngine(context, request.settings, request.seconds);
-  engine.selectScene(request.settings.scene, tracks);
+  engine.setTracks(tracks);
   engine.start();
   const buffer = await context.startRendering();
-  const attribution = credits.filter(source => source.scenes.includes(request.settings.scene))
+  const attribution = credits.filter(source => source.scenes.some(scene => request.settings.layers[scene]))
     .map(source => [source.name + ' by ' + source.author, source.url, source.licence, source.terms]
       .filter(Boolean).join(' | '));
   const comment = attribution.length ? 'Edited and looped by Sapiver Resonates. ' + attribution.join(' / ') : '';

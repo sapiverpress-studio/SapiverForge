@@ -1,10 +1,10 @@
-import { defaultMix, experiences, normaliseMix, sounds } from './catalog.mjs';
-import { createEngine, loadSound } from './audio.mjs';
+import { defaultLayerLevel, defaultMix, experiences, normaliseMix, sounds } from './catalog.mjs';
+import { createEngine, loadLayers } from './audio.mjs';
 import { recordingRequest, renderSample, sampleSeconds, startCheckout } from './recording.mjs';
 import { credits } from './credits.mjs';
 
 const get = id => document.getElementById(id);
-const storageKey = 'sapiver-resonates.mix.v1';
+const storageKey = 'sapiver-resonates.mix.v2';
 const AudioContextClass = window.AudioContext || window.webkitAudioContext;
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
@@ -12,11 +12,13 @@ const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, millise
 let mix = readMix();
 let listening = null;
 let noticeTimer;
-let toneBeforeEdit;
+const layerControls = new Map();
+const lastLevels = {};
 
 function readMix() {
   try {
-    return normaliseMix(JSON.parse(localStorage.getItem(storageKey)) ?? defaultMix);
+    const saved = localStorage.getItem(storageKey) ?? localStorage.getItem('sapiver-resonates.mix.v1');
+    return normaliseMix(JSON.parse(saved) ?? defaultMix);
   } catch {
     return { ...defaultMix };
   }
@@ -56,13 +58,49 @@ function makeChoice({ name, detail, icon, hue }, group, key) {
 }
 
 function presetSettings(experience) {
-  const { id, name, ...settings } = experience;
-  return settings;
+  const { id, name, scene, ...settings } = experience;
+  return { ...defaultMix, ...settings, layers: { [scene]: defaultLayerLevel } };
 }
 
 function chooseExperience(experience) {
   if (listening?.engine) listening.began = listening.context.currentTime;
-  setMix({ ...defaultMix, volume: mix.volume, ...presetSettings(experience) });
+  setMix({ ...presetSettings(experience), volume: mix.volume }, true);
+}
+
+function setLayer(id, level) {
+  if (mix.layers[id]) lastLevels[id] = mix.layers[id];
+  setMix({ layers: { ...mix.layers, [id]: level } });
+}
+
+function buildLayer(id, sound) {
+  const card = document.createElement('div');
+  card.className = 'sound-channel';
+  const button = makeChoice(sound, 'sound', id);
+  const indicator = document.createElement('span');
+  indicator.className = 'layer-indicator';
+  indicator.setAttribute('aria-hidden', 'true');
+  button.append(indicator);
+  button.addEventListener('click', () => setLayer(id, mix.layers[id] ? 0 : lastLevels[id] ?? defaultLayerLevel));
+  const levelRow = document.createElement('div');
+  levelRow.className = 'layer-level';
+  const label = document.createElement('label');
+  label.htmlFor = 'level-' + id;
+  label.className = 'sr-only';
+  label.textContent = sound.name + ' level';
+  const slider = document.createElement('input');
+  slider.id = label.htmlFor;
+  slider.type = 'range';
+  slider.min = 0;
+  slider.max = 100;
+  slider.step = 1;
+  slider.value = 0;
+  slider.addEventListener('input', () => setLayer(id, Number(slider.value)));
+  const output = document.createElement('output');
+  output.setAttribute('for', slider.id);
+  levelRow.append(label, slider, output);
+  card.append(button, levelRow);
+  layerControls.set(id, { card, button, indicator, slider, output });
+  return card;
 }
 
 function buildChoices() {
@@ -75,15 +113,13 @@ function buildChoices() {
     get('experiences').append(button);
   }
   for (const [id, sound] of Object.entries(sounds)) {
-    const button = makeChoice(sound, 'sound', id);
-    button.addEventListener('click', () => setMix({ scene: id }));
-    get('sounds').append(button);
+    get('sounds').append(buildLayer(id, sound));
   }
 }
 
 function showCredits() {
   const intro = document.createElement('p');
-  intro.textContent = 'Choir, piano and strings are original synthesised arrangements. Nature recordings are edited and looped from the sources below.';
+  intro.textContent = 'Recorded performances and field recordings. Excerpts have been edited, level-balanced and looped for this studio.';
   const list = document.createElement('ul');
   for (const source of credits) {
     const item = document.createElement('li');
@@ -128,12 +164,16 @@ function showOrb() {
   get('orbUnit').textContent = unit;
 }
 
-function showMix() {
+function showMix(refreshPitch = false) {
   for (const [key, value] of Object.entries(mix)) {
     const control = get(key);
     if (control && control.value !== String(value)) control.value = value;
   }
-  if (get('pitchNumber').value !== String(mix.pitch)) get('pitchNumber').value = mix.pitch;
+  const pitchNumber = get('pitchNumber');
+  if (refreshPitch || document.activeElement !== pitchNumber) pitchNumber.value = mix.pitch;
+  get('pitchValue').textContent = mix.pitch + ' Hz';
+  get('applyPitch').textContent = mix.tone === 'off' ? 'Add tone' : 'Apply Hz';
+  get('turnToneOff').hidden = mix.tone === 'off';
   get('volumeValue').textContent = mix.volume + '%';
   get('spaceValue').textContent = mix.space + '%';
   get('toneLevelValue').textContent = mix.toneLevel + '%';
@@ -146,30 +186,40 @@ function showMix() {
   get('gammaSettings').hidden = mix.rhythm !== 'gamma';
   get('toneSettings').hidden = mix.tone === 'off';
   get('beatSettings').hidden = mix.tone !== 'binaural';
-  get('matchPitch').hidden = mix.tone !== 'pure' || !sounds[mix.scene].pitch;
-  const sound = sounds[mix.scene];
-  get('sceneTitle').textContent = sound.name;
-  get('sceneDetail').textContent = sound.description;
-  get('canvasWrap').style.setProperty('--hue', sound.hue);
-  for (const button of get('sounds').children) {
-    button.setAttribute('aria-pressed', String(button.dataset.sound === mix.scene));
+  const active = Object.keys(mix.layers);
+  const sound = active.length === 1 ? sounds[active[0]] : null;
+  get('sceneTitle').textContent = sound?.name ?? (active.length ? 'Your mix' : 'Blank mix');
+  get('sceneDetail').textContent = sound?.description ?? (active.length
+    ? active.map(id => sounds[id].name).join(' + ')
+    : mix.tone === 'off' ? 'Add a sound or set a frequency' : mix.pitch + ' Hz tone');
+  get('canvasWrap').style.setProperty('--hue', sound?.hue ?? 82);
+  for (const [id, controls] of layerControls) {
+    const level = mix.layers[id] ?? 0;
+    const selected = level > 0;
+    controls.card.classList.toggle('on', selected);
+    controls.button.setAttribute('aria-pressed', String(selected));
+    controls.indicator.textContent = selected ? '✓' : '+';
+    controls.slider.value = level;
+    controls.output.textContent = level + '%';
   }
   for (const [i, button] of Array.from(get('experiences').children).entries()) {
-    const matches = Object.entries(presetSettings(experiences[i])).every(([key, value]) => mix[key] === value);
+    const { layers, volume, ...settings } = presetSettings(experiences[i]);
+    const matches = Object.entries(settings).every(([key, value]) => mix[key] === value)
+      && Object.keys(sounds).every(id => layers[id] === mix.layers[id]);
     button.setAttribute('aria-pressed', String(matches));
   }
   showOrb();
   if (reducedMotion.matches) drawOrb(0);
 }
 
-function setMix(changes) {
+function setMix(changes, refreshPitch = false) {
   const previous = mix;
   mix = normaliseMix({ ...mix, ...changes });
   storeMix();
-  showMix();
+  showMix(refreshPitch);
   if (listening) {
     listening.engine.apply(mix);
-    if (previous.scene !== mix.scene) void selectSound(listening);
+    if (Object.keys(previous.layers).join(' ') !== Object.keys(mix.layers).join(' ')) void syncTracks(listening);
   }
   updateClock();
 }
@@ -190,6 +240,8 @@ function showTransport() {
   get('playLabel').textContent = action;
   get('playIcon').textContent = icon;
   get('play').disabled = ['loading', 'pausing', 'resuming'].includes(phase);
+  get('mixPlay').textContent = phase === 'ready' ? 'Play mix' : action;
+  get('mixPlay').disabled = get('play').disabled;
   get('stop').disabled = !listening;
   get('bell').disabled = phase !== 'playing';
 }
@@ -209,15 +261,23 @@ function updateClock() {
   }
 }
 
-async function selectSound(session) {
+function hasAudio() {
+  return Object.keys(mix.layers).length > 0 || (mix.tone !== 'off' && mix.toneLevel > 0);
+}
+
+async function syncTracks(session) {
   const revision = ++session.revision;
-  const scene = mix.scene;
   try {
-    const [, result] = await Promise.all([session.ready, loadSound(session.context, scene)]);
+    const [, result] = await Promise.all([session.ready, loadLayers(session.context, mix.layers)]);
     if (listening !== session || revision !== session.revision) return;
     session.engine.apply(mix);
-    session.engine.selectScene(scene, result.tracks);
+    session.engine.setTracks(result.tracks);
     if (session.phase === 'loading') {
+      if (!result.tracks.length && (mix.tone === 'off' || !mix.toneLevel)) {
+        stopListening();
+        showNotice(result.complete ? 'Add a sound or set a frequency to play your mix.' : 'The selected sound could not load. Try playing it again.');
+        return;
+      }
       session.phase = 'playing';
       session.began = session.context.currentTime;
       session.engine.start();
@@ -234,6 +294,10 @@ async function selectSound(session) {
 }
 
 function startListening() {
+  if (!hasAudio()) {
+    showNotice('Add a sound or set a frequency to play your mix.');
+    return;
+  }
   if (!AudioContextClass) {
     showNotice('Your browser cannot play Web Audio. Try a current version of Chrome, Firefox or Safari.');
     return;
@@ -255,7 +319,7 @@ function startListening() {
       }
     });
     showTransport();
-    void selectSound(session);
+    void syncTracks(session);
   } catch (error) {
     console.error(error);
     if (context) void context.close().catch(() => {});
@@ -313,6 +377,10 @@ async function download() {
   const button = get('download');
   const status = get('exportStatus');
   const chosen = { ...mix };
+  if (!hasAudio()) {
+    status.textContent = 'Add a sound or set a frequency first.';
+    return;
+  }
   button.disabled = true;
   status.textContent = 'Rendering your stereo sample…';
   try {
@@ -320,7 +388,9 @@ async function download() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'sapiver-resonates-' + chosen.scene + '-' + sampleSeconds + 's.wav';
+    const layers = Object.keys(chosen.layers);
+    const name = layers.length === 1 ? layers[0] : layers.length ? 'mix' : 'tone';
+    link.download = 'sapiver-resonates-' + name + '-' + sampleSeconds + 's.wav';
     document.body.append(link);
     link.click();
     link.remove();
@@ -374,7 +444,8 @@ function drawOrb(time) {
   const cx = width / 2;
   const cy = height / 2;
   const seconds = time / 1000;
-  const hue = sounds[mix.scene].hue;
+  const layers = Object.keys(mix.layers);
+  const hue = layers.length === 1 ? sounds[layers[0]].hue : 82;
   const active = listening?.phase === 'playing';
   const animated = !reducedMotion.matches;
   const phase = animated && active && mix.rhythm === 'breath'
@@ -419,16 +490,24 @@ for (const key of ['rhythm', 'tone', 'bells']) {
   get(key).addEventListener('change', event => setMix({ [key]: event.currentTarget.value }));
 }
 get('duration').addEventListener('change', event => setMix({ duration: Number(event.currentTarget.value) }));
-get('pitchNumber').addEventListener('focus', () => { toneBeforeEdit = mix.pitch; });
 get('pitchNumber').addEventListener('change', event => {
   const input = event.currentTarget;
-  setMix({ pitch: Number.isFinite(input.valueAsNumber) ? input.valueAsNumber : toneBeforeEdit ?? mix.pitch });
+  if (input.validity.valid) setMix({ pitch: input.valueAsNumber });
 });
-get('pitchNumber').addEventListener('keydown', event => {
-  if (event.key === 'Enter') event.currentTarget.blur();
+get('manualHz').addEventListener('submit', event => {
+  event.preventDefault();
+  const input = get('pitchNumber');
+  if (!input.reportValidity()) return;
+  setMix({ pitch: input.valueAsNumber, tone: mix.tone === 'off' ? 'pure' : mix.tone, toneLevel: mix.toneLevel || defaultMix.toneLevel }, true);
+  if (!listening || listening.phase === 'paused') void toggleListening();
 });
-get('matchPitch').addEventListener('click', () => setMix({ pitch: sounds[mix.scene].pitch ?? mix.pitch }));
+get('turnToneOff').addEventListener('click', () => setMix({ tone: 'off' }));
+get('clearMix').addEventListener('click', () => {
+  stopListening();
+  setMix({ layers: {}, tone: 'off', rhythm: 'off', bells: 'off' });
+});
 get('play').addEventListener('click', toggleListening);
+get('mixPlay').addEventListener('click', toggleListening);
 get('stop').addEventListener('click', stopListening);
 get('bell').addEventListener('click', () => listening?.engine.ring());
 document.addEventListener('visibilitychange', () => { if (!document.hidden) updateClock(); });

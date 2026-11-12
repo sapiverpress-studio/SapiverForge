@@ -1,64 +1,54 @@
 # Sapiver Forge Daily Brief
 
-Today’s briefing covers a massive valuation jump for a UK chip startup, the latest on Anthropic’s public market debut, and a reality check on AI-assisted bug hunting.
+It has been a turbulent 24 hours in tech, headlined by a seismic shift at the top of the industry's most valuable chipmaker. While the markets react to Nvidia's leadership crisis, we are also seeing the first real-world friction between autonomous AI agents and legacy digital infrastructure.
 
-## 1. Fractile hits $7B valuation as UK chip sector heats up
+## 1. Jensen Huang Resigns as Nvidia CEO
 
-**Confirmed:** George Hammond/Financial Times reports, citing people familiar with the matter, that london-based AI chip startup Fractile has raised $720 million in a funding round led by Thrive Capital and Founders Fund, pushing its valuation to $7 billion.
+**Confirmed:** Nvidia founder Jensen Huang resigned on 12 November 2026 following disclosures regarding extramarital relationships. CFO Colette Kress has been appointed interim CEO, and Harvey C. Jones has been named the company's first-ever Chair of the Board.
 
-**Why it matters:** The jump from a $1.1 billion valuation in May suggests significant investor appetite for custom semiconductor hardware tailored specifically for AI inference.
+**Why it matters:** Nvidia is the primary engine of the current AI boom; a leadership vacuum at this scale creates significant uncertainty for the entire AI supply chain and the company's extensive network of venture-backed partners.
 
-**Sapiver Forge interpretation:** This is a substantial vote of confidence in the UK’s ability to produce competitive hardware, though the rapid valuation increase reflects the broader, high-stakes scramble for compute infrastructure.
+**Sapiver Forge interpretation:** The board's move to appoint an external chair suggests a rapid effort to stabilise governance, though the market's immediate 7–14% drop reflects deep investor anxiety about the company's future direction without its long-time architect.
 
-**Source:** [George Hammond/Financial Times](https://www.ft.com/content/f999a0c2-af52-499f-8008-accbdfd45a25) · discovered via Techmeme · confidence 95%
+**Source:** [Bloomberg](https://www.bloomberg.com/news/articles/2026-11-12/nvidia-market-value-sinks-below-4-trillion-after-huang-resigns) · discovered via Techmeme · confidence 98%
 
-## 2. Anthropic IPO draws heavy institutional interest
+## 2. United Airlines Blocks Autonomous AI Agents
 
-**Confirmed:** Bailey Lipschultz/Bloomberg reports, citing people familiar with the matter, that anthropic’s upcoming IPO is reportedly multiple times oversubscribed, with CEO Dario Amodei and JPMorgan’s Jamie Dimon set to host a joint investor event this Friday.
+**Confirmed:** United Airlines updated its policies on 11 November 2026 to prohibit third-party autonomous AI agents from searching, booking, or managing flight reservations. The airline cited security risks, potential credential sharing, and regulatory requirements for human interaction during check-in.
 
-**Why it matters:** As a major player in the foundation model space, Anthropic’s public market entry will likely serve as a key benchmark for the valuation of AI companies.
+**Why it matters:** This is a significant operational pushback against the 'agentic' web, highlighting that even as AI becomes more capable, legacy industries may restrict access to protect security and regulatory compliance.
 
-**Sapiver Forge interpretation:** The heavy oversubscription suggests institutional investors are eager to secure a stake, despite the inherent volatility and long-term uncertainty surrounding AI business models.
+**Sapiver Forge interpretation:** While this is currently an isolated policy, it sets a precedent for other highly regulated sectors to wall off their booking systems from autonomous agents if they cannot could support safety and fraud prevention.
 
-**Source:** [Bailey Lipschultz/Bloomberg](https://www.bloomberg.com/news/articles/2026-11-11/anthropic-s-mega-ipo-is-said-to-be-multiple-times-oversubscribed) · discovered via Techmeme · confidence 90%
+**Source:** [cbsnews.com](https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/) · discovered via Hacker News · confidence 95%
 
-## 3. Audit highlights gap in Anthropic’s vulnerability disclosures
+## 3. AWS Emulator Built Entirely by AI Agents
 
-**Confirmed:** A seven-month audit by VulnCheck found that while Anthropic’s internal ledger lists 37,966 findings, only 7,349 have been made public and 217 marked as fixed.
+**Confirmed:** Amazon released the AWS Emulator on 11 November 2026, a tool for local testing of over 200 AWS services. Amazon stated that 100% of the codebase was written, tested, and maintained by autonomous AI agents.
 
-**Why it matters:** The discrepancy between vendor-reported safety metrics and independent vulnerability tracking underscores the difficulty in verifying the effectiveness of automated AI bug-hunting tools.
+**Why it matters:** This marks a notable milestone in software engineering, demonstrating that autonomous agents can now handle complex, large-scale infrastructure tooling, provided they operate within human-designed evaluation pipelines.
 
-**Sapiver Forge interpretation:** It is a reminder that internal disclosure ledgers are not the same as public security transparency; until these metrics align, independent scrutiny remains the only way to gauge actual progress.
+**Sapiver Forge interpretation:** The release serves as a high-profile proof of concept for agentic development, though its utility remains limited to local unit testing rather than production-grade deployment.
 
-**Source:** [vulncheck.com](https://www.vulncheck.com/blog/anthropic-glasswing-november-update) · discovered via Hacker News · confidence 85%
+**Source:** [github.com](https://github.com/aws/aws-emulator) · discovered via Hacker News · confidence 92%
 
-## 4. DeepMind uses AI to verify Signal protocol security
+## 4. Google Launches Gemini Decisions API
 
-**Confirmed:** Google DeepMind’s AlphaProof Code framework has generated over 6.5 million lines of machine-checked proofs to verify the security properties of the Signal protocol's machine code.
+**Confirmed:** Google's new Gemini Decisions API, powered by the gemini-decision-1 model, evaluates inputs to provide calibrated probabilities for branching logic rather than generating open-ended text.
 
-**Why it matters:** This represents a significant milestone in using AI for formal verification, though it required 26,000 lines of human-written specifications and did not uncover new vulnerabilities.
+**Why it matters:** By focusing on structured decision-making rather than generative text, this tool offers developers a more reliable way to build programmatic logic into AI-driven applications.
 
-**Sapiver Forge interpretation:** It is an impressive technical feat, but it remains a research-grade tool rather than a plug-and-play solution for general software security.
+**Sapiver Forge interpretation:** This is a pragmatic move to address the 'hallucination' problem in agentic workflows by forcing the model to output probabilities for specific choices instead of unpredictable prose.
 
-**Source:** [deepmind.google](https://deepmind.google/blog/introducing-alphaproof-code/) · discovered via Hacker News · confidence 90%
-
-## 5. Indie game developers face AI backlash
-
-**Confirmed:** Game developer House House confirmed using LLMs to fix a rendering bug in 'Big Walk', prompting 19 Independent Games Festival jurors to decline voting for entries using generative AI.
-
-**Why it matters:** The incident highlights the growing friction between practical AI utility in development and the creative community's stance on generative tools.
-
-**Sapiver Forge interpretation:** Even when AI is used for mundane debugging rather than creative output, the industry remains deeply divided on where to draw the line.
-
-**Source:** [Luke Plunkett/Aftermath](https://aftermath.site/big-walk-ai-igf-jurors-controversy/) · discovered via Techmeme · confidence 90%
+**Source:** [blog.google](https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/) · discovered via Hacker News · confidence 88%
 
 ## Practical takeaway
 
-When evaluating AI-driven tools for security or development, look past the marketing claims. As seen with the discrepancies in vulnerability reporting and the ongoing debate in indie gaming, the practical reality of AI integration often involves more human oversight and community friction than the initial announcements suggest.
+If you are building with AI agents, expect increasing friction with legacy platforms like United Airlines that prioritise security over automation. For developers, tools like the AWS Emulator and Gemini Decisions API suggest a shift toward more structured, agent-native infrastructure that prioritises reliability over open-ended generation.
 
 ## What to watch next
 
-Keep an eye on Anthropic’s Friday investor event for any shift in how the company balances its ambitious 'age of miracles' rhetoric with the practical realities of public market scrutiny.
+Monitor how other airlines and travel platforms respond to the rise of autonomous booking agents, and keep an eye on whether Nvidia's interim leadership can maintain the company's venture-backed ecosystem during the search for a permanent CEO.
 
 ---
 

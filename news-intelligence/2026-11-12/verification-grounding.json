@@ -1,0 +1,549 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22pietromiotti.com%22+%22maya%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;pietromiotti.com&quot; &quot;maya&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Alice+Huang%22+Singapore+passport+%22stern+warning%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Alice Huang&quot; Singapore passport &quot;stern warning&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Nvidia+Jensen+Huang+resignation+Colette+Kress+2026&client=app-vertex-grounding&safesearch=active\">Nvidia Jensen Huang resignation Colette Kress 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=AWS+emulator+All+Things+Distributed+2026&client=app-vertex-grounding&safesearch=active\">AWS emulator All Things Distributed 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Apple+HomeView+review%22+%22The+Verge%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Apple HomeView review&quot; &quot;The Verge&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Google%22+%22Samsung%22+%22Intelligent+Eyewear%22+smart+glasses+Warby+Parker+2026&client=app-vertex-grounding&safesearch=active\">&quot;Google&quot; &quot;Samsung&quot; &quot;Intelligent Eyewear&quot; smart glasses Warby Parker 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=United+Airlines+bans+AI+agents+booking+flights+2026&client=app-vertex-grounding&safesearch=active\">United Airlines bans AI agents booking flights 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Gemini+Decisions+API+Google+blog+2026&client=app-vertex-grounding&safesearch=active\">Gemini Decisions API Google blog 2026</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYontVIxgPks71D9fVYKaRl1aJFCCbWRn0Auax03PKDc9Jl7iyHqWQqgssdv93p8InosGQ8TUHMlHrR5AyOoY3lM0c3qm923U1sLMTNv_QpkuP0rCuJ6Sb7fjcd2eq42JKoZT3Q6WvnYfKuCYz6n6PLDb92fv3gsc=",
+        "title": "nvidia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3kfWbRktaySLeDBj9-GQIxu77cs9SRTo2ads4YxCbSGuTqWXPphv89UEIglsWUKdRSkYBfRnGPQzIx4s2bpQpGk59BsBQTONovTg5ecPl14JvepTsi-Bp4yYay1JSVdgF0IjJ__BDBayZ2qSYboasRv308HaTRHHMFw==",
+        "title": "fortune.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsPcKRmSRgvEkAG8VVc4eag-akWAtSDw_WFIaBju17TeQT-UpnxUDliXLHovrdhk3meUgbkkvtMLMpMPMqZtrz9heYN1s0bwG9ppzYu87HfStGlVfFJhcocLesFG4g74vCMjptyaAH_QkYh58stXfIoErNtte8nr1z7yCCMQ0xdsG1E5U=",
+        "title": "ft.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUDrKz-RQpAFw_IMnYtvbkHYXTsGg2gqb1Q_C8SR0jgJzhH4NJAbNgKUeze8DaBizERkE6ocdFcZqZPbClT9M4JDtK6vs5DSZx6KvtQsQaT_WElfDuJ0eVLV9w5pY__XE-G_DMm-jC6Bj00LqW0ehVR1Dke04=",
+        "title": "cnn.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdwV1BiTKMNtZTJqgT0JSLl3-HJ8Q-pk7oy7qEnvCKTxP6E2NLL0t2b-7UpFMZreBXdP8e5mSCfBFDfPsjMXj2FwJS-dt2CdNlQkwtMXs0FqWdGEuw-sUh-rj7uJ-PHajX7Pbwo_DGNjuX29ZuuzrGYTHVsJrCNzt7X1WjJzdPzTBhFmJKqCU9AyYtJfOUSfNexj5950k=",
+        "title": "daily.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKtqIZ6qStAwYmdDaBE5_HKZWK2czo4V3gXXcI4ZOwLUXJng0Je7LiJpjTWoixTeLqibXRknKk6QL_KjsS6Qaa-xKxZkzVNy3UNEAIJqozmDZbOBbQsWLxvTDlKYI=",
+        "title": "ministack.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEezM61GgvHi5h52TcKFyHNLc3ajLL4_BVPgMc7aTuKtUGG2i98d7k9F4zrwrf213m1QOuClXK66c8WJRu5dYO52w3uQcnslBM2EwQczDG1E8QrQWAN1nQp9zW_7s5T8rZaQmn0ZW9arBCne8sSlY6CYPWar8PZaUTBm5aAIa_I5s0NMA5OA==",
+        "title": "aboutamazon.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjCUG_n8s5JCx1qVoXHyf1HCUJuOhvF3vZGBsZYUthXetKBlfFsatHrzsq5gbckbGP-1vWWMcSVnTxYSujfUKC2SUaKafPaAI-4BboAC5CcgdPswaCS9Ya27sg1uAyN9QRYZn6gNqRSIUtguCYZZu0fQwI500v964vFsJpeIw8G0R5TK7jaNoUKzKu7HTpsSA=",
+        "title": "unite.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjtlu0EXZ3BTjRiVIZQ8IgH_Qc2ffk1O9ScyGZ0t99UiETRRwyObd3h7peudcZ8woGcVIfMDIj1wleLrFBkOVzC7nmQSblS6QLStepMEu58iiNUws0dOva1QTnr887E-HE2Jo=",
+        "title": "ycombinator.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQlke7RTa7S9ZejbDt_IfnUQO-25Afuq4GpDw2mzyjthebNUXBhhYwKiJ1ilau8gXJlEXxNr1IIIbDN3kIYZe1Ongkg1JK4Wq3EJz5S4eHq1q5NXviVbu7DuPlOtD-cW3d8rMGJ-QYn7VsY_gyRbMEv6RmaeBWg9YWuW_KdANi4DotndA=",
+        "title": "amazon.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDCn4eU4_41lwG4UsEJwvvGvlDEDWKin2ie4uL1yhIjVS8EtvJD8XR9wRj3ot4H0IQQVwvUOF11W3D7gvRk0QjJxyYwJVzzlxi0mpXDSPXPlYN7zalBYVhMDg3jJyLSVtLnsykXdTdiFrz9gYV_8j68tk_KXUcC8cpabtgkm7roCr3",
+        "title": "cbsnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF56vCa1m9KmDUHpF-SM2D5tocpehSUXiJSmeP0C-Igs3SHfflP9t_uMSh7Gf8keBSiHb_TKHeH5SzGsld-QAVgZd2b3z9JxIbUVBku6MZXay0eo_Hh6ntQX2ahVvKfvF455wmpWPZQ_KVKCkL3hz3uy13fMxBVl4aeksMMsEqWzftwQOC5yQyzVwZ4t7M6KKZp2BP5DrLplLXXrKYVZhvPAd9JJQnv14jFVQ==",
+        "title": "united.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvz_D4FBYt9cPIs4BZpjIL2_e5Brbn5EcxKrQLzoKlE409cmwHiD7aNOw7QoIeZuJNcxrFecYM4vvWeSkRKDWPHIZ5MOrvZCaCAabwE7cxyffRVQFDlcMtp3XSAk1nuabrIX-JBtJ0cIbsgS5NBlHTtPrQ1-YnqVUCN6RBpXeaV2ynsOG455ZLmxf7wBHDdsoNs4N4tYBNG9cKVbw4U6U5bh4TNg==",
+        "title": "travelmarketreport.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkGu2XN2vVDFCCekNtQ78fSx3lZrf8kJmAYjI8cOaRUYP3LAd6o-TT3ahOJJCB2iUot2agtQb6a097ntOgJVMb8XBfkheIe1nieSvI3KsAUjCi6Mn-V6vVGauI-im8vn9RtKNrZTi2YoU2URgy3VUWYAdmGkPVmWa2gQ7mcnJUqJq-0cNO4pMWwgBP40AeyzA1lKjrw5EU9zPCb-LZJvXP50kTng==",
+        "title": "forbes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcgM93tkbWQuWox1ZNLUFsnZVZD5wZ-GLY_-uHBPC1haXOeXNhXHg5vLXWXK61iZjWfOmsOIVrZYKXhdDFTp1Uqj5cO9yJcyePTPbZMpAGAvDlJf9y3yUj9-cxmPK_PglO5LQ4HJ5D1E9Q26p1wqHRS_bjYRzmbnL3nzrKFlSpgIecJ8FXQXHc8eT-tn047OuNqOKeI8mG-uv9JKdmBlz94TdjhU98400z6rVcgS4WrmwZ1FcmRU_kDTG9p7RrMdRAPA==",
+        "title": "fastcompany.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjwVrLI5P4V17FO-Pk2nR8YDumGXgJ-pA3X0JQr2eAGoTPegt21XPc60e4JGMOwPnMvdA3jXwCHMhFipRFVhhcriaZBRfjfY9VcKP4Q0gPgGILlyDMKrdHq8T0VQVsv9dDtxiq7YrTKmzP8hxhXwAVBZ0PSdkZM1sXTPIrZNgxaVSa0bfaCs617RFe3S4J0LuZrQonJ_r0Vk-gVZzjmQ==",
+        "title": "blog.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPdIQSnuLfs4ZBY3aCk4Dya4VEEL9H3Kw9y8yYM94uihuAMN8fI4-XoUZ3cWJ5FJnSp4bZJvClmlsFemlXzAyek0emUayYJqbP03BcEcWlAypSK94ZbL0arZoYfqvd3AwMdoHqyavsDNih9s2y26Wjx91C56xHbasMOYw=",
+        "title": "9to5google.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFezQvdvmbOQa6oI0HpjmEDGgmUgB0anWbQnQltonmel-dBRZ5iTmWIDiyD7lD0A0_SVBfYZFSFCLYZ1xPNMcC57NLBgMRBbPVuRPKotXmKJuMzI_yl_vyAj9Ou1ac4wCp54veyXicBPZoKkzOcGHfzbEXH3vQHGiR56X8KldiVZLzC4zqxQx--c6AZkYFgjkoYf1uPchxt33es",
+        "title": "gsmarena.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhctsyj6RCX5CGxw4JEHa30Ife0L7FnrFsdJ_sOYZHphGoGDwME79poIJO8brlRRHz9_6XG9yMmMrs8OwnJ7Slgq7okgy9m5RuPs7QLmFLxbbE9FTSANJ0YwlE5_XEGXJGbd49SR7smx3V1uzmeniyuKgN5AEePdem6cwBIsEZ23vomt26m9kaPn7xaXhBxwD9TVBiKAdaaAeCnn8pWCp-XtE2Kw==",
+        "title": "cnet.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoLi7ss3rRImoB58iUxt9XFB3sqCkPpoEjo11aRvcmjiXyPXgEJ__jjIEfdP0f7ZK0_3q1dtHKjDXLWc5POANlG2D-MGL5dbuQDbxWv5POxlNIfi9aEUVWbbcyDpXQ9osD",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHH9fOBSwscu0VUqt0gV3l9kKsj6Eua_n5NunWFV8Jy4XnRhaEHicn7iKUMNefW3oQLEsfcJVpnGteG3uAKSfFn5Ws6_eIu9ux01GjyhuHXgihPDJ-9BnWf2oSYh_QFvmM=",
+        "title": "pietromiotti.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0QgfiiuNvgnC7hbkaoD8HF88YPQNaucw4RO3kRc9Yp86tAT8YnTSuX_1xGe1xQ1UfyxWp1XVVFwtFZnwIFAkNqYWgyJG4vTbhOn_pWZEjOMptz8bxY36m39-Wk2qedYr4cG6Xo_LAH2uJrJx63Q2DEPnVVPHjkeNp-sKBcFekmcRhYaDkiYjGKweWPGVkkK64lqJ4H5sUofHn8-p8jRkb-7ckLjARj_5G3aqjQJkEwz7E",
+        "title": "adafruit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCuoRRCqR_P-dEFgHGLaSeATGTldk9qp9bR4Z920Hl4ZL-uUd4UMY7YfoKT6qMPXmvgm_M3hjTjlO4L2BlmNXCmFUGMi4M0r9afdtFA-bcYM6gdHV1aI-LAAY4gvfYyCBvlA==",
+        "title": "noferi.it"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSp4jPq9kaZB4mftqbjOoA5VhS19R8KWc-OOWv0OIktRcwr13N3YpPrGMM5_AXdvH-IjOgippn6c_PPKmLnAAOAvvDpu_4F6uFE_iGZq6hAidv2LbkwNlrh_SoviEEsDa0GgMofDY2dXbPS53SSvPVyJxFfpjrUnyPJXf0qp-iblQ29cdq70IGr0rjFxy5eOhTVS2n7R8=",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHltX5xYMspVcbZb7fR-ihyaR12QarbZqwPt5LHcInLDJr0nFqM6SknoZV8mPTwCSNB8sjTSsJUVyoLlKwVaLk0WWzF69Ug8TvO7IO_jnqUwuM0tPZvy1Yf9025XxognKsnsMWLvLIPweWIBC5LWQlQlJ1Lr29-0xwPy-D-cP2Qp2BuzDS4bdFTs309IzwDQTqq63ikEoWivFFcAJObCIFoje_bHHBQsxRNNrrPuxcgNLmgc9Ja0gJGfhKTTkruybBM-Iqb1W3UN_8ZzvxPD03kRhcH34M6QACSi0LcSBnW6GKDWG7Keuj6HgOKqfHwSrsmu0XkKaOgPaFhyO73jEamUbittfQIXXbvO81lB8zxbeWwaN0YYRpO3e2w4I5ZsJk=",
+        "title": "google.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeclF9DJcyGMt2-p3MCqffEP8CaOFYcTfCQdyWbjpI7y4c4KNp0jx6A-D3gMILJwPyErW4KNVQ1-eZPw4wWKLbyBLNI02KQEbA7piTq6K-ffRdN0f_q86BJwUKoKk=",
+        "title": "1stheadlines.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElIilasGKTgZFkqWmWB4OvBvXWdJMMNZRpd1E1vkmsAVU_wpl3Sf_Wc1jNxg_I3I9ZaJPsDjk7JcoLynN5ypGjcW3Cym0FkZxQHDGtkc81x1Lhf-bBEE1AclKrAA9sQdv5OZyRJUDslXT4XcVWPhpP4WFEaOESHMd-9BYExdwl5WormvFujoL5Q9u-Flc=",
+        "title": "blog.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1Q7VlVcOIZXmgG13Vea3vRVMfQcecuLRAoYyrtbrEMSHQshWkrY3jPeDDrRk80__xRcv-WQhWawzdHHDPhScRpngwKaLd53Wn19M_W-HxwZzeS21oMQOrkTh-D4Iwg7zH_zKT",
+        "title": "eesel.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFs_JdIUifycNWvbGhWCeC1hvw_aueG8iOHkimKz5VENlnTH8juX6F0BcXbiGCehynnn6QK4t1JOCp3Wq9zBmuC6XWoZAJVnGl_1stpdRo2y5n-NPnc7wHkm9eVYRzMb-r4YYYNLpF08ICiPrcvsfK6TOX-85V5F5wV3CtERkdim9jA1XDc0upir2EjHQ==",
+        "title": "marktechpost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuaZareHsI9c6ceT2OKm0hJGCEMi82L12J6yhR45KxeqTETyA9wX8a9DE-nazdsO2XSQT7pbYTCNvRQoeaI_Ng0M13X1NXzptqBGofcbftJbIxrQ2OM6HYp3vLrPGBhSyTUGTXNjitZv8RN5sQE1J0slTIDPXT3z0xwcvxNUzkglkR1A==",
+        "title": "explainx.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8bsqjueN3Z0E82IdNkOHADHNKjsjhwAxFoGmDH1VR0EFeITIZM656dC-sEEi7urS6FlNWgO-eQzre1hB4_xHwpBHsFYYgtpY4asFqn-yTzK7P7Q4_LkrdRUBDNmV4pXfTCX8Q",
+        "title": "google.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVybWF3XHHKDK_jG7wij7zfAnLhF3NMFedNZ99aoZsSJGkNox1n33Jxrl1PTi6iD3GSOR3jiW-SlfcINuPuTVT197UPXiDZKwtF3XgXBEATpPlPjDXOXpiPTZdGW6r-j2z1wAo2u4mtzASeR_xH10zqnVegQ==",
+        "title": "cryptobriefing.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 536,
+        "endIndex": 800,
+        "text": "**Confirmed:** On 12 November 2026, Nvidia officially announced the immediate resignation of founder and CEO Jensen Huang following disclosures regarding extramarital relationships, including one with an executive linked to a Singapore export-control investigation"
+      },
+      "groundingChunkIndices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 807,
+        "endIndex": 916,
+        "text": "CFO Colette Kress has been appointed interim CEO while the board initiates a search for a permanent successor"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 922,
+        "endIndex": 1035,
+        "text": "Ex-Synopsys CEO and early investor Harvey C. Jones has been appointed as Nvidia’s first-ever Chair of the Board"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1041,
+        "endIndex": 1164,
+        "text": "Nvidia’s stock fell 7–14% in morning trading on 12 November, briefly taking its market capitalization below $4 trillion"
+      },
+      "groundingChunkIndices": [
+        3,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1168,
+        "endIndex": 1330,
+        "text": "**Important Caveats:** Candidate [0] reflects pre-resignation reporting (\"preparing to oust\"), which was superseded on 12 November by Huang's official resignation"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1332,
+        "endIndex": 1386,
+        "text": "Market valuation figures fluctuate during live trading"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1388,
+        "endIndex": 1542,
+        "text": "Financial analysis regarding Nvidia's venture investments (Candidate [4]) reflects ongoing market interpretation rather than immediate structural collapse"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1667,
+        "endIndex": 1795,
+        "text": "Candidates [1], [5], and [6] represent the most up-to-date factual angles (resignation, interim management, and board structure)"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1869,
+        "endIndex": 2027,
+        "text": "**Confirmed:** Amazon Web Services released **AWS Emulator** on 11 November 2026, an offline local tool emulating over 200 AWS services across 400+ API models"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2029,
+        "endIndex": 2206,
+        "text": "Amazon confirmed that 100% of the emulator's codebase was written, tested, and maintained by autonomous AI coding agents under human-designed guardrails and evaluation pipelines"
+      },
+      "groundingChunkIndices": [
+        6,
+        4,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2208,
+        "endIndex": 2266,
+        "text": "The source code was released on GitHub under a CC0 license"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2270,
+        "endIndex": 2396,
+        "text": "**Important Caveats:** Emulation fidelity varies by service and API endpoint (detailed via published JSON test score matrices)"
+      },
+      "groundingChunkIndices": [
+        5,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2398,
+        "endIndex": 2475,
+        "text": "It is designed for local unit/agent testing rather than production deployment"
+      },
+      "groundingChunkIndices": [
+        9,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2711,
+        "endIndex": 2983,
+        "text": "**Confirmed:** United Airlines updated its Contract of Carriage and digital policies on 11 November 2026 to prohibit third-party autonomous AI agents (such as Meta Muse or custom Claude/ChatGPT agents) from searching, booking, or managing flight reservations and check-ins"
+      },
+      "groundingChunkIndices": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2985,
+        "endIndex": 3161,
+        "text": "United cited security risks, credentials sharing, MileagePlus fraud concerns, and FAA/DOT regulatory requirements for mandatory human baggage safety disclosures during check-in"
+      },
+      "groundingChunkIndices": [
+        10,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3165,
+        "endIndex": 3269,
+        "text": "**Important Caveats:** Competitors (such as Southwest) continue to allow consumer AI search integrations"
+      },
+      "groundingChunkIndices": [
+        10,
+        12,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3600,
+        "endIndex": 3738,
+        "text": "**Confirmed:** Google and Samsung officially opened preorders on 12 November 2026 for their Android XR \"Intelligent Eyewear\" smart glasses"
+      },
+      "groundingChunkIndices": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3740,
+        "endIndex": 3895,
+        "text": "The frames are co-designed with Warby Parker (starting at $395) and Gentle Monster (starting at $449), with general availability beginning 10 December 2026"
+      },
+      "groundingChunkIndices": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3897,
+        "endIndex": 4038,
+        "text": "The hardware includes a 12MP ultra-wide camera, open-ear audio, and native Gemini integration for visual assistance and real-time translation"
+      },
+      "groundingChunkIndices": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4042,
+        "endIndex": 4221,
+        "text": "**Important Caveats:** The initial release is display-less (audio/camera form factor competing directly with Meta Ray-Bans), with display-based XR glasses slated for future phases"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4415,
+        "endIndex": 4615,
+        "text": "**Confirmed:** Developer Pietro Miotti published a report detailing how 48 autonomous AI agents scanned public NASA LiDAR data to identify an unmapped Maya site in Mexico featuring a pyramid and plaza"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4619,
+        "endIndex": 4859,
+        "text": "**Important Caveats:** Miotti subsequently published a correction clarifying that while the site was absent from Mexico's official INAH registry, it had already been mapped and published in academic literature by professional archaeologists"
+      },
+      "groundingChunkIndices": [
+        20,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4861,
+        "endIndex": 4988,
+        "text": "It represents an instance of AI agent scanning cross-referencing public registries rather than a novel archaeological discovery"
+      },
+      "groundingChunkIndices": [
+        20,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5202,
+        "endIndex": 5401,
+        "text": "**Confirmed:** Media reviews published on 12 November 2026 for Apple's HomeView smart home hub, a 7-inch display featuring Siri AI integration, smart home controls, and dynamic clock/photo interfaces"
+      },
+      "groundingChunkIndices": [
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5405,
+        "endIndex": 5563,
+        "text": "**Important Caveats:** Reviews note that while smart home integration is refined, Siri response times can still be slow and mounting accessories are expensive"
+      },
+      "groundingChunkIndices": [
+        24,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5740,
+        "endIndex": 5857,
+        "text": "**Confirmed:** Google launched the Gemini Decisions API on 11 November 2026, powered by the `gemini-decision-1` model"
+      },
+      "groundingChunkIndices": [
+        26,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5859,
+        "endIndex": 6022,
+        "text": "The API evaluates up to 1,000 typed questions (yes/no, choice, or rubric score) against a single multimodal input (text, image, audio, video, PDF) in a single pass"
+      },
+      "groundingChunkIndices": [
+        26,
+        28,
+        29
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6024,
+        "endIndex": 6148,
+        "text": "It outputs calibrated probabilities rather than text tokens, billed at $0.10 per 1M input tokens with zero output token fees"
+      },
+      "groundingChunkIndices": [
+        30,
+        27,
+        29
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6152,
+        "endIndex": 6275,
+        "text": "**Important Caveats:** Built specifically for programmatic branching and logic checks; it does not generate open-ended text"
+      },
+      "groundingChunkIndices": [
+        30,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6277,
+        "endIndex": 6362,
+        "text": "At launch, it is available via Google AI Studio but not yet integrated into Vertex AI"
+      },
+      "groundingChunkIndices": [
+        27,
+        31,
+        29
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"pietromiotti.com\" \"maya\" 2026",
+    "\"Alice Huang\" Singapore passport \"stern warning\" 2026",
+    "Nvidia Jensen Huang resignation Colette Kress 2026",
+    "AWS emulator All Things Distributed 2026",
+    "\"Apple HomeView review\" \"The Verge\" 2026",
+    "\"Google\" \"Samsung\" \"Intelligent Eyewear\" smart glasses Warby Parker 2026",
+    "United Airlines bans AI agents booking flights 2026",
+    "Gemini Decisions API Google blog 2026"
+  ]
+}

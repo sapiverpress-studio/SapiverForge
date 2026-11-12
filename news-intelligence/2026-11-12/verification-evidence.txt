@@ -1,0 +1,69 @@
+### Out-of-Scope Candidates
+* **[8] (Singapore / Alice Huang statement):** Marked OUT OF SCOPE. (Focuses on diplomatic/criminal border control statements rather than tech product or business operations).
+* **[12] (Perl paint splatters study):** Marked OUT OF SCOPE (2019 archival item).
+* **[13] (Tim Peters obituary):** Marked OUT OF SCOPE.
+* **[14] (Jane Street data center false alarm):** Marked OUT OF SCOPE.
+
+---
+
+### In-Scope Evidence Notes
+
+#### [0], [1], [3], [4], [5], [6] — Executive Transition & Market Fallout at Nvidia
+* **Confirmed:** On 12 November 2026, Nvidia officially announced the immediate resignation of founder and CEO Jensen Huang following disclosures regarding extramarital relationships, including one with an executive linked to a Singapore export-control investigation. 
+  * CFO Colette Kress has been appointed interim CEO while the board initiates a search for a permanent successor.
+  * Ex-Synopsys CEO and early investor Harvey C. Jones has been appointed as Nvidia’s first-ever Chair of the Board.
+  * Nvidia’s stock fell 7–14% in morning trading on 12 November, briefly taking its market capitalization below $4 trillion.
+* **Important Caveats:** Candidate [0] reflects pre-resignation reporting ("preparing to oust"), which was superseded on 12 November by Huang's official resignation. Market valuation figures fluctuate during live trading. Financial analysis regarding Nvidia's venture investments (Candidate [4]) reflects ongoing market interpretation rather than immediate structural collapse.
+* **Publication Suitability:** **Suitable for publication today.** This is the dominant global tech story of the briefing. Candidates [1], [5], and [6] represent the most up-to-date factual angles (resignation, interim management, and board structure).
+
+---
+
+#### [2] AWS Emulator Launched (Code Written 100% by AI Agents)
+* **Confirmed:** Amazon Web Services released **AWS Emulator** on 11 November 2026, an offline local tool emulating over 200 AWS services across 400+ API models. Amazon confirmed that 100% of the emulator's codebase was written, tested, and maintained by autonomous AI coding agents under human-designed guardrails and evaluation pipelines. The source code was released on GitHub under a CC0 license.
+* **Important Caveats:** Emulation fidelity varies by service and API endpoint (detailed via published JSON test score matrices). It is designed for local unit/agent testing rather than production deployment.
+* **Publication Suitability:** **Suitable for publication today.** High-value story covering developer tooling and real-world agentic software development at scale.
+
+---
+
+#### [7] United Airlines Bans AI Agents from Booking Flights
+* **Confirmed:** United Airlines updated its Contract of Carriage and digital policies on 11 November 2026 to prohibit third-party autonomous AI agents (such as Meta Muse or custom Claude/ChatGPT agents) from searching, booking, or managing flight reservations and check-ins. United cited security risks, credentials sharing, MileagePlus fraud concerns, and FAA/DOT regulatory requirements for mandatory human baggage safety disclosures during check-in.
+* **Important Caveats:** Competitors (such as Southwest) continue to allow consumer AI search integrations, making this an isolated, restrictive policy decision by United rather than an industry-wide mandate.
+* **Publication Suitability:** **Suitable for publication today.** Significant regulatory and operational precedent for consumer AI agent deployment.
+
+---
+
+#### [9] Google & Samsung Open Preorders for Android XR Smart Glasses
+* **Confirmed:** Google and Samsung officially opened preorders on 12 November 2026 for their Android XR "Intelligent Eyewear" smart glasses. The frames are co-designed with Warby Parker (starting at $395) and Gentle Monster (starting at $449), with general availability beginning 10 December 2026. The hardware includes a 12MP ultra-wide camera, open-ear audio, and native Gemini integration for visual assistance and real-time translation.
+* **Important Caveats:** The initial release is display-less (audio/camera form factor competing directly with Meta Ray-Bans), with display-based XR glasses slated for future phases.
+* **Publication Suitability:** **Suitable for publication today.** Major consumer hardware and mobile AI platform launch.
+
+---
+
+#### [10] AI Agents Identify Unmapped Maya Site in LiDAR Data
+* **Confirmed:** Developer Pietro Miotti published a report detailing how 48 autonomous AI agents scanned public NASA LiDAR data to identify an unmapped Maya site in Mexico featuring a pyramid and plaza.
+* **Important Caveats:** Miotti subsequently published a correction clarifying that while the site was absent from Mexico's official INAH registry, it had already been mapped and published in academic literature by professional archaeologists. It represents an instance of AI agent scanning cross-referencing public registries rather than a novel archaeological discovery.
+* **Publication Suitability:** **Suitable for publication today**, provided the notes explicitly include the caveat regarding prior archaeological documentation.
+
+---
+
+#### [11] Apple HomeView Reviews Released
+* **Confirmed:** Media reviews published on 12 November 2026 for Apple's HomeView smart home hub, a 7-inch display featuring Siri AI integration, smart home controls, and dynamic clock/photo interfaces.
+* **Important Caveats:** Reviews note that while smart home integration is refined, Siri response times can still be slow and mounting accessories are expensive.
+* **Publication Suitability:** **Suitable for publication today.** Standard product review round-up for Apple hardware.
+
+---
+
+#### [15] Google Launches Gemini Decisions API
+* **Confirmed:** Google launched the Gemini Decisions API on 11 November 2026, powered by the `gemini-decision-1` model. The API evaluates up to 1,000 typed questions (yes/no, choice, or rubric score) against a single multimodal input (text, image, audio, video, PDF) in a single pass. It outputs calibrated probabilities rather than text tokens, billed at $0.10 per 1M input tokens with zero output token fees.
+* **Important Caveats:** Built specifically for programmatic branching and logic checks; it does not generate open-ended text. At launch, it is available via Google AI Studio but not yet integrated into Vertex AI.
+* **Publication Suitability:** **Suitable for publication today.** Key technical developer release for AI architecture.
+
+---
+
+#### [16]–[19] Academic Research Papers (Hugging Face)
+* **[16] Evolving Infra: Agent-Adaptive LLM Serving at Scale:** Proposes decoupling compute allocation and KV cache management to optimize prefill-decode splits for dynamic agent workloads.
+* **[17] SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering:** Introduces a quantization-aware distillation method using full-precision teacher feedback to correct behavioral divergence in low-bit LLM agents.
+* **[18] Platonic Representation Hypothesis Analysis:** Investigates representation alignment between unimodal vision and language models across layers.
+* **[19] FAME-QP:** Presents a GPU-accelerated quadratic-programming solver for real-time model predictive control.
+* **Important Caveats for [16]–[19]:** Claims are derived solely from author preprints on arXiv/Hugging Face and have not been independently validated or deployed in production environments.
+* **Publication Suitability:** **Suitable for inclusion in research summaries**, clearly framed as uncorroborated preprint claims.

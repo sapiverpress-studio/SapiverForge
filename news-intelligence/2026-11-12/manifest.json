@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T15:06:06.695Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 520,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 285,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 507,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 281,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1264,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": true,
+  "quality_status": "ready_with_warnings",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-12",
+  "overall_confidence": 0.93,
+  "stories": [
+    {
+      "category": "lead",
+      "headline": "Jensen Huang Resigns as Nvidia CEO",
+      "confirmed_fact": "Nvidia founder Jensen Huang resigned on 12 November 2026 following disclosures regarding extramarital relationships. CFO Colette Kress has been appointed interim CEO, and Harvey C. Jones has been named the company's first-ever Chair of the Board.",
+      "why_it_matters": "Nvidia is the primary engine of the current AI boom; a leadership vacuum at this scale creates significant uncertainty for the entire AI supply chain and the company's extensive network of venture-backed partners.",
+      "interpretation": "The board's move to appoint an external chair suggests a rapid effort to stabilise governance, though the market's immediate 7–14% drop reflects deep investor anxiety about the company's future direction without its long-time architect.",
+      "confidence": 0.98,
+      "source": "Bloomberg",
+      "discovered_via": "Techmeme",
+      "source_title": "Nvidia dropped 14% at Thursday's open after Jensen Huang resigned, erasing $600B+ in value and taking its market cap below $4T for the first time since 2025 (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/nvidia-market-value-sinks-below-4-trillion-after-huang-resigns",
+      "discovery_url": "https://www.techmeme.com/261112/p34",
+      "link_quality": "original",
+      "published_at": "2026-11-12T15:00:33.000Z",
+      "discovery_score": 8.097
+    },
+    {
+      "category": "business",
+      "headline": "United Airlines Blocks Autonomous AI Agents",
+      "confirmed_fact": "United Airlines updated its policies on 11 November 2026 to prohibit third-party autonomous AI agents from searching, booking, or managing flight reservations. The airline cited security risks, potential credential sharing, and regulatory requirements for human interaction during check-in.",
+      "why_it_matters": "This is a significant operational pushback against the 'agentic' web, highlighting that even as AI becomes more capable, legacy industries may restrict access to protect security and regulatory compliance.",
+      "interpretation": "While this is currently an isolated policy, it sets a precedent for other highly regulated sectors to wall off their booking systems from autonomous agents if they cannot could support safety and fraud prevention.",
+      "confidence": 0.95,
+      "source": "cbsnews.com",
+      "discovered_via": "Hacker News",
+      "source_title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50458900",
+      "link_quality": "original",
+      "published_at": "2026-11-11T21:24:35.000Z",
+      "discovery_score": 7.713
+    },
+    {
+      "category": "developer",
+      "headline": "AWS Emulator Built Entirely by AI Agents",
+      "confirmed_fact": "Amazon released the AWS Emulator on 11 November 2026, a tool for local testing of over 200 AWS services. Amazon stated that 100% of the codebase was written, tested, and maintained by autonomous AI agents.",
+      "why_it_matters": "This marks a notable milestone in software engineering, demonstrating that autonomous agents can now handle complex, large-scale infrastructure tooling, provided they operate within human-designed evaluation pipelines.",
+      "interpretation": "The release serves as a high-profile proof of concept for agentic development, though its utility remains limited to local unit testing rather than production-grade deployment.",
+      "confidence": 0.92,
+      "source": "github.com",
+      "discovered_via": "Hacker News",
+      "source_title": "AWS emulator",
+      "url": "https://github.com/aws/aws-emulator",
+      "discovery_url": "https://news.ycombinator.com/item?id=50456631",
+      "link_quality": "original",
+      "published_at": "2026-11-11T18:21:38.000Z",
+      "discovery_score": 8.096
+    },
+    {
+      "category": "ai",
+      "headline": "Google Launches Gemini Decisions API",
+      "confirmed_fact": "Google's new Gemini Decisions API, powered by the gemini-decision-1 model, evaluates inputs to provide calibrated probabilities for branching logic rather than generating open-ended text.",
+      "why_it_matters": "By focusing on structured decision-making rather than generative text, this tool offers developers a more reliable way to build programmatic logic into AI-driven applications.",
+      "interpretation": "This is a pragmatic move to address the 'hallucination' problem in agentic workflows by forcing the model to output probabilities for specific choices instead of unpredictable prose.",
+      "confidence": 0.88,
+      "source": "blog.google",
+      "discovered_via": "Hacker News",
+      "source_title": "Gemini Decisions API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50456791",
+      "link_quality": "original",
+      "published_at": "2026-11-11T18:32:42.000Z",
+      "discovery_score": 7.434
+    }
+  ],
+  "practical_takeaway": "If you are building with AI agents, expect increasing friction with legacy platforms like United Airlines that prioritise security over automation. For developers, tools like the AWS Emulator and Gemini Decisions API suggest a shift toward more structured, agent-native infrastructure that prioritises reliability over open-ended generation.",
+  "watch_next": "Monitor how other airlines and travel platforms respond to the rise of autonomous booking agents, and keep an eye on whether Nvidia's interim leadership can maintain the company's venture-backed ecosystem during the search for a permanent CEO.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 072",
+      "title": "My Colour Mixer Lab",
+      "summary": "Mix RGB screen colours, match family-chosen targets and save a personalised palette with local scores.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-072/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-072/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-12",
+    "lead_headline": "Jensen Huang Resigns as Nvidia CEO",
+    "facebook_post": "Jensen Huang Resigns as Nvidia CEO\n\nNvidia is the primary engine of the current AI boom; a leadership vacuum at this scale creates significant uncertainty for the entire AI supply chain and the company's extensive network of venture-backed partners.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Jensen Huang Resigns as Nvidia CEO",
+    "pinterest_description": "Nvidia is the primary engine of the current AI boom; a leadership vacuum at this scale creates significant uncertainty for the entire AI supply chain and the company's extensive network of venture-backed partners.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Jensen Huang Resigns as Nvidia CEO. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Jensen Huang Resigns as Nvidia CEO. Nvidia founder Jensen Huang resigned on 12 November 2026 following disclosures regarding extramarital relationships. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "1f7dfa8393a9f2215d54b4120a125d385f070b083458eaebdd2923ffd905570f"
+}

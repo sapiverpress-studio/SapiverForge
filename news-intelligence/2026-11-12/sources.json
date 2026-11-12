@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-12T15:05:26.376Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 520,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 285,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 507,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 281,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1264,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "wsj.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "Nvidia is preparing to oust Jensen Huang",
+      "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+      "direct_source_url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+      "discovery_url": "https://news.ycombinator.com/item?id=50459703",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50459703",
+      "summary": "",
+      "published_at": "2026-11-11T22:31:06.000Z",
+      "engagement": {
+        "score": 1183,
+        "comments": 1572
+      },
+      "collection_mode": "api",
+      "score": 8.159
+    },
+    {
+      "title": "Nvidia dropped 14% at Thursday's open after Jensen Huang resigned, erasing $600B+ in value and taking its market cap below $4T for the first time since 2025 (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/nvidia-market-value-sinks-below-4-trillion-after-huang-resigns",
+      "summary": "Bloomberg : Nvidia dropped 14% at Thursday's open after Jensen Huang resigned, erasing $600B+ in value and taking its market cap below $4T for the first time since 2025 &mdash; Nvidia Corp.'s stock plunged at the open Thursday, taking the chipmaker's market capitalization below $4 trillion for the first time since 2025 &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-12/nvidia-market-value-sinks-below-4-trillion-after-huang-resigns\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261112/i34.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261112/p34#a261112p34\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-12/nvidia-market-value-sinks-below-4-trillion-after-huang-resigns\">Nvidia dropped 14% at Thursday's open after Jensen Huang resigned, erasing $600B+ in value and taking its market cap below $4T for the first time since 2025</A></B></SPAN>&nbsp; &mdash;&nbsp; Nvidia Corp.'s stock plunged at the open Thursday, taking the chipmaker's market capitalization below $4 trillion for the first time since 2025 &hellip; </P>",
+      "published_at": "2026-11-12T15:00:33.000Z",
+      "discovery_url": "https://www.techmeme.com/261112/p34",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-12/nvidia-market-value-sinks-below-4-trillion-after-huang-resigns",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.097
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "AWS emulator",
+      "url": "https://github.com/aws/aws-emulator",
+      "direct_source_url": "https://github.com/aws/aws-emulator",
+      "discovery_url": "https://news.ycombinator.com/item?id=50456631",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50456631",
+      "summary": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agent... https://www.allthingsdistributed.com/2026/11/aws-emulator-an...",
+      "published_at": "2026-11-11T18:21:38.000Z",
+      "engagement": {
+        "score": 913,
+        "comments": 251
+      },
+      "collection_mode": "api",
+      "score": 8.096
+    },
+    {
+      "title": "Jensen Huang's resignation caps a 33-year career, growing Nvidia from a GPU maker to AI giant; born in Taiwan, he moved to the US at 10 and owns 3.6% of Nvidia (Amrith Ramkumar/Wall Street Journal)",
+      "url": "https://www.wsj.com/tech/ai/jensen-huang-built-nvidia-its-chips-made-the-ai-boom-possible-bef1b4bb?st=fd71DX&reflink=desktopwebshare_permalink",
+      "summary": "Amrith Ramkumar / Wall Street Journal : Jensen Huang's resignation caps a 33-year career, growing Nvidia from a GPU maker to AI giant; born in Taiwan, he moved to the US at 10 and owns 3.6% of Nvidia &mdash; As Nvidia's first and only CEO, Huang turned semiconductors designed for videogames into the engine of the next technology revolution.",
+      "description_html": "<A HREF=\"https://www.wsj.com/tech/ai/jensen-huang-built-nvidia-its-chips-made-the-ai-boom-possible-bef1b4bb?st=fd71DX&reflink=desktopwebshare_permalink\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261112/i33.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261112/p33#a261112p33\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Amrith Ramkumar / <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/tech/ai/jensen-huang-built-nvidia-its-chips-made-the-ai-boom-possible-bef1b4bb?st=fd71DX&reflink=desktopwebshare_permalink\">Jensen Huang's resignation caps a 33-year career, growing Nvidia from a GPU maker to AI giant; born in Taiwan, he moved to the US at 10 and owns 3.6% of Nvidia</A></B></SPAN>&nbsp; &mdash;&nbsp; As Nvidia's first and only CEO, Huang turned semiconductors designed for videogames into the engine of the next technology revolution.</P>",
+      "published_at": "2026-11-12T14:50:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261112/p33",
+      "direct_source_url": "https://www.wsj.com/tech/ai/jensen-huang-built-nvidia-its-chips-made-the-ai-boom-possible-bef1b4bb?st=fd71DX&reflink=desktopwebshare_permalink",
+      "publisher": "Amrith Ramkumar/Wall Street Journal",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 8.009
+    },
+    {
+      "title": "Jensen Huang's Nvidia ploughed its vast profits into bankrolling AI startups, suppliers, and chip customers, a web of dependencies that could now unravel (Financial Times)",
+      "url": "https://www.ft.com/content/dd9072bd-e8a3-4f8e-9985-550aa80a2fd4",
+      "summary": "Financial Times : Jensen Huang's Nvidia ploughed its vast profits into bankrolling AI startups, suppliers, and chip customers, a web of dependencies that could now unravel &mdash; Nvidia chief's fall could unravel the web of financial dependencies that helped fuel the AI boom &mdash; With Jensen Huang at the helm &hellip;",
+      "description_html": "<A HREF=\"https://www.ft.com/content/dd9072bd-e8a3-4f8e-9985-550aa80a2fd4\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261112/i32.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261112/p32#a261112p32\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/dd9072bd-e8a3-4f8e-9985-550aa80a2fd4\">Jensen Huang's Nvidia ploughed its vast profits into bankrolling AI startups, suppliers, and chip customers, a web of dependencies that could now unravel</A></B></SPAN>&nbsp; &mdash;&nbsp; Nvidia chief's fall could unravel the web of financial dependencies that helped fuel the AI boom&nbsp; &mdash;&nbsp; With Jensen Huang at the helm &hellip; </P>",
+      "published_at": "2026-11-12T14:40:36.000Z",
+      "discovery_url": "https://www.techmeme.com/261112/p32",
+      "direct_source_url": "https://www.ft.com/content/dd9072bd-e8a3-4f8e-9985-550aa80a2fd4",
+      "publisher": "Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.923
+    },
+    {
+      "title": "A profile of interim Nvidia CEO Colette Kress, who joined in 2013 after working at Cisco and Microsoft; as CFO, Kress criticized US export controls on China (Adam Satariano/New York Times)",
+      "url": "https://www.nytimes.com/2026/11/12/business/nvidia-colette-kress-jensen-huang.html",
+      "summary": "Adam Satariano / New York Times : A profile of interim Nvidia CEO Colette Kress, who joined in 2013 after working at Cisco and Microsoft; as CFO, Kress criticized US export controls on China &mdash; Ms. Kress, the company's chief financial officer, joined Nvidia in 2013. &mdash; Colette Kress, a longtime Nvidia executive &hellip;",
+      "description_html": "<A HREF=\"https://www.nytimes.com/2026/11/12/business/nvidia-colette-kress-jensen-huang.html\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261112/i31.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261112/p31#a261112p31\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Adam Satariano / <A HREF=\"https://www.nytimes.com/\">New York Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.nytimes.com/2026/11/12/business/nvidia-colette-kress-jensen-huang.html\">A profile of interim Nvidia CEO Colette Kress, who joined in 2013 after working at Cisco and Microsoft; as CFO, Kress criticized US export controls on China</A></B></SPAN>&nbsp; &mdash;&nbsp; Ms. Kress, the company's chief financial officer, joined Nvidia in 2013.&nbsp; &mdash;&nbsp; Colette Kress, a longtime Nvidia executive &hellip; </P>",
+      "published_at": "2026-11-12T14:30:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261112/p31",
+      "direct_source_url": "https://www.nytimes.com/2026/11/12/business/nvidia-colette-kress-jensen-huang.html",
+      "publisher": "Adam Satariano/New York Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.835
+    },
+    {
+      "title": "Nvidia appoints ex-Synopsys CEO Harvey C. Jones as its first-ever board chair; the board's Jensen Huang exit press release does not include a quote from Huang (Hayden Field/The Verge)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-fired-nvidia",
+      "summary": "Hayden Field / The Verge : Nvidia appoints ex-Synopsys CEO Harvey C. Jones as its first-ever board chair; the board's Jensen Huang exit press release does not include a quote from Huang &mdash; After reports of Huang's two extramarital affairs with an alleged spy and an Nvidia executive, he's out, and Nvidia CFO Colette Kress is in.",
+      "description_html": "<A HREF=\"https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-fired-nvidia\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261112/i29.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261112/p29#a261112p29\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Hayden Field / <A HREF=\"https://www.theverge.com/\">The Verge</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-fired-nvidia\">Nvidia appoints ex-Synopsys CEO Harvey C. Jones as its first-ever board chair; the board's Jensen Huang exit press release does not include a quote from Huang</A></B></SPAN>&nbsp; &mdash;&nbsp; After reports of Huang's two extramarital affairs with an alleged spy and an Nvidia executive, he's out, and Nvidia CFO Colette Kress is in.</P>",
+      "published_at": "2026-11-12T14:25:37.000Z",
+      "discovery_url": "https://www.techmeme.com/261112/p29",
+      "direct_source_url": "https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-fired-nvidia",
+      "publisher": "Hayden Field/The Verge",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.752
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "cbsnews.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "direct_source_url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50458900",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50458900",
+      "summary": "",
+      "published_at": "2026-11-11T21:24:35.000Z",
+      "engagement": {
+        "score": 619,
+        "comments": 636
+      },
+      "collection_mode": "api",
+      "score": 7.713
+    },
+    {
+      "title": "Singapore says it held Alice Huang's passport from June 2025 to February 2026 and released her with a \"stern warning\" after the US provided very little help (Paul Mozur/New York Times)",
+      "url": "https://www.nytimes.com/2026/11/12/business/nvidia-megaspeed-alice-huang.html",
+      "summary": "Paul Mozur / New York Times : Singapore says it held Alice Huang's passport from June 2025 to February 2026 and released her with a &ldquo;stern warning&rdquo; after the US provided very little help &mdash; In a statement, Singapore said it held Alice Huang's passport months after President Trump was briefed that she was a spy.",
+      "description_html": "<A HREF=\"https://www.nytimes.com/2026/11/12/business/nvidia-megaspeed-alice-huang.html\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261112/i30.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261112/p30#a261112p30\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Paul Mozur / <A HREF=\"https://www.nytimes.com/\">New York Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.nytimes.com/2026/11/12/business/nvidia-megaspeed-alice-huang.html\">Singapore says it held Alice Huang's passport from June 2025 to February 2026 and released her with a &ldquo;stern warning&rdquo; after the US provided very little help</A></B></SPAN>&nbsp; &mdash;&nbsp; In a statement, Singapore said it held Alice Huang's passport months after President Trump was briefed that she was a spy.</P>",
+      "published_at": "2026-11-12T14:25:37.000Z",
+      "discovery_url": "https://www.techmeme.com/261112/p30",
+      "direct_source_url": "https://www.nytimes.com/2026/11/12/business/nvidia-megaspeed-alice-huang.html",
+      "publisher": "Paul Mozur/New York Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.672
+    },
+    {
+      "title": "Google and Samsung open preorders for their Android XR \"Intelligent Eyewear\" smart glasses, for $395+ for Warby Parker frames and $449+ for Gentle Monster (Julian Chokkattu/Wired)",
+      "url": "https://www.wired.com/story/google-samsung-intelligent-eyewear-launch-warby-parker-gentle-monster-smart-glasses/",
+      "summary": "Julian Chokkattu / Wired : Google and Samsung open preorders for their Android XR &ldquo;Intelligent Eyewear&rdquo; smart glasses, for $395+ for Warby Parker frames and $449+ for Gentle Monster &mdash; The &ldquo;Intelligent Eyewear&rdquo; is a collaboration between the two tech companies, with Samsung providing its hardware expertise &hellip;",
+      "description_html": "<A HREF=\"https://www.wired.com/story/google-samsung-intelligent-eyewear-launch-warby-parker-gentle-monster-smart-glasses/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261112/i28.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261112/p28#a261112p28\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Julian Chokkattu / <A HREF=\"http://www.wired.com/\">Wired</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wired.com/story/google-samsung-intelligent-eyewear-launch-warby-parker-gentle-monster-smart-glasses/\">Google and Samsung open preorders for their Android XR &ldquo;Intelligent Eyewear&rdquo; smart glasses, for $395+ for Warby Parker frames and $449+ for Gentle Monster</A></B></SPAN>&nbsp; &mdash;&nbsp; The &ldquo;Intelligent Eyewear&rdquo; is a collaboration between the two tech companies, with Samsung providing its hardware expertise &hellip; </P>",
+      "published_at": "2026-11-12T14:10:34.000Z",
+      "discovery_url": "https://www.techmeme.com/261112/p28",
+      "direct_source_url": "https://www.wired.com/story/google-samsung-intelligent-eyewear-launch-warby-parker-gentle-monster-smart-glasses/",
+      "publisher": "Julian Chokkattu/Wired",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.582
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "pietromiotti.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "My AI agents found an unmapped Maya site?",
+      "url": "https://pietromiotti.com/latest/maya-site",
+      "direct_source_url": "https://pietromiotti.com/latest/maya-site",
+      "discovery_url": "https://news.ycombinator.com/item?id=50452455",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50452455",
+      "summary": "",
+      "published_at": "2026-11-11T12:05:22.000Z",
+      "engagement": {
+        "score": 1019,
+        "comments": 379
+      },
+      "collection_mode": "api",
+      "score": 7.565
+    },
+    {
+      "title": "Apple HomeView review: fast home controls, helpful Siri AI, gorgeous customizable faces, great sound for its size, but Siri can be slow and pricey wall mount (Jennifer Pattison Tuohy/The Verge)",
+      "url": "https://www.theverge.com/tech/1031726/apple-homeview-review-smart-display-homekit",
+      "summary": "Jennifer Pattison Tuohy / The Verge : Apple HomeView review: fast home controls, helpful Siri AI, gorgeous customizable faces, great sound for its size, but Siri can be slow and pricey wall mount &mdash; The HomeView nails everything I want from a smart display. It's superb at controlling my smart home; it's an excellent hands &hellip;",
+      "description_html": "<A HREF=\"https://www.theverge.com/tech/1031726/apple-homeview-review-smart-display-homekit\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261112/i27.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261112/p27#a261112p27\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Jennifer Pattison Tuohy / <A HREF=\"https://www.theverge.com/\">The Verge</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.theverge.com/tech/1031726/apple-homeview-review-smart-display-homekit\">Apple HomeView review: fast home controls, helpful Siri AI, gorgeous customizable faces, great sound for its size, but Siri can be slow and pricey wall mount</A></B></SPAN>&nbsp; &mdash;&nbsp; The HomeView nails everything I want from a smart display.&nbsp; It's superb at controlling my smart home; it's an excellent hands &hellip; </P>",
+      "published_at": "2026-11-12T14:05:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261112/p27",
+      "direct_source_url": "https://www.theverge.com/tech/1031726/apple-homeview-review-smart-display-homekit",
+      "publisher": "Jennifer Pattison Tuohy/The Verge",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.498
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "2019",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 9,
+      "title": "93% of paint splatters are valid Perl programs (2019)",
+      "url": "https://www.mcmillen.dev/sigbovik/",
+      "direct_source_url": "https://www.mcmillen.dev/sigbovik/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50459745",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50459745",
+      "summary": "",
+      "published_at": "2026-11-11T22:34:23.000Z",
+      "engagement": {
+        "score": 514,
+        "comments": 66
+      },
+      "collection_mode": "api",
+      "score": 7.478
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "discuss.python.org",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "Tim Peters has died",
+      "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
+      "direct_source_url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
+      "discovery_url": "https://news.ycombinator.com/item?id=50450488",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50450488",
+      "summary": "https://www.reddit.com/r/Python/s/2Cm5dBcvQw",
+      "published_at": "2026-11-11T07:03:17.000Z",
+      "engagement": {
+        "score": 1321,
+        "comments": 157
+      },
+      "collection_mode": "api",
+      "score": 7.435
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "michael.bacarella.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 7,
+      "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+      "direct_source_url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50455394",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50455394",
+      "summary": "",
+      "published_at": "2026-11-11T16:38:44.000Z",
+      "engagement": {
+        "score": 534,
+        "comments": 256
+      },
+      "collection_mode": "api",
+      "score": 7.435
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "blog.google",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 8,
+      "title": "Gemini Decisions API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "direct_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50456791",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50456791",
+      "summary": "",
+      "published_at": "2026-11-11T18:32:42.000Z",
+      "engagement": {
+        "score": 505,
+        "comments": 148
+      },
+      "collection_mode": "api",
+      "score": 7.434
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "Evolving Infra: Agent-Adaptive LLM Serving at Scale",
+      "url": "https://huggingface.co/papers/2611.12304",
+      "direct_source_url": "https://huggingface.co/papers/2611.12304",
+      "discovery_url": "https://huggingface.co/papers/2611.12304",
+      "link_quality": "original",
+      "summary": "Agentic workloads are a major source of LLM inference demand. Existing prefill--decode (PD) disaggregated serving systems offer limited flexibility for runtime adaptation of compute allocation and KV cache management, and rely on coarse signals that only partly capture the diverse and dynamic agent workload. These limitations lead to load imbalance between prefill and decode nodes and eviction of KV caches that agents will reuse. We present Evolving Infra, an agent-adaptive serving framework that adapts compute allocation to agent workloads and KV cache management to agent context management at runtime. We decouple compute allocation from key--value (KV) cache management, allowing nodes to switch efficiently between prefill and decode. Building on this design, an online planner matches the PD split to workload composition, while an agent-aware distributed KV manager guides cache eviction and transfer with signals from agent context management. Across coding, math, and computer-use tasks with GLM-5.2 and Kimi K2.6 on up to 256 GB300 GPUs, Evolving Infra reduces mean end-to-end request latency and P95 TTFT by up to 4.1x and 14x over Dynamo, NVIDIA's production framework.",
+      "published_at": "2026-11-08T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 6
+      },
+      "collection_mode": "api",
+      "score": 6.243
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 8,
+      "title": "SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering",
+      "url": "https://huggingface.co/papers/2611.13410",
+      "direct_source_url": "https://huggingface.co/papers/2611.13410",
+      "discovery_url": "https://huggingface.co/papers/2611.13410",
+      "link_quality": "original",
+      "summary": "Low-bit quantization reduces the inference cost of LLM agents but can compromise task success. Examining failed rollouts, we find that quantized agents overlook task requirements or environmental conditions, producing environment transitions that diverge from successful full-precision references. Correcting these behavioral divergences remains difficult: offline data may miss the student's failure contexts, while its own rollouts may provide few correct responses in those contexts. We introduce SteerDistill, a quantization-aware distillation method in which a full-precision teacher guides the student to revise failed responses and iteratively refines its guidance using feedback from student execution. This closed-loop teacher steering produces locally verified behavioral corrections. We internalize these corrections by training the student without guidance to match the steered student's predictions at corrected turns and the full-precision teacher's at other turns, enabling unassisted inference. Across five agentic benchmarks and three models, SteerDistill exceeds the strongest quantized baseline by 1.67--2.18 points in average score under W4A16 and stays within one point of BF16.",
+      "published_at": "2026-11-09T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 23
+      },
+      "collection_mode": "api",
+      "score": 6.03
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Where Does Alignment Emerge and What Does It Mean? A Closer Look at the Platonic Representation Hypothesis",
+      "url": "https://huggingface.co/papers/2611.12869",
+      "direct_source_url": "https://huggingface.co/papers/2611.12869",
+      "discovery_url": "https://huggingface.co/papers/2611.12869",
+      "link_quality": "original",
+      "summary": "The Platonic Representation Hypothesis (PRH) suggests that neural networks are converging toward similar representation spaces. As language models become more capable, their representations are aligning with those of vision models. However, recent work has questioned whether this trend continues to hold for newer language models. Moreover, it has been shown that representation similarity metrics can be confounded by model depth and width, requiring appropriate baselines for interpretation. In this work, we first investigate where alignment emerges between unimodal models across model layers and representation dimensions. Next, we find that the PRH capability-alignment trend persists for newer models as long as the captions are sufficiently clean and informative. Finally, we contextualize cross-modal alignment, introducing unimodal and multimodal baselines on various datasets. Our results show that the cross-modal representational alignment of unimodal models can surpass that of explicitly aligned vision-language models, but remains substantially behind the alignment observed for models of the same modality. Code is available at https://github.com/ExplainableML/prh-closer-look.",
+      "published_at": "2026-11-09T13:53:57.000Z",
+      "engagement": {
+        "upvotes": 3
+      },
+      "collection_mode": "api",
+      "score": 5.961
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "FAME-QP: A GPU-Accelerated Quadratic-Programming Solver for Real-Time Model Predictive Control",
+      "url": "https://huggingface.co/papers/2611.13766",
+      "direct_source_url": "https://huggingface.co/papers/2611.13766",
+      "discovery_url": "https://huggingface.co/papers/2611.13766",
+      "link_quality": "original",
+      "summary": "We present FAME-QP, a GPU-accelerated solver for dense quadratic programs arising in linear model predictive control. FAME-QP combines constraint-dependent operator representations with fused single- and two-kernel iterations replayed through CUDA graphs, automatically selecting the execution configuration through device calibration and problem-specific timing. It probes a cached operator bank to select the initial penalty and updates operators lazily when problem matrices change. Numerical benchmarks and simulated humanoid and quadrotor control experiments demonstrate reduced latency relative to competing GPU solvers while maintaining solution accuracy and control performance.",
+      "published_at": "2026-11-09T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 0
+      },
+      "collection_mode": "api",
+      "score": 5.9
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "CARTBench: Rubric-Based Evaluation of Shopping Advice for Complex and Ambiguous Requests with Timelines",
+      "url": "https://huggingface.co/papers/2611.05862",
+      "direct_source_url": "https://huggingface.co/papers/2611.05862",
+      "discovery_url": "https://huggingface.co/papers/2611.05862",
+      "link_quality": "original",
+      "summary": "Large language model (LLM) shopping assistants now recommend products in multi-turn conversations. However, reliable evaluation faces Data scarcity and Difficulty Standardizing Criteria. To address these obstacles, we introduce CARTBench for CART (Complex and Ambiguous Requests with Timelines). For Data scarcity, we curate cases from real commercial shopping needs across 17 retail domains, pairing timestamped dialogue with 1,603 product records. For Difficulty Standardizing Criteria, we develop case-specific rubrics guided by Ideal Response Principles, distilled from excellent replies manually selected from successfully completed orders. These principles also guide Principle-Guided CART Prompting, our structured recommendation strategy. The experimental benchmark contains 1,328 expert-annotated criteria across Core, Excellence, and Safety. To answer the CART question, we evaluate 7 flagship commercial API models, including GPT-6.1-Sol and Claude-Opus-5, and 35B+ parameters open-weight models. In the first full-suite evaluation under the frozen rubrics, 3 of 10 models exceed 90% on Core, while none exceeds 45% on Excellence. Therefore, we identify an understanding-to-execution gap b",
+      "published_at": "2026-11-03T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 0
+      },
+      "collection_mode": "api",
+      "score": 5.74
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "Precision on Demand: Escalating Weight Bits at Uncertain Decoding Steps in a Small Local Model",
+      "url": "https://huggingface.co/papers/2611.14418",
+      "direct_source_url": "https://huggingface.co/papers/2611.14418",
+      "discovery_url": "https://huggingface.co/papers/2611.14418",
+      "link_quality": "original",
+      "summary": "Local decoding usually fixes one weight precision for the whole generation. We study a different allocation: store 8-bit weights, decode with their top 4 bits, and redo a step at 8 bits only when the low-precision output distribution looks uncertain (entropy above a threshold or a small top-two margin). Quantization is simulated, the model is Qwen3-0.6B, and the benchmark is GSM8K. Cost is counted in weight bytes read per token. On 36724 replayed steps the entropy of the low pass ranks argmax flips with AUC 0.93. At a 15% escalation budget it catches 78% of flips and the margin gate 94%, against the 15% expected for a random gate of equal rate (a computed expectation, not a run). In 150 live problems all-high scores 64.0% and all-low 55.3% (McNemar p=0.053). An entropy gate with a 16% escalation rate scores 62.7% at 0.87 of the all-high weight bytes. Its paired difference is -1.3 (-8.0 to +5.3) points to all-high and +7.3 (+0.0 to +14.7) points to all-low (p=0.080), so the live data do not separate the gate from either end. Verified speculation reaches zero KL at similar bytes in the same cost model. A live random control, a thinking-mode phase rule, a second model and live KL were",
+      "published_at": "2026-11-09T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.731
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 11,
+      "title": "Read Less, Solve More: Token-Efficient Sparse Reading of External Content for AI Agents",
+      "url": "https://huggingface.co/papers/2608.22237",
+      "direct_source_url": "https://huggingface.co/papers/2608.22237",
+      "discovery_url": "https://huggingface.co/papers/2608.22237",
+      "link_quality": "original",
+      "summary": "Web-facing AI agents repeatedly access webpages, documents, repositories, and tool responses, yet reading interfaces often expose entire objects when only sparse evidence is needed. This over-reading increases token and latency costs and can dilute relevant evidence. We present SparseRead, a reusable reading control layer that governs content admission without modifying the agent model. Its Read Intent Protocol tracks evolving needs and source coverage; Adaptive Reader Backends select how evidence is located and exposed; and the Budgeted Read Gate bounds cumulative raw exposure per episode with faithful full-view fallback. A unified Reader interface supports interchangeable evidence acquisition across heterogeneous resources. Across six models, including Claude Opus 5, and five scenarios, SparseRead reduces total tokens by up to 92.9% and wall time by up to 89.0%, preserving or improving task quality in 97% settings. On Web deep-search tasks, it reduces tokens by 31.0--43.0% and task completion time by 23.0--37.0%. Ablations validate the three designs, while integration with three agent frameworks demonstrates portability.",
+      "published_at": "2026-11-06T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 11
+      },
+      "collection_mode": "api",
+      "score": 5.64
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 6,
+      "title": "Bits or permutations? Spending a fixed inference budget on weight precision or on option-order averaging in small local language models",
+      "url": "https://huggingface.co/papers/2611.14413",
+      "direct_source_url": "https://huggingface.co/papers/2611.14413",
+      "discovery_url": "https://huggingface.co/papers/2611.14413",
+      "link_quality": "original",
+      "summary": "Local language models can save memory by storing weights in fewer bits, and they can reduce sensitivity to the order of answer options by averaging a few reorderings. We ask whether the first makes the second worse, and which is the cheaper way to spend a fixed budget. On Qwen3-0.6B and Qwen3-1.7B with simulated round-to-nearest weight quantization (8, 6, 4 and 3 bits, fp16 reference), read from the logits of the letters A to D on ARC-Easy, ARC-Challenge, MMLU and HellaSwag (300 items each), 6 bits lose no accuracy against fp16 (they score +1.8 (+1.0 to +2.5) and +0.9 (+0.3 to +1.5) points higher, which we do not explain), and 8 bits change it by -0.7 (-1.1 to -0.3) and -0.4 (-0.7 to -0.2) points. At 4 bits the answer-slot skew rises from 0.15 to 0.53 (0.6B) and from 0.07 to 0.12 (1.7B); Gaussian noise at the same weight SNR gives 0.15 and 0.37 (two draws) and 0.19 (one draw), so the control is inconclusive on whether rounding adds slot skew beyond equal-power noise. Flip rates rise but stay below an accuracy-matched baseline of independent uniform errors. Averaging four cyclic orders recovers +12.6 points at 4 bits for 0.6B (+5.3 at fp16). We price bits and passes in one machine-i",
+      "published_at": "2026-11-09T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 0
+      },
+      "collection_mode": "api",
+      "score": 5.5
+    }
+  ]
+}

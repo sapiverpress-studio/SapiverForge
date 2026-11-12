@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-11-11",
-  "generated_at": "2026-11-11T14:10:25.064Z",
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T15:06:06.695Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 492,
+      "elapsed_ms": 520,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,14 +23,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 235,
+      "elapsed_ms": 285,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 291,
+      "elapsed_ms": 507,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -38,7 +38,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 212,
+      "elapsed_ms": 281,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1910,
+      "elapsed_ms": 1264,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -59,92 +59,76 @@
     "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
   ],
   "release_blockers": [],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-11",
-  "overall_confidence": 0.9,
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-12",
+  "overall_confidence": 0.93,
   "stories": [
     {
       "category": "lead",
-      "headline": "Fractile hits $7B valuation as UK chip sector heats up",
-      "confirmed_fact": "George Hammond/Financial Times reports, citing people familiar with the matter, that london-based AI chip startup Fractile has raised $720 million in a funding round led by Thrive Capital and Founders Fund, pushing its valuation to $7 billion.",
-      "why_it_matters": "The jump from a $1.1 billion valuation in May suggests significant investor appetite for custom semiconductor hardware tailored specifically for AI inference.",
-      "interpretation": "This is a substantial vote of confidence in the UK’s ability to produce competitive hardware, though the rapid valuation increase reflects the broader, high-stakes scramble for compute infrastructure.",
-      "confidence": 0.95,
-      "source": "George Hammond/Financial Times",
+      "headline": "Jensen Huang Resigns as Nvidia CEO",
+      "confirmed_fact": "Nvidia founder Jensen Huang resigned on 12 November 2026 following disclosures regarding extramarital relationships. CFO Colette Kress has been appointed interim CEO, and Harvey C. Jones has been named the company's first-ever Chair of the Board.",
+      "why_it_matters": "Nvidia is the primary engine of the current AI boom; a leadership vacuum at this scale creates significant uncertainty for the entire AI supply chain and the company's extensive network of venture-backed partners.",
+      "interpretation": "The board's move to appoint an external chair suggests a rapid effort to stabilise governance, though the market's immediate 7–14% drop reflects deep investor anxiety about the company's future direction without its long-time architect.",
+      "confidence": 0.98,
+      "source": "Bloomberg",
       "discovered_via": "Techmeme",
-      "source_title": "London-based AI chip startup Fractile raised $720M from Thrive, Founders Fund, and others, sources say at a $7B post-money valuation, up from ~$1.1B in May (George Hammond/Financial Times)",
-      "url": "https://www.ft.com/content/f999a0c2-af52-499f-8008-accbdfd45a25",
-      "discovery_url": "https://www.techmeme.com/261111/p25",
+      "source_title": "Nvidia dropped 14% at Thursday's open after Jensen Huang resigned, erasing $600B+ in value and taking its market cap below $4T for the first time since 2025 (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/nvidia-market-value-sinks-below-4-trillion-after-huang-resigns",
+      "discovery_url": "https://www.techmeme.com/261112/p34",
       "link_quality": "original",
-      "published_at": "2026-11-11T13:20:56.000Z",
-      "discovery_score": 7.826
+      "published_at": "2026-11-12T15:00:33.000Z",
+      "discovery_score": 8.097
     },
     {
       "category": "business",
-      "headline": "Anthropic IPO draws heavy institutional interest",
-      "confirmed_fact": "Bailey Lipschultz/Bloomberg reports, citing people familiar with the matter, that anthropic’s upcoming IPO is reportedly multiple times oversubscribed, with CEO Dario Amodei and JPMorgan’s Jamie Dimon set to host a joint investor event this Friday.",
-      "why_it_matters": "As a major player in the foundation model space, Anthropic’s public market entry will likely serve as a key benchmark for the valuation of AI companies.",
-      "interpretation": "The heavy oversubscription suggests institutional investors are eager to secure a stake, despite the inherent volatility and long-term uncertainty surrounding AI business models.",
-      "confidence": 0.9,
-      "source": "Bailey Lipschultz/Bloomberg",
-      "discovered_via": "Techmeme",
-      "source_title": "Sources: Anthropic's IPO draws multiple times the orders for the shares available; a source says Dario Amodei and Jamie Dimon have a livestream event on Friday (Bailey Lipschultz/Bloomberg)",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-11/anthropic-s-mega-ipo-is-said-to-be-multiple-times-oversubscribed",
-      "discovery_url": "https://www.techmeme.com/261111/p27",
+      "headline": "United Airlines Blocks Autonomous AI Agents",
+      "confirmed_fact": "United Airlines updated its policies on 11 November 2026 to prohibit third-party autonomous AI agents from searching, booking, or managing flight reservations. The airline cited security risks, potential credential sharing, and regulatory requirements for human interaction during check-in.",
+      "why_it_matters": "This is a significant operational pushback against the 'agentic' web, highlighting that even as AI becomes more capable, legacy industries may restrict access to protect security and regulatory compliance.",
+      "interpretation": "While this is currently an isolated policy, it sets a precedent for other highly regulated sectors to wall off their booking systems from autonomous agents if they cannot could support safety and fraud prevention.",
+      "confidence": 0.95,
+      "source": "cbsnews.com",
+      "discovered_via": "Hacker News",
+      "source_title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50458900",
       "link_quality": "original",
-      "published_at": "2026-11-11T13:40:01.000Z",
-      "discovery_score": 7.999
+      "published_at": "2026-11-11T21:24:35.000Z",
+      "discovery_score": 7.713
+    },
+    {
+      "category": "developer",
+      "headline": "AWS Emulator Built Entirely by AI Agents",
+      "confirmed_fact": "Amazon released the AWS Emulator on 11 November 2026, a tool for local testing of over 200 AWS services. Amazon stated that 100% of the codebase was written, tested, and maintained by autonomous AI agents.",
+      "why_it_matters": "This marks a notable milestone in software engineering, demonstrating that autonomous agents can now handle complex, large-scale infrastructure tooling, provided they operate within human-designed evaluation pipelines.",
+      "interpretation": "The release serves as a high-profile proof of concept for agentic development, though its utility remains limited to local unit testing rather than production-grade deployment.",
+      "confidence": 0.92,
+      "source": "github.com",
+      "discovered_via": "Hacker News",
+      "source_title": "AWS emulator",
+      "url": "https://github.com/aws/aws-emulator",
+      "discovery_url": "https://news.ycombinator.com/item?id=50456631",
+      "link_quality": "original",
+      "published_at": "2026-11-11T18:21:38.000Z",
+      "discovery_score": 8.096
     },
     {
       "category": "ai",
-      "headline": "Audit highlights gap in Anthropic’s vulnerability disclosures",
-      "confirmed_fact": "A seven-month audit by VulnCheck found that while Anthropic’s internal ledger lists 37,966 findings, only 7,349 have been made public and 217 marked as fixed.",
-      "why_it_matters": "The discrepancy between vendor-reported safety metrics and independent vulnerability tracking underscores the difficulty in verifying the effectiveness of automated AI bug-hunting tools.",
-      "interpretation": "It is a reminder that internal disclosure ledgers are not the same as public security transparency; until these metrics align, independent scrutiny remains the only way to gauge actual progress.",
-      "confidence": 0.85,
-      "source": "vulncheck.com",
+      "headline": "Google Launches Gemini Decisions API",
+      "confirmed_fact": "Google's new Gemini Decisions API, powered by the gemini-decision-1 model, evaluates inputs to provide calibrated probabilities for branching logic rather than generating open-ended text.",
+      "why_it_matters": "By focusing on structured decision-making rather than generative text, this tool offers developers a more reliable way to build programmatic logic into AI-driven applications.",
+      "interpretation": "This is a pragmatic move to address the 'hallucination' problem in agentic workflows by forcing the model to output probabilities for specific choices instead of unpredictable prose.",
+      "confidence": 0.88,
+      "source": "blog.google",
       "discovered_via": "Hacker News",
-      "source_title": "Tracking Anthropic-discovered vulnerabilities",
-      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
-      "discovery_url": "https://news.ycombinator.com/item?id=50447074",
+      "source_title": "Gemini Decisions API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50456791",
       "link_quality": "original",
-      "published_at": "2026-11-10T22:17:56.000Z",
-      "discovery_score": 7.709
-    },
-    {
-      "category": "research",
-      "headline": "DeepMind uses AI to verify Signal protocol security",
-      "confirmed_fact": "Google DeepMind’s AlphaProof Code framework has generated over 6.5 million lines of machine-checked proofs to verify the security properties of the Signal protocol's machine code.",
-      "why_it_matters": "This represents a significant milestone in using AI for formal verification, though it required 26,000 lines of human-written specifications and did not uncover new vulnerabilities.",
-      "interpretation": "It is an impressive technical feat, but it remains a research-grade tool rather than a plug-and-play solution for general software security.",
-      "confidence": 0.9,
-      "source": "deepmind.google",
-      "discovered_via": "Hacker News",
-      "source_title": "AlphaProof Code",
-      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50439193",
-      "link_quality": "original",
-      "published_at": "2026-11-10T12:11:12.000Z",
-      "discovery_score": 7.608
-    },
-    {
-      "category": "technology",
-      "headline": "Indie game developers face AI backlash",
-      "confirmed_fact": "Game developer House House confirmed using LLMs to fix a rendering bug in 'Big Walk', prompting 19 Independent Games Festival jurors to decline voting for entries using generative AI.",
-      "why_it_matters": "The incident highlights the growing friction between practical AI utility in development and the creative community's stance on generative tools.",
-      "interpretation": "Even when AI is used for mundane debugging rather than creative output, the industry remains deeply divided on where to draw the line.",
-      "confidence": 0.9,
-      "source": "Luke Plunkett/Aftermath",
-      "discovered_via": "Techmeme",
-      "source_title": "Game developer House House confirms using AI during Big Walk's final development, sparking an intense debate among Independent Games Festival judges and jurors (Luke Plunkett/Aftermath)",
-      "url": "https://aftermath.site/big-walk-ai-igf-jurors-controversy/",
-      "discovery_url": "https://www.techmeme.com/261111/p22",
-      "link_quality": "original",
-      "published_at": "2026-11-11T12:40:01.000Z",
-      "discovery_score": 7.558
+      "published_at": "2026-11-11T18:32:42.000Z",
+      "discovery_score": 7.434
     }
   ],
-  "practical_takeaway": "When evaluating AI-driven tools for security or development, look past the marketing claims. As seen with the discrepancies in vulnerability reporting and the ongoing debate in indie gaming, the practical reality of AI integration often involves more human oversight and community friction than the initial announcements suggest.",
-  "watch_next": "Keep an eye on Anthropic’s Friday investor event for any shift in how the company balances its ambitious 'age of miracles' rhetoric with the practical realities of public market scrutiny.",
+  "practical_takeaway": "If you are building with AI agents, expect increasing friction with legacy platforms like United Airlines that prioritise security over automation. For developers, tools like the AWS Emulator and Gemini Decisions API suggest a shift toward more structured, agent-native infrastructure that prioritises reliability over open-ended generation.",
+  "watch_next": "Monitor how other airlines and travel platforms respond to the rise of autonomous booking agents, and keep an eye on whether Nvidia's interim leadership can maintain the company's venture-backed ecosystem during the search for a permanent CEO.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -153,21 +137,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 071",
-      "title": "My Pixel Animation Studio",
-      "summary": "Draw personalised frame-by-frame pixel animations, preview them at adjustable speed and export a transparent PNG frame or sprite sheet.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-071/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-071/poster.png"
+      "label": "AI Inquisitive Parents · Day 072",
+      "title": "My Colour Mixer Lab",
+      "summary": "Mix RGB screen colours, match family-chosen targets and save a personalised palette with local scores.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-072/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-072/poster.png"
     }
   },
   "social": {
-    "date": "2026-11-11",
-    "lead_headline": "Fractile hits $7B valuation as UK chip sector heats up",
-    "facebook_post": "Fractile hits $7B valuation as UK chip sector heats up\n\nThe jump from a $1.1 billion valuation in May suggests significant investor appetite for custom semiconductor hardware tailored specifically for AI inference.\n\nToday's Sapiver Forge Daily Brief covers 5 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Fractile hits $7B valuation as UK chip sector heats up",
-    "pinterest_description": "The jump from a $1.1 billion valuation in May suggests significant investor appetite for custom semiconductor hardware tailored specifically for AI inference.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Fractile hits $7B valuation as UK chip sector heats up. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Fractile hits $7B valuation as UK chip sector heats up. George Hammond/Financial Times reports, citing people familiar with the matter, that london-based AI chip startup Fractile has raised $720 million in a funding round led by Thrive Capital and Founders Fund, pushing its valuation to $7 billion. Read the Sapiver Forge Daily Brief."
+    "date": "2026-11-12",
+    "lead_headline": "Jensen Huang Resigns as Nvidia CEO",
+    "facebook_post": "Jensen Huang Resigns as Nvidia CEO\n\nNvidia is the primary engine of the current AI boom; a leadership vacuum at this scale creates significant uncertainty for the entire AI supply chain and the company's extensive network of venture-backed partners.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Jensen Huang Resigns as Nvidia CEO",
+    "pinterest_description": "Nvidia is the primary engine of the current AI boom; a leadership vacuum at this scale creates significant uncertainty for the entire AI supply chain and the company's extensive network of venture-backed partners.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Jensen Huang Resigns as Nvidia CEO. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Jensen Huang Resigns as Nvidia CEO. Nvidia founder Jensen Huang resigned on 12 November 2026 following disclosures regarding extramarital relationships. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "88f44448890b3f72d4b34eb3ba13d29a89666960be142b70b66a6c4a0bed5df9"
+  "candidate_id": "1f7dfa8393a9f2215d54b4120a125d385f070b083458eaebdd2923ffd905570f"
 }

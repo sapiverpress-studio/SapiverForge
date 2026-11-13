@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-13T14:30:17.840Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 899,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 650,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 854,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 600,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1549,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "status.cloud.microsoft",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "Service degradation on Microsoft 365",
+      "url": "https://status.cloud.microsoft/",
+      "direct_source_url": "https://status.cloud.microsoft/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50471731",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50471731",
+      "summary": "https://www.abc.net.au/news/2026-11-13/microsoft-outage-affe... https://www.reddit.com/r/sysadmin/comments/1xuje83/microsoft... https://downdetector.com/status/microsoft-365/",
+      "published_at": "2026-11-12T18:20:48.000Z",
+      "engagement": {
+        "score": 1053,
+        "comments": 879
+      },
+      "collection_mode": "api",
+      "score": 8.28
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "apnews.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "Jensen Huang resigns",
+      "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+      "direct_source_url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+      "discovery_url": "https://news.ycombinator.com/item?id=50467087",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50467087",
+      "summary": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-tran... https://www.reuters.com/business/retail-consumer/nvidia-ceo-... , https://www.reuters.com/live/nvidia-live-board-meets-fate-ce... https://www.nytimes.com/live/2026/11/12/business/nvidia-jens...",
+      "published_at": "2026-11-12T13:52:29.000Z",
+      "engagement": {
+        "score": 3754,
+        "comments": 3254
+      },
+      "collection_mode": "api",
+      "score": 8.174
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "wired.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "Nvidia employees petition to bring back Jensen Huang",
+      "url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
+      "direct_source_url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50477231",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50477231",
+      "summary": "",
+      "published_at": "2026-11-13T02:16:24.000Z",
+      "engagement": {
+        "score": 720,
+        "comments": 577
+      },
+      "collection_mode": "api",
+      "score": 8.1
+    },
+    {
+      "title": "Amended S-1: Nscale had $5.5B in debt in September, up from $137.4M in June; Nvidia committed $2B of its $3B+ convertible financing; it previously disclosed $1B (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/neocloud-nscale-reveals-5-5-billion-debt-and-closer-nvidia-ties-ahead-of-ipo",
+      "summary": "Bloomberg : Amended S-1: Nscale had $5.5B in debt in September, up from $137.4M in June; Nvidia committed $2B of its $3B+ convertible financing; it previously disclosed $1B &mdash; Data center developer Nscale needs more cash, has significantly increased its debt and is more reliant on Nvidia Corp &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-13/neocloud-nscale-reveals-5-5-billion-debt-and-closer-nvidia-ties-ahead-of-ipo\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261113/i11.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261113/p11#a261113p11\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-13/neocloud-nscale-reveals-5-5-billion-debt-and-closer-nvidia-ties-ahead-of-ipo\">Amended S-1: Nscale had $5.5B in debt in September, up from $137.4M in June; Nvidia committed $2B of its $3B+ convertible financing; it previously disclosed $1B</A></B></SPAN>&nbsp; &mdash;&nbsp; Data center developer Nscale needs more cash, has significantly increased its debt and is more reliant on Nvidia Corp &hellip; </P>",
+      "published_at": "2026-11-13T14:25:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261113/p11",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-13/neocloud-nscale-reveals-5-5-billion-debt-and-closer-nvidia-ties-ahead-of-ipo",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.096
+    },
+    {
+      "title": "Jensen Huang's downfall exposes Nvidia's internal politics; source: Huang ran Nvidia as a \"feudal system\" with his daughter and son-in-law in powerful positions (Financial Times)",
+      "url": "https://www.ft.com/content/ef8f85a6-e2d7-4d41-b70e-092b2567813a",
+      "summary": "Financial Times : Jensen Huang's downfall exposes Nvidia's internal politics; source: Huang ran Nvidia as a &ldquo;feudal system&rdquo; with his daughter and son-in-law in powerful positions &mdash; After 33 years building Nvidia into the world's most valuable company, its founder's career disintegrated in less than two weeks",
+      "description_html": "<A HREF=\"https://www.ft.com/content/ef8f85a6-e2d7-4d41-b70e-092b2567813a\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261113/i10.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261113/p10#a261113p10\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/ef8f85a6-e2d7-4d41-b70e-092b2567813a\">Jensen Huang's downfall exposes Nvidia's internal politics; source: Huang ran Nvidia as a &ldquo;feudal system&rdquo; with his daughter and son-in-law in powerful positions</A></B></SPAN>&nbsp; &mdash;&nbsp; After 33 years building Nvidia into the world's most valuable company, its founder's career disintegrated in less than two weeks</P>",
+      "published_at": "2026-11-13T13:10:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261113/p10",
+      "direct_source_url": "https://www.ft.com/content/ef8f85a6-e2d7-4d41-b70e-092b2567813a",
+      "publisher": "Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.964
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "twitter.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 8,
+      "title": "Microsoft Outlook/365 still down after 12 hours",
+      "url": "https://twitter.com/MSFT365Status/status/2121079061774491735",
+      "direct_source_url": "https://twitter.com/MSFT365Status/status/2121079061774491735",
+      "discovery_url": "https://news.ycombinator.com/item?id=50478609",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50478609",
+      "summary": "",
+      "published_at": "2026-11-13T05:08:23.000Z",
+      "engagement": {
+        "score": 409,
+        "comments": 287
+      },
+      "collection_mode": "api",
+      "score": 7.9
+    },
+    {
+      "title": "Source: at an August 2026 finance meeting, Jensen Huang interrupted Colette Kress' presentation, calling her \"a deer in the headlights\" and a \"reporting CFO\" (Wall Street Journal)",
+      "url": "https://www.wsj.com/tech/jensen-huang-colette-kress-nvidia-ceo-eb289097?st=TUtsF9&reflink=desktopwebshare_permalink",
+      "summary": "Wall Street Journal : Source: at an August 2026 finance meeting, Jensen Huang interrupted Colette Kress' presentation, calling her &ldquo;a deer in the headlights&rdquo; and a &ldquo;reporting CFO&rdquo; &mdash; Interim CEO Colette Kress has questioned some Huang dealmaking. He called her &lsquo;a deer in the headlights.&rsquo;",
+      "description_html": "<A HREF=\"https://www.wsj.com/tech/jensen-huang-colette-kress-nvidia-ceo-eb289097?st=TUtsF9&reflink=desktopwebshare_permalink\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261113/i9.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261113/p9#a261113p9\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/tech/jensen-huang-colette-kress-nvidia-ceo-eb289097?st=TUtsF9&reflink=desktopwebshare_permalink\">Source: at an August 2026 finance meeting, Jensen Huang interrupted Colette Kress' presentation, calling her &ldquo;a deer in the headlights&rdquo; and a &ldquo;reporting CFO&rdquo;</A></B></SPAN>&nbsp; &mdash;&nbsp; Interim CEO Colette Kress has questioned some Huang dealmaking.&nbsp; He called her &lsquo;a deer in the headlights.&rsquo;</P>",
+      "published_at": "2026-11-13T12:50:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261113/p9",
+      "direct_source_url": "https://www.wsj.com/tech/jensen-huang-colette-kress-nvidia-ceo-eb289097?st=TUtsF9&reflink=desktopwebshare_permalink",
+      "publisher": "Wall Street Journal",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.87
+    },
+    {
+      "title": "South Korea-based DeepX tapes out DX-M2, an edge AI chip to run inference of 100B-parameter LLMs on robots and drones, targeting fall 2027 for mass production (Sally Ward-Foxton/EE Times)",
+      "url": "http://www.eetimes.com/",
+      "summary": "Sally Ward-Foxton / EE Times : South Korea-based DeepX tapes out DX-M2, an edge AI chip to run inference of 100B-parameter LLMs on robots and drones, targeting fall 2027 for mass production &mdash; DeepX is targeting edge markets including robotics with its second-generation AI accelerator, which can run large LLMs on device in under 5 W.",
+      "description_html": "<P><A HREF=\"https://www.techmeme.com/261113/p8#a261113p8\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Sally Ward-Foxton / <A HREF=\"http://www.eetimes.com/\">EE Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.eetimes.com/deepx-tapes-out-second-gen-chip-projects-6-7x-performance-gain-with-lpddr5x-pim/\">South Korea-based DeepX tapes out DX-M2, an edge AI chip to run inference of 100B-parameter LLMs on robots and drones, targeting fall 2027 for mass production</A></B></SPAN>&nbsp; &mdash;&nbsp; DeepX is targeting edge markets including robotics with its second-generation AI accelerator, which can run large LLMs on device in under 5 W.</P>",
+      "published_at": "2026-11-13T12:15:19.000Z",
+      "discovery_url": "https://www.techmeme.com/261113/p8",
+      "direct_source_url": "http://www.eetimes.com/",
+      "publisher": "Sally Ward-Foxton/EE Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.766
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "blog.rust-lang.org",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "Rust 1.100",
+      "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+      "direct_source_url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50472038",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50472038",
+      "summary": "",
+      "published_at": "2026-11-12T18:39:05.000Z",
+      "engagement": {
+        "score": 774,
+        "comments": 284
+      },
+      "collection_mode": "api",
+      "score": 7.703
+    },
+    {
+      "title": "A review of Chinese contracts, disclosures, and other documents identifies $3.2B+ in compute projects built or planned around Nvidia GPUs restricted by the US (Eduardo Baptista/Reuters)",
+      "url": "https://www.reuters.com/world/china/huang-exit-us-scrutiny-imperil-3-billion-chinese-ai-projects-reliant-nvidia-2026-11-13/",
+      "summary": "Eduardo Baptista / Reuters : A review of Chinese contracts, disclosures, and other documents identifies $3.2B+ in compute projects built or planned around Nvidia GPUs restricted by the US &mdash; Nvidia has said US export controls have effectively shut it out of China's AI data-centre market, but a Reuters review has identified &hellip;",
+      "description_html": "<A HREF=\"https://www.reuters.com/world/china/huang-exit-us-scrutiny-imperil-3-billion-chinese-ai-projects-reliant-nvidia-2026-11-13/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261113/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261113/p7#a261113p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Eduardo Baptista / <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/world/china/huang-exit-us-scrutiny-imperil-3-billion-chinese-ai-projects-reliant-nvidia-2026-11-13/\">A review of Chinese contracts, disclosures, and other documents identifies $3.2B+ in compute projects built or planned around Nvidia GPUs restricted by the US</A></B></SPAN>&nbsp; &mdash;&nbsp; Nvidia has said US export controls have effectively shut it out of China's AI data-centre market, but a Reuters review has identified &hellip; </P>",
+      "published_at": "2026-11-13T10:50:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261113/p7",
+      "direct_source_url": "https://www.reuters.com/world/china/huang-exit-us-scrutiny-imperil-3-billion-chinese-ai-projects-reliant-nvidia-2026-11-13/",
+      "publisher": "Eduardo Baptista/Reuters",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.627
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "ipo.anthropic.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "Anthropic IPO",
+      "url": "https://ipo.anthropic.com/us/",
+      "direct_source_url": "https://ipo.anthropic.com/us/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50465829",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50465829",
+      "summary": "",
+      "published_at": "2026-11-12T11:46:41.000Z",
+      "engagement": {
+        "score": 972,
+        "comments": 881
+      },
+      "collection_mode": "api",
+      "score": 7.576
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
+      "url": "https://github.com/simpsoka/zigzag",
+      "direct_source_url": "https://github.com/simpsoka/zigzag",
+      "discovery_url": "https://news.ycombinator.com/item?id=50470488",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50470488",
+      "summary": "https://x.com/simpsoka/status/2115254318161182876",
+      "published_at": "2026-11-12T17:02:42.000Z",
+      "engagement": {
+        "score": 622,
+        "comments": 210
+      },
+      "collection_mode": "api",
+      "score": 7.556
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "antigravity.google",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 7,
+      "title": "Gemini 4 Hydrogen and Orchestrator",
+      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+      "direct_source_url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50472260",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50472260",
+      "summary": "",
+      "published_at": "2026-11-12T18:52:01.000Z",
+      "engagement": {
+        "score": 455,
+        "comments": 140
+      },
+      "collection_mode": "api",
+      "score": 7.552
+    },
+    {
+      "title": "AI server maker xFusion gets approval from the Shenzhen Stock Exchange for a ChiNext IPO; filing: the company aims to raise ~$1.2B by issuing up to 220M shares (Sangmi Cha/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/server-maker-xfusion-gets-shenzhen-nod-for-1-2-billion-listing",
+      "summary": "Sangmi Cha / Bloomberg : AI server maker xFusion gets approval from the Shenzhen Stock Exchange for a ChiNext IPO; filing: the company aims to raise ~$1.2B by issuing up to 220M shares &mdash; Artificial intelligence server maker xFusion Digital Technologies Co. received approval from the Shenzhen Stock Exchange on Thursday &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-13/server-maker-xfusion-gets-shenzhen-nod-for-1-2-billion-listing\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261113/i6.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261113/p6#a261113p6\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Sangmi Cha / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-13/server-maker-xfusion-gets-shenzhen-nod-for-1-2-billion-listing\">AI server maker xFusion gets approval from the Shenzhen Stock Exchange for a ChiNext IPO; filing: the company aims to raise ~$1.2B by issuing up to 220M shares</A></B></SPAN>&nbsp; &mdash;&nbsp; Artificial intelligence server maker xFusion Digital Technologies Co. received approval from the Shenzhen Stock Exchange on Thursday &hellip; </P>",
+      "published_at": "2026-11-13T09:35:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261113/p6",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-13/server-maker-xfusion-gets-shenzhen-nod-for-1-2-billion-listing",
+      "publisher": "Sangmi Cha/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.495
+    },
+    {
+      "title": "OpenAI launches Daybreak Red Team in early access to test web apps for flaws and Daybreak Defense Factory to automate finding, validating, and fixing them (Jessica Lyons/The Register)",
+      "url": "https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500",
+      "summary": "Jessica Lyons / The Register : OpenAI launches Daybreak Red Team in early access to test web apps for flaws and Daybreak Defense Factory to automate finding, validating, and fixing them &mdash; OpenAI has launched two new security products, one for penetration testing and another for defense, and warned organizations &hellip;",
+      "description_html": "<A HREF=\"https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261113/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261113/p5#a261113p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Jessica Lyons / <A HREF=\"https://www.theregister.com/\">The Register</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500\">OpenAI launches Daybreak Red Team in early access to test web apps for flaws and Daybreak Defense Factory to automate finding, validating, and fixing them</A></B></SPAN>&nbsp; &mdash;&nbsp; OpenAI has launched two new security products, one for penetration testing and another for defense, and warned organizations &hellip; </P>",
+      "published_at": "2026-11-13T07:25:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261113/p5",
+      "direct_source_url": "https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500",
+      "publisher": "Jessica Lyons/The Register",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.325
+    },
+    {
+      "title": "Sources: Samsung is in talks to buy Modine Manufacturing, a US maker of data center cooling systems, as soon as the coming weeks; Modine's market value is $5.6B (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-12/samsung-is-in-talks-to-acquire-data-center-cooling-firm-modine",
+      "summary": "Bloomberg : Sources: Samsung is in talks to buy Modine Manufacturing, a US maker of data center cooling systems, as soon as the coming weeks; Modine's market value is $5.6B &mdash; Samsung Electronics Co. is in talks to acquire Modine Manufacturing Co., a maker of cooling systems for data centers, according to people familiar with the matter.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-12/samsung-is-in-talks-to-acquire-data-center-cooling-firm-modine\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261113/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261113/p4#a261113p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-12/samsung-is-in-talks-to-acquire-data-center-cooling-firm-modine\">Sources: Samsung is in talks to buy Modine Manufacturing, a US maker of data center cooling systems, as soon as the coming weeks; Modine's market value is $5.6B</A></B></SPAN>&nbsp; &mdash;&nbsp; Samsung Electronics Co. is in talks to acquire Modine Manufacturing Co., a maker of cooling systems for data centers, according to people familiar with the matter.</P>",
+      "published_at": "2026-11-13T06:30:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261113/p4",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-12/samsung-is-in-talks-to-acquire-data-center-cooling-firm-modine",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.206
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "Open Vision Banana: A Fully Open Recipe for Generative Visual Perception",
+      "url": "https://huggingface.co/papers/2611.15844",
+      "direct_source_url": "https://huggingface.co/papers/2611.15844",
+      "discovery_url": "https://huggingface.co/papers/2611.15844",
+      "link_quality": "original",
+      "summary": "Recent work suggests that pretrained image generators encode real-world understanding beyond image synthesis. Vision Banana exploits this by framing vision tasks as conditional image editing. However, its data, weights, code, and implementation details are not public. We present Open Vision Banana (OVB), a fully open and reproducible recipe for converting pretrained generators into unified multi-task perception systems. Our analyses identify the design choices that matter most for generalization, including color encoding, prompt design, parameter adaptation, and task balancing. These choices interact, so individually helpful choices can hurt when combined with others. Starting from 4B and 9B parameter open-weight base models and using 2.1M-3.8M training pairs from public datasets, OVB surpasses Vision Banana's reported Cityscapes zero-shot performance (73.9 vs. 69.9 mIoU) and rivals state-of-the-art affine-invariant depth estimators. Its non-zero-shot variants come within five points of Vision Banana on referring and reasoning segmentation but remain further behind on instance segmentation. All models largely retain the base model's image-editing abilities. With legend ensembling,",
+      "published_at": "2026-11-10T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 19
+      },
+      "collection_mode": "api",
+      "score": 6.471
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "JustRUA: A Controlled Study of GPT-6 Robot-Use Agents",
+      "url": "https://huggingface.co/papers/2611.16009",
+      "direct_source_url": "https://huggingface.co/papers/2611.16009",
+      "discovery_url": "https://huggingface.co/papers/2611.16009",
+      "link_quality": "original",
+      "summary": "GPT-6 Astra can drive a robot arm directly through a fixed harness, and scores of such robot-use agents on RoboDojo have risen quickly since. Reported systems differ in harness and test subset and often change several designs at once, so it is hard to tell which choices produce the gains. We take these designs apart and test them in one framework, along the harness around the model, the action interface, the reuse of experience and the scene geometry given to the model. A lean harness that keeps the full episode history and stops each motion early goes a long way. Reusing experience changes how the model acts but is not a free lunch, and scene geometry helps most, even when depth is predicted from RGB alone. JustRUA starts from the official L3 harness and keeps only what matters most. Even with no learned policy, self-improvement loop or task-specific tuning, this simple harness raises the score on the RoboDojo simulation benchmark substantially, from 29.7 to 50.3.",
+      "published_at": "2026-11-10T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 6.051
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 8,
+      "title": "TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models",
+      "url": "https://huggingface.co/papers/2611.17331",
+      "direct_source_url": "https://huggingface.co/papers/2611.17331",
+      "discovery_url": "https://huggingface.co/papers/2611.17331",
+      "link_quality": "original",
+      "summary": "Decoder-only Large View Synthesis Models (LVSMs) with KV-cache have recently achieved state-of-the-art quality by regressing novel views from neural networks without reconstructing 3D geometry, while Test-Time Training (TTT) layers save computation but sacrifice quality. We propose Test-Time Baking (TTB), a strategy that learns to bake global scene information from cross-view attention into a lightweight MLP, enabling fast and high-fidelity novel-view decoding. The first key is to repurpose the fast-weight MLP of TTT to learn the cross-view attention mapping explicitly from its input-output pairs, rather than replacing attention entirely, achieving the same rendering efficiency as TTT while delivering substantially higher quality. The second key addresses a modality misalignment between context prefilling and novel-view rendering: we disentangle context tokens into camera-only context rendering tokens to serve as TTB input, and context ground-truth tokens with image content to serve as the TTB mapping target, ensuring the baked MLPs are relieved of the modality generalization challenge between context and novel-view processing. Our method achieves up to **23x** rendering speedup wi",
+      "published_at": "2026-11-11T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 19
+      },
+      "collection_mode": "api",
+      "score": 5.991
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Learning the Task or Learning the Verifier? Rethinking Criteria Exposure in Embodied Self-Improvement",
+      "url": "https://huggingface.co/papers/2611.08318",
+      "direct_source_url": "https://huggingface.co/papers/2611.08318",
+      "discovery_url": "https://huggingface.co/papers/2611.08318",
+      "link_quality": "original",
+      "summary": "Self-improving embodied agents are increasingly being developed and compared on robot simulation benchmarks. Several recent works expose the benchmark's success criteria to the learning agent, a practice we call Criteria Exposure (CE). These criteria, originally written to verify policies trained by imitation learning, often demand more than the corresponding language instructions, so a score from such a verifier may not faithfully reflect whether the instructed task was completed, especially for robot-control programs written by an agent. As embodied coding agents report ever higher benchmark scores, a natural question arises: when a coding agent is exposed to the benchmark's criteria, does it generate code that better performs the instructed task, or code that simply overfits to the verification criteria? We conduct controlled experiments with a self-improving agent with and without CE, and find that with CE the agent quickly produces code with a higher success rate under the given criteria, but this advantage disappears when the criteria are changed slightly without departing from the original instructions. More importantly, the skills the agent develops under CE transfer poorly",
+      "published_at": "2026-11-04T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 3
+      },
+      "collection_mode": "api",
+      "score": 5.961
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "A Cross-Scenario Survey and Analysis of Self-Evolving Multimodal Agents",
+      "url": "https://huggingface.co/papers/2611.14256",
+      "direct_source_url": "https://huggingface.co/papers/2611.14256",
+      "discovery_url": "https://huggingface.co/papers/2611.14256",
+      "link_quality": "original",
+      "summary": "Recent work shows that multimodal agents increasingly self-improve without recurring human annotation. However, each self-improvement mechanism is designed and evaluated within a single scenario, leaving its preconditions unverified under cross-scenario transfer. This survey investigates the structural source of asymmetric mechanism transfer across four scenarios: multimodal reasoning, multimodal generation, GUI and Web navigation, and embodied manipulation. We first formalize the self-evolving multimodal agent by four criteria and a differentia of self-reference, and adopt the three-stage self-evolving loop of experience generation, feedback acquisition, and update consolidation as our analytical framework to position the scenarios along ceilings on rollout count and feedback fidelity. Comparing self-evolving with fixed loops within each scenario separates the limitations that the scenario imposes from those inherent in the self-evolving design. We then recast each mechanism as a trade-off that raises a scarce factor by presupposing a task-structural resource, such as output equivalence or checkable outcomes, and judge it portable, conditional, blocked, or redundant across scenari",
+      "published_at": "2026-11-09T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.891
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "DeepStress: Stress-Testing Deep Search Agents",
+      "url": "https://huggingface.co/papers/2607.13920",
+      "direct_source_url": "https://huggingface.co/papers/2607.13920",
+      "discovery_url": "https://huggingface.co/papers/2607.13920",
+      "link_quality": "original",
+      "summary": "While search agents demonstrate impressive capabilities in multi-step question answering, their robustness to poor-quality evidence remains under-explored. Such evidence is rare in benchmark corpora, and resulting failures are hard to reproduce. We propose DeepStress, a dynamic stress-testing framework that subjects agents to degraded evidence at controlled rates. It replaces the retrieval module with a synthetic environment where documents are generated dynamically for each query, under independent control of their trustworthiness, relevance, and factuality. To characterize behavior under stress, we go beyond binary accuracy with a five-way classification of final-answer outcomes and two new reliability-aware metrics, RAS and CoPRAS, which credit cautious behavior and account for computational cost. Evaluating 12 systems on questions from HotpotQA and BrowseComp-Plus, we find that several open-weight agents answer confidently when sources contain obvious credibility red flags, and that many HotpotQA questions are answered from parametric knowledge even when all returned documents are factually wrong.",
+      "published_at": "2026-11-11T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 3
+      },
+      "collection_mode": "api",
+      "score": 5.881
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 10,
+      "title": "Ropedia Xperience 2: A Gold Standard for Scaling Physical AI Environments and Behaviors",
+      "url": "https://huggingface.co/papers/2611.17060",
+      "direct_source_url": "https://huggingface.co/papers/2611.17060",
+      "discovery_url": "https://huggingface.co/papers/2611.17060",
+      "link_quality": "original",
+      "summary": "Large foundation models such as GPT-6 Astra and Claude Fable 5.1 have recently been shown to control robots directly from visual observations. They nevertheless remain brittle on long-horizon, contact-rich tasks in real-world environments. Further progress depends on two complementary resources: demonstrations of human behavior that supervise how tasks are performed, and interactive environments in which policies can be rolled out, evaluated, and improved in closed loop. Language models have advanced along well-characterized scaling laws; the corresponding question for physical AI is how capability scales with environments and behaviors, which first requires identifying which data to scale and how to produce and reuse such data continuously. To address this question, we introduce Ropedia Xperience 2, comprising 1,589 released metric-scale 3D scans and a collection of 4,230 egocentric recordings of 74 tasks (131 hours). We further show that each capture can be repurposed for robot learning: scenes are converted into physically interactive simulation environments, human motion is retargeted to whole-body robot trajectories, and additional robot behaviors are obtained through virtual",
+      "published_at": "2026-11-11T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 16
+      },
+      "collection_mode": "api",
+      "score": 5.795
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 6,
+      "title": "Structured Confidence Perturbation via Fisher Geometry for Adversarial Training",
+      "url": "https://huggingface.co/papers/2611.14046",
+      "direct_source_url": "https://huggingface.co/papers/2611.14046",
+      "discovery_url": "https://huggingface.co/papers/2611.14046",
+      "link_quality": "original",
+      "summary": "Adversarial training is often plagued by \"pseudo-attacks\", perturbations that significantly increase the loss value but fail to truly alter the model's confidence structure. To address this, we propose two complementary approaches to directly attack and defend against confidence structure deformation. First, building upon the traditional loss maximization perspective, we introduce a hybrid objective that integrates cross-entropy and KL divergence, encouraging adversarial examples to simultaneously disrupt prediction accuracy and distribution consistency. Second, we geometrically reconstruct adversarial training by generating perturbations that maximize the distribution distance on the confidence manifold. Theoretical analysis shows that the optimal perturbation direction aligns with the principal eigenvectors of the Fisher information matrix. We also propose an efficient algorithm to avoid high-dimensional matrix computations. Experiments on multiple datasets and model architectures demonstrate that our method outperforms existing methods in adversarial robustness and robust transferability, particularly excelling in structural perturbations within high-confidence regions.",
+      "published_at": "2026-11-09T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 5.739
+    }
+  ]
+}

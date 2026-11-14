@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-14",
+  "reviewed_edition": "Sapiver Forge Daily Brief",
+  "editorial_status": "source_checked_candidate_not_sent",
+  "discovery_healthy_sources": 3,
+  "discovery_warnings": [
+    "Reuters RSS discovery 401",
+    "Sifted discovery returned 404"
+  ],
+  "sources": [
+    {
+      "story": 1,
+      "publisher": "Reuters",
+      "url": "https://live.euronext.com/en/financial-news/microsoft-restores-service-outlook-and-teams-after-global-outage",
+      "published": "2026-11-14",
+      "checked": "Microsoft says all affected services recovered; network-capacity change; no known malicious activity",
+      "limitation": ">70 countries is based on user-reported outage telemetry"
+    },
+    {
+      "story": 1,
+      "publisher": "Associated Press",
+      "url": "https://apnews.com/article/ca395c0f1e51af784b6d70afb6554f6a",
+      "checked": "Full restoration and affected service categories",
+      "limitation": "Incident technical root cause remains subject to later review"
+    },
+    {
+      "story": 2,
+      "publisher": "Financial Times",
+      "url": "https://www.ft.com/content/3efa9733-fbb4-47c2-83ba-b01e548ef277",
+      "published": "2026-11-13",
+      "checked": "Reports Huang met He Lifeng and Wang Wentao but lacked NDRC access",
+      "limitation": "Subscription-restricted; investigative sourcing attributed to FT"
+    },
+    {
+      "story": 2,
+      "publisher": "Reuters (Channel NewsAsia)",
+      "url": "https://www.channelnewsasia.com/east-asia/china-access-nvidia-chips-us-congress-jensen-huang-6546746",
+      "checked": "Huang resignation and chip export-policy context",
+      "limitation": "Does not independently verify FT private meeting access"
+    },
+    {
+      "story": 3,
+      "publisher": "The Guardian",
+      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "published": "2026-11-13",
+      "checked": "1,009 notebook pages; 663 candidates; approximate 400 passed, 200 repaired, 50 false",
+      "limitation": "Counts and historical conclusions are reported claims of the study team"
+    },
+    {
+      "story": 3,
+      "publisher": "Institute for Advanced Study",
+      "url": "https://www.ias.edu/news/ahead-his-time-ai-helps-unlock-discoveries-hidden-notebooks-man-who-transformed-maths",
+      "checked": "Institution acknowledges and links to the reported work",
+      "limitation": "News item summarises Guardian; not an independent formal-proof audit"
+    },
+    {
+      "story": 4,
+      "publisher": "Tendrils Compute",
+      "url": "https://tendrils.co/blog/2026-11-10/30m-raised",
+      "published": "2026-11-10",
+      "checked": "Company confirms $30m financing, investors, interaction nets and Vine",
+      "limitation": "Company announcement does not provide chip benchmarks"
+    },
+    {
+      "story": 4,
+      "publisher": "UK Sovereign AI Fund",
+      "url": "https://www.sovereignai.gov.uk/post/sovereign-ai-invests-in-tendrils-to-develop-general-purpose-chips",
+      "checked": "Co-investor confirms backing and architecture aims",
+      "limitation": "Not an independent technical benchmark"
+    }
+  ],
+  "corrections": [
+    "Microsoft: updated the incident mechanism to technical problem following a network-capacity change; treated geographic scope as reports rather than confirmed uniform outages.",
+    "Nvidia: noted meetings with two senior officials while the reported lack of access concerned the NDRC.",
+    "Gödel: restored the approximate 50 false candidates and attributed all numerical checks to researchers.",
+    "Tendrils: used direct company confirmation and emphasised absence of disclosed independent chip benchmarks.",
+    "Newsletter, social and detailed-story podcast revised to use the same lead facts; existing live Brevo campaign intentionally untouched."
+  ]
+}

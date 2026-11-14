@@ -1,5 +1,5 @@
-# Sources for The Great Microsoft Reset: When the Cloud Goes Quiet
+# Source notes — 2026-11-14
 
-- [Bloomberg: Microsoft says all Microsoft 365 products are operational, ending an outage that disrupted governments, traders, hospitals, and businesses around the world (Bloomberg)](https://www.bloomberg.com/news/articles/2026-11-13/microsoft-says-making-progress-fixing-one-of-its-longest-outages)
-- Daily Brief date: 2026-11-14
-- Confidence: 0.95
+- [Reuters on the Microsoft restoration](https://live.euronext.com/en/financial-news/microsoft-restores-service-outlook-and-teams-after-global-outage)
+- [Associated Press on the global outage](https://apnews.com/article/ca395c0f1e51af784b6d70afb6554f6a)
+- More details and limits in news-intelligence/2026-11-14/verification-evidence.json.

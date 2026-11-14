@@ -1,89 +1,80 @@
-Here are the evidence desk notes for the briefing candidates on **Saturday, 14 November 2026**.
+### Executive Summary & Scope Clearances
+
+* **OUT OF SCOPE / REJECTED:** Candidates **[0]** (FAA ground stop / aviation safety), **[2]** (Lugano crypto hub), **[4]** (Terminal borders UI design post), **[5]** (GGML v1.0.0 software release notes), **[10]** (1960 archival academic paper), and **[11]** (Local airband feed) fall outside Sapiver Forge’s core scope of AI, technology business, digital regulation, and computing innovation. Candidate **[8]** (Jonathan Blow opinion talk on YouTube) is an informal opinion commentary rather than a verified news report.
 
 ---
 
-### **Excluded Candidates (Out of Scope / Non-News)**
-* **[0] FAA ground stop**: *Out of Scope* (Aviation/civil infrastructure operational issue).
-* **[8] Doomsday 1960 paper**: *Out of Scope* (Historical academic paper discussion).
-* **[9] FM-1 Workbench**: *Out of Scope* (Hardware tool product page).
-* **[10] Live airband / Victoria ground stop**: *Out of Scope* (Aviation operational traffic).
-* **[15] JD.com acquisition of Ceconomy**: *Out of Scope* (General consumer electronics retail acquisition).
-* **[12] Jonathan Blow video**: *Out of Scope / Opinion* (Developer video stream/commentary, not breaking reporting).
+### Strongest In-Scope Candidates
+
+#### **[3] Microsoft 365 Fully Operational Following Multi-Day Global Outage**
+* **What is confirmed:** Microsoft confirmed on Saturday, November 14, 2026, that all flagship Microsoft 365 applications (including Outlook, Teams, Exchange Online, and Copilot) have been fully restored. The outage, which began on Thursday, November 12, affected organizations in over 70 countries, including government operations, healthcare providers, courts, and corporate networks. Microsoft stated that the incident was caused by server availability constraints and a secure-connection authentication bottleneck, ruling out malicious cyberactivity.
+* **Important caveats:** While core infrastructure is online, Microsoft noted that residual queue processing (such as delayed email deliveries) continued to clear into Saturday morning. A comprehensive post-mortem technical report is pending.
+* **Suitable for publication today:** **Yes.** High-impact, fully corroborated by Bloomberg, AP, Reuters, and *The Guardian*.
 
 ---
 
-### **Strongest In-Scope Candidates: Evidence Notes**
-
-#### **Candidate [1]: Nvidia allegedly engineered GPU scarcity by funding AI startups**
-* **What is confirmed:** *The Wall Street Journal* reported on internal executive friction at Nvidia between former CEO Jensen Huang and CFO (now interim CEO) Colette Kress regarding Nvidia’s extensive customer financing agreements and credit support for AI cloud startups. Kress raised concerns over financial exposure and sought to scale back commitments, including a proposed $250B deal structure with OpenAI.
-* **Important caveats:** The headline claim that Nvidia "engineered scarcity" is an editorial interpretation by secondary tech outlets (such as TechPowerUp). There is no regulatory finding, court filing, or verified proof that Nvidia deliberately manufactured chip shortages. 
-* **Suitable for publication today:** **Yes.** Publishable as major reporting on Nvidia's internal vendor financing friction following Huang’s departure, provided the "engineered scarcity" framing is clearly attributed as an unproven allegation rather than established fact.
+#### **[6] FT: Jensen Huang Struggled to Access China’s Key Chip Policymakers**
+* **What is confirmed:** *Financial Times* reporting by Eleanor Olcott (published Nov 14, 2026) reveals that despite Nvidia’s 20+ years of operation in China, former CEO Jensen Huang struggled to secure direct access to the top government officials steering Beijing’s chip self-sufficiency campaign—specifically Vice Premier Ding Xuexiang and NDRC Vice Minister Xiangli Bin.
+* **Important caveats:** The account relies on unnamed diplomatic and industry sources cited by the FT. It arrives during heightened scrutiny surrounding Nvidia’s political ties and export control strategy.
+* **Suitable for publication today:** **Yes.** Fresh geopolitical reporting from a primary financial publication directly affecting semiconductor policy.
 
 ---
 
-#### **Candidate [2]: Microsoft declares global 365 operational following multi-day outage**
-* **What is confirmed:** Microsoft 365, Outlook, Teams, and Copilot suffered a severe global outage starting 12 November 2026 that impacted government offices, healthcare providers, and enterprise operations in over 70 countries. Microsoft confirmed on 13–14 November that it addressed the underlying technical root cause (a bad update during a capacity upgrade) and that core services were restored to operational status.
-* **Important caveats:** While core connectivity is restored, Microsoft noted residual recovery queues and ongoing monitoring. Third-party estimates of financial impact (e.g., $7B in lost productivity) are analytical projections, not confirmed enterprise losses.
-* **Suitable for publication today:** **Yes.** Highly suitable as a major global IT infrastructure incident resolution story.
+#### **[1] Allegations of Nvidia "Circular Financing" and Market Demand Dynamics**
+* **What is confirmed:** TechPowerUp and tech outlets relayed reporting from *The Wall Street Journal* describing Nvidia's venture investments and financing arrangements with smaller AI cloud startups (e.g., CoreWeave and neocloud providers) that purchased Nvidia GPUs.
+* **Important caveats:** TechPowerUp’s headline claim that Nvidia "engineered scarcity" is an editorial interpretation. While vendor financing and equity stakes are documented public facts, allegations that Nvidia artificially manufactured GPU shortages or hid oversupply remain unproven assertions.
+* **Suitable for publication today:** **Yes**, provided the item is framed strictly around regulatory/press scrutiny of vendor financing rather than treating the "engineered scarcity" headline as an established fact.
 
 ---
 
-#### **Candidate [3]: Jensen Huang struggled to reach Beijing's top chip policymakers**
-* **What is confirmed:** The *Financial Times* (Eleanor Olcott) reported on 14 November 2026 that despite Nvidia’s 20-plus years of presence in China, Jensen Huang did not secure direct access to the senior government figures driving Beijing's semiconductor self-sufficiency strategy, such as Vice Premier Ding Xuexiang or top NDRC officials.
-* **Important caveats:** The story relies on anonymous political and trade sources in Washington and Beijing. It arrives amid broader geopolitical scrutiny surrounding Nvidia's Asia-Pacific ties.
-* **Suitable for publication today:** **Yes.** Strong policy and semiconductor geopolitical story from a primary source (FT).
+#### **[15] Tendrils Raises $30M Led by Benchmark to Develop Parallel CPU Architecture**
+* **What is confirmed:** UK semiconductor startup Tendrils Compute formally announced a $30M funding round led by Benchmark, with participation from the UK Sovereign AI Fund, Visionaries Club, and angel investor Jack Altman (who joins the board). Tendrils is designing a general-purpose processor featuring thousands of parallel cores based on interaction nets, paired with an open-source programming language called Vine.
+* **Important caveats:** The company is at an early architectural stage and has not yet disclosed a foundry fabrication partner, tape-out timeline, or hardware benchmarks.
+* **Suitable for publication today:** **Yes.** Solid deep-tech venture transaction confirmed via official company statements and *Tech.eu*.
 
 ---
 
-#### **Candidate [4]: AI model Claude used to analyze Kurt Gödel’s unpublished notebooks**
-* **What is confirmed:** *The Guardian* reported on 13 November 2026 that logician Jan von Plato (University of Helsinki) used Anthropic’s Claude to process 1,009 pages of Kurt Gödel's 1940s shorthand workbooks (from human transcriptions). Claude generated a 650-page breakdown identifying 663 theorem candidates. Running the statements through the Coq proof assistant formally verified approximately 400 as stated and ~200 with minor parameter repairs.
-* **Important caveats:** Claude processed von Plato's existing transcriptions and commentary, not raw optical images of Gabelsberger shorthand. External logicians note that attributing historical mathematical priority vs. AI-assisted reconstruction remains a subject for peer-reviewed historical analysis.
-* **Suitable for publication today:** **Yes.** Excellent feature candidate on AI applied to high-level symbolic logic and history of science.
+#### **[12] WhiteMatter Raises $20M Series A for Enterprise "Guardian" AI Security**
+* **What is confirmed:** San Francisco/Austin startup WhiteMatter (formerly QuilrAI) closed a $20M Series A round led by Blumberg Capital, with participation from Crew Capital and Sprout & Oak. WhiteMatter provides an agent-native security platform that deploys paired "Guardian" agents to govern and enforce policy on enterprise AI agents.
+* **Important caveats:** Performance and adoption metrics cited in press releases (2.25 million active guardians, 2.24ms policy decision speed) are company-reported and unverified by third parties.
+* **Suitable for publication today:** **Yes.** Timely startup funding report in enterprise AI safety and governance.
 
 ---
 
-#### **Candidate [14]: UK chip startup Tendrils Compute raises $30M led by Benchmark**
-* **What is confirmed:** Cambridge-based semiconductor startup Tendrils Compute raised a $30M (€26M) seed round led by Benchmark (with partner Jack Altman joining the board), alongside participation from the UK Sovereign AI Fund.
-* **Important caveats:** The company is developing a non-standard parallel CPU architecture based on interaction nets. It does not yet have verified commercial silicon, taped-out chips, or public benchmark results.
-* **Suitable for publication today:** **Yes.** Prominent UK deep-tech hardware financing story with top-tier venture backing.
+#### **[13] Charta Health Raises $55M Series B for AI Medical Chart Review**
+* **What is confirmed:** Charta Health raised $55M in Series B funding led by Insight Partners (bringing total funding to $85M), alongside returning investors Bain Capital Ventures and Madrona. The funding supports the expansion of AI tools that automate medical chart review and billing code validation.
+* **Important caveats:** Revenue growth metrics (10x YoY) are private, company-stated figures. 
+* **Suitable for publication today:** **Yes.** Well-corroborated healthtech deal.
 
 ---
 
-#### **Candidate [13]: AI inference compiler startup Luminal raises $25M Series A**
-* **What is confirmed:** San Francisco AI infrastructure startup Luminal (YC S25) raised $25M in Series A funding led by Standard Capital, with returning backing from Felicis, SagaVC, and Liquid 2. Luminal builds an open-source inference compiler to optimize model execution across heterogeneous AI hardware.
-* **Important caveats:** Company performance benchmarks (e.g., token throughput claims vs. vLLM) are unverified vendor claims. Company valuation was not disclosed.
-* **Suitable for publication today:** **Yes.** Strong enterprise AI infrastructure deal.
+#### **[14] Luminal Secures $25M Series A for AI Compiler & Inference Cloud**
+* **What is confirmed:** YC-backed startup Luminal raised $25M in Series A funding led by Standard Capital, with participation from Felicis, SagaVC, and Liquid 2. Luminal develops a search compiler designed to dynamically optimize LLM inference execution across GPUs and custom ASICs.
+* **Important caveats:** Company valuation was withheld. Benchmarks asserting throughput advantages over existing frameworks (such as vLLM) are startup-reported.
+* **Suitable for publication today:** **Yes.** Verified venture deal in AI infrastructure.
 
 ---
 
-#### **Candidate [11]: Charta Health raises $55M Series B for AI medical chart review**
-* **What is confirmed:** Charta Health raised $55M in Series B funding led by Insight Partners, with participation from Bain Capital Ventures, Madrona, South Park Commons, and QuantumLight, taking total raised to $85M.
-* **Important caveats:** Metrics such as 10x annual revenue growth represent unverified private company statements.
-* **Suitable for publication today:** **Yes.** Solid healthtech funding item.
+#### **[9] Operand Raises $31M for Private Equity AI Due Diligence**
+* **What is confirmed:** Operand raised $31M across seed and Series A rounds led by Khosla Ventures at a $220M valuation [9]. The platform automates due diligence data aggregation for private equity firms [9].
+* **Important caveats:** First reported on November 10 by *Axios Pro*; slightly older than other funding deals on today's list, but recently surfaced on Techmeme [9].
+* **Suitable for publication today:** **Yes.**
 
 ---
 
-#### **Candidate [7]: WhiteMatter raises $20M Series A for AI agent security**
-* **What is confirmed:** Enterprise security startup WhiteMatter raised a $20M Series A led by Blumberg Capital, alongside Crew Capital and Sprout & Oak, to expand its platform for monitoring and governing enterprise AI agents.
-* **Important caveats:** Claims regarding managed agent counts (2.25M) and customer retention percentages are vendor-provided metrics.
-* **Suitable for publication today:** **Yes.** Relevant cybersecurity/agentic AI funding deal.
+#### **[7] FreightWaves: $11.4M in Nvidia Hardware Stolen in Transit**
+* **What is confirmed:** Oakland Police confirmed an active grand theft investigation involving six pallets of Nvidia hardware valued at $11.4M. A truck posing as a food carrier picked up the freight in Oakland on August 29 bound for Texas, but disappeared in Southern California.
+* **Important caveats:** **Timeliness.** The theft occurred in late August, was reported to police on Sept 13, and was covered by local media in early November. It is currently trending on Hacker News, but is not a brand-new breaking story.
+* **Suitable for publication today:** **Optional/Secondary.** Suitable if framed as an ongoing investigation into data-center supply chain cargo theft.
 
 ---
 
-#### **Candidate [5]: Private equity AI due diligence tool Operand raises $31M**
-* **What is confirmed:** Axios reported Operand raised $31M across seed and Series A rounds led by Khosla Ventures at a $220M post-money valuation.
-* **Important caveats:** Standard startup funding report based on company disclosure to Axios.
-* **Suitable for publication today:** **Yes.** Suitable for fintech/PE technology brief listings.
+### AI Research Candidates (Preprint Summaries)
 
----
+*Note: All claims below originate directly from paper authors on arXiv/Hugging Face and represent unverified experimental findings.*
 
-#### **Candidate [6]: $11.4M of Nvidia hardware missing in California-to-Texas cargo theft**
-* **What is confirmed:** Six pallets of Nvidia data center hardware valued at $11.4M disappeared en route from Oakland to Fort Worth, Texas. The shipment was picked up on 29 August 2026 and reported stolen to Oakland Police on 13 September.
-* **Important caveats:** The physical theft occurred in August/September 2026; trade and tech reporting re-amplified the case in mid-November. Police have not publicly identified the specific GPU models stolen.
-* **Suitable for publication today:** **Optional.** Suitable as a secondary logistical briefing note on AI hardware supply-chain physical security risks, but not breaking news.
-
----
-
-### **Research Paper Preprints (Candidates [16]–[19])**
-* **[16] MixUA, [17] PixVid, [18] EgoX, [19] Drone Video Benchmark:** All are Hugging Face arXiv preprints [16, 17, 18, 19]. 
-* **Note:** Benchmarks and performance improvements cited (e.g., MixUA pass-rate gains, PixVid pixel-space video diffusion, EgoX robot manipulation) must be cited as unvetted claims made by paper authors until independently reproduced [16, 17, 18]. Suitable only for dedicated research section roundups.
+* **[16] MixUA (Paper 2611.10439):** Proposes a multi-granularity memory extraction system that assigns agent lessons across user-agent, user, or global scopes to prevent private data leakage during multi-agent interactions [16].
+* **[17] PixVid (Paper 2611.17336):** Introduces a technique to lift latent video diffusion models into direct pixel-space generation by replacing the VAE decoder with a convolutional head [17].
+* **[18] EgoX (Paper 2611.16728):** Presents an egocentric cross-embodiment learning framework using modularized transformers to train robotics policies across human and simulated demonstrations [18].
+* **[19] Consensus Capture in UAV Video Stabilization (Paper 2611.17190):** Benchmarks reference-frame drone video stabilization and highlights failure modes caused by dynamic moving foregrounds [19].
+* **Suitable for publication today:** **Yes**, if categorized under academic research/preprint notes.

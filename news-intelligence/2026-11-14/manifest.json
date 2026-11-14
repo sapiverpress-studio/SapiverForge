@@ -2,7 +2,7 @@
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
   "date": "2026-11-14",
-  "generated_at": "2026-11-14T09:34:24.563Z",
+  "generated_at": "2026-11-14T13:26:55.749Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 494,
+      "elapsed_ms": 597,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,14 +23,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 537,
+      "elapsed_ms": 294,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 442,
+      "elapsed_ms": 350,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -38,7 +38,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 351,
+      "elapsed_ms": 270,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 2801,
+      "elapsed_ms": 1233,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -56,69 +56,79 @@
   "newsletter_ready_for_human_approval": true,
   "quality_status": "ready_with_warnings",
   "quality_warnings": [
-    "Original discovery run had 3/5 healthy sources (Reuters discovery feed returned 401; Sifted returned 404). Selected stories subsequently checked against external reporting and primary-source evidence.",
-    "Financial Times report is paywalled; its detailed sourcing and interpretation are attributed.",
-    "Original generated draft corrected: Microsoft incident mechanism made more precise; Gödel false results restored; Nvidia official meetings distinguished from restricted NDRC access."
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
   ],
   "release_blockers": [],
-  "newsletter_subject": "Sapiver Forge Daily Brief — Microsoft restored; Gödel notebooks; new chips",
-  "overall_confidence": 0.9,
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-14",
+  "overall_confidence": 0.85,
   "stories": [
     {
-      "category": "technology",
-      "headline": "Microsoft 365 services restored after worldwide disruption",
-      "confirmed_fact": "Microsoft said on 14 November that the remaining affected Microsoft 365 services had been restored following a disruption that began on 12 November. Outlook, Teams and Exchange Online functions were among the affected services. Microsoft linked the incident to a technical problem following a network-capacity change and said it had found no evidence of malicious activity.",
-      "why_it_matters": "Email, calendar and collaboration outages can halt routine work at organisations that otherwise have functioning computers and networks. The incident affected government and commercial operations, while Downdetector recorded reports from more than 70 countries and territories.",
-      "interpretation": "A service being fully restored does not eliminate concentration risk. Organisations should test how they contact people and access time-critical information when their primary email and collaboration provider fails. Public reporting does not yet establish every failure mechanism or the cost to each affected organisation.",
-      "confidence": 0.96,
-      "source": "Reuters",
+      "category": "lead",
+      "headline": "Microsoft 365 Back Online After Global Outage",
+      "confirmed_fact": "Microsoft confirmed that all flagship 365 applications, including Teams and Outlook, were fully restored by Saturday, November 14, following a multi-day outage that impacted over 70 countries. The company attributed the disruption to a secure-connection authentication bottleneck and server availability constraints.",
+      "why_it_matters": "The outage paralysed critical infrastructure, including government and healthcare operations, highlighting the fragility of relying on a single, centralised authentication layer for global enterprise workflows.",
+      "interpretation": "While Microsoft has ruled out malicious activity, the scale of the disruption suggests that even minor authentication bottlenecks can trigger cascading failures across modern, tightly coupled cloud ecosystems.",
+      "confidence": 0.95,
+      "source": "Bloomberg",
       "discovered_via": "Techmeme",
-      "source_title": "Microsoft restores service to Outlook and Teams after global outage",
-      "url": "https://live.euronext.com/en/financial-news/microsoft-restores-service-outlook-and-teams-after-global-outage",
-      "published_at": "2026-11-14"
+      "source_title": "Microsoft says all Microsoft 365 products are operational, ending an outage that disrupted governments, traders, hospitals, and businesses around the world (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/microsoft-says-making-progress-fixing-one-of-its-longest-outages",
+      "discovery_url": "https://www.techmeme.com/261114/p8",
+      "link_quality": "original",
+      "published_at": "2026-11-14T08:03:46.000Z",
+      "discovery_score": 7.796
     },
     {
       "category": "business",
-      "headline": "Nvidia’s China strategy faces political barriers despite years of outreach",
-      "confirmed_fact": "A Financial Times investigation describes former Nvidia chief executive Jensen Huang’s efforts to maintain access to China while Beijing pushed domestic semiconductor self-sufficiency. Huang met Vice-Premier He Lifeng and Commerce Minister Wang Wentao in 2025, but the FT reported that he did not secure meetings with the National Development and Reform Commission officials central to chip restrictions.",
-      "why_it_matters": "The difference between meetings with some ministers and influence over the agency shaping industrial policy matters for Nvidia’s ability to navigate export controls and Chinese procurement decisions. US policy and Beijing’s preference for domestic chips are separate constraints.",
-      "interpretation": "Personal relationships and strong market demand do not guarantee regulatory access or influence. The FT account is based partly on sourced reporting whose underlying interviews Sapiver Forge cannot independently inspect; it should be attributed rather than presented as a comprehensive record of all private meetings.",
-      "confidence": 0.83,
-      "source": "Financial Times",
+      "headline": "Nvidia’s Difficult Path to Beijing’s Inner Circle",
+      "confirmed_fact": "Financial Times reporting indicates that former Nvidia CEO Jensen Huang struggled to secure direct access to top Chinese officials, such as Vice Premier Ding Xuexiang, who are responsible for the country's chip self-sufficiency campaign.",
+      "why_it_matters": "This lack of high-level access underscores the growing geopolitical friction surrounding semiconductor trade, as Beijing prioritises domestic alternatives over established foreign suppliers.",
+      "interpretation": "Nvidia’s two decades of operation in China appear insufficient to insulate the company from the increasingly opaque and nationalistic nature of Chinese industrial policy.",
+      "confidence": 0.85,
+      "source": "Eleanor Olcott/Financial Times",
       "discovered_via": "Techmeme",
-      "source_title": "Jensen Huang’s years-long effort to get close to China",
+      "source_title": "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang struggled to gain access to policymakers driving Beijing's chip self-sufficiency campaign (Eleanor Olcott/Financial Times)",
       "url": "https://www.ft.com/content/3efa9733-fbb4-47c2-83ba-b01e548ef277",
-      "published_at": "2026-11-13"
+      "discovery_url": "https://www.techmeme.com/261114/p7",
+      "link_quality": "original",
+      "published_at": "2026-11-14T07:30:08.000Z",
+      "discovery_score": 7.693
     },
     {
-      "category": "research",
-      "headline": "Claude helps researchers examine Gödel’s unpublished notebooks",
-      "confirmed_fact": "The Guardian reports that University of Helsinki logician Jan von Plato used Anthropic’s Claude to assist work on 1,009 pages of Kurt Gödel’s notebooks. The team identified 663 theorem candidates; according to von Plato, checks with the Coq proof assistant verified about 400 as written, required corrections to about 200 and found roughly 50 to be false.",
-      "why_it_matters": "This is an example of an AI model accelerating access to difficult historical material while a separate proof-checking process helps distinguish valid results from incorrect claims. A model’s extraction is not itself a mathematical proof.",
-      "interpretation": "The useful advance is the research workflow—transcription, model-assisted extraction, expert review and formal checking—not a claim that Claude independently proved hundreds of new theorems. Historians still need to assess the context, originality and significance of the notebook results.",
-      "confidence": 0.92,
-      "source": "The Guardian",
-      "discovered_via": "Hacker News",
-      "source_title": "AI helps unlock discoveries hidden in notebooks of man who transformed maths",
-      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
-      "published_at": "2026-11-13"
-    },
-    {
-      "category": "business",
-      "headline": "Cambridge startup Tendrils raises $30m for an experimental processor",
-      "confirmed_fact": "Tendrils Compute says it has completed a $30m financing round led by Benchmark, with the UK Sovereign AI Fund and other investors participating. The Cambridge company is developing a parallel-first processor based on interaction nets alongside its Vine programming language.",
-      "why_it_matters": "Tendrils aims to reconsider how general-purpose processors handle independent tasks rather than incrementally extending traditional CPU designs. That could be relevant to irregular parallel workloads, but no independently assessed chip performance benchmarks were disclosed with the announcement.",
-      "interpretation": "The funding validates investor interest in the approach, not its real-world performance. Product readiness, fabrication plans and measured performance remain the evidence to look for before treating the architecture as a proven alternative.",
-      "confidence": 0.96,
-      "source": "Tendrils Compute",
+      "category": "ai",
+      "headline": "WhiteMatter Raises $20M to Guard Enterprise AI",
+      "confirmed_fact": "Startup WhiteMatter has closed a $20M Series A round to develop 'Guardian' agents designed to monitor and enforce policy on enterprise AI agents. The company claims its platform can manage millions of active guardians with low-latency decision speeds.",
+      "why_it_matters": "As businesses deploy more autonomous agents, the risk of 'rogue' behaviour or unauthorised data access grows, creating a new market for automated oversight tools.",
+      "interpretation": "The rise of 'agent-on-agent' security suggests that the industry is shifting from simple permission controls to active, real-time governance as the primary method for managing AI risk.",
+      "confidence": 0.8,
+      "source": "Alice Tecotzky/Business Insider",
       "discovered_via": "Techmeme",
-      "source_title": "$30M Raised to Redo the CPU",
-      "url": "https://tendrils.co/blog/2026-11-10/30m-raised",
-      "published_at": "2026-11-10"
+      "source_title": "WhiteMatter, which builds \"guardian\" AI agents to oversee file access, software use, decision making, and actions of existing AI agents, raised a $20M Series A (Alice Tecotzky/Business Insider)",
+      "url": "https://www.businessinsider.com/whitematter-startup-ai-agent-cybersecurity-funding-pitch-deck-2026-11",
+      "discovery_url": "https://www.techmeme.com/261114/p5",
+      "link_quality": "original",
+      "published_at": "2026-11-14T06:55:00.000Z",
+      "discovery_score": 7.508
+    },
+    {
+      "category": "technology",
+      "headline": "Tendrils Compute Secures $30M for Parallel CPU Architecture",
+      "confirmed_fact": "UK-based Tendrils Compute has raised $30M led by Benchmark to develop a general-purpose processor featuring thousands of parallel cores based on interaction nets. The startup is also building an open-source programming language, Vine, to support the architecture.",
+      "why_it_matters": "Designing a new CPU architecture from scratch is a high-stakes endeavour; if successful, it could offer an alternative to traditional serial processing for specific compute-heavy tasks.",
+      "interpretation": "The investment reflects a broader venture interest in 'post-Moore' hardware designs that attempt to solve the efficiency bottlenecks inherent in current chip architectures.",
+      "confidence": 0.78,
+      "source": "John Reynolds/Tech.eu",
+      "discovered_via": "Techmeme",
+      "source_title": "Cambridge, UK-based Tendrils, which is designing a CPU architecture with thousands of cores operating in parallel, raised $30M led by Benchmark (John Reynolds/Tech.eu)",
+      "url": "https://tech.eu/2026/11/11/tendrils-compute-raises-30m-to-redo-the-cpu/",
+      "discovery_url": "https://www.techmeme.com/261114/p2",
+      "link_quality": "original",
+      "published_at": "2026-11-14T05:55:01.000Z",
+      "discovery_score": 7.227
     }
   ],
-  "practical_takeaway": "For any critical workflow that depends on Microsoft 365 or another single provider, write down one independent way to communicate and one way to access essential records during an outage. For AI research and chip announcements, distinguish reported progress from independent verification and measured results.",
-  "watch_next": "Watch for Microsoft’s detailed incident review, further reporting on the policy pressures affecting Nvidia’s China business, formal scholarly assessment of the Gödel material, and public silicon benchmarks from Tendrils.",
+  "practical_takeaway": "With cloud infrastructure proving vulnerable to authentication bottlenecks, organisations should review their contingency plans for multi-day outages. Simultaneously, as AI agent deployment accelerates, consider evaluating 'guardian' or oversight layers to manage the security risks of autonomous systems.",
+  "watch_next": "Keep an eye on the pending post-mortem report from Microsoft regarding the recent 365 outage; it will likely reveal whether their authentication architecture requires a fundamental redesign to prevent similar global cascades.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -136,12 +146,12 @@
   },
   "social": {
     "date": "2026-11-14",
-    "lead_headline": "Microsoft 365 services restored after worldwide disruption",
-    "facebook_post": "Microsoft says Outlook, Teams and other affected services have recovered after a global outage. The more useful question is: what can your organisation still do when email and calendars disappear? Today’s Sapiver Forge Daily Brief examines that, plus Nvidia’s China strategy, AI-assisted analysis of Gödel’s notebooks and Tendrils’ $30m processor funding.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Microsoft 365 outage: recovery and resilience lessons",
-    "pinterest_description": "Services are restored, but organisations need independent fallbacks for essential communications. Read the evidence and analysis in Sapiver Forge Daily Brief. https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Microsoft 365 has recovered from a global outage. What breaks first when your team cannot use email or calendars? Evidence and practical fallbacks in today’s Sapiver Forge Daily Brief. #SapiverForge #CloudResilience #Technology",
-    "spoken_script": "Microsoft says its affected Outlook, Teams and other services are restored after a global outage linked to a technical problem during a network-capacity change. It says there is no evidence of a cyberattack. The lesson: test independent ways to communicate and reach essential records. Read today’s Sapiver Forge Daily Brief."
+    "lead_headline": "Microsoft 365 Back Online After Global Outage",
+    "facebook_post": "Microsoft 365 Back Online After Global Outage\n\nThe outage paralysed critical infrastructure, including government and healthcare operations, highlighting the fragility of relying on a single, centralised authentication layer for global enterprise workflows.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Microsoft 365 Back Online After Global Outage",
+    "pinterest_description": "The outage paralysed critical infrastructure, including government and healthcare operations, highlighting the fragility of relying on a single, centralised authentication layer for global enterprise workflows.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Microsoft 365 Back Online After Global Outage. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Microsoft 365 Back Online After Global Outage. Microsoft confirmed that all flagship 365 applications, including Teams and Outlook, were fully restored by Saturday, November 14, following a multi-day outage that impacted over 70 countries. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "d6e5452d21eb2c8d06f3477d1ccbc5937b85e5570b0450ec214f7df388850942"
+  "candidate_id": "7497f7a712a4d481a040ac09e580295155616837f699f44d8df85e320b82c0d3"
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-11-13",
-  "generated_at": "2026-11-13T14:31:00.411Z",
+  "date": "2026-11-14",
+  "generated_at": "2026-11-14T09:31:02.184Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 899,
+      "elapsed_ms": 528,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,14 +23,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 650,
+      "elapsed_ms": 409,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 854,
+      "elapsed_ms": 455,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -38,7 +38,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 600,
+      "elapsed_ms": 366,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,91 +46,105 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1549,
+      "elapsed_ms": 1615,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
   "healthy_source_count": 3,
   "human_approval_required": true,
   "approved_for_automatic_distribution": false,
-  "newsletter_ready_for_human_approval": false,
-  "quality_status": "blocked",
+  "newsletter_ready_for_human_approval": true,
+  "quality_status": "ready_with_warnings",
   "quality_warnings": [
     "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
   ],
-  "release_blockers": [
-    "1 selected story has only a homepage, profile or invalid publication link."
-  ],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-13",
-  "overall_confidence": 0.9,
+  "release_blockers": [],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-14",
+  "overall_confidence": 0.87,
   "stories": [
     {
-      "category": "business",
-      "headline": "Jensen Huang Resigns as Nvidia CEO",
-      "confirmed_fact": "Nvidia announced the resignation of co-founder Jensen Huang as President, CEO, and board member on November 12, 2026, following public revelations of extramarital affairs. CFO Colette Kress has been named Interim CEO while the board initiates a search for a permanent successor.",
-      "why_it_matters": "The departure of a long-standing leader at the centre of the AI hardware boom creates significant uncertainty for the company's strategic direction and market stability.",
-      "interpretation": "The sudden exit, compounded by the nature of the allegations and the involvement of figures linked to foreign intelligence, suggests a period of intense internal and external scrutiny for Nvidia.",
+      "category": "technology",
+      "headline": "Microsoft 365 back online after global outage",
+      "confirmed_fact": "Microsoft confirmed all 365 products are operational following a multi-day outage that impacted enterprise, government, and consumer accounts. The disruption was attributed to server network configuration changes following a capacity upgrade.",
+      "why_it_matters": "The outage caused significant global disruption to essential services, including hospitals and financial trading platforms. A full root-cause analysis is still pending.",
+      "interpretation": "While the immediate service is restored, the scale of the disruption highlights the fragility of relying on a single cloud infrastructure provider for critical global operations.",
       "confidence": 0.95,
-      "source": "apnews.com",
-      "discovered_via": "Hacker News",
-      "source_title": "Jensen Huang resigns",
-      "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
-      "discovery_url": "https://news.ycombinator.com/item?id=50467087",
+      "source": "Bloomberg",
+      "discovered_via": "Techmeme",
+      "source_title": "Microsoft says all Microsoft 365 products are operational, ending an outage that disrupted governments, traders, hospitals, and businesses around the world (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/microsoft-says-making-progress-fixing-one-of-its-longest-outages",
+      "discovery_url": "https://www.techmeme.com/261114/p8",
       "link_quality": "original",
-      "published_at": "2026-11-12T13:52:29.000Z",
-      "discovery_score": 8.174
+      "published_at": "2026-11-14T08:03:46.000Z",
+      "discovery_score": 8.04
+    },
+    {
+      "category": "research",
+      "headline": "AI helps decode Kurt Gödel’s shorthand notebooks",
+      "confirmed_fact": "Logician Jan von Plato used Anthropic’s Claude to transcribe 1,009 pages of Kurt Gödel’s 1940s shorthand notes, identifying 663 potential theorems. Verification via the Coq proof assistant confirmed approximately 400 as valid, while 50 were identified as incorrect.",
+      "why_it_matters": "This demonstrates a high-impact application of LLMs in historical research, effectively turning a massive, inaccessible archive into a structured dataset for mathematical analysis.",
+      "interpretation": "It is a clever use of AI, though it serves as a reminder that even the most brilliant minds leave behind rough drafts that require careful, independent verification before being treated as finished work.",
+      "confidence": 0.9,
+      "source": "theguardian.com",
+      "discovered_via": "Hacker News",
+      "source_title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "discovery_url": "https://news.ycombinator.com/item?id=50486748",
+      "link_quality": "original",
+      "published_at": "2026-11-13T17:30:10.000Z",
+      "discovery_score": 7.861
+    },
+    {
+      "category": "business",
+      "headline": "Jensen Huang’s access gaps in Beijing",
+      "confirmed_fact": "The Financial Times reports that Nvidia CEO Jensen Huang has struggled to secure direct meetings with senior Chinese officials responsible for the country's semiconductor self-sufficiency policy.",
+      "why_it_matters": "This lack of high-level access complicates Nvidia's position as it navigates the complex landscape of US-China export restrictions and Beijing's push for domestic chip independence.",
+      "interpretation": "Despite Nvidia’s long history in the region, the report suggests that corporate influence has its limits when faced with a state-driven industrial strategy.",
+      "confidence": 0.85,
+      "source": "Eleanor Olcott/Financial Times",
+      "discovered_via": "Techmeme",
+      "source_title": "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang struggled to gain access to policymakers driving Beijing's chip self-sufficiency campaign (Eleanor Olcott/Financial Times)",
+      "url": "https://www.ft.com/content/3efa9733-fbb4-47c2-83ba-b01e548ef277",
+      "discovery_url": "https://www.techmeme.com/261114/p7",
+      "link_quality": "original",
+      "published_at": "2026-11-14T07:30:08.000Z",
+      "discovery_score": 7.937
     },
     {
       "category": "technology",
-      "headline": "Microsoft 365 Cloud Services Suffer Major Outage",
-      "confirmed_fact": "Microsoft 365 services, including Teams, Outlook, and Copilot AI, experienced a multi-region outage starting November 12, 2026, due to automated health check failures that caused server overloads. Microsoft has reported gradual recovery but full restoration remains ongoing.",
-      "why_it_matters": "The failure of core infrastructure components highlights the fragility of heavily automated cloud environments, impacting productivity for users globally.",
-      "interpretation": "While Microsoft has ruled out a cyberattack, the incident serves as a reminder that even highly integrated cloud systems are susceptible to cascading failures when automated safeguards malfunction.",
-      "confidence": 0.98,
-      "source": "status.cloud.microsoft",
-      "discovered_via": "Hacker News",
-      "source_title": "Service degradation on Microsoft 365",
-      "url": "https://status.cloud.microsoft/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50471731",
+      "headline": "Cambridge-based Tendrils Compute raises $30M",
+      "confirmed_fact": "Tendrils Compute, a UK startup, has raised $30M led by Benchmark to develop a parallel-first CPU architecture based on interaction nets and an open-source language called Vine.",
+      "why_it_matters": "The company is attempting a fundamental redesign of CPU architecture to handle massive parallelism, though the project remains in early-stage research without physical silicon or performance benchmarks.",
+      "interpretation": "It is an ambitious attempt to rethink how chips work at the architectural level, but investors are betting on the design long before there is a product to test.",
+      "confidence": 0.8,
+      "source": "John Reynolds/Tech.eu",
+      "discovered_via": "Techmeme",
+      "source_title": "Cambridge, UK-based Tendrils, which is designing a CPU architecture with thousands of cores operating in parallel, raised $30M led by Benchmark (John Reynolds/Tech.eu)",
+      "url": "https://tech.eu/2026/11/11/tendrils-compute-raises-30m-to-redo-the-cpu/",
+      "discovery_url": "https://www.techmeme.com/261114/p2",
       "link_quality": "original",
-      "published_at": "2026-11-12T18:20:48.000Z",
-      "discovery_score": 8.28
+      "published_at": "2026-11-14T05:55:01.000Z",
+      "discovery_score": 7.471
     },
     {
       "category": "ai",
-      "headline": "OpenAI Launches Agentic Security Tools",
-      "confirmed_fact": "OpenAI has introduced Daybreak Red Team, an early-access penetration testing service, and Daybreak Defense Factory, a system designed to identify and draft patches for code vulnerabilities. Patches generated by the defense tool require human engineer approval before deployment.",
-      "why_it_matters": "These tools represent a shift toward using AI agents for active security maintenance, though the reliance on human oversight for patching underscores the current limitations in automated reliability.",
-      "interpretation": "OpenAI is positioning its agents as force multipliers for security teams, but the requirement for human verification suggests the company is not yet confident in fully autonomous remediation.",
+      "headline": "Luminal secures $25M for inference optimization",
+      "confirmed_fact": "San Francisco-based Luminal has raised $25M in Series A funding to develop a search compiler and cloud platform designed to optimize LLM inference across diverse hardware, including GPUs and AWS Trainium.",
+      "why_it_matters": "As inference costs become a primary concern for enterprise AI adoption, tools that can squeeze more efficiency out of existing hardware are becoming a high-priority investment area.",
+      "interpretation": "The market is clearly shifting from 'just get it running' to 'make it run efficiently,' and Luminal is positioning itself to be the plumbing for that transition.",
       "confidence": 0.85,
-      "source": "Jessica Lyons/The Register",
+      "source": "Chris Metinko/Axios",
       "discovered_via": "Techmeme",
-      "source_title": "OpenAI launches Daybreak Red Team in early access to test web apps for flaws and Daybreak Defense Factory to automate finding, validating, and fixing them (Jessica Lyons/The Register)",
-      "url": "https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500",
-      "discovery_url": "https://www.techmeme.com/261113/p5",
+      "source_title": "Luminal, which provides an inference cloud and develops inference compiler software to test running AI models on different chips, raised a $25M Series A (Chris Metinko/Axios)",
+      "url": "https://www.axios.com/pro/enterprise-software-deals/2026/11/12/luminal-inference-standard-software",
+      "discovery_url": "https://www.techmeme.com/261114/p3",
       "link_quality": "original",
-      "published_at": "2026-11-13T07:25:02.000Z",
-      "discovery_score": 7.325
-    },
-    {
-      "category": "business",
-      "headline": "Samsung in Talks to Acquire Data Center Cooling Firm Modine",
-      "confirmed_fact": "Samsung Electronics is reportedly in discussions to acquire US-based data center cooling systems manufacturer Modine Manufacturing. No definitive agreement has been signed, and Samsung has not confirmed the report.",
-      "why_it_matters": "As AI data centres demand increasingly intensive cooling solutions, hardware giants are looking to secure critical infrastructure components to support their expansion.",
-      "interpretation": "This move suggests that the physical constraints of AI compute—specifically heat management—are becoming as strategically important as the chips themselves.",
-      "confidence": 0.8,
-      "source": "Bloomberg",
-      "discovered_via": "Techmeme",
-      "source_title": "Sources: Samsung is in talks to buy Modine Manufacturing, a US maker of data center cooling systems, as soon as the coming weeks; Modine's market value is $5.6B (Bloomberg)",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-12/samsung-is-in-talks-to-acquire-data-center-cooling-firm-modine",
-      "discovery_url": "https://www.techmeme.com/261113/p4",
-      "link_quality": "original",
-      "published_at": "2026-11-13T06:30:00.000Z",
-      "discovery_score": 7.206
+      "published_at": "2026-11-14T06:30:09.000Z",
+      "discovery_score": 7.575
     }
   ],
-  "practical_takeaway": "Organisations should maintain robust manual contingency plans for critical cloud services, as recent outages demonstrate that automated infrastructure can still fail unexpectedly. For those integrating AI into security workflows, treat agent-generated code as a draft requiring human validation rather than a finished solution.",
-  "watch_next": "Monitor the ongoing search for a new Nvidia CEO and the potential impact of the company's leadership transition on its $3.2 billion in restricted Chinese AI projects.",
+  "practical_takeaway": "For enterprise leaders, the recent Microsoft outage serves as a reminder to review your business continuity plans for cloud-dependent workflows. Meanwhile, as AI-driven efficiency tools like Luminal gain funding, consider whether your current AI infrastructure is optimised for cost or simply for availability.",
+  "watch_next": "Keep an eye on the development of Tendrils Compute’s parallel architecture; if they move from theory to silicon, it could offer a significant alternative to current chip designs for high-compute tasks.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -139,21 +153,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 073",
-      "title": "My Maze Maker",
-      "summary": "Generate personalised, guaranteed-solvable digital mazes with family characters, touch controls, hints and local best runs.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-073/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-073/poster.png"
+      "label": "AI Inquisitive Parents · Day 074",
+      "title": "My Sliding Puzzle",
+      "summary": "Turn a built-in scene or device picture into a private, guaranteed-solvable sliding puzzle with local best runs.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-074/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-074/poster.png"
     }
   },
   "social": {
-    "date": "2026-11-13",
-    "lead_headline": "Jensen Huang Resigns as Nvidia CEO",
-    "facebook_post": "Jensen Huang Resigns as Nvidia CEO\n\nThe departure of a long-standing leader at the centre of the AI hardware boom creates significant uncertainty for the company's strategic direction and market stability.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Jensen Huang Resigns as Nvidia CEO",
-    "pinterest_description": "The departure of a long-standing leader at the centre of the AI hardware boom creates significant uncertainty for the company's strategic direction and market stability.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Jensen Huang Resigns as Nvidia CEO. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Jensen Huang Resigns as Nvidia CEO. Nvidia announced the resignation of co-founder Jensen Huang as President, CEO, and board member on November 12, 2026, following public revelations of extramarital affairs. Read the Sapiver Forge Daily Brief."
+    "date": "2026-11-14",
+    "lead_headline": "Microsoft 365 back online after global outage",
+    "facebook_post": "Microsoft 365 back online after global outage\n\nThe outage caused significant global disruption to essential services, including hospitals and financial trading platforms. A full root-cause analysis is still pending.\n\nToday's Sapiver Forge Daily Brief covers 5 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Microsoft 365 back online after global outage",
+    "pinterest_description": "The outage caused significant global disruption to essential services, including hospitals and financial trading platforms. A full root-cause analysis is still pending.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Microsoft 365 back online after global outage. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Microsoft 365 back online after global outage. Microsoft confirmed all 365 products are operational following a multi-day outage that impacted enterprise, government, and consumer accounts. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "6a99130ea7fbb99eafcd07a0d75f3ea6eace2486ac8c2b331508b9677c2d4249"
+  "candidate_id": "c7b2279eb531ce9e21093c071172fdb3649d8b0b028c42702915e51bfadae00b"
 }

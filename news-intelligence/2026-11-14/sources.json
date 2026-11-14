@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-14T09:30:09.970Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 528,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 409,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 455,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 366,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1615,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "nbcnews.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "FAA issues national ground stop – lifted 4.5 hours later",
+      "url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
+      "direct_source_url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
+      "discovery_url": "https://news.ycombinator.com/item?id=50489641",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50489641",
+      "summary": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11132026&a... https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11142026&a... https://www.nytimes.com/live/2026/11/13/us/ground-stop-natio...",
+      "published_at": "2026-11-13T21:05:53.000Z",
+      "engagement": {
+        "score": 1532,
+        "comments": 1164
+      },
+      "collection_mode": "api",
+      "score": 8.683
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "techpowerup.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
+      "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+      "direct_source_url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+      "discovery_url": "https://news.ycombinator.com/item?id=50493251",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50493251",
+      "summary": "",
+      "published_at": "2026-11-14T02:52:59.000Z",
+      "engagement": {
+        "score": 535,
+        "comments": 322
+      },
+      "collection_mode": "api",
+      "score": 8.414
+    },
+    {
+      "title": "Microsoft says all Microsoft 365 products are operational, ending an outage that disrupted governments, traders, hospitals, and businesses around the world (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/microsoft-says-making-progress-fixing-one-of-its-longest-outages",
+      "summary": "Bloomberg : Microsoft says all Microsoft 365 products are operational, ending an outage that disrupted governments, traders, hospitals, and businesses around the world &mdash; Microsoft Corp. said access has been fully restored to its flagship software, ending an outage that paralyzed government offices, traders and businesses around the world.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-13/microsoft-says-making-progress-fixing-one-of-its-longest-outages\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261114/i8.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261114/p8#a261114p8\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-13/microsoft-says-making-progress-fixing-one-of-its-longest-outages\">Microsoft says all Microsoft 365 products are operational, ending an outage that disrupted governments, traders, hospitals, and businesses around the world</A></B></SPAN>&nbsp; &mdash;&nbsp; Microsoft Corp. said access has been fully restored to its flagship software, ending an outage that paralyzed government offices, traders and businesses around the world.</P>",
+      "published_at": "2026-11-14T08:03:46.000Z",
+      "discovery_url": "https://www.techmeme.com/261114/p8",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-13/microsoft-says-making-progress-fixing-one-of-its-longest-outages",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.04
+    },
+    {
+      "title": "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang struggled to gain access to policymakers driving Beijing's chip self-sufficiency campaign (Eleanor Olcott/Financial Times)",
+      "url": "https://www.ft.com/content/3efa9733-fbb4-47c2-83ba-b01e548ef277",
+      "summary": "Eleanor Olcott / Financial Times : Sources: despite Nvidia's 20+ years of business in China, Jensen Huang struggled to gain access to policymakers driving Beijing's chip self-sufficiency campaign &mdash; Former Nvidia chief executive facing intense scrutiny over ties to Beijing &mdash; In January 2024, Nvidia's chief executive Jensen Huang ended &hellip;",
+      "description_html": "<A HREF=\"https://www.ft.com/content/3efa9733-fbb4-47c2-83ba-b01e548ef277\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261114/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261114/p7#a261114p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Eleanor Olcott / <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/3efa9733-fbb4-47c2-83ba-b01e548ef277\">Sources: despite Nvidia's 20+ years of business in China, Jensen Huang struggled to gain access to policymakers driving Beijing's chip self-sufficiency campaign</A></B></SPAN>&nbsp; &mdash;&nbsp; Former Nvidia chief executive facing intense scrutiny over ties to Beijing&nbsp; &mdash;&nbsp; In January 2024, Nvidia's chief executive Jensen Huang ended &hellip; </P>",
+      "published_at": "2026-11-14T07:30:08.000Z",
+      "discovery_url": "https://www.techmeme.com/261114/p7",
+      "direct_source_url": "https://www.ft.com/content/3efa9733-fbb4-47c2-83ba-b01e548ef277",
+      "publisher": "Eleanor Olcott/Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.937
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "theguardian.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "direct_source_url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "discovery_url": "https://news.ycombinator.com/item?id=50486748",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50486748",
+      "summary": "",
+      "published_at": "2026-11-13T17:30:10.000Z",
+      "engagement": {
+        "score": 390,
+        "comments": 97
+      },
+      "collection_mode": "api",
+      "score": 7.861
+    },
+    {
+      "title": "Operand, which offers AI-powered due diligence tools for PE firms, raised $31M across a seed and a Series A led by Khosla Ventures at a $220M valuation (Lucinda Shen/Axios)",
+      "url": "https://www.axios.com/pro/all-deals/2026/11/10/private-equity-due-diligence-ai-operand-31m",
+      "summary": "Lucinda Shen / Axios : Operand, which offers AI-powered due diligence tools for PE firms, raised $31M across a seed and a Series A led by Khosla Ventures at a $220M valuation &mdash; Operand, which uses AI to do due diligence for private equity firms, raised $31 million in seed and Series A funding, CEO Ram Gorthi tells Axios Pro exclusively.",
+      "description_html": "<A HREF=\"https://www.axios.com/pro/all-deals/2026/11/10/private-equity-due-diligence-ai-operand-31m\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261114/i6.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261114/p6#a261114p6\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Lucinda Shen / <A HREF=\"https://www.axios.com/\">Axios</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.axios.com/pro/all-deals/2026/11/10/private-equity-due-diligence-ai-operand-31m\">Operand, which offers AI-powered due diligence tools for PE firms, raised $31M across a seed and a Series A led by Khosla Ventures at a $220M valuation</A></B></SPAN>&nbsp; &mdash;&nbsp; Operand, which uses AI to do due diligence for private equity firms, raised $31 million in seed and Series A funding, CEO Ram Gorthi tells Axios Pro exclusively.</P>",
+      "published_at": "2026-11-14T07:02:17.000Z",
+      "discovery_url": "https://www.techmeme.com/261114/p6",
+      "direct_source_url": "https://www.axios.com/pro/all-deals/2026/11/10/private-equity-due-diligence-ai-operand-31m",
+      "publisher": "Lucinda Shen/Axios",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.837
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "freightwaves.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "$11.4M in Nvidia hardware vanishes during shipment from CA to TX",
+      "url": "https://www.freightwaves.com/news/11-4-million-in-nvidia-hardware-vanishes-during-shipment-from-california-to-texas",
+      "direct_source_url": "https://www.freightwaves.com/news/11-4-million-in-nvidia-hardware-vanishes-during-shipment-from-california-to-texas",
+      "discovery_url": "https://news.ycombinator.com/item?id=50487864",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50487864",
+      "summary": "",
+      "published_at": "2026-11-13T18:40:44.000Z",
+      "engagement": {
+        "score": 352,
+        "comments": 191
+      },
+      "collection_mode": "api",
+      "score": 7.832
+    },
+    {
+      "title": "WhiteMatter, which builds \"guardian\" AI agents to oversee file access, software use, decision making, and actions of existing AI agents, raised a $20M Series A (Alice Tecotzky/Business Insider)",
+      "url": "https://www.businessinsider.com/whitematter-startup-ai-agent-cybersecurity-funding-pitch-deck-2026-11",
+      "summary": "Alice Tecotzky / Business Insider : WhiteMatter, which builds &ldquo;guardian&rdquo; AI agents to oversee file access, software use, decision making, and actions of existing AI agents, raised a $20M Series A &mdash; A startup using AI agents to keep rogue AI in line has raised $20 million. &mdash; WhiteMatter, founded in 2024 &hellip;",
+      "description_html": "<A HREF=\"https://www.businessinsider.com/whitematter-startup-ai-agent-cybersecurity-funding-pitch-deck-2026-11\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261114/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261114/p5#a261114p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Alice Tecotzky / <A HREF=\"https://www.businessinsider.com/\">Business Insider</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.businessinsider.com/whitematter-startup-ai-agent-cybersecurity-funding-pitch-deck-2026-11\">WhiteMatter, which builds &ldquo;guardian&rdquo; AI agents to oversee file access, software use, decision making, and actions of existing AI agents, raised a $20M Series A</A></B></SPAN>&nbsp; &mdash;&nbsp; A startup using AI agents to keep rogue AI in line has raised $20 million.&nbsp; &mdash;&nbsp; WhiteMatter, founded in 2024 &hellip; </P>",
+      "published_at": "2026-11-14T06:55:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261114/p5",
+      "direct_source_url": "https://www.businessinsider.com/whitematter-startup-ai-agent-cybersecurity-funding-pitch-deck-2026-11",
+      "publisher": "Alice Tecotzky/Business Insider",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.752
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "1960",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
+      "url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
+      "direct_source_url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
+      "discovery_url": "https://news.ycombinator.com/item?id=50482379",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50482379",
+      "summary": "",
+      "published_at": "2026-11-13T12:10:24.000Z",
+      "engagement": {
+        "score": 470,
+        "comments": 326
+      },
+      "collection_mode": "api",
+      "score": 7.721
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "open.m-vave.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 8,
+      "title": "FM-1 Workbench",
+      "url": "https://open.m-vave.com/fm1-workbench",
+      "direct_source_url": "https://open.m-vave.com/fm1-workbench",
+      "discovery_url": "https://news.ycombinator.com/item?id=50488325",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50488325",
+      "summary": "",
+      "published_at": "2026-11-13T19:14:02.000Z",
+      "engagement": {
+        "score": 235,
+        "comments": 155
+      },
+      "collection_mode": "api",
+      "score": 7.682
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "orcasairband.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 9,
+      "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+      "url": "https://orcasairband.com/",
+      "direct_source_url": "https://orcasairband.com/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50490593",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50490593",
+      "summary": "",
+      "published_at": "2026-11-13T22:04:24.000Z",
+      "engagement": {
+        "score": 261,
+        "comments": 60
+      },
+      "collection_mode": "api",
+      "score": 7.68
+    },
+    {
+      "title": "Charta Health, which offers AI-powered tools to automate medical chart review, billing, and coding workflows, raised a $55M Series B led by Insight Partners (Jessica Hagen/MobiHealthNews)",
+      "url": "https://www.mobihealthnews.com/news/charta-health-raises-55m-launches-new-ai-coding-tools",
+      "summary": "Jessica Hagen / MobiHealthNews : Charta Health, which offers AI-powered tools to automate medical chart review, billing, and coding workflows, raised a $55M Series B led by Insight Partners &mdash; The round is the company's third in less than two years and brings its total funding to $85 million. &mdash; Global Investing",
+      "description_html": "<A HREF=\"https://www.mobihealthnews.com/news/charta-health-raises-55m-launches-new-ai-coding-tools\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261114/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261114/p4#a261114p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Jessica Hagen / <A HREF=\"https://www.mobihealthnews.com/\">MobiHealthNews</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.mobihealthnews.com/news/charta-health-raises-55m-launches-new-ai-coding-tools\">Charta Health, which offers AI-powered tools to automate medical chart review, billing, and coding workflows, raised a $55M Series B led by Insight Partners</A></B></SPAN>&nbsp; &mdash;&nbsp; The round is the company's third in less than two years and brings its total funding to $85 million.&nbsp; &mdash;&nbsp; Global   Investing</P>",
+      "published_at": "2026-11-14T06:35:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261114/p4",
+      "direct_source_url": "https://www.mobihealthnews.com/news/charta-health-raises-55m-launches-new-ai-coding-tools",
+      "publisher": "Jessica Hagen/MobiHealthNews",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.658
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "youtube.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 7,
+      "title": "Jonathan Blow – If AI solved coding, why is my software still the same? [video]",
+      "url": "https://www.youtube.com/watch?v=IRK8h67ol7Q",
+      "direct_source_url": "https://www.youtube.com/watch?v=IRK8h67ol7Q",
+      "discovery_url": "https://news.ycombinator.com/item?id=50484658",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50484658",
+      "summary": "",
+      "published_at": "2026-11-13T15:08:44.000Z",
+      "engagement": {
+        "score": 283,
+        "comments": 325
+      },
+      "collection_mode": "api",
+      "score": 7.605
+    },
+    {
+      "title": "Luminal, which provides an inference cloud and develops inference compiler software to test running AI models on different chips, raised a $25M Series A (Chris Metinko/Axios)",
+      "url": "https://www.axios.com/pro/enterprise-software-deals/2026/11/12/luminal-inference-standard-software",
+      "summary": "Chris Metinko / Axios : Luminal, which provides an inference cloud and develops inference compiler software to test running AI models on different chips, raised a $25M Series A &mdash; Luminal, a search compiler and inference cloud provider, raised a $25 million Series A led by Standard Capital, CEO Joe Fioti tells Axios Pro exclusively.",
+      "description_html": "<A HREF=\"https://www.axios.com/pro/enterprise-software-deals/2026/11/12/luminal-inference-standard-software\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261114/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261114/p3#a261114p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Chris Metinko / <A HREF=\"https://www.axios.com/\">Axios</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.axios.com/pro/enterprise-software-deals/2026/11/12/luminal-inference-standard-software\">Luminal, which provides an inference cloud and develops inference compiler software to test running AI models on different chips, raised a $25M Series A</A></B></SPAN>&nbsp; &mdash;&nbsp; Luminal, a search compiler and inference cloud provider, raised a $25 million Series A led by Standard Capital, CEO Joe Fioti tells Axios Pro exclusively.</P>",
+      "published_at": "2026-11-14T06:30:09.000Z",
+      "discovery_url": "https://www.techmeme.com/261114/p3",
+      "direct_source_url": "https://www.axios.com/pro/enterprise-software-deals/2026/11/12/luminal-inference-standard-software",
+      "publisher": "Chris Metinko/Axios",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.575
+    },
+    {
+      "title": "Cambridge, UK-based Tendrils, which is designing a CPU architecture with thousands of cores operating in parallel, raised $30M led by Benchmark (John Reynolds/Tech.eu)",
+      "url": "https://tech.eu/2026/11/11/tendrils-compute-raises-30m-to-redo-the-cpu/",
+      "summary": "John Reynolds / Tech.eu : Cambridge, UK-based Tendrils, which is designing a CPU architecture with thousands of cores operating in parallel, raised $30M led by Benchmark &mdash; Tendrils Compute is one of several UK chip startups which investors are backing. &mdash; A UK startup developing a radically different type &hellip;",
+      "description_html": "<A HREF=\"https://tech.eu/2026/11/11/tendrils-compute-raises-30m-to-redo-the-cpu/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261114/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261114/p2#a261114p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> John Reynolds / <A HREF=\"https://tech.eu/\">Tech.eu</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://tech.eu/2026/11/11/tendrils-compute-raises-30m-to-redo-the-cpu/\">Cambridge, UK-based Tendrils, which is designing a CPU architecture with thousands of cores operating in parallel, raised $30M led by Benchmark</A></B></SPAN>&nbsp; &mdash;&nbsp; Tendrils Compute is one of several UK chip startups which investors are backing.&nbsp; &mdash;&nbsp; A UK startup developing a radically different type &hellip; </P>",
+      "published_at": "2026-11-14T05:55:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261114/p2",
+      "direct_source_url": "https://tech.eu/2026/11/11/tendrils-compute-raises-30m-to-redo-the-cpu/",
+      "publisher": "John Reynolds/Tech.eu",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.471
+    },
+    {
+      "title": "JD.com completes its takeover of German electronics retailer Ceconomy, after acquiring a ~60% stake for ~$1.5B, following the EU's approval of the deal (Tomoko Wakasugi/Nikkei Asia)",
+      "url": "https://asia.nikkei.com/business/business-deals/china-s-jd.com-completes-1.5bn-takeover-of-german-appliance-retailer",
+      "summary": "Tomoko Wakasugi / Nikkei Asia : JD.com completes its takeover of German electronics retailer Ceconomy, after acquiring a ~60% stake for ~$1.5B, following the EU's approval of the deal &mdash; SHANGHAI &mdash; JD.com has completed an acquisition of German consumer electronics retailer Ceconomy, aiming to link European physical &hellip;",
+      "description_html": "<A HREF=\"https://asia.nikkei.com/business/business-deals/china-s-jd.com-completes-1.5bn-takeover-of-german-appliance-retailer\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261114/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261114/p1#a261114p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Tomoko Wakasugi / <A HREF=\"https://asia.nikkei.com/\">Nikkei Asia</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://asia.nikkei.com/business/business-deals/china-s-jd.com-completes-1.5bn-takeover-of-german-appliance-retailer\">JD.com completes its takeover of German electronics retailer Ceconomy, after acquiring a ~60% stake for ~$1.5B, following the EU's approval of the deal</A></B></SPAN>&nbsp; &mdash;&nbsp; SHANGHAI &mdash; JD.com has completed an acquisition of German consumer electronics retailer Ceconomy, aiming to link European physical &hellip; </P>",
+      "published_at": "2026-11-14T05:02:28.000Z",
+      "discovery_url": "https://www.techmeme.com/261114/p1",
+      "direct_source_url": "https://asia.nikkei.com/business/business-deals/china-s-jd.com-completes-1.5bn-takeover-of-german-appliance-retailer",
+      "publisher": "Tomoko Wakasugi/Nikkei Asia",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.354
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "Who Remembers What? Multi-Granularity Memory Extraction for Multi-User, Multi-Agent Interaction",
+      "url": "https://huggingface.co/papers/2611.10439",
+      "direct_source_url": "https://huggingface.co/papers/2611.10439",
+      "discovery_url": "https://huggingface.co/papers/2611.10439",
+      "link_quality": "original",
+      "summary": "Self-evolving agents improve their own skills, memory, and harness code from experience without retraining the base LLM, and group-evolving agents go further by sharing these lessons across agents. Yet most such systems overlook that sharing across users and heterogeneous agents requires deciding who can benefit from each lesson and what information must remain private. We present MixUA, a memory system that distills independent user-agent trajectories into lessons and assigns each lesson to a user-agent pair, user, agent, or global scope according to whom it benefits and what it may disclose. For evaluation, we introduce CrossLearnBench, a mixed-user-agent benchmark that pairs established agent tasks with user preferences and privacy probes that test whether private facts leak into memory other users can read. With five users and seven agents, MixUA raises pass rates by up to 16 points over no memory and 5 over a single global memory, even on tasks previously tried only by other users on other agents. It retains up to 90% of previously stated preferences, and at most 0.02% of privacy probes find a planted private fact in a forbidden scope. We hope MixUA offers a scalable path towa",
+      "published_at": "2026-11-06T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 5
+      },
+      "collection_mode": "api",
+      "score": 6.289
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "Back to Pixels: Lifting Latent Video Diffusion into Pixel Space",
+      "url": "https://huggingface.co/papers/2611.17336",
+      "direct_source_url": "https://huggingface.co/papers/2611.17336",
+      "discovery_url": "https://huggingface.co/papers/2611.17336",
+      "link_quality": "original",
+      "summary": "Frontier video generation models work in a VAE latent space that compresses video in both space and time. This compression made training tractable, but now limits high-resolution, controllable, and interactive generation -- doubling resolution quadruples token count, conditions apply to groups of frames rather than individual ones, and each response must wait for the rest of its multi-frame block. We present PixVid, a simple yet effective method that lifts a pretrained latent video model to directly generate every frame in pixel space. PixVid keeps the diffusion transformer and replaces the VAE decoder with a convolutional head that renders its outputs into pixels. We find that predicting clean video rather than velocity, together with a larger noise shift, is key to quality. Finetuned from Wan2.1-14B, PixVid is competitive with the latent baseline within sim 1.3M training clips. Working framewise in pixels, it generates at 2times higher resolution with the same per-frame token count, keeps depth-conditioned video editing aligned under fast motion, and responds to each action at the next frame. Project page: https://chenshuo20.github.io/PixVid/",
+      "published_at": "2026-11-11T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 5.979
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "EgoX: Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming",
+      "url": "https://huggingface.co/papers/2611.16728",
+      "direct_source_url": "https://huggingface.co/papers/2611.16728",
+      "discovery_url": "https://huggingface.co/papers/2611.16728",
+      "link_quality": "original",
+      "summary": "Generalist manipulation policies can benefit from the complementary experience of humans, real robots, and simulated agents. However, differences in morphology, sensing, and control interfaces make it difficult to learn effectively from their combined demonstrations. We introduce EgoX, an egocentric cross-embodiment learning framework that organizes heterogeneous demonstrations through semantically corresponding observation and action modalities. EgoX pretrains a Modularized Cross-Embodiment Transformer with Embodiment Dreaming (MXT+) on this mixture and fine-tunes it on target-embodiment demonstrations. Within each embodiment, MXT+ assigns a dedicated tokenizer to each observation modality and a dedicated expert to each action modality, with a Transformer trunk shared across embodiments. A training-only embodiment-dreaming objective predicts latent representations of future visual and proprioceptive states, encouraging the shared trunk to model each embodiment's dynamics. Across 13 task-embodiment pairs spanning five tasks and six robot embodiments, including five physical robots and one simulated humanoid, cross-embodiment pretraining raises MXT+'s average normalized task progres",
+      "published_at": "2026-11-11T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.971
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Consensus Capture in Reference-Based UAV Video Stabilization: A Benchmark on Dynamic Urban Scenes",
+      "url": "https://huggingface.co/papers/2611.17190",
+      "direct_source_url": "https://huggingface.co/papers/2611.17190",
+      "discovery_url": "https://huggingface.co/papers/2611.17190",
+      "link_quality": "original",
+      "summary": "Reference-frame stabilization registers every frame of a hovering-drone video onto one reference frame, keeping object positions comparable. The registration pipelines it relies on are selected on feature-matching benchmarks in which only the camera moves. Over a busy intersection, vehicles moving together supply mutually consistent correspondences that can draw the robust homography estimate toward their motion: consensus capture, which inlier statistics cannot flag. A two-part benchmark measures it and the object masking meant to prevent it. A static protocol scores ten pipelines under exactly known homographies on 4K aerial frames, tuned on a site-disjoint split at a matched resolution and feature budget. A dynamic protocol scores them at an offline and a real-time budget on hovers selected from the video alone to span the amount and coherence of moving foreground, plus a stationary control. It measures background alignment, object position error and the share of a moving group's displacement an estimate follows, against a pseudo-ground-truth reference audited with manually annotated ground control points, which also score every candidate. On static scenes, tuned AKAZE, RootSIFT",
+      "published_at": "2026-11-11T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 3
+      },
+      "collection_mode": "api",
+      "score": 5.961
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "TurtLES: A Large-Scale Benchmark for Turbulent 3D Neural PDE Surrogates",
+      "url": "https://huggingface.co/papers/2611.09567",
+      "direct_source_url": "https://huggingface.co/papers/2611.09567",
+      "discovery_url": "https://huggingface.co/papers/2611.09567",
+      "link_quality": "original",
+      "summary": "Machine-learning surrogates are increasingly used to accelerate computational fluid dynamics, yet progress is limited by the lack of benchmarks capturing realistic, time-dependent turbulent flows. We introduce TurtLES, a 14 TB dataset of 3D turbulent cylinder wakes in the shear-layer transition regime, computed via high-fidelity implicit large-eddy simulations. The dataset contains 400 trajectories of 400 time steps each, with 3-11 million points per frame, spanning variations in geometry, Reynolds number, and angle of attack. Unlike existing datasets, TurtLES combines (i) physically realistic turbulence with an active energy cascade driven by vortex stretching, (ii) dense irregular meshes, and (iii) long-horizon temporal dynamics. We benchmark state-of-the-art neural operators on autoregressive rollouts and identify key failure modes, including temporal instability, loss of small-scale energy, and challenges in learning on large irregular domains. TurtLES provides a new benchmark for evaluating surrogate models on 3D turbulent wakes at industrially relevant mesh resolution.",
+      "published_at": "2026-11-05T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 4
+      },
+      "collection_mode": "api",
+      "score": 5.929
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 9,
+      "title": "Unbundling Multimodal Vision Encoding",
+      "url": "https://huggingface.co/papers/2611.17334",
+      "direct_source_url": "https://huggingface.co/papers/2611.17334",
+      "discovery_url": "https://huggingface.co/papers/2611.17334",
+      "link_quality": "original",
+      "summary": "How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choices: a visual prior from upstream pretraining, dedicated vision capacity, and pre-fusion placement of that capacity (i.e., before the multimodal backbone). Because published models also differ in data, architecture, and compute, comparing them cannot isolate the effect of each choice. We disentangle these choices via a controlled framework where we pretrain all models from scratch on common data and compare them on visual question answering and language benchmarks at matched lifetime compute. We find that the visual prior is not necessary; an encoder trained jointly from scratch is on par with a pretrained one, without a separate training stage. What matters instead is dedicated vision capacity: an encoder-free model trails on visual understanding even when its backbone is enlarged by the encoder's parameter count. Yet that capacity need not precede multimodal fusion, as vision-only modules added in-fusion t",
+      "published_at": "2026-11-11T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 13
+      },
+      "collection_mode": "api",
+      "score": 5.833
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 12,
+      "title": "Open Vision Banana: A Fully Open Recipe for Generative Visual Perception",
+      "url": "https://huggingface.co/papers/2611.15844",
+      "direct_source_url": "https://huggingface.co/papers/2611.15844",
+      "discovery_url": "https://huggingface.co/papers/2611.15844",
+      "link_quality": "original",
+      "summary": "Recent work suggests that pretrained image generators encode real-world understanding beyond image synthesis. Vision Banana exploits this by framing vision tasks as conditional image editing. However, its data, weights, code, and implementation details are not public. We present Open Vision Banana (OVB), a fully open and reproducible recipe for converting pretrained generators into unified multi-task perception systems. Our analyses identify the design choices that matter most for generalization, including color encoding, prompt design, parameter adaptation, and task balancing. These choices interact, so individually helpful choices can hurt when combined with others. Starting from 4B and 9B parameter open-weight base models and using 2.1M-3.8M training pairs from public datasets, OVB surpasses Vision Banana's reported Cityscapes zero-shot performance (73.9 vs. 69.9 mIoU) and rivals state-of-the-art affine-invariant depth estimators. Its non-zero-shot variants come within five points of Vision Banana on referring and reasoning segmentation but remain further behind on instance segmentation. All models largely retain the base model's image-editing abilities. With legend ensembling,",
+      "published_at": "2026-11-10T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 32
+      },
+      "collection_mode": "api",
+      "score": 5.779
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 6,
+      "title": "The Value of Thinking: Learning When to Reason in Hybrid Decision Models",
+      "url": "https://huggingface.co/papers/2611.16961",
+      "direct_source_url": "https://huggingface.co/papers/2611.16961",
+      "discovery_url": "https://huggingface.co/papers/2611.16961",
+      "link_quality": "original",
+      "summary": "Existing adaptive-reasoning methods shorten the explicit reasoning a model writes, or skip it by switching modes; either way the answer is still written out token by token. Rather than deciding how much to think, we explore a different paradigm, zero-or-T thinking: a single model either answers from the implicit thinking inside one forward pass, generating no token, or performs full autoregressive reasoning at a cost of T tokens when that is worth paying. We realise it in a hybrid decision model (HDM), where one frozen backbone serves both modes and a lightweight self-routing block chooses between them. The block estimates the value of thinking, the utility the slow mode is expected to add over the fast one, from what that implicit thinking has already produced, and the slow mode runs only where that value exceeds a price λ set per request. Where no per-decision label exists, as in episodic agentic tasks, we introduce Calibrated Decision Policy Optimisation (CDPO), a reinforcement-learning recipe that trains the block from episode-level returns. We evaluate HDM on MMLU-Pro, AGIEval, GPQA-Diamond, JevBench, BANKING77 and MiniWoB. Specifically, on JevBench HDM-4B scores 0.857 against",
+      "published_at": "2026-11-11T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 5.739
+    }
+  ]
+}

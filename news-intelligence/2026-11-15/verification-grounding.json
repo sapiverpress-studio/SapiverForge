@@ -1,0 +1,606 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Jensen+Huang%22+%22Wall+Street+Journal%22+%22Southeast+Asian+data+centers%22+OR+%22sanctions%22&client=app-vertex-grounding&safesearch=active\">&quot;Jensen Huang&quot; &quot;Wall Street Journal&quot; &quot;Southeast Asian data centers&quot; OR &quot;sanctions&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Nebuly%22+21M+%22Series+A%22+OR+%22Tamara+Djurickovic%22&client=app-vertex-grounding&safesearch=active\">&quot;Nebuly&quot; 21M &quot;Series A&quot; OR &quot;Tamara Djurickovic&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22project+zero%22+%2290+days%22+%222026%22+disclosure+policy&client=app-vertex-grounding&safesearch=active\">&quot;project zero&quot; &quot;90 days&quot; &quot;2026&quot; disclosure policy</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=TSMC+500M+venture+fund+%22Nvidia%22+Nikkei&client=app-vertex-grounding&safesearch=active\">TSMC 500M venture fund &quot;Nvidia&quot; Nikkei</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Jensen+Huang%22+%22Washington+Post%22+%22midterms%22+OR+%22vulnerabilities%22&client=app-vertex-grounding&safesearch=active\">&quot;Jensen Huang&quot; &quot;Washington Post&quot; &quot;midterms&quot; OR &quot;vulnerabilities&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Jensen+Huang%22+%22Financial+Times%22+%22Chris+Miller%22+OR+%22post-Jensen%22&client=app-vertex-grounding&safesearch=active\">&quot;Jensen Huang&quot; &quot;Financial Times&quot; &quot;Chris Miller&quot; OR &quot;post-Jensen&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22DRAM%22+%22Garciaguirre%22+Samsung+Hynix+Micron+dismissal&client=app-vertex-grounding&safesearch=active\">&quot;DRAM&quot; &quot;Garciaguirre&quot; Samsung Hynix Micron dismissal</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Starship+Flight+15%22+SpaceX+OR+%22Flight+15%22+SpaceX+starship&client=app-vertex-grounding&safesearch=active\">&quot;Starship Flight 15&quot; SpaceX OR &quot;Flight 15&quot; SpaceX starship</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Jensen+Huang%22+Nvidia+resign+OR+exit+OR+ousted+2026&client=app-vertex-grounding&safesearch=active\">&quot;Jensen Huang&quot; Nvidia resign OR exit OR ousted 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Nidus%22+AI+robotics+30M+OR+%22Upstarts+Media%22&client=app-vertex-grounding&safesearch=active\">&quot;Nidus&quot; AI robotics 30M OR &quot;Upstarts Media&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Project+Zero+will+disclose+vulnerabilities+90+days+after+reporting%22+site:projectzero.google+OR+%22disclosure+policy%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Project Zero will disclose vulnerabilities 90 days after reporting&quot; site:projectzero.google OR &quot;disclosure policy&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Jensen+Huang%22+%22New+York+Post%22+%22tantrums%22+OR+%22I+hope+you+die%22&client=app-vertex-grounding&safesearch=active\">&quot;Jensen Huang&quot; &quot;New York Post&quot; &quot;tantrums&quot; OR &quot;I hope you die&quot;</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWwoYjIBJ1wHX_2PL-LNAwN8aFh23Cyacr1prK5v8mOlR9nsOBvlMp4wp6RA8D7EFvWDcHD_cx_wG4aq0SzObYLbF9M5oLtme_dgzaCKHPbNupaEN2Aik3VZARFNn_eGKkan2A9wo=",
+        "title": "wikipedia.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNjfF9J8-uMoIbfPkBXcaDv91-4wh526hW3pk2IdVE5_iLLUBUWw5x6Vi5l_ikqxpjwy26Rk0HcPf6JNj1gAtTXmnSj3izTYX0ys5S6df-R71dNej5kT4jOaAUHyCLucUKcDUYEdil808rGall0VZIy9PKYGyFpjzs9Xzcb1sXTnINcUUq2qYMK_8pGtkPw9dlQgp4YEnan9uPJkNzHK_pi1jqIPYRGLpkYHc0pUtKt5qrQPKbxqO4",
+        "title": "space.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfmc-_FdfPQA8tUoh0Mse3ZMBb04PRBS2DYMI9HvDkfXx1vNaJ4rUiVkp3schafmSVBbFYwWjW2LQBpBiCQT9AswvwSbY4KII1l7zlUJ5YMMItn_cQz4xH4VGmIJb98KY=",
+        "title": "settlementinsight.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMC3tjn15PjYyXCA5wNPVKsuAsSmm9Xe3Un0vHs_DDwAeDkK43Yvmj1Cp9TFATFjTuASFIXGp6XPSEYehhvXxD9ah7wbfYuCnRlbfNyfzWftX1lKKVe61iSH_LETX6mZ9LE1UWjI6oHKN6PF7Hi0E6aTZmH35l650rUgdsfcIsNbHWdzUOWc1nLJGS6Tt1WOc7q4NehG-m697SvMQnDmS8M1UV7ovUnSGfXugLxE-nhyvH",
+        "title": "stockhouse.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELsj_RXulw1yPywWj6g3nSBRr0lqbMe8CNP-xz66K_iAZ4zoX_GGOr1ggXXz5b-Ke0CfVi9dRUeen3eYHwWyrf5BKOe6nFpihwx7vJzLytEJvKt0tLd5nCX8QfuLpVX4TnL6j83IRkaiwf9SsIwaN2EyjN4rVR6SlrIf80D54KIqMtpHwILb-dXJw-kE9Bk64l29ncmK1qwIEPe-9W3wnn19vL9bZ6",
+        "title": "overclock3d.net"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBMuddT_j9dOhMMVTKCjAHBSaeta_ydVem4K5TF7Kui60iRl1UaEC0f1U3cL_JGXE8LMUu_5X1y_UGvMd7YikUYaK39_3vpiMWL3-cvLe933b61DTaq8jKdAt6DKSMvYXIKl0Ilha2xo35alIm9ck9ZK0xOBaDiyhC9ynGS6JzSUFH5U8PZqAxuYaAEnR9b9lz2hcwpNCCwv7L8ds0aywXZs2LvdCOXmVMfJXjx0L13SOD6J77AzmXFy8=",
+        "title": "tomshardware.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnuBrPYlgPJArfWdaMr9JVrDtADThPCbjNeNIhpazjB5iu8ZAZA_okg3qBuPYUSd6bEzvfHh3uV0l0uckh4S7DNomgqiH985oZ1d48jlIgoRCp5V7i8kNyFJkFGixlK-q5kA6rl8GqqpGhlWIqLRkiWKZjgSlBt8DVmZtxwobaChiId459sY3S2foRmvswDTRjhQkTFH0pN4ovGKMoTsKWv6Un6AZWaYo=",
+        "title": "tomshardware.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhL3tosPzfQ-O8PhcGs5q_o26qPE4SatUydMX1eBVjkDCz2lEgGx1YlGNX6GsmnWUqQnohJZFvghOescpNz6yLXcWy-qbAoSh6L6gHxPVDaw89vMqA6QQANDpoj0eiwhcP0BHBvB3kZO9NyMlJ6rkKiSoNljUQ3A4=",
+        "title": "nvidia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3Yqt6WWwh3iT-yMhxbgt3uYRyMl8_h7_GS58Hblol1rOViglYmN6a8qI8nAUtSHV8lK3XxQx7ouR4_LlMJdSxdocQMqC0a20QimyLV4dn_OcyHOR1Ckk=",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPsg4zz2CdZcP5zQCbxeJR1tqdzwB0sBA4v4zJodF_aOc1PV1p_K8YV5_b3jNq5kcq7KNvgpzrTL9-8MyD3oW9AFS-QxTxytlZLui56Ac2HSI0srbONzfBs8fQpjcIZwGYUsnr3vh6mmtrsXUTmJFZCZoSncYLbJ-gHTESd_g=",
+        "title": "substack.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgRVMrWr-Zw4WOsNHhOyS12DEic7EXBGEFqRX6zih146YNjidPRq-4gVaOy_WwVivpLQ81U85wjg6i8KeHbsZzFCHaOMpnEBejgMm33Q==",
+        "title": "nidus.tech"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3eK8geS9jQ3qPUxmTdRiQ66WSQoCl8AyhDm8QQ9VIfVOgj_ZjcgX-sNOYy8LECrqm5N1YCniRPi4j13GMwhL-wkJjDQCB2ExeyHW4EZg1JmxEoD3lSa2aUy5jFJoqWD130MYBz-B0kVTCYiIqgS-lj9eUo-eZPh53dEou_h4GkiGUzA9Yf9qXnVcEfuhbeYpJLHoCbQ==",
+        "title": "dealroom.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-tfiaqEbN-NR58VpScnpk_otxUb-A4IfvvQEACRg8ogOjsk0hX9Qf7Jm8_hOb-HTidrc78jO-0milNyOQF67fEhhtec7AtCG5u44Hxc1CguagGwfic8a3lPxmSoMGfIoxF1OteD_DGDv2kzxctx3g1uw=",
+        "title": "upstartsmedia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTLyp2QgSjCz1677TIvxhDpDeinKPGmC_u0P7qz7Yxy-OTktXbLDAlyyCd4xSRc0EAI0EI-BLwChQ2aSVpUMujZ8trw3wK0py52UFTZ465K5gTtasNcjK6sjbdbalpHhPg-mJqoBiSG9elI9pIdptZFeID17AQ55pEzU_fJSqpVwyvQecgolUHKJ6QJzidojesa9yzzeImTKrxqxS0e6vzaqL84iGf9th2-1pgUPdg0MYm9FpPtMDpwjnV5Xz0aHHtEA==",
+        "title": "morningstar.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmPbDmHzeCKwFYtVQ1cTdXIZv4c341nHum7lNR2nYozXRWPCIRx6Ka71SzZvoOgNhK0ahON6mQvCt-rCu4tnBt5MsBHAMnTDi0q4sEa6tIK0oEI68=",
+        "title": "digg.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjnj7w4YEaqcWkqNGrQb0pIGnUQuBJnFKV6oryZrXJq5Uwh64WDBtJFl4arZ6cIjo-ztyQ52OEjYN4ShjlI5ui-68lYP7E75TLtmUM8o4l_bGdjNBGtfjBzUHf4isiUBB1MvZDfQHcya88qHo8uw==",
+        "title": "asiaai.fyi"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGAlTxFhb2rhuA5R7wiR-EqGWgYR0H5JVjv9CGpiP6VTSBDUJ1k7HRGhedj0uEDJYRu6F0TCeJuGVk9g48PTDkek1WFwjUDoHa6_OQnjmD6fCXAKDWeUtEntmngcJ92lavZwld0InOwTXVRJ_rfLY2kD-bub6ToI6pimb3byj4l8sNLyw7kK-sr5yM4k9Uwc-I8F42J30P9vv6zw==",
+        "title": "tech.eu"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnOGtlPRTSAYPHhtBHcg3m8EIKNkBW6sa6BtSW92HCbZg9mflBFDBeBiZaXJ_dz7uxWM14jY__wttFdTCsFYQzfNgmfZTvsk15v71o48Dfb4gDTAaEi43rwDDLmqVl3OTSwCkD8jFikbgXpvnt1WyhsRzq61WiHQxVZb1SNkNTfuA_",
+        "title": "sesamers.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfZx5LaNDKqcs7WJ-liNbhp3yo9D0Qb_Fz4ig3d9c53qWogbPcWIfabn3T4Qcij2Wp2y0y5U1al-NcMt2LWEX4kPSrwq4QVBioqPJG2agCZsuIU7H6gWUARGJJzCAYiRqfR_nWgcEgKrlFhTueEEzc0XC5n_C81A==",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-dJRIGK-BmgvML90TO8BC2PVpPizGu_nH_r0CBz1hybZJALKanqxwpap0KjDfFboBHIPgBH9L6t5xZTMvOjW2JXC22ChreV-fCbSbe0ym",
+        "title": "thefrontpage.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHER0squk5t-zWQUYiypgXBqERLG5QHkrTeDpsF12AfSDf_9f7I3Jjhz1QjeB3mYFhEfP8hqJQ6RKdULFhlx974IzU6BFpBQjofOsW9vAlGlF85Qb_gJ7dzdyYO9sWCmEiEpEpsiTBty6hiRZonUH4=",
+        "title": "projectzero.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgFD2aigydEOWQpt9USIiOxk6074JPa7Lm-WTtxZvHOwsJQSepFxXicdvCq0bye-VYVBJTIrl1ZN8k8utx699f29vjB1CcI7zejWHEoCcgR-_vOA4D5zg7X54IQL6UeThtEr3aiJUMtZjt8MIdZsYe-1MaEwaLkQ4cRyFZhc2xfChL7yRZjIVCc9tR6FVItFoMlyZ94XAbOck=",
+        "title": "lavx.hu"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFW8p_qewXzXuQi65vx-A-V_ma0R3hYfko7FBIW8LoEF_Ylo1Npk1rM_wGrnXxKSLIMlcf5gmDQF7dudCsKcgraqzh1U3vcbk0N5txgS7WLLBvnQe5sWh-66BTBoDHAg0859JJ67u3JGrwVvqdIUfunY4BIKOm3m0FpsbmsN8vxLnmvxUWxy8Mv-O9oLxzfG8y6tJ36wsAEgiBBfwhh0IFVkpzJ4t1oT_BApmWs-NoqG6c=",
+        "title": "indianexpress.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXwYt7Rj6i_7GLaBABzIwSeAwlqLUMHb2to7XzxAHW1URguFiTgZj12MeoDmlahGidYlB75JkgkMe4EXOn3eEdZjcholury3hD_bCV44i37A-oH9E0omnWpJHgy3VA5LNRpEINNV746llZe5PatLol2ZGdIHYfSYLAbRS9iGzN0vkomAEg8RdDv8lMQonw0Bnnj8d6CTxJlCHmnZx6K0QDo3fTBHUA4QwuT4VX1uslUU8KbkETW-XFE5m0YqZ0AgUBtAkI16ji8vnoyb1MIFM7dnD66Y3qyAkLETg=",
+        "title": "hindustantimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpbpgKtCqRkdGi_shSMUJUCDfCpMcg9gyQjmw93yAwatwWE3zCbiDOXuHT1tmQgWkR51IXL_o_XBo5y2ug_SNT7IZoDl2cjONEsoLEahFlDzq-jdDBsWlvMK7zEaIfEbf5kcdTyNAnQJMWeAKy1Hi7llf9IM1Ci4R8Vna5Tb1wcUGTd6CE2tXzHalbgx3AQglJzM7ROO2L8cxQDdA=",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTgTZT9LuLFXnoiLk6VK1zVWrTM7KISBpahh-_qNJuQvK-AJUEeR0jGJmNv7kpNs10OUMVVwGYPkpnxNms8TyPZYsBqsMuNSdtGXv8yNXjOE02fQ==",
+        "title": "digg.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqT-1hh7GYbmbp9XQ1UIlXpf_rK-nJavN3g0bRrLI0jgzFTb92-695_Lgb84SZJM0oRNW0u4b9INPV3fYBKUwL6PtjfJXt32B7Ik5MLUoVySjDwG5tdYkWLYSv-I3umeVWNp3pFbMAvspGBqx8ra7ZqUQfr4WS5E2a36dI7YLP5XswRLkVeQ==",
+        "title": "chosun.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG02aiSyArnCi8PcFPejlo4-F5gvMU_Qz3w9UZpsen83HQTrWZyro4QkxDFbNHLwzAoIKbzP8im6N18hxAYjOu0cSUzxoyS-r4737zzN81Nkz8WWWZzIZfULLVQczwnpJUOjx1O4PO8t38ZU_sm8g7LrXMcEhs4dDc=",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWVF4h6AytRbbrN4FFFx9E6-zZa4EezOotxrLE08aptD0AYnwgjuhXByKKXxyWTrtQuQDQvmk9l18poOE7BWcE57giv2AKEvC6GflL6fEBoBJzK2m-zcx0AgyVicqcuuvx1BNM5YmWd7SU29mCGjut2qE877K0yQUn0Ngg9xnoG1yo6MPSIOmhLaEqHQLmtznxuaIjPCvM7lX1FmpjhLmZT9BmWXEi1PCW6Mo-hBpleZYkXE0=",
+        "title": "washingtonpost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5g7aSlUMkMXTRfDA73kAncyTdtaH6DvLcJ3G58ZAnjPO7NyTl3Bey__CAaHzPH1ZimUJIxsaGaKpxqUj0EeMuCUI5Ij_mowFSHHOUgjsnq7xjnTXGs4U-_-5uXpc8_MydR26DK9pfq2RGY38bY6ucVkpmP7CDVMpoRn39mBxvUbu1vFoZG7Ev68-qGe2LuYIgkxCIfheO9w4E36g---bgW7-JyZZ3cow=",
+        "title": "allsides.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHk43Cp0tj_JsouzmXhOmHxNDD9S820PRz9fZQmmOg-rOawRznDevov2lgtA2CK4qsxT8b6TKtQ6vGM2-ZsDCh0c4D-ImMZRLHwz5WVy0vY6sZa6pA9h6Zi8lT6aE8S_DHKvdKFEI9lixsQ8QVvCm36pSiVUXpZ9hc=",
+        "title": "biggo.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 230,
+        "endIndex": 329,
+        "text": "**What is confirmed**: SpaceX launched Starship Flight 15 from Starbase, Texas, on 13 November 2026"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 331,
+        "endIndex": 438,
+        "text": "Ship 42 deployed 26 Starlink V3 satellites into Low Earth Orbit and spent approximately 22.5 hours in orbit"
+      },
+      "groundingChunkIndices": [
+        1,
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 440,
+        "endIndex": 665,
+        "text": "On 14 November 2026, Ship 42 re-entered the atmosphere and was successfully caught by the launch tower’s \"chopstick\" arms at Starbase—marking the first time an orbital rocket upper stage has been recovered via tower catch"
+      },
+      "groundingChunkIndices": [
+        1,
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 669,
+        "endIndex": 828,
+        "text": "**Important caveats**: Booster 22 experienced a low-fuel condition and automatically aborted its catch attempt, diverting to a splashdown in the Gulf of Mexico"
+      },
+      "groundingChunkIndices": [
+        1,
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 830,
+        "endIndex": 925,
+        "text": "Thus, the mission achieved a historic upper-stage recovery, but not the targeted \"double catch\""
+      },
+      "groundingChunkIndices": [
+        1,
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2135,
+        "endIndex": 2347,
+        "text": "**What is confirmed**: In *Garciaguirre et al. v. Samsung Electronics Co., SK Hynix, & Micron Technology* (U.S. District Court, Northern District of California), the court denied the defendants' motion to dismiss"
+      },
+      "groundingChunkIndices": [
+        2,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2349,
+        "endIndex": 2599,
+        "text": "The class action alleges that the \"Big Three\" memory makers (controlling ~90% of global DRAM) coordinated legacy DDR3/DDR4 output cuts under the cover of pivoting capacity toward AI-focused High Bandwidth Memory (HBM), driving up consumer DRAM prices"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2603,
+        "endIndex": 2790,
+        "text": "**Important caveats**: Prior DRAM price-fixing class actions were dismissed by federal courts (e.g., in 2020/2022) due to failure to prove explicit collusion over parallel market behavior"
+      },
+      "groundingChunkIndices": [
+        5,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2792,
+        "endIndex": 2848,
+        "text": "Plaintiffs still face a high evidentiary burden at trial"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3781,
+        "endIndex": 4058,
+        "text": "**What is confirmed**: *Financial Times* published an op-ed by Chris Miller (*Chip War* author) analyzing Nvidia’s post-Jensen Huang corporate governance and Washington diplomacy following Huang’s resignation on 12 November 2026 (where CFO Colette Kress became interim CEO)"
+      },
+      "groundingChunkIndices": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4062,
+        "endIndex": 4167,
+        "text": "**Important caveats**: This is an analytical opinion column rather than a new breaking factual disclosure"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4171,
+        "endIndex": 4307,
+        "text": "**Recommendation**: **SUITABLE FOR PUBLICATION TODAY** as policy/strategy commentary accompanying the wider Nvidia leadership transition"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4645,
+        "endIndex": 4811,
+        "text": "**What is confirmed**: NYC-based startup Nidus Technologies announced $30 million in cumulative pre-seed and seed funding led by Kleiner Perkins and Costanoa Ventures"
+      },
+      "groundingChunkIndices": [
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4813,
+        "endIndex": 4935,
+        "text": "Nidus builds AI models for industrial automation robots targeting U.S. defense manufacturing (e.g., wire harness assembly)"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4939,
+        "endIndex": 5078,
+        "text": "**Important caveats**: The $30M represents the combined total raised across pre-seed and seed rounds rather than a single new venture round"
+      },
+      "groundingChunkIndices": [
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5138,
+        "endIndex": 5200,
+        "text": "Strong signal for physical AI applied to defense manufacturing"
+      },
+      "groundingChunkIndices": [
+        10,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5377,
+        "endIndex": 5603,
+        "text": "**What is confirmed**: TSMC Senior Vice President Kevin Zhang announced at the Nikkei Forum in Tokyo that TSMC is launching a $500 million venture capital fund to invest in early-stage chip startups, suppliers, and IP partners"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5607,
+        "endIndex": 5741,
+        "text": "**Important caveats**: Specific equity stake limits, node access terms, and geographic distribution rules have not yet been formalized"
+      },
+      "groundingChunkIndices": [
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5801,
+        "endIndex": 5913,
+        "text": "Major strategic move by the world's leading semiconductor foundry to secure early-stage AI silicon relationships"
+      },
+      "groundingChunkIndices": [
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6476,
+        "endIndex": 6724,
+        "text": "**What is confirmed**: Enterprise AI analytics platform Nebuly (Turin/NYC) raised a $21 million (€19M) Series A round led by Planven, with participation from Exor Ventures, Tenacity Capital, TGVG Capital, Fastweb+Vodafone, and CDP Venture Capital"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6726,
+        "endIndex": 6865,
+        "text": "The software helps enterprises quantify the financial ROI, efficiency gains, and revenue impact of deployed internal and external AI agents"
+      },
+      "groundingChunkIndices": [
+        16,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6869,
+        "endIndex": 6932,
+        "text": "**Important caveats**: Round first reported on 12 November 2026"
+      },
+      "groundingChunkIndices": [
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6869,
+        "endIndex": 7034,
+        "text": "**Important caveats**: Round first reported on 12 November 2026; funding is allocated primarily to scaling commercial sales teams across London, New York, and Europe"
+      },
+      "groundingChunkIndices": [
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7094,
+        "endIndex": 7183,
+        "text": "Addresses the core corporate buyer issue of evaluating enterprise AI return on investment"
+      },
+      "groundingChunkIndices": [
+        16,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7364,
+        "endIndex": 7509,
+        "text": "**What is confirmed**: Google Project Zero (via Lead Researcher Natalie Silvanovich) published an overhaul of its vulnerability disclosure policy"
+      },
+      "groundingChunkIndices": [
+        19,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7511,
+        "endIndex": 7599,
+        "text": "Project Zero is replacing its historical \"90+30\" policy with a strict \"Full X\" framework"
+      },
+      "groundingChunkIndices": [
+        19,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7601,
+        "endIndex": 7715,
+        "text": "Effective immediately, vulnerabilities will be disclosed 90 days post-report with zero grace period or \"soak time\""
+      },
+      "groundingChunkIndices": [
+        21,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7717,
+        "endIndex": 7791,
+        "text": "The window will shrink to 60 days on 2 Feb 2027, and 30 days on 3 Jan 2028"
+      },
+      "groundingChunkIndices": [
+        21,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7795,
+        "endIndex": 8003,
+        "text": "**Important caveats**: Google explicitly cited LLM-assisted vulnerability discovery and rapid automated patch reverse-engineering as the key drivers rendering traditional 30-day patch soak periods ineffective"
+      },
+      "groundingChunkIndices": [
+        21,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8305,
+        "endIndex": 8520,
+        "text": "**What is confirmed**: The *New York Post* reported detailed allegations of intense internal workplace outbursts by former Nvidia CEO Jensen Huang (including berating senior executive Jay Puri during a 2025 meeting)"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8524,
+        "endIndex": 8609,
+        "text": "**Important caveats**: Tabloid framing relying primarily on un-named internal sources"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 8524,
+        "endIndex": 8696,
+        "text": "**Important caveats**: Tabloid framing relying primarily on un-named internal sources; serves as background personnel context following Huang’s resignation on 12 November"
+      },
+      "groundingChunkIndices": [
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9042,
+        "endIndex": 9311,
+        "text": "**What is confirmed**: *The Wall Street Journal* published an investigative report detailing how Nvidia compute power was made available to Chinese entities via data centers in Southeast Asia (such as Singapore-based Megaspeed), navigating gaps in U.S. export sanctions"
+      },
+      "groundingChunkIndices": [
+        25,
+        26
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9315,
+        "endIndex": 9448,
+        "text": "**Important caveats**: Complements ongoing U.S. Congressional and executive branch investigations into AI hardware export enforcement"
+      },
+      "groundingChunkIndices": [
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 9773,
+        "endIndex": 10048,
+        "text": "**What is confirmed**: *The Washington Post* reported on how national security hawks and Democratic lawmakers are leveraging the Nvidia export scandal and Jensen Huang’s exit to push for tighter scrutiny of AI data center oversight, foreign chip sales, and executive access"
+      },
+      "groundingChunkIndices": [
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10052,
+        "endIndex": 10173,
+        "text": "**Important caveats**: Analytical political reporting linking tech trade enforcement to congressional legislative agendas"
+      },
+      "groundingChunkIndices": [
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 10233,
+        "endIndex": 10323,
+        "text": "Strong policy focus connecting hardware supply chains to international security regulation"
+      },
+      "groundingChunkIndices": [
+        28
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Jensen Huang\" \"Wall Street Journal\" \"Southeast Asian data centers\" OR \"sanctions\"",
+    "\"Nebuly\" 21M \"Series A\" OR \"Tamara Djurickovic\"",
+    "\"project zero\" \"90 days\" \"2026\" disclosure policy",
+    "TSMC 500M venture fund \"Nvidia\" Nikkei",
+    "\"Jensen Huang\" \"Washington Post\" \"midterms\" OR \"vulnerabilities\"",
+    "\"Jensen Huang\" \"Financial Times\" \"Chris Miller\" OR \"post-Jensen\"",
+    "\"DRAM\" \"Garciaguirre\" Samsung Hynix Micron dismissal",
+    "\"Starship Flight 15\" SpaceX OR \"Flight 15\" SpaceX starship",
+    "\"Jensen Huang\" Nvidia resign OR exit OR ousted 2026",
+    "\"Nidus\" AI robotics 30M OR \"Upstarts Media\"",
+    "\"Project Zero will disclose vulnerabilities 90 days after reporting\" site:projectzero.google OR \"disclosure policy\" 2026",
+    "\"Jensen Huang\" \"New York Post\" \"tantrums\" OR \"I hope you die\""
+  ]
+}

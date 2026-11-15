@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-15",
+  "generated_at": "2026-11-15T13:53:36.305Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 437,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 494,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 454,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 352,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 2232,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": true,
+  "quality_status": "ready_with_warnings",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-15",
+  "overall_confidence": 0.875,
+  "stories": [
+    {
+      "category": "technology",
+      "headline": "SpaceX achieves first orbital upper-stage tower catch",
+      "confirmed_fact": "SpaceX successfully recovered the Starship upper stage (Ship 42) using the launch tower's 'chopstick' arms at Starbase on 14 November 2026. The mission's booster, however, aborted its catch attempt due to a low-fuel condition and splashed down in the Gulf of Mexico.",
+      "why_it_matters": "This marks a major milestone for rapid reusability in heavy-lift aerospace, though the failed booster catch highlights the ongoing reliability challenges of high-cadence flight operations.",
+      "interpretation": "The successful upper-stage recovery is a significant engineering feat, but the booster's diversion serves as a reminder that even mature launch systems remain sensitive to real-time performance variables.",
+      "confidence": 0.95,
+      "source": "spacex.com",
+      "discovered_via": "Hacker News",
+      "source_title": "SpaceX catches the Starship to end Flight 15",
+      "url": "https://www.spacex.com/launches/starship-flight-15",
+      "discovery_url": "https://news.ycombinator.com/item?id=50500963",
+      "link_quality": "original",
+      "published_at": "2026-11-14T21:22:24.000Z",
+      "discovery_score": 8.512
+    },
+    {
+      "category": "research",
+      "headline": "Google Project Zero accelerates vulnerability disclosure timeline",
+      "confirmed_fact": "Google's Project Zero is moving to a 'Full X' disclosure policy, ending grace periods for vulnerability patches. The disclosure window will drop to 90 days immediately, 60 days in February 2027, and 30 days in January 2028.",
+      "why_it_matters": "Google cited the rise of LLM-assisted vulnerability discovery and automated patch reverse-engineering as the primary reasons for shortening the time software vendors have to fix security flaws.",
+      "interpretation": "The shift suggests that the speed at which attackers can weaponise disclosed vulnerabilities is outpacing traditional patch-management cycles, forcing a more aggressive security posture.",
+      "confidence": 0.9,
+      "source": "projectzero.google",
+      "discovered_via": "Hacker News",
+      "source_title": "Project Zero will disclose vulnerabilities 90 days after reporting",
+      "url": "https://projectzero.google/2026/11/disclosure-policy.html",
+      "discovery_url": "https://news.ycombinator.com/item?id=50496051",
+      "link_quality": "original",
+      "published_at": "2026-11-14T11:13:17.000Z",
+      "discovery_score": 7.419
+    },
+    {
+      "category": "business",
+      "headline": "DRAM price-fixing class action survives dismissal",
+      "confirmed_fact": "A U.S. federal court has denied a motion to dismiss a class-action lawsuit alleging that Samsung, SK Hynix, and Micron coordinated output cuts to inflate DRAM prices under the guise of pivoting to AI-focused memory.",
+      "why_it_matters": "The case targets the 'Big Three' memory makers, who control approximately 90% of the global DRAM market, potentially impacting the cost structure of AI hardware infrastructure.",
+      "interpretation": "While the court's decision allows the case to proceed, the plaintiffs still face a high evidentiary burden to prove explicit collusion, a hurdle that has led to the dismissal of similar cases in the past.",
+      "confidence": 0.85,
+      "source": "litnews.ai",
+      "discovered_via": "Hacker News",
+      "source_title": "Court denies motion to dismiss DRAM price fixing case",
+      "url": "https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal",
+      "discovery_url": "https://news.ycombinator.com/item?id=50502988",
+      "link_quality": "original",
+      "published_at": "2026-11-15T01:18:36.000Z",
+      "discovery_score": 7.926
+    },
+    {
+      "category": "business",
+      "headline": "Nebuly raises $21M to quantify AI ROI",
+      "confirmed_fact": "Enterprise AI analytics firm Nebuly has raised $21 million in Series A funding to scale its platform, which is designed to measure the financial impact and productivity gains of deployed AI agents.",
+      "why_it_matters": "As corporate AI adoption matures, the ability to move beyond pilot projects to measurable revenue impact is becoming a critical requirement for enterprise buyers.",
+      "interpretation": "The investment reflects a broader market shift where the focus is moving from 'AI capability' to 'AI accountability' as companies seek to justify their infrastructure spending.",
+      "confidence": 0.8,
+      "source": "Tamara Djurickovic/Tech.eu",
+      "discovered_via": "Techmeme",
+      "source_title": "Nebuly, whose tech helps enterprises measure the business value of AI agents by analyzing their impact on productivity and revenue, raised a $21M Series A (Tamara Djurickovic/Tech.eu)",
+      "url": "https://tech.eu/2026/11/12/nebuly-raises-21m-series-a-to-turn-ai-investments-into-measurable-results/",
+      "discovery_url": "https://www.techmeme.com/261115/p3",
+      "link_quality": "original",
+      "published_at": "2026-11-15T06:40:02.000Z",
+      "discovery_score": 7.479
+    }
+  ],
+  "practical_takeaway": "Enterprise teams should prepare for shorter security patch windows as disclosure policies tighten. Simultaneously, businesses investing in AI should prioritise tools that provide granular ROI metrics, as the market is increasingly demanding proof of financial efficiency over general capability.",
+  "watch_next": "Monitor the DRAM litigation for further discovery evidence, as any findings could significantly alter the cost landscape for AI hardware procurement.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 075",
+      "title": "My Avatar Studio",
+      "summary": "Create personalised family avatars by mixing faces, hair, outfits, colours and extras, then save a private local gallery or download a PNG.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-075/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-075/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-15",
+    "lead_headline": "SpaceX achieves first orbital upper-stage tower catch",
+    "facebook_post": "SpaceX achieves first orbital upper-stage tower catch\n\nThis marks a major milestone for rapid reusability in heavy-lift aerospace, though the failed booster catch highlights the ongoing reliability challenges of high-cadence flight operations.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "SpaceX achieves first orbital upper-stage tower catch",
+    "pinterest_description": "This marks a major milestone for rapid reusability in heavy-lift aerospace, though the failed booster catch highlights the ongoing reliability challenges of high-cadence flight operations.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "SpaceX achieves first orbital upper-stage tower catch. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "SpaceX achieves first orbital upper-stage tower catch. SpaceX successfully recovered the Starship upper stage (Ship 42) using the launch tower's 'chopstick' arms at Starbase on 14 November 2026. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "054b5456571b8fba212f1dc6edafa4a06f1c5de107209702474167ff72f65037"
+}

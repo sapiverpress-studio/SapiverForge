@@ -1,0 +1,63 @@
+Here is the evidence desk evaluation of the news candidates for the **2026-11-16 UK morning briefing**.
+
+---
+
+### **Strongest In-Scope Candidates**
+
+#### **[1] Qwen4-Max Release (qwen.ai)**
+* **Confirmed:** Alibaba and the Qwen Team officially announced **Qwen4-Max**, built on a new 2.4-trillion-parameter backbone. The model features native vision processing, a 1-million-token context window, lower token usage on standard agent evaluations, and reduced API pricing (with average task costs dropping significantly).
+* **Important Caveats:** Benchmark performance comparisons (Work360, Terminal-Bench 4.0) and cost-reduction percentages are self-reported vendor evaluations and require independent third-party verification.
+* **Publication Suitability:** **Suitable.** A major frontier LLM model release from a primary AI vendor.
+
+---
+
+#### **[7] Google TIG Reports Fully Autonomous AI Patch-to-Exploit Attacks (SiliconANGLE / Google Cloud Blog)**
+* **Confirmed:** Google Threat Intelligence Group (GTIG) released its Q4 AI Threat Tracker, documenting the first observed in-the-wild instance of an autonomous AI framework (`exploit_agent`) operating without human intervention. The framework automatically analyzed software security patch releases (differential analysis), synthesized working exploits, and executed them against internet-facing web applications.
+* **Important Caveats:** Findings are based on telemetry captured from an exposed staging server targeting specific European sectors (media, education); broader adoption metrics remain unverified.
+* **Publication Suitability:** **Suitable.** Highly significant milestone in AI cybersecurity, threat intelligence, and defensive policy.
+
+---
+
+#### **[12] US Commerce Department Restricts Remote Cloud Access to Advanced AI Chips (Bloomberg / TechCrunch / BIS)**
+* **Confirmed:** The US Department of Commerce (Bureau of Industry and Security) issued an interim final rule restricting foreign remote access to advanced US AI chips and servers. The rule requires licenses for data centers anywhere in the world providing over 12 million aggregate Total Processing Performance (TPP) to entities from arms-embargoed (D:5) countries (including China) and imposes new chip export licensing requirements for Singapore, Malaysia, Indonesia, Thailand, and Brazil.
+* **Important Caveats:** This is an interim final rule with a 60-day public comment window and a 90-day grace period for existing data center operators to secure licenses.
+* **Publication Suitability:** **Suitable.** Critical story on international technology regulation, semiconductor supply chains, and AI trade policy.
+
+---
+
+#### **[3] Moody’s: US Life Insurers Accumulate $85.2B in AI Infrastructure Debt (New York Times / Seeking Alpha)**
+* **Confirmed:** Moody’s Ratings reported that major US life insurance companies (including Apollo’s Athene) held $85.2 billion in AI digital infrastructure private debt as of June 30, 2026, marking a 24% increase from late 2025.
+* **Important Caveats:** Moody’s projection that this debt exposure could reach $185 billion by the end of 2027 represents a forward-looking financial model subject to shifts in macroeconomic credit markets and data center buildouts.
+* **Publication Suitability:** **Suitable.** Important macro-financial story detailing institutional exposure to AI infrastructure expansion.
+
+---
+
+#### **[4] President Trump Comments on Jensen Huang & Nvidia Leadership (New York Post / Business Insider)**
+* **Confirmed:** US President Donald Trump publicly stated he "would not mind" if Jensen Huang returned as Nvidia CEO following Huang's recent resignation, questioning whether Alice Huang was acting as a foreign intelligence asset.
+* **Important Caveats:** Trump’s remarks reflect political commentary rather than Nvidia board actions. Nvidia's board accepted Huang’s resignation and appointed interim executive leadership while an internal investigation proceeds.
+* **Publication Suitability:** **Suitable.** Relevant update to the ongoing executive transition at Nvidia and its political ramifications.
+
+---
+
+#### **[9] Cybersecurity AI Startup Corma Raises $125M Series A (Wall Street Journal / Business Wire)**
+* **Confirmed:** Tel Aviv- and SF-based defensive cybersecurity startup Corma raised $125 million in a Series A round led by New Enterprise Associates (NEA), valuing the company at $1 billion just three months after its $60 million seed round.
+* **Important Caveats:** The valuation surge highlights extreme venture capital demand for defensive AI, though long-term performance claims for its proprietary defense model remain vendor-asserted.
+* **Publication Suitability:** **Suitable.** Major venture funding announcement in the defensive cybersecurity sector.
+
+---
+
+#### **[8] Knit Health Raises $35M Series A for Healthcare World Model (Axios / Business Wire)**
+* **Confirmed:** Healthcare AI startup Knit Health raised $35 million in Series A funding led by NEA (with participation from Town Hall Ventures and SignalFire) to scale its "Med-BEAM" healthcare world model for patient referrals and care coordination.
+* **Important Caveats:** Performance benchmarks claiming Med-BEAM outperforms frontier LLMs on clinical trajectory predictions are vendor-provided claims.
+* **Publication Suitability:** **Suitable.** Standard enterprise AI healthcare funding news.
+
+---
+
+### **Not Recommended for Lead Coverage**
+
+* **[6] Steve Blank: "What's Next for Nvidia?" & [15] Max Read: Jensen Huang Factional Analysis**
+  * *Reason:* Both items represent opinion essays and analytical commentary rather than breaking primary news events. Useful as background context, but not suitable as standalone reporting leads.
+* **[16] DySENSE, [17] Interpreting Coding Agents, [18] Continual-ARC, [19] eDMD**
+  * *Reason:* Academic preprints published on Hugging Face / arXiv. While valid research in-scope, paper summaries should be treated as author claims until independently corroborated or deployed commercially. They rank lower in urgency today compared to major regulatory, commercial, and threat intelligence news.
+* **[0], [2], [5], [10], [11], [13], [14]**
+  * *Reason:* Pre-marked or determined as **OUT OF SCOPE** per Sapiver Forge editorial criteria (niche developer tools, lifestyle, non-tech general crime/legal).

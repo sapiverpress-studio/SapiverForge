@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-16T15:36:35.047Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 438,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 295,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 396,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 304,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 2589,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "pub.cba.mit.edu",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "How to make almost anything",
+      "url": "https://pub.cba.mit.edu/863.26/site/",
+      "direct_source_url": "https://pub.cba.mit.edu/863.26/site/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50514470",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50514470",
+      "summary": "",
+      "published_at": "2026-11-16T05:50:37.000Z",
+      "engagement": {
+        "score": 570,
+        "comments": 98
+      },
+      "collection_mode": "api",
+      "score": 8.362
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "qwen.ai",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "Qwen4-Max",
+      "url": "https://qwen.ai/blog?id=qwen4-max",
+      "direct_source_url": "https://qwen.ai/blog?id=qwen4-max",
+      "discovery_url": "https://news.ycombinator.com/item?id=50513215",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50513215",
+      "summary": "",
+      "published_at": "2026-11-16T02:14:44.000Z",
+      "engagement": {
+        "score": 723,
+        "comments": 355
+      },
+      "collection_mode": "api",
+      "score": 8.293
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "iter.ca",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "Universal XSS in uBlock Origin from website-driven element picker",
+      "url": "https://iter.ca/post/ubo-uxss/",
+      "direct_source_url": "https://iter.ca/post/ubo-uxss/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50513160",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50513160",
+      "summary": "",
+      "published_at": "2026-11-16T02:04:48.000Z",
+      "engagement": {
+        "score": 502,
+        "comments": 144
+      },
+      "collection_mode": "api",
+      "score": 8.126
+    },
+    {
+      "title": "Moody's: major US life insurers like Athene held $85.2B in AI debt as of June 30, up 24% from December 31, and the figure could rise to $185B by the end of 2027 (New York Times)",
+      "url": "https://www.nytimes.com/2026/11/16/business/insurance-ai-debt.html",
+      "summary": "New York Times : Moody's: major US life insurers like Athene held $85.2B in AI debt as of June 30, up 24% from December 31, and the figure could rise to $185B by the end of 2027 &mdash; Insurance companies are investing billions of their customers' money into A.I. deals as analysts warn of mounting risks.",
+      "description_html": "<A HREF=\"https://www.nytimes.com/2026/11/16/business/insurance-ai-debt.html\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261116/i32.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261116/p32#a261116p32\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.nytimes.com/\">New York Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.nytimes.com/2026/11/16/business/insurance-ai-debt.html\">Moody's: major US life insurers like Athene held $85.2B in AI debt as of June 30, up 24% from December 31, and the figure could rise to $185B by the end of 2027</A></B></SPAN>&nbsp; &mdash;&nbsp; Insurance companies are investing billions of their customers' money into A.I. deals as analysts warn of mounting risks.</P>",
+      "published_at": "2026-11-16T15:10:04.000Z",
+      "discovery_url": "https://www.techmeme.com/261116/p32",
+      "direct_source_url": "https://www.nytimes.com/2026/11/16/business/insurance-ai-debt.html",
+      "publisher": "New York Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.082
+    },
+    {
+      "title": "President Trump says he \"would not mind\" the reinstatement of Jensen Huang as Nvidia CEO and \"I don't know that she was a spy at all\", referencing Alice Huang (Emily Goodin/New York Post)",
+      "url": "https://nypost.com/2026/11/16/us-news/trump-would-not-mind-jensen-huang-returning-as-nvidia-ceo/",
+      "summary": "Emily Goodin / New York Post : President Trump says he &ldquo;would not mind&rdquo; the reinstatement of Jensen Huang as Nvidia CEO and &ldquo;I don't know that she was a spy at all&rdquo;, referencing Alice Huang &mdash; WASHINGTON &mdash; President Donald Trump said Monday he &ldquo;would not mind&rdquo; if Jensen Huang was reinstated as Nvidia CEO &hellip;",
+      "description_html": "<A HREF=\"https://nypost.com/2026/11/16/us-news/trump-would-not-mind-jensen-huang-returning-as-nvidia-ceo/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261116/i31.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261116/p31#a261116p31\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Emily Goodin / <A HREF=\"http://www.nypost.com/\">New York Post</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://nypost.com/2026/11/16/us-news/trump-would-not-mind-jensen-huang-returning-as-nvidia-ceo/\">President Trump says he &ldquo;would not mind&rdquo; the reinstatement of Jensen Huang as Nvidia CEO and &ldquo;I don't know that she was a spy at all&rdquo;, referencing Alice Huang</A></B></SPAN>&nbsp; &mdash;&nbsp; WASHINGTON &mdash; President Donald Trump said Monday he &ldquo;would not mind&rdquo; if Jensen Huang was reinstated as Nvidia CEO &hellip; </P>",
+      "published_at": "2026-11-16T14:55:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261116/p31",
+      "direct_source_url": "https://nypost.com/2026/11/16/us-news/trump-would-not-mind-jensen-huang-returning-as-nvidia-ceo/",
+      "publisher": "Emily Goodin/New York Post",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.991
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "jack.cab",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 10,
+      "title": "What the fuck is w2rt6byl5nf1opmc-a.com?",
+      "url": "https://jack.cab/blog/siterate",
+      "direct_source_url": "https://jack.cab/blog/siterate",
+      "discovery_url": "https://news.ycombinator.com/item?id=50517602",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50517602",
+      "summary": "",
+      "published_at": "2026-11-16T13:51:38.000Z",
+      "engagement": {
+        "score": 215,
+        "comments": 69
+      },
+      "collection_mode": "api",
+      "score": 7.986
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "steveblank.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "What's Next for Nvidia?",
+      "url": "https://steveblank.com/2026/11/15/whats-next-for-nvidia/",
+      "direct_source_url": "https://steveblank.com/2026/11/15/whats-next-for-nvidia/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50512235",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50512235",
+      "summary": "",
+      "published_at": "2026-11-15T23:55:55.000Z",
+      "engagement": {
+        "score": 373,
+        "comments": 474
+      },
+      "collection_mode": "api",
+      "score": 7.957
+    },
+    {
+      "title": "Google's TIG reports the first observed instance of attackers using an autonomous AI framework with no human in the loop to turn security patches into exploits (Duncan Riley/SiliconANGLE)",
+      "url": "https://siliconangle.com/2026/11/16/google-says-an-ai-framework-turned-security-patches-into-exploits-with-no-human-in-the-loop/",
+      "summary": "Duncan Riley / SiliconANGLE : Google's TIG reports the first observed instance of attackers using an autonomous AI framework with no human in the loop to turn security patches into exploits &mdash; A new report out today from Google LLC's Google Threat Intelligence Group finds that for the first time, attackers have used &hellip;",
+      "description_html": "<A HREF=\"https://siliconangle.com/2026/11/16/google-says-an-ai-framework-turned-security-patches-into-exploits-with-no-human-in-the-loop/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261116/i30.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261116/p30#a261116p30\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Duncan Riley / <A HREF=\"http://siliconangle.com/\">SiliconANGLE</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://siliconangle.com/2026/11/16/google-says-an-ai-framework-turned-security-patches-into-exploits-with-no-human-in-the-loop/\">Google's TIG reports the first observed instance of attackers using an autonomous AI framework with no human in the loop to turn security patches into exploits</A></B></SPAN>&nbsp; &mdash;&nbsp; A new report out today from Google LLC's Google Threat Intelligence Group finds that for the first time, attackers have used &hellip; </P>",
+      "published_at": "2026-11-16T14:40:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261116/p30",
+      "direct_source_url": "https://siliconangle.com/2026/11/16/google-says-an-ai-framework-turned-security-patches-into-exploits-with-no-human-in-the-loop/",
+      "publisher": "Duncan Riley/SiliconANGLE",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.901
+    },
+    {
+      "title": "Knit Health, which uses its AI world model to predict patient care needs, forecast treatment impacts, and optimize referrals, raised a $35M Series A led by NEA (Will Maddox/Axios)",
+      "url": "https://www.axios.com/pro/health-tech-deals/2026/11/16/knit-health-35m-ai-patient-referrals",
+      "summary": "Will Maddox / Axios : Knit Health, which uses its AI world model to predict patient care needs, forecast treatment impacts, and optimize referrals, raised a $35M Series A led by NEA &mdash; Knit Health, a startup aiming to optimize patient referrals, raised a $35 million Series A round, CEO Jonathan Kolstad tells Axios Pro exclusively.",
+      "description_html": "<A HREF=\"https://www.axios.com/pro/health-tech-deals/2026/11/16/knit-health-35m-ai-patient-referrals\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261116/i29.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261116/p29#a261116p29\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Will Maddox / <A HREF=\"https://www.axios.com/\">Axios</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.axios.com/pro/health-tech-deals/2026/11/16/knit-health-35m-ai-patient-referrals\">Knit Health, which uses its AI world model to predict patient care needs, forecast treatment impacts, and optimize referrals, raised a $35M Series A led by NEA</A></B></SPAN>&nbsp; &mdash;&nbsp; Knit Health, a startup aiming to optimize patient referrals, raised a $35 million Series A round, CEO Jonathan Kolstad tells Axios Pro exclusively.</P>",
+      "published_at": "2026-11-16T14:35:05.000Z",
+      "discovery_url": "https://www.techmeme.com/261116/p29",
+      "direct_source_url": "https://www.axios.com/pro/health-tech-deals/2026/11/16/knit-health-35m-ai-patient-referrals",
+      "publisher": "Will Maddox/Axios",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.817
+    },
+    {
+      "title": "Tel Aviv- and SF-based Corma, which builds AI agents custom-trained for cyber defense, raised a $125M Series A led by NEA, after raising a $60M seed in August (Angus Loten/Wall Street Journal)",
+      "url": "https://www.wsj.com/pro/cybersecurity/cyber-startup-corma-raises-125-million-for-defensive-ai-agents-f30a4387",
+      "summary": "Angus Loten / Wall Street Journal : Tel Aviv- and SF-based Corma, which builds AI agents custom-trained for cyber defense, raised a $125M Series A led by NEA, after raising a $60M seed in August &mdash; The year-old startup's agents are custom-trained for defensive cybersecurity &mdash; Cybersecurity startup Corma raised $125 million &hellip;",
+      "description_html": "<A HREF=\"https://www.wsj.com/pro/cybersecurity/cyber-startup-corma-raises-125-million-for-defensive-ai-agents-f30a4387\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261116/i28.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261116/p28#a261116p28\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Angus Loten / <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/pro/cybersecurity/cyber-startup-corma-raises-125-million-for-defensive-ai-agents-f30a4387\">Tel Aviv- and SF-based Corma, which builds AI agents custom-trained for cyber defense, raised a $125M Series A led by NEA, after raising a $60M seed in August</A></B></SPAN>&nbsp; &mdash;&nbsp; The year-old startup's agents are custom-trained for defensive cybersecurity&nbsp; &mdash;&nbsp; Cybersecurity startup Corma raised $125 million &hellip; </P>",
+      "published_at": "2026-11-16T14:30:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261116/p28",
+      "direct_source_url": "https://www.wsj.com/pro/cybersecurity/cyber-startup-corma-raises-125-million-for-defensive-ai-agents-f30a4387",
+      "publisher": "Angus Loten/Wall Street Journal",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.734
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "bruceroettgers.eu",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "Protomaps: Self-hosting map tiles has gotten cheap and easy",
+      "url": "https://bruceroettgers.eu/blog/protomaps/",
+      "direct_source_url": "https://bruceroettgers.eu/blog/protomaps/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50509837",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50509837",
+      "summary": "",
+      "published_at": "2026-11-15T19:26:22.000Z",
+      "engagement": {
+        "score": 416,
+        "comments": 74
+      },
+      "collection_mode": "api",
+      "score": 7.658
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "ransomnews.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 7,
+      "title": "Old Bitly links are being hijacked",
+      "url": "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
+      "direct_source_url": "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50511395",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50511395",
+      "summary": "",
+      "published_at": "2026-11-15T22:11:43.000Z",
+      "engagement": {
+        "score": 339,
+        "comments": 172
+      },
+      "collection_mode": "api",
+      "score": 7.644
+    },
+    {
+      "title": "The US Commerce Department issues an interim rule to limit remote access to advanced AI chips and servers from select countries, such as Singapore and Malaysia (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/us-moves-to-limit-remote-access-to-advanced-ai-chips",
+      "summary": "Bloomberg : The US Commerce Department issues an interim rule to limit remote access to advanced AI chips and servers from select countries, such as Singapore and Malaysia &mdash; The US Commerce Department moved to limit several countries from providing Chinese companies remote access to advanced artificial &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-16/us-moves-to-limit-remote-access-to-advanced-ai-chips\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261116/i27.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261116/p27#a261116p27\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-16/us-moves-to-limit-remote-access-to-advanced-ai-chips\">The US Commerce Department issues an interim rule to limit remote access to advanced AI chips and servers from select countries, such as Singapore and Malaysia</A></B></SPAN>&nbsp; &mdash;&nbsp; The US Commerce Department moved to limit several countries from providing Chinese companies remote access to advanced artificial &hellip; </P>",
+      "published_at": "2026-11-16T13:55:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261116/p27",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-16/us-moves-to-limit-remote-access-to-advanced-ai-chips",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.629
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "ductus.sorenblank.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "Handwriting, as a Font",
+      "url": "https://ductus.sorenblank.com/",
+      "direct_source_url": "https://ductus.sorenblank.com/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50509972",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50509972",
+      "summary": "",
+      "published_at": "2026-11-15T19:42:13.000Z",
+      "engagement": {
+        "score": 388,
+        "comments": 66
+      },
+      "collection_mode": "api",
+      "score": 7.577
+    },
+    {
+      "title": "Arion Kurtaj, a 21-year-old Lapsus$ member, pleads guilty in UK court to hacking Rockstar, Uber, BT, and others, after being released from a secure hospital (Joe Tidy/BBC)",
+      "url": "https://www.bbc.com/news/articles/cq99exy89dngo",
+      "summary": "Joe Tidy / BBC : Arion Kurtaj, a 21-year-old Lapsus$ member, pleads guilty in UK court to hacking Rockstar, Uber, BT, and others, after being released from a secure hospital &mdash; A hacker has pleaded guilty to a string of online crimes, including trying to extort the makers of Grand Theft Auto 6 after stealing dozens of unfinished clips of the game.",
+      "description_html": "<A HREF=\"https://www.bbc.com/news/articles/cq99exy89dngo\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261116/i26.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261116/p26#a261116p26\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Joe Tidy / <A HREF=\"http://www.bbc.com/news/\">BBC</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bbc.com/news/articles/cq99exy89dngo\">Arion Kurtaj, a 21-year-old Lapsus$ member, pleads guilty in UK court to hacking Rockstar, Uber, BT, and others, after being released from a secure hospital</A></B></SPAN>&nbsp; &mdash;&nbsp; A hacker has pleaded guilty to a string of online crimes, including trying to extort the makers of Grand Theft Auto 6 after stealing dozens of unfinished clips of the game.</P>",
+      "published_at": "2026-11-16T13:50:03.000Z",
+      "discovery_url": "https://www.techmeme.com/261116/p26",
+      "direct_source_url": "https://www.bbc.com/news/articles/cq99exy89dngo",
+      "publisher": "Joe Tidy/BBC",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.546
+    },
+    {
+      "title": "The Jensen Huang saga is driven by elite factional conflicts: China hawks vs. doves, open vs. closed AI models, and the founder class vs. managerial class (Max Read/Patreon)",
+      "url": "https://www.patreon.com/MaxRead/posts/mapping-jensen-175257766",
+      "summary": "Max Read / Patreon : The Jensen Huang saga is driven by elite factional conflicts: China hawks vs. doves, open vs. closed AI models, and the founder class vs. managerial class &mdash; Greetings from Read Max HQ! In this edition, some quick thoughts about Jensen Huang, Nvidia, and the fallout in both Silicon Valley and Washington &hellip;",
+      "description_html": "<A HREF=\"https://www.patreon.com/MaxRead/posts/mapping-jensen-175257766\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261116/i25.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261116/p25#a261116p25\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Max Read / <A HREF=\"https://www.patreon.com/\">Patreon</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.patreon.com/MaxRead/posts/mapping-jensen-175257766\">The Jensen Huang saga is driven by elite factional conflicts: China hawks vs. doves, open vs. closed AI models, and the founder class vs. managerial class</A></B></SPAN>&nbsp; &mdash;&nbsp; Greetings from Read Max HQ!&nbsp; In this edition, some quick thoughts about Jensen Huang, Nvidia, and the fallout in both Silicon Valley and Washington &hellip; </P>",
+      "published_at": "2026-11-16T13:40:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261116/p25",
+      "direct_source_url": "https://www.patreon.com/MaxRead/posts/mapping-jensen-175257766",
+      "publisher": "Max Read/Patreon",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.459
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "DySENSE: Dynamic Spatiotemporal ENergy Synthesis and Emulation with Satellite Imagery",
+      "url": "https://huggingface.co/papers/2611.17878",
+      "direct_source_url": "https://huggingface.co/papers/2611.17878",
+      "discovery_url": "https://huggingface.co/papers/2611.17878",
+      "link_quality": "original",
+      "summary": "Cities account for over two-thirds of the world's energy and more than 70% of global carbon dioxide emissions. City energy is essential for achieving the 2050 net-zero target and the UN's Sustainable Development Goals 7 and 11. Although existing studies have made progress, they are limited by data and methodological gaps. Existing studies are largely predictive for existing cities rather than generative for future cities; fine-grained, aligned monthly dynamic energy data are scarce; and existing GenAI models struggle to generate dynamic urban functional monthly energy. We present DySENSE, a joint multimodal GenAI framework that synthesizes static urban satellite imagery together with spatially aligned, dynamic monthly building energy consumption maps. We decouple long-term static urban morphology from short-term dynamic energy consumption. By conditioning on static urban land use, DySENSE can generate realistic, diverse and new static urban imagery with aligned energy maps. By conditioning on dynamic monthly and climate prompts, DySENSE can jointly generate dynamic, monthly energy consumption maps while keeping the urban morphology static. Experiments across four cities (New York,",
+      "published_at": "2026-11-12T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 20
+      },
+      "collection_mode": "api",
+      "score": 6.401
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "Interpreting Coding Agents Through Their Behavioral Trajectories",
+      "url": "https://huggingface.co/papers/2611.17440",
+      "direct_source_url": "https://huggingface.co/papers/2611.17440",
+      "discovery_url": "https://huggingface.co/papers/2611.17440",
+      "link_quality": "original",
+      "summary": "Standard coding-agent benchmarks primarily evaluate binary task success, treating execution as a black box and obscuring the behaviors that produce those outcomes. We analyze a large corpus of 143,209 execution trajectories from 125 agent configurations spanning 117 unique models. To enable comparisons across heterogeneous agent interfaces, we develop a rule-based parser that maps raw execution traces to high-level actions such as repository search, file editing, and test execution, and audit its predictions against a six-model consensus reference on 500 events. We find that agents with similar solve rates can nevertheless differ substantially in how they explore, modify and verify code. Moreover, without using task outcomes, token counts, or tool names as features, aggregate behavioral profiles retrieve the corresponding agent stack across disjoint repository sets and programming languages, although task composition is not fully controlled in the cross-repository setting. Through analyses of frontier models and agent scaffolds, we further show that scaffold choice and reasoning effort systematically shift agents' search, editing, and testing behavior. We release the deterministic",
+      "published_at": "2026-11-11T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 6.139
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Continual-ARC: Measuring Skill Acquisition over a Working Lifetime",
+      "url": "https://huggingface.co/papers/2611.14505",
+      "direct_source_url": "https://huggingface.co/papers/2611.14505",
+      "discovery_url": "https://huggingface.co/papers/2611.14505",
+      "link_quality": "original",
+      "summary": "Agent harnesses have emerged as a promising mechanism for continual learning, alongside test-time parametric learning. However, the current benchmarks have several limitations: they generally focus on a single applied domain, serve each instance only once, and assume a single family of learner, so memory-based and weight-based systems are rarely compared on the same scale. We propose Continual-ARC, a lifelong stream built from the three ARC-AGI editions, whose tasks need no domain knowledge. The same tasks return after dormant gaps with fresh instances, while new tasks keep arriving. On each instance, the learner may pay for demonstrations, submit answers, or act inside the harness, with retries permitted on incorrect submissions, which are paid for. Each instance is scored based on the share of this feedback budget consumed. Since a learner may keep anything between instances, memory-based and weight-based systems are scored on the same scale. After the stream, the learner is frozen and tested on fresh instances of the tasks it met, which measures memorization, and on unseen tasks, which measures generalization. We run an agent harness with frozen weights, with and without persist",
+      "published_at": "2026-11-10T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 8
+      },
+      "collection_mode": "api",
+      "score": 6.137
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "eDMD: Endpoint Distribution Matching for Few-Step Diffusion Distillation",
+      "url": "https://huggingface.co/papers/2611.17194",
+      "direct_source_url": "https://huggingface.co/papers/2611.17194",
+      "discovery_url": "https://huggingface.co/papers/2611.17194",
+      "link_quality": "original",
+      "summary": "Distribution matching distillation (DMD) has emerged as a leading paradigm for distilling diffusion models into few-step students, where an auxiliary fake score model tracks the student's distribution and the discrepancy between the teacher and fake predictions drives the student toward the teacher. In multi-step distillation, although only the student's final output is delivered, existing methods train the fake model on intermediate states or across all denoising steps. Consequently, the student's update signal becomes entangled with intermediate distributions, which can distort the matching direction and remain nonzero even after the student's final outputs already match the teacher distribution. To resolve this mismatch, we propose Endpoint Distribution Matching Distillation (eDMD), which trains a single shared fake model exclusively on the student's final outputs and uses it to correct every denoising step. Our theoretical analysis proves that this endpoint reference guarantees that the distribution matching term vanishes if and only if the student's final output distribution matches the teacher's, regardless of intermediate distributions. Beyond the fake reference, we further",
+      "published_at": "2026-11-11T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 3
+      },
+      "collection_mode": "api",
+      "score": 6.121
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 6,
+      "title": "G-CAST: Governed Continual Self-Training for E-Commerce Agents under Evolving Demands",
+      "url": "https://huggingface.co/papers/2611.17814",
+      "direct_source_url": "https://huggingface.co/papers/2611.17814",
+      "discovery_url": "https://huggingface.co/papers/2611.17814",
+      "link_quality": "original",
+      "summary": "With the rapid advancement of Large Language Models (LLMs), an increasing number of users are turning to LLM-powered agents for conversational shopping in e-commerce. However, the user needs continue to change as new product categories, procurement scenarios, and feature requests emerge. At the same time, the product's execution harness-including its tools, skills, and operating procedures-continues to evolve to support increasingly sophisticated interactions. These changes create two practical challenges: 1) Demand drift alters the distribution, intent, and complexity of user requests, causing a model trained once to fall behind; 2) Harness evolution requires the model to use newly introduced capabilities correctly without losing behavior that users already rely on. Periodic manual retraining is too delayed and labor-intensive for this setting. To address these challenges, we present G-CAST, a governed continual self-training system that converts daily production evidence under evolving demand and capability contracts into reward-routed, entropy-prioritized training data and governed reward evolution. Governed checkpoint transition under cumulative evaluation controls each model u",
+      "published_at": "2026-11-12T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 15
+      },
+      "collection_mode": "api",
+      "score": 6.102
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 7,
+      "title": "MIRIX-2.0: Multi-Agent Memory System",
+      "url": "https://huggingface.co/papers/2611.12068",
+      "direct_source_url": "https://huggingface.co/papers/2611.12068",
+      "discovery_url": "https://huggingface.co/papers/2611.12068",
+      "link_quality": "original",
+      "summary": "Long-term memory lets LLM agents personalize, stay consistent, and reuse what worked before. Parametric memories need training, consolidation can lose details for good, and keeping every record leaves a growing store to search. We present MIRIX-2.0, a multi-agent memory system designed to be practical, accurate, and efficient at once. It is the most accurate of the compared systems on four of five QA benchmarks. It reaches 91.4% on LoCoMo and 72.6% on LongMemEval-S, where it leads the strongest baseline by 14.3 points, and with AutoDream disabled it gains 31.0 and 22.0 points over HyperMem on single-hop and multi-hop document QA. As procedural memory, it yields the highest mean success among the compared memory methods on ALFWorld and WebShop and reaches 49.2% on MetaClaw-Bench, against 44.0% for MetaClaw's skill library. Six typed memory agents keep complete records as the system of record, and a provenance hypergraph indexes episodic and semantic records with n-ary frames that cite their rows. Retrieval runs under explicit budgets, so the evidence a question inspects does not grow with the history. AutoDream merges duplicate anchors outside the write path without rewriting any re",
+      "published_at": "2026-11-08T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 20
+      },
+      "collection_mode": "api",
+      "score": 6.081
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "WebArena-Pro: A Heterogeneous, Multimodal, Reproducible Benchmark for Web Agents",
+      "url": "https://huggingface.co/papers/2611.17955",
+      "direct_source_url": "https://huggingface.co/papers/2611.17955",
+      "discovery_url": "https://huggingface.co/papers/2611.17955",
+      "link_quality": "original",
+      "summary": "Web agents powered by large language and vision-language models are increasingly applied to realistic browser work that spans heterogeneous applications, multimodal content, and stateful workflows. However, existing reproducible web-agent benchmarks cover only a small number of web applications drawn from a few software categories, and restrict modality to text and vision. Live benchmarks broaden site coverage but sacrifice reproducibility, since pages and data drift between runs. Moreover, existing benchmarks do not meaningfully evaluate whether agents can understand and use audio and video content embedded within web tasks. To address these gaps, we introduce WebArena-Pro, a benchmark comprising 300 tasks across 20 self-hosted web applications in six domain categories, spanning distinct interface conventions, workflows, and data models. Across the evaluated agents, the best performance is achieved by both Codex with GPT 6.1 Sol and Claude Code with Claude Opus 5.5 at 62.3%, followed by OpenCode with Kimi 3.1 Pro at 60.7%. The strongest GenericAgent configurations, Gemini 3.1 Pro omni and Gemma4 31B, both achieve 30.3%. Among reproducible, human-curated web agent benchmarks, WebAr",
+      "published_at": "2026-11-12T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 8
+      },
+      "collection_mode": "api",
+      "score": 6.057
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 9,
+      "title": "V-JEPA-LM: Video-Language Models That Read Dynamics Beyond Static, Text-Aligned Representations",
+      "url": "https://huggingface.co/papers/2611.17831",
+      "direct_source_url": "https://huggingface.co/papers/2611.17831",
+      "discovery_url": "https://huggingface.co/papers/2611.17831",
+      "link_quality": "original",
+      "summary": "World-model video encoders such as V-JEPA learn how scenes change (direction, speed, order, state) from video alone. To answer questions, they are joined to a language model trained on captions and question-answer pairs. But each caption or question names only a few attributes of a clip, so the model learns to retrieve those attributes rather than to read the clip, and the dynamics the encoder carries go unused: on the same items, a linear probe reads speed from frozen V-JEPA features at 87% while the VLM answers at chance. We show where dynamics lives in a frozen encoder: in a subspace shared across videos for predictive encoders such as V-JEPA, but not as a shared component of frame-wise, text-aligned encoders such as SigLIP. We then build counterfactual supervision that makes the language model read it: pixel transformations turn public videos into answer-balanced variants whose answers are set by the transformation and differ only in the change. Trained in a single stage on 4.53M public samples with 32 visual tokens per frame, where open video LLMs use several stages, 9M to 172M samples and 64 to 256 tokens per frame on average, the resulting V-JEPA-LM models (1B to 8B, Qwen3 a",
+      "published_at": "2026-11-12T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 21
+      },
+      "collection_mode": "api",
+      "score": 5.931
+    }
+  ]
+}

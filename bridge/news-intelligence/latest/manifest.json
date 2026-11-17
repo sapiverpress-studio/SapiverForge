@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-11-16",
-  "generated_at": "2026-11-16T15:37:17.314Z",
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T10:00:28.992Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 438,
+      "elapsed_ms": 323,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,14 +23,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 295,
+      "elapsed_ms": 191,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 396,
+      "elapsed_ms": 324,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -38,7 +38,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 304,
+      "elapsed_ms": 194,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 2589,
+      "elapsed_ms": 1505,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -59,76 +59,76 @@
     "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
   ],
   "release_blockers": [],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-16",
-  "overall_confidence": 0.9,
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-17",
+  "overall_confidence": 0.91,
   "stories": [
     {
-      "category": "ai",
-      "headline": "Autonomous AI framework turns security patches into exploits",
-      "confirmed_fact": "Google's Threat Intelligence Group has documented the first in-the-wild use of an autonomous AI framework that analyzes software security patches to synthesize and execute exploits without human intervention.",
-      "why_it_matters": "This marks a shift from AI-assisted hacking to fully autonomous offensive operations, potentially shrinking the window between a vendor releasing a patch and an attacker weaponising it.",
-      "interpretation": "The speed of this 'patch-to-exploit' cycle suggests that traditional manual patching cadences may soon be insufficient for high-value internet-facing infrastructure.",
+      "category": "business",
+      "headline": "Voter backlash stalls Amazon's Ohio data center expansion",
+      "confirmed_fact": "Voters in Ohio passed 21 local ballot initiatives restricting large-scale data center developments, directly blocking three major AWS projects that would have consumed approximately 1.8 GW of power.",
+      "why_it_matters": "This highlights a growing trend where local infrastructure and power constraints are becoming a material risk to the hyperscale expansion plans of major cloud providers.",
+      "interpretation": "The scale of this pushback suggests that the 'AI-first' infrastructure strategy is hitting a wall of local democratic resistance, forcing companies to navigate community-level energy politics rather than just capital allocation.",
       "confidence": 0.95,
-      "source": "Duncan Riley/SiliconANGLE",
+      "source": "Rafe Rosner-Uddin/Financial Times",
       "discovered_via": "Techmeme",
-      "source_title": "Google's TIG reports the first observed instance of attackers using an autonomous AI framework with no human in the loop to turn security patches into exploits (Duncan Riley/SiliconANGLE)",
-      "url": "https://siliconangle.com/2026/11/16/google-says-an-ai-framework-turned-security-patches-into-exploits-with-no-human-in-the-loop/",
-      "discovery_url": "https://www.techmeme.com/261116/p30",
+      "source_title": "Analysis: Amazon's $17B+ planned investment in Ohio data centers is at risk after midterm voters passed restriction measures affecting three proposed projects (Rafe Rosner-Uddin/Financial Times)",
+      "url": "https://www.ft.com/content/e95adad4-b428-477d-9716-92172bbd199f",
+      "discovery_url": "https://www.techmeme.com/261117/p1",
       "link_quality": "original",
-      "published_at": "2026-11-16T14:40:01.000Z",
-      "discovery_score": 7.901
-    },
-    {
-      "category": "business",
-      "headline": "US restricts remote access to advanced AI chips",
-      "confirmed_fact": "The US Department of Commerce has issued an interim rule requiring licenses for data centers globally that provide significant processing power to entities in arms-embargoed countries, while adding new export requirements for several Southeast Asian and South American nations.",
-      "why_it_matters": "This move attempts to close the 'remote access' loophole, where companies could bypass physical export bans by renting compute capacity from foreign data centers.",
-      "interpretation": "The regulation signals that the US government is moving to treat cloud-based compute as a strategic commodity equivalent to physical hardware, regardless of where that hardware is located.",
-      "confidence": 0.92,
-      "source": "Bloomberg",
-      "discovered_via": "Techmeme",
-      "source_title": "The US Commerce Department issues an interim rule to limit remote access to advanced AI chips and servers from select countries, such as Singapore and Malaysia (Bloomberg)",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-16/us-moves-to-limit-remote-access-to-advanced-ai-chips",
-      "discovery_url": "https://www.techmeme.com/261116/p27",
-      "link_quality": "original",
-      "published_at": "2026-11-16T13:55:01.000Z",
-      "discovery_score": 7.629
-    },
-    {
-      "category": "business",
-      "headline": "US life insurers hold $85B in AI infrastructure debt",
-      "confirmed_fact": "Moody’s Ratings reports that major US life insurers held $85.2 billion in AI-related digital infrastructure debt as of mid-2026, a 24% increase since the end of 2025.",
-      "why_it_matters": "Institutional capital is increasingly tied to the physical buildout of AI, meaning the financial health of these insurers is now partially tethered to the long-term viability of data centre demand.",
-      "interpretation": "While the sector is betting heavily on infrastructure, the projection that this could reach $185 billion by 2027 highlights a significant concentration of risk in a single, capital-intensive asset class.",
-      "confidence": 0.88,
-      "source": "New York Times",
-      "discovered_via": "Techmeme",
-      "source_title": "Moody's: major US life insurers like Athene held $85.2B in AI debt as of June 30, up 24% from December 31, and the figure could rise to $185B by the end of 2027 (New York Times)",
-      "url": "https://www.nytimes.com/2026/11/16/business/insurance-ai-debt.html",
-      "discovery_url": "https://www.techmeme.com/261116/p32",
-      "link_quality": "original",
-      "published_at": "2026-11-16T15:10:04.000Z",
-      "discovery_score": 8.082
+      "published_at": "2026-11-17T05:40:01.000Z",
+      "discovery_score": 7.44
     },
     {
       "category": "ai",
-      "headline": "Alibaba releases Qwen4-Max",
-      "confirmed_fact": "Alibaba has launched Qwen4-Max, a 2.4-trillion-parameter model featuring native vision processing and a 1-million-token context window, alongside claims of reduced API costs.",
-      "why_it_matters": "As frontier models become more capable and cheaper to run, the barrier to entry for deploying high-performance agents continues to drop.",
-      "interpretation": "The focus on 'agent evaluations' and cost reduction suggests the vendor is prioritising practical, task-based utility over raw parameter counts.",
-      "confidence": 0.85,
-      "source": "qwen.ai",
-      "discovered_via": "Hacker News",
-      "source_title": "Qwen4-Max",
-      "url": "https://qwen.ai/blog?id=qwen4-max",
-      "discovery_url": "https://news.ycombinator.com/item?id=50513215",
+      "headline": "Chinese industrial AI shifts to model distillation",
+      "confirmed_fact": "A review of over 300 Chinese documents confirms that industrial-scale 'distillation'—using outputs from U.S. frontier models like GPT-4 to train smaller domestic models—is now explicitly supported by Beijing's national AI+Manufacturing policy.",
+      "why_it_matters": "While distillation is a standard machine learning technique, its use at this scale suggests a shift in how domestic AI ecosystems are being built to bypass the limitations imposed by U.S. hardware export controls.",
+      "interpretation": "This is a clever workaround. If you cannot get the latest chips to train a frontier model from scratch, you simply use the output of a foreign model to teach your own smaller, more efficient ones.",
+      "confidence": 0.92,
+      "source": "Reuters",
+      "discovered_via": "Techmeme",
+      "source_title": "A review of 300+ Chinese documents shows AI distillation has moved from academic experiments to widespread industrial use, with Beijing encouraging the practice (Reuters)",
+      "url": "https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/",
+      "discovery_url": "https://www.techmeme.com/261117/p4",
       "link_quality": "original",
-      "published_at": "2026-11-16T02:14:44.000Z",
-      "discovery_score": 8.293
+      "published_at": "2026-11-17T07:30:01.000Z",
+      "discovery_score": 7.756
+    },
+    {
+      "category": "technology",
+      "headline": "Windows 11 telemetry flags AI coding agents",
+      "confirmed_fact": "Research shows a Windows 11 system component tracks the execution of specific AI coding agents and developer tools, logging their presence locally for Windows Diagnostics.",
+      "why_it_matters": "For developers and enterprise security teams, this confirms that the OS is actively monitoring the software stack, even if the data collected is limited to tool presence rather than session content.",
+      "interpretation": "It is a reminder that your operating system is increasingly aware of your 'AI-assisted' workflow. Whether this is for performance optimisation or something else, it is a feature that many users likely did not realise they were opting into.",
+      "confidence": 0.88,
+      "source": "xusheng.dev",
+      "discovered_via": "Hacker News",
+      "source_title": "Windows 11 is collecting data on which coding agents and developer tools you use",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50524736",
+      "link_quality": "original",
+      "published_at": "2026-11-16T22:58:20.000Z",
+      "discovery_score": 8.231
+    },
+    {
+      "category": "technology",
+      "headline": "Microsoft blames July update for global outage",
+      "confirmed_fact": "Microsoft identified a latent software bug introduced in a July 2026 update to network gateway servers as the root cause of the November 12–14 global outage affecting Exchange, Teams, and Copilot.",
+      "why_it_matters": "The incident highlights the fragility of complex, interconnected cloud infrastructure where a single defect can remain dormant for months before triggering a massive service failure.",
+      "interpretation": "A bug that survives for four months before breaking the world is a sobering example of how difficult it is to maintain 'always-on' enterprise systems.",
+      "confidence": 0.9,
+      "source": "theregister.com",
+      "discovered_via": "Hacker News",
+      "source_title": "Microsoft blames monster email outage on software defect introduced in July fix",
+      "url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026",
+      "discovery_url": "https://news.ycombinator.com/item?id=50517321",
+      "link_quality": "original",
+      "published_at": "2026-11-16T13:18:22.000Z",
+      "discovery_score": 7.508
     }
   ],
-  "practical_takeaway": "Security teams should assume that patch-to-exploit cycles are accelerating; prioritise automated vulnerability scanning and rapid deployment of critical patches. For businesses relying on cloud compute, monitor the evolving US export licensing requirements, as these may impact the availability or cost of services provided by international data centre partners.",
-  "watch_next": "Monitor the 60-day public comment window for the new US Commerce Department rule, as it will likely clarify how existing data centre operators must navigate the new licensing requirements.",
+  "practical_takeaway": "Review your local infrastructure and energy planning if you are involved in large-scale data deployments, as community-led restrictions are becoming a significant hurdle. For developers, be aware that Windows 11 is logging the use of AI coding tools; check your 'Optional Diagnostic Data' settings if you prefer to limit this telemetry.",
+  "watch_next": "Monitor whether other U.S. states follow Ohio's lead in restricting data center power consumption, and watch for any further regulatory responses to the industrial-scale distillation of U.S. AI models.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -137,21 +137,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 076",
-      "title": "My Tangram Studio",
-      "summary": "Drag and rotate seven colourful shapes to solve three silhouettes or create and save a personalised free-build arrangement.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-076/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-076/poster.png"
+      "label": "AI Inquisitive Parents · Day 077",
+      "title": "Our Family Flag Studio",
+      "summary": "Design a personalised family flag with layouts, colours, symbols, initials and a motto, then save a private gallery or download a PNG.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-077/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-077/poster.png"
     }
   },
   "social": {
-    "date": "2026-11-16",
-    "lead_headline": "Autonomous AI framework turns security patches into exploits",
-    "facebook_post": "Autonomous AI framework turns security patches into exploits\n\nThis marks a shift from AI-assisted hacking to fully autonomous offensive operations, potentially shrinking the window between a vendor releasing a patch and an attacker weaponising it.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Autonomous AI framework turns security patches into exploits",
-    "pinterest_description": "This marks a shift from AI-assisted hacking to fully autonomous offensive operations, potentially shrinking the window between a vendor releasing a patch and an attacker weaponising it.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Autonomous AI framework turns security patches into exploits. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Autonomous AI framework turns security patches into exploits. Google's Threat Intelligence Group has documented the first in-the-wild use of an autonomous AI framework that analyzes software security patches to synthesize and execute exploits without human intervention. Read the Sapiver Forge Daily Brief."
+    "date": "2026-11-17",
+    "lead_headline": "Voter backlash stalls Amazon's Ohio data center expansion",
+    "facebook_post": "Voter backlash stalls Amazon's Ohio data center expansion\n\nThis highlights a growing trend where local infrastructure and power constraints are becoming a material risk to the hyperscale expansion plans of major cloud providers.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Voter backlash stalls Amazon's Ohio data center expansion",
+    "pinterest_description": "This highlights a growing trend where local infrastructure and power constraints are becoming a material risk to the hyperscale expansion plans of major cloud providers.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Voter backlash stalls Amazon's Ohio data center expansion. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Voter backlash stalls Amazon's Ohio data center expansion. Voters in Ohio passed 21 local ballot initiatives restricting large-scale data center developments, directly blocking three major AWS projects that would have consumed approximately 1.8 GW of power. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "f38b51067e64424b0747ff429a22f414590388db5bd1de4708ec15c1fffdec87"
+  "candidate_id": "9aa8db36fe56de7275dc6f43173c4b2f7778ed21566e2421038103b030104c65"
 }

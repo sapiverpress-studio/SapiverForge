@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T10:00:28.992Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 323,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 191,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 324,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 194,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1505,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": true,
+  "quality_status": "ready_with_warnings",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-17",
+  "overall_confidence": 0.91,
+  "stories": [
+    {
+      "category": "business",
+      "headline": "Voter backlash stalls Amazon's Ohio data center expansion",
+      "confirmed_fact": "Voters in Ohio passed 21 local ballot initiatives restricting large-scale data center developments, directly blocking three major AWS projects that would have consumed approximately 1.8 GW of power.",
+      "why_it_matters": "This highlights a growing trend where local infrastructure and power constraints are becoming a material risk to the hyperscale expansion plans of major cloud providers.",
+      "interpretation": "The scale of this pushback suggests that the 'AI-first' infrastructure strategy is hitting a wall of local democratic resistance, forcing companies to navigate community-level energy politics rather than just capital allocation.",
+      "confidence": 0.95,
+      "source": "Rafe Rosner-Uddin/Financial Times",
+      "discovered_via": "Techmeme",
+      "source_title": "Analysis: Amazon's $17B+ planned investment in Ohio data centers is at risk after midterm voters passed restriction measures affecting three proposed projects (Rafe Rosner-Uddin/Financial Times)",
+      "url": "https://www.ft.com/content/e95adad4-b428-477d-9716-92172bbd199f",
+      "discovery_url": "https://www.techmeme.com/261117/p1",
+      "link_quality": "original",
+      "published_at": "2026-11-17T05:40:01.000Z",
+      "discovery_score": 7.44
+    },
+    {
+      "category": "ai",
+      "headline": "Chinese industrial AI shifts to model distillation",
+      "confirmed_fact": "A review of over 300 Chinese documents confirms that industrial-scale 'distillation'—using outputs from U.S. frontier models like GPT-4 to train smaller domestic models—is now explicitly supported by Beijing's national AI+Manufacturing policy.",
+      "why_it_matters": "While distillation is a standard machine learning technique, its use at this scale suggests a shift in how domestic AI ecosystems are being built to bypass the limitations imposed by U.S. hardware export controls.",
+      "interpretation": "This is a clever workaround. If you cannot get the latest chips to train a frontier model from scratch, you simply use the output of a foreign model to teach your own smaller, more efficient ones.",
+      "confidence": 0.92,
+      "source": "Reuters",
+      "discovered_via": "Techmeme",
+      "source_title": "A review of 300+ Chinese documents shows AI distillation has moved from academic experiments to widespread industrial use, with Beijing encouraging the practice (Reuters)",
+      "url": "https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/",
+      "discovery_url": "https://www.techmeme.com/261117/p4",
+      "link_quality": "original",
+      "published_at": "2026-11-17T07:30:01.000Z",
+      "discovery_score": 7.756
+    },
+    {
+      "category": "technology",
+      "headline": "Windows 11 telemetry flags AI coding agents",
+      "confirmed_fact": "Research shows a Windows 11 system component tracks the execution of specific AI coding agents and developer tools, logging their presence locally for Windows Diagnostics.",
+      "why_it_matters": "For developers and enterprise security teams, this confirms that the OS is actively monitoring the software stack, even if the data collected is limited to tool presence rather than session content.",
+      "interpretation": "It is a reminder that your operating system is increasingly aware of your 'AI-assisted' workflow. Whether this is for performance optimisation or something else, it is a feature that many users likely did not realise they were opting into.",
+      "confidence": 0.88,
+      "source": "xusheng.dev",
+      "discovered_via": "Hacker News",
+      "source_title": "Windows 11 is collecting data on which coding agents and developer tools you use",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50524736",
+      "link_quality": "original",
+      "published_at": "2026-11-16T22:58:20.000Z",
+      "discovery_score": 8.231
+    },
+    {
+      "category": "technology",
+      "headline": "Microsoft blames July update for global outage",
+      "confirmed_fact": "Microsoft identified a latent software bug introduced in a July 2026 update to network gateway servers as the root cause of the November 12–14 global outage affecting Exchange, Teams, and Copilot.",
+      "why_it_matters": "The incident highlights the fragility of complex, interconnected cloud infrastructure where a single defect can remain dormant for months before triggering a massive service failure.",
+      "interpretation": "A bug that survives for four months before breaking the world is a sobering example of how difficult it is to maintain 'always-on' enterprise systems.",
+      "confidence": 0.9,
+      "source": "theregister.com",
+      "discovered_via": "Hacker News",
+      "source_title": "Microsoft blames monster email outage on software defect introduced in July fix",
+      "url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026",
+      "discovery_url": "https://news.ycombinator.com/item?id=50517321",
+      "link_quality": "original",
+      "published_at": "2026-11-16T13:18:22.000Z",
+      "discovery_score": 7.508
+    }
+  ],
+  "practical_takeaway": "Review your local infrastructure and energy planning if you are involved in large-scale data deployments, as community-led restrictions are becoming a significant hurdle. For developers, be aware that Windows 11 is logging the use of AI coding tools; check your 'Optional Diagnostic Data' settings if you prefer to limit this telemetry.",
+  "watch_next": "Monitor whether other U.S. states follow Ohio's lead in restricting data center power consumption, and watch for any further regulatory responses to the industrial-scale distillation of U.S. AI models.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 077",
+      "title": "Our Family Flag Studio",
+      "summary": "Design a personalised family flag with layouts, colours, symbols, initials and a motto, then save a private gallery or download a PNG.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-077/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-077/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-17",
+    "lead_headline": "Voter backlash stalls Amazon's Ohio data center expansion",
+    "facebook_post": "Voter backlash stalls Amazon's Ohio data center expansion\n\nThis highlights a growing trend where local infrastructure and power constraints are becoming a material risk to the hyperscale expansion plans of major cloud providers.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Voter backlash stalls Amazon's Ohio data center expansion",
+    "pinterest_description": "This highlights a growing trend where local infrastructure and power constraints are becoming a material risk to the hyperscale expansion plans of major cloud providers.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Voter backlash stalls Amazon's Ohio data center expansion. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Voter backlash stalls Amazon's Ohio data center expansion. Voters in Ohio passed 21 local ballot initiatives restricting large-scale data center developments, directly blocking three major AWS projects that would have consumed approximately 1.8 GW of power. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "9aa8db36fe56de7275dc6f43173c4b2f7778ed21566e2421038103b030104c65"
+}

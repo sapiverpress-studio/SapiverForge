@@ -1,0 +1,96 @@
+# Sapiver Forge Evidence Desk: Verification Briefing (2026-11-17 UK Morning Briefing)
+
+---
+
+## Out-of-Scope Candidates
+The following candidates fall outside the editorial scope (covering AI, technology, digital business, tech regulation, and scientific computing) and are **not recommended**:
+* **[2] JPMorgan Chase banking technical issue** (General banking infrastructure outage)
+* **[3] BugMeNot closure** (Niche web utility service update)
+* **[7] Frame 31.5" ePaper display** (Consumer hardware display gadget)
+* **[9] Optimizely malware infection** (Specific web application security breach)
+* **[10] Jiff 1.0 Rust datetime library** (Routine software library release)
+
+---
+
+## Evidence Notes for Strongest In-Scope Candidates
+
+### Candidate [8]: Reuters Investigation on Chinese AI Distillation of US Models
+* **What is confirmed:** A Reuters review of over 300 Chinese academic papers, corporate filings, patents, and government documents revealed that AI model "distillation"—using outputs from frontier US models (such as OpenAI's o1, GPT-4, and GPT-4o) to train smaller, cheaper domestic models (e.g., Alibaba's Qwen)—has moved from academic experimentation into industrial-scale production in China. The practice is explicitly supported by Beijing's national AI+Manufacturing policy guidelines issued in January.
+* **Important caveats:** Knowledge distillation is a standard machine learning technique globally and is not illegal under current U.S. export law, though U.S. officials argue industrial-scale distillation circumvents the intent of hardware export controls and violates API terms of service. Distillation transfers specific task capabilities to smaller student models but does not replicate full frontier model architecture or eliminate the need for base compute.
+* **Suitable for publication today:** **YES.** High-impact exclusive investigation with direct consequences for global AI policy, trade regulations, and U.S.-China chip controls.
+
+---
+
+### Candidate [1]: Windows 11 Telemetry Tracking AI Coding Agents & Developer Tools
+* **What is confirmed:** Reverse-engineering research published by developer Xusheng Li reveals that a Windows 11 system component (`MissionControlAggregator.dll`, under feature flag `CLICodingAgentUsage`) explicitly checks for the execution of AI coding agents (`claude.exe`, `copilot.exe`, `codex.exe`, `cursor.exe`, `antigravity.exe`, `agy.exe`) and standard developer tools (`python.exe`, `dotnet.exe`, `gcc.exe`, etc.). It logs a presence bitmap locally and queues it for Windows Diagnostics.
+* **Important caveats:** The telemetry collects tool presence (binary flags indicating whether a tool ran), **not** prompt history, source code, or session transcripts. Transmitting this data to Microsoft requires "Optional Diagnostic Data" to be enabled, though researchers note Optional Diagnostics was turned on by default in clean U.S. ISO installs. Microsoft has not issued an official public statement.
+* **Suitable for publication today:** **YES.** Highly relevant for developers, enterprise IT security leads, and data privacy officers.
+
+---
+
+### Candidate [11]: Nvidia Unveils Rubin HPC GPU at Supercomputing 2026
+* **What is confirmed:** At the Supercomputing 2026 (SC26) conference, Nvidia announced the "Rubin HPC" GPU, a specialized processor designed for agentic scientific workflows and complex simulations. Nvidia revealed the chip packs "more than 50,000" CUDA cores (up from 28,672 in the base Rubin GPU) and utilizes NVLink 7 interconnect technology.
+* **Important caveats:** The GPU is not scheduled to ship until **2028**. Nvidia did not disclose crucial High-Bandwidth Memory (HBM) capacity, memory bandwidth, native FP64 compute performance, or thermal power specs during the announcement.
+* **Suitable for publication today:** **YES.** Major hardware roadmap announcement from the leading AI semiconductor vendor.
+
+---
+
+### Candidate [14]: FT Analysis: Amazon's $17B+ Ohio Data Center Investment Threatened by Voter Backlash
+* **What is confirmed:** Financial Times research and data from regulatory platform Regbase confirm that Amazon Web Services' planned $17B+ data center expansion across Ohio is facing severe obstacles after voters backed 21 local ballot initiatives restricting large-scale data center developments during the November 2026 midterm elections. At least three major AWS projects (consuming ~1.8 GW of power) are directly affected by local bans or moratoriums.
+* **Important caveats:** The $17B+ figure represents aggregated long-term capital allocation across multiple proposed campuses, excluding server hardware. Amazon has not cancelled its overall regional strategy, but local charter amendments (such as power consumption caps in Sunbury, OH) block current site approvals.
+* **Suitable for publication today:** **YES.** Strong analytical story on public opposition constraining hyperscale AI infrastructure buildouts.
+
+---
+
+### Candidate [12]: U.S. Commerce Dept Details 2024 Probe into Nvidia Partner Megaspeed
+* **What is confirmed:** The U.S. Department of Commerce and Department of Justice issued a joint statement confirming that federal authorities opened an investigation into Singapore-based cloud provider Megaspeed in 2024 over suspected export control violations. The statement confirms Nvidia placed Megaspeed on its internal "no sell" list in June 2025 following Commerce inquiries.
+* **Important caveats:** Megaspeed denies all allegations of illegal chip diversion to China and maintains its business is lawful. Federal agencies have disclosed their regulatory timeline, but the government investigation remains open without formal criminal indictments against the company.
+* **Suitable for publication today:** **YES.** High-profile regulatory update surrounding AI export enforcement and Nvidia's supply chain partners.
+
+---
+
+### Candidate [5]: Meta Modifies Instagram Recommendation Systems in India
+* **What is confirmed:** Meta announced on November 16/17, 2026, that it updated Instagram's recommendation algorithms specifically in India to reduce the automated promotion of sexually suggestive and violent content from accounts users do not follow. The change follows an October advisory from India's Ministry of Electronics and Information Technology demanding stricter oversight of recommendation algorithms.
+* **Important caveats:** The update alters algorithmic recommendation feeds (Explore, Reels, Feed suggestions) rather than enforcing a complete ban on user-posted content. Meta claims Indian user reports of unwanted recommended content dropped by half over the past year, though it provided no raw verification metrics.
+* **Suitable for publication today:** **YES.** Significant update on AI recommendation governance and platform compliance in a key global market.
+
+---
+
+### Candidate [0]: Carnegie Mellon Launches "CS Learn" Free Online Platform
+* **What is confirmed:** Carnegie Mellon University's Griffin School of Computer Science officially launched "CS Learn," releasing full-semester lecture playlists from flagship computer science courses on YouTube for free. Initial offerings include *Principles of Computing*, *Generative AI*, *AI Agents*, *Machine Learning Systems*, and *Machine Learning in Production*.
+* **Important caveats:** The free YouTube platform provides video lecture content only. Official course grading, assignments, interactive feedback, and university credentials remain restricted to enrolled degree students via CMU Online.
+* **Suitable for publication today:** **YES.** High-value educational access story from a top-tier computer science institution.
+
+---
+
+### Candidate [13]: Microsoft Details Root Cause of Global Microsoft 365 / Exchange Outage
+* **What is confirmed:** Microsoft issued a preliminary incident post-mortem attributing the major November 12–14 global outage (which disabled Exchange Online, Outlook, Teams, and Copilot) to a latent software bug introduced in a July 2026 update to network gateway servers. This defect triggered internal connection failures and caused server capacity to become unresponsive under traffic loads.
+* **Important caveats:** Microsoft confirmed there is no evidence that the outage was caused by a cyberattack or malicious breach. Core services were restored over the preceding weekend.
+* **Suitable for publication today:** **YES.** Essential infrastructure reliability update for enterprise cloud operations.
+
+---
+
+### Candidate [4]: AI Startup Numa Raises $45M Series C for Dealership Automation
+* **What is confirmed:** Oakland-based Numa announced a $45 million Series C funding round led by Blue Cloud Ventures, with participation from Threshold Ventures, Costanoa Ventures, Gradient Ventures, and Tokio Marine. Numa provides AI agents that connect to car dealership software to automate customer communications, service bookings, and warranty paperwork.
+* **Important caveats:** The reported $500 million post-money valuation comes from a source familiar with the deal cited in press coverage, rather than explicit line items in the press release.
+* **Suitable for publication today:** **YES.** Standard, well-corroborated enterprise AI funding item.
+
+---
+
+### Candidate [15]: Meta Tests Standalone Instagram Messaging App "Direct"
+* **What is confirmed:** Meta confirmed it is testing "Direct," a standalone messaging app built on Instagram's DM infrastructure, in Thailand and Turkey. Unlike previous iterations, users can sign up for Direct using a phone number or email address without needing an active Instagram account.
+* **Important caveats:** Meta previously tested a standalone app called "Direct" in 2017 before shutting it down. The current trial is limited geographically, and Meta has not announced a global rollout timeline.
+* **Suitable for publication today:** **YES.** Relevant digital business and mobile app strategy news.
+
+---
+
+### Candidate [6]: ModelRepublic Investigation on Urban Legend Influencer Campaigns
+* **What is confirmed:** An investigation published by ModelRepublic (Philip Dowdell) analyzed ~1,400 influencer campaigns tracked on the "Urban Legend" platform. Findings show paid creators posted tracked links advocating pro-AI state legislation, US crypto policy (the CLARITY Act), and messaging advocating for Nvidia H200 chip sales to China.
+* **Important caveats:** ModelRepublic is an independent investigative outlet/newsletter. Campaigns rely on affiliate-style link tracking; funding paths stem from complex advocacy groups and political action networks rather than direct company press disclosures.
+* **Suitable for publication today:** **YES.** Useful intelligence on tech advocacy and influence operations.
+
+---
+
+### Candidates [16]–[19]: Hugging Face AI Research Preprints (*InclusionMed, SALA, SWE-CoWork, Sage S2.1 Flash*)
+* **Status:** IN SCOPE (AI Research Preprints)
+* **Caveat:** Per editorial policy, Hugging Face paper summaries reflect uncorroborated claims made by paper authors. While valuable signals for technical research trends, preprints without commercial implementation or external peer-review verification rank lower for general publication than the corroborated enterprise and policy news items above.

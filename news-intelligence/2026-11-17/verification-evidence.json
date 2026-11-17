@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-17",
+  "status": "editorially_source_checked_draft",
+  "verified_on": "2026-11-17",
+  "sources": [
+    {
+      "story": 1,
+      "publisher": "Financial Times",
+      "date": "2026-11-17",
+      "url": "https://www.ft.com/content/e95adad4-b428-477d-9716-92172bbd199f",
+      "check": "FT and Regbase report 21 Ohio measures, three Amazon projects under threat, >$17bn planned spending and ~1.8GW potential demand",
+      "caveat": "Restrictions may delay or cancel projects; not all three have been permanently blocked"
+    },
+    {
+      "story": 1,
+      "publisher": "Ohio News",
+      "date": "2026-11-06",
+      "url": "https://www.ohio.news/stories/voters-approve-all-21-local-data-center-measures-across-ohio/",
+      "check": "Independent coverage reports approval of 21 local measures across 18 Ohio communities",
+      "caveat": "Local measures vary in legal effect"
+    },
+    {
+      "story": 1,
+      "publisher": "Ohio Statehouse News Bureau",
+      "date": "2026-11-10",
+      "url": "https://www.statenews.org/section/the-ohio-newsroom/2026-11-10/heres-how-every-data-center-related-ballot-measure-fared-in-ohio",
+      "check": "Documents different types of restrictions and preliminary nature of local election results",
+      "caveat": "Ballot measures should not all be described as bans"
+    },
+    {
+      "story": 2,
+      "publisher": "Reuters",
+      "date": "2026-11-17",
+      "url": "https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/",
+      "check": "Review of 300+ documents; named projects using US-model outputs; China supports distillation generally",
+      "caveat": "National policy does not specifically instruct distillation of American models; neither legality nor total hardware independence is established"
+    },
+    {
+      "story": 3,
+      "publisher": "Xusheng Li, independent reverse engineering",
+      "date": "2026-11-16",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+      "check": "Tool-presence bitmaps and optional diagnostic upload queue demonstrated on test environment",
+      "caveat": "Not active on all tested Windows builds; no prompt or source-code content found in this report"
+    },
+    {
+      "story": 3,
+      "publisher": "Microsoft Learn",
+      "date": "accessed 2026-11-17",
+      "url": "https://learn.microsoft.com/en-us/windows/privacy/windows-diagnostic-data",
+      "check": "Microsoft documentation explains Windows optional diagnostic data and activity collection",
+      "caveat": "Does not independently confirm Li’s specific unpublished component analysis"
+    },
+    {
+      "story": 4,
+      "publisher": "The Register",
+      "date": "2026-11-16",
+      "url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026",
+      "check": "Reports Microsoft preliminary PIR; July gateway defect, Teams failover, 14% missing capacity",
+      "caveat": "Preliminary report; final analysis expected"
+    },
+    {
+      "story": 4,
+      "publisher": "Expert Insights",
+      "date": "2026-11-16",
+      "url": "https://expertinsights.com/news/microsoft-365-outage-post-incident-report",
+      "check": "Confirms incident IDs and combined-root-cause explanation citing Microsoft preliminary PIR",
+      "caveat": "Some dependent services remained available; impact varied"
+    }
+  ],
+  "review_notes": [
+    "Original ZIP is over importer max and contained unsupported categorical statements.",
+    "Repo discovery was 3/5 healthy; source checks use direct reporting independent of those discovery failures.",
+    "Promotional landing-page source files exist in SapiverForge main, but live production URLs could not be fetched independently.",
+    "This is a new candidate for human approval, not a sent email or published edition."
+  ]
+}

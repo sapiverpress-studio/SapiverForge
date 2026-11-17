@@ -56,79 +56,78 @@
   "newsletter_ready_for_human_approval": true,
   "quality_status": "ready_with_warnings",
   "quality_warnings": [
-    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+    "Reuters and Sifted feeds failed in the original discovery run (3/5 sources healthy). Four selected reports have separately checked source links.",
+    "Windows diagnostics finding is independent reverse-engineering on tested systems; not universal behaviour.",
+    "Microsoft 365 incident conclusions are preliminary; final incident report awaited.",
+    "Public availability of Sapiver Learn and AI Inquisitive Parents links was confirmed in the repository, not independently verified on the deployed website."
   ],
   "release_blockers": [],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-17",
-  "overall_confidence": 0.91,
+  "newsletter_subject": "Ohio data centres, AI distillation and Microsoft outages | Sapiver Forge",
+  "overall_confidence": 0.88,
   "stories": [
     {
       "category": "business",
-      "headline": "Voter backlash stalls Amazon's Ohio data center expansion",
-      "confirmed_fact": "Voters in Ohio passed 21 local ballot initiatives restricting large-scale data center developments, directly blocking three major AWS projects that would have consumed approximately 1.8 GW of power.",
-      "why_it_matters": "This highlights a growing trend where local infrastructure and power constraints are becoming a material risk to the hyperscale expansion plans of major cloud providers.",
-      "interpretation": "The scale of this pushback suggests that the 'AI-first' infrastructure strategy is hitting a wall of local democratic resistance, forcing companies to navigate community-level energy politics rather than just capital allocation.",
-      "confidence": 0.95,
-      "source": "Rafe Rosner-Uddin/Financial Times",
+      "headline": "Ohio votes put three Amazon data-centre plans at risk",
+      "confirmed_fact": "Ohio voters backed 21 local measures restricting or scrutinising data-centre developments in the 3 November election. Financial Times research identifies three affected Amazon projects, representing more than $17 billion in planned spending and roughly 1.8 gigawatts of proposed power demand. The projects face potential delay or cancellation; they have not all been definitively stopped.",
+      "why_it_matters": "Planning consent, electricity demand and local trust can disrupt infrastructure investment even when the financing is available. Residents have raised concerns about noise, pollution, energy costs and how projects are negotiated.",
+      "interpretation": "The immediate lesson is not that AI data-centre construction has stopped. It is that local consent has become a material project risk. Developers will need to demonstrate credible community benefits and explain their energy and water plans before expecting approval.",
+      "confidence": 0.93,
+      "source": "Financial Times",
       "discovered_via": "Techmeme",
-      "source_title": "Analysis: Amazon's $17B+ planned investment in Ohio data centers is at risk after midterm voters passed restriction measures affecting three proposed projects (Rafe Rosner-Uddin/Financial Times)",
+      "source_title": "Amazon's $17bn Ohio AI data centre bet threatened by voter backlash",
       "url": "https://www.ft.com/content/e95adad4-b428-477d-9716-92172bbd199f",
-      "discovery_url": "https://www.techmeme.com/261117/p1",
+      "discovery_url": "https://www.ft.com/content/e95adad4-b428-477d-9716-92172bbd199f",
       "link_quality": "original",
-      "published_at": "2026-11-17T05:40:01.000Z",
-      "discovery_score": 7.44
+      "published_at": "2026-11-17T05:00:06.000Z"
     },
     {
       "category": "ai",
-      "headline": "Chinese industrial AI shifts to model distillation",
-      "confirmed_fact": "A review of over 300 Chinese documents confirms that industrial-scale 'distillation'—using outputs from U.S. frontier models like GPT-4 to train smaller domestic models—is now explicitly supported by Beijing's national AI+Manufacturing policy.",
-      "why_it_matters": "While distillation is a standard machine learning technique, its use at this scale suggests a shift in how domestic AI ecosystems are being built to bypass the limitations imposed by U.S. hardware export controls.",
-      "interpretation": "This is a clever workaround. If you cannot get the latest chips to train a frontier model from scratch, you simply use the output of a foreign model to teach your own smaller, more efficient ones.",
-      "confidence": 0.92,
+      "headline": "Reuters traces how Chinese AI developers use US-model outputs",
+      "confirmed_fact": "Reuters examined more than 300 Chinese research papers, patents, company records and policy documents. It found examples of Chinese teams using outputs from US models, including OpenAI systems, to train smaller domestic models through distillation. Chinese industrial AI policy encourages distillation as a technique, but does not specifically direct companies to distil American models.",
+      "why_it_matters": "Distillation can transfer selected capabilities into cheaper systems and reduce some computing demands. It does not reproduce every capability of a frontier model or remove the need for advanced chips, and some uses can conflict with model-provider terms.",
+      "interpretation": "The hardware contest is only part of AI competition: access to high-quality training examples also matters. The evidence supports a growing industrial practice, not the stronger claim that distillation alone explains Chinese model advances or circumvents all export controls.",
+      "confidence": 0.93,
       "source": "Reuters",
       "discovered_via": "Techmeme",
-      "source_title": "A review of 300+ Chinese documents shows AI distillation has moved from academic experiments to widespread industrial use, with Beijing encouraging the practice (Reuters)",
+      "source_title": "China taps US AI models to train homegrown rivals as chip curbs bite",
       "url": "https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/",
-      "discovery_url": "https://www.techmeme.com/261117/p4",
+      "discovery_url": "https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/",
       "link_quality": "original",
-      "published_at": "2026-11-17T07:30:01.000Z",
-      "discovery_score": 7.756
+      "published_at": "2026-11-17T03:42:00.000Z"
     },
     {
       "category": "technology",
-      "headline": "Windows 11 telemetry flags AI coding agents",
-      "confirmed_fact": "Research shows a Windows 11 system component tracks the execution of specific AI coding agents and developer tools, logging their presence locally for Windows Diagnostics.",
-      "why_it_matters": "For developers and enterprise security teams, this confirms that the OS is actively monitoring the software stack, even if the data collected is limited to tool presence rather than session content.",
-      "interpretation": "It is a reminder that your operating system is increasingly aware of your 'AI-assisted' workflow. Whether this is for performance optimisation or something else, it is a feature that many users likely did not realise they were opting into.",
-      "confidence": 0.88,
-      "source": "xusheng.dev",
+      "headline": "Researcher finds coding-agent indicators in Windows diagnostics",
+      "confirmed_fact": "Independent researcher Xusheng Li analysed a Windows 11 diagnostics component and demonstrated that it can record whether certain coding agents and developer tools were observed. On a test system with optional diagnostic data enabled, he found a compact usage report queued for Microsoft. The feature was not active in every Windows image he tested.",
+      "why_it_matters": "Even a simple record of which tools run can reveal workplace preferences. The identified report used tool-presence flags; the investigation did not find prompts or source-code contents in that report.",
+      "interpretation": "This is a reason to review diagnostic settings, not evidence that every Windows 11 PC is sending coding-agent histories. Users can inspect Settings → Privacy & security → Diagnostics & feedback; organisations should also review managed-device policies.",
+      "confidence": 0.83,
+      "source": "Xusheng Li",
       "discovered_via": "Hacker News",
-      "source_title": "Windows 11 is collecting data on which coding agents and developer tools you use",
+      "source_title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
       "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
       "discovery_url": "https://news.ycombinator.com/item?id=50524736",
       "link_quality": "original",
-      "published_at": "2026-11-16T22:58:20.000Z",
-      "discovery_score": 8.231
+      "published_at": "2026-11-16T22:58:20.000Z"
     },
     {
       "category": "technology",
-      "headline": "Microsoft blames July update for global outage",
-      "confirmed_fact": "Microsoft identified a latent software bug introduced in a July 2026 update to network gateway servers as the root cause of the November 12–14 global outage affecting Exchange, Teams, and Copilot.",
-      "why_it_matters": "The incident highlights the fragility of complex, interconnected cloud infrastructure where a single defect can remain dormant for months before triggering a massive service failure.",
-      "interpretation": "A bug that survives for four months before breaking the world is a sobering example of how difficult it is to maintain 'always-on' enterprise systems.",
-      "confidence": 0.9,
-      "source": "theregister.com",
+      "headline": "Microsoft details three-factor cause of November email outage",
+      "confirmed_fact": "Microsoft's preliminary incident report links the 12–13 November disruption to three interacting conditions: a latent defect in a July change to Microsoft 365 gateway servers, extra traffic after a Teams gateway failover, and nearly 14% of gateway capacity being unavailable. Exchange Online mailbox access suffered most; other Microsoft 365 services experienced varying secondary effects.",
+      "why_it_matters": "The fault survived normal testing and deployment but became disruptive under a workload and hardware combination the tests had not covered. Some services failed over to other gateways, while Exchange Online could not do so at the required scale.",
+      "interpretation": "Resilience depends on realistic load tests and recovery routes as much as on avoiding code defects. This is a preliminary root-cause account, with a final report expected; it should not be described as a simple July-update failure of all Microsoft services.",
+      "confidence": 0.92,
+      "source": "The Register / Microsoft preliminary report",
       "discovered_via": "Hacker News",
       "source_title": "Microsoft blames monster email outage on software defect introduced in July fix",
       "url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026",
       "discovery_url": "https://news.ycombinator.com/item?id=50517321",
       "link_quality": "original",
-      "published_at": "2026-11-16T13:18:22.000Z",
-      "discovery_score": 7.508
+      "published_at": "2026-11-16T13:18:22.000Z"
     }
   ],
-  "practical_takeaway": "Review your local infrastructure and energy planning if you are involved in large-scale data deployments, as community-led restrictions are becoming a significant hurdle. For developers, be aware that Windows 11 is logging the use of AI coding tools; check your 'Optional Diagnostic Data' settings if you prefer to limit this telemetry.",
-  "watch_next": "Monitor whether other U.S. states follow Ohio's lead in restricting data center power consumption, and watch for any further regulatory responses to the industrial-scale distillation of U.S. AI models.",
+  "practical_takeaway": "If you manage a service that depends on Microsoft 365, check your fallback communication and recovery arrangements rather than assuming one provider will always be accessible. Windows users concerned about developer-tool telemetry can review optional diagnostic data under Settings → Privacy & security → Diagnostics & feedback. Infrastructure planners should include local consent, power and water impacts in project risk assessments.",
+  "watch_next": "Watch whether Amazon and developers contest or redesign the affected Ohio sites; whether regulators clarify permitted uses of distillation; whether Microsoft comments on the Windows diagnostic feature; and what its final Microsoft 365 incident report adds to the preliminary account.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -146,12 +145,17 @@
   },
   "social": {
     "date": "2026-11-17",
-    "lead_headline": "Voter backlash stalls Amazon's Ohio data center expansion",
-    "facebook_post": "Voter backlash stalls Amazon's Ohio data center expansion\n\nThis highlights a growing trend where local infrastructure and power constraints are becoming a material risk to the hyperscale expansion plans of major cloud providers.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Voter backlash stalls Amazon's Ohio data center expansion",
-    "pinterest_description": "This highlights a growing trend where local infrastructure and power constraints are becoming a material risk to the hyperscale expansion plans of major cloud providers.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Voter backlash stalls Amazon's Ohio data center expansion. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Voter backlash stalls Amazon's Ohio data center expansion. Voters in Ohio passed 21 local ballot initiatives restricting large-scale data center developments, directly blocking three major AWS projects that would have consumed approximately 1.8 GW of power. Read the Sapiver Forge Daily Brief."
+    "lead_headline": "Ohio votes put three Amazon data-centre plans at risk",
+    "facebook_post": "Ohio votes put three Amazon data-centre plans at risk\n\nOhio voters have backed 21 local measures affecting data-centre plans. The Financial Times identifies three proposed Amazon projects at risk of delays or cancellation — not confirmed cancellations.\n\nToday's Sapiver Forge Daily Brief also examines model distillation, Windows diagnostics and the Microsoft 365 outage.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Ohio data-centre votes put Amazon plans at risk",
+    "pinterest_description": "Three planned Amazon sites face uncertainty after local Ohio votes. Read the evidence, caveats and four-story Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Ohio votes put three planned Amazon data centres at risk, but do not prove all projects were cancelled. Sources and context in today's brief. #SapiverForge #DataCentres #AIInfrastructure",
+    "spoken_script": "Ohio voters backed 21 local measures concerning data centres. Financial Times reporting identifies three planned Amazon projects facing delays or cancellation, representing more than seventeen billion dollars in proposed investment. They have not all been definitively blocked. Today's Sapiver Forge Daily Brief has the details."
   },
-  "candidate_id": "9aa8db36fe56de7275dc6f43173c4b2f7778ed21566e2421038103b030104c65"
+  "editorial_revision": {
+    "date": "2026-11-17",
+    "scope": "Revised four stories, email, social and detailed-story scripts against cited public reporting; never auto-distribute",
+    "prior_brevo_draft_id": 119
+  },
+  "candidate_id": "578a0b28b466e0116d9edd2f15412a7817c86c01c2c23f1c18b783ba20844ca4"
 }

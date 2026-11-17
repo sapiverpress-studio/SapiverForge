@@ -2,7 +2,7 @@
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T10:00:28.992Z",
+  "generated_at": "2026-11-17T15:56:36.889Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 323,
+      "elapsed_ms": 472,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,14 +23,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 191,
+      "elapsed_ms": 282,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 324,
+      "elapsed_ms": 589,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -38,7 +38,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 194,
+      "elapsed_ms": 220,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1505,
+      "elapsed_ms": 1814,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -56,78 +56,95 @@
   "newsletter_ready_for_human_approval": true,
   "quality_status": "ready_with_warnings",
   "quality_warnings": [
-    "Reuters and Sifted feeds failed in the original discovery run (3/5 sources healthy). Four selected reports have separately checked source links.",
-    "Windows diagnostics finding is independent reverse-engineering on tested systems; not universal behaviour.",
-    "Microsoft 365 incident conclusions are preliminary; final incident report awaited.",
-    "Public availability of Sapiver Learn and AI Inquisitive Parents links was confirmed in the repository, not independently verified on the deployed website."
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
   ],
   "release_blockers": [],
-  "newsletter_subject": "Ohio data centres, AI distillation and Microsoft outages | Sapiver Forge",
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-17",
   "overall_confidence": 0.88,
   "stories": [
     {
-      "category": "business",
-      "headline": "Ohio votes put three Amazon data-centre plans at risk",
-      "confirmed_fact": "Ohio voters backed 21 local measures restricting or scrutinising data-centre developments in the 3 November election. Financial Times research identifies three affected Amazon projects, representing more than $17 billion in planned spending and roughly 1.8 gigawatts of proposed power demand. The projects face potential delay or cancellation; they have not all been definitively stopped.",
-      "why_it_matters": "Planning consent, electricity demand and local trust can disrupt infrastructure investment even when the financing is available. Residents have raised concerns about noise, pollution, energy costs and how projects are negotiated.",
-      "interpretation": "The immediate lesson is not that AI data-centre construction has stopped. It is that local consent has become a material project risk. Developers will need to demonstrate credible community benefits and explain their energy and water plans before expecting approval.",
-      "confidence": 0.93,
-      "source": "Financial Times",
-      "discovered_via": "Techmeme",
-      "source_title": "Amazon's $17bn Ohio AI data centre bet threatened by voter backlash",
-      "url": "https://www.ft.com/content/e95adad4-b428-477d-9716-92172bbd199f",
-      "discovery_url": "https://www.ft.com/content/e95adad4-b428-477d-9716-92172bbd199f",
-      "link_quality": "original",
-      "published_at": "2026-11-17T05:00:06.000Z"
-    },
-    {
       "category": "ai",
-      "headline": "Reuters traces how Chinese AI developers use US-model outputs",
-      "confirmed_fact": "Reuters examined more than 300 Chinese research papers, patents, company records and policy documents. It found examples of Chinese teams using outputs from US models, including OpenAI systems, to train smaller domestic models through distillation. Chinese industrial AI policy encourages distillation as a technique, but does not specifically direct companies to distil American models.",
-      "why_it_matters": "Distillation can transfer selected capabilities into cheaper systems and reduce some computing demands. It does not reproduce every capability of a frontier model or remove the need for advanced chips, and some uses can conflict with model-provider terms.",
-      "interpretation": "The hardware contest is only part of AI competition: access to high-quality training examples also matters. The evidence supports a growing industrial practice, not the stronger claim that distillation alone explains Chinese model advances or circumvents all export controls.",
-      "confidence": 0.93,
-      "source": "Reuters",
+      "headline": "Nvidia leadership to face closed-door US House interviews",
+      "confirmed_fact": "Former Nvidia CEO Jensen Huang and General Counsel Tim Teter have agreed to transcribed interviews with three US House committees on December 1 and 2 regarding AI chip export controls and national security.",
+      "why_it_matters": "The proceedings signal heightened legislative focus on how advanced AI hardware reaches restricted markets, potentially impacting future export compliance strategies.",
+      "interpretation": "The move to closed-door interviews suggests a desire for granular technical and operational detail rather than a public spectacle, likely to better understand the complexities of global supply chain oversight.",
+      "confidence": 0.95,
+      "source": "Garrett Downs/CNBC",
       "discovered_via": "Techmeme",
-      "source_title": "China taps US AI models to train homegrown rivals as chip curbs bite",
-      "url": "https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/",
-      "discovery_url": "https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/",
+      "source_title": "Jensen Huang will appear before the House Foreign Affairs, Intelligence, and China Select Committees on December 1, per the leaders of the panels (Garrett Downs/CNBC)",
+      "url": "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html",
+      "discovery_url": "https://www.techmeme.com/261117/p31",
       "link_quality": "original",
-      "published_at": "2026-11-17T03:42:00.000Z"
+      "published_at": "2026-11-17T15:30:03.000Z",
+      "discovery_score": 8.002
+    },
+    {
+      "category": "business",
+      "headline": "Anthropic IPO signals strong investor appetite",
+      "confirmed_fact": "Anthropic is signaling to investors that its IPO is expected to price at or above the top of its $70–$78 range, with the book-building process reportedly oversubscribed by 6 to 7 times.",
+      "why_it_matters": "The intense demand highlights the market's continued valuation of frontier AI labs, despite the significant capital requirements and regulatory uncertainties inherent in the sector.",
+      "interpretation": "The heavy oversubscription suggests that institutional investors are prioritising exposure to foundational AI models, even as the company faces scrutiny over its long-term profitability and strategic dependencies.",
+      "confidence": 0.9,
+      "source": "Bloomberg",
+      "discovered_via": "Techmeme",
+      "source_title": "Sources: Anthropic is guiding prospective IPO investors that it expects to price its shares at or above the high end of its $70 to $78 marketed range (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/anthropic-is-said-to-guide-ipo-price-to-top-of-range-or-above",
+      "discovery_url": "https://www.techmeme.com/261117/p28",
+      "link_quality": "original",
+      "published_at": "2026-11-17T14:40:01.000Z",
+      "discovery_score": 7.728
     },
     {
       "category": "technology",
-      "headline": "Researcher finds coding-agent indicators in Windows diagnostics",
-      "confirmed_fact": "Independent researcher Xusheng Li analysed a Windows 11 diagnostics component and demonstrated that it can record whether certain coding agents and developer tools were observed. On a test system with optional diagnostic data enabled, he found a compact usage report queued for Microsoft. The feature was not active in every Windows image he tested.",
-      "why_it_matters": "Even a simple record of which tools run can reveal workplace preferences. The identified report used tool-presence flags; the investigation did not find prompts or source-code contents in that report.",
-      "interpretation": "This is a reason to review diagnostic settings, not evidence that every Windows 11 PC is sending coding-agent histories. Users can inspect Settings → Privacy & security → Diagnostics & feedback; organisations should also review managed-device policies.",
-      "confidence": 0.83,
-      "source": "Xusheng Li",
-      "discovered_via": "Hacker News",
-      "source_title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
-      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50524736",
+      "headline": "Mexico’s data centre ambitions hit by grid constraints",
+      "confirmed_fact": "Mexico currently hosts only 71 of Latin America’s 500+ data centres, with growth hampered by inadequate electricity grid expansion and bureaucratic permitting delays.",
+      "why_it_matters": "The physical infrastructure required to support AI expansion is not guaranteed; energy and regulatory bottlenecks can effectively stall regional growth regardless of geographic proximity to major markets.",
+      "interpretation": "This serves as a reminder that the AI boom is tethered to the unglamorous reality of power grids and planning permission, which are proving to be more significant barriers than the availability of capital.",
+      "confidence": 0.85,
+      "source": "Alex Vasquez/Bloomberg",
+      "discovered_via": "Techmeme",
+      "source_title": "Mexico is struggling to attract data centers despite its proximity to the US, hosting just 71 of LatAm's 500+ sites, due to a slow grid expansion and red tape (Alex Vasquez/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/features/2026-11-17/mexico-is-missing-out-on-ai-data-center-boom-as-energy-crunch-bites",
+      "discovery_url": "https://www.techmeme.com/261117/p30",
       "link_quality": "original",
-      "published_at": "2026-11-16T22:58:20.000Z"
+      "published_at": "2026-11-17T15:20:02.000Z",
+      "discovery_score": 7.915
     },
     {
       "category": "technology",
-      "headline": "Microsoft details three-factor cause of November email outage",
-      "confirmed_fact": "Microsoft's preliminary incident report links the 12–13 November disruption to three interacting conditions: a latent defect in a July change to Microsoft 365 gateway servers, extra traffic after a Teams gateway failover, and nearly 14% of gateway capacity being unavailable. Exchange Online mailbox access suffered most; other Microsoft 365 services experienced varying secondary effects.",
-      "why_it_matters": "The fault survived normal testing and deployment but became disruptive under a workload and hardware combination the tests had not covered. Some services failed over to other gateways, while Exchange Online could not do so at the required scale.",
-      "interpretation": "Resilience depends on realistic load tests and recovery routes as much as on avoiding code defects. This is a preliminary root-cause account, with a final report expected; it should not be described as a simple July-update failure of all Microsoft services.",
-      "confidence": 0.92,
-      "source": "The Register / Microsoft preliminary report",
+      "headline": "Microsoft attributes M365 outage to latent software bug",
+      "confirmed_fact": "Microsoft reported that last week's global M365/Exchange Online outage was caused by a software defect from a July 2026 update, triggered by a Teams network failover and a 14% drop in gateway capacity.",
+      "why_it_matters": "The incident highlights the fragility of complex, interconnected cloud environments where dormant code can cause cascading failures months after deployment.",
+      "interpretation": "It is a sobering example of how even minor updates can create long-term operational debt, leaving enterprise systems vulnerable to failures that are difficult to predict or prevent.",
+      "confidence": 0.9,
+      "source": "theregister.com",
       "discovered_via": "Hacker News",
       "source_title": "Microsoft blames monster email outage on software defect introduced in July fix",
       "url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026",
       "discovery_url": "https://news.ycombinator.com/item?id=50517321",
       "link_quality": "original",
-      "published_at": "2026-11-16T13:18:22.000Z"
+      "published_at": "2026-11-16T13:18:22.000Z",
+      "discovery_score": 7.341
+    },
+    {
+      "category": "research",
+      "headline": "Coding agents often 'over-verify' their own work",
+      "confirmed_fact": "Research into five coding LLMs shows that agents frequently generate correct fixes early but spend 35–60% of their remaining steps over-verifying or exploring, sometimes undoing their own correct patches.",
+      "why_it_matters": "This 'termination lag' suggests that current AI agents are inefficient at recognising when a task is complete, leading to wasted compute and potential regression errors.",
+      "interpretation": "The findings suggest that the current focus on model capability is missing a crucial piece of the puzzle: knowing when to stop. It is a bit like a student who finishes the exam early but keeps erasing and rewriting the answers until they get them wrong.",
+      "confidence": 0.8,
+      "source": "Hugging Face",
+      "discovered_via": "Hugging Face",
+      "source_title": "Termination Lag: Coding Agents Solve Early but Stop Late",
+      "url": "https://huggingface.co/papers/2611.14960",
+      "discovery_url": "https://huggingface.co/papers/2611.14960",
+      "link_quality": "original",
+      "published_at": "2026-11-10T19:00:00.000Z",
+      "discovery_score": 6.051
     }
   ],
-  "practical_takeaway": "If you manage a service that depends on Microsoft 365, check your fallback communication and recovery arrangements rather than assuming one provider will always be accessible. Windows users concerned about developer-tool telemetry can review optional diagnostic data under Settings → Privacy & security → Diagnostics & feedback. Infrastructure planners should include local consent, power and water impacts in project risk assessments.",
-  "watch_next": "Watch whether Amazon and developers contest or redesign the affected Ohio sites; whether regulators clarify permitted uses of distillation; whether Microsoft comments on the Windows diagnostic feature; and what its final Microsoft 365 incident report adds to the preliminary account.",
+  "practical_takeaway": "Infrastructure and operational reliability remain the most significant 'real-world' risks for AI adoption. When planning for AI integration, assume that energy availability and cloud stability are not guaranteed, and monitor agent-based workflows for 'termination lag' to avoid unnecessary compute costs or accidental code regressions.",
+  "watch_next": "Monitor the December 1-2 House committee interviews with Nvidia leadership for any shifts in export control language, as these could signal upcoming changes to the regulatory environment for AI hardware.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -145,17 +162,12 @@
   },
   "social": {
     "date": "2026-11-17",
-    "lead_headline": "Ohio votes put three Amazon data-centre plans at risk",
-    "facebook_post": "Ohio votes put three Amazon data-centre plans at risk\n\nOhio voters have backed 21 local measures affecting data-centre plans. The Financial Times identifies three proposed Amazon projects at risk of delays or cancellation — not confirmed cancellations.\n\nToday's Sapiver Forge Daily Brief also examines model distillation, Windows diagnostics and the Microsoft 365 outage.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Ohio data-centre votes put Amazon plans at risk",
-    "pinterest_description": "Three planned Amazon sites face uncertainty after local Ohio votes. Read the evidence, caveats and four-story Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Ohio votes put three planned Amazon data centres at risk, but do not prove all projects were cancelled. Sources and context in today's brief. #SapiverForge #DataCentres #AIInfrastructure",
-    "spoken_script": "Ohio voters backed 21 local measures concerning data centres. Financial Times reporting identifies three planned Amazon projects facing delays or cancellation, representing more than seventeen billion dollars in proposed investment. They have not all been definitively blocked. Today's Sapiver Forge Daily Brief has the details."
+    "lead_headline": "Nvidia leadership to face closed-door US House interviews",
+    "facebook_post": "Nvidia leadership to face closed-door US House interviews\n\nThe proceedings signal heightened legislative focus on how advanced AI hardware reaches restricted markets, potentially impacting future export compliance strategies.\n\nToday's Sapiver Forge Daily Brief covers 5 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Nvidia leadership to face closed-door US House interviews",
+    "pinterest_description": "The proceedings signal heightened legislative focus on how advanced AI hardware reaches restricted markets, potentially impacting future export compliance strategies.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Nvidia leadership to face closed-door US House interviews. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Nvidia leadership to face closed-door US House interviews. Former Nvidia CEO Jensen Huang and General Counsel Tim Teter have agreed to transcribed interviews with three US House committees on December 1 and 2 regarding AI chip export controls and national security. Read the Sapiver Forge Daily Brief."
   },
-  "editorial_revision": {
-    "date": "2026-11-17",
-    "scope": "Revised four stories, email, social and detailed-story scripts against cited public reporting; never auto-distribute",
-    "prior_brevo_draft_id": 119
-  },
-  "candidate_id": "578a0b28b466e0116d9edd2f15412a7817c86c01c2c23f1c18b783ba20844ca4"
+  "candidate_id": "6c455d6ace52ee7f4c20793523b589433079746b3d874166382c8d0dceb58a63"
 }

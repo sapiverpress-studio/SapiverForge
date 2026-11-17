@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-17T09:59:41.933Z",
+  "collected_at": "2026-11-17T15:55:36.755Z",
   "expected_sources": [
     "Techmeme",
     "Reuters",
@@ -13,7 +13,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 323,
+      "elapsed_ms": 472,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -21,14 +21,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 191,
+      "elapsed_ms": 282,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 324,
+      "elapsed_ms": 589,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -36,7 +36,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 194,
+      "elapsed_ms": 220,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -44,11 +44,47 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1505,
+      "elapsed_ms": 1814,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
   "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "nytimes.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "New Evidence Shows School Phone Bans Are Gradually Improving Test Scores",
+      "url": "https://www.nytimes.com/2026/11/17/upshot/school-phone-bans-study-scores.html",
+      "direct_source_url": "https://www.nytimes.com/2026/11/17/upshot/school-phone-bans-study-scores.html",
+      "discovery_url": "https://news.ycombinator.com/item?id=50530163",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50530163",
+      "summary": "",
+      "published_at": "2026-11-17T11:45:51.000Z",
+      "engagement": {
+        "score": 598,
+        "comments": 305
+      },
+      "collection_mode": "api",
+      "score": 8.517
+    },
+    {
+      "title": "Codex, which lets businesses use stablecoins for cross-border payments across Asia, Latin America, and sub-Saharan Africa, raised a $30M Series A led by Pantera (Camila Grigera Naón/Fortune)",
+      "url": "https://fortune.com/2026/11/17/pantera-backed-codex-30-million-asia-global-markets-stablecoins/",
+      "summary": "Camila Grigera Na&oacute;n / Fortune : Codex, which lets businesses use stablecoins for cross-border payments across Asia, Latin America, and sub-Saharan Africa, raised a $30M Series A led by Pantera &mdash; Money might make the world go round&mdash;but that doesn't mean getting it around the world is easy.",
+      "description_html": "<A HREF=\"https://fortune.com/2026/11/17/pantera-backed-codex-30-million-asia-global-markets-stablecoins/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i32.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p32#a261117p32\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Camila Grigera Na&oacute;n / <A HREF=\"http://www.fortune.com/\">Fortune</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://fortune.com/2026/11/17/pantera-backed-codex-30-million-asia-global-markets-stablecoins/\">Codex, which lets businesses use stablecoins for cross-border payments across Asia, Latin America, and sub-Saharan Africa, raised a $30M Series A led by Pantera</A></B></SPAN>&nbsp; &mdash;&nbsp; Money might make the world go round&mdash;but that doesn't mean getting it around the world is easy.</P>",
+      "published_at": "2026-11-17T15:50:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261117/p32",
+      "direct_source_url": "https://fortune.com/2026/11/17/pantera-backed-codex-30-million-asia-global-markets-stablecoins/",
+      "publisher": "Camila Grigera Naón/Fortune",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.096
+    },
     {
       "source": "Hacker News",
       "publisher": "cs.cmu.edu",
@@ -63,57 +99,17 @@
       "summary": "",
       "published_at": "2026-11-16T20:43:36.000Z",
       "engagement": {
-        "score": 1504,
-        "comments": 207
+        "score": 1991,
+        "comments": 268
       },
       "collection_mode": "api",
-      "score": 8.297
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "xusheng.dev",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 3,
-      "title": "Windows 11 is collecting data on which coding agents and developer tools you use",
-      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
-      "direct_source_url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
-      "discovery_url": "https://news.ycombinator.com/item?id=50524736",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50524736",
-      "summary": "",
-      "published_at": "2026-11-16T22:58:20.000Z",
-      "engagement": {
-        "score": 601,
-        "comments": 443
-      },
-      "collection_mode": "api",
-      "score": 8.231
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "apnews.com",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 2,
-      "title": "Technical issue at JPMorgan Chase triggers online banking delays for US banks",
-      "url": "https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda",
-      "direct_source_url": "https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda",
-      "discovery_url": "https://news.ycombinator.com/item?id=50521045",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50521045",
-      "summary": "",
-      "published_at": "2026-11-16T18:31:30.000Z",
-      "engagement": {
-        "score": 775,
-        "comments": 647
-      },
-      "collection_mode": "api",
-      "score": 8.125
+      "score": 8.05
     },
     {
       "source": "Hacker News",
       "publisher": "bugmenot.com",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 4,
+      "source_rank": 2,
       "title": "BugMeNot has closed",
       "url": "https://www.bugmenot.com/",
       "direct_source_url": "https://www.bugmenot.com/",
@@ -123,101 +119,49 @@
       "summary": "",
       "published_at": "2026-11-16T21:32:17.000Z",
       "engagement": {
-        "score": 540,
-        "comments": 239
+        "score": 659,
+        "comments": 295
       },
       "collection_mode": "api",
-      "score": 8.091
+      "score": 8.004
     },
     {
-      "title": "Oakland-based Numa, which builds an AI platform to manage car dealership customer service, raised a $45M Series C, a source says at a $500M post-money valuation (Camila Grigera Naón/Fortune)",
-      "url": "https://fortune.com/2026/11/16/ai-startup-numa-45-million-car-dealerships-paperwork/",
-      "summary": "Camila Grigera Na&oacute;n / Fortune : Oakland-based Numa, which builds an AI platform to manage car dealership customer service, raised a $45M Series C, a source says at a $500M post-money valuation &mdash; Artificial intelligence promises to untangle the messy workflows that have long plagued legacy industries.",
-      "description_html": "<A HREF=\"https://fortune.com/2026/11/16/ai-startup-numa-45-million-car-dealerships-paperwork/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p7#a261117p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Camila Grigera Na&oacute;n / <A HREF=\"http://www.fortune.com/\">Fortune</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://fortune.com/2026/11/16/ai-startup-numa-45-million-car-dealerships-paperwork/\">Oakland-based Numa, which builds an AI platform to manage car dealership customer service, raised a $45M Series C, a source says at a $500M post-money valuation</A></B></SPAN>&nbsp; &mdash;&nbsp; Artificial intelligence promises to untangle the messy workflows that have long plagued legacy industries.</P>",
-      "published_at": "2026-11-17T09:20:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261117/p7",
-      "direct_source_url": "https://fortune.com/2026/11/16/ai-startup-numa-45-million-car-dealerships-paperwork/",
-      "publisher": "Camila Grigera Naón/Fortune",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 1,
-      "collection_mode": "rss",
-      "score": 8.072
-    },
-    {
-      "title": "Meta says it modified Instagram's recommendation systems in India to show less sexual and violent content, after New Delhi called for tighter content checks (Reuters)",
-      "url": "https://www.reuters.com/world/india/meta-says-it-tuned-instagram-curb-suggestive-violent-content-india-2026-11-17/",
-      "summary": "Reuters : Meta says it modified Instagram's recommendation systems in India to show less sexual and violent content, after New Delhi called for tighter content checks &mdash; Meta Platforms (META.O) said on Tuesday it had modified Instagram's recommendation systems specifically for India &hellip;",
-      "description_html": "<A HREF=\"https://www.reuters.com/world/india/meta-says-it-tuned-instagram-curb-suggestive-violent-content-india-2026-11-17/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i6.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p6#a261117p6\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/world/india/meta-says-it-tuned-instagram-curb-suggestive-violent-content-india-2026-11-17/\">Meta says it modified Instagram's recommendation systems in India to show less sexual and violent content, after New Delhi called for tighter content checks</A></B></SPAN>&nbsp; &mdash;&nbsp; Meta Platforms (META.O) said on Tuesday it had modified Instagram's recommendation systems specifically for India &hellip; </P>",
-      "published_at": "2026-11-17T09:10:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261117/p6",
-      "direct_source_url": "https://www.reuters.com/world/india/meta-says-it-tuned-instagram-curb-suggestive-violent-content-india-2026-11-17/",
-      "publisher": "Reuters",
+      "title": "Jensen Huang will appear before the House Foreign Affairs, Intelligence, and China Select Committees on December 1, per the leaders of the panels (Garrett Downs/CNBC)",
+      "url": "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html",
+      "summary": "Garrett Downs / CNBC : Jensen Huang will appear before the House Foreign Affairs, Intelligence, and China Select Committees on December 1, per the leaders of the panels &mdash; Choose CNBC as your preferred source on Google and never miss a moment from the most trusted name in business news. &hellip; - CNBC Councils",
+      "description_html": "<A HREF=\"https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i31.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p31#a261117p31\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Garrett Downs / <A HREF=\"http://www.cnbc.com/\">CNBC</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html\">Jensen Huang will appear before the House Foreign Affairs, Intelligence, and China Select Committees on December 1, per the leaders of the panels</A></B></SPAN>&nbsp; &mdash;&nbsp; Choose CNBC as your preferred source on Google and never miss a moment from the most trusted name in business news. &hellip; - CNBC Councils</P>",
+      "published_at": "2026-11-17T15:30:03.000Z",
+      "discovery_url": "https://www.techmeme.com/261117/p31",
+      "direct_source_url": "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-house-committee.html",
+      "publisher": "Garrett Downs/CNBC",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 2,
       "collection_mode": "rss",
-      "score": 7.985
+      "score": 8.002
     },
     {
-      "title": "A look at ~1,400 Urban Legend campaigns where right-wing influencers got paid to push crypto policy and Nvidia sales to China after the US approved H200 sales (ModelRepublic)",
-      "url": "https://www.modelrepublic.org/articles/nvidia-urban-legend-influencer-campaigns",
-      "summary": "ModelRepublic : A look at ~1,400 Urban Legend campaigns where right-wing influencers got paid to push crypto policy and Nvidia sales to China after the US approved H200 sales &mdash; Table of Contents The Network Bought Influencers, Bought Articles Who is behind the campaigns? Explore the data behind this investigation here.",
-      "description_html": "<A HREF=\"https://www.modelrepublic.org/articles/nvidia-urban-legend-influencer-campaigns\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p5#a261117p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.modelrepublic.org/\">ModelRepublic</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.modelrepublic.org/articles/nvidia-urban-legend-influencer-campaigns\">A look at ~1,400 Urban Legend campaigns where right-wing influencers got paid to push crypto policy and Nvidia sales to China after the US approved H200 sales</A></B></SPAN>&nbsp; &mdash;&nbsp; Table of Contents The Network Bought Influencers, Bought Articles Who is behind the campaigns?&nbsp; Explore the data behind this investigation here.</P>",
-      "published_at": "2026-11-17T08:55:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261117/p5",
-      "direct_source_url": "https://www.modelrepublic.org/articles/nvidia-urban-legend-influencer-campaigns",
-      "publisher": "ModelRepublic",
+      "title": "Mexico is struggling to attract data centers despite its proximity to the US, hosting just 71 of LatAm's 500+ sites, due to a slow grid expansion and red tape (Alex Vasquez/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/features/2026-11-17/mexico-is-missing-out-on-ai-data-center-boom-as-energy-crunch-bites",
+      "summary": "Alex Vasquez / Bloomberg : Mexico is struggling to attract data centers despite its proximity to the US, hosting just 71 of LatAm's 500+ sites, due to a slow grid expansion and red tape &mdash; An electricity grid in need of upgrades and permitting delays have made it harder for Mexico to attract data center investment despite its apparent advantages.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/features/2026-11-17/mexico-is-missing-out-on-ai-data-center-boom-as-energy-crunch-bites\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i30.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p30#a261117p30\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Alex Vasquez / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/features/2026-11-17/mexico-is-missing-out-on-ai-data-center-boom-as-energy-crunch-bites\">Mexico is struggling to attract data centers despite its proximity to the US, hosting just 71 of LatAm's 500+ sites, due to a slow grid expansion and red tape</A></B></SPAN>&nbsp; &mdash;&nbsp; An electricity grid in need of upgrades and permitting delays have made it harder for Mexico to attract data center investment despite its apparent advantages.</P>",
+      "published_at": "2026-11-17T15:20:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261117/p30",
+      "direct_source_url": "https://www.bloomberg.com/news/features/2026-11-17/mexico-is-missing-out-on-ai-data-center-boom-as-energy-crunch-bites",
+      "publisher": "Alex Vasquez/Bloomberg",
       "link_quality": "original",
       "source": "Techmeme",
       "source_home": "https://www.techmeme.com/",
       "source_rank": 3,
       "collection_mode": "rss",
-      "score": 7.895
-    },
-    {
-      "source": "Hacker News",
-      "publisher": "trmnl.com",
-      "source_home": "https://news.ycombinator.com/",
-      "source_rank": 5,
-      "title": "Frame – 31.5\" color ePaper display",
-      "url": "https://trmnl.com/blog/introducing-frame",
-      "direct_source_url": "https://trmnl.com/blog/introducing-frame",
-      "discovery_url": "https://news.ycombinator.com/item?id=50519354",
-      "link_quality": "original",
-      "discussion_url": "https://news.ycombinator.com/item?id=50519354",
-      "summary": "",
-      "published_at": "2026-11-16T16:23:22.000Z",
-      "engagement": {
-        "score": 416,
-        "comments": 290
-      },
-      "collection_mode": "api",
-      "score": 7.796
-    },
-    {
-      "title": "A review of 300+ Chinese documents shows AI distillation has moved from academic experiments to widespread industrial use, with Beijing encouraging the practice (Reuters)",
-      "url": "https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/",
-      "summary": "Reuters : A review of 300+ Chinese documents shows AI distillation has moved from academic experiments to widespread industrial use, with Beijing encouraging the practice &mdash; Chinese entities are adopting increasingly sophisticated ways to use output from leading American AI models to train domestic rivals &hellip;",
-      "description_html": "<A HREF=\"https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p4#a261117p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/\">A review of 300+ Chinese documents shows AI distillation has moved from academic experiments to widespread industrial use, with Beijing encouraging the practice</A></B></SPAN>&nbsp; &mdash;&nbsp; Chinese entities are adopting increasingly sophisticated ways to use output from leading American AI models to train domestic rivals &hellip; </P>",
-      "published_at": "2026-11-17T07:30:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261117/p4",
-      "direct_source_url": "https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/",
-      "publisher": "Reuters",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 4,
-      "collection_mode": "rss",
-      "score": 7.756
+      "score": 7.915
     },
     {
       "source": "Hacker News",
       "publisher": "blog.report-uri.com",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 9,
+      "source_rank": 5,
       "title": "Optimizely compromised, served malware on Zoom, GitLab",
       "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
       "direct_source_url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
@@ -227,17 +171,117 @@
       "summary": "",
       "published_at": "2026-11-16T23:00:34.000Z",
       "engagement": {
-        "score": 340,
-        "comments": 149
+        "score": 522,
+        "comments": 207
       },
       "collection_mode": "api",
-      "score": 7.752
+      "score": 7.825
+    },
+    {
+      "title": "Neuralink co-founder Max Hodak's Science Corp, which offers a retinal implant for age-related macular degeneration, raised $400M at a $3.5B valuation (Ike Swetlitz/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/science-corp-maker-of-retina-chip-for-blindness-valued-at-3-5-billion",
+      "summary": "Ike Swetlitz / Bloomberg : Neuralink co-founder Max Hodak's Science Corp, which offers a retinal implant for age-related macular degeneration, raised $400M at a $3.5B valuation &mdash; Science Corp, the company behind a retinal chip that restores some vision to people with an age-related form of blindness, is valued at $3.5 billion after a recent fundraising round.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-17/science-corp-maker-of-retina-chip-for-blindness-valued-at-3-5-billion\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i29.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p29#a261117p29\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Ike Swetlitz / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-17/science-corp-maker-of-retina-chip-for-blindness-valued-at-3-5-billion\">Neuralink co-founder Max Hodak's Science Corp, which offers a retinal implant for age-related macular degeneration, raised $400M at a $3.5B valuation</A></B></SPAN>&nbsp; &mdash;&nbsp; Science Corp, the company behind a retinal chip that restores some vision to people with an age-related form of blindness, is valued at $3.5 billion after a recent fundraising round.</P>",
+      "published_at": "2026-11-17T14:45:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261117/p29",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-17/science-corp-maker-of-retina-chip-for-blindness-valued-at-3-5-billion",
+      "publisher": "Ike Swetlitz/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.811
+    },
+    {
+      "title": "Sources: Anthropic is guiding prospective IPO investors that it expects to price its shares at or above the high end of its $70 to $78 marketed range (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/anthropic-is-said-to-guide-ipo-price-to-top-of-range-or-above",
+      "summary": "Bloomberg : Sources: Anthropic is guiding prospective IPO investors that it expects to price its shares at or above the high end of its $70 to $78 marketed range &mdash; Anthropic PBC is guiding prospective investors in its initial public offering it expects to price the shares at the high end of the price range or above &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-17/anthropic-is-said-to-guide-ipo-price-to-top-of-range-or-above\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i28.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p28#a261117p28\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-17/anthropic-is-said-to-guide-ipo-price-to-top-of-range-or-above\">Sources: Anthropic is guiding prospective IPO investors that it expects to price its shares at or above the high end of its $70 to $78 marketed range</A></B></SPAN>&nbsp; &mdash;&nbsp; Anthropic PBC is guiding prospective investors in its initial public offering it expects to price the shares at the high end of the price range or above &hellip; </P>",
+      "published_at": "2026-11-17T14:40:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261117/p28",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-17/anthropic-is-said-to-guide-ipo-price-to-top-of-range-or-above",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.728
+    },
+    {
+      "title": "Paris-based Genesis AI, which is building a general-purpose robot with greater dexterity for warehouses and homes, raised a $500M Series A at a $3.5B valuation (Steven Rosenbush/Wall Street Journal)",
+      "url": "https://www.wsj.com/cio-journal/genesis-ai-a-robotics-startup-raises-500-million-35198457?st=VQ2f9L&reflink=desktopwebshare_permalink",
+      "summary": "Steven Rosenbush / Wall Street Journal : Paris-based Genesis AI, which is building a general-purpose robot with greater dexterity for warehouses and homes, raised a $500M Series A at a $3.5B valuation &mdash; 'We're working to build the world's best general-purpose robot,' says CEO Zhou Xian &mdash; Genesis AI said today it has raised $500 million &hellip;",
+      "description_html": "<A HREF=\"https://www.wsj.com/cio-journal/genesis-ai-a-robotics-startup-raises-500-million-35198457?st=VQ2f9L&reflink=desktopwebshare_permalink\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i27.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p27#a261117p27\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Steven Rosenbush / <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/cio-journal/genesis-ai-a-robotics-startup-raises-500-million-35198457?st=VQ2f9L&reflink=desktopwebshare_permalink\">Paris-based Genesis AI, which is building a general-purpose robot with greater dexterity for warehouses and homes, raised a $500M Series A at a $3.5B valuation</A></B></SPAN>&nbsp; &mdash;&nbsp; 'We're working to build the world's best general-purpose robot,' says CEO Zhou Xian&nbsp; &mdash;&nbsp; Genesis AI said today it has raised $500 million &hellip; </P>",
+      "published_at": "2026-11-17T14:15:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261117/p27",
+      "direct_source_url": "https://www.wsj.com/cio-journal/genesis-ai-a-robotics-startup-raises-500-million-35198457?st=VQ2f9L&reflink=desktopwebshare_permalink",
+      "publisher": "Steven Rosenbush/Wall Street Journal",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.63
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "trmnl.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "Frame – 31.5\" color ePaper display",
+      "url": "https://trmnl.com/blog/introducing-frame",
+      "direct_source_url": "https://trmnl.com/blog/introducing-frame",
+      "discovery_url": "https://news.ycombinator.com/item?id=50519354",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50519354",
+      "summary": "",
+      "published_at": "2026-11-16T16:23:22.000Z",
+      "engagement": {
+        "score": 491,
+        "comments": 349
+      },
+      "collection_mode": "api",
+      "score": 7.629
+    },
+    {
+      "title": "Tiberius Aerospace, a defense-as-a-service startup that uses AI to design long-range supersonic artillery munitions, raised an $85M Series A at a $1B+ valuation (Isabella Ward/Wired)",
+      "url": "https://www.wired.com/story/ai-told-these-ex-google-guys-how-to-build-a-billion-dollar-weapons-business/",
+      "summary": "Isabella Ward / Wired : Tiberius Aerospace, a defense-as-a-service startup that uses AI to design long-range supersonic artillery munitions, raised an $85M Series A at a $1B+ valuation &mdash; Google and Apple alumni Chad Steelberg and Andy Baynes are applying what they learned running software companies and designing iPhones to manufacturing lethal munitions.",
+      "description_html": "<A HREF=\"https://www.wired.com/story/ai-told-these-ex-google-guys-how-to-build-a-billion-dollar-weapons-business/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i26.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p26#a261117p26\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Isabella Ward / <A HREF=\"http://www.wired.com/\">Wired</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wired.com/story/ai-told-these-ex-google-guys-how-to-build-a-billion-dollar-weapons-business/\">Tiberius Aerospace, a defense-as-a-service startup that uses AI to design long-range supersonic artillery munitions, raised an $85M Series A at a $1B+ valuation</A></B></SPAN>&nbsp; &mdash;&nbsp; Google and Apple alumni Chad Steelberg and Andy Baynes are applying what they learned running software companies and designing iPhones to manufacturing lethal munitions.</P>",
+      "published_at": "2026-11-17T13:55:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261117/p26",
+      "direct_source_url": "https://www.wired.com/story/ai-told-these-ex-google-guys-how-to-build-a-billion-dollar-weapons-business/",
+      "publisher": "Isabella Ward/Wired",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.536
+    },
+    {
+      "title": "SEC filing: Amazon and Google are set to hold nearly 15% and 14% of Anthropic's outstanding capital stock, respectively, after its IPO and private placement (David Morris/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/amazon-google-to-have-about-28-of-anthropic-stock-after-ipo",
+      "summary": "David Morris / Bloomberg : SEC filing: Amazon and Google are set to hold nearly 15% and 14% of Anthropic's outstanding capital stock, respectively, after its IPO and private placement &mdash; Two of Anthropic PBC's biggest customers will have about 28% of its stock in aggregate after it goes public, adding to the close links between &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-17/amazon-google-to-have-about-28-of-anthropic-stock-after-ipo\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i25.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p25#a261117p25\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> David Morris / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-17/amazon-google-to-have-about-28-of-anthropic-stock-after-ipo\">SEC filing: Amazon and Google are set to hold nearly 15% and 14% of Anthropic's outstanding capital stock, respectively, after its IPO and private placement</A></B></SPAN>&nbsp; &mdash;&nbsp; Two of Anthropic PBC's biggest customers will have about 28% of its stock in aggregate after it goes public, adding to the close links between &hellip; </P>",
+      "published_at": "2026-11-17T13:40:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261117/p25",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-17/amazon-google-to-have-about-28-of-anthropic-stock-after-ipo",
+      "publisher": "David Morris/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.446
     },
     {
       "source": "Hacker News",
       "publisher": "burntsushi.net",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 6,
+      "source_rank": 7,
       "title": "Jiff 1.0: A datetime library for Rust",
       "url": "https://burntsushi.net/jiff/",
       "direct_source_url": "https://burntsushi.net/jiff/",
@@ -247,49 +291,17 @@
       "summary": "",
       "published_at": "2026-11-16T16:53:39.000Z",
       "engagement": {
-        "score": 378,
-        "comments": 87
+        "score": 418,
+        "comments": 91
       },
       "collection_mode": "api",
-      "score": 7.724
-    },
-    {
-      "title": "Nvidia unveils its Rubin HPC GPU with \"more than 50,000\" CUDA cores, up from 28,672 in the current Rubin GPU, for agentic workflows and scientific simulations (Jeffrey Kampman/Tom's Hardware)",
-      "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-announces-rubin-hpc-gpu-with-record-number-of-cuda-cores-at-supercomputing-2026-new-chip-accelerates-agentic-hpc-workloads-arrives-in-2028",
-      "summary": "Jeffrey Kampman / Tom's Hardware : Nvidia unveils its Rubin HPC GPU with &ldquo;more than 50,000&rdquo; CUDA cores, up from 28,672 in the current Rubin GPU, for agentic workflows and scientific simulations &mdash; Rubin HPC puts &ldquo;over 50,000&rdquo; CUDA cores on a chip, implies four-die layout &mdash; The Supercomputing 2026 conference is under way &hellip;",
-      "description_html": "<A HREF=\"https://www.tomshardware.com/pc-components/gpus/nvidia-announces-rubin-hpc-gpu-with-record-number-of-cuda-cores-at-supercomputing-2026-new-chip-accelerates-agentic-hpc-workloads-arrives-in-2028\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p3#a261117p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Jeffrey Kampman / <A HREF=\"https://www.tomshardware.com/\">Tom's Hardware</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.tomshardware.com/pc-components/gpus/nvidia-announces-rubin-hpc-gpu-with-record-number-of-cuda-cores-at-supercomputing-2026-new-chip-accelerates-agentic-hpc-workloads-arrives-in-2028\">Nvidia unveils its Rubin HPC GPU with &ldquo;more than 50,000&rdquo; CUDA cores, up from 28,672 in the current Rubin GPU, for agentic workflows and scientific simulations</A></B></SPAN>&nbsp; &mdash;&nbsp; Rubin HPC puts &ldquo;over 50,000&rdquo; CUDA cores on a chip, implies four-die layout&nbsp; &mdash;&nbsp; The Supercomputing 2026 conference is under way &hellip; </P>",
-      "published_at": "2026-11-17T06:20:00.000Z",
-      "discovery_url": "https://www.techmeme.com/261117/p3",
-      "direct_source_url": "https://www.tomshardware.com/pc-components/gpus/nvidia-announces-rubin-hpc-gpu-with-record-number-of-cuda-cores-at-supercomputing-2026-new-chip-accelerates-agentic-hpc-workloads-arrives-in-2028",
-      "publisher": "Jeffrey Kampman/Tom's Hardware",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 5,
-      "collection_mode": "rss",
-      "score": 7.627
-    },
-    {
-      "title": "The US Commerce Department says it began probing Megaspeed in 2024 over possible export rule violations; Nvidia put Megaspeed on its \"no sell\" list in June 2025 (Kanishka Singh/Reuters)",
-      "url": "https://www.reuters.com/world/asia-pacific/us-releases-details-of-megaspeed-probe-says-investigation-began-2024-2026-11-17/",
-      "summary": "Kanishka Singh / Reuters : The US Commerce Department says it began probing Megaspeed in 2024 over possible export rule violations; Nvidia put Megaspeed on its &ldquo;no sell&rdquo; list in June 2025 &mdash; The US Commerce Department and Justice Department released information on Monday about Washington's investigation &hellip;",
-      "description_html": "<A HREF=\"https://www.reuters.com/world/asia-pacific/us-releases-details-of-megaspeed-probe-says-investigation-began-2024-2026-11-17/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p2#a261117p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Kanishka Singh / <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/world/asia-pacific/us-releases-details-of-megaspeed-probe-says-investigation-began-2024-2026-11-17/\">The US Commerce Department says it began probing Megaspeed in 2024 over possible export rule violations; Nvidia put Megaspeed on its &ldquo;no sell&rdquo; list in June 2025</A></B></SPAN>&nbsp; &mdash;&nbsp; The US Commerce Department and Justice Department released information on Monday about Washington's investigation &hellip; </P>",
-      "published_at": "2026-11-17T05:55:00.000Z",
-      "discovery_url": "https://www.techmeme.com/261117/p2",
-      "direct_source_url": "https://www.reuters.com/world/asia-pacific/us-releases-details-of-megaspeed-probe-says-investigation-began-2024-2026-11-17/",
-      "publisher": "Kanishka Singh/Reuters",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 6,
-      "collection_mode": "rss",
-      "score": 7.53
+      "score": 7.401
     },
     {
       "source": "Hacker News",
       "publisher": "theregister.com",
       "source_home": "https://news.ycombinator.com/",
-      "source_rank": 7,
+      "source_rank": 6,
       "title": "Microsoft blames monster email outage on software defect introduced in July fix",
       "url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026",
       "direct_source_url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026",
@@ -299,103 +311,37 @@
       "summary": "",
       "published_at": "2026-11-16T13:18:22.000Z",
       "engagement": {
-        "score": 323,
-        "comments": 235
+        "score": 403,
+        "comments": 302
       },
       "collection_mode": "api",
-      "score": 7.508
+      "score": 7.341
     },
     {
-      "title": "Analysis: Amazon's $17B+ planned investment in Ohio data centers is at risk after midterm voters passed restriction measures affecting three proposed projects (Rafe Rosner-Uddin/Financial Times)",
-      "url": "https://www.ft.com/content/e95adad4-b428-477d-9716-92172bbd199f",
-      "summary": "Rafe Rosner-Uddin / Financial Times : Analysis: Amazon's $17B+ planned investment in Ohio data centers is at risk after midterm voters passed restriction measures affecting three proposed projects &mdash; Voter revolts across the US threaten billions in AI investment as communities turn against Big Tech's expansion",
-      "description_html": "<A HREF=\"https://www.ft.com/content/e95adad4-b428-477d-9716-92172bbd199f\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261117/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261117/p1#a261117p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Rafe Rosner-Uddin / <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/e95adad4-b428-477d-9716-92172bbd199f\">Analysis: Amazon's $17B+ planned investment in Ohio data centers is at risk after midterm voters passed restriction measures affecting three proposed projects</A></B></SPAN>&nbsp; &mdash;&nbsp; Voter revolts across the US threaten billions in AI investment as communities turn against Big Tech's expansion</P>",
-      "published_at": "2026-11-17T05:40:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261117/p1",
-      "direct_source_url": "https://www.ft.com/content/e95adad4-b428-477d-9716-92172bbd199f",
-      "publisher": "Rafe Rosner-Uddin/Financial Times",
+      "source": "Hacker News",
+      "publisher": "chillphysicsenjoyer.substack.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 10,
+      "title": "Chemistry is Actually Geometry",
+      "url": "https://chillphysicsenjoyer.substack.com/p/chemistry-is-actually-geometry",
+      "direct_source_url": "https://chillphysicsenjoyer.substack.com/p/chemistry-is-actually-geometry",
+      "discovery_url": "https://news.ycombinator.com/item?id=50522643",
       "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
-      "source_rank": 7,
-      "collection_mode": "rss",
-      "score": 7.44
+      "discussion_url": "https://news.ycombinator.com/item?id=50522643",
+      "summary": "",
+      "published_at": "2026-11-16T20:22:18.000Z",
+      "engagement": {
+        "score": 292,
+        "comments": 125
+      },
+      "collection_mode": "api",
+      "score": 7.315
     },
     {
-      "title": "Meta is testing Direct, a standalone messaging app for Instagram that doesn't require an existing Instagram account to use, in Thailand and Turkey (Karissa Bell/Engadget)",
-      "url": "https://www.engadget.com/2318452/meta-is-testing-direct-a-standalone-messaging-app-for-instagram/",
-      "summary": "Karissa Bell / Engadget : Meta is testing Direct, a standalone messaging app for Instagram that doesn't require an existing Instagram account to use, in Thailand and Turkey &mdash; It's only available in Turkey and Thailand for now. &mdash; Meta is working on a dedicated messaging app for Instagram that could also expand the reach of the app's DMs.",
-      "description_html": "<A HREF=\"https://www.engadget.com/2318452/meta-is-testing-direct-a-standalone-messaging-app-for-instagram/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261116/i53.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261116/p53#a261116p53\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Karissa Bell / <A HREF=\"https://www.engadget.com/\">Engadget</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.engadget.com/2318452/meta-is-testing-direct-a-standalone-messaging-app-for-instagram/\">Meta is testing Direct, a standalone messaging app for Instagram that doesn't require an existing Instagram account to use, in Thailand and Turkey</A></B></SPAN>&nbsp; &mdash;&nbsp; It's only available in Turkey and Thailand for now.&nbsp; &mdash;&nbsp; Meta is working on a dedicated messaging app for Instagram that could also expand the reach of the app's DMs.</P>",
-      "published_at": "2026-11-17T04:40:01.000Z",
-      "discovery_url": "https://www.techmeme.com/261116/p53",
-      "direct_source_url": "https://www.engadget.com/2318452/meta-is-testing-direct-a-standalone-messaging-app-for-instagram/",
-      "publisher": "Karissa Bell/Engadget",
-      "link_quality": "original",
-      "source": "Techmeme",
-      "source_home": "https://www.techmeme.com/",
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
       "source_rank": 8,
-      "collection_mode": "rss",
-      "score": 7.318
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 5,
-      "title": "InclusionMed: Benchmarking AI for Inclusive Healthcare",
-      "url": "https://huggingface.co/papers/2611.21218",
-      "direct_source_url": "https://huggingface.co/papers/2611.21218",
-      "discovery_url": "https://huggingface.co/papers/2611.21218",
-      "link_quality": "original",
-      "summary": "Advancing medical AI for inclusive healthcare requires evaluation across diverse healthcare roles, tasks, and care settings, but benchmark coverage remains uneven. We introduce InclusionMed, an open medical AI evaluation initiative for inclusive healthcare. The InclusionMed Atlas organizes benchmarks across three healthcare roles and three AI capabilities. For the first release, we selected four public benchmarks from 388 candidates through structured audits and independent reproduction. With InclusionMed-DxFiles, our private diagnostic reasoning benchmark, the Atlas contains five benchmarks covering three of its nine role--capability cells. We evaluated frontier large language models on the Atlas and aggregated their results into the InclusionMed Index, with overall scores ranging from 17.5 to 49.1 out of 100. The Index also reports scores by healthcare role and AI capability, showing that a model's rank varied with the role or capability considered. A within-benchmark analysis using task-level tags showed that the ten highest-ranked models in the Index all scored higher on patient communication than on clinical decision-making. Models with similar Index scores also differed subst",
-      "published_at": "2026-11-15T19:00:00.000Z",
-      "engagement": {
-        "upvotes": 37
-      },
-      "collection_mode": "api",
-      "score": 6.37
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 2,
-      "title": "SALA: Semantically Aligned Latent Actions Enable Dual-Axis Scaling of Embodied Foundation Models",
-      "url": "https://huggingface.co/papers/2611.17110",
-      "direct_source_url": "https://huggingface.co/papers/2611.17110",
-      "discovery_url": "https://huggingface.co/papers/2611.17110",
-      "link_quality": "original",
-      "summary": "Embodied foundation models hinge on diverse robot interaction data, which are costly to collect. Egocentric human videos offer a complementary source of experience, and latent action models (LAMs) provide a popular means of leveraging these videos for policy supervision. Compared with world-action models (WAMs), LAMs can offer greater training efficiency and potentially lower inference costs by avoiding explicit pixel prediction during policy learning and execution. However, most existing LAMs learn latent actions solely through video reconstruction, which can cause their representations to cluster by visual appearance rather than by the underlying actions. As a result, they struggle to align human actions with their robot counterparts. To bridge the gap, we introduce SALA, which emphasizes establishing the semantic correspondence for latent actions. Without requiring paired data, we use the language descriptions of unpaired human and robot clips to estimate semantic similarities and supervise cross-embodiment correspondence. Specifically, we translate these similarities into soft neighborhood structures that guide human latent actions toward semantically related robot latents, whi",
-      "published_at": "2026-11-14T19:00:00.000Z",
-      "engagement": {
-        "upvotes": 9
-      },
-      "collection_mode": "api",
-      "score": 6.32
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 7,
-      "title": "SWE-CoWork: Benchmarking Coding Agents as Digital Employees in Organizations",
-      "url": "https://huggingface.co/papers/2611.20218",
-      "direct_source_url": "https://huggingface.co/papers/2611.20218",
-      "discovery_url": "https://huggingface.co/papers/2611.20218",
-      "link_quality": "original",
-      "summary": "A coding agent working within a software organization must establish what to build, collaborate with colleagues, and verify what it delivers. We introduce SWE-CoWork, a benchmark comprising 101 development assignments across 101 real repositories, 11 programming languages, and 12 application domains. Each assignment places an agent in a simulated engineering organization with 26 colleagues who have distinct responsibilities, bounded knowledge, and controlled collaboration behavior. Starting from a brief handoff, agents must recover requirements distributed across colleagues and workplace records, reconcile conflicting evidence, and implement changes evaluated by private executable tests. We evaluate eleven models and find a substantial gap between partial implementation and complete task delivery. The two leading models satisfy approximately 63% of fail-to-pass (F2P) tests but complete fewer than 8% of assignments. Providing complete requirements upfront improves F2P by approximately 16 percentage points for Seed Evolving and GPT-6 Astra, yet leaves complete task success unchanged. Requirement-level trajectory analysis reveals failures throughout the delivery process: Claude-Opus-5",
-      "published_at": "2026-11-14T19:00:00.000Z",
-      "engagement": {
-        "upvotes": 22
-      },
-      "collection_mode": "api",
-      "score": 6.101
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 1,
       "title": "Sage S2.1 Flash Technical Report",
       "url": "https://huggingface.co/papers/2611.21072",
       "direct_source_url": "https://huggingface.co/papers/2611.21072",
@@ -403,6 +349,42 @@
       "link_quality": "original",
       "summary": "We introduce Sage S1.5 Flash, a 320-billion-parameter general-purpose mixture-of-experts model designed to reason over scientific evidence and act in interactive environments. Sage Sci-Perception uses dedicated encoders for molecular graphs and biological sequences and represents spectra as ordered patches of measurements. Modality-specific projectors map these representations into the input space of a shared backbone, which processes them alongside text and images. To develop the model's agent capabilities, we construct verifiable environments for tool use, search, and coding, as well as specialized workflows involving machine learning experiments and scientific software. Task completion is checked against execution results, changes in environment state, or submitted artifacts. We evaluate Sage S1.5 Flash on 33 benchmarks across seven domains. In the primary comparison against five baselines, it ranks first on OfficeQA Pro (72.2), MLE-bench Lite (90.3 HumanRank), Harvey LAB, and SpreadsheetBench~2, and second on OSWorld-Verified (85.2), WebArena-Verified (67.6), and DeepResearch Bench~II (54.2). These results show particular strengths in using documentary evidence, producing verif",
       "published_at": "2026-11-15T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 79
+      },
+      "collection_mode": "api",
+      "score": 6.14
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "JEPA4R: Embodied JEPA World Models with 4D Point Planning",
+      "url": "https://huggingface.co/papers/2611.19771",
+      "direct_source_url": "https://huggingface.co/papers/2611.19771",
+      "discovery_url": "https://huggingface.co/papers/2611.19771",
+      "link_quality": "original",
+      "summary": "Joint-embedding predictive architecture (JEPA) world models predict future embeddings instead of pixels and plan in latent space. Two challenges remain: 2D images leave the metric geometry that manipulation acts on implicit and entangled with appearance, and what these models imagine stays hidden, as they are mostly judged in simulation by short-horizon latent planning. We present JEPA4R, a JEPA world model that observes single-depth-camera point clouds, predicts and plans in their latent space, and acts through a policy head on its frozen latents; we call this 4D point planning. A decoder on the frozen world model shows what it imagines as 4D point clouds, with a mean point error within 1.1 cm over 200 steps. Under the policy-learning protocols of OGBench and CortexBench, JEPA4R leads pixel JEPA models on OGBench Cube-Single, Cube-Double, Cube-Triple and Scene, and ranks first on MetaWorld and Adroit Relocate with 98.4% and 88.0%, above the runner-up, R3M, at 96.0% and 65.3%. Trained only in a digital twin, JEPA4R and its policy heads run zero-shot on the real arm with both a gripper and a dexterous hand.",
+      "published_at": "2026-11-14T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 3
+      },
+      "collection_mode": "api",
+      "score": 6.121
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "Termination Lag: Coding Agents Solve Early but Stop Late",
+      "url": "https://huggingface.co/papers/2611.14960",
+      "direct_source_url": "https://huggingface.co/papers/2611.14960",
+      "discovery_url": "https://huggingface.co/papers/2611.14960",
+      "link_quality": "original",
+      "summary": "Coding agents can solve a task well before they stop working on it. We characterize termination lag--the number of steps between an agent's first correct patch and the end of its run--across five models, two agent frameworks, and three SWE-bench datasets by recording and testing every distinct repository patch generated during execution. Our analysis reveals that 38--82% of successful runs achieve a correct solution on their initial source-code edit. However, agents continue to expend substantial effort after correct patches, with post-solution steps accounting for a median of 35--37% for Qwen3-Coder and 54--60% for Laguna-XS.2 in successful runs on SWE-bench Verified and Multilingual. Agents spend most of these additional steps verifying their work and exploring the repository. In a small fraction of cases (1--8%), this continued activity leads agents to undo their earlier correct patch, leaving the final solution incorrect.",
+      "published_at": "2026-11-10T19:00:00.000Z",
       "engagement": {
         "upvotes": 1
       },
@@ -413,32 +395,68 @@
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
-      "source_rank": 3,
-      "title": "OutfitterBench: Evaluating LLM Agents on Long-Horizon Resource Allocation and Commitment Coordination",
-      "url": "https://huggingface.co/papers/2611.17933",
-      "direct_source_url": "https://huggingface.co/papers/2611.17933",
-      "discovery_url": "https://huggingface.co/papers/2611.17933",
+      "source_rank": 9,
+      "title": "SALA: Semantically Aligned Latent Actions Enable Dual-Axis Scaling of Embodied Foundation Models",
+      "url": "https://huggingface.co/papers/2611.17110",
+      "direct_source_url": "https://huggingface.co/papers/2611.17110",
+      "discovery_url": "https://huggingface.co/papers/2611.17110",
       "link_quality": "original",
-      "summary": "In many long-horizon settings, an agent's own choices create future constraints: committing finite capacity establishes future obligations and forecloses later opportunities. Sustaining performance therefore requires both keeping evolving plans feasible and comparing the value of resource allocations with the alternatives they displace. Recent benchmarks increasingly evaluate LLM agents in continuing operations, but give less attention to how agents keep their own commitments feasible while reassessing resource allocations as opportunities change. We introduce OutfitterBench, where agents manage an outdoor-equipment rental business for 200 days, purchasing from a 46-product catalog and handling roughly 1,100 reservation requests. Under a fixed capital ceiling, reservations and uncertain walk-in demand compete for reusable equipment whose availability changes over time. Experiments with seven frontier LLMs show that several agents underperform a simple rule-based baseline, while only the leading agent consistently surpasses it. Trajectory analysis shows that some agents apply known constraints inconsistently and make new decisions that conflict with existing commitments. Agents with",
+      "summary": "Embodied foundation models hinge on diverse robot interaction data, which are costly to collect. Egocentric human videos offer a complementary source of experience, and latent action models (LAMs) provide a popular means of leveraging these videos for policy supervision. Compared with world-action models (WAMs), LAMs can offer greater training efficiency and potentially lower inference costs by avoiding explicit pixel prediction during policy learning and execution. However, most existing LAMs learn latent actions solely through video reconstruction, which can cause their representations to cluster by visual appearance rather than by the underlying actions. As a result, they struggle to align human actions with their robot counterparts. To bridge the gap, we introduce SALA, which emphasizes establishing the semantic correspondence for latent actions. Without requiring paired data, we use the language descriptions of unpaired human and robot clips to estimate semantic similarities and supervise cross-embodiment correspondence. Specifically, we translate these similarities into soft neighborhood structures that guide human latent actions toward semantically related robot latents, whi",
+      "published_at": "2026-11-14T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 13
+      },
+      "collection_mode": "api",
+      "score": 5.833
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 12,
+      "title": "InclusionMed: Benchmarking AI for Inclusive Healthcare",
+      "url": "https://huggingface.co/papers/2611.21218",
+      "direct_source_url": "https://huggingface.co/papers/2611.21218",
+      "discovery_url": "https://huggingface.co/papers/2611.21218",
+      "link_quality": "original",
+      "summary": "Advancing medical AI for inclusive healthcare requires evaluation across diverse healthcare roles, tasks, and care settings, but benchmark coverage remains uneven. We introduce InclusionMed, an open medical AI evaluation initiative for inclusive healthcare. The InclusionMed Atlas organizes benchmarks across three healthcare roles and three AI capabilities. For the first release, we selected four public benchmarks from 388 candidates through structured audits and independent reproduction. With InclusionMed-DxFiles, our private diagnostic reasoning benchmark, the Atlas contains five benchmarks covering three of its nine role--capability cells. We evaluated frontier large language models on the Atlas and aggregated their results into the InclusionMed Index, with overall scores ranging from 17.5 to 49.1 out of 100. The Index also reports scores by healthcare role and AI capability, showing that a model's rank varied with the role or capability considered. A within-benchmark analysis using task-level tags showed that the ten highest-ranked models in the Index all scored higher on patient communication than on clinical decision-making. Models with similar Index scores also differed subst",
+      "published_at": "2026-11-15T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 58
+      },
+      "collection_mode": "api",
+      "score": 5.82
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "Correcting Persistent Failures in Point-Cloud Grasping Policies using Human Demonstrations in Virtual Reality",
+      "url": "https://huggingface.co/papers/2611.18919",
+      "direct_source_url": "https://huggingface.co/papers/2611.18919",
+      "discovery_url": "https://huggingface.co/papers/2611.18919",
+      "link_quality": "original",
+      "summary": "Robots in homes, warehouses and farms must pick up objects they have never seen, usually without a 3D model or a category label. A grasping policy that works directly on the point cloud from a depth sensor needs only the geometry the robot observes, so it applies to any new object. Offline grasp generators such as Contact-GraspNet work this way, but they rank grasps by learned plausibility rather than by whether the grasp actually lifts the object. Reinforcement learning (RL) can optimize for that directly and make a point-cloud grasping policy much better on average, yet it leaves specific grasps persistently unsolved. We present a human-in-the-loop failure loop that targets those grasps: situations an RL policy keeps failing are mined automatically, sent to a virtual-reality application where a person picks the object up with their own hands, and returned to training as two grasp points. The person contributes only where to grasp; the robot chooses its own approach. In simulation, RL raises success on unseen objects from 55% with Contact-GraspNet to 83%. Adding 58 human demonstrations nearly doubles success on the hard cases RL kept failing, from 24% to 45%, and recovers performa",
       "published_at": "2026-11-12T19:00:00.000Z",
       "engagement": {
         "upvotes": 2
       },
       "collection_mode": "api",
-      "score": 5.979
+      "score": 5.819
     },
     {
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
       "source_rank": 4,
-      "title": "Continuation-Guided LLM Evolution of Program Policies and Goal Compilers in Craftax",
-      "url": "https://huggingface.co/papers/2611.19537",
-      "direct_source_url": "https://huggingface.co/papers/2611.19537",
-      "discovery_url": "https://huggingface.co/papers/2611.19537",
+      "title": "LynnReal-Hand: Unlocking World Interaction with Hand Control",
+      "url": "https://huggingface.co/papers/2611.21479",
+      "direct_source_url": "https://huggingface.co/papers/2611.21479",
+      "discovery_url": "https://huggingface.co/papers/2611.21479",
       "link_quality": "original",
-      "summary": "Coding agents can synthesize and optimize code-based policies from simulator feedback, allowing the resulting program to act with zero inference model calls. But for long horizon tasks, two challenges arise: local improvements can hurt final success and switching to a new objective requires another expensive synthesis run. We propose a framework that first develops competence by refining the policy through a feedback cascade, moving from episode returns to hierarchical goals and belief updates which can be scored densely from simulator. In the Craftax game, a partially observed and procedurally generated environment, refinements via episode level feedback stall at <1% final-level arrival, whereas with the feedback cascade the optimized policy reaches the final stage 50% of time (28% final boss defeats). Furthermore, to make this competence reusable towards new goals, we factor the previous controller into an environment interpreter I (models, memory, skills) and a rule program p_0, and we show that coding agents can optimize a reusable goal compiler C_θ that maps structured tasks g into new rule programs p_g. Across five independent compiler searches trained only on short tasks, th",
-      "published_at": "2026-11-13T19:00:00.000Z",
+      "summary": "Interactive video world models enable exploration through text and camera controls, yet direct object interaction requires finer control. Hands provide a natural interface, but translating continuous hand movements into coherent visual responses remains challenging because of complex hand-object dynamics and demanding real-time computation. To address these challenges, we introduce LynnReal-Hand, a hand-controlled video world model that unifies precise interaction modeling with efficient streaming generation. We curate 100K interaction clips spanning diverse real and synthetic environments and develop hand-aware supervision to improve fine-grained hand motions and object interactions. Building on this foundation, we learn a causal flow map for few-step generation and introduce region-aware score distillation that combines complementary video and image priors to refine interaction dynamics and visual appearance. To further reduce inference latency, we propose Ultra-Fast-VAE, a compact video decoder that preserves high reconstruction fidelity with substantially lower computational cost. Extensive evaluations on HandBench demonstrate superior hand-following accuracy and visual quality",
+      "published_at": "2026-11-15T19:00:00.000Z",
       "engagement": {
         "upvotes": 1
       },
@@ -449,37 +467,19 @@
       "source": "Hugging Face",
       "publisher": "Hugging Face",
       "source_home": "https://huggingface.co/papers",
-      "source_rank": 10,
-      "title": "Accelerate Bench: Evaluating Agents for Application-Level Program Optimization",
-      "url": "https://huggingface.co/papers/2611.20882",
-      "direct_source_url": "https://huggingface.co/papers/2611.20882",
-      "discovery_url": "https://huggingface.co/papers/2611.20882",
+      "source_rank": 3,
+      "title": "Zuse: A Decision Model for European Languages",
+      "url": "https://huggingface.co/papers/2611.06238",
+      "direct_source_url": "https://huggingface.co/papers/2611.06238",
+      "discovery_url": "https://huggingface.co/papers/2611.06238",
       "link_quality": "original",
-      "summary": "Application optimization requires coding agents to discover useful changes and coordinate them across a complete program while preserving the required computation. We introduce Accelerate Bench, a benchmark of 32 CPU optimization tasks adapted from scientific applications and supercomputing competitions. Each task provides a working program and specifies the workload, correctness requirements, timing boundaries, and permitted edits, leaving agents to choose where and how to optimize. Public testing supports iterative development, and a separate verifier scores the final submission. On benchmark version 1.1, we evaluate 16 coding agents, each pairing a model with a harness. Their Score@1 ranges from 25.5% to 67.4%. Most of their programs are correct, and the size of the speedup separates them: the two leading agents are at least 2x faster on 22 or more of the 32 tasks, while the other fourteen reach 2x on 8 to 17 and leave 125 of their 412 correct outcomes below 1.25x. Controlled replays show why coordination across an application matters: identical source code runs between 0.29x and 2.12x depending only on build and runtime settings, and one code change is worth 1.01x or 6.4x depen",
-      "published_at": "2026-11-15T19:00:00.000Z",
+      "summary": "Decision models read a document and return a probability for each of a fixed set of options instead of generating text. Several appeared in 2026, but none has published results outside English. We describe Zuse, three decision models (4B, 9B and 27B) that train a low-rank adapter and a pointer head on frozen open-weight bases, targeting 27 European languages, and use them to study how this design behaves across languages and tasks. On a broad European suite of 11 sources excluded from training, covering 9 task groups and 27 languages, a development set that also guided model selection, the 27B model reaches 87.5% accuracy with a pooled expected calibration error of 0.016, and 0.035 when weighted per source. Post-hoc analyses of these single-seed results give three findings. First, miscalibration is structured by task rather than language: on parallel reading and topic items in 26 languages the confidence gap varies about as much as sampling noise, while across sources it spans -0.07 to +0.09, with knowledge tasks overconfident and acceptability judgements underconfident at all three sizes, so one fitted temperature cannot correct both. Second, the share of decisions that can be aut",
+      "published_at": "2026-11-03T19:00:00.000Z",
       "engagement": {
-        "upvotes": 14
+        "upvotes": 0
       },
       "collection_mode": "api",
-      "score": 5.768
-    },
-    {
-      "source": "Hugging Face",
-      "publisher": "Hugging Face",
-      "source_home": "https://huggingface.co/papers",
-      "source_rank": 6,
-      "title": "Centered Ablation: Why Last-Layer Directional Ablation Under-Fires or Collapses, and a Closed-Form Fix",
-      "url": "https://huggingface.co/papers/2611.20148",
-      "direct_source_url": "https://huggingface.co/papers/2611.20148",
-      "discovery_url": "https://huggingface.co/papers/2611.20148",
-      "link_quality": "original",
-      "summary": "Directional ablation removes a hidden state's component along a \"behaviour direction\" while a language model runs. It is the standard way to switch a behaviour such as refusal off, but it is erratic: on some models it barely fires, on others the text collapses into repetition. We show why, and fix it. At the last residual stream, ablation is exactly a logit bias: a fixed vocabulary footprint scaled by a gate, the cosine between the hidden state and the direction. The gate is measured from the origin, but last-layer states share a large common mode far from it, so a direction that overlaps the common mode fires on benign text and under-fires on its targets. Centered Ablation (CA) projects the common mode out of the direction, in closed form. Across 8 models, CA raises attack success by 29 and 46 points where the standard recipe under-fires, cuts collapse on Gemma-2-9B from 50\\% to 1\\%, and preserves 12 to 40 points more benign answers on high-overlap models, 39 to 46 more than the affine offset of prior work. Two numbers computed before generation predict, on models the analysis had not seen, which gain faithfulness and which gain attack success, and a collapse index marks when text",
-      "published_at": "2026-11-14T19:00:00.000Z",
-      "engagement": {
-        "upvotes": 1
-      },
-      "collection_mode": "api",
-      "score": 5.651
+      "score": 5.74
     }
   ]
 }

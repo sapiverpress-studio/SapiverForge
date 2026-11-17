@@ -1,243 +1,201 @@
 {
   "searchEntryPoint": {
-    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Carnegie+Mellon%22+%22computer+science%22+YouTube+free+cs.cmu.edu+learn&client=app-vertex-grounding&safesearch=active\">&quot;Carnegie Mellon&quot; &quot;computer science&quot; YouTube free cs.cmu.edu learn</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Nvidia+Rubin+HPC+GPU+Supercomputing+Tom%27s+Hardware&client=app-vertex-grounding&safesearch=active\">Nvidia Rubin HPC GPU Supercomputing Tom&#39;s Hardware</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=China+AI+distillation+US+models+Reuters+November+2026&client=app-vertex-grounding&safesearch=active\">China AI distillation US models Reuters November 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Megaspeed+Commerce+Department+Nvidia+Reuters+November+2026&client=app-vertex-grounding&safesearch=active\">Megaspeed Commerce Department Nvidia Reuters November 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Numa+Series+C+45+million+500+million+Fortune&client=app-vertex-grounding&safesearch=active\">Numa Series C 45 million 500 million Fortune</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Amazon+Ohio+data+center+FT+November+2026&client=app-vertex-grounding&safesearch=active\">Amazon Ohio data center FT November 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Meta+Instagram+recommendation+India+Reuters+November+2026&client=app-vertex-grounding&safesearch=active\">Meta Instagram recommendation India Reuters November 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Windows+11%22+%22coding+agents%22+developer+tools+telemetry+xusheng.dev&client=app-vertex-grounding&safesearch=active\">&quot;Windows 11&quot; &quot;coding agents&quot; developer tools telemetry xusheng.dev</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Microsoft+email+outage+defect+Register+November+2026&client=app-vertex-grounding&safesearch=active\">Microsoft email outage defect Register November 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Meta+Direct+standalone+messaging+Instagram+Engadget+November+2026&client=app-vertex-grounding&safesearch=active\">Meta Direct standalone messaging Instagram Engadget November 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=ModelRepublic+%22Urban+Legend%22+Nvidia+crypto+right-wing+influencers&client=app-vertex-grounding&safesearch=active\">ModelRepublic &quot;Urban Legend&quot; Nvidia crypto right-wing influencers</a>\n  </div>\n</div>"
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Tiberius+Aerospace%22+%22Chad+Steelberg%22+85M+2026&client=app-vertex-grounding&safesearch=active\">&quot;Tiberius Aerospace&quot; &quot;Chad Steelberg&quot; 85M 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Science+Corp%22+%22retinal%22+400M+2026&client=app-vertex-grounding&safesearch=active\">&quot;Science Corp&quot; &quot;retinal&quot; 400M 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Jensen+Huang%22+%22House+Foreign+Affairs%22+December+1+2026&client=app-vertex-grounding&safesearch=active\">&quot;Jensen Huang&quot; &quot;House Foreign Affairs&quot; December 1 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Codex%22+%22Pantera%22+30M+Series+A+stablecoins+2026&client=app-vertex-grounding&safesearch=active\">&quot;Codex&quot; &quot;Pantera&quot; 30M Series A stablecoins 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Mexico+is+struggling+to+attract+data+centers+despite+its+proximity+to+the+US%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Mexico is struggling to attract data centers despite its proximity to the US&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Anthropic%22+IPO+%2270+to+78%22+price+range+2026&client=app-vertex-grounding&safesearch=active\">&quot;Anthropic&quot; IPO &quot;70 to 78&quot; price range 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Science+Corp%22+%22400M%22+%223.5B%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Science Corp&quot; &quot;400M&quot; &quot;3.5B&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Genesis+AI%22+%22500+million%22+robotics+%22Zhou+Xian%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Genesis AI&quot; &quot;500 million&quot; robotics &quot;Zhou Xian&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Amazon+and+Google+are+set+to+hold+nearly+15%25+and+14%25%22+Anthropic+2026&client=app-vertex-grounding&safesearch=active\">&quot;Amazon and Google are set to hold nearly 15% and 14%&quot; Anthropic 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Microsoft+blames+monster+email+outage+on+software+defect+introduced+in+July+fix%22+Register+2026&client=app-vertex-grounding&safesearch=active\">&quot;Microsoft blames monster email outage on software defect introduced in July fix&quot; Register 2026</a>\n  </div>\n</div>"
   },
   "groundingChunks": [
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGj5qnYxCuWAkDLzTDM5qqEiaGX1yWk2gxU5fyiAnSlJZvUcjPBFkxke9fiviNu7XllqMrcckvoGd1mfQb5ZA85ZaO5iJxT7mEOTfvAo6drNpUyaH15Y-M91Op2Bak6X1kkv09jRTkwFUZDsC8BMRJq8QFhureBYBSl5VV4LK0EFlR_EZwq0OPj-NLi1uD9pJOWxl4243OLIzkLw9Y=",
-        "title": "mlq.ai"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcu2n_wIwr12-g-XlInM2rC54L9o7iOb5OrAW_PVfOqcU18nz2UZC4djIq7JzaftlktD_cUkOSypD5w0dFV2jwWlUlAx84oeDZrKbu75OS8nnzJt3PYQeqaMkvzlV4KQvqQLXZFCj-yztoIMNN1sMmUHw8xG5HSKb-639l_Kw8fjTfDJJpxvyM",
+        "title": "newmarketpitch.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjhGl6_gMO_R14MQErzJk-khSpotGYVKtnjxfPB2E1MAW5DCNVu9nFiJHmdiGAXsjjRgJQ1zIolFERySSjd6v7ImywPxWhM2DKVW1Votn8qYnhVzzMXO1e",
-        "title": "techmeme.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcu2n_wIwr12-g-XlInM2rC54L9o7iOb5OrAW_PVfOqcU18nz2UZC4djIq7JzaftlktD_cUkOSypD5w0dFV2jwWlUlAx84oeDZrKbu75OS8nnzJt3PYQeqaMkvzlV4KQvqQLXZFCj-yztoIMNN1sMmUHw8xG5HSKb-639l_Kw8fjTfDJJpxvyM",
+        "title": "newmarketpitch.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHvFgavrWUhOcYLVI7adpZ24krxj0PdL-PW4LXHMSXcarMQhMDw80cXkXp8Zm5KoMwpoflAJ0CprJ4d-37SSFWWSRm031wO5Z06pXJsLtzfPSVOa8JnOzy1JgiLmKUk6-68aJEp17JpIo0hUWdWEq0g938HAGIwV4zOl3_goxOmsf_NEZUb5jTCPimj9PJVJSvoIRd",
-        "title": "aiweekly.co"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHClbbFwtt3EUvX9eEok5uatKcvLYxlZlRV1K3SaPkS-gXnas9HkqoJ5976JE10txBS_2jnnKyDVBhlr3wGEKwrq414TJt-sQ7lxlAlD5V6y3jQSOibCL3V4_hOzDfD_w2i3tXFP6PNS6oLew5p1yR43YdXfbmZlpx8aTT-Te8OA7k2cg==",
+        "title": "cbsnews.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDnGOJmiLAkexbhTnjynPt_ANUT-Jh-RGlnU8JF-iLrqMvodT-wzVoq4QijuzNIQFiF4XMHZyMAAZ31BqEz_ViHdetZndufSRxhDa3w6RkB5tvvn-cwqiQ3LVz0RAha2bm3hPyxPPAiOyEOhMaKJV4wt2c51nsMLCQ04LVv8YxA_AhoMksVNpzdMzcw6_RyME8eBZuzOlIM1p0vsHBv9zSrsCwrG4N",
-        "title": "wmbdradio.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsUIbZVSTlag02UAKLKzXWNZ3fEW6zvckHEQRrR04u5jsYpkNneQna8xA38ogPnxxi-dnEqDxgVvMhNLW0HRdx7X3sXBXPS8xEiDTdyv_WAwap3VmeZx4c1YmFH0GcqMvNhnRNv5RhKM19LjdIXx7rbmd9IaSlJQsYN3A6D0ZBud0X5kik-IgkVFAExo05vfhjmSvu3fHyYG0WE2XOdFSOQg==",
+        "title": "aa.com.tr"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvd-R0CrzvDuhDktrVz_HX9YST3iFRrb7wPieAVeICBNaa0EBfiNsWqkj5-CM-Oe2ajcQZFVjG-uPzeTqAxZvLf5yoj0n7inR7POWcXaeyF-vvuO_omFYX6nj5halEjaW-8WTuzhDgy3c-q9dmRSF1b2xgCame9bJM4byl2NPzVr1ar559Giie",
-        "title": "explainx.ai"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPxDzZRZICxZHVzXbq95FBgUKQZvw5UQ6ignT541LHfoBondMJ7wzasMbWees1SiXee6aeKYgfEatVbGlvItVFoBWWKQ4PJnPODOfCRV96u1MYUmrw7FNNfQjma4z6jBdZQdxVA1RsRjNcXH6rBcU=",
-        "title": "xusheng.dev"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGA1Hh7DUqD_KbUiKRqa3jxMKYX2IthEm2hzngiZofEIu5jgOljTRmRdgjvkk5Ep0nVb151M16Za8YmcN4aQNu8JpYGsOuSD4nTL3eQwLf7BerjzyHw4NX4rC8yOiumu7ZcE3y_rf3vEQaGLfpVT44k8iCg9AAn_f4dxNNekLNCWC_c7N49P8m7xB-wEE2gO7tQXVX2R8yXvtjGFRWFhLnzkFLwMXD5jHTSYOgCZCAtLbi1",
-        "title": "windowsforum.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBWH76F1klzY3nGoAHoowqzv1f4RS6q-bwjE15X4tzN4ZE8Moqwkk5Y5i6LTDYXtCZUNycDEPpwoP8X9VCd2Nx6ELbDN5BzcOfHGTNP-FA7TJ1nfeXtXltvH_XnrVf1qwjfoaYY_8AZTIdvP2nAAtpsXcxaw0t1h8nJV9JhQsgCy5-1ScsW0uUcjenjEj0g2c=",
-        "title": "nardit.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxjYJvPSuUp4zDQVPvmDJzfj8knxm8O47D7eDqgLyju2kdOys9GdisgZU5Yeo1e6sdmg_Q2PlmqByuwdur_HFFo-N-fI2zI79pScFg05fpAM_cg3xLXaJcb29tstySfaLk1wERX0sp5o9MIeIxLwu6xOdzG4k_-eMFL1GQnh93",
-        "title": "ai-tldr.dev"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmbQTWRoBAKa52mcDCQISnCYiOUthGrHpkceyJpN2shF3FAb4rewqGXgTOeHsTF1yUITor8PsKdr11RK16pvSKHHNrbVX698znxE1G2Fb6U8Yls390a3ADQsHmg4btJqXO8lTM7-y2ri9Rau8RwI6wToC1x9UXC1ua5GuPWzjr",
-        "title": "vibeleaderboard.ai"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFA2Z2aK4Je2LtTPyJm0FTdyF1yBng9veYDUqtO-7Tx9Zjd-m3XaXItVR-08OFracJPDmL-usZlacKAwSjuGDZvsFsXJqJnLU1kOWj3v8aQmQJKMg1NGhhOzHYvPKrljyJUJ3TmoKz4eG_f1eBFMxQHq0Y9RA8RGZITGtSYH9G9KQAaFjaU_bCiXwaiZbjRz82LALdiyXY1YJNK3keYCdnRda4FjMF_a0qLR12p8Ih3mnuiq7vvyUc6KOYiJw1Zd5ZzMimfKE-kUKrd0f7XCQ3s-GkbegFiMVTjv_6YUIYIkkoRo-yUlYmwFYsrZ3UuVS47EqFdLSnMpw==",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzGmfeso8EDzvFuxTyb-kdihr3r_3sy8VvYtl4EAquy_sASG2TDVJVyS5IXcuqs33_eJZ8_By6iaOQhaS-qr_JzKYhHpPs4H2gO3Xtnb7KxFrY1sOuNGbhdMIPxcHWVFhijMPgInTOclVSgvqMrqGicJbH7PTzoMEJMPWc3_YtvffmvBGZoTIWImmcag5GppBDAvqsGdqB7dJPryATTpry6a3EmVgVw2gT13qTnMmRZzxP_he_q4AGTHVN6zaIy36Qxc4wp_F7dmTjcePPYweckBHiAi_cxKZOglMmfkVucgYL6VRSo6MfKZXbizmmNQmyUeWl8X7wzqeDqVIIrKTkc27gXpqPRpZSRXA3Ou2UHUIW7-dVgb5b4yDhHFF4C9xWY55s498zkbiL5R8IuBuXqWDK7aNdS1AT8-BDs4ZrabmrT88=",
         "title": "tomshardware.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1IkMsQ-k53wyLnDxuZolOKy-yOFPoY3FM3NMopPcihbafRWfp3GgTTwHqTY3MPxA_ZN-z6AzJ-SsCzpPqdGaqcFV5hy5tUMHEYdPjCGdiNwAQRLrGn24McaCaoHuX",
-        "title": "nvidia.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIYefKv0bnH2fFuFjTrk9TNIqnwKS3csDvmFLceKs2SqODP1NkyULIGXlP3IVHLIWmdp0WRJP3GnXVjHLkcKzWkeHP-JdSzGpr1p0pKXWSse8JsRf2HugZkXszU7YlfP8T2Qh8kqwNxDYFrD4iIQyk4BQd_AscjUyzkdlyIsFYuywOSLaupKA1",
-        "title": "aiweekly.co"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpTzfVSYjGW8wJPQlLWFlAScpEm8Zg9PpW9mHBItSmIyBZrQLIWRNKRGwzMEzWiSihdxQyq3oOskBvfbqArFw3A32B9rMrMlgX1T12VX15RdakUkHaGqWr0O33uNGrrzd2KhlYylTP7JBQDqA6cFpryLvx3yzV8Wt1hgche8keFQArB4I=",
-        "title": "ft.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsCEVy4WoleZLlTDU-jT67ebBgjB2WDejbaJ4ve1AFRoGs1mrsDXjARsdT3NV50RnmETjW1kTUWNCz4Edeqz_Nvyt5IOtJhG8E9TCWKYGSvC8ZH1B0fIrnAQ5tIUxTBcZt02EFzg3-DJj20nd2IiZXa3lQh6HBgiMgHpm14GfDUpde5o3bU3h_e7hw",
-        "title": "tradersunion.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHq9ymMbUbF9v2-894oZ8EkFCRORms3DOXgnPidftY8ngVX5gRhtMV79dl28LnckGhFvsDx3gaxfZQOvs_yID0_ta8XbGpTPdM59ASrLUgOyVXqPe9NWNjG0TKFknHF8nOMESlLjpbu7sIxntnnk-jHrlhvwVWLKe9K6Xht0hYLHwNqHYMUsQ1tz5xaFP7IBA==",
-        "title": "cryptobriefing.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELgyEr4L8EJ3TYMZMS1Pyi36zbmqfkYTuQfrgawvxCjq5qQE5WAJ_QibVB49fVZDtaxAaC5OSTtYYK5Lj8JhmZQPm7x0cU4af7iJCzLMFiPj2TWdRGWcDtAEDt3Tm9M9JOQzXriZGbUw==",
-        "title": "jpost.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpwtImYNlrVROqoShCVxt1cX-Jx28ph_jq4Mr9I0rJhmz0qN-Xuv05gNHyr51NHipX4bl13uATWecJtLe2FuH5oFIQIMijUNWuic_hYYZLoXhTpvkOF109C1vpQvGJlh3XPuxaKVES_2xuu04l5EhFDV9mcimKz_LcDaYegiPzw5ZdsK3GG5azcmMxW4w6cbCeHYGXsCyIBLLHVEdrDmnolq3HgtHsPp4p5cGZ6BKv6fBvxO3DuDYOveeY",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiOcm8hfeShm5RIMWRZoi49Wtna_rN7twC7-IA8QjpEcLTQu4Bf6tGiDVG5pyqrRmFrLdyk5PdkXFofAcDSOjVOAhuLY8BBW_40b1hPYJFeTB_98U5trE_e1clb57Rhs7DpfAG2jQjsLL-LjM5hFzkmZ176CJ_TZDok6X3NvB8WHse7AEhS0iEbhwl6dgvzv3H5Y2dIL0dzKK2RA0oPoXeSHYboiqlYTTkMXO65_zXTbOcUmmoTdwAFozMldqgPQ==",
         "title": "investing.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNUB8oBNmBFijDIf0HbzcM2HExFBXR9EwLDxyjh3pcqG2CIeOSGxPGeqizHOijPOSxt36IsrLaeBkwOqk8m9pXBx-Pxm1uuJ0dd1JtIxy9-KWB4wX8564kiv_GWRHR4GALM-vMrdMVHXA3iF4PthZbGSTV7o1EodeHqgHcLB_SwLMao9B5-xQnEawdphMR_7GqSHQZMdzcvNeChT9133MRuM0cmHSqD7_jFRaskNUH7rLcgLyB0m58zEu96-DjdDELu6D_zYz26A69Xjb3xFEQ8zdvaKX_vEIoA1g1_hN_jFd6Sbu6OnXYWMF-qd2rhRPBCe0=",
-        "title": "benzinga.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFRxnJF4sDGZK3PTsnjIm8s7qcymji2VV1oZUfrTQ8I_NHGFDR8YcQ1a_Cja6q8KxT2Y-t5sgaaAOvZWdniQj63sVA0TlgpmCPaTg35xWjO-_dyHHBhTLwDg_-7AKwAIkkzd3SwU2Dw-HRbUAAbhOgXxu2TY998elK_FrlHaafuFn55aiExbFqy2dWDzG3dHMAmNGc0Mt-7tMQ_p-7vvLtaDD67oz2022SfhfgzSbgWKWSLqud_jj1wcmzP6g_gSgQHq0bGPgwZrrEdWRnynNVkDb4C2jSI9IWnfG0be8vGfwszRpm53SxgVmvH3RzoQ==",
+        "title": "house.gov"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHehLnMfJm4x5hNAaZVfAUAK91ubPlJn4gfMtCcybraiG18kapNPIbX5uSsoQjDnpxX8I-tn7PtPXPcC6NrFrg7BJjtAXJCrln31APAM69zDAf7PZLT2r15qerxJHuWifxCwVeY94MknZthgWwnRkkfb0Ciu_pFHXxs2ron-IWExTH3DQMEMuQPkY99vclG",
-        "title": "shattered.io"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt7gdMtWuB1hBo21s_0tuwNacC3f6ibd7udEhSTu44OfLpQe2UUg8nVQ-BFxOMJJqkQVD5iH3D445TL3DtmFx-i3UErGix50VcYPZwphkg1_9mZm3dxLWyxyuGxbEBE_5rn82yocphJtvvSq5l4JbdiJgnof6Z3A9_KAsNEoL_d-JRvXMRDH4HEJoEJ6lxGTGgBFzx39cHlG7I1cYTrmjdQnJm0h6cVcq6",
-        "title": "aljazeera.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFUYkgIbKJQAPPQlEt4v73QPp45b0GqMqUFjmD7NxG1Kt0W9N61rKgxpPjrNkjixiCo7gFrBeUzq6S9xRdPY-l7XIDgPo9RK8wTbMSFxEqPBOC2Ry20A5zsy3Y5xU0_Q98r2bNrcWnQZA9oTCujuotQ9i71UJc1GGtBKhmXl8vVSS5N2B1tVU9M_Ne4CyV6qR4dI4r",
-        "title": "fb.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuOXCMO7JH8ze82_4ne1KvBq3zMXiYn1PjL1dq04uQ3l0pHpzUjwn-qphOu-QT61aKTjDRGnB026oybH7Mu48QArb907DuK6ko3b6lXEgBzJy33nxzGhoYt2gEBTc8FM9_c691RbEu8Swaz9hU_6rbjZaNN2h6c7CUJl1mcscm9CnTYvTKEGdsScLb6ySRVF5-B5Z9Wy7MgQUEeGhQvYjeYRMvVmFHUCjqPug5vCLkL3ACGw3mjs4xZk80zEZ8J6sStFUpwO2w7cBRgLjdUJ6jOSM-17EQK_u1aMJ0jSI=",
-        "title": "indiatimes.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4pbfDdRcttyFqoBKNY9ENXLx7CznaIdYTr5G1qVP0sbLR4AuSQ9XDfsp7JfYlLrpcsHcyJ4saiIOXT6Se15HW-odwgfs07cGr5R7mcb8XTYw8pid6S1hvB5c5Jzx5SPt1jdW0ho-_P-Oj99Vggkm79sv-HfcXSrAvi2P_3qzMzhbMifRKrY6hysaOOt0EZc8F38FDVI6WP7Syd3d8V7rSO5t10IGcOFXFiS2dRGfgEbT96scl5ZIB9AGw-dvn0EJWFd7blc7VdTSugp2OwqvQxMmV6uWb",
-        "title": "hindustantimes.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHv-AKw3TE4_jP8qg4axtH4y_xB9cyyxldRKu0GiTLX9JtjR8D3J1zCrxpuWZ31BSnAspSf2qs67y09mavX_56FookyKNG7kv-gZoRbvJWLlxdZPFrdA-no1rIUvm19lqTtuWLjLuyrVo2wmxyPzXZh1s4hLt_MAzExaUol7Wxd9OhVtQXEVnKrjK3kDtntYTUlZBo7_iUHYOGnrjmgCivshP6O5vG-n4Im1sWhTF_L-60g6OWTqKO3lU8gPeNtfKQ6u13oFOOpmei13Q==",
-        "title": "bestmediainfo.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHa3ogK_vsQaYzCLM30-8f097OMeSSqHwAGfXQBcet8Tk4Qcfg22KRObvLKTIOWH9OdrwGJV0ebRgkOGrJOEo8ngNjuXeyFoSt1EbFYgYpWYcoi72-6bbhnS-0XYmIDmVC78Ll7cnsHqF1iciOV9zAopmVHsVCAvsXevpZko2ewTThGk5MBTVIHBHg1tchIjMmvqZfVghQuZ7YAhZg8QJw7tgkdh_Kjep4Kd0eVufUtqB2WDpQN8ZEoW5ZpK131",
-        "title": "cmu.edu"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFs-s0SXvRUJ2OgbDbBcXhBAR333eW-MaVpdVUlNhb7fKYusGjDsV5LV4e2YPSI0mcYc7qTJLe9yLOwBYS_kY0rO5Vfo3E-8b5Avrgo36vFGmPoe4gzwN1cD7uiyeTnxiHYj8Y=",
-        "title": "ycombinator.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGA-7EjGcNlOuri4L2ny079-qCYWhvQOdCiFyJiJrJN4HMqkLl7hmyT4vKAyh2s1i2CK-KjPrsBnDb6ErHAhmwnRYk1yaDJNxoexsCZShcrGKmAS4OKKFVm8QPCTpvOpSlK",
-        "title": "youtube.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCzXbZNbsSMdCkIdCjmNRZBP1CFz0cUvM_E8FclLp7JKAWKIFA1c83pmZAfYjDOgl0KhwOJkFMix3o0rVgK0fSZxf0lfqOtWz40N3sd9c4pIFKlAqLMYLjOx8uqOmNYq0=",
-        "title": "youtube.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoTmQwmARtglr5LBkinLZXnfBBxExiJHJS-2f87eJFuC43bVjINOU5YBRZAMuPc6KCAARW-7Nbem7zhHtd6qBi5pchPjFfmGxgw5H01cbbUX0RpDxxcebkrDc685OstqCe1biBYkVQMAs=",
-        "title": "wikipedia.org"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-OaIb0XlMaiSeGkAywuLL_8hd3XJxeN65RX-IZIGe57i9LNd2h2oSpey4WJkrxxXsCmwMZE1lpMsfNvUwRqvEfmkt9D0-TzJ_JJg2d0YH_4XbedcQhkM0wRUdHCZstjNef_MkWP2cy7azOC-Uxz5I8PTTxVm7phTmRLhNl56JWI9COavXNA==",
-        "title": "theguardian.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEW__aFQ3Ph-__I1DOrEwtoVFw5dxgU6ZBU1MnrQ9f3DV_D3VImW9pZ6tkY-L1AfnVnKP_2Wa65beQdInaDex4Z_zO_csREWIuI6Z6vZUbmn2bdIuCkv_iRUfQls1jsp84ppN6Iran_osAdp-y-SKQ4YWeMmccWMKo=",
-        "title": "askalltech.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqvD-waQ3XUmQWlCHjQ1fkUUxfbJZz8X3aIb9lyBuhLswlzZz9p5RLNXAHaQ2QTPUR0ri6PUuicF2Re-4pMOvw8Su3JsercvrI8bjNp1_UdUcw-gT1qyX_mo8TJlS2-8hvoD6rTmEt9EG2xmAbU_6rURLIm34nYSRoIlvSwxIbwGhhgjl9BX_MVGg=",
-        "title": "fortune.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEC2vZRN1pzJV3qpaGObE59qgGcvC92h5W-5RDNQ3B_1bEhYQRwr_xlJAY4EVivXRN1YPLmdI8Bmup5EHqPlvzPiTd7pxwf19FD1L4YFkW3ivtYgDDOpYYJsQOjcz1vgFOAG8CiMU6wfsL3dxQ2NdQGtSmJXroZR8udsBrY5AnuqnFfKs---7djZFJmuw==",
-        "title": "dealroom.co"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhkIo0z5iyjEYKOnubLRyp63_KUZd-hwG3HNKiDkr5vUu8RbHzFc71X29GSWi88S7UH5tdgiZfvP2qU1gT1zyhRu31d-t-iVUfYDCEMOD-4qNUNzan7kpkIqiDTkN7icLNuxUrX0CrTnmNGVY5WUFUKIVKzOECm7xvLeHcYhs2DVQokeHPPLmnGBx14B-iVVgchwf8ugtrqf6sm9MekvQ=",
-        "title": "startupfortune.com"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWV6CAyt4m03KTM7dp1xUbf-uoWG844AlfuWegi-7hzVRz5uQ1eNjGoAsDoUPu7XYRlEtDcmZESAM8BLOyEM-FbS-FiaKtT-lY-noKqP4blCcPJLCBr09lMMW1pdsgDKXVglOhnR-GeAN-gFYZ1CSG6BzsBlLvGWuuKbdpCpIDfyOEfutFVmrQLXBNlbTvA760VqDBgznYAjbjxd4FnHH5RAkKhQ==",
-        "title": "digitaltoday.co.kr"
-      }
-    },
-    {
-      "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOJtKaCLTaNhhmGsrQiabkEj58-mDqHITrbDpWAFx1cwlc3IpesDVrA_2FkHnejN4_INrJlGEpYvOOsbGOt9sVLYd43MuR68HVlSHUlws6CNfdyq0Cm5rA",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVkQVX7RryKEy9_TCR1h3lC2RM6hD_1vr11O65x8CJAIn6bmpxoWDchnaQDZuthz-lJ3iZs-ZnS1MnmXdf7d-rlPk3XPyyj3jVZPtmpi1ibj7FVSIByviS",
         "title": "techmeme.com"
       }
     },
     {
       "web": {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEm-efMz_mM6kCiEiyL_AfvTmEWgeeKXSYa5eYNgRkc9ybTs50JqcHFKAft5ZYpbKbXlWNuEtc-u8OKvm0_d86GSvcFbGgtPl9Q8PoqqD6ZTlbB6Q1QkA==",
-        "title": "mediagazer.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOxwk1MdjihvC1yDr8wBeiJD4tZeraT5sFeJEIelqa6U3LcqiCpoAKyVjyKcduPiF2c3pyL-WS6Tu-n8-BYNcecoO0cO1H8HRNrFL869Z-YbPhCxdYDVrerg==",
+        "title": "frontiermilestones.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0p32hLfY9e1Mb1-A9-x0oE7ZvVQWxIjEpOGOw49Pp1q-38avtRWjtje7ICetb2CXsvNRXk_qJrdO_vymR6P8QxqzRCVbb4_28biB1Cx4fT1nf-jqSZoQ2PQWyGgI97q9LzedY2FNdW5CB",
+        "title": "tradeonpurpose.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHS9hjpG9ugBNyg4eQUp2qNol52bsM96vcMk9IzuZi_PIGUSMrO4cHE4We3p9d0c0s3SCV1-V70nH57MBPea_NcB35WJUPQUodCnTRUeog1zxTQskpfLRgx5nzyqxprlu7f_hYQh7wRSW1N91NTtdUhqv8chQUPgpp1KGcsSkaRBWQJUA==",
+        "title": "bookiebooks.co.za"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzJX68jv9QTdXsrou_IMs3H_exbFT31hkRETMPrA2h7eEFH9G-xIbWP5_-b8RFfaROmHGwymkwpmCwtcCMdklDT9Nki6ZwsliyQ4eCHw08wzO1gcfu4VGy1Q1WvonDbslixNNhLBBnzYLiMN35YgPpoljq-l60INNvUUPdnp193U6j_ycUizw8kN4Jbiop3-hoMTvEu4hXgcKOUj29ilIOPdkIYNjIzuNh_AsaTfwqEnuga7KZW_IGRI61yCFZ",
+        "title": "techcrunch.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEv6OukPB5dXM0Eo_HsNEBk8kQx3w8oMYeGHB7yFbuXbTev1QDquG-fZb-WUNlj35BFAlVi8rBl1-vBILt1Y8nImq6Mfc1lnKWYB44R66pYz0X7_-Ntax-8zCiC7xZEDgIzW-QTsNK4mTOiKHkOxaRdEKnUEK6WIGk8ZnbtLlLgmcLWbZFXXNq_jyuN4eme4-hMFdAbI3nRg4VpJSH1_h9ag7d_Xaz6ChAT1HXyx1pxS9yG3bPguIqsn6yLSw1qdDcbyhbBfQ==",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUpJnhFY0MWVy3T1svpgB63PTelOOOtSLzLu2zmt6m_blDwTg0XNxotqFfpp0tOcw7hETGfMPqlkz6ukOL265M5-oByuEZ9Y0ADGH-aNuG7RSLll04OyKBxDV2p3eSCkChFnbOlx_hFnGH-2q470jslCPyqQCY5whitPypuDXipJxCBnbxVruEa1VAhGOgptPu5mJRLaMog8za",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQER-WShggnLUpP4fK0dqhmydshj679i87v67ZMZ768Zyrh8tm0SSicRm40JQYV0Kip3ev4tUuaGizEwq5ZAZas1gR_nhhX3wasuJnzkUFK9UkhkxO999g4n2k51LGz_HnFf04h0vbrcM0Gj53-Bh4wx2undV5OuRUnwrRfzIIzwa155rSf3bSXijIrtXamWSieeAMlQYMo22HF0-aR825HfHJglu0JoObX-w7YBGBc=",
+        "title": "dealroom.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFORndcS2_EpVuGu2s8A8u0J0O5yeXYpqZUbl2uCA3ibDguQ4-tc51hr_lN7nKuW0fqOHaKCxOITRw6JPqxMPYzZOz7hpWX6fptCTVLcPukWn3ll34ClFCy_Sj222D0roQrJbpp8eiRMaKkAD_7xCmhB4eUiqedHPm5ECpBbc80sQRBQpYobxrktu5rG5ckvP_w-gSRuqIUScyd1RC38Pq6P2mqzCkDW9excSE=",
+        "title": "forbes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzLGn7H7zARrAd2dGWcCr2olx6X6P2WFjQX3JR_dEvRXceuxlTyBxwXsAlecCn5lzfKhkfEaoDs-kAhq6ZO6fC-k7Hdq70ZcjLQ_-fNnTlUm78eclEEVOO0GXtOUk8tbbpTAb9X-wc_wE--mvn2960S8B4bz-d_V8-Cx86xa7TbaQNHII6GHx2Xoff46vCDM0YrNdgEwg7eAw2xZzazlQj7tcBzg==",
+        "title": "euronext.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDNiOIhuMGioNMfvd82d66fp3N_5ss-Yep2ePF6R82eH90Lxeb7KTVl6mPNGB_gd2werD0TVDChTdAkLUJ3U7y1J9kDe_UKl7GRdL7aGSy_3w8KGpyi3zSOJWzKSpKFy7zy7_acTT6S4s3AdPlHOiM6tSoAodp9kASQvexcECkIr3OgvdfFlcdhNw9b_mejxlyuOHN2glYQhLU94R-4tNq0-nM2Y1EisNx",
+        "title": "channelnewsasia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKQoLiaF_lPlxi31QZxSVjZmGzP0sZ7r71-R-QOVZxAfz0sbPtqhc_TQ9jxkeBDvdcV7my53g3TRFVYxCvkXW6lmSHJ9E70vbvxUOg_AcFiD6EOdZqcUkYlKurx6Fc1Mgm71uY_Git8K5jAqq22-Py-8r1Fg-r2oHGj0RVlXiGGRorG966Y6Kv_uSzQYlC",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkNCJ6dyBe9VKR543TY_2HduNR_sQEQCWPFS8S7wQGgmPdym1J0ApNV70NCKgCX1A0ZOK-LDEKl-Bj7sutmpI35k_qkqvuRRoPjzPASuqx1caPIrlqYMx5tBFMMLQTX_InefB83rL3hTwl0blNV_2V0NWpt1qlPO_IwII2urHOY_ctEmF_5IX5veorviu4tifdBTT4UXokcw5D2pedpg==",
+        "title": "techcrunch.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7mbpc9cnTJIbDnpQHnFJcG-y3leFM8U2Gq30SkFGmb2ssKqSN-i5BeXpojpycNJ6Z_fOuQsGeGs-rdDK0Q1ZMxiIk6-BXTuEM7Wdv0IchBEcy_kSStveCvMPFIU8Pj5AYoIxQ7VAkxlltzAqTvHiEXWpLkzyccBTBIVUQXCYDBz6wd30WCOAoHqlNdo9R",
+        "title": "dataconomy.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWHttMhgX3R3mNJbSkjy0W3OgR5Cs-v-pf3UKkQzPjaDaHgEcM28XCPG_KSKrokHyNeh9Zx-tioSgxq8g6ni7D4UsGx93aBHoAui8AAxY7tucMGp_K_kHbTYuca9A6fiWKLympTMcLEfVx0TwhgcmzYKEHuvk6zBTonR65K08twlBBaxAHlWOIDArnMYnnSMlKxLLjbj7lh7gTgpkaF0bRgpoJyOMEJKSjls4=",
+        "title": "startupfortune.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtXsL4IrjujlpigHCxxYSk9JLr7fcLz9spYWJwrEXtHC5XgrbZV-Xs8nld5pFgfiqLwIaLT52ryD1VKnwENboBxn9Gi7uG1VUka8RLtynluDyPbLkSWhDVWJ2ZUTMSeW41e_EaZJf2TPyFo1mJStw0pnwnCpepqK4SlvI4NlGwGziN4bRijuasvOVo2qK2Np9VMJ7c5XNPXShGHU0zHlyRQ6s200sGTar-39tKwSwMSg==",
+        "title": "forbes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFU66mXcYdrEXBg0si8fDl1Ao9M2FMcMgvwsyWdxDnPs9SrdLBR1LcM2IRtfyHGil1R40zQH0l1tAeWtDkJ6rlfyXNLUmh0q-C2k7pM9XMpRQU7qmRAYcjQdI9B1woBkahMWhhYJ1dKO8NZ8xZZGuzgaPJJRFLyxPNSjqU2S3qROKqpMB1H8BM4KSFFkGd1pqQ=",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCtaxnhnHAD_ySpFBZK9H0WeixcCsmUP9jxofn8S7Ni2KQT_7HxojSoevhazVHQVczuNNmCXBUqu08-Myw1rysuDC1FRlAyjzIZqIwzaLiRyQk_qFH9vCs4C1uy9qsPNGDLoA2W71Sf75FORyJZZpBn3YJOTWSGiOw2eMoVnluC6EszLFAQ-EqRgixTfpwsU7Qe1K3vdh1zF7VQD99rszf_UlIyRsJwNtC",
+        "title": "resiliencemedia.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEX1t3PLWpNg4KF2Z7R8ouwwjJ0RzUNYDlJ-b9_9m2pfLBM-XBeOq_qVN6UMDsHFWJi5__9Q-PL01bQNcPXAkR9FffsHa1jx5Z0zOyVijD2USq4rmYQmlpKQCcyj5QQpatl5RipfQ-8qHQaK3F0fv5B16JQpZOBDHt-dNzg0GaumuYJaldlYa2CFvB",
+        "title": "tech.eu"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwWPWjA9ei7d2HiQXvY5zgxBv2jp_Aqt-Whlc-oyjeOzm7nwHOTGh7ATh2evUbOkrqmKHM7_LxnrlWOvvMhXWGdBaQMpylANaopEP8a_1uStK1j6YJrVPQd1_eD1gyX3-ej0uI5WSxu7rdVvey_BpuWQQJwjOHu8I71gHCV7AWlj_MKW-25NpaN4JV0VE=",
+        "title": "dealroom.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOqYxkrSlqVhoDYj0yvg1OXJO8ZFi7A0NunInShKDSGJdywVVwR3U0dIjMUdirv5BOYaLONn5lwi8eNrx9bIVoh_kPu-eSU-_SSY5x3b9Qjymy8Q==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCSrCKaf4jrqkiqeaqAP3kQeK-U3AY_GsiUCXWG3_W60m3tlH3FC6kwxLXJ8VfIOT29SdDNCqgwqselbzdDVg9LtdfNWWYLNqpLEsyecZw6SZafW0eq6Apb9_HKbYow3gGWIQFpesdivmrHIrIcoqtmKwZuWKPd8OwFEzQWboUOc-o-reCb43S6a0P_1EZt9PYTtVa74GX2mSp2o1LyrbyJgFBo5rLFkEeS3_GafFwhsSW8i-icg==",
+        "title": "slashdot.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6Q0g8NZDcKJmCxOpj5QbtxRxOKswZnp53kWgZSR3yE1aOMDTKsxfrS_3ip_fucyRd3roTThgvLPJh6-AArQrQ0M6c8re2kYhogCejyehVo-oosTEWW4rAMchEpCvHQclgtZJRz72ch0ojaz5hCctRrc0NwebW3mUbLfVGAn57IjOPM0mfLjIp7yyglvoodcxnIdPhMYL8YiWEVwWoQE88",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtChsAC-gAG9nO306zq9Tew12nW-trN17uvZ4BEj7bKgGF9hD6WSKbb6Sm2VE2dIFTnZas29_a8W6Ouiv8AYJclSjvxHdcuR76u5X2asiK7MAy-kd_MTCdAz1rxlvEoHS32b8DX5036Aln7PFJjJS-UMvso7JrG7XPty-osdgHWYoWMYzSINMydbeffSkqc3uW4KxRHsp-",
+        "title": "baudrate.tw"
       }
     }
   ],
   "groundingSupports": [
     {
       "segment": {
-        "startIndex": 295,
-        "endIndex": 381,
-        "text": "**[2] JPMorgan Chase banking technical issue** (General banking infrastructure outage)"
+        "startIndex": 208,
+        "endIndex": 292,
+        "text": "**Confirmed:** Codex has raised a $30M Series A funding round led by Pantera Capital"
       },
       "groundingChunkIndices": [
         0
@@ -245,9 +203,9 @@
     },
     {
       "segment": {
-        "startIndex": 384,
-        "endIndex": 443,
-        "text": "**[3] BugMeNot closure** (Niche web utility service update)"
+        "startIndex": 431,
+        "endIndex": 514,
+        "text": "**Important Caveats:** Financial terms and performance metrics are company-reported"
       },
       "groundingChunkIndices": [
         0
@@ -255,19 +213,9 @@
     },
     {
       "segment": {
-        "startIndex": 446,
-        "endIndex": 515,
-        "text": "**[7] Frame 31.5\" ePaper display** (Consumer hardware display gadget)"
-      },
-      "groundingChunkIndices": [
-        0
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 518,
-        "endIndex": 597,
-        "text": "**[9] Optimizely malware infection** (Specific web application security breach)"
+        "startIndex": 516,
+        "endIndex": 649,
+        "text": "Enterprise adoption of stablecoin payments remains heavily dependent on regional crypto regulations and local fiat liquidity channels"
       },
       "groundingChunkIndices": [
         1
@@ -275,52 +223,9 @@
     },
     {
       "segment": {
-        "startIndex": 600,
-        "endIndex": 674,
-        "text": "**[10] Jiff 1.0 Rust datetime library** (Routine software library release)"
-      },
-      "groundingChunkIndices": [
-        0
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 817,
-        "endIndex": 1214,
-        "text": "**What is confirmed:** A Reuters review of over 300 Chinese academic papers, corporate filings, patents, and government documents revealed that AI model \"distillation\"—using outputs from frontier US models (such as OpenAI's o1, GPT-4, and GPT-4o) to train smaller, cheaper domestic models (e.g., Alibaba's Qwen)—has moved from academic experimentation into industrial-scale production in China"
-      },
-      "groundingChunkIndices": [
-        2,
-        3
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1216,
-        "endIndex": 1327,
-        "text": "The practice is explicitly supported by Beijing's national AI+Manufacturing policy guidelines issued in January"
-      },
-      "groundingChunkIndices": [
-        2,
-        3
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1331,
-        "endIndex": 1619,
-        "text": "**Important caveats:** Knowledge distillation is a standard machine learning technique globally and is not illegal under current U.S. export law, though U.S. officials argue industrial-scale distillation circumvents the intent of hardware export controls and violates API terms of service"
-      },
-      "groundingChunkIndices": [
-        2,
-        3
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 1621,
-        "endIndex": 1791,
-        "text": "Distillation transfers specific task capabilities to smaller student models but does not replicate full frontier model architecture or eliminate the need for base compute"
+        "startIndex": 1440,
+        "endIndex": 1672,
+        "text": "**Confirmed:** Former Nvidia CEO Jensen Huang and General Counsel Tim Teter have agreed to transcribed interviews before the House Foreign Affairs, Intelligence, and China Select Committees on December 1 and December 2, respectively"
       },
       "groundingChunkIndices": [
         2,
@@ -330,163 +235,141 @@
     },
     {
       "segment": {
-        "startIndex": 1840,
-        "endIndex": 1970,
-        "text": "High-impact exclusive investigation with direct consequences for global AI policy, trade regulations, and U.S.-China chip controls"
+        "startIndex": 1674,
+        "endIndex": 1800,
+        "text": "The proceedings focus on potential national security risks, export control compliance, and Chinese access to advanced AI chips"
       },
       "groundingChunkIndices": [
-        3
+        2,
+        3,
+        5
       ]
     },
     {
       "segment": {
-        "startIndex": 2064,
-        "endIndex": 2485,
-        "text": "**What is confirmed:** Reverse-engineering research published by developer Xusheng Li reveals that a Windows 11 system component (`MissionControlAggregator.dll`, under feature flag `CLICodingAgentUsage`) explicitly checks for the execution of AI coding agents (`claude.exe`, `copilot.exe`, `codex.exe`, `cursor.exe`, `antigravity.exe`, `agy.exe`) and standard developer tools (`python.exe`, `dotnet.exe`, `gcc.exe`, etc.)"
+        "startIndex": 1804,
+        "endIndex": 1925,
+        "text": "**Important Caveats:** The sessions will be closed-door transcribed interviews rather than public open-committee hearings"
       },
       "groundingChunkIndices": [
-        5,
         6,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2168,
+        "endIndex": 2294,
+        "text": "**Confirmed:** Reporting by Bloomberg confirms Mexico currently hosts only 71 of Latin America’s 500+ data center facilities"
+      },
+      "groundingChunkIndices": [
         7
       ]
     },
     {
       "segment": {
-        "startIndex": 2487,
-        "endIndex": 2558,
-        "text": "It logs a presence bitmap locally and queues it for Windows Diagnostics"
+        "startIndex": 2296,
+        "endIndex": 2464,
+        "text": "Inadequate electricity grid expansion, power supply shortages, and bureaucratic permitting delays are hindering investment despite geographic proximity to the US market"
       },
       "groundingChunkIndices": [
-        6,
         7
       ]
     },
     {
       "segment": {
-        "startIndex": 2562,
-        "endIndex": 2727,
-        "text": "**Important caveats:** The telemetry collects tool presence (binary flags indicating whether a tool ran), **not** prompt history, source code, or session transcripts"
+        "startIndex": 2468,
+        "endIndex": 2563,
+        "text": "**Important Caveats:** Based on Bloomberg’s market analysis and regional data center tracking"
       },
       "groundingChunkIndices": [
-        6,
-        8
+        7
       ]
     },
     {
       "segment": {
-        "startIndex": 2729,
-        "endIndex": 2912,
-        "text": "Transmitting this data to Microsoft requires \"Optional Diagnostic Data\" to be enabled, though researchers note Optional Diagnostics was turned on by default in clean U.S. ISO installs"
+        "startIndex": 2879,
+        "endIndex": 3055,
+        "text": "The company is developing the PRIMA subretinal implant designed to restore vision in patients suffering from geographic atrophy caused by age-related macular degeneration (AMD)"
       },
       "groundingChunkIndices": [
-        6,
+        8,
         9
       ]
     },
     {
       "segment": {
-        "startIndex": 2914,
-        "endIndex": 2967,
-        "text": "Microsoft has not issued an official public statement"
+        "startIndex": 3059,
+        "endIndex": 3226,
+        "text": "**Important Caveats:** Commercial deployment remains contingent on ongoing clinical trial results, regional regulatory approvals, and healthcare reimbursement coverage"
       },
       "groundingChunkIndices": [
-        7
+        10,
+        8
       ]
     },
     {
       "segment": {
-        "startIndex": 3185,
-        "endIndex": 3381,
-        "text": "**What is confirmed:** At the Supercomputing 2026 (SC26) conference, Nvidia announced the \"Rubin HPC\" GPU, a specialized processor designed for agentic scientific workflows and complex simulations"
+        "startIndex": 3434,
+        "endIndex": 3653,
+        "text": "**Confirmed:** Reports from Bloomberg and CNBC confirm Anthropic is signaling to prospective investors that its IPO shares (ticker: `ANT`) are expected to price at or above the upper end of its $70 to $78 marketed range"
       },
       "groundingChunkIndices": [
-        10,
-        11
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 3383,
-        "endIndex": 3528,
-        "text": "Nvidia revealed the chip packs \"more than 50,000\" CUDA cores (up from 28,672 in the base Rubin GPU) and utilizes NVLink 7 interconnect technology"
-      },
-      "groundingChunkIndices": [
-        10,
+        11,
         12,
-        11
+        13
       ]
     },
     {
       "segment": {
-        "startIndex": 3532,
-        "endIndex": 3602,
-        "text": "**Important caveats:** The GPU is not scheduled to ship until **2028**"
+        "startIndex": 3655,
+        "endIndex": 3729,
+        "text": "The book-building process is heavily oversubscribed (roughly 6 to 7 times)"
       },
       "groundingChunkIndices": [
-        10,
-        12
+        12,
+        13
       ]
     },
     {
       "segment": {
-        "startIndex": 3604,
-        "endIndex": 3771,
-        "text": "Nvidia did not disclose crucial High-Bandwidth Memory (HBM) capacity, memory bandwidth, native FP64 compute performance, or thermal power specs during the announcement"
+        "startIndex": 3733,
+        "endIndex": 3817,
+        "text": "**Important Caveats:** Based on market sources involved in the book-building process"
       },
       "groundingChunkIndices": [
-        10,
-        12
+        12,
+        13
       ]
     },
     {
       "segment": {
-        "startIndex": 4011,
-        "endIndex": 4349,
-        "text": "**What is confirmed:** Financial Times research and data from regulatory platform Regbase confirm that Amazon Web Services' planned $17B+ data center expansion across Ohio is facing severe obstacles after voters backed 21 local ballot initiatives restricting large-scale data center developments during the November 2026 midterm elections"
+        "startIndex": 3819,
+        "endIndex": 3907,
+        "text": "Final share pricing will only be locked in when underwriters formally price the offering"
       },
       "groundingChunkIndices": [
-        13,
+        12,
         14
       ]
     },
     {
       "segment": {
-        "startIndex": 4351,
-        "endIndex": 4464,
-        "text": "At least three major AWS projects (consuming ~1.8 GW of power) are directly affected by local bans or moratoriums"
+        "startIndex": 4103,
+        "endIndex": 4319,
+        "text": "**Confirmed:** Robotics startup Genesis AI (co-founded by CEO Zhou Xian and Théophile Gervet) raised a $500M Series A round co-led by Khosla Ventures, Premji Invest, and Eclipse, valuing the firm at $3.5B post-money"
       },
       "groundingChunkIndices": [
-        13,
-        14
+        15,
+        16,
+        17
       ]
     },
     {
       "segment": {
-        "startIndex": 4468,
-        "endIndex": 4619,
-        "text": "**Important caveats:** The $17B+ figure represents aggregated long-term capital allocation across multiple proposed campuses, excluding server hardware"
-      },
-      "groundingChunkIndices": [
-        13,
-        14
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 4621,
-        "endIndex": 4782,
-        "text": "Amazon has not cancelled its overall regional strategy, but local charter amendments (such as power consumption caps in Sunbury, OH) block current site approvals"
-      },
-      "groundingChunkIndices": [
-        13,
-        15
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 5025,
-        "endIndex": 5285,
-        "text": "**What is confirmed:** The U.S. Department of Commerce and Department of Justice issued a joint statement confirming that federal authorities opened an investigation into Singapore-based cloud provider Megaspeed in 2024 over suspected export control violations"
+        "startIndex": 4321,
+        "endIndex": 4385,
+        "text": "Backers include Eric Schmidt, Xavier Niel, Bpifrance, and Nvidia"
       },
       "groundingChunkIndices": [
         16,
@@ -495,149 +378,90 @@
     },
     {
       "segment": {
-        "startIndex": 5287,
-        "endIndex": 5406,
-        "text": "The statement confirms Nvidia placed Megaspeed on its internal \"no sell\" list in June 2025 following Commerce inquiries"
+        "startIndex": 4387,
+        "endIndex": 4498,
+        "text": "The funding will scale production of its general-purpose robot, \"Eno,\" and advance its GENE AI foundation model"
       },
       "groundingChunkIndices": [
-        16
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 5410,
-        "endIndex": 5537,
-        "text": "**Important caveats:** Megaspeed denies all allegations of illegal chip diversion to China and maintains its business is lawful"
-      },
-      "groundingChunkIndices": [
-        0,
+        15,
+        16,
         18
       ]
     },
     {
       "segment": {
-        "startIndex": 5539,
-        "endIndex": 5699,
-        "text": "Federal agencies have disclosed their regulatory timeline, but the government investigation remains open without formal criminal indictments against the company"
+        "startIndex": 4502,
+        "endIndex": 4600,
+        "text": "**Important Caveats:** Mass manufacturing is targeted for 2027 following ongoing pilot deployments"
       },
       "groundingChunkIndices": [
-        0,
-        19
+        19,
+        18
       ]
     },
     {
       "segment": {
-        "startIndex": 5748,
-        "endIndex": 5847,
-        "text": "High-profile regulatory update surrounding AI export enforcement and Nvidia's supply chain partners"
+        "startIndex": 4502,
+        "endIndex": 4685,
+        "text": "**Important Caveats:** Mass manufacturing is targeted for 2027 following ongoing pilot deployments; real-world dexterity performance outside controlled tests remains unproven at scale"
       },
       "groundingChunkIndices": [
-        16,
-        20
+        20,
+        21
       ]
     },
     {
       "segment": {
-        "startIndex": 5932,
-        "endIndex": 6181,
-        "text": "**What is confirmed:** Meta announced on November 16/17, 2026, that it updated Instagram's recommendation algorithms specifically in India to reduce the automated promotion of sexually suggestive and violent content from accounts users do not follow"
-      },
-      "groundingChunkIndices": [
-        21,
-        22
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6183,
-        "endIndex": 6343,
-        "text": "The change follows an October advisory from India's Ministry of Electronics and Information Technology demanding stricter oversight of recommendation algorithms"
+        "startIndex": 4882,
+        "endIndex": 5043,
+        "text": "**Confirmed:** Defense tech startup Tiberius Aerospace raised an $85M Series A co-led by Lakestar and Rochefort Asset Management, valuing the company at over $1B"
       },
       "groundingChunkIndices": [
         22,
-        23
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6347,
-        "endIndex": 6515,
-        "text": "**Important caveats:** The update alters algorithmic recommendation feeds (Explore, Reels, Feed suggestions) rather than enforcing a complete ban on user-posted content"
-      },
-      "groundingChunkIndices": [
-        22,
-        23
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 6517,
-        "endIndex": 6663,
-        "text": "Meta claims Indian user reports of unwanted recommended content dropped by half over the past year, though it provided no raw verification metrics"
-      },
-      "groundingChunkIndices": [
-        22,
+        23,
         24
       ]
     },
     {
       "segment": {
-        "startIndex": 6712,
-        "endIndex": 6809,
-        "text": "Significant update on AI recommendation governance and platform compliance in a key global market"
+        "startIndex": 5045,
+        "endIndex": 5229,
+        "text": "Founded by Chad Steelberg and Andy Baynes, Tiberius uses AI (its GRAIL platform) to design long-range ramjet artillery shells (\"Sceptre\") under a \"defense-as-a-service\" licensing model"
       },
       "groundingChunkIndices": [
-        22
+        22,
+        23,
+        25
       ]
     },
     {
       "segment": {
-        "startIndex": 6895,
-        "endIndex": 7114,
-        "text": "**What is confirmed:** Carnegie Mellon University's Griffin School of Computer Science officially launched \"CS Learn,\" releasing full-semester lecture playlists from flagship computer science courses on YouTube for free"
+        "startIndex": 5233,
+        "endIndex": 5353,
+        "text": "**Important Caveats:** Tiberius operates an asset-light model that licenses designs rather than owning production plants"
       },
       "groundingChunkIndices": [
-        25,
+        22,
+        23,
         26
       ]
     },
     {
       "segment": {
-        "startIndex": 7116,
-        "endIndex": 7263,
-        "text": "Initial offerings include *Principles of Computing*, *Generative AI*, *AI Agents*, *Machine Learning Systems*, and *Machine Learning in Production*"
+        "startIndex": 5233,
+        "endIndex": 5454,
+        "text": "**Important Caveats:** Tiberius operates an asset-light model that licenses designs rather than owning production plants; commercial delivery relies on vetted third-party manufacturing partners and military certifications"
       },
       "groundingChunkIndices": [
-        25,
-        27
+        23,
+        26
       ]
     },
     {
       "segment": {
-        "startIndex": 7267,
-        "endIndex": 7351,
-        "text": "**Important caveats:** The free YouTube platform provides video lecture content only"
-      },
-      "groundingChunkIndices": [
-        25,
-        28
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 7353,
-        "endIndex": 7500,
-        "text": "Official course grading, assignments, interactive feedback, and university credentials remain restricted to enrolled degree students via CMU Online"
-      },
-      "groundingChunkIndices": [
-        28
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 7549,
-        "endIndex": 7629,
-        "text": "High-value educational access story from a top-tier computer science institution"
+        "startIndex": 5495,
+        "endIndex": 5571,
+        "text": "Significant defense-tech/AI innovation story with strong UK and US footprint"
       },
       "groundingChunkIndices": [
         25
@@ -645,197 +469,81 @@
     },
     {
       "segment": {
-        "startIndex": 7730,
-        "endIndex": 8004,
-        "text": "**What is confirmed:** Microsoft issued a preliminary incident post-mortem attributing the major November 12–14 global outage (which disabled Exchange Online, Outlook, Teams, and Copilot) to a latent software bug introduced in a July 2026 update to network gateway servers"
+        "startIndex": 5674,
+        "endIndex": 5933,
+        "text": "**Confirmed:** An amended SEC S-1 filing shows Amazon and Google (Alphabet) will hold approximately 15% and 14% of Anthropic’s outstanding capital stock, respectively (~28% combined), following the completion of its IPO and concurrent $26B private placement"
       },
       "groundingChunkIndices": [
+        11,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5937,
+        "endIndex": 6060,
+        "text": "**Important Caveats:** Holding percentages account for both voting/non-voting share classes and private placement additions"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6265,
+        "endIndex": 6460,
+        "text": "**Confirmed:** Microsoft's preliminary post-incident report reveals last week's global Microsoft 365/Exchange Online outage was caused by a latent software defect introduced in a July 2026 update"
+      },
+      "groundingChunkIndices": [
+        28,
         29,
         30
       ]
     },
     {
       "segment": {
-        "startIndex": 8006,
-        "endIndex": 8126,
-        "text": "This defect triggered internal connection failures and caused server capacity to become unresponsive under traffic loads"
+        "startIndex": 6462,
+        "endIndex": 6592,
+        "text": "The bug remained dormant until triggered by a Teams network failover combined with a 14% temporary drop in gateway server capacity"
       },
       "groundingChunkIndices": [
+        28,
+        29,
         30
       ]
     },
     {
       "segment": {
-        "startIndex": 8130,
-        "endIndex": 8257,
-        "text": "**Important caveats:** Microsoft confirmed there is no evidence that the outage was caused by a cyberattack or malicious breach"
+        "startIndex": 6596,
+        "endIndex": 6701,
+        "text": "**Important Caveats:** Technical details are derived from Microsoft’s self-published preliminary report"
       },
       "groundingChunkIndices": [
-        30,
-        31
+        28,
+        30
       ]
     },
     {
       "segment": {
-        "startIndex": 8259,
-        "endIndex": 8313,
-        "text": "Core services were restored over the preceding weekend"
+        "startIndex": 6596,
+        "endIndex": 6771,
+        "text": "**Important Caveats:** Technical details are derived from Microsoft’s self-published preliminary report; a final incident analysis is scheduled for release later in the week"
       },
       "groundingChunkIndices": [
-        30,
-        31
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 8529,
-        "endIndex": 8744,
-        "text": "**What is confirmed:** Oakland-based Numa announced a $45 million Series C funding round led by Blue Cloud Ventures, with participation from Threshold Ventures, Costanoa Ventures, Gradient Ventures, and Tokio Marine"
-      },
-      "groundingChunkIndices": [
-        32,
-        33
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 8746,
-        "endIndex": 8887,
-        "text": "Numa provides AI agents that connect to car dealership software to automate customer communications, service bookings, and warranty paperwork"
-      },
-      "groundingChunkIndices": [
-        32,
-        33
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 8891,
-        "endIndex": 9081,
-        "text": "**Important caveats:** The reported $500 million post-money valuation comes from a source familiar with the deal cited in press coverage, rather than explicit line items in the press release"
-      },
-      "groundingChunkIndices": [
-        32,
-        33
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 9269,
-        "endIndex": 9420,
-        "text": "**What is confirmed:** Meta confirmed it is testing \"Direct,\" a standalone messaging app built on Instagram's DM infrastructure, in Thailand and Turkey"
-      },
-      "groundingChunkIndices": [
-        34,
-        35
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 9422,
-        "endIndex": 9560,
-        "text": "Unlike previous iterations, users can sign up for Direct using a phone number or email address without needing an active Instagram account"
-      },
-      "groundingChunkIndices": [
-        34,
-        35
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 9564,
-        "endIndex": 9674,
-        "text": "**Important caveats:** Meta previously tested a standalone app called \"Direct\" in 2017 before shutting it down"
-      },
-      "groundingChunkIndices": [
-        34
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 9676,
-        "endIndex": 9773,
-        "text": "The current trial is limited geographically, and Meta has not announced a global rollout timeline"
-      },
-      "groundingChunkIndices": [
-        35
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 9970,
-        "endIndex": 10129,
-        "text": "**What is confirmed:** An investigation published by ModelRepublic (Philip Dowdell) analyzed ~1,400 influencer campaigns tracked on the \"Urban Legend\" platform"
-      },
-      "groundingChunkIndices": [
-        36,
-        37
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 10131,
-        "endIndex": 10313,
-        "text": "Findings show paid creators posted tracked links advocating pro-AI state legislation, US crypto policy (the CLARITY Act), and messaging advocating for Nvidia H200 chip sales to China"
-      },
-      "groundingChunkIndices": [
-        36,
-        37
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 10317,
-        "endIndex": 10403,
-        "text": "**Important caveats:** ModelRepublic is an independent investigative outlet/newsletter"
-      },
-      "groundingChunkIndices": [
-        37
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 10405,
-        "endIndex": 10576,
-        "text": "Campaigns rely on affiliate-style link tracking; funding paths stem from complex advocacy groups and political action networks rather than direct company press disclosures"
-      },
-      "groundingChunkIndices": [
-        36,
-        37
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 10811,
-        "endIndex": 10855,
-        "text": "**Status:** IN SCOPE (AI Research Preprints)"
-      },
-      "groundingChunkIndices": [
-        0
-      ]
-    },
-    {
-      "segment": {
-        "startIndex": 10858,
-        "endIndex": 10972,
-        "text": "**Caveat:** Per editorial policy, Hugging Face paper summaries reflect uncorroborated claims made by paper authors"
-      },
-      "groundingChunkIndices": [
-        0
+        29
       ]
     }
   ],
   "webSearchQueries": [
-    "\"Carnegie Mellon\" \"computer science\" YouTube free cs.cmu.edu learn",
-    "Nvidia Rubin HPC GPU Supercomputing Tom's Hardware",
-    "China AI distillation US models Reuters November 2026",
-    "Megaspeed Commerce Department Nvidia Reuters November 2026",
-    "Numa Series C 45 million 500 million Fortune",
-    "Amazon Ohio data center FT November 2026",
-    "Meta Instagram recommendation India Reuters November 2026",
-    "\"Windows 11\" \"coding agents\" developer tools telemetry xusheng.dev",
-    "Microsoft email outage defect Register November 2026",
-    "Meta Direct standalone messaging Instagram Engadget November 2026",
-    "ModelRepublic \"Urban Legend\" Nvidia crypto right-wing influencers"
+    "\"Tiberius Aerospace\" \"Chad Steelberg\" 85M 2026",
+    "\"Science Corp\" \"retinal\" 400M 2026",
+    "\"Jensen Huang\" \"House Foreign Affairs\" December 1 2026",
+    "\"Codex\" \"Pantera\" 30M Series A stablecoins 2026",
+    "\"Mexico is struggling to attract data centers despite its proximity to the US\" 2026",
+    "\"Anthropic\" IPO \"70 to 78\" price range 2026",
+    "\"Science Corp\" \"400M\" \"3.5B\" 2026",
+    "\"Genesis AI\" \"500 million\" robotics \"Zhou Xian\" 2026",
+    "\"Amazon and Google are set to hold nearly 15% and 14%\" Anthropic 2026",
+    "\"Microsoft blames monster email outage on software defect introduced in July fix\" Register 2026"
   ]
 }

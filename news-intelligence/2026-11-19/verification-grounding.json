@@ -1,0 +1,577 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Anthropic%22+%22initial+public+offering%22+OR+%22prices+initial+public+offering%22&client=app-vertex-grounding&safesearch=active\">&quot;Anthropic&quot; &quot;initial public offering&quot; OR &quot;prices initial public offering&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Visegrad24%22+Wired+%22Elon+Musk%22&client=app-vertex-grounding&safesearch=active\">&quot;Visegrad24&quot; Wired &quot;Elon Musk&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Gemini+4+Neon%22+blog.google&client=app-vertex-grounding&safesearch=active\">&quot;Gemini 4 Neon&quot; blog.google</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22StepSecurity%22+%22Series+A%22+Elephant+Axios&client=app-vertex-grounding&safesearch=active\">&quot;StepSecurity&quot; &quot;Series A&quot; Elephant Axios</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Home+Office%22+%22technical+capability+notice%22+Apple+FT+OR+%22Financial+Times%22&client=app-vertex-grounding&safesearch=active\">&quot;Home Office&quot; &quot;technical capability notice&quot; Apple FT OR &quot;Financial Times&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Anthropic%22+%22institutional+investors%22+%22zero+shares%22+OR+%22foreign+orders%22+Bloomberg&client=app-vertex-grounding&safesearch=active\">&quot;Anthropic&quot; &quot;institutional investors&quot; &quot;zero shares&quot; OR &quot;foreign orders&quot; Bloomberg</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22European+Commission%22+%22ARTEX%22+Politico+cyberattack&client=app-vertex-grounding&safesearch=active\">&quot;European Commission&quot; &quot;ARTEX&quot; Politico cyberattack</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Project+Suncatcher%22+%22Blue+Origin%22+Google+%22New+Glenn%22+Verge&client=app-vertex-grounding&safesearch=active\">&quot;Project Suncatcher&quot; &quot;Blue Origin&quot; Google &quot;New Glenn&quot; Verge</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22microsoft.ai%22+%22microsoft+ignite+2026%22+%22seven+new+models%22&client=app-vertex-grounding&safesearch=active\">&quot;microsoft.ai&quot; &quot;microsoft ignite 2026&quot; &quot;seven new models&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Public+First+Action%22+%22Anthropic%22+%2225M%22+OR+%22Washington+Post%22&client=app-vertex-grounding&safesearch=active\">&quot;Public First Action&quot; &quot;Anthropic&quot; &quot;25M&quot; OR &quot;Washington Post&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Seven+new+models+at+scalable+price-performance%22+microsoft.ai&client=app-vertex-grounding&safesearch=active\">&quot;Seven new models at scalable price-performance&quot; microsoft.ai</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0HI5AgYOwawk7NLQAFeb4B_zKbYe1SFAlXI7TTwlQbf0AlSAlMafXv_xD-BqTZirqgHe-s3Uiiix1aQYalJFArBD0VCN9ZPCFTLbr_xH5bGUq0gPm6L9uSrjiyH2l0jXa9dG6fQXc5pRXBT-uERw4fDTA6LVgMfWhnSIk78ZtIeozPXinZ9ButAaZ_Wdj991tvfSBVkaD",
+        "title": "blog.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMOFqbGxevuEEpwMYijBU7hEyorbrxvze44Rceqg8g_lNYjyBhGU7HoEZy_qpiMyib6FQLMPI9gfca-j5LD2SSLTnJfjJwLJ-_RoO301anXRPlXPCtPtKB22vxwFssPUcHyWjqo8As2LOvWicL6Qt8jx9WGyQHlvTY",
+        "title": "antigravity.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzqdqAkmznNMHmTIS1E2qR9neDJ0UrYt0M_MbaRdd2CkJVNWqHLunz_JXiKsn37cfnJIczLSObk0CryfAquQvV1LIAbL0NEbtyv5WSofF68M1cBGNhs5x_dxDSH9SpDeQ=",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGngOh2tp08NzgJeoT8eklgkOTbF3Dd38dHUZY7gNjQzsp6-uAAtEnn2Yk7gT41r2m1pl_zmknv93HjGoGcfWyMPUKfRQ9y9lm_F4Ipwnx3b1Vg4XcVrTEMlYH_Qf2WX28=",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgYwbmAsHMZ7u7RKkGYaIY_J9TX2Fn-h3Ajl9P_vJa0__-OgNBNprLioUlx2nL43F8eAkCfyRX4yiqJYg4mMmSKLT15kbxlYK4iNhiaJWFb71hhlvLVNDn-TzDguH6873P4aL0VdzYDxh6tWo7nBtA3QKBAtfX_luvUVttjTI=",
+        "title": "github.blog"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGR_QVq6bGpnO76YJ7qO-8zDoIDWpTNc-K_045FVPLU-DCN7xM7sklivlkuoIAZv7RDA6LRFV4stDdttCdN0t6-6_FkwPvzqrz2EEKnoB-PWAvNK7sI5CZEZO_9pev6TdC5Bi-4T30urSwxf1pUWmQ2RrHmPdKO",
+        "title": "stepsecurity.io"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnsm6Dd9obMFn3_iJHIHKuc0GgQbrMUEsFxUyfrR5ZXHHXge4wkUzTOEU01svPurquX4vlHGKYmluYrpaCuK71h43XnwIJfpR2xyUoc5XBbMMOz_W2UGS5TyPzNAw=",
+        "title": "seattleflow.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG9kF_7WM12wq0JXWN5KEGrmEsc1Ug-8wKS3CuX-lRU6saxjcbB4tLDAvgNkGGiJRPF-34G9hFYjo-KNMqJNGAK2pWEp7cp_Bp-xLFwANBUVvdby_ILyw22JOPkaug9Mm5K_z_GEQ7ye6tZpQskx3SNGpdAOOpEfr5ltFXjhZ4-IP72ndOq47lZHyJ1F2GfMVm8qAtA8-vVmvviw==",
+        "title": "axios.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFumcyuZJir2E6ElOimO1-dLkhtsiXNhLAZTjyGAZ1sB4pKWG2fRTxHjbEf6wo6ChwXi17k8-1IFCj18UvlQrRbOUqJMtbRvoSGaskuQlmeAptXTZilQLEG_oX9TD1M3MRll7Iq9BgVTgNA",
+        "title": "bsky.app"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMQu2T8igs74zqOXLvTfoZQcGh4JrWlvgwoCQLeaBWeuYCD3MPCLsfBzhbtPyivECfTuTLQnBs5QjmXATcYsWetee4TUmAQgv8PwgLiCLqztTRWbNrfAzM7GRIg-KtFyJbo6cNHObKy-Xa13GUL211QCAxJDRYwi4MCgJ1mz6RRHsLSz8cdfDI6fV4YAUT4XPaj2Fy7pgd7CsPudukP4frYiAZWA==",
+        "title": "soz6.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlt1LaQcMzV5FaejD7sAGs-T1dcT41jML_o45g3NpC2P771Rh_Z6yhyMfb8BJqdtrl1PMyMA0ia5UOHe6UdyZxWH2IGeJmzTsSpHFCj8ue3I9eZg0tAg==",
+        "title": "lemmy.world"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdSkPomLwwn6Hl6BSES6iNg8YHMJiCD2PWq0IlNizprQBmtd5ShOXZsX396vKxKf0m5ldH6JXi-oFtgwDv1ylpHYNIPWBDpDTSBYmt_dmOssfPwcyVxjazqpmCi05dXHEgho95uGIEj8QxXBGZ9zZ4jlpt1XqIo15qihG4",
+        "title": "anthropic.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIalFrfNeVpQ_XI8BeLpKKjbT2yFpYhMRMys-HuqRTeM6dXj1pZQGObKAWrIABgvJDJm8JvVSxncvyGyldcf-92Z0RJeGmW_3dBul9M8Ygyh1hXYPgj9qE78-95EZ1COcTZ7bLXsyITHNZbGzJCPquBYnT-B2q_TgLhypQ40sjd6eiXA==",
+        "title": "fortune.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8Puv0nWe2wiGV0V4N7jmdmpNyhK_i9onQejb9c4HHFg886Snn0mUuR0hF0JVRPVqERypMm-X8rHsv8gJsr1QvtscU5g75pmyAu722__4_Qw1YPmlUdrCghK9vabGo4IJtRSwsBhnpgON-hZGaYUNtPHNyMgaduTSTB_VKh3CO4au8zRvr6mS1sezM1JlzxqBpYZwfoe0SSf8GPuXvzfPa-hdo7vta1DWZ_VRoKWwQ",
+        "title": "pbs.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETNVPfqpPPJvSsc4H-lzx-HCJB-uXT2gz0F3fEIvflaAyW0SlmDRCOlBsPaFrzJBLf89U6Mk1p1AQUrjddGGb2Hnf_uFlHNdsgoIIxdAPkIsqXd56V3B4MKXhk4DmnJQ9JglM2Vy3KD7oUKpX_piCHHFEi7h-82vrTdEcNFho=",
+        "title": "cryptobriefing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGugRC2DjR5puMfNTqScEvvbzRB6W2t7vYiULZ5VYdcwnFt8nGlYYNy2dIn9j3FSz7UhxlPA-JUjdT_mOi1EW5htR01qxpBCDSkeq3OigLmOsPqVO4cDzUPew==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnUtmOf-FrypiZ5lKw2i-PDbl5tFd2-qgVMm5nxN26IK6gbK-O08Wwo70HeS2WwuWpJc_3RUeLh6Jh3KeIDIn1yqW76kTXgo-8frO2mVu4N3oGjy6xSl0wHHED3go5UfMFJnqIUeFIelhQtTHVvT4EgIsrgwpo8wgTxC8_OPpQ",
+        "title": "therecord.media"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJWLiIA7MnuzuUmAKqFMbEBu2qIu8jzM9w5i2pEWfCDr0_G4FCU9uclvRIzrMa_pxXtPS3dBbt_eLn77RjzHQ_a0_4zTi2ZEWYEvDkW1gtYbzsaMzAOVCPvhK6vdwy2H5GtbIL0uydHlnT6nPTJVVKmbIVlD5G2y6NRwOL1jBnlG0iSCn-CsC_B-EV4ZHwlhGycl8l_SPTQyVLHonWe-AmOPc=",
+        "title": "philenews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnepQw8zPTzzumL9CZC9v6eT5hkhXUyOb22RrQxIy4h-CqYxDpF-3IPHWJYAjFnITcghUPTqb5PZDvNPsReEgKGrlz9zEiEjkSebLdN2nB27_pmW28lnPpRCPl5GplhNCr9IKQ373Rm6tycXZXZZEZki1Zbg==",
+        "title": "cybersecuritynews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrlz4EtvD-EbUqNt9S3DT-tJE6pg_0MVvbct3xh4sWGnvECn-qvZnFGbrMcTMo2gXZqpNDZ-6HINGm1kSiPCu58zd-gm6QrlLolaKGKdeQX3T3MdUznBFnAudTlcqM7gbcSjNOmtLE9QwY6nHj0sXvJSOGTD4KN9-tcUhT2xuC2JkTU07r2BkYIvtgMWnpdbdnCV2t9KqMqk00zsTzTfxq9PYc6Oys_w3Lw8zrRv2I8xkx9IMEL-JzBh63te2Sa7UOcgOxNzp5Ubphj_AJ8lM=",
+        "title": "indiatimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjgqEhfrLB2fb2LcghHr7cGMnTSRwvsdULSO6tpcuPv1ItCTgr3uFnd6BS1ntqiLK1k3Y5fntuJxsxuvSNEUcUUQTTxnvH5DjWa37hGhjhGNU11F_fDFGx1Vp7d_DugGQOHTK-xVF4M_KvoPjHcuas5Xff40bI832_68-HFH24t2HZhXg=",
+        "title": "ft.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzq3nWrs1vq6tJ6LUlB1JHBB6M70fMDlLfvQZx8dUOg2_uIklGNRGrZeBfNOvCDCZ5mM2u7ju0kwg8o8LNjMV-JR6JgC5iVh0eiMdUtf2EhdA1ukXrfGcTQQwll_0TvLUFN4JaAb5vIsUsIK3l1odE2ih33UopYYdST4z7q8h4fIUMsl6b3iRwQt5QoNcECPLmXd3btbJxfnzGU-HbpJYc6NwPDCEAJA==",
+        "title": "appleinsider.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEW9_MOZQbm-NfFfjD0dc_n1Nua8xtpePgP5-ztVsQzNv2q5Odu5WxIPsmHlnlHZIBYcgSlSFfqSJFx7VuUwetn2qaTVFggx0IFc8sivtSn6aw1fvOqgGgBf3-7SWtf30fb2xl6wMgyayigMFta0qbO7c5PhJd5fVAnVjOGsprR0uh1rerQUlWLldbTGg==",
+        "title": "macrumors.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqpCbhPYAd4zOzvbwiHZZrSdr-JRACipGkambWIGV8JbblWLiZpf7PydOKAHYp2VNFG_pa3rBI0IlOqumEOQuEfSxKoRJ2KP2FWvHSXGN0UisvIQf2WrmTLN6yDhH9yZ29QyrkDK4YdGp1kGGMPRjvZawsLCv1y9b2hwXgpeo=",
+        "title": "iphoneincanada.ca"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4Sd2qYRQZ3gfmMJgC6kRO3aslZoWxnvrUG4DkQZNTOSn3khCwZN9dY-esgtCbaoUrA4ar_5hyuCfcfQS3Kq4aYp4MCI_y-NPRq76a5xpRq3f698qoedUff7TSxHCmvxtxl5Ecuz0BsAtc4_MPrlCwqU-38lHx66uUr9EdQ26M",
+        "title": "vibeleaderboard.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDaeTLaiRQNOvOv00M7zOGzC_aqYV10Sz9Rm1ATVgbFRVF-9TMQPnt-OJuLxY7R4Nhow3i64CTxgI4nl8GRhnydURRNaOWJR53f63hyAOcBgmeZff97CVYXtnNwcvk2ZR8tzUixiYrQ0FMhvx2hyp7aikGpA==",
+        "title": "ai-tldr.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5zN0BpfcMWfnmSknp3EqJyp5Z-Hoyrz6Z9_V0QT90swcdeezDqkgc_wnRAO4zvmIUXogPTJhuzGNtlHsonhj9LQuhRaDpfKRmJW_LSe-sTJ2bjJHaEAKVPY4ERaVFxBHgCUwIODeKv892x06NM3NsXWxG3NbXTWJyVgSv",
+        "title": "thedigitalbriefnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBVLjTAiNkdnbX1c2OPXuHjUOPURx2aXT_sHxgFPuj3piVs5M61vGrmQGsxqIu8B4L6hnO-Lm0N9o-6eX7RS8o6OJLQjY8yRRZr8DGpy1k3etGQS3ckuQdv4Z06R24s9KNbWGdtHZ51weci8hOcc01VtilFsiLs1OKZyx3nhI68HAp7_gX9kHANp75K5_U5YhKTlvErlkF2KQLrsH-4G50h5-ayaM4DTrlcUFZ9Ck1TPst9_IHvSMh5X16-qdqaqeLCHYXHJxX5qtdWtoC5g==",
+        "title": "techtember.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqYDZKaPtHhlM_1rRLrCNMb5pX5_coKb7gplw8Hy2thpcUiCceTX7c1TRarz9g_nRA7z8amzCjlfQnr9RtIdB6k6Z8QJj4rDNET-sYeQ4chmOPCM6tjBPbM6_SP15_3xSNBoP5dOdn7JmA8W4NuuwzSRICgIqMBwyqoB7ClMOVOqXVSj1cCQ==",
+        "title": "guthlabs.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQCXEO0yUrpi7fkYGv0WbvZCJ8AJ19tVzzqFH9HTsMqYPrp0MFuqNHnHysrygA5fvmAA1Z5arcyp9HdAR_UNPfPO34hc-LuEvC3Rezppwq_9U4Gt7r2ftGEbQxJWEw8utJFogrR9wwwe2OYBt6Tp1Pgwy6yTnouN0IsR_5MslNiPnV5UXocozdkuwS0SaonquE7o3Tab-EKau3fUXJmuTyLeCpkKc=",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbV2LcHrobRRpKQt-DMmovrggZnnny61akuC4gzDV-KVZBtKc5A3bm6cK8O8uvlHDUukYABn5A5mhsctlmAvOSi_dJx-qLeQV4VV11vKsE_chNXCPAWdGx8ERpw5ccO5zUNNKm_YGljnHNYAGXwDWfs01vJ9i-gBE-IH8mMO6lcLzDE5HE3fmyOKyxGI80_tOZgbuMKhBe",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwBI3Mlmi6RuTp58Nd8_tygIELyAXJ1Pw2g2VlL3nqKUh8vZKKnOc8uk3oPvNQ_v7bmZybix92i2TbTVvP1bn1O4485zkUld8aGhhnN1I0h6ujrLukVloXxGBMB3QmMdZVkFHH5Dem7qDW6IhjwSd3ssDiu4aCJJ4WQ7iYoBTexLPows_kKdUg4912EEabK90B",
+        "title": "techcrunch.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU3_L432nNtSnv93H7rznTCsdZwy3LRtBGTfY2DMVSFkuiMf3h24qp7SG89AdJdimn7nEKWBsHhdWjP2sNQFmdpkvZtFjYH_8KgjokOaK05w5MMGCdMcezfOQKMlwU2uo3KDQUId7tPvoC7X4_mL298RJyQ4ag41vo3cj1ktCnVeepkhFT1w-nwJyqO9MWE9hC39bILp5BiyqBnUu97_mwLrRUuV81DscHcPaDNRY6",
+        "title": "washingtonpost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPSlHshKcVT85m5k36QoVrtMjVoHwIGM_Vxgi-yg12Do-gUMFBKpFvVI02W5MDHLiCPmv356_9GhrB7cQ8e0fNsg-rxFzUDj5fN-ivEB8AqFBaluHiPqQx5g==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYQniTrEWt5nLaGNSF81_njnEKOEH8TFi9czLswqdvFb5kJd6W6RZ7YhbtO4RItWhV1R6TYslgKB7OtiE9Gv-YKzcC9skqO86zjvZxJfheeRvdMd6fUqpcbzkUY-P5L1zBL2MYsPXTEejpVhbvdoU9Vv7_whEtfOQwlktV7XZ3VGUaftZS6w==",
+        "title": "washingtonpost.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 780,
+        "endIndex": 868,
+        "text": "**What is confirmed:** Google officially released **Gemini 4 Neon** on November 18, 2026"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 870,
+        "endIndex": 1032,
+        "text": "Positioned between Carbon and Hydrogen in the Gemini 4 family, Neon targets enterprise coding, repo-level edits, and reasoning tasks at lower per-task token costs"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1034,
+        "endIndex": 1138,
+        "text": "It achieved #3 on the Artificial Analysis Intelligence Index (score 61) and #1 on the Coding Agent Index"
+      },
+      "groundingChunkIndices": [
+        2,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1140,
+        "endIndex": 1221,
+        "text": "It rolled out immediately to Google AI Pro/Ultra, Antigravity, and GitHub Copilot"
+      },
+      "groundingChunkIndices": [
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1225,
+        "endIndex": 1355,
+        "text": "**Important caveats:** Benchmark ratings and cost-reduction figures are vendor-reported and based on initial benchmark evaluations"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1463,
+        "endIndex": 1697,
+        "text": "**What is confirmed:** Seattle-based software supply chain cybersecurity startup **StepSecurity** announced a $20M Series A funding round led by Elephant, with participation from Runtime Ventures, Inner Loop Capital, and SaaS Ventures"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1699,
+        "endIndex": 1732,
+        "text": "This brings total funding to $23M"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1734,
+        "endIndex": 1816,
+        "text": "Co-founders Varun Sharma and Ashish Kurmi confirmed the round exclusively to Axios"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1820,
+        "endIndex": 1946,
+        "text": "**Important caveats:** Annual Recurring Revenue (ARR) growth metrics and internal traction figures rely on company disclosures"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2063,
+        "endIndex": 2399,
+        "text": "**What is confirmed:** *Wired* published an investigative report on November 19, 2026, based on leaked internal documents detailing how Polish-based right-wing X account **Visegrad24** built high reach, gained frequent amplification from Elon Musk, and raised Silicon Valley funding through anti-migrant and pro-Israel content campaigns"
+      },
+      "groundingChunkIndices": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2680,
+        "endIndex": 2863,
+        "text": "**What is confirmed:** Anthropic, PBC officially announced the pricing of its IPO at **$83.00 per share** on November 18, 2026, upsizing the offer to 980 million Class A common shares"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2865,
+        "endIndex": 3012,
+        "text": "The deal raises ~$81.3B (giving the company a ~$1.5 trillion market valuation) ahead of its debut on the Nasdaq under ticker **ANT** on November 19"
+      },
+      "groundingChunkIndices": [
+        13,
+        12,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3014,
+        "endIndex": 3110,
+        "text": "Strategic partners including Google and Nvidia committed an additional $26B in non-voting shares"
+      },
+      "groundingChunkIndices": [
+        12,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3114,
+        "endIndex": 3242,
+        "text": "**Important caveats:** Market trading opens today (Nov 19); initial public trading volatility will unfold throughout the session"
+      },
+      "groundingChunkIndices": [
+        13,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3388,
+        "endIndex": 3576,
+        "text": "**What is confirmed:** *Bloomberg* reported on November 19, 2026, that over 50% of institutional investors who submitted bids in Anthropic's heavily oversubscribed IPO received zero shares"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3578,
+        "endIndex": 3730,
+        "text": "Allocations heavily favored US investors and existing corporate shareholders (such as Amazon and Google), shutting out many foreign institutional orders"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3734,
+        "endIndex": 3910,
+        "text": "**Important caveats:** Based on anonymous sources familiar with the allocation order book; detailed breakdown of allocations is not published in official SEC prospectus filings"
+      },
+      "groundingChunkIndices": [
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4107,
+        "endIndex": 4354,
+        "text": "**What is confirmed:** European Commission spokesperson Thomas Regnier confirmed a cyberattack (detected Oct 22, 2026) that disrupted internal staff services (payroll/Sysper, medical reimbursements/MyPMO, and translation services) for over 10 days"
+      },
+      "groundingChunkIndices": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4356,
+        "endIndex": 4511,
+        "text": "*Politico* and CERT-EU confirmed international hackers utilized **ARTEX**, an open-source AI penetration testing framework, to probe for IT vulnerabilities"
+      },
+      "groundingChunkIndices": [
+        16,
+        17,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4515,
+        "endIndex": 4686,
+        "text": "**Important caveats:** The Commission states there is no evidence yet of a widespread personal data breach or data exfiltration, and threat actor identities remain unknown"
+      },
+      "groundingChunkIndices": [
+        16,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4827,
+        "endIndex": 5066,
+        "text": "**What is confirmed:** The UK’s Investigatory Powers Tribunal ruled against the UK Home Office, rejecting its attempt to keep secret a \"technical capability notice\" (TCN) served on Apple to compel backdoor access to encrypted iCloud data"
+      },
+      "groundingChunkIndices": [
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5068,
+        "endIndex": 5184,
+        "text": "The tribunal held that official confirmation under \"Neither Confirm Nor Deny\" (NCND) rules can no longer be withheld"
+      },
+      "groundingChunkIndices": [
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5188,
+        "endIndex": 5396,
+        "text": "**Important caveats:** The decision only addresses secrecy and forces government acknowledgment; it does not resolve the substantive legal challenge over whether the encryption backdoor notice itself is legal"
+      },
+      "groundingChunkIndices": [
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5564,
+        "endIndex": 5681,
+        "text": "**What is confirmed:** At Microsoft Ignite 2026, Microsoft AI (MAI) unveiled seven in-house, cost-optimized AI models"
+      },
+      "groundingChunkIndices": [
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5683,
+        "endIndex": 5878,
+        "text": "Flagship coding models **MAI Code 2** and **MAI Code 2 Flash** launched in GitHub Copilot, alongside **MAI Cyber 2 Flash** (security), **MAI Image 2.7**, and **MAI Realtime 1** (speech-to-speech)"
+      },
+      "groundingChunkIndices": [
+        24,
+        25,
+        27,
+        28
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5882,
+        "endIndex": 6048,
+        "text": "**Important caveats:** Benchmark comparisons claiming 96%–98% parity with Claude Opus 5.5 and GPT-6.1 Sol at a fraction of the cost are vendor-provided measurements"
+      },
+      "groundingChunkIndices": [
+        24,
+        27
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6185,
+        "endIndex": 6393,
+        "text": "**What is confirmed:** Google announced a partnership with Jeff Bezos' Blue Origin to launch TPU-powered AI server satellites aboard the New Glenn rocket targeted for Q1 2029 as part of **Project Suncatcher**"
+      },
+      "groundingChunkIndices": [
+        29,
+        30
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6395,
+        "endIndex": 6510,
+        "text": "The mission aims to test orbital AI infrastructure powered by near-continuous solar energy in sun-synchronous orbit"
+      },
+      "groundingChunkIndices": [
+        29,
+        30
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6514,
+        "endIndex": 6654,
+        "text": "**Important caveats:** Launch target is Q1 2029; long-term space compute projects face significant thermal, radiation, and launch cost risks"
+      },
+      "groundingChunkIndices": [
+        29,
+        31
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6786,
+        "endIndex": 7088,
+        "text": "**What is confirmed:** *The Washington Post* reported on November 19, 2026, that super PACs tied to **Public First Action**—a pro-AI safety nonprofit funded by $40M in Anthropic donations—spent over $25M across 12 state/federal midterm election races, helping elect 8 of the 13 candidates it backed"
+      },
+      "groundingChunkIndices": [
+        32,
+        33
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 7092,
+        "endIndex": 7252,
+        "text": "**Important caveats:** Reflects post-election campaign finance reporting analysis; regulatory impacts will depend on upcoming congressional legislative sessions"
+      },
+      "groundingChunkIndices": [
+        32,
+        34
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Anthropic\" \"initial public offering\" OR \"prices initial public offering\"",
+    "\"Visegrad24\" Wired \"Elon Musk\"",
+    "\"Gemini 4 Neon\" blog.google",
+    "\"StepSecurity\" \"Series A\" Elephant Axios",
+    "\"Home Office\" \"technical capability notice\" Apple FT OR \"Financial Times\"",
+    "\"Anthropic\" \"institutional investors\" \"zero shares\" OR \"foreign orders\" Bloomberg",
+    "\"European Commission\" \"ARTEX\" Politico cyberattack",
+    "\"Project Suncatcher\" \"Blue Origin\" Google \"New Glenn\" Verge",
+    "\"microsoft.ai\" \"microsoft ignite 2026\" \"seven new models\"",
+    "\"Public First Action\" \"Anthropic\" \"25M\" OR \"Washington Post\"",
+    "\"Seven new models at scalable price-performance\" microsoft.ai"
+  ]
+}

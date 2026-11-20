@@ -1,0 +1,525 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Jensen+Huang%22+%22abusive%22+OR+%22settlement%22+%22New+York+Times%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Jensen Huang&quot; &quot;abusive&quot; OR &quot;settlement&quot; &quot;New York Times&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Anthropic%22+IPO+%22overallotment%22+OR+%22greenshoe%22+2026+OR+November&client=app-vertex-grounding&safesearch=active\">&quot;Anthropic&quot; IPO &quot;overallotment&quot; OR &quot;greenshoe&quot; 2026 OR November</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Levent+Alpoge%22+%22Riemann+hypothesis%22+OR+%22Claude%22+OR+%22Lean%22&client=app-vertex-grounding&safesearch=active\">&quot;Levent Alpoge&quot; &quot;Riemann hypothesis&quot; OR &quot;Claude&quot; OR &quot;Lean&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22architectlabs.com%22+%22Frostbite%22+CPU+architecture+AI&client=app-vertex-grounding&safesearch=active\">&quot;architectlabs.com&quot; &quot;Frostbite&quot; CPU architecture AI</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Pragmatik+Labs%22+%22Junyang+Lin%22+valuation+5+billion&client=app-vertex-grounding&safesearch=active\">&quot;Pragmatik Labs&quot; &quot;Junyang Lin&quot; valuation 5 billion</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22red-chip%22+%22mainland+China%22+listing+Reuters+2026&client=app-vertex-grounding&safesearch=active\">&quot;red-chip&quot; &quot;mainland China&quot; listing Reuters 2026</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLIXw9W4KziqPHD8vttvB3rtOXsj1ymKYoXV388UZK7bbNWfo-kpEfwivvsEcYaMAJFpqJIY-BWAcBLLgUfvY12vhfebuqHONqsY_3NIycOPTBBtcrLmBkr_vWW4ar7qG0gSN7TwCEdLANiXl1pFAD5KCyhdKO6O1nLY9EOm_EjVCgo_g2YsICDznAAOCtf_oxcp-Zr0-EfkZyjJVM5wO_InLo",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDFWnCpoEbXaFSH6kZ04uAnWC7DfbZBYCbekzxFaYbYM8Bm32pZYOTIXoq9_ehzWjmF8h6KjsgAam4fPFeRXQdnLWy3RIHqWVVXEO5wzHEaW9jvJtyJWF8r9PXMwEmYXCBGo_fDMdfL3onssHUUHZxbb137-3-7rniq1YHUISX4bt0SEb008n9GcY=",
+        "title": "wisevoter.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGI2z6Nye6t-FtgO3KU4C99uoT17lxCl5hC-9OyJywCbL9I0k17-kwmM1tTli1RtattbIR0w_uw14swOwAgA06s98C1BE0IJrq54i-RdMyBi4PSnBOp6B00DZfOWdWmtCXORI3FA==",
+        "title": "anthropic.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzdxEnNIhvIhus1jMKG1kHvcz1BLF5dxKYUFpn_534wXIzZPvPfufgf7O3vKFZUWoAV6ka0ewBW-28FKsR41nAWPfcXeEZplDhQ7bfPN8ulGbt1S9TM38O1hEdiIqpMT_j1bQfzcr9csjksXwa3N6yT6xy__YLbzlB",
+        "title": "datacamp.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHagC45J0-m85S7ZtuxB4-AAze6RRvG3aNuQTG9jEtZNfqaOR7dbcaX_xphDo7gNKQsO1beu26BthU0Q-Kp2z9eofWL0ECcxNqLW06wm3yvI7Qd-NAl-q-nbDLgco=",
+        "title": "architectlabs.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGirHaQWp9y4D7qVpxtTXZ_0d-F5n3BKSr--eqY5bM1fmj9t3e3vnhZWc3GPtRyrcXWS0YeGeAeaGQvTymwaqeHofA2TxicYRC3is1CVs5EOHl1wboYWZIYf13pYfLoKgF4LSCfTSaIj288iOhlEvZMHg==",
+        "title": "tldr.tech"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkKS1rlBeCGZRaZoWhErxnK9IY-Y-5I81K4QQK2DnJPaTIDgyitvj0Mumiut_avaR-SGGg4LC8BAho4z17KrfbXK8rMo5cvDf_kn4H4mskLLxmmxI8EUNi0BMcv-Pr5qlWPCT9ynNoOjb6adu-MuDtN2mM_L0LIgBZUs2pXGFcXkQDnj7EfuXR7aPz_Lk2miFntIsvmhnDp0I=",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3W1NjUWI7Jdf5DDDrK5Q4AnUr7DcWotX9gHsYhGuc_d4bjXUHO2sB1ykUvEOSpO8Mvct_aQFineeU85EeZbed-OYvDIWk6DwfCdZCVJKBVkRcwXw3LoObTyNUPXnWAu1f1xqm9wQA-t1DM9rdzjL63OHxon4TjJF6TeLMY2_ntaZiKtpLLeeYO1TkTvFuarGe8hYUz3EiJA==",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfj7sKb_kJATC-g_43mPzdGWuu3IdwWgYJb0Hta4ziIhxC-Bz4xkVCoMpoXv0BjVMRsYpvyisAQaIobEU1kUsVe7N5R1Ce0V65wgRLFIIJEMh2UA6kotM_QLwuu63odvdY0A==",
+        "title": "ycombinator.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRG9HKRO2NKrOnlbMcfbCdB9uesDyXpQifcyh9uij2crN9ztNMkf4RfWlrAB3tGUsI4AMUQ0Qt_XnzaXRfEcCSECP0SFEDo0Nyuj6g70BAL0wB-TqxGZ6Zqib87WNr6voQYbcAYU61RsCDAIzlnsPa52fno--vurrPQ4y1j4GnZPP5buKCYW5nueFecBO2-K7Gi169hzJEd2HO__bA4YZC_YAi-YU=",
+        "title": "techfundingnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5ZtJJbhyG5ymDtVuCRBQwQIC_bGNJErowfs78gy4txL8g3CDWmYe1OwVG8xoVntuger0dQJrfGZQfGhzQRDIRsC4pkx_DqCq5AGhqrWt9LXi8TftMB2yejSWHJQCiTm5Ul_rI-kaai-hsm2mnVZHV4SH7tjmySNjPkBE=",
+        "title": "qz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGt07lshvwLDlZfH2pRLoqKViKwXwLFbS8F6OcNEXgBfrYjMJM2uUjU3fh97EMJ9co5mhDnDAt4kmQM-uCchPA_74kqf8dT8zmDSxyUt7eYVYgPrpJo_e7I5jgW_FrN3UTHVBEMLPavQzA9Nr5LUip3eZfj7m8CONAvg==",
+        "title": "axios.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHI4nRqMtltCiGK2TB8YBBMGbGe5ZOzHtYHNWmpnFrXXKXbtoUXY6J3j0fN0WctZdAZuBqPFAsUwCXbDhZpJPvAkjtZm_AaDNNOmrytnU5P-drFbbOYm0DZ9AyT6aC3U3uFyZA11AnG0DOk3HRrd2uICMkBklTb_l6bIuBRsg4c9esNrRWhnv8=",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGk9mzXYcYuiApE9uFzY-d8D3IF7iKrREYRfj4PRXym2H8Lght00jA-xfS7nmBJzhZyTsabYEqutkUF5gEfVJmBnhvNwXb8K9_4kLx8KQqOKo2XMPYzDCJ34Yt8_Dcse9H4UId-r_BlKvMK1g8tjEw=",
+        "title": "macon.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_bRE4zqW2bK8B03kHwh8WcYPSlh2SZDC9xXQZFDLQ-XbuohfhZB5LoAZw0bQnpWw-u4m7n5Q3q177wUetvwQdhPGsX5j-wzcmdh3JGcUQJdHQt5nlULXSPFXkRqVnkgx3mlwGBm3qqypdJQt16TKe9g9dKnV7sYGTpkbHEc0d",
+        "title": "invezz.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGt5V2d-ZzZ57w_f6SWTBrYgSJFH2UG_vXkQge7IDU0KxLzM0tRrQYvB5XvnyMa7LwYejShiUtx2MAKQvCHjUKaGPZD7jTeGfG0MwKxf_bxgVKF_5YHcixYpF8DDdkvm981FP4HingjXfMNcLC4aRCnLDyxsHvk3ieRQ_L5SIL50RGrrVLWD_HmSjfYjlLqSpSxCuCaeUt7ik4MR4rl-dwpLrCrctyB",
+        "title": "superpowerdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0lGSbbHXbBk4q4kJlKDihbAweGCfC5CCtniDPdUTkP_zfodky2t3RfbspWeVcAQ3tk12Ou5ov17ILxljbg9cftkB3A0XATgZzfpGJqI6IjkNK-0uPZvVsWTL30kdXKXOTJKangheTKfrm-GG1qsVMjvoRmzw7ZQk9YN7pY7SlcCgG8EB5oVWnyfhTQnm2ffV5_35K431DrbcJytx0kc4Sw-MvT_00CoL1nqyJ99lWaTTpAnCiftnXjHu0hTjXKytbOhZA",
+        "title": "forbes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3jpiawuO8Z8Mo_-xz27AsQVq3GnxL9UrYJZhOxXqaiDj2d07Nw4PZ0LjY-tSCUd-T3uOn55kM0jt8EnIPqNjGSs0n8l4AoTjG2zcR5M1q_HEE6XQSjUSA8VKH2EZtYN2PSX4rpl7qQ6Y_RpwczRXqqDjZuhrHylXNg0l2gx-QmBr16iPhMCPLTH4P37mssITFXY-aLKtCCtA7ubRd2jd8u7nshutJHbON5zZ_EuttQTH227uK2GOVD7f6oZ4=",
+        "title": "business-standard.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUsy4xtFDKoonamn7NLWURtcnj6xCC-9oBU5bpztMFLTz8Cpcog_0J0LZMsvqE658vYoLFfgiyUeO_kiwSdLSBtuHp385mneNaMwKb0agNeAd9RU8YTpcttMemetHWwraCXzMxdTAbVCZK7notK-6euzXWP4hVeGvwTT5tDY8uE7o0kYazZ2qQ-JLc1Z9MIbyt9-7Jo3om2gIvrSs6O3-AiegymWuNsxrk6VkRb4Y=",
+        "title": "techcrunch.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLhI-hGnSpQ9q-w82pR5BheKh7Nof2DM7FvfIJM4FZE5ruyzlOsJSNjr3CU-DbwopSO5HB6xlSHkEoFnYG1x5DvrfdvURZAnbpmMfhmjdYaVkDNK_5eTcs-txF1A9YRiyAudO9o1EQU-pOPTxWJaMGIyhYUKiHHzhbXUie4UoIlBvNDt_td-BKhggBmLg7bdeM9ImHGXs5",
+        "title": "headtopics.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2wDEnDcpcYrUn3lQQZwZnWVXcgPBmXJ-0tuGq_ms-37nZVAXQpyWO6hP79TnQ57zwdNm9c_eyLYzSZ78tMDJzgl3yBbOjaovtdHLhLWk-6JcgvbBmE0aG3k5Qox67FkKwgiJnGkKt6oy7QvkNrb28p58azK80Zgy4pOC7gUpLfIxFXILRInzsoHqVjHRhs6hcDVdT0fenzX0Nltnf8lQa24-QMdojkG2HHKuz91Tb",
+        "title": "wqxc.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0WKz8lTAlywKx2g_f6h5Db83yEzht16qpFhCATYcy7nPWcT6Ln4kAeibNQ2UqUZKrWBc2LqlTdHHOfJ5TZKQ3uW0scioSgcfmSJ8M_GdXBc4ndHl1hALMmSFh_WwK5zgUb9IWo1eRFWO6958iA7hs0GWWTsSe6yjt3tuVuM381PFrD8BIsBhh29cNa16pAPBthpJxpkslL1r4OKOpO1kMT3mVkkXf",
+        "title": "kucoin.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaqabhpCwpFcjtvqC8CitaVkswy5kPm-2kwhvjzf-DROqtP-3Q0c4rRhIg_Cg8wiqEaECDTtOArPkmq1_qg7a9Iwa4_VT0Xdia8IFVfjRoq-_AkumQ3I4eABdI-wtD2xMGy7tEk7XdbAt9wLrbrTq2vq_Eh7Uc3i7FHfPlVMQq32wLn-Tu7jEtOCkdcfssqQaR0CIrYqnzEhkEbtPIw20Qw0K7p3Ij7C78bQSIEn48",
+        "title": "wsau.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEK7n5sqVNmCyt-FsgXBS2V2pRIbmvotN-trnmL2BI_Xd8waJzPysTXLJlqHfQh5nnrk3BSQnNNWDpMTJg0BUIQUW5g-h1a8bZJlDeNaVrvGWoV4U20jRIVZ7wioHxgHfRAfqT_xu0jVpx_HSG-fpMDyOZW_5NcjCKTDJrXLPmrjkQ=",
+        "title": "finimize.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVIEqp1HJB0hgaW0eEznx9YfTT9C6vTmyYV7xbd4do8LWdbeitB6nTmx59B6M_v19HpknTeUgluQbhCOsw6srwmZz0tV0HsyyOiZjb_j1moBhxS7OHNp4g2d6K9I_OC4aSJultQSG1pxyv6CTbyLWm8JRMy7g1pJYIeOOJP7AIsGSw7A9KBjwNMqdScDjDq-GyCB9HFzUGrdpvgMU_-Yc=",
+        "title": "dealroom.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAhJ_Ey8TQBut0pVuzBdixWsaskBMaDkJvGAw8hcVu9_9-6JIRMU0HpsKzJHojnoCFKedViAkV40qJ3NVXghV5pAyizJRKqIC16_1Mk0iEYUszcTlCTi9ahb3DXlGcR54sSyrqjH0fbO4ubRhoJqUTN6LfSSoew5h-24odfqy2V_ebtsHsyC99mKCgn7OvxPtMYBcnQnczpQ77vSK-FQYzY_Zl_aZWxltYVA==",
+        "title": "crunchbase.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2DNMKV-PBVs09eXaMTE8hAqFM7Kqv140JZGFSS1fMil7hTUtbhOQX7HIs86Jilqu6PPbYAJDTRywI_DlHQHavr2CDLISmFiloR85Q1HOFGUuqM428D3XStga7f15_2J61",
+        "title": "youtube.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 260,
+        "endIndex": 522,
+        "text": "**What is confirmed:** Levent Alpöge, a mathematician and researcher at Anthropic, posted a claimed formal proof of the Riemann Hypothesis on his personal website (`alpo.ge`), formalized using the Lean 4 proof assistant and developed with assistance from Claude"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 524,
+        "endIndex": 567,
+        "text": "*Scientific American* reported on the claim"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 599,
+        "endIndex": 675,
+        "text": "The claimed proof is unverified by the scientific and mathematical community"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 681,
+        "endIndex": 906,
+        "text": "Compiling and auditing the full Lean code (~1.3 GB unpacked) to verify both logical validity and that the formalization strictly matches the classical Riemann Hypothesis without circular definitions will take significant time"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 912,
+        "endIndex": 1135,
+        "text": "This follows an earlier, verified August 2026 result by Alpöge and Claude that improved a 50-year-old lower bound on zeta zeros, but Anthropic noted at the time that those techniques were not expected to yield a full proof"
+      },
+      "groundingChunkIndices": [
+        2,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1175,
+        "endIndex": 1319,
+        "text": "**Yes**, as long as it is explicitly framed as an unverified researcher claim and preprint formalization, not a confirmed mathematical discovery"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1414,
+        "endIndex": 1632,
+        "text": "**What is confirmed:** Startup Architect Labs published a blog post introducing \"Frostbite,\" a CPU microarchitecture based on interaction nets discovered, designed, and verified end-to-end by autonomous AI agent swarms"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1634,
+        "endIndex": 1770,
+        "text": "They report a 4.59x performance-per-watt advantage across 25 benchmark workloads compared to a 2-wide in-order superscalar baseline core"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1802,
+        "endIndex": 2000,
+        "text": "**Pre-silicon only:** The architecture has only reached 7nm RTL layout/FPGA simulation and has not been taped out or fabricated in physical silicon; performance and power metrics are model-estimated"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2006,
+        "endIndex": 2135,
+        "text": "The baseline core used for comparison is a simple, low-power in-order core rather than a modern high-performance out-of-order CPU"
+      },
+      "groundingChunkIndices": [
+        8,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2141,
+        "endIndex": 2226,
+        "text": "The findings are self-reported company claims without third-party hardware validation"
+      },
+      "groundingChunkIndices": [
+        6,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2266,
+        "endIndex": 2409,
+        "text": "**Yes**, as a notable technical milestone in AI-assisted hardware design, provided pre-silicon and baseline limitations are clearly highlighted"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2483,
+        "endIndex": 2735,
+        "text": "**What is confirmed:** *Bloomberg* reported that Anthropic PBC (`ANT`) shares fell to a low of $87.26 during Friday trading, down from its Day 1 closing price of $97.17, trimming gains over its $83 IPO price to ~5.1% amid a broader tech sector pullback"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2739,
+        "endIndex": 2849,
+        "text": "**Important caveats:** Price movements during the first days of trading after a record IPO are highly volatile"
+      },
+      "groundingChunkIndices": [
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3035,
+        "endIndex": 3294,
+        "text": "**What is confirmed:** CNBC and Reuters reported that Anthropic’s IPO underwriters (led by Goldman Sachs and Morgan Stanley) fully exercised their overallotment (\"greenshoe\") option to purchase 147 million additional Class A shares at the $83 offering price"
+      },
+      "groundingChunkIndices": [
+        12,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3296,
+        "endIndex": 3409,
+        "text": "This raised an additional $12.2 billion, bringing total gross proceeds from the public offering to ~$93.5 billion"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3413,
+        "endIndex": 3532,
+        "text": "**Important caveats:** This represents standard post-pricing overallotment execution, confirming the full offering size"
+      },
+      "groundingChunkIndices": [
+        12,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3534,
+        "endIndex": 3645,
+        "text": "A concurrent private placement of $26 billion brings total capital raised in the transaction to ~$119.5 billion"
+      },
+      "groundingChunkIndices": [
+        14,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3685,
+        "endIndex": 3737,
+        "text": "**Yes**, strong lead for corporate tech finance news"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3859,
+        "endIndex": 4112,
+        "text": "**What is confirmed:** The *New York Times* published an investigative report citing former employees and internal documentation detailing systemic verbal abuse, intimidation, and public humiliation by ousted Nvidia CEO Jensen Huang over several decades"
+      },
+      "groundingChunkIndices": [
+        15,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4114,
+        "endIndex": 4262,
+        "text": "The report revealed for the first time a >$1 million confidential settlement in 2005 with former HR head Michael Winston following abuse allegations"
+      },
+      "groundingChunkIndices": [
+        15,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4294,
+        "endIndex": 4368,
+        "text": "A spokesperson for Huang denied the allegations, calling them fabrications"
+      },
+      "groundingChunkIndices": [
+        15,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4374,
+        "endIndex": 4501,
+        "text": "The report comes amid ongoing governance turmoil at Nvidia following Huang's recent exit and parallel state regulatory scrutiny"
+      },
+      "groundingChunkIndices": [
+        16,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4541,
+        "endIndex": 4653,
+        "text": "**Yes**, well-corroborated investigative reporting from a major primary outlet on a major tech leadership figure"
+      },
+      "groundingChunkIndices": [
+        15,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4754,
+        "endIndex": 5091,
+        "text": "**What is confirmed:** *Reuters* reported (citing sources familiar with regulatory guidance) that the China Securities Regulatory Commission (CSRC) informed law firms it will no longer approve offshore listings (e.g., in Hong Kong or the US) for \"red-chip\" companies formed after March 2023 unless they re-domicile back to mainland China"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5123,
+        "endIndex": 5202,
+        "text": "Based on anonymous sources; the CSRC has not issued an official public response"
+      },
+      "groundingChunkIndices": [
+        20,
+        21
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5208,
+        "endIndex": 5333,
+        "text": "Re-domiciling to mainland China involves substantial restructuring time and expense for tech startups seeking foreign capital"
+      },
+      "groundingChunkIndices": [
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5373,
+        "endIndex": 5448,
+        "text": "**Yes**, high-impact regulatory report affecting Asian tech capital markets"
+      },
+      "groundingChunkIndices": [
+        20,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5521,
+        "endIndex": 5726,
+        "text": "**What is confirmed:** *Bloomberg* reported that Shanghai-based AI startup Pragmatik Labs—founded in 2026 by former Alibaba Qwen AI lead Junyang Lin—closed a new funding round at a $5 billion valuation"
+      },
+      "groundingChunkIndices": [
+        24,
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5758,
+        "endIndex": 5878,
+        "text": "Based on unnamed sources familiar with the matter; exact capital raised was reported only as tens of millions of dollars"
+      },
+      "groundingChunkIndices": [
+        25
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5884,
+        "endIndex": 5976,
+        "text": "The company was previously valued at $2 billion during its seed round earlier in August 2026"
+      },
+      "groundingChunkIndices": [
+        25,
+        26
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6016,
+        "endIndex": 6076,
+        "text": "**Yes**, relevant update on global AI venture funding rounds"
+      },
+      "groundingChunkIndices": [
+        25
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Jensen Huang\" \"abusive\" OR \"settlement\" \"New York Times\" 2026",
+    "\"Anthropic\" IPO \"overallotment\" OR \"greenshoe\" 2026 OR November",
+    "\"Levent Alpoge\" \"Riemann hypothesis\" OR \"Claude\" OR \"Lean\"",
+    "\"architectlabs.com\" \"Frostbite\" CPU architecture AI",
+    "\"Pragmatik Labs\" \"Junyang Lin\" valuation 5 billion",
+    "\"red-chip\" \"mainland China\" listing Reuters 2026"
+  ]
+}

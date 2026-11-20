@@ -1,0 +1,69 @@
+Here are the evidence notes for the in-scope candidates for the **2026-11-20 UK morning briefing**, distinguishing confirmed facts, caveats, and publication suitability.
+
+---
+
+### **[0] & [4] Anthropic Mathematician Claims Riemann Hypothesis Proof in Lean**
+* **What is confirmed:** Levent Alpöge, a mathematician and researcher at Anthropic, posted a claimed formal proof of the Riemann Hypothesis on his personal website (`alpo.ge`), formalized using the Lean 4 proof assistant and developed with assistance from Claude. *Scientific American* reported on the claim.
+* **Important caveats:** 
+  * The claimed proof is unverified by the scientific and mathematical community.
+  * Compiling and auditing the full Lean code (~1.3 GB unpacked) to verify both logical validity and that the formalization strictly matches the classical Riemann Hypothesis without circular definitions will take significant time.
+  * This follows an earlier, verified August 2026 result by Alpöge and Claude that improved a 50-year-old lower bound on zeta zeros, but Anthropic noted at the time that those techniques were not expected to yield a full proof.
+* **Suitable for publication today?** **Yes**, as long as it is explicitly framed as an unverified researcher claim and preprint formalization, not a confirmed mathematical discovery.
+
+---
+
+### **[1] Frostbite: AI-Designed General-Purpose CPU Architecture (Architect Labs)**
+* **What is confirmed:** Startup Architect Labs published a blog post introducing "Frostbite," a CPU microarchitecture based on interaction nets discovered, designed, and verified end-to-end by autonomous AI agent swarms. They report a 4.59x performance-per-watt advantage across 25 benchmark workloads compared to a 2-wide in-order superscalar baseline core.
+* **Important caveats:** 
+  * **Pre-silicon only:** The architecture has only reached 7nm RTL layout/FPGA simulation and has not been taped out or fabricated in physical silicon; performance and power metrics are model-estimated.
+  * The baseline core used for comparison is a simple, low-power in-order core rather than a modern high-performance out-of-order CPU.
+  * The findings are self-reported company claims without third-party hardware validation.
+* **Suitable for publication today?** **Yes**, as a notable technical milestone in AI-assisted hardware design, provided pre-silicon and baseline limitations are clearly highlighted.
+
+---
+
+### **[7] Anthropic Shares Pull Back on Second Day of Trading**
+* **What is confirmed:** *Bloomberg* reported that Anthropic PBC (`ANT`) shares fell to a low of $87.26 during Friday trading, down from its Day 1 closing price of $97.17, trimming gains over its $83 IPO price to ~5.1% amid a broader tech sector pullback.
+* **Important caveats:** Price movements during the first days of trading after a record IPO are highly volatile.
+* **Suitable for publication today?** **Yes**, appropriate for market tracking updates.
+
+---
+
+### **[10] Anthropic Underwriters Exercise $12.2B Greenshoe, Total IPO Reaches $93.5B**
+* **What is confirmed:** CNBC and Reuters reported that Anthropic’s IPO underwriters (led by Goldman Sachs and Morgan Stanley) fully exercised their overallotment ("greenshoe") option to purchase 147 million additional Class A shares at the $83 offering price. This raised an additional $12.2 billion, bringing total gross proceeds from the public offering to ~$93.5 billion.
+* **Important caveats:** This represents standard post-pricing overallotment execution, confirming the full offering size. A concurrent private placement of $26 billion brings total capital raised in the transaction to ~$119.5 billion.
+* **Suitable for publication today?** **Yes**, strong lead for corporate tech finance news.
+
+---
+
+### **[12] NYT Investigative Report Details Decades of Conduct Allegations Against Ex-Nvidia CEO Jensen Huang**
+* **What is confirmed:** The *New York Times* published an investigative report citing former employees and internal documentation detailing systemic verbal abuse, intimidation, and public humiliation by ousted Nvidia CEO Jensen Huang over several decades. The report revealed for the first time a >$1 million confidential settlement in 2005 with former HR head Michael Winston following abuse allegations.
+* **Important caveats:** 
+  * A spokesperson for Huang denied the allegations, calling them fabrications.
+  * The report comes amid ongoing governance turmoil at Nvidia following Huang's recent exit and parallel state regulatory scrutiny.
+* **Suitable for publication today?** **Yes**, well-corroborated investigative reporting from a major primary outlet on a major tech leadership figure.
+
+---
+
+### **[14] Reuters: China Moving to Block Young "Red-Chip" Tech Firms from Offshore IPOs**
+* **What is confirmed:** *Reuters* reported (citing sources familiar with regulatory guidance) that the China Securities Regulatory Commission (CSRC) informed law firms it will no longer approve offshore listings (e.g., in Hong Kong or the US) for "red-chip" companies formed after March 2023 unless they re-domicile back to mainland China.
+* **Important caveats:** 
+  * Based on anonymous sources; the CSRC has not issued an official public response.
+  * Re-domiciling to mainland China involves substantial restructuring time and expense for tech startups seeking foreign capital.
+* **Suitable for publication today?** **Yes**, high-impact regulatory report affecting Asian tech capital markets.
+
+---
+
+### **[15] Pragmatik Labs Valued at $5B in New Funding Round**
+* **What is confirmed:** *Bloomberg* reported that Shanghai-based AI startup Pragmatik Labs—founded in 2026 by former Alibaba Qwen AI lead Junyang Lin—closed a new funding round at a $5 billion valuation.
+* **Important caveats:** 
+  * Based on unnamed sources familiar with the matter; exact capital raised was reported only as tens of millions of dollars.
+  * The company was previously valued at $2 billion during its seed round earlier in August 2026.
+* **Suitable for publication today?** **Yes**, relevant update on global AI venture funding rounds.
+
+---
+
+### **[16]–[19] Hugging Face Research Papers**
+* **What is confirmed:** These entries represent academic paper preprints published on arXiv/Hugging Face covering egocentric video mistake detection [16], audio-driven streaming avatars (AURA) [17], streaming world model refinement (SpecWM) [18], and compiling deterministic circuits directly into LLM weights without gradient tuning [19].
+* **Important caveats:** All claims contained within these listings represent self-reported author findings in preprints and have not undergone independent peer review.
+* **Suitable for publication today?** **No**, unless selected for a dedicated research round-up. They are secondary technical papers relative to the breaking news items above.

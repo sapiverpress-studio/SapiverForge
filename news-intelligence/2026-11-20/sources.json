@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-20T15:22:24.834Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 166,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 136,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 616,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 210,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 2176,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "alpo.ge",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "Anthropic employee claims general proof of the Riemann Hypothesis [pdf]",
+      "url": "https://alpo.ge/remark.pdf",
+      "direct_source_url": "https://alpo.ge/remark.pdf",
+      "discovery_url": "https://news.ycombinator.com/item?id=50574968",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50574968",
+      "summary": "",
+      "published_at": "2026-11-20T14:16:21.000Z",
+      "engagement": {
+        "score": 421,
+        "comments": 179
+      },
+      "collection_mode": "api",
+      "score": 8.724
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "architectlabs.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
+      "url": "https://architectlabs.com/blog/frostbite",
+      "direct_source_url": "https://architectlabs.com/blog/frostbite",
+      "discovery_url": "https://news.ycombinator.com/item?id=50572503",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50572503",
+      "summary": "",
+      "published_at": "2026-11-20T10:01:41.000Z",
+      "engagement": {
+        "score": 367,
+        "comments": 239
+      },
+      "collection_mode": "api",
+      "score": 8.467
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "2019",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars (2019)",
+      "url": "https://ecohustler.com/article/one-corporation-to-pollute-them-all/",
+      "direct_source_url": "https://ecohustler.com/article/one-corporation-to-pollute-them-all/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50572116",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50572116",
+      "summary": "",
+      "published_at": "2026-11-20T09:13:09.000Z",
+      "engagement": {
+        "score": 323,
+        "comments": 182
+      },
+      "collection_mode": "api",
+      "score": 8.194
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "em-online.bearblog.dev",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "\"I can tell you wrote this yourself\"",
+      "url": "https://em-online.bearblog.dev/i-can-tell-you-wrote-this-yourself/",
+      "direct_source_url": "https://em-online.bearblog.dev/i-can-tell-you-wrote-this-yourself/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50571189",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50571189",
+      "summary": "",
+      "published_at": "2026-11-20T07:13:21.000Z",
+      "engagement": {
+        "score": 314,
+        "comments": 298
+      },
+      "collection_mode": "api",
+      "score": 8.19
+    },
+    {
+      "title": "Anthropic mathematician Levent Alpöge says he used Claude to prove the 167-year-old Riemann hypothesis and posts the proof in the Lean programming language (Joseph Howlett/Scientific American)",
+      "url": "https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/",
+      "summary": "Joseph Howlett / Scientific American : Anthropic mathematician Levent Alp&ouml;ge says he used Claude to prove the 167-year-old Riemann hypothesis and posts the proof in the Lean programming language &mdash; An AI-generated solution of the 167-year-old problem, long considered far out of reach to human mathematicians &hellip;",
+      "description_html": "<A HREF=\"https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261120/i17.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261120/p17#a261120p17\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Joseph Howlett / <A HREF=\"https://www.scientificamerican.com/\">Scientific American</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/\">Anthropic mathematician Levent Alp&ouml;ge says he used Claude to prove the 167-year-old Riemann hypothesis and posts the proof in the Lean programming language</A></B></SPAN>&nbsp; &mdash;&nbsp; An AI-generated solution of the 167-year-old problem, long considered far out of reach to human mathematicians &hellip; </P>",
+      "published_at": "2026-11-20T15:20:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261120/p17",
+      "direct_source_url": "https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/",
+      "publisher": "Joseph Howlett/Scientific American",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.098
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "2017",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 8,
+      "title": "If you can't explain something in simple terms, you don't understand it (2017)",
+      "url": "https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it",
+      "direct_source_url": "https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it",
+      "discovery_url": "https://news.ycombinator.com/item?id=50572355",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50572355",
+      "summary": "",
+      "published_at": "2026-11-20T09:43:19.000Z",
+      "engagement": {
+        "score": 291,
+        "comments": 176
+      },
+      "collection_mode": "api",
+      "score": 8.055
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "CVE-2026-121481, CVSS 9.8",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+      "url": "https://github.com/openssl/openssl/pull/33652",
+      "direct_source_url": "https://github.com/openssl/openssl/pull/33652",
+      "discovery_url": "https://news.ycombinator.com/item?id=50569226",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50569226",
+      "summary": "",
+      "published_at": "2026-11-20T02:01:09.000Z",
+      "engagement": {
+        "score": 323,
+        "comments": 273
+      },
+      "collection_mode": "api",
+      "score": 8.054
+    },
+    {
+      "title": "Anthropic stock fell as low as $87.26 in the opening hours of its second day of trading, trimming gains from the $83 IPO price to as little as 5.1% (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/anthropic-share-slump-nearly-erases-ipo-pop-as-ai-trade-unravels",
+      "summary": "Bloomberg : Anthropic stock fell as low as $87.26 in the opening hours of its second day of trading, trimming gains from the $83 IPO price to as little as 5.1% &mdash; Anthropic PBC shares erased much of their first-day jump on Friday, testing investors' faith after the AI lab delivered the biggest initial public offering in history.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-20/anthropic-share-slump-nearly-erases-ipo-pop-as-ai-trade-unravels\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261120/i16.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261120/p16#a261120p16\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-20/anthropic-share-slump-nearly-erases-ipo-pop-as-ai-trade-unravels\">Anthropic stock fell as low as $87.26 in the opening hours of its second day of trading, trimming gains from the $83 IPO price to as little as 5.1%</A></B></SPAN>&nbsp; &mdash;&nbsp; Anthropic PBC shares erased much of their first-day jump on Friday, testing investors' faith after the AI lab delivered the biggest initial public offering in history.</P>",
+      "published_at": "2026-11-20T15:10:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261120/p16",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-20/anthropic-share-slump-nearly-erases-ipo-pop-as-ai-trade-unravels",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 8.011
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "newscientist.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "Pancreatic cancer halted by virus injection in three patients",
+      "url": "https://www.newscientist.com/article/2528235-pancreatic-cancer-halted-by-virus-injection-in-three-patients/",
+      "direct_source_url": "https://www.newscientist.com/article/2528235-pancreatic-cancer-halted-by-virus-injection-in-three-patients/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50563066",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50563066",
+      "summary": "https://archive.ph/2Et0x https://clinicaltrials.gov/study/NCT06693986",
+      "published_at": "2026-11-19T17:25:33.000Z",
+      "engagement": {
+        "score": 842,
+        "comments": 146
+      },
+      "collection_mode": "api",
+      "score": 7.936
+    },
+    {
+      "title": "Source: Coinbase is targeting H1 2027 to begin offering in-house event contracts in the US; it currently offers prediction markets through a Kalshi partnership (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/coinbase-eyes-in-house-prediction-markets-in-first-half-2027",
+      "summary": "Bloomberg : Source: Coinbase is targeting H1 2027 to begin offering in-house event contracts in the US; it currently offers prediction markets through a Kalshi partnership &mdash; Coinbase Global Inc. is targeting the first half of 2027 to begin offering in-house event contracts in the US, according to a person familiar with the matter.",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-19/coinbase-eyes-in-house-prediction-markets-in-first-half-2027\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261120/i15.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261120/p15#a261120p15\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-19/coinbase-eyes-in-house-prediction-markets-in-first-half-2027\">Source: Coinbase is targeting H1 2027 to begin offering in-house event contracts in the US; it currently offers prediction markets through a Kalshi partnership</A></B></SPAN>&nbsp; &mdash;&nbsp; Coinbase Global Inc. is targeting the first half of 2027 to begin offering in-house event contracts in the US, according to a person familiar with the matter.</P>",
+      "published_at": "2026-11-20T14:30:03.000Z",
+      "discovery_url": "https://www.techmeme.com/261120/p15",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-19/coinbase-eyes-in-house-prediction-markets-in-first-half-2027",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.904
+    },
+    {
+      "title": "Anthropic raises an additional $12.2B as underwriters exercise their \"greenshoe\" overallotment of shares, bringing the total raised in its IPO to $93.5B (Ashley Capoot/CNBC)",
+      "url": "https://www.cnbc.com/2026/11/20/anthropic-ipo-greenshoe.html",
+      "summary": "Ashley Capoot / CNBC : Anthropic raises an additional $12.2B as underwriters exercise their &ldquo;greenshoe&rdquo; overallotment of shares, bringing the total raised in its IPO to $93.5B &mdash; Anthropic underwriters have officially exercised their overallotment of shares in the historic initial public offering &hellip;",
+      "description_html": "<A HREF=\"https://www.cnbc.com/2026/11/20/anthropic-ipo-greenshoe.html\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261120/i14.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261120/p14#a261120p14\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Ashley Capoot / <A HREF=\"http://www.cnbc.com/\">CNBC</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.cnbc.com/2026/11/20/anthropic-ipo-greenshoe.html\">Anthropic raises an additional $12.2B as underwriters exercise their &ldquo;greenshoe&rdquo; overallotment of shares, bringing the total raised in its IPO to $93.5B</A></B></SPAN>&nbsp; &mdash;&nbsp; Anthropic underwriters have officially exercised their overallotment of shares in the historic initial public offering &hellip; </P>",
+      "published_at": "2026-11-20T13:50:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261120/p14",
+      "direct_source_url": "https://www.cnbc.com/2026/11/20/anthropic-ipo-greenshoe.html",
+      "publisher": "Ashley Capoot/CNBC",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.796
+    },
+    {
+      "title": "Uber quietly launched Uber Kids as a pilot in three US cities for kids as young as 10, building on its teen ride-hailing service for those aged 13 to 17 (Kirsten Korosec/TechCrunch)",
+      "url": "https://techcrunch.com/2026/11/19/uber-tests-rides-for-kids-as-young-as-10-with-extra-pay-for-drivers/",
+      "summary": "Kirsten Korosec / TechCrunch : Uber quietly launched Uber Kids as a pilot in three US cities for kids as young as 10, building on its teen ride-hailing service for those aged 13 to 17 &mdash; Uber has opened its ride-hailing service to children as young as 10 in three U.S. cities as the company tests whether there's a market &hellip;",
+      "description_html": "<A HREF=\"https://techcrunch.com/2026/11/19/uber-tests-rides-for-kids-as-young-as-10-with-extra-pay-for-drivers/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261120/i13.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261120/p13#a261120p13\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Kirsten Korosec / <A HREF=\"http://techcrunch.com/\">TechCrunch</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://techcrunch.com/2026/11/19/uber-tests-rides-for-kids-as-young-as-10-with-extra-pay-for-drivers/\">Uber quietly launched Uber Kids as a pilot in three US cities for kids as young as 10, building on its teen ride-hailing service for those aged 13 to 17</A></B></SPAN>&nbsp; &mdash;&nbsp; Uber has opened its ride-hailing service to children as young as 10 in three U.S. cities as the company tests whether there's a market &hellip; </P>",
+      "published_at": "2026-11-20T13:10:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261120/p13",
+      "direct_source_url": "https://techcrunch.com/2026/11/19/uber-tests-rides-for-kids-as-young-as-10-with-extra-pay-for-drivers/",
+      "publisher": "Kirsten Korosec/TechCrunch",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.688
+    },
+    {
+      "title": "Current and ex-staffers describe abusive behavior by Jensen Huang that goes back decades; Nvidia settled with two senior leaders who alleged abusive conduct (New York Times)",
+      "url": "https://www.nytimes.com/2026/11/20/technology/jensen-huang-nvidia-culture.html?unlocked_article_code=1.R1E.IEmx.Gn88RJ0uVjFO&smid=url-share",
+      "summary": "New York Times : Current and ex-staffers describe abusive behavior by Jensen Huang that goes back decades; Nvidia settled with two senior leaders who alleged abusive conduct &mdash; The Nvidia co-founder's belittling behavior toward employees goes back decades. It once led to a confidential settlement agreement &hellip;",
+      "description_html": "<A HREF=\"https://www.nytimes.com/2026/11/20/technology/jensen-huang-nvidia-culture.html?unlocked_article_code=1.R1E.IEmx.Gn88RJ0uVjFO&smid=url-share\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261120/i12.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261120/p12#a261120p12\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.nytimes.com/\">New York Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.nytimes.com/2026/11/20/technology/jensen-huang-nvidia-culture.html?unlocked_article_code=1.R1E.IEmx.Gn88RJ0uVjFO&smid=url-share\">Current and ex-staffers describe abusive behavior by Jensen Huang that goes back decades; Nvidia settled with two senior leaders who alleged abusive conduct</A></B></SPAN>&nbsp; &mdash;&nbsp; The Nvidia co-founder's belittling behavior toward employees goes back decades.&nbsp; It once led to a confidential settlement agreement &hellip; </P>",
+      "published_at": "2026-11-20T12:40:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261120/p12",
+      "direct_source_url": "https://www.nytimes.com/2026/11/20/technology/jensen-huang-nvidia-culture.html?unlocked_article_code=1.R1E.IEmx.Gn88RJ0uVjFO&smid=url-share",
+      "publisher": "New York Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.587
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "postgresql.org",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 9,
+      "title": "PostgreSQL 19",
+      "url": "https://www.postgresql.org/docs/release/19.0/",
+      "direct_source_url": "https://www.postgresql.org/docs/release/19.0/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50569890",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50569890",
+      "summary": "",
+      "published_at": "2026-11-20T03:45:45.000Z",
+      "engagement": {
+        "score": 305,
+        "comments": 18
+      },
+      "collection_mode": "api",
+      "score": 7.546
+    },
+    {
+      "title": "Sources: China says it will not approve requests from Chinese companies registered overseas after 2023 to list outside mainland China, impacting tech startups (Reuters)",
+      "url": "https://www.reuters.com/world/beijing-bar-young-red-chip-firms-listing-outside-mainland-china-sources-say-2026-11-20/",
+      "summary": "Reuters : Sources: China says it will not approve requests from Chinese companies registered overseas after 2023 to list outside mainland China, impacting tech startups &mdash; China's securities watchdog has told some law firms it will not approve plans by red-chip firms to list outside mainland China &hellip;",
+      "description_html": "<A HREF=\"https://www.reuters.com/world/beijing-bar-young-red-chip-firms-listing-outside-mainland-china-sources-say-2026-11-20/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261120/i11.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261120/p11#a261120p11\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/world/beijing-bar-young-red-chip-firms-listing-outside-mainland-china-sources-say-2026-11-20/\">Sources: China says it will not approve requests from Chinese companies registered overseas after 2023 to list outside mainland China, impacting tech startups</A></B></SPAN>&nbsp; &mdash;&nbsp; China's securities watchdog has told some law firms it will not approve plans by red-chip firms to list outside mainland China &hellip; </P>",
+      "published_at": "2026-11-20T11:25:03.000Z",
+      "discovery_url": "https://www.techmeme.com/261120/p11",
+      "direct_source_url": "https://www.reuters.com/world/beijing-bar-young-red-chip-firms-listing-outside-mainland-china-sources-say-2026-11-20/",
+      "publisher": "Reuters",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.455
+    },
+    {
+      "title": "Sources: Shanghai-based Pragmatik Labs, founded by ex-Qwen AI head Junyang Lin, raised tens of millions of dollars at a $5B valuation, up from $2B in August (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/ex-alibaba-star-s-ai-startup-doubles-valuation-to-5-billion",
+      "summary": "Bloomberg : Sources: Shanghai-based Pragmatik Labs, founded by ex-Qwen AI head Junyang Lin, raised tens of millions of dollars at a $5B valuation, up from $2B in August &mdash; A startup founded by Alibaba Group Holding Ltd.'s former AI chief has closed new funding at a valuation of $5 billion &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-20/ex-alibaba-star-s-ai-startup-doubles-valuation-to-5-billion\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261120/i10.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261120/p10#a261120p10\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-20/ex-alibaba-star-s-ai-startup-doubles-valuation-to-5-billion\">Sources: Shanghai-based Pragmatik Labs, founded by ex-Qwen AI head Junyang Lin, raised tens of millions of dollars at a $5B valuation, up from $2B in August</A></B></SPAN>&nbsp; &mdash;&nbsp; A startup founded by Alibaba Group Holding Ltd.'s former AI chief has closed new funding at a valuation of $5 billion &hellip; </P>",
+      "published_at": "2026-11-20T11:10:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261120/p10",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-20/ex-alibaba-star-s-ai-startup-doubles-valuation-to-5-billion",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.365
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "Online Mistake Detection in Instruction-Conditioned Procedural Video",
+      "url": "https://huggingface.co/papers/2611.25567",
+      "direct_source_url": "https://huggingface.co/papers/2611.25567",
+      "discovery_url": "https://huggingface.co/papers/2611.25567",
+      "link_quality": "original",
+      "summary": "An assistant monitoring a person performing a procedure is most useful when it can detect mistakes while there is still time to recover. This requires judging actions against task instructions as the video unfolds, identifying the attempted step, locating it in time, and assessing its execution. Existing online detectors do not use the instruction text, while instruction-conditioned methods operate offline. In this paper, we study online, instruction-conditioned mistake detection in egocentric videos. Using only observed video, task instructions, and prior predictions, our model identifies and localizes completed action attempts and classifies them as correct, modified, slip, corrections, or additions; omitted steps are determined after the video ends. We compare a modular pipeline, with separate step identification, temporal localization, and execution verification, to a joint model that predicts all outputs in a single step. To support supervised learning from mistakes, we repartition EgoPER to include erroneous videos in all splits. The approaches achieve similar step-segmentation F1@0.5 (93.6% and 92.1%), while the joint model achieves higher binary mistake-detection F1@0.5 (84",
+      "published_at": "2026-11-18T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 6.139
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "AURA: AUdio-dRiven streaming Avatar",
+      "url": "https://huggingface.co/papers/2611.26540",
+      "direct_source_url": "https://huggingface.co/papers/2611.26540",
+      "discovery_url": "https://huggingface.co/papers/2611.26540",
+      "link_quality": "original",
+      "summary": "Current audio-driven video diffusion models can synthesize realistic talking-head videos but generally require dozens of diffusion denoising steps over multi-second video chunks, making them unsuitable for streaming applications such as voice assistants and virtual avatars, where low-latency and online causal generation are required properties. AURA generates video chunk by chunk with a rolling KV cache, requiring only the audio of the current chunk to start generating, rather than a multi-second audio look-ahead like bidirectional models. It comes in two sizes: AURA 1.3B streams 576p video in real time on a single GPU (20.7 fps for a 16 Hz playback rate), making it suited to interactive avatar applications, and AURA 5B streams 720p video at 9.7 fps. Our two-stage distillation pipeline first aligns the causal student with the teacher, by training it to match the teacher's trajectories with fewer diffusion steps and a chunk-wise sliding window causal attention mask, then applies Distribution Matching Distillation (DMD) with backward simulation to close the remaining quality gap. On standard talking-head benchmarks, AURA 1.3B runs 23x faster than its own bidirectional teacher and rea",
+      "published_at": "2026-11-18T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.971
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "SpecWM: Turning Verification into Refinement for Streaming World Models",
+      "url": "https://huggingface.co/papers/2611.26211",
+      "direct_source_url": "https://huggingface.co/papers/2611.26211",
+      "discovery_url": "https://huggingface.co/papers/2611.26211",
+      "link_quality": "original",
+      "summary": "Recently, video world models have advanced interactive generation, with large models offering higher quality and smaller models enabling faster inference. Existing speculative methods combine their strengths through fast draft generation and selective target regeneration guided by rewards on decoded frames. However, verification covers only the external scorer's evaluation dimensions and adds decoding and scoring costs. Moreover, these scores provide no correction, requiring costly target regeneration for rejected drafts. To address these limitations, we propose Speculative World Model (SpecWM), a unified, training-free inference framework for streaming world models. It verifies draft chunks using the target's latent velocity field. Verification also yields a reusable correction; two thresholds select Accept, Refine, or Reject. Specifically, one-step refinement reuses it to improve perceptual quality, while three-step refinement strengthens camera following and trajectory consistency. These findings motivate transition-aware refinement. On WBench Navigation, SpecWM improves visual quality at 1.63times speedup over the target and raises NavScore from the draft's 75.99 to 85.63, achi",
+      "published_at": "2026-11-18T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.891
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "A CPU Inside an LLM: Zero-Gradient Compilation of Exact Circuits into Pretrained Weights",
+      "url": "https://huggingface.co/papers/2611.26450",
+      "direct_source_url": "https://huggingface.co/papers/2611.26450",
+      "discovery_url": "https://huggingface.co/papers/2611.26450",
+      "link_quality": "original",
+      "summary": "Pretrained language models (LMs) remain unreliable on exact multi-digit arithmetic without gradient fine-tuning or external tool interpreters. We introduce closed-form, zero-gradient circuit-grafting primitives that compile deterministic computation directly into pretrained LM weights using zero training examples and zero runtime hooks, while bounding per-layer normalization drift and preserving natural-language (NL) competence. Our construction combines three analytical mechanisms: (1) two-layer Mellin-GLU quadrature over bias-free SwiGLU/GeGLU layers, turning unknown per-token RMSNorm scaling into translation along a log-spaced gate grid (>250times dynamic range) with IEEE 754 error bounds; (2) cross-token scale cancellation via signed Chebyshev Indefinite-RoPE self-sink attention and memoryless SiLU-antisymmetric GatedDeltaNet shifts; and (3) axis-aligned width extension (d to d+K) with d/(d+K) norm compensation, Base-1000 canonical BPE emission, and differential (+254,-256) tied unembeddings. An automated 5-stage compiler synthesizes 4-8 digit signed {+,-,times} circuits in constant TC^0 depth alongside 3-literal Boolean (100%, N=1{,}728; plus 42-layer Gemma 4 E4B audits) and 5",
+      "published_at": "2026-11-18T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 5.819
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Direct3D-V3: Latent-Free Diffusion Transformers in the Native Voxel Domain",
+      "url": "https://huggingface.co/papers/2611.26511",
+      "direct_source_url": "https://huggingface.co/papers/2611.26511",
+      "discovery_url": "https://huggingface.co/papers/2611.26511",
+      "link_quality": "original",
+      "summary": "Native 3D generation has largely been built around latent diffusion, with recent advances concentrating on stronger variational autoencoders (VAE) and increasingly elaborate latent representations, from vecset and triplanes to structured sparse voxels. Despite their architectural differences, these methods all share the same premise: geometry is first compressed into a latent space and only then modeled by the generator. We take a different route and propose Direct3D-V3, a latent-free diffusion transformer (DiT) framework that discards the VAE altogether and operates in the native voxel domain, directly modeling raw SDF voxel grids during both training and sampling. To make this direct voxel formulation geometrically reliable, we introduce an implicit manifold regularization over neighboring voxels to suppress non-watertight surfaces, and convert predicted SDF grids into meshes via Marching Cubes so that rendered normal losses can supervise the model directly from its predicted SDF. To improve alignment between the conditioning image and generated geometry, Direct3D-V3 also predicts the camera parameters of the conditioning image as an auxiliary task, encouraging the DiT to learn t",
+      "published_at": "2026-11-18T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.811
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 8,
+      "title": "Twice-Told Critiques: Claim-Level Homogenization of Peer Review in the LLM Era",
+      "url": "https://huggingface.co/papers/2611.26286",
+      "direct_source_url": "https://huggingface.co/papers/2611.26286",
+      "discovery_url": "https://huggingface.co/papers/2611.26286",
+      "link_quality": "original",
+      "summary": "Peer review relies on several readers finding different problems. We measure critique overlap in conference and journal reviews. At ICLR, measured overlap rose from 12.0% in 2026 to 21.3% in 2027, in reviews from the same stage of the review process, with year-on-year rises at NeurIPS, ICML and the F1000 and PLOS journals. A third ICLR review of a paper added 5.46 new problems to the other two in 2027, against 6.12 in 2026. We apply MELD, a detector of LLM-generated text, to all reviews. Within a paper, two reviews that MELD flags overlap more than two unflagged reviews: by 3.0 points at ICLR in 2024-2025, by 4.5 points in 2026-2027, and by 5.4 points across five journal sources. These results provide evidence that LLM-flagged reviews of one paper are less distinct from each other than unflagged reviews, and suggest that the diversity of critiques among reviews of a single paper is falling.",
+      "published_at": "2026-11-18T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 7
+      },
+      "collection_mode": "api",
+      "score": 5.792
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 9,
+      "title": "Training Vision Models for LLM-Driven Weight-Space Programming",
+      "url": "https://huggingface.co/papers/2611.26408",
+      "direct_source_url": "https://huggingface.co/papers/2611.26408",
+      "discovery_url": "https://huggingface.co/papers/2611.26408",
+      "link_quality": "original",
+      "summary": "It has been demonstrated that, in certain settings, large language models can perform weight-space programming to directly modify the weights of neural networks. However, it is unknown how dedicated training of these networks can contribute to the successes of weight-space programming. We present a benchmark of LLM-driven weight-space programming on vision models, in which five LLMs edit convolutional networks and vision transformers on relabeling and error-correction tasks on Waterbirds, CIFAR-100, PACS and Entity-30. We report more than 2,600 such edit processes, whereby each edit is scored on held-out images for success, side effects and accuracy loss. We compare standard training with label smoothing, gradient-based editable training, and our Edit-Ready Training (ERT), a novel method that rehearses the direct, closed-form weight edits LLMs perform. We show that preparing networks for editing raises the success of LLM edits substantially where standard networks are hard to edit. ERT further achieves the highest mean score for GPT-6 Astra and Claude Opus 5.5 across all evaluated baselines. We will release our LLM testing framework alongside all tasks, editing trajectories and sco",
+      "published_at": "2026-11-18T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 8
+      },
+      "collection_mode": "api",
+      "score": 5.737
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 11,
+      "title": "AltRA-Test: An Alternative Annotator Test for LLM Judges Without Shared Annotators",
+      "url": "https://huggingface.co/papers/2611.26073",
+      "direct_source_url": "https://huggingface.co/papers/2611.26073",
+      "discovery_url": "https://huggingface.co/papers/2611.26073",
+      "link_quality": "original",
+      "summary": "Large language models (LLMs) are increasingly used as judges and graders to replace human annotators, raising the question of when such replacement is statistically justified. To support such decisions, the Alternative Annotator Test (Alt-Test) was introduced for dense settings where all items are annotated by the same annotators. However, in many large-scale annotation settings, items are annotated by different subsets of annotators. We therefore propose the Alternative Annotator Test with Resampled Annotations (AltRA-Test), a statistical test that does not require that all items are annotated by the same annotators. AltRA-Test uses a bootstrap that resamples items, draws k human annotations for each item, and substitutes one of them with an LLM annotation. This produces paired all-human and mixed human-LLM panels. A replacement is supported when the inter-annotator agreement (IAA) of the mixed panel is statistically non-inferior to the IAA of the all-human panel, i.e., when the LLM preserves the signal that the human annotators share. We establish that AltRA-Test is a consistent test of asymptotic level alpha. We then evaluate it through simulations and real-world experiments in",
+      "published_at": "2026-11-18T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 14
+      },
+      "collection_mode": "api",
+      "score": 5.688
+    }
+  ]
+}

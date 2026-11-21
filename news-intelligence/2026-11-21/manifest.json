@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T14:35:44.532Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 358,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 487,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 421,
+      "collection_mode": "api",
+      "original_link_count": 9
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 331,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 2346,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": true,
+  "quality_status": "ready_with_warnings",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-21",
+  "overall_confidence": 0.9,
+  "stories": [
+    {
+      "category": "lead",
+      "headline": "Nasdaq slips as AI-linked equities face cooling sentiment",
+      "confirmed_fact": "The Nasdaq Composite erased its 2026 gains on November 20 following a broad sell-off in AI-linked stocks, coinciding with Anthropic's second day of trading where shares dropped over 9% to $88.17.",
+      "why_it_matters": "The decline reflects growing investor anxiety regarding the massive capital expenditure and data centre commitments required to sustain current AI development trajectories.",
+      "interpretation": "The market is beginning to price in the reality that massive infrastructure spending does not automatically translate into immediate, stable returns.",
+      "confidence": 0.95,
+      "source": "theguardian.com",
+      "discovered_via": "Hacker News",
+      "source_title": "Nasdaq erases all 2026 gains as AI sell-off dampens Anthropic’s second day",
+      "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+      "discovery_url": "https://news.ycombinator.com/item?id=50574383",
+      "link_quality": "original",
+      "published_at": "2026-11-20T13:29:59.000Z",
+      "discovery_score": 7.565
+    },
+    {
+      "category": "technology",
+      "headline": "US export controls trigger broad semiconductor supply chain disruption",
+      "confirmed_fact": "New US export rules have disrupted supply chains beyond advanced AI chips, affecting consumer System-on-Chips (SoCs) and forcing TSMC to suspend certain shipments for compliance screening.",
+      "why_it_matters": "The breadth of these controls suggests that non-AI hardware developers may face unexpected operational hurdles and compliance costs as the regulatory net widens.",
+      "interpretation": "Foundries are prioritising caution over throughput, which could lead to short-term bottlenecks for consumer electronics manufacturers globally.",
+      "confidence": 0.9,
+      "source": "Cheng Ting-Fang/Nikkei Asia",
+      "discovered_via": "Techmeme",
+      "source_title": "Industry insiders say new US export rules affect a broader range of chips, including SoCs used in consumer electronics, extending beyond advanced AI chips (Cheng Ting-Fang/Nikkei Asia)",
+      "url": "https://asia.nikkei.com/business/tech/semiconductors/chip-supply-chain-warns-of-broader-disruption-from-new-us-export-controls",
+      "discovery_url": "https://www.techmeme.com/261121/p2",
+      "link_quality": "original",
+      "published_at": "2026-11-21T06:00:55.000Z",
+      "discovery_score": 7.423
+    },
+    {
+      "category": "business",
+      "headline": "SoftBank's $1T SK Hynix buyout proposal confirmed as inactive",
+      "confirmed_fact": "SoftBank CEO Masayoshi Son explored a potential $1 trillion acquisition of memory maker SK Hynix, but SoftBank has confirmed the proposal is no longer under active consideration.",
+      "why_it_matters": "The scale of the proposed deal highlights the intense, albeit sometimes speculative, interest in securing memory supply chains for AI hardware.",
+      "interpretation": "Even for the world's largest investors, the regulatory and financial barriers to consolidating critical semiconductor infrastructure remain formidable.",
+      "confidence": 0.85,
+      "source": "The Information",
+      "discovered_via": "Techmeme",
+      "source_title": "Sources: Masayoshi Son recently explored a possible $1T buyout of SK Hynix; SoftBank says the deal is \"no longer under active consideration\" (The Information)",
+      "url": "https://www.theinformation.com/articles/softbanks-masayoshi-son-explored-1-trillion-moonshot-buyout-sk-hynix",
+      "discovery_url": "https://www.techmeme.com/261120/p45",
+      "link_quality": "original",
+      "published_at": "2026-11-21T02:45:01.000Z",
+      "discovery_score": 7.127
+    },
+    {
+      "category": "business",
+      "headline": "Ubisoft launches AI subsidiary amid workforce reductions",
+      "confirmed_fact": "Ubisoft has established Motherbrain, a subsidiary focused on generative AI for gameplay, while simultaneously cutting 166 jobs across its Montreal and Quebec City studios.",
+      "why_it_matters": "The timing of the announcement has drawn industry criticism regarding the prioritisation of AI-driven automation over existing human capital.",
+      "interpretation": "Ubisoft is betting that proprietary AI tools will solve complex systemic gameplay challenges, though the human cost of this pivot is clearly visible.",
+      "confidence": 0.8,
+      "source": "Sophie McEvoy/GamesIndustry.biz",
+      "discovered_via": "Techmeme",
+      "source_title": "Ubisoft launches Motherbrain, a subsidiary focused on developing \"smart NPCs with memory and AI game masters that manage large-scale systemic worlds\" (Sophie McEvoy/GamesIndustry.biz)",
+      "url": "https://www.gamesindustry.biz/ubisoft-launches-motherbrain-a-new-subsidiary-focused-on-ai-driven-gameplay-innovation",
+      "discovery_url": "https://www.techmeme.com/261121/p1",
+      "link_quality": "original",
+      "published_at": "2026-11-21T05:15:00.000Z",
+      "discovery_score": 7.311
+    },
+    {
+      "category": "technology",
+      "headline": "Microsoft to sunset To Do app by mid-2027",
+      "confirmed_fact": "Microsoft will retire the To Do app on June 30, 2027, with enterprise users migrating to Planner and personal users left without a direct first-party replacement.",
+      "why_it_matters": "Millions of personal users will need to find alternative task management solutions, marking another shift in Microsoft's fragmented productivity ecosystem.",
+      "interpretation": "It is a reminder that even widely used productivity tools are subject to the whims of corporate consolidation and platform strategy.",
+      "confidence": 0.95,
+      "source": "Todd Bishop/GeekWire",
+      "discovered_via": "Techmeme",
+      "source_title": "Microsoft plans to retire its To Do app on June 30, 2027, offering migration to Planner for work and school accounts, but no replacement for personal accounts (Todd Bishop/GeekWire)",
+      "url": "https://www.geekwire.com/2026/microsoft-to-do-users-make-a-big-to-do-over-popular-task-apps-retirement/",
+      "discovery_url": "https://www.techmeme.com/261121/p3",
+      "link_quality": "original",
+      "published_at": "2026-11-21T06:10:02.000Z",
+      "discovery_score": 7.509
+    }
+  ],
+  "practical_takeaway": "If you rely on Microsoft To Do for personal task management, you have until mid-2027 to migrate your data. Meanwhile, expect continued volatility in tech stocks and potential supply chain delays for consumer electronics as export compliance measures settle.",
+  "watch_next": "Keep an eye on how TSMC and other major foundries manage the compliance screening process, as this will be the primary indicator of how significantly consumer hardware availability is affected by the new US export rules.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 081",
+      "title": "My Stop-Motion Studio",
+      "summary": "Turn family photos into a private stop-motion animation with frame editing, adjustable preview speed, browser saving and WebM export.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-081/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-081/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-21",
+    "lead_headline": "Nasdaq slips as AI-linked equities face cooling sentiment",
+    "facebook_post": "Nasdaq slips as AI-linked equities face cooling sentiment\n\nThe decline reflects growing investor anxiety regarding the massive capital expenditure and data centre commitments required to sustain current AI development trajectories.\n\nToday's Sapiver Forge Daily Brief covers 5 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Nasdaq slips as AI-linked equities face cooling sentiment",
+    "pinterest_description": "The decline reflects growing investor anxiety regarding the massive capital expenditure and data centre commitments required to sustain current AI development trajectories.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Nasdaq slips as AI-linked equities face cooling sentiment. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Nasdaq slips as AI-linked equities face cooling sentiment. The Nasdaq Composite erased its 2026 gains on November 20 following a broad sell-off in AI-linked stocks, coinciding with Anthropic's second day of trading where shares dropped over 9% to $88.17. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "438f6165e6e376da81dee96a8a07d0976ff93e8f80db872f5fe24642fdca70f3"
+}

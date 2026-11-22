@@ -1,0 +1,77 @@
+Here are the evidence desk verification notes for the **2026-11-22 UK morning briefing** candidates.
+
+---
+
+### **Strongest In-Scope Candidates (Recommended for Publication)**
+
+#### **Candidate [11]: Suppliers demand up to 45% price hikes on signed AI server contracts**
+* **Publisher / Source:** Financial Times (2026-11-22)
+* **Confirmed:** Major AI server vendors—including Dell, HPE, Lenovo, and Supermicro—are demanding price increases between 25% and 45% on AI hardware orders months after contracts were formally signed. The hikes are driven by skyrocketing memory component costs (DRAM and HBM prices are up over 400% since early 2024). FT verified an active lawsuit in Irish court where British trading firm XTX Markets is suing Dell over a demanded $62M–$70M price increase on a previously fixed $549M order. HPE has also formally updated its quoting terms to reserve explicit repricing rights prior to shipment.
+* **Important Caveats:** Hardware OEMs attribute the price adjustments to uncontrollable upstream component inflation. Dell and Lenovo did not respond to requests for comment; HPE and Supermicro declined to comment.
+* **Publication Suitability:** **YES** (Top-tier enterprise tech & market infrastructure story).
+
+---
+
+#### **Candidate [4]: NYT details 2-year Chinese spy campaign to acquire advanced AI chips**
+* **Publisher / Source:** New York Times (2026-11-21/22)
+* **Confirmed:** US, Asian, and European intelligence officials confirmed that China’s Ministry of State Security (MSS) established a specialized working group under MSS chief Chen Yixin tasked with circumventing US export restrictions to acquire advanced Nvidia AI chips and gather intelligence on Western semiconductor supply chains. 
+* **Important Caveats:** The account relies on anonymous current and former intelligence officials and confidential sector analyses. The Chinese Ministry of Foreign Affairs rejects all espionage allegations as "pure fabrication".
+* **Publication Suitability:** **YES** (Major global tech regulation and hardware security story; pairs well with candidate [12]).
+
+---
+
+#### **Candidate [12]: WSJ names Li Ming as key operator in Nvidia chip smuggling ring**
+* **Publisher / Source:** Wall Street Journal (Stu Woo, 2026-11-22)
+* **Confirmed:** The WSJ reported that 52-year-old Chinese national Li Ming (charged with fraud in Singapore in Feb 2025 over server transshipments) was the primary operational figure behind a network of Southeast Asian entities routing restricted Nvidia AI GPUs to China. Li worked closely with Alice Huang (former managing director of Singapore data-center firm Megaspeed and romantic partner of former Nvidia CEO Jensen Huang) and participated in key business decisions.
+* **Important Caveats:** The allegations in the WSJ investigation have not been proven in court. Li is currently out on bail in Singapore, and his attorneys declined to comment.
+* **Publication Suitability:** **YES** (Direct investigative development on the high-profile Nvidia executive and export-control story).
+
+---
+
+#### **Candidate [6]: Tesla rolls out FSD v15 featuring real-time neural "Tesla Reality View"**
+* **Publisher / Source:** Gizmodo (Mike Pearl, 2026-11-21/22)
+* **Confirmed:** Tesla began rolling out Full Self-Driving (Supervised) v15 to select customer vehicles on 2026-11-21. The update introduces "Tesla Reality View," an on-screen, photorealistic 3D visualization of car surroundings generated in real time by an AI vision encoder trained on internet video, operating directly from camera feeds rather than rendered via a 3D game engine.
+* **Important Caveats:** FSD v15 remains a Level 2 "Supervised" driver-assist system requiring driver attention and intervention. Tesla's claim of a "25x improvement in safety-critical cases" is an internal metric based on its vision encoder baseline, not an independently audited safety measurement.
+* **Publication Suitability:** **YES** (Significant consumer AI and autonomous driving software update).
+
+---
+
+#### **Candidate [2]: AI models speed up planning for cyberattacks on industrial control systems**
+* **Publisher / Source:** Financial Times (Tom Wilson, 2026-11-21/22)
+* **Confirmed:** Cybersecurity experts (including Dragos CEO Robert Lee) confirm that frontier AI models are accelerating operational technology (OT) cyberattack planning by helping human threat actors quickly ingest technical equipment manuals and analyze historic industrial accident data.
+* **Important Caveats:** Practical testing shows AI models do not perform fully autonomous physical plant takedowns; expert human adversaries are still required to steer the models and execute attacks.
+* **Publication Suitability:** **YES** (Strong critical infrastructure and AI safety item).
+
+---
+
+#### **Candidate [15]: Research shows canary credentials exposed via AI routers under ZDR policies**
+* **Publisher / Source:** Ars Technica (Dan Goodin, 2026-11-21)
+* **Confirmed:** Security researchers deployed 2 million canary tokens across multi-tenant AI routing services (such as OpenRouter and Vercel). The study demonstrated that sensitive API keys and request payloads were repeatedly logged, stored, or leaked downstream, even when services advertised "Zero Data Retention" (ZDR) privacy options.
+* **Important Caveats:** Exposures were largely caused by downstream infrastructure logging and third-party API pipeline leaks rather than flaws in core LLM model logic.
+* **Publication Suitability:** **YES** (Crucial developer and AI data privacy security note).
+
+---
+
+#### **Candidate [1]: Analysis projects 87% gas and 11% coal power for Anthropic by 2028**
+* **Publisher / Source:** betterdatacenterproject.com (2026-11-16; HN discussion 2026-11-22)
+* **Confirmed:** A report by non-profit group Better Data Center Project estimates Anthropic's total 2028 compute power demand (based on 15 GW contracted capacity) will draw 87% of its energy from natural gas and 11% from coal.
+* **Important Caveats:** This is an external third-party projection modeled on data center locations and marginal grid mixes, not an official disclosure or target published by Anthropic.
+* **Publication Suitability:** **YES** (Suitable for an AI infrastructure/sustainability round-up, explicitly framed as an independent estimate).
+
+---
+
+#### **Candidate [14]: Tech workers fear romantic espionage following Jensen Huang scandal**
+* **Publisher / Source:** Wired (2026-11-20/22)
+* **Confirmed:** Wired reports a growing trend among matchmakers and corporate security consultants noting heightened anxiety among tech workers over "honeypot" risks. AI dating app Joi AI is actively marketing virtual companion features as "zero espionage" options.
+* **Important Caveats:** A qualitative trend/lifestyle feature based on interviews and anecdote rather than empirical security statistics.
+* **Publication Suitability:** **YES** (As a lighter tech-culture sidebar).
+
+---
+
+### **Candidates Out of Scope or Not Recommended**
+
+* **[0] Toyota, Nissan, Honda parts standardization:** **OUT OF SCOPE** (Standard auto industry supply chain story without a material digital/AI focus).
+* **[3], [5], [9] Lean verification / Generalized Riemann Hypothesis proofs:** **OUT OF SCOPE** (Pure mathematics formalization).
+* **[8], [10], [13] Quantization repos / Lead azide chemistry / Studio display ethernet bug:** **OUT OF SCOPE** (Niche developer side projects / non-tech chemistry / personal hardware troubleshooting blogs).
+* **[7] Sandwich Simulator:** In-scope web project, but too minor for a primary briefing item.
+* **[16]–[19] Hugging Face preprints (SAFI, Diffusion steering, ITPD, PAD):** Technical preprints representing single-paper claims; not corroborated as industry news today.

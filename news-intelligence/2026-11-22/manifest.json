@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-22",
+  "generated_at": "2026-11-22T14:31:24.977Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 178,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 142,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 361,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 226,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1258,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": true,
+  "quality_status": "ready_with_warnings",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-22",
+  "overall_confidence": 0.875,
+  "stories": [
+    {
+      "category": "business",
+      "headline": "AI server suppliers demand double-digit price hikes on signed contracts",
+      "confirmed_fact": "Major AI server vendors including Dell, HPE, Lenovo, and Supermicro are demanding price increases of 25% to 45% on hardware orders months after contracts were signed. The hikes are attributed to a 400% increase in memory component costs since early 2024.",
+      "why_it_matters": "Fixed-price infrastructure planning is becoming increasingly difficult for enterprises, as evidenced by XTX Markets suing Dell over a demanded $62M–$70M price increase on a $549M order.",
+      "interpretation": "Hardware OEMs are passing the volatility of the memory market directly to customers, effectively shifting the risk of supply chain inflation onto the buyer after the deal is done.",
+      "confidence": 0.95,
+      "source": "Financial Times",
+      "discovered_via": "Techmeme",
+      "source_title": "Sources: AI server suppliers like Dell, HPE, Lenovo, and Supermicro are demanding substantially higher prices from buyers, months after contracts were signed (Financial Times)",
+      "url": "https://www.ft.com/content/dd2a6594-6146-4ff1-ac8e-54749c1fc99f",
+      "discovery_url": "https://www.techmeme.com/261122/p2",
+      "link_quality": "original",
+      "published_at": "2026-11-22T05:50:01.000Z",
+      "discovery_score": 7.418
+    },
+    {
+      "category": "technology",
+      "headline": "Intelligence officials detail Chinese state-backed chip acquisition campaign",
+      "confirmed_fact": "US, Asian, and European intelligence officials report that China’s Ministry of State Security established a specialized working group to circumvent US export restrictions and acquire advanced Nvidia AI chips. The Chinese Ministry of Foreign Affairs has denied these espionage allegations.",
+      "why_it_matters": "The campaign highlights the extreme lengths state actors are going to in order to bypass Western semiconductor export controls, complicating the global supply chain for high-end AI hardware.",
+      "interpretation": "The persistence of these efforts suggests that export controls are creating a high-stakes black market, with intelligence agencies acting as facilitators for industrial acquisition.",
+      "confidence": 0.9,
+      "source": "New York Times",
+      "discovered_via": "Techmeme",
+      "source_title": "Current and former officials from the US and other countries describe the Chinese spy agency MSS' campaign to help Chinese companies acquire advanced AI chips (New York Times)",
+      "url": "https://www.nytimes.com/2026/11/21/world/asia/china-nvidia-spy-chips-state-security.html?unlocked_article_code=1.SVE.6AIw.4HHCTzFjtDId&smid=url-share",
+      "discovery_url": "https://www.techmeme.com/261122/p5",
+      "link_quality": "original",
+      "published_at": "2026-11-22T07:00:41.000Z",
+      "discovery_score": 7.708
+    },
+    {
+      "category": "developer",
+      "headline": "Security researchers find API keys leaked by AI routing services",
+      "confirmed_fact": "A study using 2 million canary tokens found that sensitive API keys and request payloads were repeatedly logged and stored by multi-tenant AI routing services, even when those services advertised 'Zero Data Retention' policies.",
+      "why_it_matters": "The findings indicate that 'Zero Data Retention' claims are often undermined by downstream infrastructure logging and third-party API pipeline leaks, leaving developer credentials exposed.",
+      "interpretation": "Privacy could support in the AI supply chain are currently more aspirational than architectural; developers should treat these routing services as inherently leaky.",
+      "confidence": 0.85,
+      "source": "Dan Goodin/Ars Technica",
+      "discovered_via": "Techmeme",
+      "source_title": "Researchers used canary credentials in requests to AI routers like OpenRouter and Vercel, even under \"ZDR\" policies, and saw \"privacy\" often broken, keys stolen (Dan Goodin/Ars Technica)",
+      "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+      "discovery_url": "https://www.techmeme.com/261121/p10",
+      "link_quality": "original",
+      "published_at": "2026-11-21T20:10:02.000Z",
+      "discovery_score": 6.776
+    },
+    {
+      "category": "ai",
+      "headline": "Tesla releases FSD v15 with 'Tesla Reality View'",
+      "confirmed_fact": "Tesla has begun rolling out FSD v15, which introduces a 3D visualization system generated in real time from camera feeds. The system remains a Level 2 'Supervised' driver-assist feature requiring constant human attention.",
+      "why_it_matters": "While the visualization is a technical shift from traditional game-engine rendering, Tesla's internal safety claims lack independent audit, and the system remains a driver-assist tool, not an autonomous one.",
+      "interpretation": "Tesla is prioritising the 'feel' of the AI's perception, but the underlying safety reliance remains firmly on the human driver.",
+      "confidence": 0.8,
+      "source": "Mike Pearl/Gizmodo",
+      "discovered_via": "Techmeme",
+      "source_title": "Tesla rolls out FSD v15, featuring a photorealistic rendering of car surroundings; Elon Musk says it is real-time AI video generation without using game engines (Mike Pearl/Gizmodo)",
+      "url": "https://gizmodo.com/its-like-gta-musk-touts-video-game-like-update-to-tesla-fsd-2000843584",
+      "discovery_url": "https://www.techmeme.com/261122/p4",
+      "link_quality": "original",
+      "published_at": "2026-11-22T06:40:16.000Z",
+      "discovery_score": 7.613
+    }
+  ],
+  "practical_takeaway": "Review your AI infrastructure contracts for repricing clauses and assume that any third-party AI routing service—regardless of its privacy policy—may be logging your API keys. If you are building on these services, rotate your keys frequently and avoid using production-critical credentials in testing.",
+  "watch_next": "Monitor the Irish court proceedings between XTX Markets and Dell, as the outcome could set a precedent for whether hardware vendors can unilaterally reprice signed, fixed-cost contracts.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 082",
+      "title": "Our Family Height Chart",
+      "summary": "Create private family profiles, record dated heights, view a responsive visual history and export the measurements as CSV.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-082/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-082/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-22",
+    "lead_headline": "AI server suppliers demand double-digit price hikes on signed contracts",
+    "facebook_post": "AI server suppliers demand double-digit price hikes on signed contracts\n\nFixed-price infrastructure planning is becoming increasingly difficult for enterprises, as evidenced by XTX Markets suing Dell over a demanded $62M–$70M price increase on a $549M order.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "AI server suppliers demand double-digit price hikes on signed contracts",
+    "pinterest_description": "Fixed-price infrastructure planning is becoming increasingly difficult for enterprises, as evidenced by XTX Markets suing Dell over a demanded $62M–$70M price increase on a $549M order.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "AI server suppliers demand double-digit price hikes on signed contracts. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "AI server suppliers demand double-digit price hikes on signed contracts. Major AI server vendors including Dell, HPE, Lenovo, and Supermicro are demanding price increases of 25% to 45% on hardware orders months after contracts were signed. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "20fa37f8abeca069d7e917584ad8411c92703223f4b33f1c8fd1777403f09ab9"
+}

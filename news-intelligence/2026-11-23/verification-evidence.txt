@@ -1,0 +1,74 @@
+### Summary of Scope & Recommendations
+
+- **Lead Story:** Reinstatement of Jensen Huang as Nvidia CEO, alongside executive branch political involvement, corporate governance updates, and congressional reaction **(Candidates [0], [3], [7], [8], [10], [12], [14])**.
+- **Key Corporate AI News:** SpaceX pivoting to rent data center compute to Anthropic and Google **(Candidate [4])**.
+- **Model & Technical Releases:** Z.ai’s GLM-5.4 Loop Transformer **(Candidate [1])** and OpenAI’s proposed perplexity safety standard **(Candidate [13])**.
+- **Out of Scope / Rejected Candidates:** Candidates **[2]**, **[5]**, **[9]**, and **[15]** are marked OUT OF SCOPE. Candidate **[11]** is an vendor tutorial lacking news value. Research papers **[16]–[19]** are uncorroborated preprints suitable only for background research.
+
+---
+
+### Evidence Notes for In-Scope Candidates
+
+#### **Candidates [0], [3], [7], [8], [10], [12], [14]: Nvidia Board Reinstates Jensen Huang as CEO**
+* **Candidate Numbers:** [0], [3], [7], [8], [10], [12], [14]
+* **What is Confirmed:** 
+  * Nvidia’s Board of Directors announced on Nov 23, 2026, that Jensen Huang has been unanimously reinstated as President, CEO, and Board Director, effective immediately. Interim CEO Colette Kress returns to her role as CFO.
+  * Nvidia's board announced it is creating a new Chief Compliance Officer position reporting directly to the Nominating and Corporate Governance Committee [8].
+  * President Donald Trump publicly confirmed he urged Nvidia’s board to reinstate Huang, stating his administration assured the board Huang posed no national security risk. 
+  * Senate Banking Committee Chairman Tim Scott announced Huang will testify publicly on Dec 3 regarding export control oversight [3]. Bipartisan lawmakers (e.g., Sen. John Cornyn, Leader Chuck Schumer) publicly criticized the reinstatement and demanded tighter congressional scrutiny.
+* **Important Caveats:** 
+  * Details regarding internal administration pressure (e.g., JD Vance leading efforts or Trump dialing directly into board deliberations) rely on NYT and Semafor reporting [7, 14], though Trump’s personal intervention and board contact are on public record via his CNBC interview.
+  * Huang remains subject to multiple active congressional oversight investigations regarding alleged chip diversions and security risks.
+* **Suitable for Publication Today:** **YES** (Recommended lead story cluster).
+
+---
+
+#### **Candidate [4]: SpaceX AI Unit Rents Compute to Competitors Anthropic and Google**
+* **Candidate Number:** [4]
+* **What is Confirmed:** 
+  * A *New York Times* report on Nov 23, 2026, details that SpaceX’s AI infrastructure division (SpaceXSI / Colossus data centers) generates more than half of SpaceX's revenue by leasing GPU capacity to rivals, including Anthropic (~$3.1B/month) and Google (~$800M/month).
+  * Elon Musk communicated to internal teams that SpaceX is falling behind in internal AI model benchmarks, making compute rental more lucrative than internal deployment. SpaceX has disbanded or redirected several internal software AI projects (such as Grok Imagine and AI companions) to prioritize infrastructure revenue.
+* **Important Caveats:** 
+  * Internal employee messages and financial figures for SpaceX are sourced via NYT reporting, though multi-year compute commitments were corroborated in Anthropic’s October 2026 S-1 filing.
+* **Suitable for Publication Today:** **YES**.
+
+---
+
+#### **Candidate [1]: Z.ai Announces GLM-5.4 Built on Loop Transformer Architecture**
+* **Candidate Number:** [1]
+* **What is Confirmed:** 
+  * Z.ai released a blog post on Nov 23, 2026, announcing GLM-5.4, a 750B-parameter model using a "Loop Transformer" architecture where 28 weight-shared layers run for two iterations per forward pass.
+* **Important Caveats:** 
+  * Model weights have not been released publicly (pending safety hardening).
+  * Z.ai did not publish standard benchmark cards or independent evaluations alongside the announcement; claims that looping allows the 750B model to reach performance comparable to 2T–3T parameter models remain vendor claims.
+* **Suitable for Publication Today:** **YES** (Cover as a technical release claim).
+
+---
+
+#### **Candidate [13]: OpenAI Proposes Industry Pacing Limits Tied to "Perplexity" Metric**
+* **Candidate Number:** [13]
+* **What is Confirmed:** 
+  * OpenAI Chief Scientist Jakub Pachocki published a blog post on Nov 22, 2026, presenting historical held-out log-perplexity curves from GPT-3.5 through frontier models.
+  * OpenAI proposed that frontier AI labs adopt log-perplexity as a standardized metric for measuring pretraining intelligence and establish voluntary industry pacing thresholds that labs agree not to cross until AI monitoring capabilities reach defined milestones.
+* **Important Caveats:** 
+  * This is an policy/safety proposal, not a binding cross-lab agreement or government regulation.
+  * Perplexity evaluations reflect OpenAI's internal held-out datasets and cannot easily be compared across different lab pretraining corpora.
+* **Suitable for Publication Today:** **YES**.
+
+---
+
+#### **Candidate [6]: Spelunkr.tv Built from Internet Archive Videos**
+* **Candidate Number:** [6]
+* **What is Confirmed:** 
+  * Spelunkr.tv is a browser-based web application that streams synchronized, 24/7 retro cable channels using digitized VHS footage stored on the Internet Archive.
+* **Important Caveats:** 
+  * Indie side-project / digital culture showcase rather than an enterprise business or technical breakthrough.
+* **Suitable for Publication Today:** **YES** (Suitable as a minor "digital culture / side project" brief).
+
+---
+
+### Unsuitable or Non-Recommended Candidates
+
+* **Candidate [11] (Guide to Local AI / gpupartner.com):** **NO.** Vendor instructional blog post detailing desktop setup with Unsloth. Lacks breaking news or research value.
+* **Candidates [16]–[19] (Hugging Face Papers):** **NO.** arXiv preprints containing theoretical/experimental claims made solely by the authors [16, 17, 18, 19]. Retain for technical background only unless independently replicated.
+* **Candidates [2], [5], [9], [15]:** **EXCLUDED.** Outside Sapiver Forge editorial scope.

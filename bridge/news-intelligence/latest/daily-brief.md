@@ -1,54 +1,54 @@
 # Sapiver Forge Daily Brief
 
-Today's briefing covers the rising cost of AI infrastructure, the ongoing shadow war for semiconductor dominance, and the persistent security gaps in the AI supply chain.
+Today, we look at the extraordinary political theatre surrounding Nvidia's leadership, SpaceX's pivot to infrastructure landlord, and a new proposal for how we might actually measure AI progress.
 
-## 1. AI server suppliers demand double-digit price hikes on signed contracts
+## 1. Jensen Huang Reinstated as Nvidia CEO Following Presidential Intervention
 
-**Confirmed:** Major AI server vendors including Dell, HPE, Lenovo, and Supermicro are demanding price increases of 25% to 45% on hardware orders months after contracts were signed. The hikes are attributed to a 400% increase in memory component costs since early 2024.
+**Confirmed:** Nvidia’s board unanimously reinstated Jensen Huang as CEO on November 23, 2026, following direct communication from President Donald Trump. The company is now creating a Chief Compliance Officer role to report to its governance committee.
 
-**Why it matters:** Fixed-price infrastructure planning is becoming increasingly difficult for enterprises, as evidenced by XTX Markets suing Dell over a demanded $62M–$70M price increase on a $549M order.
+**Why it matters:** The move highlights the intense intersection of corporate governance, national security, and political pressure. With Huang set to testify before the Senate Banking Committee on December 3, the company faces significant ongoing scrutiny regarding export controls.
 
-**Sapiver Forge interpretation:** Hardware OEMs are passing the volatility of the memory market directly to customers, effectively shifting the risk of supply chain inflation onto the buyer after the deal is done.
+**Sapiver Forge interpretation:** The board's decision to create a new compliance role suggests an attempt to formalise oversight in response to intense bipartisan criticism, though the direct involvement of the White House in a private company's leadership shuffle is highly unusual.
 
-**Source:** [Financial Times](https://www.ft.com/content/dd2a6594-6146-4ff1-ac8e-54749c1fc99f) · discovered via Techmeme · confidence 95%
+**Source:** [cnbc.com](https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html) · discovered via Hacker News · confidence 95%
 
-## 2. Intelligence officials detail Chinese state-backed chip acquisition campaign
+## 2. SpaceX Pivots to Compute Rental as AI Internal Efforts Stall
 
-**Confirmed:** US, Asian, and European intelligence officials report that China’s Ministry of State Security established a specialized working group to circumvent US export restrictions and acquire advanced Nvidia AI chips. The Chinese Ministry of Foreign Affairs has denied these espionage allegations.
+**Confirmed:** SpaceX is generating over half its revenue by leasing GPU capacity from its Colossus data centers to competitors, including Anthropic and Google. The company has reportedly disbanded or redirected several internal AI software projects.
 
-**Why it matters:** The campaign highlights the extreme lengths state actors are going to in order to bypass Western semiconductor export controls, complicating the global supply chain for high-end AI hardware.
+**Why it matters:** It is a rare admission that the infrastructure business is currently more lucrative than the product business. For SpaceX, the shift suggests that the immediate returns from selling compute to rivals outweigh the current progress of their own internal AI development.
 
-**Sapiver Forge interpretation:** The persistence of these efforts suggests that export controls are creating a high-stakes black market, with intelligence agencies acting as facilitators for industrial acquisition.
+**Sapiver Forge interpretation:** When a company decides it is more profitable to be the landlord than the tenant, it is a clear signal that the internal AI roadmap has hit a wall.
 
-**Source:** [New York Times](https://www.nytimes.com/2026/11/21/world/asia/china-nvidia-spy-chips-state-security.html?unlocked_article_code=1.SVE.6AIw.4HHCTzFjtDId&smid=url-share) · discovered via Techmeme · confidence 90%
+**Source:** [New York Times](https://www.nytimes.com/2026/11/23/business/elon-musk-ai-anthropic-google.html?unlocked_article_code=1.SlE.aCYC.YU6IyUKPOOHb&smid=url-share) · discovered via Techmeme · confidence 85%
 
-## 3. Security researchers find API keys leaked by AI routing services
+## 3. OpenAI Proposes Standardised 'Perplexity' Metric for Industry Pacing
 
-**Confirmed:** A study using 2 million canary tokens found that sensitive API keys and request payloads were repeatedly logged and stored by multi-tenant AI routing services, even when those services advertised 'Zero Data Retention' policies.
+**Confirmed:** OpenAI has proposed that frontier AI labs adopt log-perplexity as a standardized metric to measure pretraining intelligence and establish voluntary thresholds for development.
 
-**Why it matters:** The findings indicate that 'Zero Data Retention' claims are often undermined by downstream infrastructure logging and third-party API pipeline leaks, leaving developer credentials exposed.
+**Why it matters:** Standardising how we measure 'intelligence' is notoriously difficult. While this proposal aims to create a shared language for safety, it remains a voluntary framework that does not account for the vast differences in pretraining data across labs.
 
-**Sapiver Forge interpretation:** Privacy could support in the AI supply chain are currently more aspirational than architectural; developers should treat these routing services as inherently leaky.
+**Sapiver Forge interpretation:** It is a clever attempt to set the rules of the game, but until labs agree on how to compare metrics across different datasets, it remains a proposal rather than a solution.
 
-**Source:** [Dan Goodin/Ars Technica](https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/) · discovered via Techmeme · confidence 85%
+**Source:** [openai.com](https://openai.com/index/perplexity-and-intelligence/) · discovered via Hacker News · confidence 80%
 
-## 4. Tesla releases FSD v15 with 'Tesla Reality View'
+## 4. Z.ai Announces 'Loop Transformer' Architecture
 
-**Confirmed:** Tesla has begun rolling out FSD v15, which introduces a 3D visualization system generated in real time from camera feeds. The system remains a Level 2 'Supervised' driver-assist feature requiring constant human attention.
+**Confirmed:** Z.ai has announced GLM-5.4, a 750B-parameter model that uses a 'Loop Transformer' architecture, where 28 weight-shared layers run for two iterations per forward pass.
 
-**Why it matters:** While the visualization is a technical shift from traditional game-engine rendering, Tesla's internal safety claims lack independent audit, and the system remains a driver-assist tool, not an autonomous one.
+**Why it matters:** Z.ai claims this architecture allows a 750B model to match the performance of 2T–3T parameter models. However, these are currently vendor claims without independent benchmark data or public model weights.
 
-**Sapiver Forge interpretation:** Tesla is prioritising the 'feel' of the AI's perception, but the underlying safety reliance remains firmly on the human driver.
+**Sapiver Forge interpretation:** Efficiency gains are always welcome, but until we see independent evaluations, this is a technical claim that requires a healthy dose of scepticism.
 
-**Source:** [Mike Pearl/Gizmodo](https://gizmodo.com/its-like-gta-musk-touts-video-game-like-update-to-tesla-fsd-2000843584) · discovered via Techmeme · confidence 80%
+**Source:** [z.ai](https://z.ai/blog/glm-5.4) · discovered via Hacker News · confidence 75%
 
 ## Practical takeaway
 
-Review your AI infrastructure contracts for repricing clauses and assume that any third-party AI routing service—regardless of its privacy policy—may be logging your API keys. If you are building on these services, rotate your keys frequently and avoid using production-critical credentials in testing.
+For business leaders, the current climate suggests that infrastructure capacity is a more reliable revenue stream than speculative AI product development. If you are evaluating AI vendors, look past the marketing claims—especially when benchmarks are internal or unverified—and prioritise transparency in how those models are actually tested.
 
 ## What to watch next
 
-Monitor the Irish court proceedings between XTX Markets and Dell, as the outcome could set a precedent for whether hardware vendors can unilaterally reprice signed, fixed-cost contracts.
+Keep an eye on the Senate Banking Committee hearing on December 3, as Jensen Huang's testimony will likely clarify how Nvidia plans to navigate the tension between its export obligations and its leadership structure.
 
 ---
 

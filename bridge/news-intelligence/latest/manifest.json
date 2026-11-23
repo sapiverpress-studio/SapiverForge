@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-11-22",
-  "generated_at": "2026-11-22T14:31:24.977Z",
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T17:59:09.805Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 178,
+      "elapsed_ms": 611,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,14 +23,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 142,
+      "elapsed_ms": 321,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 361,
+      "elapsed_ms": 596,
       "collection_mode": "api",
       "original_link_count": 10
     },
@@ -38,7 +38,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 226,
+      "elapsed_ms": 257,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1258,
+      "elapsed_ms": 1927,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -59,76 +59,76 @@
     "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
   ],
   "release_blockers": [],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-22",
-  "overall_confidence": 0.875,
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-23",
+  "overall_confidence": 0.85,
   "stories": [
     {
-      "category": "business",
-      "headline": "AI server suppliers demand double-digit price hikes on signed contracts",
-      "confirmed_fact": "Major AI server vendors including Dell, HPE, Lenovo, and Supermicro are demanding price increases of 25% to 45% on hardware orders months after contracts were signed. The hikes are attributed to a 400% increase in memory component costs since early 2024.",
-      "why_it_matters": "Fixed-price infrastructure planning is becoming increasingly difficult for enterprises, as evidenced by XTX Markets suing Dell over a demanded $62M–$70M price increase on a $549M order.",
-      "interpretation": "Hardware OEMs are passing the volatility of the memory market directly to customers, effectively shifting the risk of supply chain inflation onto the buyer after the deal is done.",
+      "category": "lead",
+      "headline": "Jensen Huang Reinstated as Nvidia CEO Following Presidential Intervention",
+      "confirmed_fact": "Nvidia’s board unanimously reinstated Jensen Huang as CEO on November 23, 2026, following direct communication from President Donald Trump. The company is now creating a Chief Compliance Officer role to report to its governance committee.",
+      "why_it_matters": "The move highlights the intense intersection of corporate governance, national security, and political pressure. With Huang set to testify before the Senate Banking Committee on December 3, the company faces significant ongoing scrutiny regarding export controls.",
+      "interpretation": "The board's decision to create a new compliance role suggests an attempt to formalise oversight in response to intense bipartisan criticism, though the direct involvement of the White House in a private company's leadership shuffle is highly unusual.",
       "confidence": 0.95,
-      "source": "Financial Times",
-      "discovered_via": "Techmeme",
-      "source_title": "Sources: AI server suppliers like Dell, HPE, Lenovo, and Supermicro are demanding substantially higher prices from buyers, months after contracts were signed (Financial Times)",
-      "url": "https://www.ft.com/content/dd2a6594-6146-4ff1-ac8e-54749c1fc99f",
-      "discovery_url": "https://www.techmeme.com/261122/p2",
+      "source": "cnbc.com",
+      "discovered_via": "Hacker News",
+      "source_title": "Nvidia Reinstates Jensen Huang as CEO",
+      "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+      "discovery_url": "https://news.ycombinator.com/item?id=50611576",
       "link_quality": "original",
-      "published_at": "2026-11-22T05:50:01.000Z",
-      "discovery_score": 7.418
+      "published_at": "2026-11-23T14:00:18.000Z",
+      "discovery_score": 8.605
     },
     {
-      "category": "technology",
-      "headline": "Intelligence officials detail Chinese state-backed chip acquisition campaign",
-      "confirmed_fact": "US, Asian, and European intelligence officials report that China’s Ministry of State Security established a specialized working group to circumvent US export restrictions and acquire advanced Nvidia AI chips. The Chinese Ministry of Foreign Affairs has denied these espionage allegations.",
-      "why_it_matters": "The campaign highlights the extreme lengths state actors are going to in order to bypass Western semiconductor export controls, complicating the global supply chain for high-end AI hardware.",
-      "interpretation": "The persistence of these efforts suggests that export controls are creating a high-stakes black market, with intelligence agencies acting as facilitators for industrial acquisition.",
-      "confidence": 0.9,
+      "category": "business",
+      "headline": "SpaceX Pivots to Compute Rental as AI Internal Efforts Stall",
+      "confirmed_fact": "SpaceX is generating over half its revenue by leasing GPU capacity from its Colossus data centers to competitors, including Anthropic and Google. The company has reportedly disbanded or redirected several internal AI software projects.",
+      "why_it_matters": "It is a rare admission that the infrastructure business is currently more lucrative than the product business. For SpaceX, the shift suggests that the immediate returns from selling compute to rivals outweigh the current progress of their own internal AI development.",
+      "interpretation": "When a company decides it is more profitable to be the landlord than the tenant, it is a clear signal that the internal AI roadmap has hit a wall.",
+      "confidence": 0.85,
       "source": "New York Times",
       "discovered_via": "Techmeme",
-      "source_title": "Current and former officials from the US and other countries describe the Chinese spy agency MSS' campaign to help Chinese companies acquire advanced AI chips (New York Times)",
-      "url": "https://www.nytimes.com/2026/11/21/world/asia/china-nvidia-spy-chips-state-security.html?unlocked_article_code=1.SVE.6AIw.4HHCTzFjtDId&smid=url-share",
-      "discovery_url": "https://www.techmeme.com/261122/p5",
+      "source_title": "Sources: Musk has told employees SpaceX is falling behind in AI, making it more lucrative to rent out computing than use it to improve SpaceX's own products (New York Times)",
+      "url": "https://www.nytimes.com/2026/11/23/business/elon-musk-ai-anthropic-google.html?unlocked_article_code=1.SlE.aCYC.YU6IyUKPOOHb&smid=url-share",
+      "discovery_url": "https://www.techmeme.com/261123/p31",
       "link_quality": "original",
-      "published_at": "2026-11-22T07:00:41.000Z",
-      "discovery_score": 7.708
+      "published_at": "2026-11-23T17:35:00.000Z",
+      "discovery_score": 8.004
     },
     {
-      "category": "developer",
-      "headline": "Security researchers find API keys leaked by AI routing services",
-      "confirmed_fact": "A study using 2 million canary tokens found that sensitive API keys and request payloads were repeatedly logged and stored by multi-tenant AI routing services, even when those services advertised 'Zero Data Retention' policies.",
-      "why_it_matters": "The findings indicate that 'Zero Data Retention' claims are often undermined by downstream infrastructure logging and third-party API pipeline leaks, leaving developer credentials exposed.",
-      "interpretation": "Privacy could support in the AI supply chain are currently more aspirational than architectural; developers should treat these routing services as inherently leaky.",
-      "confidence": 0.85,
-      "source": "Dan Goodin/Ars Technica",
-      "discovered_via": "Techmeme",
-      "source_title": "Researchers used canary credentials in requests to AI routers like OpenRouter and Vercel, even under \"ZDR\" policies, and saw \"privacy\" often broken, keys stolen (Dan Goodin/Ars Technica)",
-      "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
-      "discovery_url": "https://www.techmeme.com/261121/p10",
+      "category": "research",
+      "headline": "OpenAI Proposes Standardised 'Perplexity' Metric for Industry Pacing",
+      "confirmed_fact": "OpenAI has proposed that frontier AI labs adopt log-perplexity as a standardized metric to measure pretraining intelligence and establish voluntary thresholds for development.",
+      "why_it_matters": "Standardising how we measure 'intelligence' is notoriously difficult. While this proposal aims to create a shared language for safety, it remains a voluntary framework that does not account for the vast differences in pretraining data across labs.",
+      "interpretation": "It is a clever attempt to set the rules of the game, but until labs agree on how to compare metrics across different datasets, it remains a proposal rather than a solution.",
+      "confidence": 0.8,
+      "source": "openai.com",
+      "discovered_via": "Hacker News",
+      "source_title": "Perplexity and Intelligence",
+      "url": "https://openai.com/index/perplexity-and-intelligence/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50601525",
       "link_quality": "original",
-      "published_at": "2026-11-21T20:10:02.000Z",
-      "discovery_score": 6.776
+      "published_at": "2026-11-22T17:06:27.000Z",
+      "discovery_score": 7.494
     },
     {
       "category": "ai",
-      "headline": "Tesla releases FSD v15 with 'Tesla Reality View'",
-      "confirmed_fact": "Tesla has begun rolling out FSD v15, which introduces a 3D visualization system generated in real time from camera feeds. The system remains a Level 2 'Supervised' driver-assist feature requiring constant human attention.",
-      "why_it_matters": "While the visualization is a technical shift from traditional game-engine rendering, Tesla's internal safety claims lack independent audit, and the system remains a driver-assist tool, not an autonomous one.",
-      "interpretation": "Tesla is prioritising the 'feel' of the AI's perception, but the underlying safety reliance remains firmly on the human driver.",
-      "confidence": 0.8,
-      "source": "Mike Pearl/Gizmodo",
-      "discovered_via": "Techmeme",
-      "source_title": "Tesla rolls out FSD v15, featuring a photorealistic rendering of car surroundings; Elon Musk says it is real-time AI video generation without using game engines (Mike Pearl/Gizmodo)",
-      "url": "https://gizmodo.com/its-like-gta-musk-touts-video-game-like-update-to-tesla-fsd-2000843584",
-      "discovery_url": "https://www.techmeme.com/261122/p4",
+      "headline": "Z.ai Announces 'Loop Transformer' Architecture",
+      "confirmed_fact": "Z.ai has announced GLM-5.4, a 750B-parameter model that uses a 'Loop Transformer' architecture, where 28 weight-shared layers run for two iterations per forward pass.",
+      "why_it_matters": "Z.ai claims this architecture allows a 750B model to match the performance of 2T–3T parameter models. However, these are currently vendor claims without independent benchmark data or public model weights.",
+      "interpretation": "Efficiency gains are always welcome, but until we see independent evaluations, this is a technical claim that requires a healthy dose of scepticism.",
+      "confidence": 0.75,
+      "source": "z.ai",
+      "discovered_via": "Hacker News",
+      "source_title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+      "url": "https://z.ai/blog/glm-5.4",
+      "discovery_url": "https://news.ycombinator.com/item?id=50609685",
       "link_quality": "original",
-      "published_at": "2026-11-22T06:40:16.000Z",
-      "discovery_score": 7.613
+      "published_at": "2026-11-23T10:06:43.000Z",
+      "discovery_score": 8.362
     }
   ],
-  "practical_takeaway": "Review your AI infrastructure contracts for repricing clauses and assume that any third-party AI routing service—regardless of its privacy policy—may be logging your API keys. If you are building on these services, rotate your keys frequently and avoid using production-critical credentials in testing.",
-  "watch_next": "Monitor the Irish court proceedings between XTX Markets and Dell, as the outcome could set a precedent for whether hardware vendors can unilaterally reprice signed, fixed-cost contracts.",
+  "practical_takeaway": "For business leaders, the current climate suggests that infrastructure capacity is a more reliable revenue stream than speculative AI product development. If you are evaluating AI vendors, look past the marketing claims—especially when benchmarks are internal or unverified—and prioritise transparency in how those models are actually tested.",
+  "watch_next": "Keep an eye on the Senate Banking Committee hearing on December 3, as Jensen Huang's testimony will likely clarify how Nvidia plans to navigate the tension between its export obligations and its leadership structure.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -137,21 +137,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 082",
-      "title": "Our Family Height Chart",
-      "summary": "Create private family profiles, record dated heights, view a responsive visual history and export the measurements as CSV.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-082/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-082/poster.png"
+      "label": "AI Inquisitive Parents · Day 083",
+      "title": "My Trace & Draw Studio",
+      "summary": "Trace five colourful paths with touch, mouse or stylus, adjust the challenge width, receive kind closeness-and-coverage feedback and keep a private local score history.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-083/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-083/poster.png"
     }
   },
   "social": {
-    "date": "2026-11-22",
-    "lead_headline": "AI server suppliers demand double-digit price hikes on signed contracts",
-    "facebook_post": "AI server suppliers demand double-digit price hikes on signed contracts\n\nFixed-price infrastructure planning is becoming increasingly difficult for enterprises, as evidenced by XTX Markets suing Dell over a demanded $62M–$70M price increase on a $549M order.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "AI server suppliers demand double-digit price hikes on signed contracts",
-    "pinterest_description": "Fixed-price infrastructure planning is becoming increasingly difficult for enterprises, as evidenced by XTX Markets suing Dell over a demanded $62M–$70M price increase on a $549M order.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "AI server suppliers demand double-digit price hikes on signed contracts. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "AI server suppliers demand double-digit price hikes on signed contracts. Major AI server vendors including Dell, HPE, Lenovo, and Supermicro are demanding price increases of 25% to 45% on hardware orders months after contracts were signed. Read the Sapiver Forge Daily Brief."
+    "date": "2026-11-23",
+    "lead_headline": "Jensen Huang Reinstated as Nvidia CEO Following Presidential Intervention",
+    "facebook_post": "Jensen Huang Reinstated as Nvidia CEO Following Presidential Intervention\n\nThe move highlights the intense intersection of corporate governance, national security, and political pressure. With Huang set to testify before the Senate Banking Committee on December 3, the company faces significant ongoing scrutiny regarding export controls.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Jensen Huang Reinstated as Nvidia CEO Following Presidential Intervention",
+    "pinterest_description": "The move highlights the intense intersection of corporate governance, national security, and political pressure. With Huang set to testify before the Senate Banking Committee on December 3, the company faces significant ongoing scrutiny regarding export controls.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Jensen Huang Reinstated as Nvidia CEO Following Presidential Intervention. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Jensen Huang Reinstated as Nvidia CEO Following Presidential Intervention. Nvidia’s board unanimously reinstated Jensen Huang as CEO on November 23, 2026, following direct communication from President Donald Trump. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "20fa37f8abeca069d7e917584ad8411c92703223f4b33f1c8fd1777403f09ab9"
+  "candidate_id": "cd45dd5d232b7b934e2cc46f07f79a25690924f636d7dc6aa77d2eb010c34dde"
 }

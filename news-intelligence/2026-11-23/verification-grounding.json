@@ -1,0 +1,376 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22gpupartner.com%22+%22Inkling,+Qwen,+and+Unsloth%22&client=app-vertex-grounding&safesearch=active\">&quot;gpupartner.com&quot; &quot;Inkling, Qwen, and Unsloth&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=SpaceX+Musk+renting+out+computing+Anthropic+AI+NYT+2026&client=app-vertex-grounding&safesearch=active\">SpaceX Musk renting out computing Anthropic AI NYT 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Nvidia+reinstates+Jensen+Huang+CEO+2026&client=app-vertex-grounding&safesearch=active\">Nvidia reinstates Jensen Huang CEO 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=GLM+5.4+Loop+Transformer+z+ai&client=app-vertex-grounding&safesearch=active\">GLM 5.4 Loop Transformer z ai</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22spelunkr.tv%22+internet+archive&client=app-vertex-grounding&safesearch=active\">&quot;spelunkr.tv&quot; internet archive</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=OpenAI+Perplexity+and+Intelligence&client=app-vertex-grounding&safesearch=active\">OpenAI Perplexity and Intelligence</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSswziKXnLe8wWP5IBSn0CQk9w0zl7tFV_3i7tB1Afq6R5OuqrhLI5h-BjnCSYbE8NzGH6w_tR09oDQGI4hJYEdnWAUXZqiF4qTD02ytW3rkOJwXqYYsnILPU0OPU-dQWUWIMWm1aoUHDdMxhWEmUKLPiS1zYL2PoM0nkbh9mq-HXCudAkMSqahrvhCY2mJvCMc-bm8aSjvVVSXJPOllgkiQ==",
+        "title": "nvidia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwCzH3vtfI6_gx07mNnhoE7a1EsSRE4CnR46E7IoiHmqK_CdfV3rUEoeSERJ3NhIQoWEzX_VUSk2v_5qfE6NmP_9dHJIU7h0qXADs5453xLeXQ7gmuQrpQSqMlpHvA4z94o15-mUAbenYJF70-GYe1UgeQLocv4Roll753RNBO6UUGWKsgc5cZUA23lVdFIIrSXfcZNKBv-rSm2MPZKr_6Pls-Vn5p9cMN1hk5iFCNGsZDvVSgcwM=",
+        "title": "forbes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFLfUV6fAKqo04TVWwetGLy_q_S7DBxHusIUs7RFNAjU7QJ8J6SAX9xa5Rs79KUvAsOlJ4ESY1aBkCzrcogFyFJaEIrkaM40udlhjvo9U4tyx_Jtgr_fYVWxJIB2LK_op3hdYlNFof9VJsWcAwxDUbFUvSgaktlQQxTu7ijECzoqfJsPfiOjeGet-lh4il-_ZmbMt1-RworjDlTFQYXFJjsXuU1Y14jpcoKV-yvXTS",
+        "title": "washingtonpost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOFBF_lUl7mhjUOTJ-xoIEPbnen54sn5YigNrnSBSs9l0373QU8t4HuOLEtYoEFdjUsAUG90K_Ud-B-PSN1O91zLV2xbV3SiQCMEJVXdruhP9Ksja3rn2iz62M_SF-EEIyw6bKIF-wXjf56J_uH2NRYcvkB39TUqGnvb3g-H9OuLYwHQkIRnlYsVsnD5v5tdexqg8XeAFFtd45e169mA==",
+        "title": "pbs.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJR1JAY5iXe5NaC0cUsUV7Bh3VwWQHhy6W2Y21l0Em1LfWy1-dIFfR9wBzKP1OlrENia3Qm9vsCn4W-okQPc1FQsFsXnRTVgGRgZaS-cOJ3W6DHOUpclkhfL3cPemhYhs17RH3i658LtDOHgEIiZ2Id99QKtsR-piTniqo1cEOCDd4HjgR",
+        "title": "latimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFY9uFs8-i7HYeT_8x9H8PbtxBkqOF0yKUT32jHIfbGDfTUy5Q3rrQNQpnrVIZij5JghtgKsSFULOwhhumncCaYuyPLSVbgXrQPyHL9gn5ZVZ0l37K1gvT_zxrGdmEN1dGxrV5_NdL6EnzyI8MmHWHZHKspyX7OCuiM",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHROIqScbMlN2hDCdiQN_amKqT2lbPiD0j1FcoXiPLwvN2uHfW3xlibdecqbv4YUvlA_ZEeLenx6s8MWjI2prG1Lw8-NIPZmkGl7acrcrYuSEvHFZCE5-1i98GeYBabvjdNhGkL4i6-nv8Z-RoAjdCCfKovPDpcHB1N7Fs2NiLUUdk8y2_QGls_CMLaDc_RLMFyo_uqejSRmVou1lOdLoxNArA84924h75xQ8hY3g==",
+        "title": "investing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqYM10vO9EuJ_gBEfEzItu0xuF6JDB7PzTlwoBxVS3GSPENuK7kMqNuadzx2NaTwdeUpINPZ3gszKj-gnm1m4l2LcDccbZXClPof7sNrX6v-4qIcUGSZuqBE9wCa4Qpo0Lq8zGXhBGzXpEkquHdyF4QLEAGtFbCjNllvVcDTGTjirvSWWyk6EvUBczdiRZkel_V22DGivlIVeijLPPfqz3kYEPSxPa4GJhZDUYZsQxifmZgUsKhnKvelmI",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU5ycW23cu3gUMxnXErgnFkqdtQkYFMprMn5ak8WOHdmh-lsbo5HUSAOWuPGVIizSOQ66j1dAro7FMPzMabvJsNGFbyBeo4R521q3KhWt0",
+        "title": "z.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyFZ1hCQNRdJJdXkzTGMiyMiV4KVkDC6sEUxsjvirj-JH__W8pyxCaf5QH4E_T-9jpxM6dT5u_6efaKDAV3VjQVN7CQZ8qfxiKNwIHL2ZxButvMr0Y7fdVMEMY",
+        "title": "datacamp.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQS43xo_D80PodXjN2YxSO7CsJMMvCTAH_3cMjz1_1LXPjitDHgAkC_4Utyg10aAyNyih8wldZmcG7I5e_j_gznlTp1cNDAj06buL-2dymF78SYwH8WRfA_hHEkOmpGRKNZwM1K-EBX01_xZAJeZC0jVpUKhWcHLcB-YCQSFj0OBbzknocSuYUtQrLApYUetUTj32aIAA=",
+        "title": "dev.to"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9uI13veJrdvFh59LpNqmgCdLYnVe71m2hUteYfSxQU5YCKwvv63vyH_64FITm4hK-KGBUQTJxaRFzsmKRkAJ8mAe_CoZ0ShoqXlJS1QnxvpZx6nBybHl9mSq1FuPk-rkP20FnsBxNAR6fASsOmWqwNJczxjXCMrSxOabHp7UyOqLqTcKq1MJ1MJAjQ7ImKNlvWFxdZPVQS3ryul0=",
+        "title": "techcrunch.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKY7w8SkxDg1pqsAZisIBLewPamkytKqdraM0l6rY5oxgiJcqecG2Cp9SolYKDhAjyrNx-h0wmktZ4HXRdf7wrDI_OVau_yICJ_bLdhVJThoGsMPHyWWpT6VScy3iUIyXGVaIRZoQFzFys9ULGaK-2iUYCdK12Gi1E4iN07v-XxrpTQYpzOCzAjLk6KakAliRtxQ==",
+        "title": "explainx.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiEEbPcFxAFLuYjy_TbtTFK17uh65p_qBTAZ3HcAanGH3xGtXEXtprLBXQcQW4fpwE1uMLdDZcBgkIAWA3nZJ5JMslJpJZ3VkXDNw-NrEddyRZMRGh0XTXCzLu0NauW14AwfQU-Klk0FAQ08tqar6L7J-2O_e1uVDqEp3VNe7szhXHl8bZMS1sk-NMDdNNMLjhuD4q1mQ=",
+        "title": "seekingalpha.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZK68qmRr0QKgu9glC3jmOyeshkVJXGvAqnftaKlWd9yswEEHJ0CdT8SnX84vcOtvpcsjVUoGJ6Hd7JsfURrBUP3dGQ2n51ufGH70CwdYMwwa4dgRML4PzZVM4dS76qDw47XU=",
+        "title": "ycombinator.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5FW41tQfiRtlDCjQTO347qBArfO6YZ8cvppjjZxiqVkzXWNiHylVf1nyYNOj_1BNc4w6AvzvdzfU4TZyg8g36GKxsi1HWsdynNRr2Xa8WuiOyc0-gdrUEW5VNVsi6S-ZJLqyJuBbyY52hetCVzwRw2uADY6KClQscmlRa0gWNHNdSfSQtbA==",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrKHxZc5BOfKk27cTrfy0iT_8ChMPLJjuRMDfbU5DryNDkvbHr7ZCaT9HJGzy6lPTyLL1eVn-jeMi3rhzkoxijJ_omyMVHAM1zd3SPua0zm6fw3sKnMNr5iJLy3besdAFV36d22EKPPwFPVlCNd9w0KC3aT7MwJESxrA6bBiqvLIiqO6l04Mi7bm7k5BfVuHLxrl1V-X0wZ2ZfCxHu5XzRwKFiOkBo",
+        "title": "daily.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGZQ4ijzmhKicGDcviRBj51HENQk2Eq79fN684CSZCO8FWqsXkZ1io_SbX3uqYvSXJ1bujBgDgSEwI3r7rEHdV7agkXBVurqGeFpB8N3RyYVPTOhnRgcl8zXpQiVYE0CI=",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7gHGqFInCotQE8eS4_uOlKdEJHeF9fh6DJ7EmY2qvrO-iOzujgqfF6bNqw10mX2f6Yu1953vlfGJek3_WvV-FPYPhunfa4ufR72Q9Wz8S6Yq1VCG-OYviGuO0GhLT41J81q1uL9fXyvhWNdGf9kMODWMKAZ3BXF0FJlmZ_1-FmJislw==",
+        "title": "gpupartner.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 1067,
+        "endIndex": 1234,
+        "text": "Nvidia’s Board of Directors announced on Nov 23, 2026, that Jensen Huang has been unanimously reinstated as President, CEO, and Board Director, effective immediately"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1236,
+        "endIndex": 1288,
+        "text": "Interim CEO Colette Kress returns to her role as CFO"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1455,
+        "endIndex": 1541,
+        "text": "President Donald Trump publicly confirmed he urged Nvidia’s board to reinstate Huang"
+      },
+      "groundingChunkIndices": [
+        1,
+        2
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1455,
+        "endIndex": 1625,
+        "text": "President Donald Trump publicly confirmed he urged Nvidia’s board to reinstate Huang, stating his administration assured the board Huang posed no national security risk"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1763,
+        "endIndex": 1912,
+        "text": "Bipartisan lawmakers (e.g., Sen. John Cornyn, Leader Chuck Schumer) publicly criticized the reinstatement and demanded tighter congressional scrutiny"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1944,
+        "endIndex": 2222,
+        "text": "Details regarding internal administration pressure (e.g., JD Vance leading efforts or Trump dialing directly into board deliberations) rely on NYT and Semafor reporting [7, 14], though Trump’s personal intervention and board contact are on public record via his CNBC interview"
+      },
+      "groundingChunkIndices": [
+        1,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2228,
+        "endIndex": 2360,
+        "text": "Huang remains subject to multiple active congressional oversight investigations regarding alleged chip diversions and security risks"
+      },
+      "groundingChunkIndices": [
+        1,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2595,
+        "endIndex": 2864,
+        "text": "A *New York Times* report on Nov 23, 2026, details that SpaceX’s AI infrastructure division (SpaceXSI / Colossus data centers) generates more than half of SpaceX's revenue by leasing GPU capacity to rivals, including Anthropic (~$3.1B/month) and Google (~$800M/month)"
+      },
+      "groundingChunkIndices": [
+        5,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2870,
+        "endIndex": 3035,
+        "text": "Elon Musk communicated to internal teams that SpaceX is falling behind in internal AI model benchmarks, making compute rental more lucrative than internal deployment"
+      },
+      "groundingChunkIndices": [
+        5,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3037,
+        "endIndex": 3187,
+        "text": "SpaceX has disbanded or redirected several internal software AI projects (such as Grok Imagine and AI companions) to prioritize infrastructure revenue"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3219,
+        "endIndex": 3308,
+        "text": "Internal employee messages and financial figures for SpaceX are sourced via NYT reporting"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3219,
+        "endIndex": 3406,
+        "text": "Internal employee messages and financial figures for SpaceX are sourced via NYT reporting, though multi-year compute commitments were corroborated in Anthropic’s October 2026 S-1 filing"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3605,
+        "endIndex": 3800,
+        "text": "Z.ai released a blog post on Nov 23, 2026, announcing GLM-5.4, a 750B-parameter model using a \"Loop Transformer\" architecture where 28 weight-shared layers run for two iterations per forward pass"
+      },
+      "groundingChunkIndices": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3832,
+        "endIndex": 3904,
+        "text": "Model weights have not been released publicly (pending safety hardening)"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3910,
+        "endIndex": 4009,
+        "text": "Z.ai did not publish standard benchmark cards or independent evaluations alongside the announcement"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3910,
+        "endIndex": 4133,
+        "text": "Z.ai did not publish standard benchmark cards or independent evaluations alongside the announcement; claims that looping allows the 750B model to reach performance comparable to 2T–3T parameter models remain vendor claims"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4376,
+        "endIndex": 4542,
+        "text": "OpenAI Chief Scientist Jakub Pachocki published a blog post on Nov 22, 2026, presenting historical held-out log-perplexity curves from GPT-3.5 through frontier models"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4548,
+        "endIndex": 4808,
+        "text": "OpenAI proposed that frontier AI labs adopt log-perplexity as a standardized metric for measuring pretraining intelligence and establish voluntary industry pacing thresholds that labs agree not to cross until AI monitoring capabilities reach defined milestones"
+      },
+      "groundingChunkIndices": [
+        11,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4840,
+        "endIndex": 4933,
+        "text": "This is an policy/safety proposal, not a binding cross-lab agreement or government regulation"
+      },
+      "groundingChunkIndices": [
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4939,
+        "endIndex": 5076,
+        "text": "Perplexity evaluations reflect OpenAI's internal held-out datasets and cannot easily be compared across different lab pretraining corpora"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5260,
+        "endIndex": 5418,
+        "text": "Spelunkr.tv is a browser-based web application that streams synchronized, 24/7 retro cable channels using digitized VHS footage stored on the Internet Archive"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5450,
+        "endIndex": 5556,
+        "text": "Indie side-project / digital culture showcase rather than an enterprise business or technical breakthrough"
+      },
+      "groundingChunkIndices": [
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5785,
+        "endIndex": 5852,
+        "text": "Vendor instructional blog post detailing desktop setup with Unsloth"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"gpupartner.com\" \"Inkling, Qwen, and Unsloth\"",
+    "SpaceX Musk renting out computing Anthropic AI NYT 2026",
+    "Nvidia reinstates Jensen Huang CEO 2026",
+    "GLM 5.4 Loop Transformer z ai",
+    "\"spelunkr.tv\" internet archive",
+    "OpenAI Perplexity and Intelligence"
+  ]
+}

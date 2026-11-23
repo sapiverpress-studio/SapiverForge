@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#27194a">
+  <title>My Trace &amp; Draw Studio</title>
+  <style>
+    :root{--ink:#27194a;--muted:#6f6686;--paper:#fffaf4;--purple:#7657d8;--pink:#ef5f93;--mint:#57c9ae;--gold:#f6bd4c;--line:#e7deef;--shadow:0 14px 34px #29164616}*{box-sizing:border-box}body{margin:0;color:var(--ink);font:16px/1.5 ui-rounded,"Avenir Next",system-ui,sans-serif;background:radial-gradient(circle at 10% 0,#ffe3ed,transparent 34%),radial-gradient(circle at 92% 12%,#dff8f2,transparent 30%),#f7f1ff}button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(1050px,100%);margin:auto;padding:18px clamp(14px,3vw,28px) 46px}.top{display:flex;justify-content:space-between;align-items:center;gap:14px}.brand{font-weight:900;letter-spacing:.03em}.brand span{color:var(--pink)}.back{color:var(--ink);font-weight:800;text-decoration:none;border-bottom:2px solid var(--gold)}.hero{padding:42px 0 24px}.eyebrow{font-weight:900;color:var(--purple);text-transform:uppercase;letter-spacing:.15em;font-size:.78rem}.hero h1{font-size:clamp(2.35rem,8vw,4.7rem);line-height:.94;margin:.25rem 0 1rem;max-width:800px;letter-spacing:-.055em}.hero p{font-size:clamp(1rem,2vw,1.25rem);max-width:700px;color:var(--muted);margin:0}.panel{background:#fff;border:1px solid #fff;border-radius:26px;box-shadow:var(--shadow);padding:clamp(15px,3vw,26px);margin:18px 0}.controls{display:grid;grid-template-columns:1.1fr repeat(2,minmax(130px,.7fr)) auto;gap:12px;align-items:end}.field label{font-size:.76rem;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--muted);display:block;margin:0 0 6px}.field input,.field select{width:100%;border:2px solid var(--line);border-radius:14px;padding:11px 12px;background:#fff;color:var(--ink);font-weight:750}.field input:focus,.field select:focus{outline:3px solid #7657d828;border-color:var(--purple)}.btn{border:0;border-radius:15px;padding:12px 17px;background:var(--ink);color:#fff;font-weight:900;min-height:48px}.btn.primary{background:var(--purple)}.btn.soft{background:#f1ebfa;color:var(--ink)}.btn.danger{background:#fff0f3;color:#a92e58}.canvas-shell{position:relative;margin:16px auto 10px;max-width:760px;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:var(--paper);border:2px solid #eadff1;touch-action:none}.canvas-shell canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.status{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:760px;margin:12px auto 0;min-height:48px}.hint{color:var(--muted);font-weight:700}.score{font-weight:950;font-size:1.2rem;color:var(--purple)}.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:16px}.results{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.metric{background:#faf7fd;border-radius:16px;padding:14px;text-align:center}.metric b{display:block;font-size:1.45rem}.metric span{font-size:.78rem;color:var(--muted);font-weight:800}.history{display:grid;gap:9px}.history-item{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:12px 14px;border:1px solid var(--line);border-radius:14px}.pill{border-radius:999px;background:#efe9fb;padding:4px 9px;font-size:.78rem;font-weight:900}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.privacy{background:#e9faf5}.prompt{background:#2f2052;color:#fff}.prompt p{color:#e7ddfa}.prompt pre{white-space:pre-wrap;font:700 .94rem/1.55 ui-rounded,system-ui;background:#21163e;border-radius:16px;padding:15px;margin:14px 0;user-select:all}.small{font-size:.9rem;color:var(--muted)}footer{text-align:center;margin-top:30px;color:var(--muted)}dialog{border:0;border-radius:20px;max-width:520px;width:calc(100% - 28px);box-shadow:0 24px 70px #1b0f3a55;padding:24px}dialog::backdrop{background:#1e123a99}@media(max-width:760px){.controls{grid-template-columns:1fr 1fr}.controls .name{grid-column:1/-1}.controls .btn{grid-column:1/-1}.two{grid-template-columns:1fr}.results{gap:7px}.metric{padding:10px 6px}.hero{padding-top:30px}}@media(max-width:420px){.wrap{padding-inline:10px}.panel{border-radius:20px;padding:13px}.controls{grid-template-columns:1fr}.controls .name{grid-column:auto}.history-item{grid-template-columns:1fr auto}.history-item .date{display:none}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <nav class="top"><div class="brand">AI <span>Inquisitive</span> Parents</div><a class="back" href="https://suite.sapiverpress.co.uk">Explore the suite</a></nav>
+  <header class="hero"><div class="eyebrow">Day 083 · made for your family</div><h1>My Trace &amp; Draw Studio</h1><p>Follow colourful paths with a finger, mouse or stylus. Get friendly instant feedback, choose a new pattern and watch personal bests grow — all privately in this browser.</p></header>
+
+  <section class="panel" aria-labelledby="playTitle">
+    <h2 id="playTitle">Choose a path and start tracing</h2>
+    <div class="controls">
+      <div class="field name"><label for="player">Player name</label><input id="player" maxlength="18" value="Explorer" autocomplete="off"></div>
+      <div class="field"><label for="pathType">Path</label><select id="pathType"><option value="wave">Wavy road</option><option value="zigzag">Zigzag trail</option><option value="loops">Loop-de-loop</option><option value="spiral">Spiral</option><option value="star">Star</option></select></div>
+      <div class="field"><label for="level">Challenge</label><select id="level"><option value="easy">Wide</option><option value="medium" selected>Medium</option><option value="hard">Narrow</option></select></div>
+      <button class="btn primary" id="newBtn">New path</button>
+    </div>
+    <div class="canvas-shell" id="shell"><canvas id="board" aria-label="Tracing canvas. Start at the green circle and follow the dotted path."></canvas></div>
+    <div class="status" aria-live="polite"><div class="hint" id="hint">Start at the green circle and follow the path.</div><div class="score" id="score">Ready</div></div>
+    <div class="actions"><button class="btn soft" id="clearBtn">Clear trace</button><button class="btn primary" id="checkBtn">Check my trace</button><button class="btn soft" id="nextBtn">Try another</button></div>
+    <div class="results" id="results" hidden><div class="metric"><b id="totalMetric">—</b><span>TRACE SCORE</span></div><div class="metric"><b id="accuracyMetric">—</b><span>STAYED CLOSE</span></div><div class="metric"><b id="coverageMetric">—</b><span>PATH COVERED</span></div></div>
+  </section>
+
+  <div class="two">
+    <section class="panel"><h2>Recent traces</h2><div class="history" id="history"></div><button class="btn danger" id="resetBtn">Clear saved results</button></section>
+    <section class="panel privacy"><h2>Private by design</h2><p>Your player name, choices and up to eight recent scores stay in local browser storage on this device. Nothing is uploaded. There are no accounts, ads, analytics, camera, microphone or external services.</p><p class="small">This is a playful drawing activity, not a handwriting, motor-skills or medical assessment. A grown-up should choose suitable challenges, encourage breaks and treat scores as informal game feedback.</p></section>
+  </div>
+
+  <section class="panel prompt"><h2>Build your own with AI</h2><p>Copy this beginner-friendly prompt into your favourite AI coding assistant, then ask it to change the colours, paths or scoring for your family.</p><pre id="buildPrompt">Create one mobile-friendly HTML file for a private family tracing game. Let a player type their name, choose at least five paths and trace on a canvas with touch, mouse or stylus. Give kind feedback for closeness and coverage, save only the last eight scores in localStorage, add clear/reset controls, explain that nothing is uploaded, and use no libraries, logins, ads, analytics or paid services.</pre><button class="btn" id="copyBtn">Copy prompt</button>
+  </section>
+  <footer>Made for curious families · <a href="https://suite.sapiverpress.co.uk">Sapiver Press Suite</a></footer>
+</main>
+<dialog id="confirmDialog"><h2>Clear saved results?</h2><p>This removes the player name and recent trace scores from this browser.</p><div class="actions"><button class="btn soft" id="cancelReset">Keep them</button><button class="btn danger" id="confirmReset">Clear results</button></div></dialog>
+<script>
+(()=>{"use strict";
+const $=s=>document.querySelector(s), canvas=$("#board"),ctx=canvas.getContext("2d"),shell=$("#shell");
+const key="aip-trace-draw-v1";let state={name:"Explorer",history:[]};try{state={...state,...JSON.parse(localStorage.getItem(key)||"{}")} }catch{};
+let target=[],stroke=[],drawing=false,checked=false,seed=1;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function save(){localStorage.setItem(key,JSON.stringify(state))}
+function sampleSegment(a,b,n,out){for(let i=0;i<n;i++){const t=i/n;out.push({x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t})}}
+function makePath(type,w,h){const p=[],m=w*.12,L=w*.76,cy=h*.52;
+ if(type==="wave")for(let i=0;i<=220;i++){let t=i/220;p.push({x:m+L*t,y:cy+Math.sin(t*Math.PI*3)*h*.19})}
+ if(type==="zigzag"){const pts=[{x:m,y:h*.72},{x:w*.3,y:h*.3},{x:w*.48,y:h*.7},{x:w*.66,y:h*.32},{x:w-m,y:h*.68}];pts.slice(0,-1).forEach((a,i)=>sampleSegment(a,pts[i+1],55,p));p.push(pts.at(-1))}
+ if(type==="loops")for(let i=0;i<=240;i++){let t=i/240;p.push({x:m+L*t,y:cy+Math.sin(t*Math.PI*6)*h*.2*Math.sin(t*Math.PI)})}
+ if(type==="spiral")for(let i=0;i<=260;i++){let t=i/260,a=t*Math.PI*4.5,r=(1-t)*Math.min(w,h)*.34;p.push({x:w*.5-r*Math.cos(a),y:h*.5+r*Math.sin(a)})}
+ if(type==="star"){const pts=[];for(let i=0;i<11;i++){let a=-Math.PI/2+i*Math.PI/5,r=i%2?Math.min(w,h)*.17:Math.min(w,h)*.34;pts.push({x:w*.5+Math.cos(a)*r,y:h*.51+Math.sin(a)*r})}pts.slice(0,-1).forEach((a,i)=>sampleSegment(a,pts[i+1],28,p));p.push(pts.at(-1))}
+ return p}
+function size(){const r=shell.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*d);canvas.height=Math.round(r.height*d);ctx.setTransform(d,0,0,d,0,0);target=makePath($("#pathType").value,r.width,r.height);draw()}
+function tolerance(){return ({easy:34,medium:24,hard:16})[$("#level").value]}
+function draw(){const w=shell.clientWidth,h=shell.clientHeight;ctx.clearRect(0,0,w,h);ctx.fillStyle="#fffaf4";ctx.fillRect(0,0,w,h);ctx.lineCap="round";ctx.lineJoin="round";
+ ctx.strokeStyle="#e4d8ec";ctx.lineWidth=tolerance()*2;ctx.setLineDash([]);path(target);ctx.stroke();ctx.strokeStyle="#7657d8";ctx.lineWidth=4;ctx.setLineDash([4,12]);path(target);ctx.stroke();ctx.setLineDash([]);
+ if(target[0]){ctx.fillStyle="#42b998";ctx.beginPath();ctx.arc(target[0].x,target[0].y,13,0,Math.PI*2);ctx.fill();ctx.fillStyle="#fff";ctx.font="900 13px system-ui";ctx.textAlign="center";ctx.fillText("1",target[0].x,target[0].y+4)}
+ if(stroke.length){ctx.strokeStyle="#ef5f93";ctx.lineWidth=8;path(stroke);ctx.stroke()}}
+function path(a){if(!a.length)return;ctx.beginPath();ctx.moveTo(a[0].x,a[0].y);for(let i=1;i<a.length;i++)ctx.lineTo(a[i].x,a[i].y)}
+function point(e){const r=canvas.getBoundingClientRect();return{x:clamp(e.clientX-r.left,0,r.width),y:clamp(e.clientY-r.top,0,r.height)}}
+function nearest(pt,arr){let best=Infinity;for(const q of arr){const d=(pt.x-q.x)**2+(pt.y-q.y)**2;if(d<best)best=d}return Math.sqrt(best)}
+function scoreTrace(){if(stroke.length<8)return null;const tol=tolerance(),avg=stroke.reduce((s,p)=>s+nearest(p,target),0)/stroke.length;const accuracy=clamp(1-avg/(tol*2.5),0,1);let hit=0;for(let i=0;i<target.length;i+=2)if(nearest(target[i],stroke)<=tol)hit++;const coverage=hit/Math.ceil(target.length/2);return{accuracy:Math.round(accuracy*100),coverage:Math.round(coverage*100),total:Math.round((accuracy*.58+coverage*.42)*100)}}
+function newPath(change=true){if(change){const opts=["wave","zigzag","loops","spiral","star"],cur=opts.indexOf($("#pathType").value);$("#pathType").value=opts[(cur+1+seed++)%opts.length]}stroke=[];checked=false;$("#results").hidden=true;$("#score").textContent="Ready";$("#hint").textContent="Start at the green circle and follow the path.";size()}
+function check(){const s=scoreTrace();if(!s){$("#hint").textContent="Add a little more tracing first.";return}checked=true;$("#results").hidden=false;$("#totalMetric").textContent=s.total+"%";$("#accuracyMetric").textContent=s.accuracy+"%";$("#coverageMetric").textContent=s.coverage+"%";$("#score").textContent=s.total>=85?"Brilliant!":s.total>=65?"Great tracing!":"Good start!";$("#hint").textContent=s.coverage<60?"Try to follow more of the path next time.":"You followed the path with care.";
+ const item={name:($("#player").value.trim()||"Explorer").slice(0,18),path:$("#pathType").selectedOptions[0].text,total:s.total,date:new Date().toLocaleDateString(undefined,{day:"numeric",month:"short"})};state.name=item.name;state.history=[item,...state.history].slice(0,8);save();renderHistory()}
+function renderHistory(){const box=$("#history");box.textContent="";if(!state.history.length){const p=document.createElement("p");p.className="small";p.textContent="No scores yet — finish a trace to begin.";box.append(p)}else state.history.forEach(x=>{const row=document.createElement("div");row.className="history-item";const main=document.createElement("b"),date=document.createElement("span"),score=document.createElement("span");main.textContent=x.name+" · "+x.path;date.className="small date";date.textContent=x.date;score.className="pill";score.textContent=x.total+"%";row.append(main,date,score);box.append(row)})}
+canvas.addEventListener("pointerdown",e=>{drawing=true;stroke=[];canvas.setPointerCapture(e.pointerId);stroke.push(point(e));draw()});canvas.addEventListener("pointermove",e=>{if(!drawing)return;stroke.push(point(e));draw()});canvas.addEventListener("pointerup",()=>{drawing=false});canvas.addEventListener("pointercancel",()=>drawing=false);
+$("#newBtn").onclick=()=>newPath(false);$("#nextBtn").onclick=()=>newPath(true);$("#clearBtn").onclick=()=>{stroke=[];checked=false;$("#results").hidden=true;$("#score").textContent="Ready";draw()};$("#checkBtn").onclick=check;$("#pathType").onchange=()=>newPath(false);$("#level").onchange=()=>newPath(false);$("#player").value=state.name;$("#player").onchange=()=>{state.name=($("#player").value.trim()||"Explorer").slice(0,18);$("#player").value=state.name;save()};
+$("#resetBtn").onclick=()=>$("#confirmDialog").showModal();$("#cancelReset").onclick=()=>$("#confirmDialog").close();$("#confirmReset").onclick=()=>{localStorage.removeItem(key);state={name:"Explorer",history:[]};$("#player").value=state.name;renderHistory();$("#confirmDialog").close()};
+$("#copyBtn").onclick=async()=>{try{await navigator.clipboard.writeText($("#buildPrompt").textContent);$("#copyBtn").textContent="Copied!";setTimeout(()=>$("#copyBtn").textContent="Copy prompt",1600)}catch{$("#copyBtn").textContent="Select and copy the prompt"}};
+new ResizeObserver(size).observe(shell);renderHistory();size();
+})();
+</script>
+</body></html>

@@ -1,0 +1,21 @@
+name: Read-only Bicep Heart Etsy image audit
+on:
+  pull_request:
+    paths:
+      - 'scripts/audit-bicep-live-etsy-colours.py'
+      - '.github/workflows/audit-bicep-etsy-colours.yml'
+permissions:
+  contents: read
+jobs:
+  audit-live-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image read dependency
+        run: python -m pip install pillow==11.3.0
+      - name: Read and compare THREE published Etsy hero images
+        run: python scripts/audit-bicep-live-etsy-colours.py

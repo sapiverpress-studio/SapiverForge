@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T17:35:50.140Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 451,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 338,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 317,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 258,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1766,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": true,
+  "quality_status": "ready_with_warnings",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-24",
+  "overall_confidence": 0.9,
+  "stories": [
+    {
+      "category": "lead",
+      "headline": "Nvidia reinstates Jensen Huang as CEO",
+      "confirmed_fact": "Nvidia's Board of Directors unanimously reinstated Jensen Huang as President and CEO on November 23, 2026, following an internal governance review. The board stated it consulted senior U.S. government officials and concluded the move poses no national security risk.",
+      "why_it_matters": "The reinstatement ends a period of intense leadership uncertainty that saw Nvidia's stock swing wildly. However, legal and governance experts warn that the board's decision—reportedly influenced by political pressure—could expose the company to ongoing regulatory scrutiny and potential shareholder litigation.",
+      "interpretation": "The rapid reversal suggests that Nvidia's internal governance mechanisms were effectively bypassed by external political influence, leaving the company in a precarious position regarding its long-term corporate independence.",
+      "confidence": 0.95,
+      "source": "cnbc.com",
+      "discovered_via": "Hacker News",
+      "source_title": "Nvidia Reinstates Jensen Huang as CEO",
+      "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+      "discovery_url": "https://news.ycombinator.com/item?id=50611576",
+      "link_quality": "original",
+      "published_at": "2026-11-23T14:00:18.000Z",
+      "discovery_score": 8.051
+    },
+    {
+      "category": "technology",
+      "headline": "Microsoft declares 'Code Red' after M365 outage",
+      "confirmed_fact": "Microsoft has initiated a company-wide 'Code Red' engineering drive following a 24-hour outage on November 12–13, 2026, that impacted Exchange Online, Outlook, Teams, and Copilot. The company attributed the failure to a dormant Windows scalability bug introduced in July.",
+      "why_it_matters": "The outage highlights the fragility of critical enterprise infrastructure. Microsoft has set an internal target to resolve future global service incidents within one hour, though the effectiveness of this operational shift remains to be seen.",
+      "interpretation": "Declaring a 'Code Red' is a clear admission that current reliability protocols failed to catch a significant, dormant bug, suggesting that the company's internal testing processes were insufficient for its current scale.",
+      "confidence": 0.92,
+      "source": "Jaspreet Singh/Reuters",
+      "discovered_via": "Techmeme",
+      "source_title": "Internal memos: Microsoft declared a \"Code Red\" drive to overhaul how it prevents and responds to major service failures after the 24-hour Microsoft 365 outage (Jaspreet Singh/Reuters)",
+      "url": "https://www.reuters.com/business/microsoft-declares-code-red-after-historic-outage-internal-memos-show-2026-11-24/",
+      "discovery_url": "https://www.techmeme.com/261124/p24",
+      "link_quality": "original",
+      "published_at": "2026-11-24T16:35:02.000Z",
+      "discovery_score": 7.818
+    },
+    {
+      "category": "business",
+      "headline": "Anthropic stock dips below IPO price",
+      "confirmed_fact": "Anthropic shares fell below their $83 IPO price on their fourth day of trading, dropping to approximately $75.60–$76. SEC filings confirm that all seven co-founders sold pre-planned share allocations to underwriters at the $83 offering price.",
+      "why_it_matters": "The market correction reflects cooling investor sentiment toward frontier AI valuations. While the founders' sales were pre-planned, the stock's performance post-IPO highlights the volatility inherent in the current AI market.",
+      "interpretation": "The market is recalibrating its expectations for AI firms, moving away from the initial hype that defined the IPO launch toward a more cautious valuation of long-term profitability.",
+      "confidence": 0.9,
+      "source": "Medha Singh/Reuters",
+      "discovered_via": "Techmeme",
+      "source_title": "Anthropic falls 12%+ to ~$76, below its $83 IPO price and a sharp fall from its $111.50 IPO pop; Dario and Daniela Amodei each sold 3.37M+ shares worth $280M+ (Medha Singh/Reuters)",
+      "url": "https://www.reuters.com/business/anthropic-breaks-below-83-ipo-price-debut-rally-unravels-2026-11-24/",
+      "discovery_url": "https://www.techmeme.com/261124/p21",
+      "link_quality": "original",
+      "published_at": "2026-11-24T14:45:30.000Z",
+      "discovery_score": 7.502
+    },
+    {
+      "category": "research",
+      "headline": "AI agents struggle with delayed consequences",
+      "confirmed_fact": "A study using the SMB Bench simulator found that only 3 of 16 tested frontier AI models outperformed simple heuristic buying rules when managing multi-day business operations. Models frequently identified problems in their notes but failed to adjust their actions in time to mitigate negative outcomes.",
+      "why_it_matters": "This research suggests a significant gap between an AI's ability to 'diagnose' a situation and its ability to execute effective, long-term operational decisions. It serves as a reminder that agentic reliability is currently limited in complex, real-world scenarios.",
+      "interpretation": "The findings indicate that current frontier models are better at descriptive analysis than at strategic, time-sensitive execution, which is a critical hurdle for businesses looking to automate complex workflows.",
+      "confidence": 0.85,
+      "source": "Hugging Face",
+      "discovered_via": "Hugging Face",
+      "source_title": "Measuring and Teaching Language Model Agents to Act on Delayed Consequences",
+      "url": "https://huggingface.co/papers/2611.28158",
+      "discovery_url": "https://huggingface.co/papers/2611.28158",
+      "link_quality": "original",
+      "published_at": "2026-11-18T19:00:00.000Z",
+      "discovery_score": 5.9
+    }
+  ],
+  "practical_takeaway": "For enterprise IT and business leaders, the recent Microsoft outage and AI agent research serve as a reminder to prioritise robust, manual-override-capable systems over automated processes that lack proven reliability in complex, multi-step environments.",
+  "watch_next": "Monitor Nvidia's share price and any subsequent filings for signs of shareholder litigation, as well as Microsoft's progress toward its one-hour recovery target for global service incidents.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 084",
+      "title": "Our Room Planner",
+      "summary": "Enter a real room size, add measured furniture, drag and rotate items on a scaled plan, spot overlaps, save the layout privately and export it as a PNG.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-084/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-084/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-24",
+    "lead_headline": "Nvidia reinstates Jensen Huang as CEO",
+    "facebook_post": "Nvidia reinstates Jensen Huang as CEO\n\nThe reinstatement ends a period of intense leadership uncertainty that saw Nvidia's stock swing wildly. However, legal and governance experts warn that the board's decision—reportedly influenced by political pressure—could expose the company to ongoing regulatory scrutiny and potential shareholder litigation.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Nvidia reinstates Jensen Huang as CEO",
+    "pinterest_description": "The reinstatement ends a period of intense leadership uncertainty that saw Nvidia's stock swing wildly. However, legal and governance experts warn that the board's decision—reportedly influenced by political pressure—could expose the company to ongoing regulatory scrutiny and potential shareholder litigation.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Nvidia reinstates Jensen Huang as CEO. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Nvidia reinstates Jensen Huang as CEO. Nvidia's Board of Directors unanimously reinstated Jensen Huang as President and CEO on November 23, 2026, following an internal governance review. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "56f81e9680877124d9775be425cfc584b63a21df32431c602cd64b3027bb2dda"
+}

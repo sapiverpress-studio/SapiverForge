@@ -1,0 +1,80 @@
+Here is the verification briefing for the 2026-11-24 UK morning briefing, separating verified facts from corporate commentary and analysis.
+
+---
+
+### **Candidates Marked OUT OF SCOPE**
+* **[1]** *2035 came early* (Personal blog post; out of editorial scope)
+* **[5]** *Shein $100M FTC settlement* (E-commerce / retail litigation; out of scope)
+* **[6]** *GTA 6 Recomp banned from GitHub* (Gaming project DMCA / repository issue; out of scope)
+* **[7]** *New York car subscription ban legislation* (Automotive consumer regulation; out of scope)
+* **[10]** *Ladybird browser alpha release* (General consumer software project status; out of scope)
+* **[11]** *Dario Amodei social media commentary* (Social media dispute; out of scope)
+* **[15]** *Stripe $200B valuation tender offer discussions* (Private secondary share sale / fintech valuation rumor; out of scope per guidelines unless confirmed)
+
+---
+
+### **Evidence Notes for In-Scope Candidates**
+
+#### **[2] Techmeme | Three xAI founding members launch Epochal ($100M initial funding)**
+* **What is confirmed:** Former xAI founding members Guodong Zhang, Zihang Dai, and Manuel Kroiss have launched a new artificial intelligence startup called **Epochal**. The startup is developing AI agents designed for high-accuracy event prediction, utilizing a historical internet archive ("time portal") for model training. 
+* **Important caveats:** Bloomberg reports that co-founder Guodong Zhang personally committed $100M to the company. However, the financing details cite an anonymous source familiar with the matter, as Epochal declined official comment on capital figures.
+* **Publication status:** **SUITABLE.** Strong candidate for AI market and startup coverage.
+
+---
+
+#### **[3] Hacker News | Nvidia reinstates Jensen Huang as CEO**
+* **What is confirmed:** NVIDIA's Board of Directors announced on Nov 23, 2026, that Jensen Huang has been unanimously reinstated as President, CEO, and Board Director, ending his brief removal following an internal governance review. The board stated it consulted senior U.S. government officials and determined his reinstatement poses no national security risk. Interim CEO Colette Kress returns to her role as CFO.
+* **Important caveats:** Huang's return follows a turbulent period of board investigation and intense political lobbying. Share prices spiked over 31% on Monday immediately following the announcement.
+* **Publication status:** **SUITABLE.** Major enterprise lead story.
+
+---
+
+#### **[4] & [9] Techmeme | Analysis & Legal Risk: Nvidia Board Reinstatement Dynamics (FT / NYT)**
+* **What is confirmed:** Financial Times (Robert Armstrong) and New York Times published major analysis pieces evaluating Huang's reinstatement. Corporate governance experts quoted by NYT indicate that President Trump's public push for Huang's return effectively pressured Nvidia's board before its internal investigation formally concluded, creating exposure to potential shareholder litigation and ongoing regulatory scrutiny.
+* **Important caveats:** These stories represent legal commentary, political context, and financial analysis of Candidate [3] rather than separate breaking news items.
+* **Publication status:** **SUITABLE.** Best used as contextual analysis alongside Candidate [3].
+
+---
+
+#### **[8] Techmeme | Microsoft declares "Code Red" internal drive following 24-hour M365 outage**
+* **What is confirmed:** Internal memos obtained by Reuters show Microsoft M365 leadership (Jason Henderson, Amanda Silver) declared a company-wide "Code Red" engineering initiative following a historic 24-hour outage on Nov 12–13, 2026. The outage affected Exchange Online, Outlook, Teams, and Copilot. Microsoft attributed the failure to a dormant Windows scalability bug introduced in July, ruling out cyberattacks or AI agent errors. The memo outlines five workstreams and sets an operational target to resolve future global service incidents within one hour.
+* **Important caveats:** Memos reflect internal remediation targets; technical execution and performance against the one-hour recovery goal will require ongoing observation.
+* **Publication status:** **SUITABLE.** High-value enterprise infrastructure and cloud management story.
+
+---
+
+#### **[12] Hacker News | Stalwart releases v1.2.0 as open-source Microsoft Exchange replacement**
+* **What is confirmed:** Stalwart Labs released version 1.2.0 of its Stalwart mail server, introducing native support for key Microsoft Exchange protocols, including MAPI over HTTP, EWS, ActiveSync, and Autodiscover. This allows native Outlook, Apple Mail, and mobile clients to connect without third-party middleware.
+* **Important caveats:** Exchange protocol support is released under the AGPLv3 Community edition behind an optional build flag. Enterprise rollout viability against complex legacy Exchange setups remains unproven at scale.
+* **Publication status:** **SUITABLE.** Relevant for open-source enterprise software and IT architecture coverage.
+
+---
+
+#### **[13] Techmeme | Nvidia drops 8%+, leading semiconductor pullback after Monday surge**
+* **What is confirmed:** Market data on Tuesday, Nov 24, showed Nvidia shares falling ~7–8%, pulling back after Monday’s record $950B market cap gain following Jensen Huang’s reinstatement. Related semiconductor stocks (AMD, Micron, Arm, Marvell) also fell 8–11% following Monday's broad rally.
+* **Important caveats:** Reflects standard equity market volatility and profit-taking following historic single-day gains.
+* **Publication status:** **SUITABLE.** Best integrated into market summary notes tied to Candidate [3].
+
+---
+
+#### **[14] Techmeme | Anthropic stock drops below $83 IPO price; SEC filings show founder share sales**
+* **What is confirmed:** Anthropic (NASDAQ: ANT) stock dropped over 11-13% during intraday trading on Tuesday to ~$75.60–$76, falling below its $83 IPO price on its fourth day of trading. SEC Form 4 filings released Monday evening confirmed CEO Dario Amodei and President Daniela Amodei each sold 3.38M shares at the $83 offering price ($280M+ each).
+* **Important caveats:** SEC filings clarify that all seven co-founders sold pre-planned matching share allocations to IPO underwriters as detailed in the prospectus pricing, rather than executing discretionary open-market sales during the stock price decline.
+* **Publication status:** **SUITABLE.** Major financial story regarding frontier AI valuation and market correction.
+
+---
+
+#### **[16]–[19] Hugging Face Papers | Research Candidate Summaries**
+* **[16] Beam Model Technical Report:** Claims a 501.3B total / 23.4B active MoE architecture trained on 23.8T tokens, achieving frontier coding performance with 3-4x less compute using 10.5K GB300 GPUs.
+* **[17] LM Agents & Delayed Consequences (SMB Bench):** Introduces a 90-day wholesale simulator; reports that only 3 of 16 tested frontier models outperformed simple heuristic buying rules due to failures in acting on delayed operational feedback.
+* **[18] Loop Residuals (LoopRes):** Proposes a method using Attention Residuals and loop-aware keys to convert pretrained LLMs into looped architectures efficiently.
+* **[19] CCFinance:** Presents a pipeline to link 5.22 million Common Crawl News articles to specific corporate issuers with 96.8% estimated precision.
+* **Important caveats for all research papers:** All results, benchmarks, and efficiency gains represent claims made by the respective paper authors in preprints and have not been independently audited or peer-reviewed.
+* **Publication status:** **SUITABLE** for research digests, clearly labeled as unverified academic paper claims.
+
+---
+
+#### **[0] Hacker News | Opinion: LLM agents work for their parent companies, not for you**
+* **What is confirmed:** A personal tech blog post by Michael Harley posted to Hacker News discussing alignment and economic incentives in commercial LLM agent design.
+* **Important caveats:** Purely an opinion essay; contains no new primary disclosures, data, or breaking news.
+* **Publication status:** **UNSUITABLE** for lead news coverage; acceptable only as a commentary link.

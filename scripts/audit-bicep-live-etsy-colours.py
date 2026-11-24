@@ -28,7 +28,7 @@ def palette(image):
             continue
         if (hue < 0.14 or hue >= 0.98):
             counts["terracotta"] += 1
-        elif 0.71 <= hue < 0.97:
+        elif 0.71 <= hue < 0.995:
             counts["plum"] += 1
         elif 0.39 <= hue < 0.60:
             counts["teal"] += 1
@@ -37,7 +37,15 @@ def palette(image):
     return counts
 
 def classify(counts):
-    return max(("terracotta", "plum", "teal"), key=lambda k: counts[k])
+    # Purple/pink bands are distinctive but some magenta pixels also count
+    # as warm red. Test the proportion of the distinctive teal/plum hues,
+    # not the largest generic hue bin.
+    total = sum(counts.values()) or 1
+    if counts["teal"] / total > 0.12:
+        return "teal"
+    if counts["plum"] / total > 0.12:
+        return "plum"
+    return "terracotta"
 
 def main():
     feed = json.loads(Path("data/etsy-public-catalog.json").read_text())

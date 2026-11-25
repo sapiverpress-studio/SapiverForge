@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#34205e">
+<title>My Party Invitation Studio</title>
+<style>
+:root{--ink:#302052;--muted:#746a83;--purple:#7452c7;--pink:#ef668d;--gold:#f7bd4c;--mint:#61c7b1;--line:#e9e0ef;--shadow:0 16px 40px #2e194919}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 8% 0,#ffe6ef,transparent 31%),radial-gradient(circle at 94% 9%,#def8f2,transparent 27%),#f8f3fc;color:var(--ink);font:16px/1.5 ui-rounded,"Avenir Next",system-ui,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1120px,100%);margin:auto;padding:18px clamp(13px,3vw,28px) 48px}.top{display:flex;justify-content:space-between;align-items:center;gap:14px}.brand{font-weight:950;letter-spacing:.025em}.brand span{color:var(--pink)}.back{font-weight:850;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--gold)}.hero{padding:38px 0 22px}.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:950;color:var(--purple)}h1{font-size:clamp(2.45rem,8vw,4.8rem);line-height:.94;letter-spacing:-.055em;margin:.3rem 0 .9rem}h2{margin:.1rem 0 1rem}.hero p{max-width:760px;color:var(--muted);font-size:clamp(1rem,2vw,1.22rem);margin:0}.panel{background:#fff;border:1px solid #fff;border-radius:26px;padding:clamp(14px,3vw,25px);box-shadow:var(--shadow);margin:18px 0}.studio{display:grid;grid-template-columns:360px minmax(0,1fr);gap:22px;align-items:start}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field.wide{grid-column:1/-1}.field label{display:block;font-size:.73rem;letter-spacing:.08em;text-transform:uppercase;font-weight:950;color:var(--muted);margin:0 0 5px}.field input,.field select,.field textarea{width:100%;border:2px solid var(--line);border-radius:13px;padding:10px 11px;color:var(--ink);background:#fff;font-weight:730}.field textarea{min-height:72px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{outline:3px solid #7452c725;border-color:var(--purple)}.colour-row{display:flex;gap:8px;flex-wrap:wrap}.colour{width:38px;height:38px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--line);padding:0}.colour.active{box-shadow:0 0 0 3px var(--ink)}.preview-side{min-width:0}.canvas-shell{width:min(100%,560px);margin:auto;aspect-ratio:4/5;border-radius:22px;overflow:hidden;background:#eee4f5;box-shadow:0 12px 30px #26164225}canvas{display:block;width:100%;height:100%}.toolbar{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-top:13px}.btn{border:0;border-radius:14px;min-height:45px;padding:10px 16px;background:var(--ink);color:#fff;font-weight:900}.btn.primary{background:var(--purple)}.btn.soft{background:#f0eaf8;color:var(--ink)}.btn.pink{background:var(--pink)}.notice{background:#fff7de;border-left:5px solid var(--gold);border-radius:13px;padding:11px 13px;margin-top:14px;font-size:.9rem;color:#66562f}.saved{font-size:.83rem;color:var(--muted);text-align:center;min-height:24px;margin-top:7px}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.privacy{background:#e8faf5}.prompt{background:#33205d;color:#fff}.prompt p{color:#eadff6}.prompt pre{white-space:pre-wrap;background:#251745;border-radius:15px;padding:15px;font:700 .93rem/1.55 ui-rounded,system-ui;user-select:all}.small{font-size:.88rem;color:var(--muted)}footer{text-align:center;color:var(--muted);margin-top:30px}dialog{border:0;border-radius:20px;width:min(480px,calc(100% - 28px));padding:24px;box-shadow:0 24px 70px #24144255}dialog::backdrop{background:#1b103499}@media(max-width:840px){.studio{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr 1fr}.preview-side{order:-1}.canvas-shell{max-width:480px}}@media(max-width:560px){.panel{border-radius:20px;padding:12px}.hero{padding-top:28px}.form-grid,.two{grid-template-columns:1fr}.field.wide{grid-column:auto}.toolbar .btn{flex:1 1 42%}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<nav class="top"><div class="brand">AI <span>Inquisitive</span> Parents</div><a class="back" href="https://suite.sapiverpress.co.uk">Explore the suite</a></nav>
+<header class="hero"><div class="eyebrow">Day 085 · made for your celebration</div><h1>My Party Invitation Studio</h1><p>Create a bright invitation tailored to your family. Change the theme, wording and colours, see every edit instantly, then export a finished PNG — all privately in your browser.</p></header>
+
+<section class="panel studio">
+  <div>
+    <h2>Personalise the invitation</h2>
+    <div class="form-grid">
+      <div class="field wide"><label for="name">Celebration name</label><input id="name" maxlength="24" value="Alex"></div>
+      <div class="field"><label for="age">Age</label><input id="age" type="number" min="1" max="120" value="7"></div>
+      <div class="field"><label for="theme">Theme</label><select id="theme"><option value="space">Space</option><option value="dinosaur">Dinosaurs</option><option value="rainbow">Rainbow</option><option value="football">Football</option><option value="ocean">Under the sea</option><option value="craft">Arts & crafts</option></select></div>
+      <div class="field wide"><label for="headline">Headline</label><input id="headline" maxlength="42" value="Come and celebrate!"></div>
+      <div class="field"><label for="date">Date</label><input id="date" type="date"></div>
+      <div class="field"><label for="time">Time</label><input id="time" type="time" value="14:00"></div>
+      <div class="field wide"><label for="place">Place</label><input id="place" maxlength="48" value="The party room"></div>
+      <div class="field wide"><label for="note">Extra note</label><textarea id="note" maxlength="90">Games, cake and lots of fun!</textarea></div>
+      <div class="field wide"><label for="rsvp">RSVP</label><input id="rsvp" maxlength="44" value="Please reply to a grown-up"></div>
+      <div class="field wide"><label>Colour mood</label><div class="colour-row" id="colours"></div></div>
+    </div>
+    <div class="notice">A grown-up should check the wording before sharing. Avoid putting a child’s full name, home address or private contact details on invitations posted publicly.</div>
+  </div>
+  <div class="preview-side">
+    <h2>Live preview</h2>
+    <div class="canvas-shell" id="shell"><canvas id="invite" aria-label="Live party invitation preview"></canvas></div>
+    <div class="toolbar"><button class="btn primary" id="downloadBtn">Download PNG</button><button class="btn soft" id="surpriseBtn">Surprise me</button><button class="btn pink" id="resetBtn">Start again</button></div>
+    <div class="saved" id="saved" aria-live="polite">Changes save automatically on this device.</div>
+  </div>
+</section>
+
+<div class="two">
+  <section class="panel"><h2>Ready to share</h2><p>The exported invitation is a high-resolution 1080 × 1350 PNG that works for messages, email or printing. Check the final image carefully and share it only with people you intend to invite.</p><p class="small">Dates and times use the settings on this device. Printing dimensions depend on the printer and paper settings.</p></section>
+  <section class="panel privacy"><h2>Private by design</h2><p>The invitation details and design choices stay in local browser storage on this device. Nothing is uploaded. There are no accounts, ads, analytics, camera, microphone or external services.</p><p class="small">Downloaded PNG files are handled by your browser and device. Clearing browser data removes the saved draft.</p></section>
+</div>
+
+<section class="panel prompt"><h2>Build your own with AI</h2><p>Copy this beginner-friendly prompt and ask an AI coding assistant to tailor the themes and wording for your family.</p><pre id="buildPrompt">Create one polished mobile-friendly HTML file for a private family invitation maker. Include editable celebration name, age, date, time, place, note and RSVP fields; at least six visual themes; colour choices; a live canvas preview; automatic localStorage saving; reset and surprise controls; and high-resolution PNG export. Add clear privacy and grown-up sharing guidance. Use no libraries, accounts, advertising, analytics or paid services.</pre><button class="btn" id="copyBtn">Copy prompt</button></section>
+<footer>Made for curious families · <a href="https://suite.sapiverpress.co.uk">Sapiver Press Suite</a></footer>
+</main>
+<dialog id="confirm"><h2>Start again?</h2><p>This clears the saved invitation details on this device.</p><div class="toolbar"><button class="btn soft" id="cancelReset">Keep editing</button><button class="btn pink" id="confirmReset">Clear draft</button></div></dialog>
+<script>
+(()=>{"use strict";
+const $=s=>document.querySelector(s),canvas=$("#invite"),ctx=canvas.getContext("2d"),shell=$("#shell"),key="aip-party-invite-v1";
+const palettes=[["#7452c7","#ef668d","#f7bd4c","#fff8ee"],["#107c78","#e75b55","#f3c04f","#f4fbf9"],["#1f5fa8","#67c4d4","#f5a94b","#f2f7ff"],["#be4b7b","#7951b9","#71c7a8","#fff4f8"],["#315b43","#e89b43","#d7c66e","#f8f4e8"]];
+const themes={space:{icon:"★",sub:"A stellar celebration",bits:["✦","●","★"]},dinosaur:{icon:"◆",sub:"A roaring good time",bits:["▲","●","◆"]},rainbow:{icon:"☀",sub:"Colour, cake and smiles",bits:["●","◡","✦"]},football:{icon:"●",sub:"Kick-off the fun",bits:["⬟","●","✦"]},ocean:{icon:"≈",sub:"Dive into the fun",bits:["●","≈","✦"]},craft:{icon:"✎",sub:"Make something brilliant",bits:["●","✦","▲"]}};
+const defaults={name:"Alex",age:"7",theme:"space",headline:"Come and celebrate!",date:"",time:"14:00",place:"The party room",note:"Games, cake and lots of fun!",rsvp:"Please reply to a grown-up",palette:0};
+let data={...defaults};try{data={...data,...JSON.parse(localStorage.getItem(key)||"{}")}}catch{}
+const fields=["name","age","theme","headline","date","time","place","note","rsvp"];let saveTimer;
+function safe(v,max){return String(v||"").trim().slice(0,max)}
+function save(){localStorage.setItem(key,JSON.stringify(data));$("#saved").textContent="Saved privately on this device.";clearTimeout(saveTimer);saveTimer=setTimeout(()=>$("#saved").textContent="Changes save automatically on this device.",1800)}
+function roundRect(x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r)}
+function wrap(text,x,y,maxWidth,lineHeight,maxLines=3){const words=String(text).split(/\s+/);let line="",lines=[];for(const word of words){const test=line?line+" "+word:word;if(ctx.measureText(test).width>maxWidth&&line){lines.push(line);line=word}else line=test}if(line)lines.push(line);lines=lines.slice(0,maxLines);lines.forEach((l,i)=>ctx.fillText(l,x,y+i*lineHeight));return y+lines.length*lineHeight}
+function niceDate(v){if(!v)return"Choose your date";const d=new Date(v+"T12:00:00");return d.toLocaleDateString(undefined,{weekday:"long",day:"numeric",month:"long"})}
+function draw(target=canvas,W=shell.clientWidth,H=shell.clientHeight,exporting=false){const c=target.getContext("2d"),old=ctx; if(target!==canvas){window.__exportCtx=c} const scale=W/1080;c.save();c.scale(scale,scale);const w=1080,h=H/scale,p=palettes[data.palette%palettes.length],t=themes[data.theme]||themes.space;
+ c.fillStyle=p[3];c.fillRect(0,0,w,h);const grad=c.createLinearGradient(0,0,w,h);grad.addColorStop(0,p[0]);grad.addColorStop(1,p[1]);c.fillStyle=grad;c.beginPath();c.moveTo(0,0);c.lineTo(w,0);c.lineTo(w,h*.3);c.quadraticCurveTo(w*.55,h*.44,0,h*.31);c.closePath();c.fill();
+ c.globalAlpha=.18;c.fillStyle=p[2];for(let i=0;i<28;i++){const x=(i*197%1010)+35,y=(i*281%(h-80))+40,r=7+(i%5)*4;c.beginPath();c.arc(x,y,r,0,Math.PI*2);c.fill()}c.globalAlpha=1;
+ c.fillStyle="#fff";c.textAlign="center";c.font="900 42px system-ui";c.fillText(t.sub.toUpperCase(),w/2,105);c.font="900 116px system-ui";c.fillText(t.icon,w/2,230);
+ c.fillStyle="#2f2051";c.font="900 64px system-ui";c.fillText(safe(data.headline,42)||"Come and celebrate!",w/2,h*.39);
+ c.fillStyle=p[0];c.font="950 112px system-ui";c.fillText(safe(data.name,24)||"Alex",w/2,h*.5);c.font="850 38px system-ui";c.fillText("IS TURNING "+(safe(data.age,3)||"7")+"!",w/2,h*.55);
+ c.fillStyle="#fff";c.shadowColor="#2a183322";c.shadowBlur=24;round(c,100,h*.60,880,h*.27,34);c.fill();c.shadowBlur=0;
+ c.fillStyle="#2f2051";c.font="900 36px system-ui";c.fillText(niceDate(data.date),w/2,h*.665);c.font="800 30px system-ui";c.fillText((data.time||"14:00")+"  ·  "+safe(data.place,48),w/2,h*.715);
+ c.font="700 27px system-ui";wrapWith(c,safe(data.note,90),w/2,h*.77,770,38,2);c.fillStyle=p[1];c.font="850 27px system-ui";c.fillText("RSVP: "+safe(data.rsvp,44),w/2,h*.865);
+ c.fillStyle=p[2];c.font="900 28px system-ui";c.fillText(t.bits.join("   "),w/2,h*.94);c.restore();if(target===canvas){}}
+function round(c,x,y,w,h,r){c.beginPath();c.roundRect(x,y,w,h,r)}
+function wrapWith(c,text,x,y,maxWidth,lineHeight,maxLines){const words=String(text).split(/\s+/);let line="",lines=[];for(const word of words){const test=line?line+" "+word:word;if(c.measureText(test).width>maxWidth&&line){lines.push(line);line=word}else line=test}if(line)lines.push(line);lines.slice(0,maxLines).forEach((l,i)=>c.fillText(l,x,y+i*lineHeight))}
+function render(){const r=shell.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*d);canvas.height=Math.round(r.height*d);ctx.setTransform(d,0,0,d,0,0);draw(canvas,r.width,r.height)}
+function colourButtons(){const box=$("#colours");box.textContent="";palettes.forEach((p,i)=>{const b=document.createElement("button");b.type="button";b.className="colour"+(i===data.palette?" active":"");b.style.background="linear-gradient(135deg,"+p[0]+" 50%,"+p[1]+" 50%)";b.setAttribute("aria-label","Colour mood "+(i+1));b.onclick=()=>{data.palette=i;colourButtons();render();save()};box.append(b)})}
+function bind(){fields.forEach(id=>{const el=$("#"+id);el.value=data[id];el.addEventListener("input",()=>{data[id]=el.value;render();save()})})}
+$("#surpriseBtn").onclick=()=>{const keys=Object.keys(themes);data.theme=keys[Math.floor(Math.random()*keys.length)];data.palette=Math.floor(Math.random()*palettes.length);$("#theme").value=data.theme;colourButtons();render();save()};
+$("#downloadBtn").onclick=()=>{const out=document.createElement("canvas");out.width=1080;out.height=1350;draw(out,1080,1350,true);const a=document.createElement("a");a.download=(safe(data.name,24)||"party")+"-invitation.png";a.href=out.toDataURL("image/png");a.click()};
+$("#resetBtn").onclick=()=>$("#confirm").showModal();$("#cancelReset").onclick=()=>$("#confirm").close();$("#confirmReset").onclick=()=>{data={...defaults};localStorage.removeItem(key);bindFresh();colourButtons();render();$("#confirm").close()};
+function bindFresh(){fields.forEach(id=>$("#"+id).value=data[id])}
+$("#copyBtn").onclick=async()=>{try{await navigator.clipboard.writeText($("#buildPrompt").textContent);$("#copyBtn").textContent="Copied!";setTimeout(()=>$("#copyBtn").textContent="Copy prompt",1600)}catch{$("#copyBtn").textContent="Select and copy the prompt"}};
+bind();colourButtons();new ResizeObserver(render).observe(shell);render();
+})();
+</script>
+</body></html>

@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T17:08:17.883Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 1228,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 280,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 298,
+      "collection_mode": "api",
+      "original_link_count": 9
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 228,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1100,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": true,
+  "quality_status": "ready_with_warnings",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-25",
+  "overall_confidence": 0.9,
+  "stories": [
+    {
+      "category": "business",
+      "headline": "Tech stocks stumble as AI trade cools",
+      "confirmed_fact": "US tech stocks saw a sharp decline on November 25, 2026, with the Nasdaq 100 falling over 4%. Major AI-exposed equities including Nvidia, Anthropic, Broadcom, and Micron experienced significant single-day losses.",
+      "why_it_matters": "This downturn reflects a broader shift in investor sentiment and macroeconomic recalibration rather than specific operational failures at these companies.",
+      "interpretation": "The market is showing signs of fatigue after a long period of AI-focused growth, suggesting investors are becoming more sensitive to valuation and sector-wide volatility.",
+      "confidence": 0.95,
+      "source": "Financial Times",
+      "discovered_via": "Techmeme",
+      "source_title": "US tech stocks fall, pushing the Nasdaq 100 down 4%+, as the AI trade continues to unwind; Nvidia and Anthropic fall 9%+, Broadcom drops 7%, and Micron 11% (Financial Times)",
+      "url": "https://www.ft.com/content/705eb84c-801d-4a96-b908-e366511e886a",
+      "discovery_url": "https://www.techmeme.com/261125/p24",
+      "link_quality": "original",
+      "published_at": "2026-11-25T15:10:01.000Z",
+      "discovery_score": 7.858
+    },
+    {
+      "category": "technology",
+      "headline": "Restricted Nvidia hardware prices surge in Shenzhen",
+      "confirmed_fact": "Black-market vendors in Shenzhen are reportedly offering restricted Nvidia Blackwell B300 server rigs for $3M to $3.4M, an increase from the $2M asking price reported two months ago.",
+      "why_it_matters": "The rising cost suggests that despite US export restrictions, demand for high-end AI hardware remains robust in restricted markets, though the physical authenticity of these units remains unverified.",
+      "interpretation": "The price hike highlights the persistent difficulty of enforcing hardware export controls when high-value, compact technology is involved.",
+      "confidence": 0.85,
+      "source": "Joshua Yang/Washington Post",
+      "discovered_via": "Techmeme",
+      "source_title": "Chinese vendors in Shenzhen's Huaqiangbei market still sell US-restricted Nvidia hardware, quoting $3M+ for Blackwell B300 servers, up from $2M two months ago (Joshua Yang/Washington Post)",
+      "url": "https://www.washingtonpost.com/world/2026/11/25/top-nvidia-chips-are-still-offer-china-despite-us-ban/?pwapi_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWFzb24iOiJnaWZ0IiwibmJmIjoxNzk1NTgyODAwLCJpc3MiOiJzdWJzY3JpcHRpb25zIiwiZXhwIjoxNzk2OTY1MTk5LCJpYXQiOjE3OTU1ODI4MDAsImp0aSI6ImRjN2IwMDllLWFkMzEtNDViZC1hNDBlLTdiZTZkY2QyYjgyOSIsInVybCI6Imh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS93b3JsZC8yMDI2LzExLzI1L3RvcC1udmlkaWEtY2hpcHMtYXJlLXN0aWxsLW9mZmVyLWNoaW5hLWRlc3BpdGUtdXMtYmFuLyJ9.jF3hc_e28ZcCrJ5Y8OmlgXSYteCO7jDAMSZ9yQp6kJg&itid=gfta",
+      "discovery_url": "https://www.techmeme.com/261125/p20",
+      "link_quality": "original",
+      "published_at": "2026-11-25T13:00:57.000Z",
+      "discovery_score": 7.449
+    },
+    {
+      "category": "developer",
+      "headline": "Anthropic migrates API to Rust",
+      "confirmed_fact": "Anthropic has migrated its primary Messages API routing service from Python to Rust, reporting a 40%–50% reduction in CPU consumption and a 10%–20% improvement in time-to-first-token latency.",
+      "why_it_matters": "The migration demonstrates a practical application of AI-assisted coding, as the team reportedly used Claude Code to generate the majority of the Rust implementation.",
+      "interpretation": "While the performance gains are impressive for infrastructure, they are limited to the API proxy layer and do not change the speed of the underlying model generation.",
+      "confidence": 0.95,
+      "source": "Anthropic",
+      "discovered_via": "Techmeme",
+      "source_title": "Anthropic details migrating its Messages API, the primary way customers access Claude, from Python to Rust, and using the Python service to verify the migration (Anthropic)",
+      "url": "https://www.anthropic.com/research/migrating-api-to-rust",
+      "discovery_url": "https://www.techmeme.com/261125/p26",
+      "link_quality": "original",
+      "published_at": "2026-11-25T17:05:04.000Z",
+      "discovery_score": 8.098
+    },
+    {
+      "category": "research",
+      "headline": "OpenAI preprint targets matrix multiplication exponent",
+      "confirmed_fact": "OpenAI has published an un-peer-reviewed preprint claiming to prove the optimal square matrix multiplication exponent is exactly 2.25.",
+      "why_it_matters": "As an asymptotic complexity result, this theoretical proof does not provide immediate speed improvements for current GPU hardware or existing software libraries.",
+      "interpretation": "It is a significant theoretical claim, but until it undergoes rigorous peer review and verification by the broader mathematical community, it remains an academic proposal rather than a practical breakthrough.",
+      "confidence": 0.85,
+      "source": "alphaXiv",
+      "discovered_via": "Techmeme",
+      "source_title": "OpenAI publishes a preprint that claims to prove that the matrix multiplication exponent (ω) is exactly 9/4, addressing a major open problem in mathematics (alphaXiv)",
+      "url": "https://www.alphaxiv.org/abs/2611.matrix-multiplication-exponent-lower-bound",
+      "discovery_url": "https://www.techmeme.com/261125/p21",
+      "link_quality": "original",
+      "published_at": "2026-11-25T13:23:06.000Z",
+      "discovery_score": 7.544
+    }
+  ],
+  "practical_takeaway": "With market volatility increasing and high-end hardware becoming more expensive on the black market, businesses should focus on efficiency gains—like Anthropic's infrastructure migration—rather than relying on speculative hardware availability or assuming current AI market trends will continue unabated.",
+  "watch_next": "Keep an eye on the December 4 TSMC groundbreaking ceremony in Arizona, which may provide further signals on the stability and direction of the semiconductor supply chain.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 085",
+      "title": "My Party Invitation Studio",
+      "summary": "Personalise a polished party invitation with six themes, live canvas preview, colour moods, private autosave and a high-resolution PNG export.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-085/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-085/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-25",
+    "lead_headline": "Tech stocks stumble as AI trade cools",
+    "facebook_post": "Tech stocks stumble as AI trade cools\n\nThis downturn reflects a broader shift in investor sentiment and macroeconomic recalibration rather than specific operational failures at these companies.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Tech stocks stumble as AI trade cools",
+    "pinterest_description": "This downturn reflects a broader shift in investor sentiment and macroeconomic recalibration rather than specific operational failures at these companies.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Tech stocks stumble as AI trade cools. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Tech stocks stumble as AI trade cools. US tech stocks saw a sharp decline on November 25, 2026, with the Nasdaq 100 falling over 4%. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "a4ca1aa64125725dd13390b2f83ac8c4622b0a7b22fc57ea9a641fd37e62dd0a"
+}

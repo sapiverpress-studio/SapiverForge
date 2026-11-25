@@ -1,0 +1,23 @@
+# The AI trade hits a speed bump
+
+Tech stocks took a significant tumble today as the long-running AI rally shows signs of cooling. We look at the market shift and what it means for the sector.
+
+## The numbers behind the noise
+
+The scale of the movement is hard to ignore. We are talking about significant single-day losses for the usual suspects. Nvidia and Anthropic both saw their share prices slide by more than 9%, while Broadcom dropped 7% and Micron took an 11% hit. These aren't just minor fluctuations; they are the kind of numbers that make even the most stoic investors sit up and pay attention.
+
+## It is not a product failure, it is a mood shift
+
+It is important to clarify that this isn't a story about broken technology or failed product launches. There are no reports of these companies suddenly forgetting how to build chips or train models. Instead, this looks like a classic case of macroeconomic recalibration. The market is showing signs of genuine fatigue. After a long, sustained period of growth driven almost entirely by AI optimism, investors are suddenly becoming much more sensitive to valuations and the inherent volatility of the sector.
+
+## The reality of the AI trade
+
+For months, the narrative has been one-way traffic: AI is the future, and therefore, the companies building it can only go up. Today’s shift suggests that the market is finally starting to ask the more boring, yet necessary, questions about price and long-term sustainability. It is a reminder that even the most transformative technology is still subject to the laws of financial gravity.
+
+## What this means for you
+
+If you have been watching the tech sector with a sense of FOMO, today serves as a useful, if painful, reminder that sector-wide volatility is a feature, not a bug. For those with exposure to these stocks, the practical implication is simple: volatility is back on the menu. It is a good time to check if your risk tolerance is still aligned with your portfolio, rather than just riding the wave of the latest headline.
+
+## What to watch next
+
+The big question now is whether this is a temporary correction or the start of a more sustained cooling period. Keep an eye on whether this sentiment spreads to the broader market or if it remains contained within the AI-exposed tech bubble. We will be watching to see if investors start rotating their capital into more defensive sectors or if they view this dip as a buying opportunity. Either way, the days of easy, AI-fuelled gains look like they are being replaced by a much more cautious environment.

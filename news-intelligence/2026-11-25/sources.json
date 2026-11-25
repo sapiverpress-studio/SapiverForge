@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-25T17:07:29.656Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 1228,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 280,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 298,
+      "collection_mode": "api",
+      "original_link_count": 9
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 228,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1100,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "buttons.joshwcomeau.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "Button Sounds – collection of professionally-recorded button clicks and presses",
+      "url": "https://buttons.joshwcomeau.com/",
+      "direct_source_url": "https://buttons.joshwcomeau.com/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50638032",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50638032",
+      "summary": "",
+      "published_at": "2026-11-25T03:23:07.000Z",
+      "engagement": {
+        "score": 697,
+        "comments": 113
+      },
+      "collection_mode": "api",
+      "score": 8.198
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "Matrix Multiplication is Θ(n^2.25) [pdf]",
+      "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+      "direct_source_url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+      "discovery_url": "https://news.ycombinator.com/item?id=50637220",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50637220",
+      "summary": "",
+      "published_at": "2026-11-25T01:19:26.000Z",
+      "engagement": {
+        "score": 878,
+        "comments": 491
+      },
+      "collection_mode": "api",
+      "score": 8.192
+    },
+    {
+      "title": "Anthropic details migrating its Messages API, the primary way customers access Claude, from Python to Rust, and using the Python service to verify the migration (Anthropic)",
+      "url": "https://www.anthropic.com/research/migrating-api-to-rust",
+      "summary": "Anthropic : Anthropic details migrating its Messages API, the primary way customers access Claude, from Python to Rust, and using the Python service to verify the migration &mdash; Sudoku is a classic example. It's simple to check the solution (just count the numbers in each row, column, and box), but finding that solution can take a long time.",
+      "description_html": "<A HREF=\"https://www.anthropic.com/research/migrating-api-to-rust\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261125/i26.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261125/p26#a261125p26\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.anthropic.com/\">Anthropic</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.anthropic.com/research/migrating-api-to-rust\">Anthropic details migrating its Messages API, the primary way customers access Claude, from Python to Rust, and using the Python service to verify the migration</A></B></SPAN>&nbsp; &mdash;&nbsp; Sudoku is a classic example.&nbsp; It's simple to check the solution (just count the numbers in each row, column, and box), but finding that solution can take a long time.</P>",
+      "published_at": "2026-11-25T17:05:04.000Z",
+      "discovery_url": "https://www.techmeme.com/261125/p26",
+      "direct_source_url": "https://www.anthropic.com/research/migrating-api-to-rust",
+      "publisher": "Anthropic",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.098
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 10,
+      "title": "Google Releases Cogentic Papers on Integer Factorization, Discrete Logs and More",
+      "url": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
+      "direct_source_url": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
+      "discovery_url": "https://news.ycombinator.com/item?id=50642086",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50642086",
+      "summary": "",
+      "published_at": "2026-11-25T13:33:07.000Z",
+      "engagement": {
+        "score": 254,
+        "comments": 210
+      },
+      "collection_mode": "api",
+      "score": 7.981
+    },
+    {
+      "title": "Sources: US officials told Congressional staffers that there is no evidence MSS directed Alice Huang to spy on Jensen Huang and the affair may have been amorous (Wall Street Journal)",
+      "url": "https://www.wsj.com/politics/national-security/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-00228bb7?st=UJKdtq&reflink=desktopwebshare_permalink",
+      "summary": "Wall Street Journal : Sources: US officials told Congressional staffers that there is no evidence MSS directed Alice Huang to spy on Jensen Huang and the affair may have been amorous &mdash; The classified discussion happened just one day after the Trump administration helped reinstall Jensen Huang as Nvidia CEO",
+      "description_html": "<A HREF=\"https://www.wsj.com/politics/national-security/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-00228bb7?st=UJKdtq&reflink=desktopwebshare_permalink\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261125/i25.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261125/p25#a261125p25\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/politics/national-security/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-00228bb7?st=UJKdtq&reflink=desktopwebshare_permalink\">Sources: US officials told Congressional staffers that there is no evidence MSS directed Alice Huang to spy on Jensen Huang and the affair may have been amorous</A></B></SPAN>&nbsp; &mdash;&nbsp; The classified discussion happened just one day after the Trump administration helped reinstall Jensen Huang as Nvidia CEO</P>",
+      "published_at": "2026-11-25T15:55:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261125/p25",
+      "direct_source_url": "https://www.wsj.com/politics/national-security/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-00228bb7?st=UJKdtq&reflink=desktopwebshare_permalink",
+      "publisher": "Wall Street Journal",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.97
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "lesswrong.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
+      "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+      "direct_source_url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+      "discovery_url": "https://news.ycombinator.com/item?id=50637686",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50637686",
+      "summary": "",
+      "published_at": "2026-11-25T02:34:21.000Z",
+      "engagement": {
+        "score": 384,
+        "comments": 161
+      },
+      "collection_mode": "api",
+      "score": 7.924
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "rida.dev",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+      "url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit",
+      "direct_source_url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit",
+      "discovery_url": "https://news.ycombinator.com/item?id=50637890",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50637890",
+      "summary": "",
+      "published_at": "2026-11-25T03:04:37.000Z",
+      "engagement": {
+        "score": 364,
+        "comments": 129
+      },
+      "collection_mode": "api",
+      "score": 7.865
+    },
+    {
+      "title": "US tech stocks fall, pushing the Nasdaq 100 down 4%+, as the AI trade continues to unwind; Nvidia and Anthropic fall 9%+, Broadcom drops 7%, and Micron 11% (Financial Times)",
+      "url": "https://www.ft.com/content/705eb84c-801d-4a96-b908-e366511e886a",
+      "summary": "Financial Times : US tech stocks fall, pushing the Nasdaq 100 down 4%+, as the AI trade continues to unwind; Nvidia and Anthropic fall 9%+, Broadcom drops 7%, and Micron 11% &mdash; Tech-heavy Nasdaq 100 falls more than 4% as weeks-long slide continues &mdash; A Wall Street sell-off intensified on Wednesday &hellip;",
+      "description_html": "<A HREF=\"https://www.ft.com/content/705eb84c-801d-4a96-b908-e366511e886a\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261125/i24.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261125/p24#a261125p24\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/705eb84c-801d-4a96-b908-e366511e886a\">US tech stocks fall, pushing the Nasdaq 100 down 4%+, as the AI trade continues to unwind; Nvidia and Anthropic fall 9%+, Broadcom drops 7%, and Micron 11%</A></B></SPAN>&nbsp; &mdash;&nbsp; Tech-heavy Nasdaq 100 falls more than 4% as weeks-long slide continues&nbsp; &mdash;&nbsp; A Wall Street sell-off intensified on Wednesday &hellip; </P>",
+      "published_at": "2026-11-25T15:10:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261125/p24",
+      "direct_source_url": "https://www.ft.com/content/705eb84c-801d-4a96-b908-e366511e886a",
+      "publisher": "Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.858
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "prismml.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "Ternary Bonsai 2.5 27B",
+      "url": "https://prismml.com/news/bonsai-2-5-27b",
+      "direct_source_url": "https://prismml.com/news/bonsai-2-5-27b",
+      "discovery_url": "https://news.ycombinator.com/item?id=50633922",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50633922",
+      "summary": "",
+      "published_at": "2026-11-24T20:08:03.000Z",
+      "engagement": {
+        "score": 511,
+        "comments": 162
+      },
+      "collection_mode": "api",
+      "score": 7.815
+    },
+    {
+      "title": "Source: President Trump is scheduled to lead a December 4 groundbreaking ceremony for TSMC's Phoenix plant expansion, deepening his chip sector involvement (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-25/trump-to-lead-tsmc-groundbreaking-in-arizona-after-nvidia-gambit",
+      "summary": "Bloomberg : Source: President Trump is scheduled to lead a December 4 groundbreaking ceremony for TSMC's Phoenix plant expansion, deepening his chip sector involvement &mdash; President Donald Trump will headline the groundbreaking on a major new semiconductor manufacturing project in Arizona next week &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-25/trump-to-lead-tsmc-groundbreaking-in-arizona-after-nvidia-gambit\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261125/i23.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261125/p23#a261125p23\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-25/trump-to-lead-tsmc-groundbreaking-in-arizona-after-nvidia-gambit\">Source: President Trump is scheduled to lead a December 4 groundbreaking ceremony for TSMC's Phoenix plant expansion, deepening his chip sector involvement</A></B></SPAN>&nbsp; &mdash;&nbsp; President Donald Trump will headline the groundbreaking on a major new semiconductor manufacturing project in Arizona next week &hellip; </P>",
+      "published_at": "2026-11-25T14:05:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261125/p23",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-25/trump-to-lead-tsmc-groundbreaking-in-arizona-after-nvidia-gambit",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.733
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "news.ycombinator.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "Ask HN: Anthropic is accusing my company of distilling. How can I prove I'm not?",
+      "url": "https://news.ycombinator.com/item?id=50630809",
+      "direct_source_url": null,
+      "discovery_url": "https://news.ycombinator.com/item?id=50630809",
+      "link_quality": "discussion_fallback",
+      "discussion_url": "https://news.ycombinator.com/item?id=50630809",
+      "summary": "Basically the title. Anthropic is accusing me and my company of using their API for distillation. We are not. We do not train our own models. Our only usage which I think could get us flagged is automated regression benchmarks whenever we change some AI settings. But this is not against their policy? Now I've got 24h to prove we didn't. Has anyone dealt with this too? How can you prove that you are not distilling Anthropic models without breaking your user's privacy?",
+      "published_at": "2026-11-24T16:45:44.000Z",
+      "engagement": {
+        "score": 413,
+        "comments": 317
+      },
+      "collection_mode": "api",
+      "score": 7.695
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "greydanus.github.io",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 7,
+      "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+      "url": "https://greydanus.github.io/2026/11/12/pengpt/",
+      "direct_source_url": "https://greydanus.github.io/2026/11/12/pengpt/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50637056",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50637056",
+      "summary": "",
+      "published_at": "2026-11-25T00:54:49.000Z",
+      "engagement": {
+        "score": 360,
+        "comments": 63
+      },
+      "collection_mode": "api",
+      "score": 7.646
+    },
+    {
+      "title": "Tether and Circle freezing $2B+ in crypto after Binance's $6.3B hack shows their centralized control and a shift from Circle's reliance on slow court orders (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/behind-binance-hack-a-reckoning-over-who-controls-crypto?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5NTUzMzQ1NCwiZXhwIjoxNzk2MTM4MjU0LCJhcnRpY2xlSWQiOiJUT1BYOERUOTZPU0owMCIsImJjb25uZWN0SWQiOiJGMTA3Nzk5MEIyMkE0MTk5OEQ5RUU0ODRCMzMwNEZFMyJ9.tz4g_aYbWfjxhHDgRp9QQ7oEYon1Y5imVMtlrkIo_m0",
+      "summary": "Bloomberg : Tether and Circle freezing $2B+ in crypto after Binance's $6.3B hack shows their centralized control and a shift from Circle's reliance on slow court orders &mdash; As North Korean cyberthieves were funneling billions out of Binance last month, the world's largest crypto exchange looked &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-24/behind-binance-hack-a-reckoning-over-who-controls-crypto?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5NTUzMzQ1NCwiZXhwIjoxNzk2MTM4MjU0LCJhcnRpY2xlSWQiOiJUT1BYOERUOTZPU0owMCIsImJjb25uZWN0SWQiOiJGMTA3Nzk5MEIyMkE0MTk5OEQ5RUU0ODRCMzMwNEZFMyJ9.tz4g_aYbWfjxhHDgRp9QQ7oEYon1Y5imVMtlrkIo_m0\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261125/i22.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261125/p22#a261125p22\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-24/behind-binance-hack-a-reckoning-over-who-controls-crypto?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5NTUzMzQ1NCwiZXhwIjoxNzk2MTM4MjU0LCJhcnRpY2xlSWQiOiJUT1BYOERUOTZPU0owMCIsImJjb25uZWN0SWQiOiJGMTA3Nzk5MEIyMkE0MTk5OEQ5RUU0ODRCMzMwNEZFMyJ9.tz4g_aYbWfjxhHDgRp9QQ7oEYon1Y5imVMtlrkIo_m0\">Tether and Circle freezing $2B+ in crypto after Binance's $6.3B hack shows their centralized control and a shift from Circle's reliance on slow court orders</A></B></SPAN>&nbsp; &mdash;&nbsp; As North Korean cyberthieves were funneling billions out of Binance last month, the world's largest crypto exchange looked &hellip; </P>",
+      "published_at": "2026-11-25T13:35:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261125/p22",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-24/behind-binance-hack-a-reckoning-over-who-controls-crypto?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5NTUzMzQ1NCwiZXhwIjoxNzk2MTM4MjU0LCJhcnRpY2xlSWQiOiJUT1BYOERUOTZPU0owMCIsImJjb25uZWN0SWQiOiJGMTA3Nzk5MEIyMkE0MTk5OEQ5RUU0ODRCMzMwNEZFMyJ9.tz4g_aYbWfjxhHDgRp9QQ7oEYon1Y5imVMtlrkIo_m0",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.632
+    },
+    {
+      "title": "OpenAI publishes a preprint that claims to prove that the matrix multiplication exponent (ω) is exactly 9/4, addressing a major open problem in mathematics (alphaXiv)",
+      "url": "https://www.alphaxiv.org/abs/2611.matrix-multiplication-exponent-lower-bound",
+      "summary": "alphaXiv : OpenAI publishes a preprint that claims to prove that the matrix multiplication exponent (&omega;) is exactly 9/4, addressing a major open problem in mathematics &mdash; Multiplying two $n\\times n$ matrices produces $n^2$ output numbers, yet computing each one as a separate dot product costs on the order of $n^3$ operations.",
+      "description_html": "<A HREF=\"https://www.alphaxiv.org/abs/2611.matrix-multiplication-exponent-lower-bound\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261125/i21.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261125/p21#a261125p21\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.alphaxiv.org/\">alphaXiv</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.alphaxiv.org/abs/2611.matrix-multiplication-exponent-lower-bound\">OpenAI publishes a preprint that claims to prove that the matrix multiplication exponent (&omega;) is exactly 9/4, addressing a major open problem in mathematics</A></B></SPAN>&nbsp; &mdash;&nbsp; Multiplying two $n\\times n$ matrices produces $n^2$ output numbers, yet computing each one as a separate dot product costs on the order of $n^3$ operations.</P>",
+      "published_at": "2026-11-25T13:23:06.000Z",
+      "discovery_url": "https://www.techmeme.com/261125/p21",
+      "direct_source_url": "https://www.alphaxiv.org/abs/2611.matrix-multiplication-exponent-lower-bound",
+      "publisher": "alphaXiv",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.544
+    },
+    {
+      "title": "Chinese vendors in Shenzhen's Huaqiangbei market still sell US-restricted Nvidia hardware, quoting $3M+ for Blackwell B300 servers, up from $2M two months ago (Joshua Yang/Washington Post)",
+      "url": "https://www.washingtonpost.com/world/2026/11/25/top-nvidia-chips-are-still-offer-china-despite-us-ban/?pwapi_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWFzb24iOiJnaWZ0IiwibmJmIjoxNzk1NTgyODAwLCJpc3MiOiJzdWJzY3JpcHRpb25zIiwiZXhwIjoxNzk2OTY1MTk5LCJpYXQiOjE3OTU1ODI4MDAsImp0aSI6ImRjN2IwMDllLWFkMzEtNDViZC1hNDBlLTdiZTZkY2QyYjgyOSIsInVybCI6Imh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS93b3JsZC8yMDI2LzExLzI1L3RvcC1udmlkaWEtY2hpcHMtYXJlLXN0aWxsLW9mZmVyLWNoaW5hLWRlc3BpdGUtdXMtYmFuLyJ9.jF3hc_e28ZcCrJ5Y8OmlgXSYteCO7jDAMSZ9yQp6kJg&itid=gfta",
+      "summary": "Joshua Yang / Washington Post : Chinese vendors in Shenzhen's Huaqiangbei market still sell US-restricted Nvidia hardware, quoting $3M+ for Blackwell B300 servers, up from $2M two months ago &mdash; Though black-market prices have surged amid the turmoil around Nvidia CEO Jensen Huang, traders in Shenzhen persist in hawking the company's best chips.",
+      "description_html": "<A HREF=\"https://www.washingtonpost.com/world/2026/11/25/top-nvidia-chips-are-still-offer-china-despite-us-ban/?pwapi_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWFzb24iOiJnaWZ0IiwibmJmIjoxNzk1NTgyODAwLCJpc3MiOiJzdWJzY3JpcHRpb25zIiwiZXhwIjoxNzk2OTY1MTk5LCJpYXQiOjE3OTU1ODI4MDAsImp0aSI6ImRjN2IwMDllLWFkMzEtNDViZC1hNDBlLTdiZTZkY2QyYjgyOSIsInVybCI6Imh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS93b3JsZC8yMDI2LzExLzI1L3RvcC1udmlkaWEtY2hpcHMtYXJlLXN0aWxsLW9mZmVyLWNoaW5hLWRlc3BpdGUtdXMtYmFuLyJ9.jF3hc_e28ZcCrJ5Y8OmlgXSYteCO7jDAMSZ9yQp6kJg&itid=gfta\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261125/i20.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261125/p20#a261125p20\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Joshua Yang / <A HREF=\"https://www.washingtonpost.com/\">Washington Post</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.washingtonpost.com/world/2026/11/25/top-nvidia-chips-are-still-offer-china-despite-us-ban/?pwapi_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWFzb24iOiJnaWZ0IiwibmJmIjoxNzk1NTgyODAwLCJpc3MiOiJzdWJzY3JpcHRpb25zIiwiZXhwIjoxNzk2OTY1MTk5LCJpYXQiOjE3OTU1ODI4MDAsImp0aSI6ImRjN2IwMDllLWFkMzEtNDViZC1hNDBlLTdiZTZkY2QyYjgyOSIsInVybCI6Imh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS93b3JsZC8yMDI2LzExLzI1L3RvcC1udmlkaWEtY2hpcHMtYXJlLXN0aWxsLW9mZmVyLWNoaW5hLWRlc3BpdGUtdXMtYmFuLyJ9.jF3hc_e28ZcCrJ5Y8OmlgXSYteCO7jDAMSZ9yQp6kJg&itid=gfta\">Chinese vendors in Shenzhen's Huaqiangbei market still sell US-restricted Nvidia hardware, quoting $3M+ for Blackwell B300 servers, up from $2M two months ago</A></B></SPAN>&nbsp; &mdash;&nbsp; Though black-market prices have surged amid the turmoil around Nvidia CEO Jensen Huang, traders in Shenzhen persist in hawking the company's best chips.</P>",
+      "published_at": "2026-11-25T13:00:57.000Z",
+      "discovery_url": "https://www.techmeme.com/261125/p20",
+      "direct_source_url": "https://www.washingtonpost.com/world/2026/11/25/top-nvidia-chips-are-still-offer-china-despite-us-ban/?pwapi_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWFzb24iOiJnaWZ0IiwibmJmIjoxNzk1NTgyODAwLCJpc3MiOiJzdWJzY3JpcHRpb25zIiwiZXhwIjoxNzk2OTY1MTk5LCJpYXQiOjE3OTU1ODI4MDAsImp0aSI6ImRjN2IwMDllLWFkMzEtNDViZC1hNDBlLTdiZTZkY2QyYjgyOSIsInVybCI6Imh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS93b3JsZC8yMDI2LzExLzI1L3RvcC1udmlkaWEtY2hpcHMtYXJlLXN0aWxsLW9mZmVyLWNoaW5hLWRlc3BpdGUtdXMtYmFuLyJ9.jF3hc_e28ZcCrJ5Y8OmlgXSYteCO7jDAMSZ9yQp6kJg&itid=gfta",
+      "publisher": "Joshua Yang/Washington Post",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.449
+    },
+    {
+      "title": "Sources: Walmart-backed Indian fintech PhonePe resumes its IPO preparations, targeting a Q1 2027 debut at a $12B to $15B valuation and raising $1.2B to $1.5B (Reuters)",
+      "url": "https://www.reuters.com/world/india/walmart-backed-phonepe-restarts-ipo-process-eyes-up-15-billion-valuation-market-2026-11-25/",
+      "summary": "Reuters : Sources: Walmart-backed Indian fintech PhonePe resumes its IPO preparations, targeting a Q1 2027 debut at a $12B to $15B valuation and raising $1.2B to $1.5B &mdash; Indian fintech PhonePe has resumed preparations for its initial public offering and is targeting a listing in the first three months &hellip;",
+      "description_html": "<A HREF=\"https://www.reuters.com/world/india/walmart-backed-phonepe-restarts-ipo-process-eyes-up-15-billion-valuation-market-2026-11-25/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261125/i19.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261125/p19#a261125p19\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/world/india/walmart-backed-phonepe-restarts-ipo-process-eyes-up-15-billion-valuation-market-2026-11-25/\">Sources: Walmart-backed Indian fintech PhonePe resumes its IPO preparations, targeting a Q1 2027 debut at a $12B to $15B valuation and raising $1.2B to $1.5B</A></B></SPAN>&nbsp; &mdash;&nbsp; Indian fintech PhonePe has resumed preparations for its initial public offering and is targeting a listing in the first three months &hellip; </P>",
+      "published_at": "2026-11-25T12:50:03.000Z",
+      "discovery_url": "https://www.techmeme.com/261125/p19",
+      "direct_source_url": "https://www.reuters.com/world/india/walmart-backed-phonepe-restarts-ipo-process-eyes-up-15-billion-valuation-market-2026-11-25/",
+      "publisher": "Reuters",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.361
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "Nemotron-Labs-VisualCreation: Pixel as Code for Agentic Visual Creation",
+      "url": "https://huggingface.co/papers/2611.31358",
+      "direct_source_url": "https://huggingface.co/papers/2611.31358",
+      "discovery_url": "https://huggingface.co/papers/2611.31358",
+      "link_quality": "original",
+      "summary": "Visual creation demands expressive imagery together with precise control over text, layout, and structure. We introduce Nemotron-Labs-VisualCreation, an agentic framework that connects these capabilities through Pixel as Code. Raster images are represented by learned discrete visual tokens, while structured artifacts use explicit programs. A shared generation-and-rendering interface connects these representations to visual feedback across images, vector graphics, webpages, and documents. A Nemotron-native harness coordinates planning and raster candidate selection, with targeted repair for editable structured and hybrid artifacts. To support this interface, we develop Nemotron-Labs-Image-Tokenizer, the autoregressive raster generator Nemotron-Labs-Image-30B-A3B, and the structured-code model family Nemotron-Labs-VisionCode. On approximately 178K images spanning six visual domains, our tokenizer improves reconstruction PSNR from 26.08 to 29.57 dB over Emu3.5 IBQ. It also provides 7.13x faster encoding and 10.93x faster decoding at batch size one on A100. In standalone evaluation, one Nemotron-Labs-VisionCode variant surpasses Kimi K3.1 Pro on the aggregate across Chart2Code, MMSVG,",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 77
+      },
+      "collection_mode": "api",
+      "score": 6.54
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "Mega-MMDF and DeepfakeBench-MM: Benchmarking Multimodal Deepfake Detection Across Diverse Forgery Pipelines",
+      "url": "https://huggingface.co/papers/2510.22622",
+      "direct_source_url": "https://huggingface.co/papers/2510.22622",
+      "discovery_url": "https://huggingface.co/papers/2510.22622",
+      "link_quality": "original",
+      "summary": "Audio-visual deepfakes can spread misinformation and enable impersonation, undermining trust in digital media. However, existing datasets provide limited coverage of forgery operations and their combinations, constraining detector development and systematic evaluation. We introduce Mega-MMDF, containing 100,000 real and 1.2 million forged clips across 22 pipelines spanning modality-specific manipulations, stacked forgeries, and joint audio-video generation. To assess its training value and enable fair comparisons, we develop DeepfakeBench-MM, which standardizes training and evaluation across 8 datasets and 10 detectors. Training-based detectors achieve their highest mean AUC when trained on Mega-MMDF, with gains of up to 0.0784 over the best alternative training dataset for each detector. Experiments on data scale and pipeline coverage further support the value of large, diverse training data. Cross-pipeline evaluations reveal bidirectional and asymmetric generalization. Training on composite forgeries does not necessarily enable detection of their constituent operations in isolation. Our analysis of altered inputs shows that modality masking can increase false alarms and missed de",
+      "published_at": "2026-11-19T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 8
+      },
+      "collection_mode": "api",
+      "score": 6.297
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "SpatialArena: Where Do Geometric Foundation Models Stand?",
+      "url": "https://huggingface.co/papers/2611.32816",
+      "direct_source_url": "https://huggingface.co/papers/2611.32816",
+      "discovery_url": "https://huggingface.co/papers/2611.32816",
+      "link_quality": "original",
+      "summary": "3D perception is shifting from task-specific pipelines to geometric foundation models: monocular depth networks, feed-forward 3D/4D reconstruction models, and vision--language models that predict geometry. However, their progress cannot be measured reliably. Published numbers are not comparable, because every paper samples frames, sets resolutions, and selects test splits differently. They are not robust because the alignment required for every up-to-scale prediction can outweigh the gap between models: fitting depth in the wrong space nearly triples its error, and standard trajectory alignment understates the error of failing methods by up to 2.6times. And they rarely cover long recordings, dynamic scenes, or aerial views. We present SpatialArena, an open arena that scores geometric models with the same metrics and rules, with robust and deterministic alignment. SpatialArena spans five tasks, from monocular depth to SLAM. It covers 23 public datasets with 418,929 images across indoor, outdoor, aerial, object-centric, and dynamic scenes, together with Spatial Arena, our own captures with accurate poses and depth. Evaluating 52 models, we find that single-image depth is close to sat",
+      "published_at": "2026-11-23T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 3
+      },
+      "collection_mode": "api",
+      "score": 6.201
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 7,
+      "title": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
+      "url": "https://huggingface.co/papers/2611.32649",
+      "direct_source_url": "https://huggingface.co/papers/2611.32649",
+      "discovery_url": "https://huggingface.co/papers/2611.32649",
+      "link_quality": "original",
+      "summary": "In-context learning (ICL) lets agents acquire new rules from context and adapt to user-specific requirements at inference time. The same frontier agents now operate both computers and robots, yet their ICL remains insufficiently assessed: existing benchmarks are largely offline, rely on text or static images, and risk training-data contamination, while robot evaluations are limited to method-level ablations. We present ICLWorld, an online benchmark that evaluates the ICL of agents from digital to physical worlds, covering computer use and robot use, together with UIverse, a unified harness that turns every environment into a user interface. We build 30 environments, record 630 demonstration videos (10+ hours), and design 160 tasks with customized, often counter-intuitive rules that cannot be satisfied without learning from the context. Each task comes with three rule versions, given as text or video, and we test generalization at three levels, from replaying the demonstration to new instances and unseen environments. Across six frontier models, the strongest agents, Claude Opus 5.5 and GPT-6 Astra, succeed on 82% and 76% of computer-use runs but only 27% and 26% of robot-use runs,",
+      "published_at": "2026-11-23T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 19
+      },
+      "collection_mode": "api",
+      "score": 6.071
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Distill to Loop: Turning Pretrained Diffusion Transformers into Looped Models with Adjustable Depth",
+      "url": "https://huggingface.co/papers/2611.31977",
+      "direct_source_url": "https://huggingface.co/papers/2611.31977",
+      "discovery_url": "https://huggingface.co/papers/2611.31977",
+      "link_quality": "original",
+      "summary": "Looped transformers reuse one block of shared weights along the depth of the network. Recent looped diffusion transformers are trained from scratch, which repeats the full pretraining cost although strong pretrained non-looped diffusion transformers exist. We propose Distill to Loop (Dooop), which distills a pretrained non-looped diffusion transformer into a looped student whose blocks are initialized from the teacher's. We cast distillation as a fixed-point iteration toward the teacher, in which the output after every loop is trained toward the teacher, and each loop is one step of an ordinary differential equation in depth. As a result, one model runs any number of loops at test time without retraining, and the higher-order ODE solvers of diffusion model sampling can be applied along the depth dimension for better results. Meanwhile, because a looped model produces an output after every loop, we also construct loop guidance between the outputs of different loop counts, which improves the generated samples at little extra compute. On SD3-medium, a looped student with about 37% of the teacher's parameters matches the teacher on average over GenEval, ImageReward, PickScore and HPSv2",
+      "published_at": "2026-11-23T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 3
+      },
+      "collection_mode": "api",
+      "score": 5.961
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "Separating Measurement Failures from Defence Failures in Split Language-Model Privacy",
+      "url": "https://huggingface.co/papers/2611.31752",
+      "direct_source_url": "https://huggingface.co/papers/2611.31752",
+      "discovery_url": "https://huggingface.co/papers/2611.31752",
+      "link_quality": "original",
+      "summary": "Split-training privacy evaluations fail through distinct mechanisms. Evaluators can overlook an exposed gradient channel, align reconstructions against shifted labels, or deploy uncalibrated probes before testing a candidate defence, while calibrated attacks can also refute real defences. Separating these failure modes alters which claims survive. We conduct a retrospective evidentiary reanalysis across four split-LLM campaigns and two cross-cutting scope checks covering host key custody and variational mutual-information bounds, mapping every recorded claim to one of five admissibility states (breach, non-detection, undetermined coverage, invalid measurement, or out-of-scope inference). Across a 19-configuration exploration, only four of 24 required probes qualified, yet those four calibrated probes still established qualified privacy breaches in 13 configurations, while utility or learning-gain failures eliminated the remaining 6. In a seven-cell defence-redesign pilot, 2 quantised configurations failed utility gates, calibrated next-byte structure probes breached the 0.02 gate on all 7 cells (0.097 to 0.112), and qualified punctuation-property probes reached 0.79 to 0.89, yieldi",
+      "published_at": "2026-11-23T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 4
+      },
+      "collection_mode": "api",
+      "score": 5.929
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 6,
+      "title": "Measuring Layer-wise Intrinsic Dimensionality of FFNs in LLMs via PCA",
+      "url": "https://huggingface.co/papers/2611.32782",
+      "direct_source_url": "https://huggingface.co/papers/2611.32782",
+      "discovery_url": "https://huggingface.co/papers/2611.32782",
+      "link_quality": "original",
+      "summary": "Modern large language models (LLMs) keep the feed-forward network (FFN) intermediate width identical across every layer, a convention inherited from the original Transformer. Yet mechanistic work suggests layers at different depths do qualitatively different work, raising a natural question: are their capacity demands also non-uniform, and if so, can a fixed parameter budget be allocated more wisely than uniformly? To probe this, we apply principal component analysis (PCA) to the input of each FFN down-projection and measure, for every layer, its intrinsic dimensionality as the smallest number of principal components needed to reconstruct the activation up to a fixed cosine similarity. Scanning 58 open-weight LLMs spanning 14 families and 70M to 72B parameters, we find a recurring middle-heavy profile in which middle layers carry higher intrinsic dimensionality than edge layers; the profile is robust to the calibration corpus, even across English and Chinese, and is largely preserved through post-training fine-tuning. As a direct test that this signal is structurally meaningful, we use it to guide width pruning in a knowledge-distilled student under a matched parameter budget: the",
+      "published_at": "2026-11-23T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 5.739
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 12,
+      "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
+      "url": "https://huggingface.co/papers/2611.33148",
+      "direct_source_url": "https://huggingface.co/papers/2611.33148",
+      "discovery_url": "https://huggingface.co/papers/2611.33148",
+      "link_quality": "original",
+      "summary": "Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the strongest teachers are closed models whose chain-of-thought is hidden behind an API. We show that the chain-of-thought can be left out altogether and that the long-horizon policy can be distilled from the teacher's actions alone. The student is trained on these trajectories with its reasoning block left empty, while a KL loss on a replay buffer of its own generations limits drift from its initial model. Surprisingly, the policy learned from these trajectories with an empty reasoning block carries over to inference with thinking enabled, where the student reasons in its own style while acting like the teacher, an effect we call cross-format transfer. Distilling the actions of Qwen3.6-27B raises the task success of Qwen3-4B on AppWorld from 7% to 18% and that of Qwen3-32B from 12% to 25%. We further introduce CoT-proxies, short summaries of the teacher's reasoning placed after the empty reasoning block, which ra",
+      "published_at": "2026-11-23T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 13
+      },
+      "collection_mode": "api",
+      "score": 5.593
+    }
+  ]
+}

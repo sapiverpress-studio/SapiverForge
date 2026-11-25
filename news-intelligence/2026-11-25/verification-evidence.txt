@@ -1,0 +1,84 @@
+Here are the verification notes for the news candidates for the **2026-11-25 UK morning briefing**.
+
+---
+
+### **Out-of-Scope Candidates (Not Recommended)**
+* **[0] Button Sounds** — Sound collection; out of scope.
+* **[1] Matrix Multiplication (HN link)** — Out of scope per candidate list. (See Candidate [13] for the in-scope coverage).
+* **[5] Models Can Communicate via Inference Servers** — Out of scope.
+* **[6] Bypassing iOS Safari's 60 FPS Limit** — Out of scope.
+* **[8] Ternary Bonsai 2.5 27B** — Out of scope.
+* **[11] PenGPT** — Out of scope.
+* **[12] Tether and Circle Crypto Freeze** — Crypto asset/exchange enforcement; out of scope.
+
+---
+
+### **In-Scope Candidates**
+
+#### **[2] Anthropic Details Migration of Messages API from Python to Rust**
+* **What is confirmed:** Anthropic published a technical post detailing the full migration of its primary Messages API routing service from Python to Rust. Anthropic confirmed that a team with zero initial Rust experience used Claude Code to generate the vast majority of the Rust code, verifying output equivalence by routing shadow production traffic through both Python and Rust services. The migration yielded a 40%–50% reduction in CPU consumption and a 10%–20% improvement in time-to-first-token latency.
+* **Important caveats:** The performance improvements apply to the API proxy/routing layer, not to the underlying neural network token generation speed.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+#### **[3] Google Releases Cogentic Math Papers on GitHub**
+* **What is confirmed:** Google Research uploaded a suite of theoretical mathematics preprints to its GitHub repository (`google-research/cogentic_research_papers`). The papers were produced by "Cogentic," Google’s multi-agent AI framework for automated proof discovery. The lead paper claims an unconditional time bound of $L_N[1/3, O(1)]$ for integer factorization.
+* **Important caveats:** The repository explicitly notes these preprints are not official Google products. The papers have not undergone formal peer review, and independent mathematicians have not yet verified the mathematical proofs.
+* **Suitable for publication today:** **Yes** (must emphasize the lack of peer review/verification).
+
+---
+
+#### **[4] WSJ: US Officials Brief Congress on Jensen Huang / Alice Huang Briefing**
+* **What is confirmed:** *The Wall Street Journal* reported that US intelligence officials briefed Congressional staffers that there is no evidence China's Ministry of State Security (MSS) directed Alice Huang to spy on Jensen Huang, characterising the affair as amorous/personal.
+* **Important caveats:** Intelligence agencies had previously tracked contacts between Alice Huang and Chinese security officials, which continues to fuel bipartisan congressional scrutiny over supply chain security risks following Jensen Huang's recent reinstatement as Nvidia CEO.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+#### **[7] FT: US Tech Stocks Fall as AI Trade Unwinds**
+* **What is confirmed:** *The Financial Times* reported a sharp market downturn on Nov 25, 2026, driving the Nasdaq 100 down over 4%. Key AI and semiconductor equities saw steep single-day declines, including Nvidia, Anthropic exposure, Broadcom (-7%), and Micron (-11%).
+* **Important caveats:** Market sell-offs represent broader investor sentiment shifts and macroeconomic recalibration rather than specific operational failures at individual firms.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+#### **[9] Bloomberg: Trump Scheduled to Lead TSMC Arizona Groundbreaking**
+* **What is confirmed:** A White House official disclosed that US President Donald Trump is scheduled to headline a December 4, 2026 groundbreaking ceremony for TSMC's Phoenix, Arizona fab expansion.
+* **Important caveats:** TSMC has not independently issued a formal public schedule confirming program details. It remains unconfirmed whether Jensen Huang (scheduled to testify before the US Senate on Dec 3) will attend.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+#### **[10] Ask HN: Anthropic Distillation Accusation**
+* **What is confirmed:** An anonymous user posted a query on Hacker News claiming their startup received a 24-hour warning from Anthropic regarding API distillation policies.
+* **Important caveats:** This is an unverified single-user forum post lacking independent documentation or official statement from Anthropic.
+* **Suitable for publication today:** **No.**
+
+---
+
+#### **[13] OpenAI Preprint Claims Matrix Multiplication Exponent Is 9/4 ($\omega = 2.25$)**
+* **What is confirmed:** OpenAI published a preprint on GitHub/alphaXiv claiming to prove that the optimal square matrix multiplication exponent ($\omega$) is exactly $9/4$ (2.25) across all fields, matching its earlier upper bound with a new lower bound proof for arithmetic circuits.
+* **Important caveats:** The paper is an un-peer-reviewed theoretical preprint. As an asymptotic complexity result, it does not provide immediate practical speedups for current GPU hardware or PyTorch matrix operations.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+#### **[14] WaPo: Restricted Nvidia Hardware Sold in Shenzhen at $3M+**
+* **What is confirmed:** *The Washington Post* reported that black-market electronics vendors in Shenzhen's Huaqiangbei market continue to offer US-restricted Nvidia Blackwell B300 server rigs (8-GPU configuration). Asking prices have risen to $3M–$3.4M per server, up from ~$2M two months prior.
+* **Important caveats:** *The Washington Post* noted it could not independently verify the physical authenticity or operational state of the B300 hardware offered by market vendors.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+#### **[15] Reuters: PhonePe Resumes IPO Prep targeting Q1 2027 Debut**
+* **What is confirmed:** *Reuters* reported that Walmart-backed Indian fintech PhonePe has restarted preparations for an initial public offering in India, aiming for a Q1 2027 debut at a $12B–$15B valuation. The offering is expected to raise $1.2B–$1.5B via a secondary share sale (OFS).
+* **Important caveats:** The report relies on anonymous sources familiar with confidential discussions. PhonePe and Walmart have not issued official public statements confirming the timeline or valuation target.
+* **Suitable for publication today:** **Yes.**
+
+---
+
+#### **[16]–[19] Hugging Face Research Papers (Nemotron VisualCreation, Mega-MMDF, SpatialArena, ICLWorld)**
+* **What is confirmed:** Authors uploaded preprints to arXiv/Hugging Face detailing specific frameworks: Nvidia's agentic visual generation framework [16], a deepfake detection benchmark [17], a 3D perception arena [18], and an in-context learning agent benchmark [19].
+* **Important caveats:** Claims represent unverified assertions by the respective paper authors without external peer review or independent replication.
+* **Suitable for publication today:** **Low Priority / Optional.** (Suitable as secondary academic research inclusions only).

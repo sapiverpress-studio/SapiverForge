@@ -1,0 +1,438 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22PhonePe%22+%22IPO%22+%22Reuters%22+%22November+25%22+OR+%222026%22&client=app-vertex-grounding&safesearch=active\">&quot;PhonePe&quot; &quot;IPO&quot; &quot;Reuters&quot; &quot;November 25&quot; OR &quot;2026&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22TSMC%22+%22Trump%22+%22Arizona%22+OR+%22Phoenix%22+%22groundbreaking%22&client=app-vertex-grounding&safesearch=active\">&quot;TSMC&quot; &quot;Trump&quot; &quot;Arizona&quot; OR &quot;Phoenix&quot; &quot;groundbreaking&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22google-research%22+%22cogentic_research_papers%22+OR+%22Cogentic%22+%22Integer+Factorization%22&client=app-vertex-grounding&safesearch=active\">&quot;google-research&quot; &quot;cogentic_research_papers&quot; OR &quot;Cogentic&quot; &quot;Integer Factorization&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Anthropic%22+%22migrating%22+%22Rust%22+%22Messages+API%22&client=app-vertex-grounding&safesearch=active\">&quot;Anthropic&quot; &quot;migrating&quot; &quot;Rust&quot; &quot;Messages API&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Jensen+Huang%22+%22Alice+Huang%22+%22MSS%22+%22WSJ%22+OR+%22Wall+Street+Journal%22&client=app-vertex-grounding&safesearch=active\">&quot;Jensen Huang&quot; &quot;Alice Huang&quot; &quot;MSS&quot; &quot;WSJ&quot; OR &quot;Wall Street Journal&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Nasdaq+100%22+%22Financial+Times%22+%22November+25%22+%222026%22+OR+%22sell-off%22+%22unwind%22&client=app-vertex-grounding&safesearch=active\">&quot;Nasdaq 100&quot; &quot;Financial Times&quot; &quot;November 25&quot; &quot;2026&quot; OR &quot;sell-off&quot; &quot;unwind&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22OpenAI%22+%22matrix+multiplication+exponent%22+%229/4%22+OR+%222.25%22&client=app-vertex-grounding&safesearch=active\">&quot;OpenAI&quot; &quot;matrix multiplication exponent&quot; &quot;9/4&quot; OR &quot;2.25&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Huaqiangbei%22+%22Blackwell%22+%22B300%22+%22Washington+Post%22+%22November+25%22+OR+%222026%22&client=app-vertex-grounding&safesearch=active\">&quot;Huaqiangbei&quot; &quot;Blackwell&quot; &quot;B300&quot; &quot;Washington Post&quot; &quot;November 25&quot; OR &quot;2026&quot;</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-PM2QdG4IZ-3mY4GBE_ADG3bSFytKFkaV7z-C1DMUyChjozubIfFr_euZVPysnxsgBQw91KeDqbk-_Jkjgv_QsnvDTB_GQsKjVmxkL-Ek2yQYtKg14BPRTfyBMZcO-iN71SIlCCmvC_SeEq3pTHGczY5FES4YoRU=",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-34HrEl_ztV2E0E_SAHT6WUvu14AE8YyuvEWrMV-GVx0jokEZi6-RN_NDxT2EwsRW7QKpXEfgUaSm75dQbWcnpKrnXTpxezeGt3oj8ztVNNWZloTda9P3PzoqyX_8HH3gLXRYccVlyQH9MidA_t7A4Bp4UMq1DvJG2bWZDNq7tpuepSYCPpCkFyZ1pLPbqqBub_50HiDn-0Bfkt4FosQfyWFGE-S9kr2loyPEaZ8=",
+        "title": "explainx.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFE3TxSg5uBTofkkEDQYXrmW2bm7cP6DE81hzhOAsLDHiV2bgqCUARW1bMC50lj0qiRwU_2euTvhHZSzW4Do7piUY3Tzy2daNMtZix25-P8EjyJNomW3ABw5h5Gh3nZ4_xepoFwPbTw7grqTP_0w0rFPhpQKqtaHHlhgqwzxBnUtX7GxPj-0dl9HydfHVsg2N22ip3dXX3L5B93YQOZSr6gEq5MKCf47zZWl7M9B-S",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEh7ajCSlxU_L6s6EcWeNcc0BRFHVKuVU7j7Brq_utr9ZLzz2JCB5NVcvmBiOiDuwmythi8Cc8SDxOEj-c8auyjYIKH08NszK14gkl-MtCoRzKSrPJ96Q_xfKgzf-nJ4Fy3SOIAeQ7WpCpUAVhPwhHe4IAsmr-C0qn2BbkOn8ygNNcqhn8q32-17cIVW2bd48IVUZog78T287ODGVUxeLVCBwGnYoiKBaHMmvgoLPRRUAPnWz3Vf1M3",
+        "title": "daily.dev"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjNDliPLieB3EBzjGzLUYiuNAzL79aFcsqd0FCJ-23WqGryXAHkyS9NOJHq9MEjv_8SxI_Fqe8H_7LOeljT5QA906UOpA0Nm2A_MtaDcs9MK76YWwLRHXDByOZQf0dXp_IUN5zGTj-M5kipwqAgeUxCEYymOAfAQVJMQZZXvzib1DxWbCOaJUlksgeJib5FsQxdiQHB3rEBfGqq9L0sZ7laEC5kX58uINA9fQqhxZacxBFCvCKEhdOYvtqp9QjvEo=",
+        "title": "officechai.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZYcRJg7CuWT5wfcgwyWB3IB6SzGWn-VJhgwzgCHWD-OwjEOKsbKXlrDLsT2zjJ9mdATVEgV-45yrPoCW88qDjb5bupMDt7zTuUvFSmNMfekmCO765RJ6NJVCPnREE1v7K-CExJ0MtX3ULddeuP-zS_BbzX8E4bteuATn1GCoJaiMu0cDHkkwHgw==",
+        "title": "fourweekmba.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAmok9U-I5cVxOKBl14FpBStSvT0zq6yp4Xkh5BtHsmO9g1ktQ7BC4iB0WltOCQWmBQ07ddYavfPml9PaYpglHakOWyT6b3pI9Vp6zsVCyDTLMohDxzofowVW-H6CfxkCNyw==",
+        "title": "fnnews.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUACgC6aaIxXaXqN3XQC2H_aRkPWlDYZX2Jonx2u4fpiaC8BpcceHLaNU6EFOUdoKbSVd8rWKhOx3fsAWtdWe8iLXFJAK26NeEd1W7lQouTUYNqSwTrEJlIUr3RIVqr_ru4pobw4_9bOmKMEW5Hsg8swUkIM6sJF4ndr7us1yZ4XGklsFkdzP_KzzR3dbOdbuPKPnYmKYr9aKz8f30Z46xJDoLmNmtxc4k_wBngmwpUhZpNQ==",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAyZqHCr19n0p5pqNt8RjJMMTQAuxb9GVfX9kvg7DyoCMGweuAwH33jFUAFUs_YS6ngP0kNbpmv5A4hCfl1Dxr7Dq5S7GzdzpIT6x52LWCTowjy4VCQ388Wv9mG8u20sPcuI4tyUgQyQ0DcsA1McWhWN1Q6GO91J0=",
+        "title": "taipeitimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1xDxWeKV5rBDBTRReJU8DCEsxyATfwy35KXCSThHxsHH6hYDHs4xDhN2e1QJngR3smxVILlZJ-M-O2SW0PJ2jRicoidUf6L6F6-Jlt4F_61S4kahRW14z6hKO9AcF",
+        "title": "recessionalert.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3erRJLysq72Br6_UcSa9YVZKiLB8sbBO-Qts12IbBEZJ7zdc9ROtrBLQeteM6IkBYQaNK1CTZpNgjvr_D8qxEJoT8VUrSlS70NkqQWp4hMeYqmJgMVolTSl2KnzrRcQYk6ATygmnWm66p5aSXdkVIkGbluUtDJFrKbXnbSvlUd1zqxGxYLYUM4PffKkriH7QGZVZA5OKMXN40qSw=",
+        "title": "explainx.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtxl0aMyQj94rKuqCuAp_VXST8d2MfAx7blWT5RQDt6wLbgK-gVyQQlaxpRqWX07RA46OyWTYaBXK8i_VchmUdR0dsbACSCxzrHOxj0O6Ag5yZ1k0b6O0wfR2ELBxD01c=",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9PD3IqFDYzWK14qqkorsbA_K6kQcaRX8Yct7ICt2S6xNKg4MgmBTdbP7TWwEGmpge9U3xbO9P7yvf1QaSTTIyDJsb1pWO2gxwczneKkxjrxfuV0SSrK5b7yDVlKqAwZOwHERJkaL34PzYvUQhKFAOJFYX8UshQ2qiXg==",
+        "title": "cryptobriefing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwfoAceLfCQjCMrfulwKzCQqkJDDfPpPkhIEi9HTa-gJetsCgJ33pS2HH1g1CE9iAPlIxtEPyx9nAJ1mcscBUagLa1E0hseCsglRGLZ8JtJE17Xd9NeHmAGhLfOMfK5Q==",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEb6d2Ws29bZOlAFowWhf0JoAE6fsuV0HHnG9yliOPNSEkjHB27q3DD4v9T4Aqgh0tgt8Ci_LItiLnzVzyxF-aOF_aXJEEMLHr7fh3ir-Cd6RcOSwJQaaOVkBbWBFJRsrw=",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGc4eqa2MoFclLUyfQn-yw31174YrdQ2p9aX_eeNtatQzK4Wc_pqmzH7Z55WyElZfpvPLIQgQvBEzXFrtZRYQ7Z6CTvj90elIdPtPeZLP_XJJdLuVcscMPW4mE0mebUh3A=",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeYKdtqy2aM726vj9SLJ0aCVNwijcI6bli4dpSWfY_MJ2oQh8v-bf2LEYAM8nV1EelbM_DyxoD1oZbS6nWwRhxL892mvycxXso-jMWtEcCIebuQUOFISYOg-trNF-giAPWtucyzqXJW8NP14xJfOekLJseCy5t0RdmBsSDaUm8ec82ePn-nI4hBB6D9GnLoXbdWul8iAS8SDVcnQ==",
+        "title": "washingtonpost.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrqWSwcWzs2SG_U0YgNVhjI5sL10hplZ-yG9t5MxYWQoJm3RXXOxzrDWIx4f4-nZllQHvfNf0tEHMgQYmIRNZiCNmpRJuT4Un_exFYgrBk9BQwhiuu_GYLjOV_feKNuyReCLj3-wFyMj5F2xQElVwTwij_ZCRZLnYdIM1XGntNblXnzUj1qD-mIBLgtbW--puuIIZG2gzMsx63Cmwc",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6NxLbK4YExByFzdsO-WaQXp0UTxTYaKUtPoxtWtLkymH91B8bsw_ZAquNbOwhVXGoXthyB-V7zRIHVYKpxY1cssVIZiQ93DuCI4xCIfnOy7YGnUUzTwOwkiZM7PKkTXzuzq8cFQusc1Dbz3xpLR8NYuconp8Lcw3tEdV1MxAIQspQzf9H7RxPg_oPMzwWvouS4XH3AhhZTfStf2vn7CbY5VsijqFscYwlj9OmHe70GqwRMGNHejpFGTOIIOCpou4=",
+        "title": "wincountry.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZFWC4UDuqHwaOUC_36rlaJsxgjpChie4MGqgYLCjvy11dT7m9sq8acDtQ2GJ2e9IeBVmmCgAZzvNr40d2B7vJlcSINRN6j96WYu2bPhN2q0DW7L7WHorR267ulsIFTuqlp6LCZqUonvRGy4TZfOHXnw==",
+        "title": "tldr.tech"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLmxVOik81phIXw1W1vfKSGFFrxdOr5gyDKvdoaEesn7V7lGgnX0qBWVQWWQ2uHQ4-DNq7SfXU7msy7-7MM5yT16ROVT2eJheJRE9PFTxOGfnDr2k_OjJ0XSR00DIhDC1cgOCevhLWkhYiR-Zb3uJKEpx6dXe0slNI0tgAEB2PizBx5LmyX4DUxIsFS96HsR6w7y7Jq-NAJsQfhptSmr5Lzkz1c8xTfP9Ikh8yN20=",
+        "title": "mlq.ai"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 777,
+        "endIndex": 929,
+        "text": "**What is confirmed:** Anthropic published a technical post detailing the full migration of its primary Messages API routing service from Python to Rust"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 931,
+        "endIndex": 1060,
+        "text": "Anthropic confirmed that a team with zero initial Rust experience used Claude Code to generate the vast majority of the Rust code"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 931,
+        "endIndex": 1165,
+        "text": "Anthropic confirmed that a team with zero initial Rust experience used Claude Code to generate the vast majority of the Rust code, verifying output equivalence by routing shadow production traffic through both Python and Rust services"
+      },
+      "groundingChunkIndices": [
+        1,
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1167,
+        "endIndex": 1288,
+        "text": "The migration yielded a 40%–50% reduction in CPU consumption and a 10%–20% improvement in time-to-first-token latency"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1292,
+        "endIndex": 1441,
+        "text": "**Important caveats:** The performance improvements apply to the API proxy/routing layer, not to the underlying neural network token generation speed"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1558,
+        "endIndex": 1720,
+        "text": "**What is confirmed:** Google Research uploaded a suite of theoretical mathematics preprints to its GitHub repository (`google-research/cogentic_research_papers`)"
+      },
+      "groundingChunkIndices": [
+        2,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1722,
+        "endIndex": 1827,
+        "text": "The papers were produced by \"Cogentic,\" Google’s multi-agent AI framework for automated proof discovery"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1829,
+        "endIndex": 1924,
+        "text": "The lead paper claims an unconditional time bound of $L_N[1/3, O(1)]$ for integer factorization"
+      },
+      "groundingChunkIndices": [
+        2,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1928,
+        "endIndex": 2031,
+        "text": "**Important caveats:** The repository explicitly notes these preprints are not official Google products"
+      },
+      "groundingChunkIndices": [
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2033,
+        "endIndex": 2159,
+        "text": "The papers have not undergone formal peer review, and independent mathematicians have not yet verified the mathematical proofs"
+      },
+      "groundingChunkIndices": [
+        3,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2355,
+        "endIndex": 2632,
+        "text": "**What is confirmed:** *The Wall Street Journal* reported that US intelligence officials briefed Congressional staffers that there is no evidence China's Ministry of State Security (MSS) directed Alice Huang to spy on Jensen Huang, characterising the affair as amorous/personal"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2636,
+        "endIndex": 2763,
+        "text": "**Important caveats:** Intelligence agencies had previously tracked contacts between Alice Huang and Chinese security officials"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2636,
+        "endIndex": 2915,
+        "text": "**Important caveats:** Intelligence agencies had previously tracked contacts between Alice Huang and Chinese security officials, which continues to fuel bipartisan congressional scrutiny over supply chain security risks following Jensen Huang's recent reinstatement as Nvidia CEO"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3029,
+        "endIndex": 3159,
+        "text": "**What is confirmed:** *The Financial Times* reported a sharp market downturn on Nov 25, 2026, driving the Nasdaq 100 down over 4%"
+      },
+      "groundingChunkIndices": [
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3611,
+        "endIndex": 3807,
+        "text": "**What is confirmed:** A White House official disclosed that US President Donald Trump is scheduled to headline a December 4, 2026 groundbreaking ceremony for TSMC's Phoenix, Arizona fab expansion"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3811,
+        "endIndex": 3919,
+        "text": "**Important caveats:** TSMC has not independently issued a formal public schedule confirming program details"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3921,
+        "endIndex": 4029,
+        "text": "It remains unconfirmed whether Jensen Huang (scheduled to testify before the US Senate on Dec 3) will attend"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4604,
+        "endIndex": 4799,
+        "text": "**What is confirmed:** OpenAI published a preprint on GitHub/alphaXiv claiming to prove that the optimal square matrix multiplication exponent ($\\omega$) is exactly $9/4$ (2.25) across all fields"
+      },
+      "groundingChunkIndices": [
+        11,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4604,
+        "endIndex": 4886,
+        "text": "**What is confirmed:** OpenAI published a preprint on GitHub/alphaXiv claiming to prove that the optimal square matrix multiplication exponent ($\\omega$) is exactly $9/4$ (2.25) across all fields, matching its earlier upper bound with a new lower bound proof for arithmetic circuits"
+      },
+      "groundingChunkIndices": [
+        13,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4890,
+        "endIndex": 4966,
+        "text": "**Important caveats:** The paper is an un-peer-reviewed theoretical preprint"
+      },
+      "groundingChunkIndices": [
+        14,
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4968,
+        "endIndex": 5106,
+        "text": "As an asymptotic complexity result, it does not provide immediate practical speedups for current GPU hardware or PyTorch matrix operations"
+      },
+      "groundingChunkIndices": [
+        15,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5235,
+        "endIndex": 5447,
+        "text": "**What is confirmed:** *The Washington Post* reported that black-market electronics vendors in Shenzhen's Huaqiangbei market continue to offer US-restricted Nvidia Blackwell B300 server rigs (8-GPU configuration)"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5449,
+        "endIndex": 5530,
+        "text": "Asking prices have risen to $3M–$3.4M per server, up from ~$2M two months prior"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5534,
+        "endIndex": 5712,
+        "text": "**Important caveats:** *The Washington Post* noted it could not independently verify the physical authenticity or operational state of the B300 hardware offered by market vendors"
+      },
+      "groundingChunkIndices": [
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5841,
+        "endIndex": 6047,
+        "text": "**What is confirmed:** *Reuters* reported that Walmart-backed Indian fintech PhonePe has restarted preparations for an initial public offering in India, aiming for a Q1 2027 debut at a $12B–$15B valuation"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6049,
+        "endIndex": 6129,
+        "text": "The offering is expected to raise $1.2B–$1.5B via a secondary share sale (OFS)"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6133,
+        "endIndex": 6233,
+        "text": "**Important caveats:** The report relies on anonymous sources familiar with confidential discussions"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6235,
+        "endIndex": 6341,
+        "text": "PhonePe and Walmart have not issued official public statements confirming the timeline or valuation target"
+      },
+      "groundingChunkIndices": [
+        20,
+        18
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"PhonePe\" \"IPO\" \"Reuters\" \"November 25\" OR \"2026\"",
+    "\"TSMC\" \"Trump\" \"Arizona\" OR \"Phoenix\" \"groundbreaking\"",
+    "\"google-research\" \"cogentic_research_papers\" OR \"Cogentic\" \"Integer Factorization\"",
+    "\"Anthropic\" \"migrating\" \"Rust\" \"Messages API\"",
+    "\"Jensen Huang\" \"Alice Huang\" \"MSS\" \"WSJ\" OR \"Wall Street Journal\"",
+    "\"Nasdaq 100\" \"Financial Times\" \"November 25\" \"2026\" OR \"sell-off\" \"unwind\"",
+    "\"OpenAI\" \"matrix multiplication exponent\" \"9/4\" OR \"2.25\"",
+    "\"Huaqiangbei\" \"Blackwell\" \"B300\" \"Washington Post\" \"November 25\" OR \"2026\""
+  ]
+}

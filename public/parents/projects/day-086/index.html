@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#163d63">
+<title>My Word Ladder Race</title>
+<style>
+:root{--ink:#183653;--muted:#66788a;--blue:#2874d0;--coral:#f06f62;--gold:#f4bd4d;--mint:#4fc1a3;--line:#dbe6ef;--shadow:0 16px 40px #17314b18}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 8% 0,#dceffd,transparent 31%),radial-gradient(circle at 94% 8%,#fff0d4,transparent 27%),#f5f3ef;color:var(--ink);font:16px/1.5 ui-rounded,"Avenir Next",system-ui,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(1080px,100%);margin:auto;padding:18px clamp(13px,3vw,28px) 48px}.top{display:flex;justify-content:space-between;align-items:center;gap:14px}.brand{font-weight:950;letter-spacing:.025em}.brand span{color:var(--coral)}.back{font-weight:850;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--gold)}.hero{padding:38px 0 22px}.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:950;color:var(--blue)}h1{font-size:clamp(2.5rem,8vw,5rem);line-height:.93;letter-spacing:-.058em;margin:.3rem 0 .9rem}h2{margin:.1rem 0 1rem}.hero p{max-width:760px;color:var(--muted);font-size:clamp(1rem,2vw,1.22rem);margin:0}.panel{background:#fff;border:1px solid #fff;border-radius:26px;padding:clamp(14px,3vw,25px);box-shadow:var(--shadow);margin:18px 0}.setup{display:grid;grid-template-columns:1fr .7fr auto;gap:10px;align-items:end}.field label{display:block;font-size:.73rem;letter-spacing:.08em;text-transform:uppercase;font-weight:950;color:var(--muted);margin:0 0 5px}.field input,.field select{width:100%;border:2px solid var(--line);border-radius:13px;padding:10px 11px;color:var(--ink);background:#fff;font-weight:750}.field input:focus,.field select:focus{outline:3px solid #2874d025;border-color:var(--blue)}.btn{border:0;border-radius:14px;min-height:45px;padding:10px 16px;background:var(--ink);color:#fff;font-weight:900}.btn.primary{background:var(--blue)}.btn.soft{background:#eaf3fc;color:var(--ink)}.btn.coral{background:var(--coral)}.game{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px}.board{background:linear-gradient(145deg,#173e66,#23598c);border-radius:24px;padding:clamp(16px,4vw,30px);color:#fff;min-height:560px;position:relative;overflow:hidden}.board:before{content:"";position:absolute;width:260px;height:260px;border:45px solid #ffffff0c;border-radius:50%;right:-80px;top:-90px}.mission{text-align:center;position:relative}.mission small{text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#bcd8f2}.goal-row{display:flex;align-items:center;justify-content:center;gap:16px;margin:10px 0 18px}.word{display:flex;gap:6px;justify-content:center}.tile{width:clamp(42px,9vw,64px);height:clamp(50px,11vw,74px);display:grid;place-items:center;background:#fff;color:var(--ink);border-radius:13px;font-size:clamp(1.45rem,5vw,2.25rem);font-weight:950;box-shadow:0 7px 0 #bad3e8}.target .tile{background:var(--gold);box-shadow:0 7px 0 #c5912a}.arrow{font-size:1.8rem;color:#c9e1f5}.ladder{display:grid;gap:11px;justify-items:center;margin:18px auto;position:relative}.step{display:flex;gap:6px;animation:pop .2s ease}.step .tile{width:46px;height:52px;font-size:1.45rem;box-shadow:0 5px 0 #bad3e8}.step .changed{background:#b7f0df;box-shadow:0 5px 0 #49a98d}.step.current .tile{outline:3px solid var(--gold)}@keyframes pop{from{transform:scale(.9);opacity:0}}.entry{display:flex;justify-content:center;gap:9px;margin-top:18px;position:relative}.entry input{text-transform:uppercase;letter-spacing:.22em;text-align:center;border:3px solid #bcd8f2;border-radius:14px;padding:11px;width:min(230px,55%);font-size:1.35rem;font-weight:950}.message{text-align:center;min-height:30px;margin:10px 0 0;font-weight:850;color:#d9ebfb}.stats{display:flex;justify-content:center;gap:25px;margin:12px 0;color:#d4e7f7;font-weight:800}.stats b{color:#fff;font-size:1.2rem}.side{display:flex;flex-direction:column;gap:14px}.card{background:#faf8f3;border:1px solid #ece5da;border-radius:18px;padding:14px}.how{display:grid;gap:9px}.how div{display:flex;gap:10px;align-items:flex-start}.num{flex:0 0 28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--gold);font-weight:950}.history{display:grid;gap:8px}.history-item{display:grid;grid-template-columns:1fr auto;gap:8px;background:#fff;border-radius:11px;padding:9px}.pill{background:#e8f3fc;border-radius:99px;padding:3px 8px;font-size:.78rem;font-weight:900}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.privacy{background:#e7f9f3}.prompt{background:#173e66;color:#fff}.prompt p{color:#d8eafa}.prompt pre{white-space:pre-wrap;background:#102f50;border-radius:15px;padding:15px;font:700 .93rem/1.55 ui-rounded,system-ui;user-select:all}.small{font-size:.88rem;color:var(--muted)}footer{text-align:center;color:var(--muted);margin-top:30px}@media(max-width:790px){.game{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}.board{min-height:520px}}@media(max-width:560px){.panel{border-radius:20px;padding:12px}.hero{padding-top:28px}.setup,.side,.two{grid-template-columns:1fr}.setup .btn{width:100%}.goal-row{gap:9px}.board{min-height:500px}.stats{gap:14px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<nav class="top"><div class="brand">AI <span>Inquisitive</span> Parents</div><a class="back" href="https://suite.sapiverpress.co.uk">Explore the suite</a></nav>
+<header class="hero"><div class="eyebrow">Day 086 · made for your word explorer</div><h1>My Word Ladder Race</h1><p>Change one letter at a time to climb from the start word to the target. Every step must be a real word — use a hint, undo a move and try to beat your personal best.</p></header>
+
+<section class="panel">
+  <div class="setup">
+    <div class="field"><label for="player">Player name</label><input id="player" maxlength="18" value="Explorer"></div>
+    <div class="field"><label for="length">Challenge</label><select id="length"><option value="3">3-letter ladders</option><option value="4">4-letter ladders</option></select></div>
+    <button class="btn primary" id="newBtn">New ladder</button>
+  </div>
+</section>
+
+<section class="panel game">
+  <div class="board">
+    <div class="mission"><small>Change one letter at a time</small><div class="goal-row"><div class="word" id="startWord"></div><div class="arrow">→</div><div class="word target" id="targetWord"></div></div></div>
+    <div class="ladder" id="ladder"></div>
+    <form class="entry" id="wordForm"><input id="guess" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Next word"><button class="btn coral">Add word</button></form>
+    <div class="message" id="message" aria-live="polite">Type a real word that changes exactly one letter.</div>
+    <div class="stats"><span>Moves <b id="moves">0</b></span><span>Time <b id="time">0:00</b></span><span>Hints <b id="hints">0</b></span></div>
+    <div class="toolbar" style="display:flex;gap:9px;justify-content:center;flex-wrap:wrap;position:relative"><button class="btn soft" id="hintBtn" type="button">Give me a hint</button><button class="btn soft" id="undoBtn" type="button">Undo</button></div>
+  </div>
+  <aside class="side">
+    <div class="card"><h2>How to play</h2><div class="how"><div><span class="num">1</span><span>Look at the current word and the golden target.</span></div><div><span class="num">2</span><span>Change exactly one letter to make another real word.</span></div><div><span class="num">3</span><span>Keep climbing until you reach the target word.</span></div></div></div>
+    <div class="card"><h2>Recent races</h2><div class="history" id="history"></div><button class="btn soft" id="clearScores" type="button">Clear scores</button></div>
+  </aside>
+</section>
+
+<div class="two">
+  <section class="panel"><h2>Friendly word play</h2><p>The game uses a small built-in set of familiar words and checks every move instantly. A hint reveals one valid next step but adds to the hint count, so children can choose support without being stuck.</p><p class="small">Words and scores are for informal family play rather than spelling or reading assessment.</p></section>
+  <section class="panel privacy"><h2>Private by design</h2><p>The player name and up to eight recent results stay in local browser storage on this device. Nothing is uploaded. There are no accounts, ads, analytics, camera, microphone or external services.</p><p class="small">Clearing browser data removes the saved results.</p></section>
+</div>
+
+<section class="panel prompt"><h2>Build your own with AI</h2><p>Copy this beginner-friendly prompt and ask an AI coding assistant to add favourite words, a theme or different challenge lengths.</p><pre id="buildPrompt">Create one polished mobile-friendly HTML file for a private family word-ladder game. Include curated three- and four-letter challenges, validation that each move is a real word and changes exactly one letter, hints, undo, timer, move count, completion feedback, new-game controls and up to eight recent results in localStorage. Add clear privacy and grown-up guidance. Use no libraries, accounts, advertising, analytics or paid services.</pre><button class="btn" id="copyBtn">Copy prompt</button></section>
+<footer>Made for curious families · <a href="https://suite.sapiverpress.co.uk">Sapiver Press Suite</a></footer>
+</main>
+<script>
+(()=>{"use strict";
+const $=s=>document.querySelector(s),key="aip-word-ladder-v1";
+const puzzles={3:[
+ {path:["CAT","COT","DOT","DOG"]},{path:["HAT","HOT","DOT","DOG"]},{path:["PIG","WIG","WAG","BAG"]},{path:["FOX","BOX","BOY","TOY"]},{path:["CUP","PUP","POP","MOP"]},{path:["MAN","MAT","SAT","SIT"]},{path:["BIG","BAG","BAT","CAT"]},{path:["RED","BED","BAD","BAG"]}],
+4:[{path:["COLD","CORD","CARD","WARD","WARM"]},{path:["FISH","DISH","DASH","CASH","CASE"]},{path:["GAME","SAME","SAGE","SALE","TALE"]},{path:["HEAD","HEAL","TEAL","TELL","TALL","TAIL"]},{path:["SAND","SEND","SEED","FEED"]},{path:["BOOK","BOOM","ROOM","ROOF"]}]};
+const dictionary=new Set(Object.values(puzzles).flat().flatMap(p=>p.path).concat(["BAT","BIT","BOT","BUG","BUN","BUT","CAN","CAP","CAR","COD","COG","COW","DAY","DIG","DIP","FAN","FAT","FIN","FIT","FOG","FUN","HIT","HOG","HOP","HUG","LOG","LOT","MAD","MAP","MEN","MET","MIX","MUD","MUG","NET","PAN","PAT","PEN","PET","PIN","POT","RAG","RAT","RID","RIG","ROT","RUN","SAD","SET","SUN","TAG","TAP","TIP","TOP","VAN","WET","WIN","BOLD","BOLL","COOL","COOK","DARK","DART","DATE","FARM","FORM","FOUR","HARD","HARE","HARM","HATE","LATE","MATE","MATH","PATH","POOL","POOR","SOON","WOOD","WORD"]));
+let saved={name:"Explorer",history:[]};try{saved={...saved,...JSON.parse(localStorage.getItem(key)||"{}")}}catch{}
+let puzzle,steps=[],started=0,timer=null,hintCount=0,index=-1;
+const save=()=>localStorage.setItem(key,JSON.stringify(saved));
+function differs(a,b){let n=0;for(let i=0;i<a.length;i++)if(a[i]!==b[i])n++;return n}
+function renderWord(el,word,target=false,previous=""){el.textContent="";[...word].forEach((ch,i)=>{const t=document.createElement("span");t.className="tile"+(previous&&previous[i]!==ch?" changed":"");t.textContent=ch;el.append(t)})}
+function render(){renderWord($("#startWord"),puzzle.path[0]);renderWord($("#targetWord"),puzzle.path.at(-1),true);const box=$("#ladder");box.textContent="";steps.forEach((w,i)=>{const row=document.createElement("div");row.className="step"+(i===steps.length-1?" current":"");renderWord(row,w,false,i?steps[i-1]:"");box.append(row)});$("#moves").textContent=Math.max(0,steps.length-1);$("#hints").textContent=hintCount}
+function startGame(force=false){const len=Number($("#length").value),list=puzzles[len];let next;do{next=Math.floor(Math.random()*list.length)}while(!force&&list.length>1&&next===index);index=next;puzzle=list[index];steps=[puzzle.path[0]];hintCount=0;started=Date.now();clearInterval(timer);timer=setInterval(tick,1000);$("#guess").maxLength=len;$("#guess").value="";$("#message").textContent="Type a real word that changes exactly one letter.";render();tick()}
+function tick(){const sec=Math.max(0,Math.floor((Date.now()-started)/1000));$("#time").textContent=Math.floor(sec/60)+":"+String(sec%60).padStart(2,"0")}
+function nextOnSolution(){const current=steps.at(-1),solution=puzzle.path;const pos=solution.indexOf(current);if(pos>=0&&pos<solution.length-1)return solution[pos+1];const seen=new Set([current]),q=[[current]];while(q.length){const path=q.shift(),word=path.at(-1);for(const candidate of dictionary){if(candidate.length===word.length&&differs(word,candidate)===1&&!seen.has(candidate)){if(candidate===puzzle.path.at(-1))return path.length===1?candidate:path[1];seen.add(candidate);q.push([...path,candidate])}}}return null}
+function addWord(word){word=word.trim().toUpperCase();const current=steps.at(-1);if(word.length!==current.length)return say("Use exactly "+current.length+" letters.");if(!dictionary.has(word))return say("That word is not in this game’s word list.");if(steps.includes(word))return say("You have already used that word.");if(differs(current,word)!==1)return say("Change exactly one letter.");steps.push(word);$("#guess").value="";render();if(word===puzzle.path.at(-1))finish();else say("Good move — keep climbing!")}
+function say(t){$("#message").textContent=t}
+function finish(){clearInterval(timer);const sec=Math.floor((Date.now()-started)/1000),moves=steps.length-1,name=($("#player").value.trim()||"Explorer").slice(0,18);say("You reached "+puzzle.path.at(-1)+" in "+moves+" moves!");saved.name=name;saved.history=[{name,moves,hints:hintCount,sec,from:puzzle.path[0],to:puzzle.path.at(-1)},...saved.history].slice(0,8);save();renderHistory()}
+function renderHistory(){const box=$("#history");box.textContent="";if(!saved.history.length){const p=document.createElement("p");p.className="small";p.textContent="No completed ladders yet.";box.append(p);return}saved.history.forEach(x=>{const row=document.createElement("div");row.className="history-item";const b=document.createElement("b"),p=document.createElement("span");b.textContent=x.name+" · "+x.from+"→"+x.to;p.className="pill";p.textContent=x.moves+" moves";row.append(b,p);box.append(row)})}
+$("#wordForm").onsubmit=e=>{e.preventDefault();addWord($("#guess").value)};
+$("#hintBtn").onclick=()=>{const n=nextOnSolution();if(!n)return say("Try changing a different letter.");hintCount++;$("#hints").textContent=hintCount;say("A helpful next word is "+n+".")};
+$("#undoBtn").onclick=()=>{if(steps.length<=1)return say("You are already at the start.");steps.pop();render();say("Last move removed.")};
+$("#newBtn").onclick=()=>startGame();$("#length").onchange=()=>startGame(true);$("#player").value=saved.name;$("#player").onchange=()=>{saved.name=($("#player").value.trim()||"Explorer").slice(0,18);$("#player").value=saved.name;save()};
+$("#clearScores").onclick=()=>{saved.history=[];save();renderHistory();say("Recent scores cleared.")};
+$("#copyBtn").onclick=async()=>{try{await navigator.clipboard.writeText($("#buildPrompt").textContent);$("#copyBtn").textContent="Copied!";setTimeout(()=>$("#copyBtn").textContent="Copy prompt",1600)}catch{$("#copyBtn").textContent="Select and copy the prompt"}};
+renderHistory();startGame(true);
+})();
+</script>
+</body></html>

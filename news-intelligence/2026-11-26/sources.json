@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-26T16:47:43.795Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 482,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 254,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 290,
+      "collection_mode": "api",
+      "original_link_count": 9
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 266,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1460,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "scottaaronson.blog",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
+      "url": "https://scottaaronson.blog/?p=10379",
+      "direct_source_url": "https://scottaaronson.blog/?p=10379",
+      "discovery_url": "https://news.ycombinator.com/item?id=50646108",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50646108",
+      "summary": "See also The matrix multiplication exponent is nine fourths [pdf] - https://news.ycombinator.com/item?id=50637220",
+      "published_at": "2026-11-25T19:11:27.000Z",
+      "engagement": {
+        "score": 1830,
+        "comments": 1675
+      },
+      "collection_mode": "api",
+      "score": 8.3
+    },
+    {
+      "title": "UK workers at Rockstar Games vote against a union recognition deal, with only 25% voting in favor; source: 1,544 employees, or 93.2% of eligible workers, voted (Chris Kerr/Vertical Slice)",
+      "url": "https://www.verticalslice.news/rockstar-workers-vote-against-historic-union-recognition-deal/",
+      "summary": "Chris Kerr / Vertical Slice : UK workers at Rockstar Games vote against a union recognition deal, with only 25% voting in favor; source: 1,544 employees, or 93.2% of eligible workers, voted &mdash; UK workers at Grand Theft Auto maker Rockstar Games have voted against a union recognition deal that would have seen &hellip;",
+      "description_html": "<A HREF=\"https://www.verticalslice.news/rockstar-workers-vote-against-historic-union-recognition-deal/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261126/i21.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261126/p21#a261126p21\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Chris Kerr / <A HREF=\"https://www.verticalslice.news/\">Vertical Slice</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.verticalslice.news/rockstar-workers-vote-against-historic-union-recognition-deal/\">UK workers at Rockstar Games vote against a union recognition deal, with only 25% voting in favor; source: 1,544 employees, or 93.2% of eligible workers, voted</A></B></SPAN>&nbsp; &mdash;&nbsp; UK workers at Grand Theft Auto maker Rockstar Games have voted against a union recognition deal that would have seen &hellip; </P>",
+      "published_at": "2026-11-26T16:10:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261126/p21",
+      "direct_source_url": "https://www.verticalslice.news/rockstar-workers-vote-against-historic-union-recognition-deal/",
+      "publisher": "Chris Kerr/Vertical Slice",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.074
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "twitter.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
+      "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+      "direct_source_url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+      "discovery_url": "https://news.ycombinator.com/item?id=50651117",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50651117",
+      "summary": "",
+      "published_at": "2026-11-26T03:36:58.000Z",
+      "engagement": {
+        "score": 420,
+        "comments": 231
+      },
+      "collection_mode": "api",
+      "score": 7.981
+    },
+    {
+      "title": "Avicena, which links AI chips with microLEDs instead of lasers, raised a $100M+ Series C led by Intervest, with participation from SK Hynix, Samsung, and AMD (Cristian Dina/The Next Web)",
+      "url": "https://thenextweb.com/news/avicena-100m-series-c-microled-optical-interconnects-ai",
+      "summary": "Cristian Dina / The Next Web : Avicena, which links AI chips with microLEDs instead of lasers, raised a $100M+ Series C led by Intervest, with participation from SK Hynix, Samsung, and AMD &mdash; SK hynix, Samsung and AMD's venture arms joined the Series C. New chief executive Kevin Pope plans to bring the first LightBundle product to market next year.",
+      "description_html": "<A HREF=\"https://thenextweb.com/news/avicena-100m-series-c-microled-optical-interconnects-ai\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261126/i20.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261126/p20#a261126p20\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Cristian Dina / <A HREF=\"https://thenextweb.com/\">The Next Web</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://thenextweb.com/news/avicena-100m-series-c-microled-optical-interconnects-ai\">Avicena, which links AI chips with microLEDs instead of lasers, raised a $100M+ Series C led by Intervest, with participation from SK Hynix, Samsung, and AMD</A></B></SPAN>&nbsp; &mdash;&nbsp; SK hynix, Samsung and AMD's venture arms joined the Series C. New chief executive Kevin Pope plans to bring the first LightBundle product to market next year.</P>",
+      "published_at": "2026-11-26T15:50:27.000Z",
+      "discovery_url": "https://www.techmeme.com/261126/p20",
+      "direct_source_url": "https://thenextweb.com/news/avicena-100m-series-c-microled-optical-interconnects-ai",
+      "publisher": "Cristian Dina/The Next Web",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.98
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 9,
+      "title": "Intel One Mono font",
+      "url": "https://github.com/intel/intel-one-mono",
+      "direct_source_url": "https://github.com/intel/intel-one-mono",
+      "discovery_url": "https://news.ycombinator.com/item?id=50653667",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50653667",
+      "summary": "",
+      "published_at": "2026-11-26T10:11:01.000Z",
+      "engagement": {
+        "score": 314,
+        "comments": 186
+      },
+      "collection_mode": "api",
+      "score": 7.935
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "theverge.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "direct_source_url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "discovery_url": "https://news.ycombinator.com/item?id=50647673",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50647673",
+      "summary": "https://archive.ph/pcUgy",
+      "published_at": "2026-11-25T21:18:02.000Z",
+      "engagement": {
+        "score": 535,
+        "comments": 452
+      },
+      "collection_mode": "api",
+      "score": 7.878
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "Much shorter version of GRH Lean verification from Anthropic",
+      "url": "https://github.com/lsernau/grh-lean",
+      "direct_source_url": "https://github.com/lsernau/grh-lean",
+      "discovery_url": "https://news.ycombinator.com/item?id=50648050",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50648050",
+      "summary": "",
+      "published_at": "2026-11-25T21:48:10.000Z",
+      "engagement": {
+        "score": 511,
+        "comments": 326
+      },
+      "collection_mode": "api",
+      "score": 7.819
+    },
+    {
+      "title": "Texas resumes data center permitting, approving permits for SpaceX's $24B gas power plant, ahead of Democratic Governor Gina Hinojosa taking office in January (Stephanie Findlay/Financial Times)",
+      "url": "https://www.ft.com/content/e0a1bf7a-7c28-4a20-8ca8-86dc7d5097b3",
+      "summary": "Stephanie Findlay / Financial Times : Texas resumes data center permitting, approving permits for SpaceX's $24B gas power plant, ahead of Democratic Governor Gina Hinojosa taking office in January &mdash; Incoming governor Gina Hinojosa pledged to rein in construction of new projects during her campaign &mdash; Hello and welcome to Energy Source, coming to you from Houston.",
+      "description_html": "<A HREF=\"https://www.ft.com/content/e0a1bf7a-7c28-4a20-8ca8-86dc7d5097b3\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261126/i19.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261126/p19#a261126p19\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Stephanie Findlay / <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/e0a1bf7a-7c28-4a20-8ca8-86dc7d5097b3\">Texas resumes data center permitting, approving permits for SpaceX's $24B gas power plant, ahead of Democratic Governor Gina Hinojosa taking office in January</A></B></SPAN>&nbsp; &mdash;&nbsp; Incoming governor Gina Hinojosa pledged to rein in construction of new projects during her campaign&nbsp; &mdash;&nbsp; Hello and welcome to Energy Source, coming to you from Houston.</P>",
+      "published_at": "2026-11-26T13:45:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261126/p19",
+      "direct_source_url": "https://www.ft.com/content/e0a1bf7a-7c28-4a20-8ca8-86dc7d5097b3",
+      "publisher": "Stephanie Findlay/Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.813
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "1password.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "1Password Security Incident",
+      "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+      "direct_source_url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+      "discovery_url": "https://news.ycombinator.com/item?id=50644817",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50644817",
+      "summary": "",
+      "published_at": "2026-11-25T17:18:26.000Z",
+      "engagement": {
+        "score": 1584,
+        "comments": 685
+      },
+      "collection_mode": "api",
+      "score": 7.791
+    },
+    {
+      "title": "TrustedRouter, which raised $6M to offer E2EE and confidential computing for enterprise AI queries, says it processes 6B+ tokens per day, up from 1B in August (Davey Alba/Bloomberg)",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-26/trustedrouter-aims-to-give-companies-greater-privacy-with-ai",
+      "summary": "Davey Alba / Bloomberg : TrustedRouter, which raised $6M to offer E2EE and confidential computing for enterprise AI queries, says it processes 6B+ tokens per day, up from 1B in August &mdash; The startup offers companies a way to keep employees' AI use private from model makers &hellip; Tech Across the Globe",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/newsletters/2026-11-26/trustedrouter-aims-to-give-companies-greater-privacy-with-ai\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261126/i18.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261126/p18#a261126p18\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Davey Alba / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/newsletters/2026-11-26/trustedrouter-aims-to-give-companies-greater-privacy-with-ai\">TrustedRouter, which raised $6M to offer E2EE and confidential computing for enterprise AI queries, says it processes 6B+ tokens per day, up from 1B in August</A></B></SPAN>&nbsp; &mdash;&nbsp; The startup offers companies a way to keep employees' AI use private from model makers &hellip; Tech Across the Globe</P>",
+      "published_at": "2026-11-26T13:30:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261126/p18",
+      "direct_source_url": "https://www.bloomberg.com/news/newsletters/2026-11-26/trustedrouter-aims-to-give-companies-greater-privacy-with-ai",
+      "publisher": "Davey Alba/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.723
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "news.ycombinator.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 8,
+      "title": "Tell HN: Lots of Ask HNs again",
+      "url": "https://news.ycombinator.com/item?id=50649864",
+      "direct_source_url": null,
+      "discovery_url": "https://news.ycombinator.com/item?id=50649864",
+      "link_quality": "discussion_fallback",
+      "discussion_url": "https://news.ycombinator.com/item?id=50649864",
+      "summary": "There have been questions about why the /ask page ( https://news.ycombinator.com/ask ) was running dry of Ask HNs - e.g.: Ask HN: Why is Ask HN only showing me 14 posts? - https://news.ycombinator.com/item?id=49984484 - Oct 2026 (47 comments) Ask HN: Why is pagination gone on \"Ask HN\", and showing only 19 items? - https://news.ycombinator.com/item?id=50280719 - Oct 2026 (3 comments) I believe I found the problem. The pool of stories for https://news.ycombinator.com/ask has traditionally been dra",
+      "published_at": "2026-11-26T00:43:34.000Z",
+      "engagement": {
+        "score": 355,
+        "comments": 142
+      },
+      "collection_mode": "api",
+      "score": 7.72
+    },
+    {
+      "title": "The UK FCA says it plans to require DeFi platforms to obtain authorization, adopting a stricter stance than the US and the EU after the $6.3B Binance hack (Financial Times)",
+      "url": "https://www.ft.com/content/ec820cb6-4983-4ece-8e7b-de116b57525d",
+      "summary": "Financial Times : The UK FCA says it plans to require DeFi platforms to obtain authorization, adopting a stricter stance than the US and the EU after the $6.3B Binance hack &mdash; FCA points to Binance heist and &lsquo;lack of consumer protections&rsquo; as reasons for tighter regulation of decentralised finance than in US and EU",
+      "description_html": "<A HREF=\"https://www.ft.com/content/ec820cb6-4983-4ece-8e7b-de116b57525d\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261126/i17.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261126/p17#a261126p17\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/ec820cb6-4983-4ece-8e7b-de116b57525d\">The UK FCA says it plans to require DeFi platforms to obtain authorization, adopting a stricter stance than the US and the EU after the $6.3B Binance hack</A></B></SPAN>&nbsp; &mdash;&nbsp; FCA points to Binance heist and &lsquo;lack of consumer protections&rsquo; as reasons for tighter regulation of decentralised finance than in US and EU</P>",
+      "published_at": "2026-11-26T13:10:04.000Z",
+      "discovery_url": "https://www.techmeme.com/261126/p17",
+      "direct_source_url": "https://www.ft.com/content/ec820cb6-4983-4ece-8e7b-de116b57525d",
+      "publisher": "Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.629
+    },
+    {
+      "title": "OpenAI says it corrected a GPT-6.2 Astra and Sol launch billing mistake that had incorrectly discounted usage; Astra users will now hit their limits 40% faster (Graham Barlow/TechRadar)",
+      "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster",
+      "summary": "Graham Barlow / TechRadar : OpenAI says it corrected a GPT-6.2 Astra and Sol launch billing mistake that had incorrectly discounted usage; Astra users will now hit their limits 40% faster &mdash; Too little, too late? &hellip; - OpenAI has admitted to a billing mistake with its new GPT-6.2 models &mdash; You'll now hit your usage limits up to 40% faster",
+      "description_html": "<A HREF=\"https://www.techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261126/i16.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261126/p16#a261126p16\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Graham Barlow / <A HREF=\"https://www.techradar.com/\">TechRadar</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster\">OpenAI says it corrected a GPT-6.2 Astra and Sol launch billing mistake that had incorrectly discounted usage; Astra users will now hit their limits 40% faster</A></B></SPAN>&nbsp; &mdash;&nbsp; Too little, too late? &hellip; - OpenAI has admitted to a billing mistake with its new GPT-6.2 models&nbsp; &mdash; You'll now hit your usage limits up to 40% faster</P>",
+      "published_at": "2026-11-26T13:01:08.000Z",
+      "discovery_url": "https://www.techmeme.com/261126/p16",
+      "direct_source_url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster",
+      "publisher": "Graham Barlow/TechRadar",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.543
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "openwall.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 7,
+      "title": "Slow Ubuntu security response times",
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
+      "direct_source_url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
+      "discovery_url": "https://news.ycombinator.com/item?id=50647181",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50647181",
+      "summary": "",
+      "published_at": "2026-11-25T20:38:00.000Z",
+      "engagement": {
+        "score": 372,
+        "comments": 217
+      },
+      "collection_mode": "api",
+      "score": 7.53
+    },
+    {
+      "title": "The Dutch government says it will resist the US' planned Match Act, which aims to restrict ASML's sales to China, calling the proposal a threat to the company (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-26/netherlands-plans-to-fight-rollout-of-proposed-us-curbs-on-asml",
+      "summary": "Bloomberg : The Dutch government says it will resist the US' planned Match Act, which aims to restrict ASML's sales to China, calling the proposal a threat to the company &mdash; The Dutch government said it will resist US plans to further restrict ASML Holding NV's sales to China, calling the proposed rules &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-26/netherlands-plans-to-fight-rollout-of-proposed-us-curbs-on-asml\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261126/i15.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261126/p15#a261126p15\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-26/netherlands-plans-to-fight-rollout-of-proposed-us-curbs-on-asml\">The Dutch government says it will resist the US' planned Match Act, which aims to restrict ASML's sales to China, calling the proposal a threat to the company</A></B></SPAN>&nbsp; &mdash;&nbsp; The Dutch government said it will resist US plans to further restrict ASML Holding NV's sales to China, calling the proposed rules &hellip; </P>",
+      "published_at": "2026-11-26T12:50:19.000Z",
+      "discovery_url": "https://www.techmeme.com/261126/p15",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-26/netherlands-plans-to-fight-rollout-of-proposed-us-curbs-on-asml",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.455
+    },
+    {
+      "title": "Analysis: institutional investors are selling stakes in older VC funds from the 2021 investment boom peak at steep discounts and rushing to back new AI funds (Financial Times)",
+      "url": "https://www.ft.com/content/0278cbea-a0b6-4a30-80f2-f31ac6657f11",
+      "summary": "Financial Times : Analysis: institutional investors are selling stakes in older VC funds from the 2021 investment boom peak at steep discounts and rushing to back new AI funds &mdash; Pension funds and endowments ditch legacy stakes at knockdown prices to free up cash for next-generation tech start-ups",
+      "description_html": "<A HREF=\"https://www.ft.com/content/0278cbea-a0b6-4a30-80f2-f31ac6657f11\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261126/i14.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261126/p14#a261126p14\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/0278cbea-a0b6-4a30-80f2-f31ac6657f11\">Analysis: institutional investors are selling stakes in older VC funds from the 2021 investment boom peak at steep discounts and rushing to back new AI funds</A></B></SPAN>&nbsp; &mdash;&nbsp; Pension funds and endowments ditch legacy stakes at knockdown prices to free up cash for next-generation tech start-ups</P>",
+      "published_at": "2026-11-26T12:35:21.000Z",
+      "discovery_url": "https://www.techmeme.com/261126/p14",
+      "direct_source_url": "https://www.ft.com/content/0278cbea-a0b6-4a30-80f2-f31ac6657f11",
+      "publisher": "Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.365
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts",
+      "url": "https://huggingface.co/papers/2611.28732",
+      "direct_source_url": "https://huggingface.co/papers/2611.28732",
+      "discovery_url": "https://huggingface.co/papers/2611.28732",
+      "link_quality": "original",
+      "summary": "In-context learning (ICL) enables foundation models to perform unseen tasks from context without parameter updates. In robotic manipulation, a human video provides the context that specifies how a task should be performed. However, scaling human-video ICL on world-action models (WAMs) faces two challenges: task-level human-robot pairs are not temporally aligned with robot actions, and standard action losses allow policies to rely on initial-scene or task-identity shortcuts rather than tracking the context. We present Entangle, an in-context world-action model that maps a single human video and current robot observations to future visual states and executable actions. To scale temporally aligned training data, we convert recorded robot videos into matched human contexts via video-to-video generation, supplemented by real paired recordings. For model training, we combine variable-length video windows with an intra-task contrastive objective that distinguishes the paired action trajectory from other executions of the same task, preventing task-identity shortcuts. Without task-specific fine-tuning, Entangle improves steadily as aligned training data scales, reaching an average score of",
+      "published_at": "2026-11-24T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 6.139
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
+      "url": "https://huggingface.co/papers/2611.33093",
+      "direct_source_url": "https://huggingface.co/papers/2611.33093",
+      "discovery_url": "https://huggingface.co/papers/2611.33093",
+      "link_quality": "original",
+      "summary": "A language-model decoder carries state between decoding steps, and in hardware a wrong state update can leave the current token correct and corrupt the output several tokens later, so a design can pass output tests and still be wrong. AIChipBench asks what LLM coding agents need to build such hardware correctly. Agents implement quantized Qwen3.5, Gemma 3, Gemma 4, and Llama 3.2 decoders in synthesizable register-transfer-level (RTL) code against an executable integer reference that specifies the outputs and the stored state at every decoding step. They debug against public tests under fixed budgets; their frozen designs are graded on held-out token sequences, resets, memory stalls, and synthesis, and a second track asks them to speed up a correct design at nearly fixed area. Across 9,136 attempts by four coding agents, the difficulty lies in stored state. Feedback that points to the first state mismatch raises acceptance over output-only feedback in all 12 agent--task cells of a matched study, by 25.0 to 46.9 percentage points, and halves the agent-hours per accepted design. Regraded on new sequences and conditions, 45 of 69 accepted designs fail within the 32 steps their tests re",
+      "published_at": "2026-11-23T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.971
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "WorldBridge: Bridging Scattered Views for Coherent 3D World Generation",
+      "url": "https://huggingface.co/papers/2611.34079",
+      "direct_source_url": "https://huggingface.co/papers/2611.34079",
+      "discovery_url": "https://huggingface.co/papers/2611.34079",
+      "link_quality": "original",
+      "summary": "Generating coherent and explorable 3D worlds from scattered images with little or no visual overlap is a fundamental and long-standing challenge in computer vision, which existing geometry-aware methods fail to address. Meanwhile, existing image- and video-based methods may generate unseen regions but produce inconsistent geometry across views. To bridge this gap, we present WorldBridge, a framework for coherent and controllable 3D world generation under scattered images with little or no visual overlap. WorldBridge encodes scattered references into a global scene context to guide geometry and appearance generation across views. Our temporal and spatial reference attention mechanism further enhances the fidelity of temporal references along the target trajectory and supports flexible spatial references outside it. A plug-and-play latent-reference consistency strategy improves reference fidelity through reprojection-guided test-time optimization. We also introduce the WorldBridge benchmark suite to evaluate 3D world generation from scattered, low-overlap references, which is rarely explored by current benchmarks. Both qualitative and quantitative results demonstrate that our method",
+      "published_at": "2026-11-24T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.891
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Edit Recommendation: Can LLMs Anticipate Edit Requests from Users, and When?",
+      "url": "https://huggingface.co/papers/2611.21155",
+      "direct_source_url": "https://huggingface.co/papers/2611.21155",
+      "discovery_url": "https://huggingface.co/papers/2611.21155",
+      "link_quality": "original",
+      "summary": "After a large language model (LLM) agent generates an artifact, users often send edit requests for it. This paper studies whether an LLM can anticipate these requests before they are sent. Such anticipation is useful in practice because it reduces the effort of user review and feedback. We formalize this task as edit recommendation and build EditRecBench, a benchmark for evaluating the performance of LLMs on this task, from real-world conversation logs in WildChat-4.8M. Through benchmarking and failure analysis, we identify a practical challenge that some cases are inherently difficult to predict in real-world settings. To address this, we introduce decision model-based gating to filter out cases where predictions are unlikely to be correct before they are presented to the user. Our trained model outperforms existing decision models and raises pass@5 among shown suggestions by 12--25 points at a gating threshold. Our code is available at https://github.com/ntt-dkiku/llm-edit-recommendation.",
+      "published_at": "2026-11-15T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.811
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 7,
+      "title": "Demystifying the Autoresearch Harness: How Context and Skills Shape Self-Evolving Agents",
+      "url": "https://huggingface.co/papers/2611.28244",
+      "direct_source_url": "https://huggingface.co/papers/2611.28244",
+      "discovery_url": "https://huggingface.co/papers/2611.28244",
+      "link_quality": "original",
+      "summary": "Autoresearch agents, which autonomously design, run, and refine experiments, are accelerating scientific progress, particularly in AI research. However, existing agents rely on harnesses that combine multiple mechanisms, making it difficult to determine how individual components contribute to performance. We systematically study harness design for long-horizon, self-evolving autoresearch agents along two dimensions: context management, which determines what an agent retains from its past attempts, and skill management, which governs how it stores and reuses lessons from those attempts. Across MLE-Bench and KernelBench with gpt-oss-120b, gpt-6-luna, and gpt-6-sol, we isolate the effects of individual harness design choices by evaluating each against a recency-truncation baseline within a shared agent framework. For context management, we find that preserving individually accessible records of past attempts is more effective than maintaining a rolling summary, with context folding performing best across all six settings and improving upon the baseline by up to 19.2%. For skill management, selectively discarding persistently unused lessons is more effective on average than consolidati",
+      "published_at": "2026-11-19T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 4
+      },
+      "collection_mode": "api",
+      "score": 5.769
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "When Does Reasoning Help Entity Disambiguation? Small LLMs In-Domain and Under Shift",
+      "url": "https://huggingface.co/papers/2611.30334",
+      "direct_source_url": "https://huggingface.co/papers/2611.30334",
+      "discovery_url": "https://huggingface.co/papers/2611.30334",
+      "link_quality": "original",
+      "summary": "Entity disambiguation (mapping ambiguous mentions in text to entities in a knowledge base) is a foundational step in tasks such as knowledge graph construction, question answering, and information extraction. Recent work has applied LLMs to this problem, achieving stateof-the-art performance. Notably, reasoning LLMs have been shown to perform entity disambiguation in a true zero-shot fashion, generalizing across knowledge bases and domains. However, it is unclear whether this capability survives, or remains competitive, with smaller LLMs, where entity disambiguation has typically relied on reranking rather than reasoning. We ask when reasoning is worth its cost at small scale. We compare pointwise, listwise, and reasoning-based candidate-selection components within a classical coarse-to-fine entity disambiguation pipeline, across the classical, few-shot and true zero-shot settings. The reasoning paradigm is trained with distillation and reinforcement learning recipes. The benefit of reasoning grows with domain shift: negligible in-domain, decisive in the true zero-shot setting. We show that two distinct factors are at work: the reranker's uncertainty over the candidates locates whe",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.731
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 10,
+      "title": "Letting Models Manage Their Own Context: Where We Stand",
+      "url": "https://huggingface.co/papers/2611.34147",
+      "direct_source_url": "https://huggingface.co/papers/2611.34147",
+      "discovery_url": "https://huggingface.co/papers/2611.34147",
+      "link_quality": "original",
+      "summary": "Agent harnesses today manage context on the model's behalf: when the window fills, the harness triggers a compaction that summarizes the history. We study the alternative, model-driven context management, in which the model itself decides when and what to compact through a context API. We gave models control over their own context in \\nooa, NVIDIA's open source agent harness, and compared the two strategies on document research and machine learning engineering across context budgets from 8K to 512K tokens. Models that use the context API effectively reach higher accuracy, often with fewer input tokens, especially at tight budgets: GPT 6.1 nearly triples its score at a 32K budget on OfficeQA Pro v2 (21\\%~rightarrow~56\\%), and Kimi gains with up to 41\\% fewer input tokens. Models differ widely, however, in how often they use the API, how aggressively they compact, and when they start compacting, and prompt changes shift that timing. Finally, we show that inference engines can make model-driven edits cheaper: by reusing the KV cache of the unchanged suffix after an edit, we cut prefill compute by up to 15\\% per request with no measurable change in accuracy. Together, these results poi",
+      "published_at": "2026-11-24T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 6
+      },
+      "collection_mode": "api",
+      "score": 5.603
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 8,
+      "title": "Efficient Video Retrieval Augmented Generation via Token Allocation",
+      "url": "https://huggingface.co/papers/2611.32938",
+      "direct_source_url": "https://huggingface.co/papers/2611.32938",
+      "discovery_url": "https://huggingface.co/papers/2611.32938",
+      "link_quality": "original",
+      "summary": "Efficient long-video understanding requires identifying relevant evidence while minimizing the tokens processed by vision-language models (VLMs). Existing video retrieval-augmented generation (RAG) methods rely on frame selection and token compression, but overlook how much each additional token is worth. We introduce Lembas, a plug-and-play framework that formulates video RAG as a token allocation problem over frames and subtitles under a shared budget. Our key insight is that the value of a token diminishes within each item and decreases further as similar evidence receives more tokens. Lembas captures both effects in a single objective and solves it with an efficient iterative water-filling algorithm that has a provable convergence guarantee. For multi-turn conversations, Lembas reuses the tokens processed in earlier turns and refines relevance with the VLM's attention at no extra cost. Our evaluations show that Lembas improves accuracy by up to 7.2 percentage points over state-of-the-art baselines at comparable compute. On multi-turn video understanding, Lembas achieves up to 1.5 percentage points higher accuracy with 1.7-17.3x fewer TFLOPs.",
+      "published_at": "2026-11-23T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 5.579
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "type": "sapiver_forge_news_intelligence",
-  "date": "2026-11-25",
-  "generated_at": "2026-11-25T17:08:17.883Z",
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T16:48:20.380Z",
   "source_set": [
     "Techmeme",
     "Reuters",
@@ -15,7 +15,7 @@
       "name": "Techmeme",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 1228,
+      "elapsed_ms": 482,
       "collection_mode": "rss",
       "original_link_count": 12
     },
@@ -23,14 +23,14 @@
       "name": "Reuters",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 280,
+      "elapsed_ms": 254,
       "error": "401 HTTP Forbidden"
     },
     {
       "name": "Hacker News",
       "ok": true,
       "item_count": 10,
-      "elapsed_ms": 298,
+      "elapsed_ms": 290,
       "collection_mode": "api",
       "original_link_count": 9
     },
@@ -38,7 +38,7 @@
       "name": "Hugging Face",
       "ok": true,
       "item_count": 12,
-      "elapsed_ms": 228,
+      "elapsed_ms": 266,
       "collection_mode": "api",
       "original_link_count": 12
     },
@@ -46,7 +46,7 @@
       "name": "Sifted",
       "ok": false,
       "item_count": 0,
-      "elapsed_ms": 1100,
+      "elapsed_ms": 1460,
       "error": "Sifted returned no usable articles: 404 Not Found"
     }
   ],
@@ -59,76 +59,76 @@
     "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
   ],
   "release_blockers": [],
-  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-25",
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-26",
   "overall_confidence": 0.9,
   "stories": [
     {
-      "category": "business",
-      "headline": "Tech stocks stumble as AI trade cools",
-      "confirmed_fact": "US tech stocks saw a sharp decline on November 25, 2026, with the Nasdaq 100 falling over 4%. Major AI-exposed equities including Nvidia, Anthropic, Broadcom, and Micron experienced significant single-day losses.",
-      "why_it_matters": "This downturn reflects a broader shift in investor sentiment and macroeconomic recalibration rather than specific operational failures at these companies.",
-      "interpretation": "The market is showing signs of fatigue after a long period of AI-focused growth, suggesting investors are becoming more sensitive to valuation and sector-wide volatility.",
+      "category": "ai",
+      "headline": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps",
+      "confirmed_fact": "OpenAI has corrected a billing error that incorrectly discounted usage for its GPT-6.2 Astra and Sol models. As a result, paying users will now reach their usage caps 40% faster on Astra and 25% faster on Sol than they did during the launch week.",
+      "why_it_matters": "For power users and businesses relying on these models, the change represents a significant reduction in the effective allowance per subscription, despite OpenAI's claims regarding the models' token efficiency.",
+      "interpretation": "The correction highlights the gap between initial launch-day expectations and the actual operational costs of running newer, more resource-intensive models.",
       "confidence": 0.95,
-      "source": "Financial Times",
+      "source": "Graham Barlow/TechRadar",
       "discovered_via": "Techmeme",
-      "source_title": "US tech stocks fall, pushing the Nasdaq 100 down 4%+, as the AI trade continues to unwind; Nvidia and Anthropic fall 9%+, Broadcom drops 7%, and Micron 11% (Financial Times)",
-      "url": "https://www.ft.com/content/705eb84c-801d-4a96-b908-e366511e886a",
-      "discovery_url": "https://www.techmeme.com/261125/p24",
+      "source_title": "OpenAI says it corrected a GPT-6.2 Astra and Sol launch billing mistake that had incorrectly discounted usage; Astra users will now hit their limits 40% faster (Graham Barlow/TechRadar)",
+      "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster",
+      "discovery_url": "https://www.techmeme.com/261126/p16",
       "link_quality": "original",
-      "published_at": "2026-11-25T15:10:01.000Z",
-      "discovery_score": 7.858
-    },
-    {
-      "category": "technology",
-      "headline": "Restricted Nvidia hardware prices surge in Shenzhen",
-      "confirmed_fact": "Black-market vendors in Shenzhen are reportedly offering restricted Nvidia Blackwell B300 server rigs for $3M to $3.4M, an increase from the $2M asking price reported two months ago.",
-      "why_it_matters": "The rising cost suggests that despite US export restrictions, demand for high-end AI hardware remains robust in restricted markets, though the physical authenticity of these units remains unverified.",
-      "interpretation": "The price hike highlights the persistent difficulty of enforcing hardware export controls when high-value, compact technology is involved.",
-      "confidence": 0.85,
-      "source": "Joshua Yang/Washington Post",
-      "discovered_via": "Techmeme",
-      "source_title": "Chinese vendors in Shenzhen's Huaqiangbei market still sell US-restricted Nvidia hardware, quoting $3M+ for Blackwell B300 servers, up from $2M two months ago (Joshua Yang/Washington Post)",
-      "url": "https://www.washingtonpost.com/world/2026/11/25/top-nvidia-chips-are-still-offer-china-despite-us-ban/?pwapi_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWFzb24iOiJnaWZ0IiwibmJmIjoxNzk1NTgyODAwLCJpc3MiOiJzdWJzY3JpcHRpb25zIiwiZXhwIjoxNzk2OTY1MTk5LCJpYXQiOjE3OTU1ODI4MDAsImp0aSI6ImRjN2IwMDllLWFkMzEtNDViZC1hNDBlLTdiZTZkY2QyYjgyOSIsInVybCI6Imh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS93b3JsZC8yMDI2LzExLzI1L3RvcC1udmlkaWEtY2hpcHMtYXJlLXN0aWxsLW9mZmVyLWNoaW5hLWRlc3BpdGUtdXMtYmFuLyJ9.jF3hc_e28ZcCrJ5Y8OmlgXSYteCO7jDAMSZ9yQp6kJg&itid=gfta",
-      "discovery_url": "https://www.techmeme.com/261125/p20",
-      "link_quality": "original",
-      "published_at": "2026-11-25T13:00:57.000Z",
-      "discovery_score": 7.449
-    },
-    {
-      "category": "developer",
-      "headline": "Anthropic migrates API to Rust",
-      "confirmed_fact": "Anthropic has migrated its primary Messages API routing service from Python to Rust, reporting a 40%–50% reduction in CPU consumption and a 10%–20% improvement in time-to-first-token latency.",
-      "why_it_matters": "The migration demonstrates a practical application of AI-assisted coding, as the team reportedly used Claude Code to generate the majority of the Rust implementation.",
-      "interpretation": "While the performance gains are impressive for infrastructure, they are limited to the API proxy layer and do not change the speed of the underlying model generation.",
-      "confidence": 0.95,
-      "source": "Anthropic",
-      "discovered_via": "Techmeme",
-      "source_title": "Anthropic details migrating its Messages API, the primary way customers access Claude, from Python to Rust, and using the Python service to verify the migration (Anthropic)",
-      "url": "https://www.anthropic.com/research/migrating-api-to-rust",
-      "discovery_url": "https://www.techmeme.com/261125/p26",
-      "link_quality": "original",
-      "published_at": "2026-11-25T17:05:04.000Z",
-      "discovery_score": 8.098
+      "published_at": "2026-11-26T13:01:08.000Z",
+      "discovery_score": 7.543
     },
     {
       "category": "research",
-      "headline": "OpenAI preprint targets matrix multiplication exponent",
-      "confirmed_fact": "OpenAI has published an un-peer-reviewed preprint claiming to prove the optimal square matrix multiplication exponent is exactly 2.25.",
-      "why_it_matters": "As an asymptotic complexity result, this theoretical proof does not provide immediate speed improvements for current GPU hardware or existing software libraries.",
-      "interpretation": "It is a significant theoretical claim, but until it undergoes rigorous peer review and verification by the broader mathematical community, it remains an academic proposal rather than a practical breakthrough.",
-      "confidence": 0.85,
-      "source": "alphaXiv",
-      "discovered_via": "Techmeme",
-      "source_title": "OpenAI publishes a preprint that claims to prove that the matrix multiplication exponent (ω) is exactly 9/4, addressing a major open problem in mathematics (alphaXiv)",
-      "url": "https://www.alphaxiv.org/abs/2611.matrix-multiplication-exponent-lower-bound",
-      "discovery_url": "https://www.techmeme.com/261125/p21",
+      "headline": "Anthropic researcher compresses formal proof of Riemann Hypothesis",
+      "confirmed_fact": "Anthropic researcher Luke Sernau has released a compact, open-source Lean 4 repository that reduces a 17-million-line formal proof of the Generalized Riemann Hypothesis to approximately 76,000 lines. The proof has passed standard Lean kernel validation.",
+      "why_it_matters": "This is a notable step in AI-assisted mathematics, demonstrating that machine-generated proofs can be distilled into more manageable, verifiable forms without losing logical integrity.",
+      "interpretation": "While the proof is logically consistent within the Lean environment, the real test remains the ongoing effort by mathematicians to translate this into a human-readable format.",
+      "confidence": 0.9,
+      "source": "github.com",
+      "discovered_via": "Hacker News",
+      "source_title": "Much shorter version of GRH Lean verification from Anthropic",
+      "url": "https://github.com/lsernau/grh-lean",
+      "discovery_url": "https://news.ycombinator.com/item?id=50648050",
       "link_quality": "original",
-      "published_at": "2026-11-25T13:23:06.000Z",
-      "discovery_score": 7.544
+      "published_at": "2026-11-25T21:48:10.000Z",
+      "discovery_score": 7.819
+    },
+    {
+      "category": "business",
+      "headline": "Institutional investors offload 2021-era VC stakes to fund AI bets",
+      "confirmed_fact": "Institutional investors, including pension funds and university endowments, are selling their positions in 2021-era venture capital funds on the secondary market at steep discounts. The liquidity generated is being redirected toward new AI-focused technology funds.",
+      "why_it_matters": "This trend signals a broader reallocation of capital as institutional LPs attempt to exit the high-valuation vintage of 2021 to chase the current wave of AI investment.",
+      "interpretation": "The willingness to accept knockdown prices suggests that these investors view the potential upside of current AI-focused funds as worth the immediate loss on their legacy portfolios.",
+      "confidence": 0.85,
+      "source": "Financial Times",
+      "discovered_via": "Techmeme",
+      "source_title": "Analysis: institutional investors are selling stakes in older VC funds from the 2021 investment boom peak at steep discounts and rushing to back new AI funds (Financial Times)",
+      "url": "https://www.ft.com/content/0278cbea-a0b6-4a30-80f2-f31ac6657f11",
+      "discovery_url": "https://www.techmeme.com/261126/p14",
+      "link_quality": "original",
+      "published_at": "2026-11-26T12:35:21.000Z",
+      "discovery_score": 7.365
+    },
+    {
+      "category": "technology",
+      "headline": "New York Times restricts Photoshop 2027 updates for staff photographers",
+      "confirmed_fact": "The New York Times has directed contributing photographers to avoid updating to Adobe Photoshop 2027 (v28.0.0+) due to concerns over automated generative AI features that operate without explicit prompts and embed C2PA metadata.",
+      "why_it_matters": "The move highlights the tension between new AI-powered creative tools and the strict provenance requirements necessary for maintaining journalistic integrity.",
+      "interpretation": "Institutional resistance to these features is likely to grow as media organisations prioritise image authenticity over the convenience of automated editing tools.",
+      "confidence": 0.9,
+      "source": "theverge.com",
+      "discovered_via": "Hacker News",
+      "source_title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "discovery_url": "https://news.ycombinator.com/item?id=50647673",
+      "link_quality": "original",
+      "published_at": "2026-11-25T21:18:02.000Z",
+      "discovery_score": 7.878
     }
   ],
-  "practical_takeaway": "With market volatility increasing and high-end hardware becoming more expensive on the black market, businesses should focus on efficiency gains—like Anthropic's infrastructure migration—rather than relying on speculative hardware availability or assuming current AI market trends will continue unabated.",
-  "watch_next": "Keep an eye on the December 4 TSMC groundbreaking ceremony in Arizona, which may provide further signals on the stability and direction of the semiconductor supply chain.",
+  "practical_takeaway": "If you are a heavy user of OpenAI's latest models, expect your monthly usage limits to feel tighter than they did last week. For those in creative or data-sensitive industries, consider auditing your software update policies to ensure that new AI-integrated tools do not inadvertently alter your metadata or workflow standards.",
+  "watch_next": "Keep an eye on how other major media outlets respond to Adobe's automated AI features, and monitor whether the secondary market for 2021-era VC funds continues to show signs of distress as more capital flows into AI.",
   "daily_email_extras": {
     "learn": {
       "label": "Sapiver Learn · Day 034",
@@ -137,21 +137,21 @@
       "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
     },
     "parents": {
-      "label": "AI Inquisitive Parents · Day 085",
-      "title": "My Party Invitation Studio",
-      "summary": "Personalise a polished party invitation with six themes, live canvas preview, colour moods, private autosave and a high-resolution PNG export.",
-      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-085/",
-      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-085/poster.png"
+      "label": "AI Inquisitive Parents · Day 086",
+      "title": "My Word Ladder Race",
+      "summary": "Change one letter at a time across curated three- and four-letter ladders with real-word validation, hints, undo, timing and private recent results.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-086/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-086/poster.png"
     }
   },
   "social": {
-    "date": "2026-11-25",
-    "lead_headline": "Tech stocks stumble as AI trade cools",
-    "facebook_post": "Tech stocks stumble as AI trade cools\n\nThis downturn reflects a broader shift in investor sentiment and macroeconomic recalibration rather than specific operational failures at these companies.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
-    "pinterest_title": "Tech stocks stumble as AI trade cools",
-    "pinterest_description": "This downturn reflects a broader shift in investor sentiment and macroeconomic recalibration rather than specific operational failures at these companies.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
-    "tiktok_caption": "Tech stocks stumble as AI trade cools. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
-    "spoken_script": "Tech stocks stumble as AI trade cools. US tech stocks saw a sharp decline on November 25, 2026, with the Nasdaq 100 falling over 4%. Read the Sapiver Forge Daily Brief."
+    "date": "2026-11-26",
+    "lead_headline": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps",
+    "facebook_post": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps\n\nFor power users and businesses relying on these models, the change represents a significant reduction in the effective allowance per subscription, despite OpenAI's claims regarding the models' token efficiency.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps",
+    "pinterest_description": "For power users and businesses relying on these models, the change represents a significant reduction in the effective allowance per subscription, despite OpenAI's claims regarding the models' token efficiency.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps. OpenAI has corrected a billing error that incorrectly discounted usage for its GPT-6.2 Astra and Sol models. Read the Sapiver Forge Daily Brief."
   },
-  "candidate_id": "a4ca1aa64125725dd13390b2f83ac8c4622b0a7b22fc57ea9a641fd37e62dd0a"
+  "candidate_id": "1e536955ceb67a2339a5d8c5ba6679e599165777c017def8b66b393bc112fc37"
 }

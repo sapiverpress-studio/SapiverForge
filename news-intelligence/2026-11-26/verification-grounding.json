@@ -1,0 +1,454 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22institutional+investors%22+%22older+VC+funds%22+%22steep+discounts%22+%22Financial+Times%22&client=app-vertex-grounding&safesearch=active\">&quot;institutional investors&quot; &quot;older VC funds&quot; &quot;steep discounts&quot; &quot;Financial Times&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22New+York+Times%22+%22photographers%22+%22Photoshop%22+%22AI+features%22+%22Verge%22&client=app-vertex-grounding&safesearch=active\">&quot;New York Times&quot; &quot;photographers&quot; &quot;Photoshop&quot; &quot;AI features&quot; &quot;Verge&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22OpenAI%22+%22GPT-6.2%22+%22Astra%22+%22billing%22+OR+%22usage+limits%22&client=app-vertex-grounding&safesearch=active\">&quot;OpenAI&quot; &quot;GPT-6.2&quot; &quot;Astra&quot; &quot;billing&quot; OR &quot;usage limits&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Avicena%22+%22Series+C%22+%22100M%22+OR+%22Intervest%22+%22SK+Hynix%22&client=app-vertex-grounding&safesearch=active\">&quot;Avicena&quot; &quot;Series C&quot; &quot;100M&quot; OR &quot;Intervest&quot; &quot;SK Hynix&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Texas%22+%22SpaceX%22+%22gas+power+plant%22+%22Hinojosa%22+OR+%22data+center%22&client=app-vertex-grounding&safesearch=active\">&quot;Texas&quot; &quot;SpaceX&quot; &quot;gas power plant&quot; &quot;Hinojosa&quot; OR &quot;data center&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22TrustedRouter%22+%226M%22+%22tokens+per+day%22+%22Bloomberg%22&client=app-vertex-grounding&safesearch=active\">&quot;TrustedRouter&quot; &quot;6M&quot; &quot;tokens per day&quot; &quot;Bloomberg&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22grh-lean%22+%22Anthropic%22+%22Lean%22&client=app-vertex-grounding&safesearch=active\">&quot;grh-lean&quot; &quot;Anthropic&quot; &quot;Lean&quot;</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoAhd0YlHHrAQRU18UhEf14shZ_qgVK9kbXAM2y0YHwnkjmdtxI8se2C7Fr8JsHwWXGKLVzko98Apy3n8Abl7hmFWUUA5py88nQwNBekECNZbXoQUYwXLAZlzrLa2K6mcxYsfdFYeyF-ioyqNBWoZGfREeiSbuBY8rvyhWI6HNtXrO_5v63-XLmf_SezjlE40rJ6zZQa29bn5llgzjB0BddG_oFg==",
+        "title": "notebookcheck.net"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZTLSx7QKlyogQ5382yAC1d2ILw1xFjKgGJXRYASyr4l4bO6u8Zvqcm61p0OXjfEBwuvslhx79b4_pGiCca0QgmHADZGylamQEOuQQsm2yf8-atwPtX1qMujM9nCUHAS2DkBPUDcSy4wNDLR4mIvovXEuclumXGt_xMqULFba4u3KAk8hNkqzCTm4TXkZohtTu9qeIC2OhFJI4mKKWWi0c5eY2Um9mOBRvmnvn2jcjSawRblYCNmHMSnkQYuel-ooYKrmduTqqVvIrmK-N_e4HvsdwMFLVKtwoNgyG9czSeQPnpQkO45z-e-Ut4deZ2WJ_csYq2cYG72NzJKmYR8xkdOoOWlSz1oXbs8mx",
+        "title": "indiatimes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuysQmol5cpgI_L1FkKymVbD1mQxUW664eaT5jAlcre-2pceiCE1cvNg5KVkUDubcoLaVgMk8NM52Ec8qI0x6xiJsigI9xoUXuxE5eLKSJjsQAO6nBoyE4fQX9sL3RrNjOG0gm7YS0KmETTSBd6nwzJhBgISU4_s_tJRX43xGcW5rcUnecss0=",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWhu6_9biFVrl76Xn1_DwNn_k8k_GSUgsqxXxWXWZ9SS2Lg8Jd4ltH78xEknDvdoUosAk1-fldqsRAcSnNXLVpc6XO1A_4E_npbVDC6jNcqLnGH2t2uNh8NoC0dVizcoEHbIE=",
+        "title": "ycombinator.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrQ-Zchsxcxo_Aw9sy8Z2xqKI_QOjHLHnqo1elB_G6G61sSWmgFC_vygywmsye64VSMmQfWYSybP0ras8Sc17nLETGosUkDleK5FuKVf7_SXJ4qmXBL8FoKhYdhMk4BXAizYJh-3xZv_VRfaX_wwtPfUp2osXTeNpDRMJrWYHoOi-a2kHpxgKWEqNDOxXJGrr5ueZl4Jf6SrurT4UbznQEUbMxTF7fBT1BZyoZf1aRoUxQaBduNoyP26kjFg3QHMCc86K5W6g2vA==",
+        "title": "avicena.tech"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEX71gvaA-1p9bnaoCn5oCBNST_yDe-XwAqamozn1XSB0RRY9N7j_8RmAQF6l7BDAFMpeccrTF3_B9RQ0HYmUtqffSGXghWb2hXvtP1yCTNBxHMei3yf9L5NZN6VHuuS-xYLmtWzPt_6frv63GzZB6cp41qxsfa6NfCbhL-vbsr_9XGrY-rVST-KpZBtYg=",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBj_O6NGh8R56UneeJGKupvQ0L6Xrxvbx_hVAYpC93cJbI5LYdjvS76Zb5ND7XrM8sCHDZPUp1WG5ovJ1d54Q-cLx94pMmzyK9TCwzZHKOXFZcbfwi-bpo7zzCm1XDclDQvAvSQvwpjmQEDnjb9MaP4ICM39kwM8S3Ucf97Hc0Is6Z1Nmze_8HM4keh-rFAyAyVOU9wQT2zDc=",
+        "title": "compoundsemiconductor.net"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEp9Hbe28wmbw9j0OSribiPhr6LAlL545oHAMVI2NpEMpmlUw_GF31thFOZhGcJxzPI6rm1PjzmzTCmVJ9Ya-CwoJmavOxauo46wBg6bvfwAg4Y7owwqw2kPeaQcdEhr0A7vt8tsuOZvImbwz7Z19Lnnswit0e46NwOkPrFBq-r8WHYIhTNsQzkWQ==",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGe9Iz_hQbkmoZwRR9VcLGTfaK3edXJtXhUQAsX49K83rdQPY42JHbHC0kk79rhwtAqLgn6zKarrksOqH-N2OEcCcw3iRFZtVEscr53W8UGFlhGeD1kpbWyJzeRe2qBYEN4eCxexgyNKF2ARIC3_D8au7aL8LlKMsPFqRYp5P0a36yeztKeq9uNWWB7jA==",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsov_SMpeNdnNM0zYB7RVjpPxLBtiRe-VkVunzVdNqBS3o0fO_6ecSN8e1DDTfX_33Z1m82PAlu22cS8MiALeOysIfXtEqVA6XlJ4p8TVWbgwTEu-YR2vN_9ZbueOvUUCitXpDiyQJBSNXIiaz7IKHFDQEz18AwP0=",
+        "title": "emergent.sh"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0s-SfTsedY1tQK_5UlEXa6TIXXHZyXlJvoEnReL_CNgUaVt18816RjKRWhUxAmI8zjzMxoLtpAwV1MvA2g93W4KItv1Flw-7bv4Pf8ltDAM7Cvad-gVuXbxFwYKjS_I3KN50jN94NpgEdeud8hg7QEODozbsLdKB-MgJ61rfLIRyPmfeFOx20zQzSVciAOvVtqkwPjyaLMw==",
+        "title": "petapixel.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHe2IrI9aFuuXikPCDZxc9J9Muq3ZCSLhLysEwFiFRBBQOOln6ddSn-ThsPwoc4Rz-KrgHBqhfVOVVQYxHpogEe9bkULZLDLmmmtjfFAI3g0qL2SfoDqp5PAO7yBppKqvDk2zD2ovo5YEE3RKWJo_M7Ato=",
+        "title": "imagen-ai.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-pm67kzXArvp2V-LQ9cBAmGCTwUAEgKHjgzrGkDq61P1QEP6UzdqoyCS9B9CnZb7DAKT655pO_TsQ6xHwRf5dxT3txeXSMqiuhOYodLTLmbCzdSOAVfqmZVGWJ0qraWcHyjZGtoHfZeWW32il_2psleTBt8fRtMP61QyIrFdhsMMWVPHkyuNrqHJTixkwMVq2RAnkIg==",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzUqx6bT0mFnUVrv9waJbmcqLvjxh9rwGr7QyXDy7I61JP8T9K1GXjGdnR2bHTzCIkWcMPHdm4yAs4MsniZ-cWttLIhUw1UDB8kAQuizHZeO5CEr--XxLQBOPVer1jQLDku-E5OcxqcixxnybyFzg6B1tC6SndSEliOY7U9wb8KeHF1w==",
+        "title": "wikipedia.org"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHarxVIHx1wuBjQCBLw2itwvuhLiJZwh97eyhfitADvAQu4F7UmDTqM51HGVEb1yJkmkDJA-UnJBtMkaoN-7Khr9WoYMe4iXEx-25Ek5EmSXMJFuazxTL9LpCc_YfeuxmqR2Dm4jhsClIb_Fofui1Bh8uMm74jmykN9dFDl7RJWDMrijRfN2NqvVnbArn8XckJq6Ve_",
+        "title": "htx.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBqdlJxnD0XyK05wFbuI-gH3DHcFOQVKduMWpUgFHMUrYAyfE7Qm7ClLosg9B4M5h2i3qBywsVdrd_DzkuGE0WAMcIDFBdxWOxnVvhQtDPSdCIyFbqTnhhqBwag5OZLufVSEY=",
+        "title": "ycombinator.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-3KEAIQYb886dNExab5jVHXd_XIgYBcxwCBlIXw2klqZkD6srsBINzBoEiXHozxbEORZKKKe8rluh5cSl7dk8UDFROjfCOQqIVyaTmA68xd1RyRBFJ_JweaY7Zl35BQWiNegsWsZJGRxoJDURFSsKEM7fuCSkkAfU",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHC9JWrbgk3gWOfNoGZ19mQUwHHjXr27kscTsrsaJpXs1rZELPINiPRwbO8KqdWtxzVGPRTU-elU3wddzlxMprnFDZQqm92QqVUqrz44ezN9710CsN3H0XR7uIQUyxnfJWsSS6x0CVHpRg-guqvnW9LhHdJIYjMI61BpYxY8FCF8pQ=",
+        "title": "thomasnet.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyeEm8R77GNm0A-tgtnm9XiaMR9AGpToU4kcv67SQvHgP_9ewaMoMqCCkjSskthri76wwxz90433lfjxH1fW2_m5yu7uNS87A70iReY-zxSg8eqiy2v6zJXMvAq_vkX2xMLlEGHSp-p8NprvB5bspacgwPyZIkvvVVhY38kHQhEzt5uhOdXrVa",
+        "title": "cryptobriefing.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnLwWXuZDWKOarlabdQGFXClti30-faK8xocJmEVVkTXTmBfjQuo5u42iGHQf_OnLOriL_CcuYXD0pTpqPfb33inXBl2wAO_gceRN8GLoYGwV8h3Q-H3Q6zlI_PyL3tMdMsk8yMFpOMOV0wWLpIV2NZlqkoKWApqklV7uiHA==",
+        "title": "canarymedia.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtP5kH4DtR0H0ez2Uq2PacKe7vQxmVGOZ-BOeP9RKimVPdAC740N1SshxuQ1w1Fbkq0jnyWrOhCRxqeLr57gdOWgz75qpGGhOZFtXvMoh1DYaHAEGFZWLYLm457Ifx6LW5up239xWXGimu-v1qBqK_Lkv-IR3zwPISC9uyCVtcVIQywQNUOxkZ2YnAW8_zSx3NZnsmqVsQOMsBI4Q=",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCOUGziFhrmbcsFf-71hQL4Nb9em0Gn4HRE5M_zskF3etKbd1LeYdnH6gudxrGTb3I6NmgMd28HWvYaeDjxDR3FcKhzFkSgD6_Oep9atMTpZ3BzDzNB4tMMw==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCOUGziFhrmbcsFf-71hQL4Nb9em0Gn4HRE5M_zskF3etKbd1LeYdnH6gudxrGTb3I6NmgMd28HWvYaeDjxDR3FcKhzFkSgD6_Oep9atMTpZ3BzDzNB4tMMw==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoYMxJu1A4nTscsckMBnZbQd5O7ealHoG3gR3QdYgg1eZO6zWn97KEAXct0E8x7J_AK6g8tlc1x5ABUxXZdsIgxL2u2h4ADVorAi6DITfwzDyML18MeE3bXQ==",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2Ta8QaF4wYRdLXdyKmF9Oy1hfMukFp-sTS7UgXwBMdZLVyvFnWy18E3U0EHFjQrCvjdqs2GqrkKBHDMNqGOzGUgk5muQwmznXqMBbZsjHH2JircT4fWetmCc=",
+        "title": "toolify.ai"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 216,
+        "endIndex": 370,
+        "text": "**What is confirmed:** OpenAI executive Thibault Sottiaux confirmed on X that OpenAI corrected a launch billing error for its GPT-6.2 Astra and Sol models"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 372,
+        "endIndex": 420,
+        "text": "The error had incorrectly discounted model usage"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 422,
+        "endIndex": 599,
+        "text": "Following the fix, paying users across ChatGPT Work, Codex, Plus, Pro, and Business plans will reach usage caps 40% faster on Astra and 25% faster on Sol compared to launch week"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 601,
+        "endIndex": 670,
+        "text": "OpenAI is offering one banked usage reset per account as compensation"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 674,
+        "endIndex": 816,
+        "text": "**Important caveats:** OpenAI maintains that GPT-6.2 models remain more token-efficient per task than predecessors (GPT-6 Astra / GPT-6.1 Sol)"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 674,
+        "endIndex": 915,
+        "text": "**Important caveats:** OpenAI maintains that GPT-6.2 models remain more token-efficient per task than predecessors (GPT-6 Astra / GPT-6.1 Sol), but user feedback on community platforms has been heavily critical of the effective allowance cut"
+      },
+      "groundingChunkIndices": [
+        2,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 917,
+        "endIndex": 962,
+        "text": "Past usage is not being retroactively charged"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1167,
+        "endIndex": 1299,
+        "text": "**What is confirmed:** Silicon Valley optical interconnect startup Avicena announced over $100M in Series C funding led by InterVest"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1301,
+        "endIndex": 1459,
+        "text": "Strategic and financial participants include SK Hynix Ventures, Samsung Catalyst Fund, AMD Ventures, Tiger Global, Cerberus, Prosperity7, and Hitachi Ventures"
+      },
+      "groundingChunkIndices": [
+        4,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1461,
+        "endIndex": 1633,
+        "text": "Former tech executive Kevin Pope has taken over as CEO to lead commercialization of Avicena's laser-free LightBundle platform, which links AI chips and memory via microLEDs"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1637,
+        "endIndex": 1707,
+        "text": "**Important caveats:** Commercial deployment is targeted for next year"
+      },
+      "groundingChunkIndices": [
+        6,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1997,
+        "endIndex": 2195,
+        "text": "**What is confirmed:** The New York Times photography leadership (Meaghan Looram and Josh Haner) issued guidance directing contributing photographers not to update to Adobe Photoshop 2027 (v28.0.0+)"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2197,
+        "endIndex": 2251,
+        "text": "The policy, confirmed by NYT spokesperson Graham James"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2197,
+        "endIndex": 2452,
+        "text": "The policy, confirmed by NYT spokesperson Graham James, stems from concerns that automated generative AI tools (such as AI relighting, restyling, and expansion) operates without explicit user prompts and embeds C2PA metadata marking images as AI-generated"
+      },
+      "groundingChunkIndices": [
+        10,
+        8,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2456,
+        "endIndex": 2584,
+        "text": "**Important caveats:** The restriction applies specifically to editorial/journalistic assignments to preserve image authenticity"
+      },
+      "groundingChunkIndices": [
+        10,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2586,
+        "endIndex": 2667,
+        "text": "Photographers can continue using Photoshop 27.0 via Adobe Creative Cloud rollback"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2910,
+        "endIndex": 3267,
+        "text": "**What is confirmed:** Anthropic researcher Luke Sernau published an open-source Lean 4 repository (`grh-lean`) compressing the ~17-million-line formal proof of the Generalized Riemann Hypothesis (originally generated by mathematician Levent Alpöge with Claude) down to ~76,000 lines in a compact version and ~300,000 lines in a documented/readable version"
+      },
+      "groundingChunkIndices": [
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3269,
+        "endIndex": 3350,
+        "text": "The proof uses no \"sorry\" placeholders and passes standard Lean kernel validation"
+      },
+      "groundingChunkIndices": [
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3354,
+        "endIndex": 3543,
+        "text": "**Important caveats:** Machine verification confirms logical consistency within Lean, but mathematicians are still analyzing and distilling the proof into a traditional human-readable paper"
+      },
+      "groundingChunkIndices": [
+        15,
+        13,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3800,
+        "endIndex": 3990,
+        "text": "**What is confirmed:** The Texas Commission on Environmental Quality (TCEQ) resumed environmental permitting for data centers after grid operator ERCOT finished a community impact evaluation"
+      },
+      "groundingChunkIndices": [
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3992,
+        "endIndex": 4137,
+        "text": "TCEQ issued an air permit for SpaceX's proposed $24 billion compute facility and 750 MW natural gas power plant complex near Starbase/Brownsville"
+      },
+      "groundingChunkIndices": [
+        17,
+        18,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4141,
+        "endIndex": 4363,
+        "text": "**Important caveats:** The state approvals come ahead of Democratic Governor-elect Gina Hinojosa taking office in January 2026, who campaigned on stricter environmental controls for data center energy and water consumption"
+      },
+      "groundingChunkIndices": [
+        19,
+        16
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4365,
+        "endIndex": 4452,
+        "text": "Locally, Cameron County officials recently declined SpaceX's property tax break request"
+      },
+      "groundingChunkIndices": [
+        20,
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4712,
+        "endIndex": 4988,
+        "text": "**What is confirmed:** Confidential computing startup TrustedRouter (which raised $6M in seed funding) reported to Bloomberg that its enterprise end-to-end encrypted AI routing platform now processes over 6 billion tokens per day, up from 1 billion daily tokens in August 2026"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5305,
+        "endIndex": 5541,
+        "text": "**What is confirmed:** A Financial Times market analysis details how institutional investors (pension funds and university endowments) are selling LP positions in 2021-era venture capital funds on the secondary market at steep discounts"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5543,
+        "endIndex": 5652,
+        "text": "LPs are accepting knockdown prices to generate liquidity to allocate capital toward new AI-focused tech funds"
+      },
+      "groundingChunkIndices": [
+        23,
+        24
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"institutional investors\" \"older VC funds\" \"steep discounts\" \"Financial Times\"",
+    "\"New York Times\" \"photographers\" \"Photoshop\" \"AI features\" \"Verge\"",
+    "\"OpenAI\" \"GPT-6.2\" \"Astra\" \"billing\" OR \"usage limits\"",
+    "\"Avicena\" \"Series C\" \"100M\" OR \"Intervest\" \"SK Hynix\"",
+    "\"Texas\" \"SpaceX\" \"gas power plant\" \"Hinojosa\" OR \"data center\"",
+    "\"TrustedRouter\" \"6M\" \"tokens per day\" \"Bloomberg\"",
+    "\"grh-lean\" \"Anthropic\" \"Lean\""
+  ]
+}

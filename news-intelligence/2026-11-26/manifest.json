@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T16:48:20.380Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 482,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 254,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 290,
+      "collection_mode": "api",
+      "original_link_count": 9
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 266,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1460,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": true,
+  "quality_status": "ready_with_warnings",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-26",
+  "overall_confidence": 0.9,
+  "stories": [
+    {
+      "category": "ai",
+      "headline": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps",
+      "confirmed_fact": "OpenAI has corrected a billing error that incorrectly discounted usage for its GPT-6.2 Astra and Sol models. As a result, paying users will now reach their usage caps 40% faster on Astra and 25% faster on Sol than they did during the launch week.",
+      "why_it_matters": "For power users and businesses relying on these models, the change represents a significant reduction in the effective allowance per subscription, despite OpenAI's claims regarding the models' token efficiency.",
+      "interpretation": "The correction highlights the gap between initial launch-day expectations and the actual operational costs of running newer, more resource-intensive models.",
+      "confidence": 0.95,
+      "source": "Graham Barlow/TechRadar",
+      "discovered_via": "Techmeme",
+      "source_title": "OpenAI says it corrected a GPT-6.2 Astra and Sol launch billing mistake that had incorrectly discounted usage; Astra users will now hit their limits 40% faster (Graham Barlow/TechRadar)",
+      "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster",
+      "discovery_url": "https://www.techmeme.com/261126/p16",
+      "link_quality": "original",
+      "published_at": "2026-11-26T13:01:08.000Z",
+      "discovery_score": 7.543
+    },
+    {
+      "category": "research",
+      "headline": "Anthropic researcher compresses formal proof of Riemann Hypothesis",
+      "confirmed_fact": "Anthropic researcher Luke Sernau has released a compact, open-source Lean 4 repository that reduces a 17-million-line formal proof of the Generalized Riemann Hypothesis to approximately 76,000 lines. The proof has passed standard Lean kernel validation.",
+      "why_it_matters": "This is a notable step in AI-assisted mathematics, demonstrating that machine-generated proofs can be distilled into more manageable, verifiable forms without losing logical integrity.",
+      "interpretation": "While the proof is logically consistent within the Lean environment, the real test remains the ongoing effort by mathematicians to translate this into a human-readable format.",
+      "confidence": 0.9,
+      "source": "github.com",
+      "discovered_via": "Hacker News",
+      "source_title": "Much shorter version of GRH Lean verification from Anthropic",
+      "url": "https://github.com/lsernau/grh-lean",
+      "discovery_url": "https://news.ycombinator.com/item?id=50648050",
+      "link_quality": "original",
+      "published_at": "2026-11-25T21:48:10.000Z",
+      "discovery_score": 7.819
+    },
+    {
+      "category": "business",
+      "headline": "Institutional investors offload 2021-era VC stakes to fund AI bets",
+      "confirmed_fact": "Institutional investors, including pension funds and university endowments, are selling their positions in 2021-era venture capital funds on the secondary market at steep discounts. The liquidity generated is being redirected toward new AI-focused technology funds.",
+      "why_it_matters": "This trend signals a broader reallocation of capital as institutional LPs attempt to exit the high-valuation vintage of 2021 to chase the current wave of AI investment.",
+      "interpretation": "The willingness to accept knockdown prices suggests that these investors view the potential upside of current AI-focused funds as worth the immediate loss on their legacy portfolios.",
+      "confidence": 0.85,
+      "source": "Financial Times",
+      "discovered_via": "Techmeme",
+      "source_title": "Analysis: institutional investors are selling stakes in older VC funds from the 2021 investment boom peak at steep discounts and rushing to back new AI funds (Financial Times)",
+      "url": "https://www.ft.com/content/0278cbea-a0b6-4a30-80f2-f31ac6657f11",
+      "discovery_url": "https://www.techmeme.com/261126/p14",
+      "link_quality": "original",
+      "published_at": "2026-11-26T12:35:21.000Z",
+      "discovery_score": 7.365
+    },
+    {
+      "category": "technology",
+      "headline": "New York Times restricts Photoshop 2027 updates for staff photographers",
+      "confirmed_fact": "The New York Times has directed contributing photographers to avoid updating to Adobe Photoshop 2027 (v28.0.0+) due to concerns over automated generative AI features that operate without explicit prompts and embed C2PA metadata.",
+      "why_it_matters": "The move highlights the tension between new AI-powered creative tools and the strict provenance requirements necessary for maintaining journalistic integrity.",
+      "interpretation": "Institutional resistance to these features is likely to grow as media organisations prioritise image authenticity over the convenience of automated editing tools.",
+      "confidence": 0.9,
+      "source": "theverge.com",
+      "discovered_via": "Hacker News",
+      "source_title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "discovery_url": "https://news.ycombinator.com/item?id=50647673",
+      "link_quality": "original",
+      "published_at": "2026-11-25T21:18:02.000Z",
+      "discovery_score": 7.878
+    }
+  ],
+  "practical_takeaway": "If you are a heavy user of OpenAI's latest models, expect your monthly usage limits to feel tighter than they did last week. For those in creative or data-sensitive industries, consider auditing your software update policies to ensure that new AI-integrated tools do not inadvertently alter your metadata or workflow standards.",
+  "watch_next": "Keep an eye on how other major media outlets respond to Adobe's automated AI features, and monitor whether the secondary market for 2021-era VC funds continues to show signs of distress as more capital flows into AI.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 086",
+      "title": "My Word Ladder Race",
+      "summary": "Change one letter at a time across curated three- and four-letter ladders with real-word validation, hints, undo, timing and private recent results.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-086/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-086/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-26",
+    "lead_headline": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps",
+    "facebook_post": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps\n\nFor power users and businesses relying on these models, the change represents a significant reduction in the effective allowance per subscription, despite OpenAI's claims regarding the models' token efficiency.\n\nToday's Sapiver Forge Daily Brief covers 4 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps",
+    "pinterest_description": "For power users and businesses relying on these models, the change represents a significant reduction in the effective allowance per subscription, despite OpenAI's claims regarding the models' token efficiency.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "OpenAI corrects billing error, effectively tightening GPT-6.2 usage caps. OpenAI has corrected a billing error that incorrectly discounted usage for its GPT-6.2 Astra and Sol models. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "1e536955ceb67a2339a5d8c5ba6679e599165777c017def8b66b393bc112fc37"
+}

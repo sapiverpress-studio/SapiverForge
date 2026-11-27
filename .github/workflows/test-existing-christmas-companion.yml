@@ -53,15 +53,31 @@ jobs:
               const p=await source.get(b.key,json);
               if(Number(p?.etsyListingId)===listing)matches.push({p,productId:m[1]});
             }
+            console.log('Exact listing mappings found: '+matches.length);
             if(matches.length!==1)throw Error('Listing mapping unavailable');
-            const {p,productId}=matches[0],rev=p.currentRevision;
-            if(p.phase!=='published'||p.pendingRevision||!/^[A-Za-z0-9_-]{32}$/.test(rev||''))throw Error('Listing revision unavailable or being updated');
+            const {p,productId}=matches[0];
+            const validRev=x=>typeof x==='string'&&/^[A-Za-z0-9_-]{32}$/.test(x);
+            const safePhase=x=>typeof x==='string'&&/^[a-z_]{1,40}$/.test(x)?x:'unavailable';
+            console.log('Product record: '+JSON.stringify({phase:safePhase(p.phase),pendingPhase:safePhase(p.pendingPhase),etsyState:safePhase(p.etsyState),hasCurrent:validRev(p.currentRevision),hasPending:validRev(p.pendingRevision)}));
+            // Exact owner-approved historical edition, not a new Etsy publication.
+            // Prefer current revision; legacy pending pointer only if no current exists.
+            stage='resolve existing edition revision';
+            if(p.currentRevision&&!validRev(p.currentRevision))throw Error('Invalid current revision');
+            const rev=p.currentRevision||p.pendingRevision;
+            if(!validRev(rev))throw Error('No saved revision');
+            if(p.currentRevision&&p.pendingRevision&&p.currentRevision!==p.pendingRevision)throw Error('Separate pending revision; review required');
             const s=await source.get('uploads/'+rev+'/state',json);
             const v=await source.get('products/'+productId+'/revisions/'+rev,json);
-            if(s?.phase!=='published'||s.type!=='digital'||s.metadata?.kind!=='activity-book'||s.listingId!==listing||s.archiveKey!=='uploads/'+rev+'/original.zip'||v?.phase!=='published'||v.id!==rev||v.listingId!==listing)throw Error('Published revision mismatch');
+            console.log('Saved edition: '+JSON.stringify({phase:safePhase(s?.phase),revisionPhase:safePhase(v?.phase),listingMatch:Number(s?.listingId)===listing,revisionExists:!!v,revisionListingMatch:Number(v?.listingId)===listing,archiveKeyMatches:s?.archiveKey==='uploads/'+rev+'/original.zip'}));
+            stage='validate saved edition mapping';
+            if(!s||s.type!=='digital'||s.metadata?.kind!=='activity-book'||s.archiveKey!=='uploads/'+rev+'/original.zip'||(s.listingId!=null&&Number(s.listingId)!==listing)||(s.productId&&s.productId!==productId)||(v&&(v.id!==rev||Number(v.listingId)!==listing)))throw Error('Saved edition mapping mismatch');
+            if(!['published','draft_verified','needs_investigation'].includes(s.phase))throw Error('Saved edition is not in a terminal publication state');
+            // The previous independently imported pilot receipt and exact archive
+            // hash must still match. Do not infer current Etsy state or mutate it.
             stage='exact original archive';
             const raw=await source.get(s.archiveKey,bin);
             if(!raw||sha(Buffer.from(raw))!==expected)throw Error('Original archive mismatch');
+            console.log('Exact archived edition matched; current Etsy activity has not been independently rechecked.');
             const {receipt,assets}=stageArchive(Buffer.from(raw),expected);
             if(receipt.bookId!==id||receipt.sourceArchiveHash!==expected)throw Error('Edition mismatch');
             stage='existing protected companion verification';
@@ -71,7 +87,7 @@ jobs:
               const b=await dest.get(prefix+name,bin);
               if(!b||sha(Buffer.from(b))!==sha(bytes)||(name!=='index.html'&&existing.pages[name]!==sha(bytes)))throw Error('Stored asset mismatch');
             }
-            console.log('Exact published uploader revision and all 39 existing companion assets verified.');
+            console.log('Exact listing-linked archived edition and all 39 existing companion assets verified.');
             console.log('Book ID: '+id+'; Etsy listing: '+listing);
             if(process.env.APPROVE_PUBLIC_WEB!=='true'){
               if(existing.status==='published'){stage='public verification';await verifyPublic(existing);console.log('Public companion already verified: '+receipt.url);}

@@ -22,9 +22,9 @@ jobs:
     if: github.repository == 'sapiverpress-studio/SapiverForge' && github.ref == 'refs/heads/main' && (github.event_name == 'push' || inputs.confirm == 'PILOT')
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    env:
-      COMPANION_TMP: ${{ runner.temp }}/hen-bea-companion-private
     steps:
+      - name: Initialise private runner directory
+        run: echo "COMPANION_TMP=$RUNNER_TEMP/hen-bea-companion-private" >> "$GITHUB_ENV"
       - uses: actions/checkout@v4
         with:
           persist-credentials: false

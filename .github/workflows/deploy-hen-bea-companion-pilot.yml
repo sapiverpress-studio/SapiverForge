@@ -10,6 +10,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/deploy-hen-bea-companion-pilot.yml'
+      # This one-time change triggers a fresh diagnostic with the revised dispatch client.
 
 permissions:
   contents: read

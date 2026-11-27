@@ -13,3 +13,9 @@ Owner requested that the Christmas pilot use the existing suite.sapiverpress.co.
 
 ## Next
 Confirm import and guarded installation results. If baseline mismatch, reconcile without overwriting current live site; do not blindly deploy current main. Test protected book on Android, then obtain approval for public access/rights. Only after public receipt and HTML/page hashes verify can final KDP QR be generated. Generalize import/registry after pilot succeeds.
+
+## 27 November 2026 — General companion publication integration (staged)
+- Owner approved release of the reusable workflow. Retain the deployed public route at https://suite.sapiverpress.co.uk/activity-books/{bookId}/ and exact SHA-256 edition identity; KDP Forge remains unchanged.
+- Poster_gen review adds an explicit public-online rights opt-in, exact immutable approval request and unchanged Etsy publication. The new sync worker only reads matching approved, Etsy-published original ZIPs and writes immutable companion HTML/JPEG assets and publication receipt; verifies public assets; never retries Etsy or redeploys the website for each book.
+- Branch fix/approved-companion-sync-20261127: scripts/package-approved-companion.py, scripts/approved-companion-sync.mjs, test/approved-companion-sync.test.mjs, .github/workflows/sync-approved-companions.yml. Proposed owner-approved schedule at minute 7 and 37, with contract tests before live storage access. Existing Netlify PAT remains server-side.
+- Isolated tests including supplied real archive and unchanged public route passed locally before staging; full production execution not verified. New schedule not enabled until main release. No live writes or public approval for pre-existing editions inferred; earlier pilot remains separate. No Work credits or Etsy changes. No website rebuild required if deployed route is retained.

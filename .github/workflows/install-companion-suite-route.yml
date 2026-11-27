@@ -1,0 +1,70 @@
+name: Install companion route on existing Sapiver website
+on:
+  workflow_run:
+    workflows: ["Import Hen & Bea companion into existing Sapiver website"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: Type INSTALL to add the protected companion route only
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: sapiver-forge-daily-newsletter-release
+  cancel-in-progress: false
+jobs:
+  install:
+    if: github.repository == 'sapiverpress-studio/SapiverForge' && ((github.event_name == 'workflow_run' && github.event.workflow_run.id == 45988355449 && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.head_repository.full_name == github.repository) || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.confirm == 'INSTALL'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 55759a7584aff534f04d67d254ccb19e7099d653
+          path: baseline
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify route tests, protected imported receipt and exact live static baseline
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          set -euo pipefail
+          npm ci --ignore-scripts --no-audit --no-fund
+          node --test test/companion-book-route.test.mjs
+          node --input-type=module <<'NODE'
+          import {getStore} from '@netlify/blobs';
+          const s=getStore({name:'hen-bea-companion-books',siteID:'47bda30e-4698-4cf5-bcd4-d59785e1f399',token:process.env.NETLIFY_AUTH_TOKEN,consistency:'strong'});
+          const r=await s.get('books/hb-ac23a99e42eee2c856dda344aa45877a/receipt',{type:'json'});
+          if(r?.status!=='pilot'||r.interactiveHash!=='c26ffc578c0bb7bc5184639b9adb4cfbcee64658e5b6a3deff298b4e38d972df'||Object.keys(r.pages||{}).length!==38)throw Error('Protected import not verified');
+          console.log('Protected companion receipt verified');
+          NODE
+          node scripts/verify-companion-live-baseline.mjs baseline/public
+      - name: Overlay only the two new companion route files
+        run: |
+          set -euo pipefail
+          mkdir -p baseline/lib baseline/netlify/functions
+          cp lib/companion-book-route.mjs baseline/lib/
+          cp netlify/functions/companion-book.mjs baseline/netlify/functions/
+          cd baseline
+          npm ci --ignore-scripts --no-audit --no-fund
+      - name: Deploy original live site snapshot plus new protected route, no build or merchant calls
+        working-directory: baseline
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          set -euo pipefail
+          node ../scripts/verify-companion-live-baseline.mjs public
+          npx --yes netlify-cli@27.5.2 deploy --prod --no-build --dir=public --site=47bda30e-4698-4cf5-bcd4-d59785e1f399 --auth="$NETLIFY_AUTH_TOKEN" --json --message="Add protected Hen and Bea companion route only" > "$RUNNER_TEMP/companion-deploy.json"
+          ID="$(jq -er '.deploy_id' "$RUNNER_TEMP/companion-deploy.json")"
+          curl -fsS --max-time 30 -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" "https://api.netlify.com/api/v1/deploys/$ID" | jq -e 'select(.site_id=="47bda30e-4698-4cf5-bcd4-d59785e1f399" and .state=="ready") | select((.available_functions|map(.n)|index("companion-book")) != null) | {id,state,functions:(.available_functions|length)}'
+          STATUS="$(curl -sS --max-time 20 -o /dev/null -w '%{http_code}' https://suite.sapiverpress.co.uk/activity-books/hb-ac23a99e42eee2c856dda344aa45877a/)"
+          test "$STATUS" = 401 || { echo "Protected route returned HTTP $STATUS, expected 401"; exit 1; }
+          echo 'Protected companion route confirmed; public QR release not approved.'

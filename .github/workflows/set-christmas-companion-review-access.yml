@@ -1,0 +1,49 @@
+name: Set Christmas companion review access
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/set-christmas-companion-review-access.yml'
+permissions:
+  contents: read
+concurrency:
+  group: hen-bea-companion-pilot
+  cancel-in-progress: false
+jobs:
+  access:
+    if: github.repository == 'sapiverpress-studio/SapiverForge' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            package.json
+            package-lock.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Rotate only the private Christmas preview credential hash
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          node --input-type=module <<'NODE'
+          import {getStore} from '@netlify/blobs';
+          const s=getStore({name:'hen-bea-companion-books',siteID:'47bda30e-4698-4cf5-bcd4-d59785e1f399',token:process.env.NETLIFY_AUTH_TOKEN,consistency:'strong'});
+          const key='books/hb-ac23a99e42eee2c856dda344aa45877a/receipt';
+          const old=await s.getWithMetadata(key,{type:'json',consistency:'strong'});
+          const r=old?.data;
+          const previous='139de58c3466ae8b3d7b33c8cd8babd3888a4212807b84aa8e7f57a553c893e9';
+          const next='3462d7f243de25cb8da353b93fc5d9137e77ace0b17e8e1c75af1ca5e842a226';
+          if(!r||!old.etag||r.status!=='pilot'||r.bookId!=='hb-ac23a99e42eee2c856dda344aa45877a'||r.interactiveHash!=='c26ffc578c0bb7bc5184639b9adb4cfbcee64658e5b6a3deff298b4e38d972df'||![previous,next].includes(r.previewHash))throw Error('Unexpected pilot receipt; no change');
+          if(r.previewHash!==next){
+            const result=await s.setJSON(key,{...r,previewHash:next},{onlyIfMatch:old.etag});
+            if(!result.modified)throw Error('Concurrent receipt change');
+          }
+          const check=await s.get(key,{type:'json',consistency:'strong'});
+          if(check?.previewHash!==next||check.status!=='pilot')throw Error('Credential update unverified');
+          console.log('Private Christmas preview credential updated and verified. No deployment or other login changes.');
+          NODE

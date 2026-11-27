@@ -1,0 +1,522 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Huawei%22+%22Ren+Zhengfei%22+%22Trump%22+%22New+York+Times%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;Huawei&quot; &quot;Ren Zhengfei&quot; &quot;Trump&quot; &quot;New York Times&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Meta%22+%22Muse%22+%22CMA%22+Politico+terms+of+service+UK&client=app-vertex-grounding&safesearch=active\">&quot;Meta&quot; &quot;Muse&quot; &quot;CMA&quot; Politico terms of service UK</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Nvidia%22+%22Blackwell%22+%22Shanghai%22+%22Alice+Huang%22+Bloomberg+2026&client=app-vertex-grounding&safesearch=active\">&quot;Nvidia&quot; &quot;Blackwell&quot; &quot;Shanghai&quot; &quot;Alice Huang&quot; Bloomberg 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22foreign+investors%22+%22Taiwanese+stocks%22+%22November%22+Bloomberg+2026&client=app-vertex-grounding&safesearch=active\">&quot;foreign investors&quot; &quot;Taiwanese stocks&quot; &quot;November&quot; Bloomberg 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22US+smartphone+shipments+fell+9%25%22+%22Counterpoint+Research%22+2026&client=app-vertex-grounding&safesearch=active\">&quot;US smartphone shipments fell 9%&quot; &quot;Counterpoint Research&quot; 2026</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Air+Force%22+breach+%22Cloud+One%22+Reuters+2026&client=app-vertex-grounding&safesearch=active\">&quot;Air Force&quot; breach &quot;Cloud One&quot; Reuters 2026</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqoci2dEfXUIw3Z6ooYfEm-Vmuos9ipLzI50EaYih0L3AIeF0pqPl4HShl1ZkejwSxKLEQoEZrnLAgeatRA1wMeDykBpaNnOBp_GP-C5GdS9jY8pFiXYV1",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOqoJP_1n11LFJbCmVLgpox1_CjbLHiCSqsfAsyPcqeIqbzwEqxu76vpc7T7JZ0LCxbP7IVpoMhrgx8cWUhPkRIjkFtCeHx09wgb68QT61zVkBzN8TtvH9Nj8cdl20kUGNOvUlWWwf2hueOSotzHoFE_nDxGBTX9OaroSsTCxK6n55kJmOwWmERJj5s5jibWsMVR2_27PyUoFSOlw=",
+        "title": "promptlyfound.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMqePV4W5JWinG9fx2MMRU9IwIy0R46XJr8216ywzE8zOu9Gl00w7ew5lmwuD1g5AKS_I8BtToomYcN1v2F3zdy4f7p0kPfmZLXUI8YKyRBAjmsO2rxi39LBW5pCV6HXYWycp5jSmhq5uNrqWf6eEbBkgCqFxWkM4MKueBBno6S8dQvW8GloxkJOr72f6dLdQ9fKmRliS8fQT6Q4DSmtJ7",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEanJY2R-mpgLKd4o1bveDXe_fOWjHisJsd226248Dg8XIdYoPCoEDUMJ5BPHsOW8ksA_IxJ1AW0aLieSoGLaTSVock8-6FRuMLuoNCjvYNs0A4bcZdKPeKsssoWJsZXSDNnWuk6EMzj9U9bzqyQAhEQsbUwYRPHyEXbG0zRDS5awLrKr486sEebPcZBCx6L-ioMOe-quHeBwZhmW0ppXI3",
+        "title": "ground.news"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaKaFRYIH6Z9uCOQxFdwbM3x6X_ZnQJX5vy9rMy-UCV7OtMt0RVk_DMRaHjZEciboe6OSVPNwuoG5O8IjFo-dLwqdTTtFRvD0XKzI_dV9xjgm-FQrs_vHL-9PCKs5PcfIcilg7gKBXL45NQT1cevuywqUeW7jgO0LV38OgjsleT3iWDnq18nv4YA7lb_L-hgGVth9zFIRGP9Tpk9n4",
+        "title": "theguardian.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLmPbmVhqtFpK_4RQ_FQXJh0nzGqqu0gT3RFKQ4G_fKutOdm1-ZOMoBDli2IjwbvTkmXawK7g8Swz0YABgu-oIGuxVMGH-e6V7BHe8QEKXkxIOoZn25sKFZkE-PCTJHAv4mZy2PJJd1aHUBp44UAjidLu7VufBcS63R8q11K4twA==",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHocx-_mi9pqtW6G9nNGF9iUma3BZGv51uGQG9Bh4IRoUPZoN-8n7XrBHucwfNRL8PAxYJ5caS82Kup9G-MhloO9JTJbQDEjfXKi_f0pGFFtewPnh9NgPtW_kLyFQISrbbXhCPm03TT6TxsXBWP6lg_ec4zy1KhQ-Ck",
+        "title": "biggo.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhBoDZ81zZTBYJK_XsouVcM0r1kPLeqioSHYlT64tF2PGnahZmEnhEnt6eJvvWGBPFsOx5bYRNHjZd78s0sJ2JDN9LBb_o9l3tAsyEDyJmXrkn4mhHEFPtaRyQ8CEi2d11a06SSew7tU09WghisEzors1i31M0qJb_KSJVderZ9BcQ4DrcoLw=",
+        "title": "chosun.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYzPyIL6q2_aJsNNQMlZpINSxw43qURX7LnlHHGQMJNLru3dk7ufrqRqWToL1JGirUQZRV7k-UE6NG_uwnsWPFc5L6neRWmR8nh-9JOoCYiUTIiVD0lOd029OMohLbmAUbC8IXweCz97hVr8imvKAxRjDOZdb_8kk4jPmIRAbak4Vdn8nB2d5FJurxozntXAxwmRQ=",
+        "title": "thenextweb.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEawNLSZWl2yAUzKsm3-lMQDZmSbp5MEq0h99ZarqNFrEqQgx-OO3e_WjzVtBRI-fRL-xjb1Z8JHJlib0tT_c4OaRjJlKT8utYQHnwACvMhrnXY1ne_-m0ZRgG_U-AeAbZ_xhX0K_qRBSg3_mtVf7P2MBKcvwuDFvTOjtNC7Pcf7TE-XWq8r7J5RToYn-rJMPCw74AnSAecu50=",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGA2mPI-MfcDAnr-5dAuyJ6oRIFwixIY5AG99i4mzYDNddXqRM0uI4f07VOm2RPX-CZ1ina26RROWaAqb5nvs9CUFvhiYCtfrRfqIx7uw8lEObCi6M=",
+        "title": "digg.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAlnqDSNVCz2vpTVtdhslCcDVY0XHQoN2Zgp-nU06FJx1DIIHi33TP6LAwi_rFO1eYvw9IsrB6RB2_1rR2HzZDyYnwE_2-7lfCxlrxcmTnglyusFAX7pcuA7Lg9Sj8GIVxBYuBo9R8zGoK_ghe5h61l4wpnKdCeHh2vJutNrJxME9t26AuagskDl__y4azhPjG9j-AEijg",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnNHG_WgPasun97tgGTTlU04uZBEKdtRYTDSoagtBXNkJTOu187aAO-PDpyucjjfaEliFBE5QDGq9CAOyEco9dvPaXtWFZrakIgecK1rLKyU45YZD6l2dKqFnXSce1F7LC78phX_znjHxOE07zrX-IbmYOlpKdiQ4uIFcfnJ0IrDhNuJpLOA==",
+        "title": "stockanalysis.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFK6Ah6bTBgLBk5nxWbcYVcv43_J0dnm_ZwuveMvkCoTyR8T29aIZLKpb-nGjszDMPn5G_LKvizDLixS5_suzcB7ohf2BE6aA6U7DxGOfaz262oX805eBkI-BhB07y1n7UQ0dlu_qaNyG6o1TA19GUrIeZiATKzPaGpd8RdVKibVDtVSKPfmAPkuVeEcpv40ANXmF_lVJNjSrkGOXVfA==",
+        "title": "reddit.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEX795bC-8jHyrElsXnNMpHwBGhASHnCzRlNuY3TOyGJOdg3q0nTg9AHd3zRiIWtLflCTsF3ZnN0M3jIW3B-VpVOhU9kDvjkrVd-2rLFE0Hp_AZ8Zku6XE6Lnfzb0QjYvE_aCIfm3BhMLrx93rbAjq872oWUHgdAPbo8bi-BaXWCRAryleJ04YoD86B-lQu1UYKsT7qAwlxsVsDP7_uTTHR6UICI1HF-soFpHaBFw6uWiJJvDBpvBdCNk=",
+        "title": "clarin.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdY_A-OOz2SmNCc_ymWx0uuaDrwikp4IO92SZ33yjUdiuLbcVbXbpNk39VNrVNV9PdYcjwN6bGzhYB7cZ-yerzPK9vykvnew7ugLAZ6mzy8vB0WnX6SDGQr2CQegMQDQPMxcudr9Akh7RTYsK5O_fcw6APNQ1q8hxGJCyzTU23hutWbLPCgLrk58fQE0esF5fOHBVUoEPxQQ==",
+        "title": "forbes.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLfWy5C5cwK8rABYsdtOvRetNoMDdrTxxKAac2s0n9Fz8-IkzOZVdJYbNSOlgLcQKnWdS2k2NkiRUpQtKzdpkozl-WPC7M6jIHTIxpHLrS0Dcig3AWNyuZXeWBCUwuvg_S7kNGVoCAz3T7EFFmA2PUBcHZzYP1tRCguz3UowsTU021EroobL1KTkmCXdXwMYEx5qkQ",
+        "title": "theguardian.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEL9W6S1bkoR1mM3IiRrqOMdKy95v10IuuXYgA8qU-z8HYI-iNEZfFakg9tUZt13UM3hjJ6yjZyvE95B6nVBBcGuJO6Ln5hpbcnQqmnDdfBXC6DQIMpoKyvpdNqKkacAYitL_hBjovM3_tzuL7oPk28siHqfH_W3MtwBOX4MVThLJGosa_229e6lQGoOGSD8G9voNTHtQ3kBzohxogQUnIgaArKHA==",
+        "title": "moderndiplomacy.eu"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbJ9dm8TWspXYFaimjNdURw2cd0RJ83Q8UGQl04u8R9lkQg2-OAHEjv_9_8Ru7qkoxnydBZd-YyZTLOOut4xPpF1C9iSm9QfZM6NpLH6zsPT-T9pEu7dA5xJ45hepKU1dHyAihDqZMf44TMFamHowtLS95qDf9IRUwQuQX-0Zp507ru7xHggvjvo5ZYtZezmYbWCB7",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTA2S2CB2P9XpvGNwMnEPYOvbLEuNGINPUK4wNJwIZY_xRZ-ir7kJaPxtNLoMS4czMwxT2ZbWPYR9PmhKQIcu5eWEPtqvfZP5EME_NDVbB9XKfgBMsCFQ=",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERpDoc5YXFjwBGRrxenzlph2SwUTQjkDvMjwKEcjRuJVh3wYyDABmhVlptq4hF8xndutRmazgIVNC5RqxuNJ_IfU-EN75C38rTBUFU6o512RCj1YyRyDcvFtjufNaFhSZ7f8air7gXoakL7eHZTVgPufQPgcRwDXS9bDMm-zTZZfMRLxkwtl-abmRr6IcfZltguxkERLzvSbbRur6-dEBKzA==",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuOjxXd5CR9gyY22BYBSjgI-bEpUYf9EdyJP_bxH7lmoWhxH6hZV0M1JuD90BjLtp2b-_WUmtALUZH4JPjPMF9ZnPoAyQpFYqXqNAvQLUOV3SIG3QnKDwu2KrHuKGfGP22dEhKg-bp3OnzNOGexe2xoH2PvLYDb_FfJ5xODU8_Qjf-23B40p0m3msEEh86HSOQMngdeff2N98_ZuNsjH7mpTvwWOKabuJvtqym",
+        "title": "counterpointresearch.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1um0SBm1zuju-W-_qd3J20lDdL7hlV5XaMNThZ3M2CYOHtERr5VpdYlXBecv0OS5vUeYAQ_MKPlCi3fPDtKEBtVZS5XIwG9OKJ3MJaZd-76Tt5D5S-1XbpSypEKuiNIV_UN5wKCXHW-5BrH6aP5SOiyKr7rXMk88iEP1O4cREcCaI0MGG",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKMoaJwlWYyJ_LVoGXhu57PRDKRDe_BXG1qqUAanXdilrWWF3hZ-KSEU0i-zqJIs83D94RirmvVb7RhsOl616Z2fkFydWLE0t9fmPqwd8seYanKzj3dORGibHzww-ozcBdZpbQ6TgPyasF_omiFDSAawXroFC2dwAyTubV1mP9xQh5yJfOFFh7DUUr",
+        "title": "hypebeast.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 804,
+        "endIndex": 866,
+        "text": "**Publisher / Origin:** *Politico* (Joseph Bambridge) / UK CMA"
+      },
+      "groundingChunkIndices": [
+        0
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 869,
+        "endIndex": 987,
+        "text": "**What is confirmed:** Meta launched its \"Muse\" personal AI assistant in the UK across iOS, Android, web, and WhatsApp"
+      },
+      "groundingChunkIndices": [
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 989,
+        "endIndex": 1289,
+        "text": "Following advance engagement with the UK Competition and Markets Authority (CMA) and the Information Commissioner's Office (ICO) regarding data protection and consumer laws, Meta updated its UK terms of service to afford UK users significantly stronger consumer protection rights than users in the US"
+      },
+      "groundingChunkIndices": [
+        2,
+        3
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1294,
+        "endIndex": 1541,
+        "text": "**Important caveats:** The CMA and ICO emphasized that they are continuing to closely monitor Muse’s rollout under a voluntary reporting scheme, particularly regarding automated actions taken on behalf of users (e.g., retail and travel bookings)"
+      },
+      "groundingChunkIndices": [
+        2,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1755,
+        "endIndex": 1832,
+        "text": "**Publisher / Origin:** *The New York Times* (Keith Bradsher, Adam Satariano)"
+      },
+      "groundingChunkIndices": [
+        5,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1835,
+        "endIndex": 2093,
+        "text": "**What is confirmed:** In an interview at Huawei's Shenzhen headquarters, 82-year-old founder and CEO Ren Zhengfei stated that US export restrictions forced Huawei and China to accelerate technological self-reliance, offering ironic gratitude to Donald Trump"
+      },
+      "groundingChunkIndices": [
+        5,
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2095,
+        "endIndex": 2267,
+        "text": "NYT detailed Huawei's central role in Beijing's AI ambitions, including its Ascend AI chips, Tau EDA chip-design software, and partnerships with local AI labs like DeepSeek"
+      },
+      "groundingChunkIndices": [
+        7,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2271,
+        "endIndex": 2465,
+        "text": "**Important caveats:** Independent estimates (such as Epoch AI) indicate Huawei's AI compute output remains under 4% of Nvidia's current capacity, highlighting a major volume and performance gap"
+      },
+      "groundingChunkIndices": [
+        5,
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2467,
+        "endIndex": 2577,
+        "text": "The interview was published days after a US federal jury convicted Huawei of trade secret theft and bank fraud"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2792,
+        "endIndex": 2876,
+        "text": "**Publisher / Origin:** *Bloomberg* (Andy Lin, Mackenzie Hawkins, Kari Soo Lindberg)"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2879,
+        "endIndex": 3142,
+        "text": "**What is confirmed:** Documents submitted to Chinese regulators in November 2026 reveal that Nvidia's export-restricted Blackwell hardware—including a GB300 NVL72 rack and GB200 servers—was installed at the Yangtze River Delta Project data center in Shanghai"
+      },
+      "groundingChunkIndices": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3144,
+        "endIndex": 3230,
+        "text": "Shanghai Shuoyao pledged the GB300 rack as collateral for a 96M yuan (~$14M) bank loan"
+      },
+      "groundingChunkIndices": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3232,
+        "endIndex": 3316,
+        "text": "Public serial numbers matched the assembly to Taiwanese server manufacturer Gigabyte"
+      },
+      "groundingChunkIndices": [
+        9,
+        11,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3318,
+        "endIndex": 3369,
+        "text": "The site is linked to Megaspeed founder Alice Huang"
+      },
+      "groundingChunkIndices": [
+        9,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3373,
+        "endIndex": 3553,
+        "text": "**Important caveats:** Bloomberg noted no direct paper trail establishes how the hardware entered China, who originally purchased it from Gigabyte, or whether Megaspeed diverted it"
+      },
+      "groundingChunkIndices": [
+        9,
+        11,
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3555,
+        "endIndex": 3640,
+        "text": "Shipping Blackwell systems to Chinese entities requires an explicit US export license"
+      },
+      "groundingChunkIndices": [
+        10,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3642,
+        "endIndex": 3669,
+        "text": "Megaspeed denies wrongdoing"
+      },
+      "groundingChunkIndices": [
+        12,
+        11
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3886,
+        "endIndex": 3919,
+        "text": "**Publisher / Origin:** *Reuters*"
+      },
+      "groundingChunkIndices": [
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3922,
+        "endIndex": 4062,
+        "text": "**What is confirmed:** Hackers breached the administrative control plane of the US Air Force's flagship multi-cloud environment, \"Cloud One\""
+      },
+      "groundingChunkIndices": [
+        13,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4064,
+        "endIndex": 4223,
+        "text": "Discovered within the past month during a system upgrade, the breach disrupted platform operations, paused application migrations, and blocked software updates"
+      },
+      "groundingChunkIndices": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4225,
+        "endIndex": 4325,
+        "text": "Cloud One hosts over 180 defense systems across AWS, Microsoft Azure, Google Cloud, and Oracle Cloud"
+      },
+      "groundingChunkIndices": [
+        16,
+        14
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4329,
+        "endIndex": 4490,
+        "text": "**Important caveats:** Reuters could not determine the hackers' identities, the full scope of access, or whether classified tactical or logistics data was stolen"
+      },
+      "groundingChunkIndices": [
+        16,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4492,
+        "endIndex": 4564,
+        "text": "The Air Force declined to comment on specific network operational status"
+      },
+      "groundingChunkIndices": [
+        16,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4813,
+        "endIndex": 4860,
+        "text": "**Publisher / Origin:** *Bloomberg* (Eunice Xu)"
+      },
+      "groundingChunkIndices": [
+        18,
+        19
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4863,
+        "endIndex": 5011,
+        "text": "**What is confirmed:** Foreign investors net sold a record $33.1 billion of Taiwanese equities in November 2026, surpassing October's record outflow"
+      },
+      "groundingChunkIndices": [
+        18,
+        20
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5013,
+        "endIndex": 5183,
+        "text": "Taiwan Stock Exchange data confirms net foreign sales exceeding NT$1.09 trillion through Nov 26, driven by rising AI valuation fears and broader tech sector profit-taking"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5187,
+        "endIndex": 5295,
+        "text": "**Important caveats:** Domestic Taiwanese mutual funds partially cushioned the sell-off (net buying NT$314B)"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5297,
+        "endIndex": 5410,
+        "text": "Despite foreign net sales continuing on Nov 27, local benchmark indices (Taiex) logged modest single-day rebounds"
+      },
+      "groundingChunkIndices": [
+        18
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5639,
+        "endIndex": 5719,
+        "text": "**Publisher / Origin:** *Counterpoint Research* (Maurice Klaehne, Emily Herbert)"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5722,
+        "endIndex": 5974,
+        "text": "**What is confirmed:** Counterpoint Research reported a 9% YoY decline in Q3 2026 US smartphone shipments, caused primarily by rising memory component costs that squeezed low-end Android manufacturers (e.g. Motorola dropped 4 points to 8% market share)"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5976,
+        "endIndex": 6075,
+        "text": "Apple was the only major OEM to avoid volume decline, expanding its US market share from 50% to 57%"
+      },
+      "groundingChunkIndices": [
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6077,
+        "endIndex": 6116,
+        "text": "Samsung held 25% share (up 1 point YoY)"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6120,
+        "endIndex": 6262,
+        "text": "**Important caveats:** Elevated memory prices are expected to persist through Q4, leading analysts to project muted carrier holiday promotions"
+      },
+      "groundingChunkIndices": [
+        21,
+        22
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "\"Huawei\" \"Ren Zhengfei\" \"Trump\" \"New York Times\" 2026",
+    "\"Meta\" \"Muse\" \"CMA\" Politico terms of service UK",
+    "\"Nvidia\" \"Blackwell\" \"Shanghai\" \"Alice Huang\" Bloomberg 2026",
+    "\"foreign investors\" \"Taiwanese stocks\" \"November\" Bloomberg 2026",
+    "\"US smartphone shipments fell 9%\" \"Counterpoint Research\" 2026",
+    "\"Air Force\" breach \"Cloud One\" Reuters 2026"
+  ]
+}

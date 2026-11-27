@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-27T16:33:31.955Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 721,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 311,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 362,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 291,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1627,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "construct22.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 5,
+      "title": "The group chat where your AI talks behind your back",
+      "url": "https://construct22.com/",
+      "direct_source_url": "https://construct22.com/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50663595",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50663595",
+      "summary": "",
+      "published_at": "2026-11-27T06:44:34.000Z",
+      "engagement": {
+        "score": 532,
+        "comments": 235
+      },
+      "collection_mode": "api",
+      "score": 8.121
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "janlukas.blog",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "AI made self-hosting fun again",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "direct_source_url": "https://janlukas.blog/posts/ai-self-hosting",
+      "discovery_url": "https://news.ycombinator.com/item?id=50660180",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50660180",
+      "summary": "",
+      "published_at": "2026-11-26T21:47:45.000Z",
+      "engagement": {
+        "score": 944,
+        "comments": 452
+      },
+      "collection_mode": "api",
+      "score": 8.068
+    },
+    {
+      "title": "The CMA says Meta made changes to Muse's ToS in the UK to reflect the country's consumer law; the terms give users far more protections than in the US (Joseph Bambridge/Politico)",
+      "url": "https://www.politico.eu/article/metas-uk-rollout-for-muse-ai-agent-exposes-it-to-more-liability/",
+      "summary": "Joseph Bambridge / Politico : The CMA says Meta made changes to Muse's ToS in the UK to reflect the country's consumer law; the terms give users far more protections than in the US &mdash; The U.K. terms of service for Muse give consumers far more protection than in the U.S. &mdash; LONDON &mdash; Meta will be on the hook &hellip;",
+      "description_html": "<A HREF=\"https://www.politico.eu/article/metas-uk-rollout-for-muse-ai-agent-exposes-it-to-more-liability/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261127/i8.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261127/p8#a261127p8\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Joseph Bambridge / <A HREF=\"http://www.politico.com/\">Politico</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.politico.eu/article/metas-uk-rollout-for-muse-ai-agent-exposes-it-to-more-liability/\">The CMA says Meta made changes to Muse's ToS in the UK to reflect the country's consumer law; the terms give users far more protections than in the US</A></B></SPAN>&nbsp; &mdash;&nbsp; The U.K. terms of service for Muse give consumers far more protection than in the U.S.&nbsp; &mdash;&nbsp; LONDON &mdash; Meta will be on the hook &hellip; </P>",
+      "published_at": "2026-11-27T15:25:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261127/p8",
+      "direct_source_url": "https://www.politico.eu/article/metas-uk-rollout-for-muse-ai-agent-exposes-it-to-more-liability/",
+      "publisher": "Joseph Bambridge/Politico",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.052
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "blog.ktz.me",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "Hard Drive pricing has gotten bad",
+      "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
+      "direct_source_url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50661646",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50661646",
+      "summary": "",
+      "published_at": "2026-11-27T01:13:49.000Z",
+      "engagement": {
+        "score": 488,
+        "comments": 423
+      },
+      "collection_mode": "api",
+      "score": 7.971
+    },
+    {
+      "title": "Interviews with Huawei CEO Ren Zhengfei and others on how Trump's restrictions pushed Huawei toward self-reliance, making it central to China's AI ambitions (New York Times)",
+      "url": "https://www.nytimes.com/2026/11/26/business/huawei-trump-china-ai.html?unlocked_article_code=1.TlE.eHV_.2f70GvuLgZxe&smid=nytcore-ios-share",
+      "summary": "New York Times : Interviews with Huawei CEO Ren Zhengfei and others on how Trump's restrictions pushed Huawei toward self-reliance, making it central to China's AI ambitions &mdash; As China's access to Nvidia's advanced chips shrinks, Huawei is becoming increasingly indispensable to Beijing despite a wide technological gap with its American rival.",
+      "description_html": "<A HREF=\"https://www.nytimes.com/2026/11/26/business/huawei-trump-china-ai.html?unlocked_article_code=1.TlE.eHV_.2f70GvuLgZxe&smid=nytcore-ios-share\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261127/i7.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261127/p7#a261127p7\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.nytimes.com/\">New York Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.nytimes.com/2026/11/26/business/huawei-trump-china-ai.html?unlocked_article_code=1.TlE.eHV_.2f70GvuLgZxe&smid=nytcore-ios-share\">Interviews with Huawei CEO Ren Zhengfei and others on how Trump's restrictions pushed Huawei toward self-reliance, making it central to China's AI ambitions</A></B></SPAN>&nbsp; &mdash;&nbsp; As China's access to Nvidia's advanced chips shrinks, Huawei is becoming increasingly indispensable to Beijing despite a wide technological gap with its American rival.</P>",
+      "published_at": "2026-11-27T14:20:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261127/p7",
+      "direct_source_url": "https://www.nytimes.com/2026/11/26/business/huawei-trump-china-ai.html?unlocked_article_code=1.TlE.eHV_.2f70GvuLgZxe&smid=nytcore-ios-share",
+      "publisher": "New York Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.927
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+      "url": "https://github.com/antonpictures/youtube-punisher",
+      "direct_source_url": "https://github.com/antonpictures/youtube-punisher",
+      "discovery_url": "https://news.ycombinator.com/item?id=50657530",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50657530",
+      "summary": "",
+      "published_at": "2026-11-26T17:36:47.000Z",
+      "engagement": {
+        "score": 488,
+        "comments": 582
+      },
+      "collection_mode": "api",
+      "score": 7.814
+    },
+    {
+      "title": "Serial numbers in Chinese filings reveal that Nvidia's restricted Blackwell chips were installed at a Shanghai data center linked to Alice Huang and Megaspeed (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-27/nvidia-blackwell-chips-turn-up-at-china-site-tied-to-alice-huang?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5NTc4ODgyMywiZXhwIjoxNzk2MzkzNjIzLCJhcnRpY2xlSWQiOiJUUDFVMFJUOU5KTFMwMCIsImJjb25uZWN0SWQiOiI3QTcxRTEyQjY2RTM0RkI3ODlCQTA5NEZBQzVGMkE0OSJ9.tcyYBUyKr7A_4Qyf4S69z95uT1ZiyuOyOOZi73bhQ7Q",
+      "summary": "Bloomberg : Serial numbers in Chinese filings reveal that Nvidia's restricted Blackwell chips were installed at a Shanghai data center linked to Alice Huang and Megaspeed &mdash; A pair of Chinese firms installed Nvidia Corp.'s powerful Blackwell semiconductors in a Shanghai data center linked to Alice Huang &hellip;",
+      "description_html": "<A HREF=\"https://www.bloomberg.com/news/articles/2026-11-27/nvidia-blackwell-chips-turn-up-at-china-site-tied-to-alice-huang?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5NTc4ODgyMywiZXhwIjoxNzk2MzkzNjIzLCJhcnRpY2xlSWQiOiJUUDFVMFJUOU5KTFMwMCIsImJjb25uZWN0SWQiOiI3QTcxRTEyQjY2RTM0RkI3ODlCQTA5NEZBQzVGMkE0OSJ9.tcyYBUyKr7A_4Qyf4S69z95uT1ZiyuOyOOZi73bhQ7Q\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261127/i6.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261127/p6#a261127p6\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-27/nvidia-blackwell-chips-turn-up-at-china-site-tied-to-alice-huang?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5NTc4ODgyMywiZXhwIjoxNzk2MzkzNjIzLCJhcnRpY2xlSWQiOiJUUDFVMFJUOU5KTFMwMCIsImJjb25uZWN0SWQiOiI3QTcxRTEyQjY2RTM0RkI3ODlCQTA5NEZBQzVGMkE0OSJ9.tcyYBUyKr7A_4Qyf4S69z95uT1ZiyuOyOOZi73bhQ7Q\">Serial numbers in Chinese filings reveal that Nvidia's restricted Blackwell chips were installed at a Shanghai data center linked to Alice Huang and Megaspeed</A></B></SPAN>&nbsp; &mdash;&nbsp; A pair of Chinese firms installed Nvidia Corp.'s powerful Blackwell semiconductors in a Shanghai data center linked to Alice Huang &hellip; </P>",
+      "published_at": "2026-11-27T13:05:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261127/p6",
+      "direct_source_url": "https://www.bloomberg.com/news/articles/2026-11-27/nvidia-blackwell-chips-turn-up-at-china-site-tied-to-alice-huang?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5NTc4ODgyMywiZXhwIjoxNzk2MzkzNjIzLCJhcnRpY2xlSWQiOiJUUDFVMFJUOU5KTFMwMCIsImJjb25uZWN0SWQiOiI3QTcxRTEyQjY2RTM0RkI3ODlCQTA5NEZBQzVGMkE0OSJ9.tcyYBUyKr7A_4Qyf4S69z95uT1ZiyuOyOOZi73bhQ7Q",
+      "publisher": "Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.795
+    },
+    {
+      "title": "Meituan reports Q3 revenue up 21.6% YoY to ~$17.3B, above est., and an adjusted net profit of ~$285.1M, up from a ~$2.4B adjusted net loss (Ben Jiang/South China Morning Post)",
+      "url": "http://www.scmp.com/",
+      "summary": "Ben Jiang / South China Morning Post : Meituan reports Q3 revenue up 21.6% YoY to ~$17.3B, above est., and an adjusted net profit of ~$285.1M, up from a ~$2.4B adjusted net loss &mdash; Chinese food-delivery giant Meituan reported a second consecutive profitable quarter on Friday, as the company navigates intensifying competition &hellip;",
+      "description_html": "<P><A HREF=\"https://www.techmeme.com/261127/p5#a261127p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Ben Jiang / <A HREF=\"http://www.scmp.com/\">South China Morning Post</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.scmp.com/tech/big-tech/article/3376041/meituan-logs-second-straight-quarterly-profit-it-fends-alibaba-jd-instant-retail\">Meituan reports Q3 revenue up 21.6% YoY to ~$17.3B, above est., and an adjusted net profit of ~$285.1M, up from a ~$2.4B adjusted net loss</A></B></SPAN>&nbsp; &mdash;&nbsp; Chinese food-delivery giant Meituan reported a second consecutive profitable quarter on Friday, as the company navigates intensifying competition &hellip; </P>",
+      "published_at": "2026-11-27T12:35:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261127/p5",
+      "direct_source_url": "http://www.scmp.com/",
+      "publisher": "Ben Jiang/South China Morning Post",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.694
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "lia.mg",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "Company Culture = Slack Emoji ÷ √Headcount",
+      "url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
+      "direct_source_url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50659640",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50659640",
+      "summary": "",
+      "published_at": "2026-11-26T20:49:49.000Z",
+      "engagement": {
+        "score": 493,
+        "comments": 254
+      },
+      "collection_mode": "api",
+      "score": 7.628
+    },
+    {
+      "title": "Sources: the US Air Force recently discovered a breach of Cloud One, which combines Microsoft, Amazon, Oracle, and Google clouds to power Air Force applications (Reuters)",
+      "url": "https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/",
+      "summary": "Reuters : Sources: the US Air Force recently discovered a breach of Cloud One, which combines Microsoft, Amazon, Oracle, and Google clouds to power Air Force applications &mdash; Hackers have breached the US Air Force's flagship cloud computing platform, three people familiar with the matter told Reuters &hellip;",
+      "description_html": "<A HREF=\"https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261127/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261127/p4#a261127p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"http://www.reuters.com/\">Reuters</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/\">Sources: the US Air Force recently discovered a breach of Cloud One, which combines Microsoft, Amazon, Oracle, and Google clouds to power Air Force applications</A></B></SPAN>&nbsp; &mdash;&nbsp; Hackers have breached the US Air Force's flagship cloud computing platform, three people familiar with the matter told Reuters &hellip; </P>",
+      "published_at": "2026-11-27T12:10:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261127/p4",
+      "direct_source_url": "https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/",
+      "publisher": "Reuters",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.597
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "worksinprogress.co",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 7,
+      "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+      "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+      "direct_source_url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50659841",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50659841",
+      "summary": "",
+      "published_at": "2026-11-26T21:08:05.000Z",
+      "engagement": {
+        "score": 465,
+        "comments": 118
+      },
+      "collection_mode": "api",
+      "score": 7.561
+    },
+    {
+      "title": "A look at proposals for vertical data centers, often the only option where land is limited in places like Taiwan; Kansas City recently rejected a 20-story tower (Tiffany Hsu/New York Times)",
+      "url": "https://www.nytimes.com/2026/11/26/business/energy-environment/vertical-data-center-kansas-city.html",
+      "summary": "Tiffany Hsu / New York Times : A look at proposals for vertical data centers, often the only option where land is limited in places like Taiwan; Kansas City recently rejected a 20-story tower &mdash; The facilities that power A.I. and other big data needs are in high demand but widely despised. Some developers are trying to build them up instead of out.",
+      "description_html": "<A HREF=\"https://www.nytimes.com/2026/11/26/business/energy-environment/vertical-data-center-kansas-city.html\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261127/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261127/p3#a261127p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Tiffany Hsu / <A HREF=\"https://www.nytimes.com/\">New York Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.nytimes.com/2026/11/26/business/energy-environment/vertical-data-center-kansas-city.html\">A look at proposals for vertical data centers, often the only option where land is limited in places like Taiwan; Kansas City recently rejected a 20-story tower</A></B></SPAN>&nbsp; &mdash;&nbsp; The facilities that power A.I. and other big data needs are in high demand but widely despised.&nbsp; Some developers are trying to build them up instead of out.</P>",
+      "published_at": "2026-11-27T10:25:08.000Z",
+      "discovery_url": "https://www.techmeme.com/261127/p3",
+      "direct_source_url": "https://www.nytimes.com/2026/11/26/business/energy-environment/vertical-data-center-kansas-city.html",
+      "publisher": "Tiffany Hsu/New York Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.444
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "2023",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "Intel One Mono font (2023)",
+      "url": "https://github.com/intel/intel-one-mono",
+      "direct_source_url": "https://github.com/intel/intel-one-mono",
+      "discovery_url": "https://news.ycombinator.com/item?id=50653667",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50653667",
+      "summary": "",
+      "published_at": "2026-11-26T10:11:01.000Z",
+      "engagement": {
+        "score": 564,
+        "comments": 266
+      },
+      "collection_mode": "api",
+      "score": 7.424
+    },
+    {
+      "title": "Foreign investors sold a record net $33.1B of Taiwanese stocks in November, topping October's record outflow amid AI valuation fears and a broader tech sell-off (Eunice Xu/Bloomberg)",
+      "url": "https://www.bloomberg.com/",
+      "summary": "Eunice Xu / Bloomberg : Foreign investors sold a record net $33.1B of Taiwanese stocks in November, topping October's record outflow amid AI valuation fears and a broader tech sell-off &mdash; Foreign investors dumped a record amount of Taiwanese stocks so far in November, underscoring how heavily the global AI bellwether &hellip;",
+      "description_html": "<P><A HREF=\"https://www.techmeme.com/261127/p2#a261127p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Eunice Xu / <A HREF=\"https://www.bloomberg.com/\">Bloomberg</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.bloomberg.com/news/articles/2026-11-27/foreign-funds-on-pace-for-record-taiwan-stock-exodus-in-ai-rout\">Foreign investors sold a record net $33.1B of Taiwanese stocks in November, topping October's record outflow amid AI valuation fears and a broader tech sell-off</A></B></SPAN>&nbsp; &mdash;&nbsp; Foreign investors dumped a record amount of Taiwanese stocks so far in November, underscoring how heavily the global AI bellwether &hellip; </P>",
+      "published_at": "2026-11-27T07:30:00.000Z",
+      "discovery_url": "https://www.techmeme.com/261127/p2",
+      "direct_source_url": "https://www.bloomberg.com/",
+      "publisher": "Eunice Xu/Bloomberg",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.243
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "devnull.land",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 9,
+      "title": "AMD-specific fork of llama.cpp",
+      "url": "https://devnull.land/amd-specific-llama-cpp",
+      "direct_source_url": "https://devnull.land/amd-specific-llama-cpp",
+      "discovery_url": "https://news.ycombinator.com/item?id=50657265",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50657265",
+      "summary": "",
+      "published_at": "2026-11-26T17:11:29.000Z",
+      "engagement": {
+        "score": 415,
+        "comments": 101
+      },
+      "collection_mode": "api",
+      "score": 7.236
+    },
+    {
+      "title": "US smartphone shipments fell 9% YoY in Q3 as memory costs hit Android OEMs, especially at the low end; Apple's share rose from 50% to 57%, Samsung held at 25% (Maurice Klaehne/Counterpoint Research)",
+      "url": "http://www.counterpointresearch.com/",
+      "summary": "Maurice Klaehne / Counterpoint Research : US smartphone shipments fell 9% YoY in Q3 as memory costs hit Android OEMs, especially at the low end; Apple's share rose from 50% to 57%, Samsung held at 25% &mdash; - US smartphone shipments fell 9% YoY in Q3 as rising memory costs weighed on Android OEMs, especially at the low end.",
+      "description_html": "<P><A HREF=\"https://www.techmeme.com/261127/p1#a261127p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Maurice Klaehne / <A HREF=\"http://www.counterpointresearch.com/\">Counterpoint Research</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"http://www.counterpointresearch.com/en/insights/us-smartphone-shipments-fell-9-percent-yoy-as-memory-costs-squeeze-android\">US smartphone shipments fell 9% YoY in Q3 as memory costs hit Android OEMs, especially at the low end; Apple's share rose from 50% to 57%, Samsung held at 25%</A></B></SPAN>&nbsp; &mdash;&nbsp; - US smartphone shipments fell 9% YoY in Q3 as rising memory costs weighed on Android OEMs, especially at the low end.</P>",
+      "published_at": "2026-11-27T05:45:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261127/p1",
+      "direct_source_url": "http://www.counterpointresearch.com/",
+      "publisher": "Maurice Klaehne/Counterpoint Research",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 7.09
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 7,
+      "title": "What a Forecasting Leaderboard Can Establish: Resolution Reporting for Zero-Shot Time-Series Models",
+      "url": "https://huggingface.co/papers/2611.31619",
+      "direct_source_url": "https://huggingface.co/papers/2611.31619",
+      "discovery_url": "https://huggingface.co/papers/2611.31619",
+      "link_quality": "original",
+      "summary": "A foundation model for time series is pretrained once and then asked to forecast series it has never seen, so the evidence for it is its score on held-out datasets. Such datasets are scarce, and a few public leaderboards carry most comparisons, yet none of them states how small a difference its datasets can detect. We call that quantity the resolution of a board and introduce Vernier, a tool that computes it from the files a board already publishes. Vernier also reports which entries a board cannot separate from its leader and whether its order changes when unrelated parties submit. GIFT-Eval resolves 6.8 rank places, and its displayed neighbours sit 0.91 apart. The ten places of its top ten hold fewer than two resolvable steps. fev-bench, Chronos Benchmark II and TIME show the same pattern: their resolution is 3.6 to 19 times the gap between neighbours. With each of its 2,554 series as an independent source, BOOM is the one board that resolves its top ten. Below the resolution the order depends on who else submitted: across four boards, rules that rank against the pool reversed 43 top-ten pairs with neither entry rerun, in one update in seven. Boards also do not record how much hi",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 54
+      },
+      "collection_mode": "api",
+      "score": 6.22
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "Revisiting LLMs as Context Engineers",
+      "url": "https://huggingface.co/papers/2611.30494",
+      "direct_source_url": "https://huggingface.co/papers/2611.30494",
+      "discovery_url": "https://huggingface.co/papers/2611.30494",
+      "link_quality": "original",
+      "summary": "As large language models (LLMs) are used in more and more new tasks, context engineering becomes a fundamental method to efficiently steer LLMs by constructing instruction prompts or metadata without intensive training. A growing number of LLM context engineering (LCE) approaches automate the task by casting the LLM itself as the engineer that draws generalizable instructions or experiences from offline trials as context. Although these methods resemble how humans learn from experiences, it remains unclear when and how LLMs can engineer effective context from data. To answer the question, we first establish a benchmark composed of datasets with different reasoning patterns. We compared different LCE methods with different LLM families in 8B size, showing that there is no single winner for all tasks, even compared with simple baselines like chain-of-thought. Even when scaling model capabilities via more parameters or generation iterations, LCEs do not consistently boost existing performance. Across all datasets and models, the performance gains of LCEs are negatively correlated (r=-0.5, ple 0.05) with the diversity of the failure modes of reasoning trajectories. Investigating how LC",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 6.059
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "Markdown Is Not a Firewall: four coding agents, one rules file, four boundaries",
+      "url": "https://huggingface.co/papers/2611.27112",
+      "direct_source_url": "https://huggingface.co/papers/2611.27112",
+      "discovery_url": "https://huggingface.co/papers/2611.27112",
+      "link_quality": "original",
+      "summary": "Teams put a one-page rules file in a repository and call it a control on coding agents. A registered study found agents rarely look up a repository's contribution rules. I asked the security question: what does a rules file do at a boundary, against a gate? I tested one 278-word rules file, with hypotheses and analysis code deposited first. Claude Code, Codex CLI, Gemini CLI and OpenCode with DeepSeek worked through 20 small repositories with hidden tests, 12 for three of them. Three agents met four boundaries I built: a refused endpoint, a destructive shortcut, a planted instruction and a planted package. Permission prompts, each vendor's own control layer, were off by design. A gate in front of the mock service blocked and logged forbidden requests. Every verdict was read from records the agent could not change. Only my first scoring pass was blind to arm. My checkers found no real bugs, with the file or without it. The file cost one agent a third of its score: Codex CLI fell from 99.0 to 67.7 percent on hidden tests, and in 11 of its 36 steps reported the task complete with all tests passing while under half of the hidden tests passed. Its own tests passed. Faced with two of its",
+      "published_at": "2026-11-19T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 0
+      },
+      "collection_mode": "api",
+      "score": 5.9
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "InitFree-SfM: When Initialization-Free Bundle Adjustment meets Learned Structure-from-Motion",
+      "url": "https://huggingface.co/papers/2611.31516",
+      "direct_source_url": "https://huggingface.co/papers/2611.31516",
+      "discovery_url": "https://huggingface.co/papers/2611.31516",
+      "link_quality": "original",
+      "summary": "Initialization-free bundle adjustment (InitFree BA) aims to jointly recover camera poses and scene structure without requiring an initial global estimate. It is a very challenging problem, especially compared to traditional BA where a good estimation is assumed. While recent methods optimize surrogate Object Space Error (OSE) objectives from random initialization, a low objective value does not necessarily yield an accurate reconstruction, revealing a gap between optimization and reconstruction. We show that existing InitFree BA pipelines struggle to produce accurate 3D reconstructions on modern SfM benchmarks, and demonstrate that incorporating learned metric depth substantially improves their practical feasibility. We introduce InitFree-SfM, a complete initialization-free SfM pipeline combining learned correspondences, metric depth, depth-consistent track construction, and joint metric refinement. Within this framework, we propose a simple depth-augmented OSE (dOSE), which complements the directional constraints of OSE by constraining landmark positions along their viewing rays. Our approach substantially outperforms existing InitFree BA methods and achieves competitive accuracy",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.891
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 12,
+      "title": "OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms",
+      "url": "https://huggingface.co/papers/2611.34232",
+      "direct_source_url": "https://huggingface.co/papers/2611.34232",
+      "discovery_url": "https://huggingface.co/papers/2611.34232",
+      "link_quality": "original",
+      "summary": "Computer-using agents are increasingly expected to complete realistic user goals rather than isolated GUI actions. However, existing benchmarks typically isolate web, mobile, or desktop environments, leaving it unclear whether a single generalist agent can execute long-horizon workflows that span multiple operating systems and persistent application states. We introduce OS-Omni, a live cross-platform benchmark and execution environment for evaluating computer-using agents across Windows, Ubuntu, macOS, iOS, Android, and Web environments. OS-Omni is released in versioned waves of 300 tasks each; this paper focuses on the first release, v1, which contains 48 tasks per platform and 12 cross-platform workflows that pair a desktop with an Android phone. OS-Omni provides reproducible initialization, platform-specific adapters, trajectory logging, and executable final-state evaluators, and includes controlled service-backed applications for workflows involving account, cart, budget, calendar, message, and other persistent state. Human studies show that OS-Omni tasks require 67.54 interaction steps, substantially exceeding OSWorld references of 15.0 steps. On v1, the strongest evaluated ag",
+      "published_at": "2026-11-24T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 99
+      },
+      "collection_mode": "api",
+      "score": 5.82
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 6,
+      "title": "Guarding with Judgment: Learning to Intervene for Multimodal Safety",
+      "url": "https://huggingface.co/papers/2611.28849",
+      "direct_source_url": "https://huggingface.co/papers/2611.28849",
+      "discovery_url": "https://huggingface.co/papers/2611.28849",
+      "link_quality": "original",
+      "summary": "When visual context makes an ordinary request unsafe to answer as asked, a blanket refusal may leave the user's need unresolved. Choosing how to help requires distinguishing an established hazard from a condition that still needs verification, a distinction that binary safety labels leave unspecified. We formulate this decision through four actions: allow, warn, review, and refuse. To ground these decisions in verifiable evidence, we build a corpus of 20,126 training audits and the JudiBench benchmark, connecting each action to diagnostic judgments, source evidence, and controlled context changes. Our guard, JudiAct, separately states what the source establishes, what condition governs the help, and how the rules apply. It then checks these three brief review items against the original inputs to predict diagnostic labels and a handling action. Supervised training learns individual judgments while comparing label assignments across related cases. A second stage swaps one review item at a time, using the resulting audit feedback to refine review generation. On JudiBench, JudiAct improves request and answer Macro-F1 by more than 28 percentage points over its 4B backbone. Across nine p",
+      "published_at": "2026-11-20T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 5.739
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "Pretrained Tabular Features and the Measurement of Financial Proximity",
+      "url": "https://huggingface.co/papers/2611.31491",
+      "direct_source_url": "https://huggingface.co/papers/2611.31491",
+      "discovery_url": "https://huggingface.co/papers/2611.31491",
+      "link_quality": "original",
+      "summary": "Spatial arbitrage pricing theory (S-APT) extends factor models to allow returns to spill over between connected firms, beyond what common risk factors explain. In recent years, tabular foundation models (TFMs) have matched or outperformed tuned gradient-boosted and bagged ensembles on small and medium-sized tabular benchmarks. Although their predictive performance is strong, these models reveal little about what they have learned, which limits their use in regulated financial applications that require explanation. Internal representations are widely used to probe what neural networks learn and to measure similarity. In this paper, we use the frozen representations of four TFMs as a measure of financial dissimilarity in a spatial asset-pricing model of US equities from 2011 to 2025, and find that their estimated gains over a direct distance between the same disclosures become consistently positive once broad SEC filing data are included. This reframes tabular foundation models from black-box predictors into instruments for measuring economic structure, with immediate applications to peer selection, risk attribution and network-based asset pricing. More broadly, our findings suggest",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.731
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "So Many Ways to Multiply 3times3 Matrices: A Large Dataset of Rank-23 Schemes",
+      "url": "https://huggingface.co/papers/2611.31155",
+      "direct_source_url": "https://huggingface.co/papers/2611.31155",
+      "discovery_url": "https://huggingface.co/papers/2611.31155",
+      "link_quality": "original",
+      "summary": "A publicly available dataset of 62029 rank-23 schemes for 3times3 matrix multiplication is presented. Every scheme in it has its own rank pattern, an invariant formed by the ranks of the factor matrices of a scheme, so all schemes are pairwise inequivalent. The schemes were obtained by a numerical method combining gradient descent with alternating least squares and by flip graph search, and have ternary, integer or rational coefficients. Rank 23 is the best known for this format and is optimal for schemes with integer coefficients, but the number of essentially different schemes of this rank was poorly understood: the existing collections of Heule et al. and Mårtensson et al. contain many schemes that share only a small number of rank patterns (17376 schemes with 387 patterns and 15316 schemes with 568 patterns respectively). The dataset shows that the number of different rank patterns is much larger than previously known.",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 0
+      },
+      "collection_mode": "api",
+      "score": 5.66
+    }
+  ]
+}

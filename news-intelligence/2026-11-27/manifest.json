@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T16:34:12.725Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 721,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 311,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 362,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 291,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1627,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": false,
+  "quality_status": "blocked",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [
+    "2 selected stories have only a homepage, profile or invalid publication link."
+  ],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-27",
+  "overall_confidence": 0.88,
+  "stories": [
+    {
+      "category": "ai",
+      "headline": "Meta’s Muse AI lands in the UK with a new set of rules",
+      "confirmed_fact": "Meta has launched its Muse AI assistant in the UK across multiple platforms, updating its terms of service to provide stronger consumer protections following engagement with the CMA and ICO.",
+      "why_it_matters": "The move highlights how UK regulators are actively shaping the deployment of AI agents, particularly regarding automated actions like retail and travel bookings.",
+      "interpretation": "Meta is clearly prioritising a smoother regulatory path in the UK, though the voluntary reporting scheme suggests the CMA remains unconvinced that these terms alone solve the risks of autonomous AI agents.",
+      "confidence": 0.95,
+      "source": "Joseph Bambridge/Politico",
+      "discovered_via": "Techmeme",
+      "source_title": "The CMA says Meta made changes to Muse's ToS in the UK to reflect the country's consumer law; the terms give users far more protections than in the US (Joseph Bambridge/Politico)",
+      "url": "https://www.politico.eu/article/metas-uk-rollout-for-muse-ai-agent-exposes-it-to-more-liability/",
+      "discovery_url": "https://www.techmeme.com/261127/p8",
+      "link_quality": "original",
+      "published_at": "2026-11-27T15:25:00.000Z",
+      "discovery_score": 8.052
+    },
+    {
+      "category": "technology",
+      "headline": "US Air Force Cloud One platform hit by breach",
+      "confirmed_fact": "Hackers breached the administrative control plane of the US Air Force's Cloud One platform, forcing a pause in application migrations and software updates.",
+      "why_it_matters": "Cloud One supports over 180 defense systems across major cloud providers; any disruption to this infrastructure is a significant operational concern for military logistics.",
+      "interpretation": "The breach of an administrative control plane is particularly worrying, as it suggests the attackers gained high-level access to the environment that orchestrates multiple cloud services.",
+      "confidence": 0.9,
+      "source": "Reuters",
+      "discovered_via": "Techmeme",
+      "source_title": "Sources: the US Air Force recently discovered a breach of Cloud One, which combines Microsoft, Amazon, Oracle, and Google clouds to power Air Force applications (Reuters)",
+      "url": "https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/",
+      "discovery_url": "https://www.techmeme.com/261127/p4",
+      "link_quality": "original",
+      "published_at": "2026-11-27T12:10:01.000Z",
+      "discovery_score": 7.597
+    },
+    {
+      "category": "business",
+      "headline": "Restricted Nvidia Blackwell chips appear in Shanghai data center",
+      "confirmed_fact": "Documents reveal that Nvidia's export-restricted Blackwell hardware was installed at a Shanghai data center, with serial numbers tracing the units to Taiwanese manufacturer Gigabyte.",
+      "why_it_matters": "Shipping these systems to China requires a US export license; their presence in a Shanghai facility raises serious questions about the effectiveness of current hardware export controls.",
+      "interpretation": "This is a major enforcement headache. Whether this was a deliberate diversion or a failure in the supply chain, it demonstrates that high-end hardware is still finding its way into restricted markets.",
+      "confidence": 0.85,
+      "source": "Bloomberg",
+      "discovered_via": "Techmeme",
+      "source_title": "Serial numbers in Chinese filings reveal that Nvidia's restricted Blackwell chips were installed at a Shanghai data center linked to Alice Huang and Megaspeed (Bloomberg)",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-27/nvidia-blackwell-chips-turn-up-at-china-site-tied-to-alice-huang",
+      "discovery_url": "https://www.techmeme.com/261127/p6",
+      "link_quality": "original",
+      "published_at": "2026-11-27T13:05:01.000Z",
+      "discovery_score": 7.795
+    },
+    {
+      "category": "business",
+      "headline": "Foreign investors pull record capital from Taiwan stocks",
+      "confirmed_fact": "Foreign investors net sold a record $33.1 billion of Taiwanese equities in November 2026, driven by profit-taking and concerns over AI hardware valuations.",
+      "why_it_matters": "As a global bellwether for the AI supply chain, Taiwan's market sentiment often reflects broader investor confidence in the sustainability of the current AI hardware boom.",
+      "interpretation": "The sell-off suggests that even the most bullish investors are starting to wonder if the astronomical valuations of AI-linked hardware can be sustained by actual, rather than projected, returns.",
+      "confidence": 0.88,
+      "source": "Eunice Xu/Bloomberg",
+      "discovered_via": "Techmeme",
+      "source_title": "Foreign investors sold a record net $33.1B of Taiwanese stocks in November, topping October's record outflow amid AI valuation fears and a broader tech sell-off (Eunice Xu/Bloomberg)",
+      "url": "https://www.bloomberg.com/",
+      "discovery_url": "https://www.techmeme.com/261127/p2",
+      "link_quality": "original",
+      "published_at": "2026-11-27T07:30:00.000Z",
+      "discovery_score": 7.243
+    },
+    {
+      "category": "technology",
+      "headline": "US smartphone market shrinks as memory costs bite",
+      "confirmed_fact": "US smartphone shipments fell 9% in Q3 2026, with rising memory component costs disproportionately affecting low-end Android manufacturers.",
+      "why_it_matters": "Hardware costs are squeezing the bottom end of the market, leaving Apple as the only major player to grow its share while others struggle to maintain volume.",
+      "interpretation": "When component costs rise, the market tends to consolidate around premium brands. It is a tough environment for budget-conscious manufacturers who lack the margins to absorb these price hikes.",
+      "confidence": 0.85,
+      "source": "Maurice Klaehne/Counterpoint Research",
+      "discovered_via": "Techmeme",
+      "source_title": "US smartphone shipments fell 9% YoY in Q3 as memory costs hit Android OEMs, especially at the low end; Apple's share rose from 50% to 57%, Samsung held at 25% (Maurice Klaehne/Counterpoint Research)",
+      "url": "http://www.counterpointresearch.com/",
+      "discovery_url": "https://www.techmeme.com/261127/p1",
+      "link_quality": "original",
+      "published_at": "2026-11-27T05:45:01.000Z",
+      "discovery_score": 7.09
+    }
+  ],
+  "practical_takeaway": "Expect continued volatility in tech hardware stocks and supply chains as export enforcement tightens and component costs remain elevated. For those managing digital infrastructure, the Air Force breach is a reminder that administrative control planes are high-value targets that require rigorous, independent security auditing.",
+  "watch_next": "Keep an eye on how the CMA's voluntary reporting scheme for Meta's Muse AI evolves; it could set a precedent for how other AI agents are governed in the UK market.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 087",
+      "title": "Our Family Dots & Boxes",
+      "summary": "Play a personalised two-player Dots and Boxes game with custom names and colours, adjustable boards, automatic box claiming, extra turns, undo and a private match history.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-087/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-087/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-27",
+    "lead_headline": "Meta’s Muse AI lands in the UK with a new set of rules",
+    "facebook_post": "Meta’s Muse AI lands in the UK with a new set of rules\n\nThe move highlights how UK regulators are actively shaping the deployment of AI agents, particularly regarding automated actions like retail and travel bookings.\n\nToday's Sapiver Forge Daily Brief covers 5 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Meta’s Muse AI lands in the UK with a new set of rules",
+    "pinterest_description": "The move highlights how UK regulators are actively shaping the deployment of AI agents, particularly regarding automated actions like retail and travel bookings.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Meta’s Muse AI lands in the UK with a new set of rules. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Meta’s Muse AI lands in the UK with a new set of rules. Meta has launched its Muse AI assistant in the UK across multiple platforms, updating its terms of service to provide stronger consumer protections following engagement with the CMA and ICO. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "1c189d84b2cab06c32d35fc589d4005f343023804a366a16b809906240e977e2"
+}

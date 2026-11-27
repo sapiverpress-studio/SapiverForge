@@ -13,7 +13,13 @@ const pem=publicKey.export({type:'spki',format:'pem'});
 const gh=(args,opts={})=>execFileSync('gh',args,{encoding:'utf8',timeout:60000,stdio:['pipe','pipe','pipe'],...opts});
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 try{
- gh(['api','--method','POST','repos/'+repo+'/actions/workflows/poster-publication.yml/dispatches','--input','-'],{input:JSON.stringify({ref:'main',inputs:{seo_mode:'companion_pilot',companion_nonce:nonce,companion_public_key:Buffer.from(pem).toString('base64')}})});
+ const dispatch=await fetch('https://api.github.com/repos/'+repo+'/actions/workflows/poster-publication.yml/dispatches',{
+  method:'POST',headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json','Content-Type':'application/json','X-GitHub-Api-Version':'2022-11-28'},
+  redirect:'error',signal:AbortSignal.timeout(20000),
+  body:JSON.stringify({ref:'main',inputs:{seo_mode:'companion_pilot',companion_nonce:nonce,companion_public_key:Buffer.from(pem).toString('base64')}})
+ });
+ if(!dispatch.ok)throw Error('Poster_gen workflow dispatch HTTP '+dispatch.status+'; no assets transferred');
+
  console.log('Exact companion export requested.');
  let run;
  for(let n=0;n<100;n++){

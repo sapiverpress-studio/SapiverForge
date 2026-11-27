@@ -1,5 +1,9 @@
 name: Install companion route on existing Sapiver website
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/install-companion-suite-route.yml'
   workflow_run:
     workflows: ["Import Hen & Bea companion into existing Sapiver website"]
     types: [completed]
@@ -16,7 +20,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   install:
-    if: github.repository == 'sapiverpress-studio/SapiverForge' && ((github.event_name == 'workflow_run' && github.event.workflow_run.id == 45988355449 && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.head_repository.full_name == github.repository) || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.confirm == 'INSTALL'))
+    if: github.repository == 'sapiverpress-studio/SapiverForge' && ((github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_run' && github.event.workflow_run.id == 45988355449 && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.head_repository.full_name == github.repository) || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.confirm == 'INSTALL'))
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -46,7 +50,7 @@ jobs:
           if(r?.status!=='pilot'||r.interactiveHash!=='c26ffc578c0bb7bc5184639b9adb4cfbcee64658e5b6a3deff298b4e38d972df'||Object.keys(r.pages||{}).length!==38)throw Error('Protected import not verified');
           console.log('Protected companion receipt verified');
           NODE
-          node scripts/verify-companion-live-baseline.mjs baseline/public
+          node scripts/verify-companion-live-baseline.mjs baseline/public --reconcile
       - name: Overlay only the two new companion route files
         run: |
           set -euo pipefail

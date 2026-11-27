@@ -1,0 +1,35 @@
+name: Sync approved activity-book companions
+on:
+  workflow_dispatch:
+    inputs:
+      revision:
+        description: 'Optional exact uploader revision; leave blank to sync approved queue'
+        required: false
+        type: string
+  schedule:
+    - cron: '7,37 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: sapiver-approved-companion-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    if: github.repository == 'sapiverpress-studio/SapiverForge' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Validate companion sync contract before touching storage
+        run: node --test test/approved-companion-sync.test.mjs test/companion-book-route.test.mjs
+      - name: Sync approved queue without a Netlify site build
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          COMPANION_REVISION: ${{ inputs.revision }}
+        run: node scripts/approved-companion-sync.mjs

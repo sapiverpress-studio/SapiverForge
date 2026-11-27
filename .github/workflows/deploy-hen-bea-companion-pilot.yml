@@ -1,0 +1,63 @@
+name: Deploy Hen & Bea Activity Books - protected Christmas pilot
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: Type PILOT to retry the exact Christmas companion only
+        type: string
+        required: true
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/deploy-hen-bea-companion-pilot.yml'
+
+permissions:
+  contents: read
+concurrency:
+  group: hen-bea-companion-pilot
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.repository == 'sapiverpress-studio/SapiverForge' && github.ref == 'refs/heads/main' && (github.event_name == 'push' || inputs.confirm == 'PILOT')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      COMPANION_TMP: ${{ runner.temp }}/hen-bea-companion-private
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Validate scripts and target site
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          set -euo pipefail
+          node --check scripts/hen-bea-companion-handoff.mjs
+          python3 -m py_compile scripts/verify-hen-bea-companion-pilot.py
+          test -n "$NETLIFY_AUTH_TOKEN"
+          mkdir -m 700 "$COMPANION_TMP"
+          curl -fsS --max-time 25 -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" https://api.netlify.com/api/v1/sites/3acb3dff-6d23-4fcc-8f4c-5b29ee1dd79f > "$COMPANION_TMP/site.json"
+          jq -e '.id == "3acb3dff-6d23-4fcc-8f4c-5b29ee1dd79f" and .name == "hen-bea-activity-books" and ((.published_deploy.id // "") == "")' "$COMPANION_TMP/site.json" >/dev/null
+          echo 'Confirmed isolated, previously empty target project.'
+      - name: Retrieve exact reviewed companion via encrypted owner-only handoff
+        env:
+          GH_TOKEN: ${{ secrets.CROSS_REPO_GITHUB_TOKEN }}
+        run: node scripts/hen-bea-companion-handoff.mjs
+      - name: Validate every extracted file and receipt
+        run: python3 scripts/verify-hen-bea-companion-pilot.py "$COMPANION_TMP/companion.zip" "$COMPANION_TMP/site"
+      - name: Deploy only the team-protected companion pilot
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          set -euo pipefail
+          npx --yes netlify-cli deploy --dir="$COMPANION_TMP/site" --site=3acb3dff-6d23-4fcc-8f4c-5b29ee1dd79f --auth="$NETLIFY_AUTH_TOKEN" --prod --json --message="Protected Christmas companion pilot; no Etsy writes" > "$COMPANION_TMP/deploy.json"
+          DEPLOY_ID="$(jq -er '.deploy_id' "$COMPANION_TMP/deploy.json")"
+          curl -fsS --max-time 30 -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" "https://api.netlify.com/api/v1/deploys/$DEPLOY_ID" | jq -e '{id,site_id,state} | select(.site_id=="3acb3dff-6d23-4fcc-8f4c-5b29ee1dd79f" and .state=="ready")'
+          echo 'Netlify reports the protected companion deployment READY.'
+      - name: Remove temporary private handoff files
+        if: always()
+        run: rm -rf "$COMPANION_TMP"

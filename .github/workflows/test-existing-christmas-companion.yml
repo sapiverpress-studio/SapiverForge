@@ -1,0 +1,88 @@
+name: Test existing Christmas Etsy book companion
+on:
+  workflow_dispatch:
+    inputs:
+      approve_public_web:
+        description: 'Approve public access to this exact edition and confirm online artwork/text/font rights (unchecked = read-only test)'
+        required: true
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: sapiver-approved-companion-sync
+  cancel-in-progress: false
+jobs:
+  exact-existing-book:
+    if: github.repository == 'sapiverpress-studio/SapiverForge' && github.ref == 'refs/heads/main' && github.actor == 'sapiverpress-studio'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: node --test test/approved-companion-sync.test.mjs test/companion-book-route.test.mjs
+      - name: Verify exact existing Etsy edition and optionally release public companion
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          APPROVE_PUBLIC_WEB: ${{ inputs.approve_public_web }}
+        run: |
+          node --input-type=module <<'NODE'
+          import {getStore} from '@netlify/blobs';
+          import {createHash} from 'node:crypto';
+          import {stageArchive,publishExact,verifyPublic} from './scripts/approved-companion-sync.mjs';
+          const id='hb-ac23a99e42eee2c856dda344aa45877a';
+          const expected='29335ae3de994c5919a997785d812300f20112bbe285bc38993ee7b06352e491';
+          const listing=4626688605,token=process.env.NETLIFY_AUTH_TOKEN;
+          const sha=b=>createHash('sha256').update(b).digest('hex');
+          const json={type:'json',consistency:'strong'},bin={type:'arrayBuffer',consistency:'strong'};
+          let stage='configuration';
+          try {
+            if(!token||process.env.GITHUB_REPOSITORY!=='sapiverpress-studio/SapiverForge'||process.env.GITHUB_REF!=='refs/heads/main'||process.env.GITHUB_ACTOR!=='sapiverpress-studio'||process.env.GITHUB_EVENT_NAME!=='workflow_dispatch')throw Error('Unexpected context');
+            const source=getStore({name:'sapiver-poster-uploads',siteID:'d1753fca-2098-4b96-a684-75921df7c3da',token,consistency:'strong'});
+            const dest=getStore({name:'hen-bea-companion-books',siteID:'47bda30e-4698-4cf5-bcd4-d59785e1f399',token,consistency:'strong'});
+            stage='existing listing and current published revision';
+            const matches=[];
+            for await(const page of source.list({prefix:'products/',paginate:true}))for(const b of page.blobs){
+              const m=/^products\/([A-Za-z0-9_-]{32})\/record$/.exec(b.key);
+              if(!m)continue;
+              const p=await source.get(b.key,json);
+              if(Number(p?.etsyListingId)===listing)matches.push({p,productId:m[1]});
+            }
+            if(matches.length!==1)throw Error('Listing mapping unavailable');
+            const {p,productId}=matches[0],rev=p.currentRevision;
+            if(p.phase!=='published'||p.pendingRevision||!/^[A-Za-z0-9_-]{32}$/.test(rev||''))throw Error('Listing revision unavailable or being updated');
+            const s=await source.get('uploads/'+rev+'/state',json);
+            const v=await source.get('products/'+productId+'/revisions/'+rev,json);
+            if(s?.phase!=='published'||s.type!=='digital'||s.metadata?.kind!=='activity-book'||s.listingId!==listing||s.archiveKey!=='uploads/'+rev+'/original.zip'||v?.phase!=='published'||v.id!==rev||v.listingId!==listing)throw Error('Published revision mismatch');
+            stage='exact original archive';
+            const raw=await source.get(s.archiveKey,bin);
+            if(!raw||sha(Buffer.from(raw))!==expected)throw Error('Original archive mismatch');
+            const {receipt,assets}=stageArchive(Buffer.from(raw),expected);
+            if(receipt.bookId!==id||receipt.sourceArchiveHash!==expected)throw Error('Edition mismatch');
+            stage='existing protected companion verification';
+            const prefix='books/'+id+'/',existing=await dest.get(prefix+'receipt',json);
+            if(!existing||!['pilot','published'].includes(existing.status)||['bookId','manifestHash','interiorHash','interactiveHash','url','scriptHash','sourceArchiveHash'].some(k=>existing[k]!==receipt[k])||Object.keys(existing.pages||{}).length!==38)throw Error('Stored receipt mismatch');
+            for(const [name,bytes] of Object.entries(assets)){
+              const b=await dest.get(prefix+name,bin);
+              if(!b||sha(Buffer.from(b))!==sha(bytes)||(name!=='index.html'&&existing.pages[name]!==sha(bytes)))throw Error('Stored asset mismatch');
+            }
+            console.log('Exact published uploader revision and all 39 existing companion assets verified.');
+            console.log('Book ID: '+id+'; Etsy listing: '+listing);
+            if(process.env.APPROVE_PUBLIC_WEB!=='true'){
+              if(existing.status==='published'){stage='public verification';await verifyPublic(existing);console.log('Public companion already verified: '+receipt.url);}
+              else console.log('Read-only test passed. Companion remains protected. No changes made.');
+            } else {
+              stage='explicitly approved public receipt';
+              const live=await publishExact({dest,receipt,assets,approvedAt:Date.now()});
+              stage='anonymous HTTP verification';
+              const url=await verifyPublic(live);
+              console.log('PUBLIC COMPANION VERIFIED: '+url);
+              console.log('No Etsy writes, no listing replay, no site build.');
+            }
+          }catch{console.error('Existing-book test stopped at '+stage+'. No merchant calls made.');process.exitCode=1;}
+          NODE

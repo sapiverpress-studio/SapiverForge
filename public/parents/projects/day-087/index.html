@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#26365d">
+<title>Our Family Dots &amp; Boxes</title>
+<style>
+:root{--ink:#26365d;--muted:#6c768e;--blue:#3d76dc;--coral:#ef6f6c;--gold:#f3bd4f;--mint:#55bea5;--line:#dce4f0;--shadow:0 16px 40px #26345c18}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 8% 0,#dfeaff,transparent 31%),radial-gradient(circle at 94% 8%,#ffeadf,transparent 28%),#f5f3ef;color:var(--ink);font:16px/1.5 ui-rounded,"Avenir Next",system-ui,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(1080px,100%);margin:auto;padding:18px clamp(13px,3vw,28px) 48px}.top{display:flex;justify-content:space-between;align-items:center;gap:14px}.brand{font-weight:950;letter-spacing:.025em}.brand span{color:var(--coral)}.back{font-weight:850;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--gold)}.hero{padding:38px 0 22px}.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:950;color:var(--blue)}h1{font-size:clamp(2.45rem,8vw,4.9rem);line-height:.94;letter-spacing:-.055em;margin:.3rem 0 .9rem}h2{margin:.1rem 0 1rem}.hero p{max-width:760px;color:var(--muted);font-size:clamp(1rem,2vw,1.22rem);margin:0}.panel{background:#fff;border:1px solid #fff;border-radius:26px;padding:clamp(14px,3vw,25px);box-shadow:var(--shadow);margin:18px 0}.setup{display:grid;grid-template-columns:1fr 60px 1fr 60px .8fr auto;gap:9px;align-items:end}.field label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:950;color:var(--muted);margin:0 0 5px}.field input,.field select{width:100%;border:2px solid var(--line);border-radius:13px;padding:10px 11px;color:var(--ink);background:#fff;font-weight:750}.field input[type=color]{height:45px;padding:4px}.field input:focus,.field select:focus{outline:3px solid #3d76dc25;border-color:var(--blue)}.btn{border:0;border-radius:14px;min-height:45px;padding:10px 16px;background:var(--ink);color:#fff;font-weight:900}.btn.primary{background:var(--blue)}.btn.soft{background:#eaf1fc;color:var(--ink)}.btn.danger{background:#fff0ee;color:#a94343}.game{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:20px}.play{min-width:0}.scorebar{display:grid;grid-template-columns:1fr auto 1fr;gap:9px;align-items:center;margin-bottom:12px}.player-card{border:3px solid transparent;border-radius:16px;padding:10px 13px;background:#f5f7fb;display:flex;justify-content:space-between;gap:8px;align-items:center;font-weight:900}.player-card.active{border-color:currentColor;background:#fff}.player-card:last-child{text-align:right}.player-card b{font-size:1.5rem}.turn{font-size:.78rem;text-align:center;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.08em}.canvas-shell{position:relative;width:min(100%,650px);margin:auto;aspect-ratio:1;background:#fbfaf6;border:2px solid var(--line);border-radius:24px;overflow:hidden;touch-action:none}canvas{display:block;width:100%;height:100%}.message{text-align:center;min-height:34px;margin:10px 0 0;color:var(--muted);font-weight:850}.toolbar{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:10px}.side{display:flex;flex-direction:column;gap:14px}.card{background:#faf8f3;border:1px solid #ece5da;border-radius:18px;padding:14px}.how{display:grid;gap:9px}.how div{display:flex;gap:10px;align-items:flex-start}.num{flex:0 0 28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--gold);font-weight:950}.match-score{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:center}.match-score div{background:#fff;border-radius:13px;padding:9px}.match-score b{display:block;font-size:1.55rem}.history{display:grid;gap:8px;margin-top:10px}.history-item{display:flex;justify-content:space-between;gap:8px;background:#fff;border-radius:11px;padding:9px}.pill{background:#e8f1fc;border-radius:99px;padding:3px 8px;font-size:.78rem;font-weight:900}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.privacy{background:#e7f9f3}.prompt{background:#26365d;color:#fff}.prompt p{color:#dce5fa}.prompt pre{white-space:pre-wrap;background:#1a2747;border-radius:15px;padding:15px;font:700 .93rem/1.55 ui-rounded,system-ui;user-select:all}.small{font-size:.88rem;color:var(--muted)}footer{text-align:center;color:var(--muted);margin-top:30px}@media(max-width:830px){.setup{grid-template-columns:1fr 58px 1fr 58px}.setup .size,.setup .btn{grid-column:span 2}.game{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}}@media(max-width:560px){.panel{border-radius:20px;padding:12px}.hero{padding-top:28px}.setup{grid-template-columns:1fr 54px}.setup .size,.setup .btn{grid-column:1/-1}.side,.two{grid-template-columns:1fr}.scorebar{grid-template-columns:1fr 54px 1fr}.player-card{padding:8px}.player-card span{max-width:90px;overflow:hidden;text-overflow:ellipsis}.canvas-shell{border-radius:18px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<nav class="top"><div class="brand">AI <span>Inquisitive</span> Parents</div><a class="back" href="https://suite.sapiverpress.co.uk">Explore the suite</a></nav>
+<header class="hero"><div class="eyebrow">Day 087 · your family game night</div><h1>Our Family Dots &amp; Boxes</h1><p>Take turns joining two dots. Complete the fourth side of a box to claim it — and earn another turn. Personalise the players, choose the board size and keep a private family match score.</p></header>
+
+<section class="panel">
+<div class="setup">
+  <div class="field"><label for="p1">Player one</label><input id="p1" maxlength="16" value="Blue"></div>
+  <div class="field"><label for="c1">Colour</label><input id="c1" type="color" value="#3d76dc"></div>
+  <div class="field"><label for="p2">Player two</label><input id="p2" maxlength="16" value="Coral"></div>
+  <div class="field"><label for="c2">Colour</label><input id="c2" type="color" value="#ef6f6c"></div>
+  <div class="field size"><label for="size">Board</label><select id="size"><option value="3">3 × 3 boxes</option><option value="4" selected>4 × 4 boxes</option><option value="5">5 × 5 boxes</option></select></div>
+  <button class="btn primary" id="newRound">New round</button>
+</div>
+</section>
+
+<section class="panel game">
+  <div class="play">
+    <div class="scorebar"><div class="player-card active" id="card0"><span id="name0">Blue</span><b id="score0">0</b></div><div class="turn">Turn<br><b id="turnName">Blue</b></div><div class="player-card" id="card1"><b id="score1">0</b><span id="name1">Coral</span></div></div>
+    <div class="canvas-shell" id="shell"><canvas id="board" aria-label="Dots and boxes game board. Tap between adjacent dots to draw a line."></canvas></div>
+    <div class="message" id="message" aria-live="polite">Blue goes first. Tap between two dots.</div>
+    <div class="toolbar"><button class="btn soft" id="undoBtn">Undo move</button><button class="btn danger" id="resetMatch">Reset match score</button></div>
+  </div>
+  <aside class="side">
+    <div class="card"><h2>How to play</h2><div class="how"><div><span class="num">1</span><span>Tap a gap between two neighbouring dots to draw one line.</span></div><div><span class="num">2</span><span>Complete the fourth side of a box to claim it and play again.</span></div><div><span class="num">3</span><span>When the board is full, the player with most boxes wins.</span></div></div></div>
+    <div class="card"><h2>Family match</h2><div class="match-score"><div><span id="matchName0">Blue</span><b id="match0">0</b></div><div><span id="matchName1">Coral</span><b id="match1">0</b></div></div><div class="history" id="history"></div></div>
+  </aside>
+</section>
+
+<div class="two">
+  <section class="panel"><h2>Strategy without pressure</h2><p>Look for nearly completed boxes, but remember that every line might leave an opportunity for the other player. Small boards are quick; larger boards allow longer chains and more planning.</p><p class="small">Scores are informal family game results. Keep turns friendly and use Undo when somebody taps the wrong line.</p></section>
+  <section class="panel privacy"><h2>Private by design</h2><p>Player names, colours, match scores and up to eight recent rounds stay in local browser storage on this device. Nothing is uploaded. There are no accounts, ads, analytics, camera, microphone or external services.</p><p class="small">Clearing browser data removes the saved settings and scores.</p></section>
+</div>
+
+<section class="panel prompt"><h2>Build your own with AI</h2><p>Copy this beginner-friendly prompt and ask an AI coding assistant to tailor the colours, board sizes or celebration effects for your family.</p><pre id="buildPrompt">Create one polished mobile-friendly HTML file for a private two-player Dots and Boxes family game. Let players enter names and colours, choose a 3×3, 4×4 or 5×5 board, tap lines on a responsive canvas, automatically claim completed boxes, grant extra turns, undo moves, start new rounds, and save settings, match scores and eight recent results in localStorage. Add clear privacy guidance. Use no libraries, accounts, advertising, analytics or paid services.</pre><button class="btn" id="copyBtn">Copy prompt</button></section>
+<footer>Made for curious families · <a href="https://suite.sapiverpress.co.uk">Sapiver Press Suite</a></footer>
+</main>
+<script>
+(()=>{"use strict";
+const $=s=>document.querySelector(s),canvas=$("#board"),ctx=canvas.getContext("2d"),shell=$("#shell"),key="aip-dots-boxes-v1";
+let saved={names:["Blue","Coral"],colours:["#3d76dc","#ef6f6c"],size:4,match:[0,0],recent:[]};
+try{saved={...saved,...JSON.parse(localStorage.getItem(key)||"{}")}}catch{}
+let n=saved.size,h=[],v=[],boxes=[],turn=0,scores=[0,0],moves=[],finished=false,geo={gap:0,x:0,y:0};
+const save=()=>localStorage.setItem(key,JSON.stringify(saved)),clone=x=>JSON.parse(JSON.stringify(x));
+function fresh(){n=Number($("#size").value);saved.size=n;h=Array.from({length:n+1},()=>Array(n).fill(-1));v=Array.from({length:n},()=>Array(n+1).fill(-1));boxes=Array.from({length:n},()=>Array(n).fill(-1));turn=0;scores=[0,0];moves=[];finished=false;save();draw();update("Tap between two dots.")}
+function boxComplete(r,c){return h[r][c]>=0&&h[r+1][c]>=0&&v[r][c]>=0&&v[r][c+1]>=0}
+function claimedByMove(type,r,c,player){const checks=type==="h"?[[r-1,c],[r,c]]:[[r,c-1],[r,c]],claimed=[];for(const [br,bc] of checks){if(br>=0&&br<n&&bc>=0&&bc<n&&boxes[br][bc]<0&&boxComplete(br,bc)){boxes[br][bc]=player;claimed.push([br,bc])}}return claimed}
+function snapshot(){return{h:clone(h),v:clone(v),boxes:clone(boxes),turn,scores:[...scores],finished}}
+function play(type,r,c){if(finished)return;if((type==="h"?h[r][c]:v[r][c])>=0)return;moves.push(snapshot());if(type==="h")h[r][c]=turn;else v[r][c]=turn;const got=claimedByMove(type,r,c,turn);if(got.length){scores[turn]+=got.length;update(saved.names[turn]+" claimed "+got.length+" box"+(got.length>1?"es":"")+" and plays again!")}else{turn=1-turn;update(saved.names[turn]+"'s turn.")}if(scores[0]+scores[1]===n*n)finish();draw()}
+function finish(){finished=true;const winner=scores[0]===scores[1]?-1:scores[0]>scores[1]?0:1;if(winner>=0)saved.match[winner]++;saved.recent=[{names:[...saved.names],scores:[...scores],winner},...saved.recent].slice(0,8);save();renderRecent();update(winner<0?"It’s a draw — brilliant game!":saved.names[winner]+" wins the round!")}
+function update(text){$("#message").textContent=text;$("#name0").textContent=$("#matchName0").textContent=saved.names[0];$("#name1").textContent=$("#matchName1").textContent=saved.names[1];$("#score0").textContent=scores[0];$("#score1").textContent=scores[1];$("#match0").textContent=saved.match[0];$("#match1").textContent=saved.match[1];$("#turnName").textContent=finished?"Finished":saved.names[turn];$("#card0").classList.toggle("active",!finished&&turn===0);$("#card1").classList.toggle("active",!finished&&turn===1);$("#card0").style.color=saved.colours[0];$("#card1").style.color=saved.colours[1]}
+function resize(){const r=shell.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*d);canvas.height=Math.round(r.height*d);ctx.setTransform(d,0,0,d,0,0);draw()}
+function draw(){const w=shell.clientWidth,hh=shell.clientHeight,pad=w<430?34:48,gap=(Math.min(w,hh)-pad*2)/n,x=(w-gap*n)/2,y=(hh-gap*n)/2;geo={gap,x,y};ctx.clearRect(0,0,w,hh);ctx.fillStyle="#fbfaf6";ctx.fillRect(0,0,w,hh);
+ for(let r=0;r<n;r++)for(let c=0;c<n;c++)if(boxes[r][c]>=0){ctx.globalAlpha=.18;ctx.fillStyle=saved.colours[boxes[r][c]];ctx.fillRect(x+c*gap+7,y+r*gap+7,gap-14,gap-14);ctx.globalAlpha=1;ctx.fillStyle=saved.colours[boxes[r][c]];ctx.font="900 "+Math.max(16,gap*.24)+"px system-ui";ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(saved.names[boxes[r][c]].slice(0,1).toUpperCase(),x+(c+.5)*gap,y+(r+.5)*gap)}
+ ctx.lineCap="round";for(let r=0;r<=n;r++)for(let c=0;c<n;c++){ctx.strokeStyle=h[r][c]<0?"#d8e0e8":saved.colours[h[r][c]];ctx.lineWidth=h[r][c]<0?5:9;ctx.beginPath();ctx.moveTo(x+c*gap+12,y+r*gap);ctx.lineTo(x+(c+1)*gap-12,y+r*gap);ctx.stroke()}for(let r=0;r<n;r++)for(let c=0;c<=n;c++){ctx.strokeStyle=v[r][c]<0?"#d8e0e8":saved.colours[v[r][c]];ctx.lineWidth=v[r][c]<0?5:9;ctx.beginPath();ctx.moveTo(x+c*gap,y+r*gap+12);ctx.lineTo(x+c*gap,y+(r+1)*gap-12);ctx.stroke()}
+ ctx.fillStyle="#26365d";for(let r=0;r<=n;r++)for(let c=0;c<=n;c++){ctx.beginPath();ctx.arc(x+c*gap,y+r*gap,w<430?7:9,0,Math.PI*2);ctx.fill()}}
+function pick(e){const r=canvas.getBoundingClientRect(),px=e.clientX-r.left,py=e.clientY-r.top,{gap,x,y}=geo,threshold=Math.min(22,gap*.28);let best=null,dist=Infinity;
+ for(let rr=0;rr<=n;rr++)for(let c=0;c<n;c++){const y0=y+rr*gap,x1=x+c*gap+10,x2=x+(c+1)*gap-10;if(px>=x1&&px<=x2){const d=Math.abs(py-y0);if(d<threshold&&d<dist){best=["h",rr,c];dist=d}}}
+ for(let rr=0;rr<n;rr++)for(let c=0;c<=n;c++){const x0=x+c*gap,y1=y+rr*gap+10,y2=y+(rr+1)*gap-10;if(py>=y1&&py<=y2){const d=Math.abs(px-x0);if(d<threshold&&d<dist){best=["v",rr,c];dist=d}}}return best}
+canvas.addEventListener("pointerup",e=>{const p=pick(e);if(p)play(...p)});
+function renderRecent(){const box=$("#history");box.textContent="";if(!saved.recent.length){const p=document.createElement("p");p.className="small";p.textContent="No finished rounds yet.";box.append(p);return}saved.recent.slice(0,4).forEach(x=>{const row=document.createElement("div");row.className="history-item";const b=document.createElement("b"),s=document.createElement("span");b.textContent=x.winner<0?"Draw":x.names[x.winner]+" won";s.className="pill";s.textContent=x.scores[0]+"–"+x.scores[1];row.append(b,s);box.append(row)})}
+function settings(){saved.names=[($("#p1").value.trim()||"Blue").slice(0,16),($("#p2").value.trim()||"Coral").slice(0,16)];saved.colours=[$("#c1").value,$("#c2").value];save();update(saved.names[turn]+"'s turn.");draw()}
+["p1","p2","c1","c2"].forEach(id=>$("#"+id).addEventListener("change",settings));$("#size").onchange=fresh;$("#newRound").onclick=fresh;$("#undoBtn").onclick=()=>{const s=moves.pop();if(!s)return update("No move to undo.");h=s.h;v=s.v;boxes=s.boxes;turn=s.turn;scores=s.scores;finished=s.finished;draw();update(saved.names[turn]+"'s turn restored.")};
+$("#resetMatch").onclick=()=>{saved.match=[0,0];saved.recent=[];save();renderRecent();update("Family match score reset.")};
+$("#copyBtn").onclick=async()=>{try{await navigator.clipboard.writeText($("#buildPrompt").textContent);$("#copyBtn").textContent="Copied!";setTimeout(()=>$("#copyBtn").textContent="Copy prompt",1600)}catch{$("#copyBtn").textContent="Select and copy the prompt"}};
+$("#p1").value=saved.names[0];$("#p2").value=saved.names[1];$("#c1").value=saved.colours[0];$("#c2").value=saved.colours[1];$("#size").value=String(saved.size);renderRecent();new ResizeObserver(resize).observe(shell);fresh();
+})();
+</script>
+</body></html>

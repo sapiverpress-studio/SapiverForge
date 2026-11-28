@@ -1,0 +1,485 @@
+{
+  "collected_at": "2026-11-28T15:26:31.265Z",
+  "expected_sources": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "healthy_source_count": 3,
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 276,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 268,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 370,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 243,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1778,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "Hacker News",
+      "publisher": "github.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 3,
+      "title": "Farewell",
+      "url": "https://github.com/p-e-w/heretic/issues/601",
+      "direct_source_url": "https://github.com/p-e-w/heretic/issues/601",
+      "discovery_url": "https://news.ycombinator.com/item?id=50676672",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50676672",
+      "summary": "",
+      "published_at": "2026-11-28T11:42:26.000Z",
+      "engagement": {
+        "score": 546,
+        "comments": 238
+      },
+      "collection_mode": "api",
+      "score": 8.534
+    },
+    {
+      "title": "Q&A with Q.ANT CEO Michael Förtsch on making AI photonic processors which could be built with 90nm nodes, their memory efficiency, adoption challenges, and more (Joel Khalili/Wired)",
+      "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+      "summary": "Joel Khalili / Wired : Q&A with Q.ANT CEO Michael F&ouml;rtsch on making AI photonic processors which could be built with 90nm nodes, their memory efficiency, adoption challenges, and more &mdash; German company Q.ANT is trying to cut the amount of energy required to run AI models by using light to perform the toughest calculations.",
+      "description_html": "<A HREF=\"https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261128/i6.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261128/p6#a261128p6\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Joel Khalili / <A HREF=\"http://www.wired.com/\">Wired</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/\">Q&amp;A with Q.ANT CEO Michael F&ouml;rtsch on making AI photonic processors which could be built with 90nm nodes, their memory efficiency, adoption challenges, and more</A></B></SPAN>&nbsp; &mdash;&nbsp; German company Q.ANT is trying to cut the amount of energy required to run AI models by using light to perform the toughest calculations.</P>",
+      "published_at": "2026-11-28T14:40:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261128/p6",
+      "direct_source_url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+      "publisher": "Joel Khalili/Wired",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 1,
+      "collection_mode": "rss",
+      "score": 8.068
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "neuralnetworksanddeeplearning.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 1,
+      "title": "Michael Nielsen took down his book on neural nets",
+      "url": "https://neuralnetworksanddeeplearning.com/",
+      "direct_source_url": "https://neuralnetworksanddeeplearning.com/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50670757",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50670757",
+      "summary": "",
+      "published_at": "2026-11-27T19:31:01.000Z",
+      "engagement": {
+        "score": 614,
+        "comments": 437
+      },
+      "collection_mode": "api",
+      "score": 8.02
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "xinyadu.github.io",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 9,
+      "title": "Claude Code sabotage: preliminary benchmarking",
+      "url": "https://xinyadu.github.io/blog/claude-code-sabotage.html",
+      "direct_source_url": "https://xinyadu.github.io/blog/claude-code-sabotage.html",
+      "discovery_url": "https://news.ycombinator.com/item?id=50676390",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50676390",
+      "summary": "",
+      "published_at": "2026-11-28T10:37:40.000Z",
+      "engagement": {
+        "score": 297,
+        "comments": 100
+      },
+      "collection_mode": "api",
+      "score": 8.009
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "unkernel.dev",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 6,
+      "title": "Unkernel: Real Linux kernel, compiled to WebAssembly",
+      "url": "https://unkernel.dev/",
+      "direct_source_url": "https://unkernel.dev/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50674218",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50674218",
+      "summary": "",
+      "published_at": "2026-11-28T03:19:20.000Z",
+      "engagement": {
+        "score": 463,
+        "comments": 121
+      },
+      "collection_mode": "api",
+      "score": 7.945
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "research.google",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 4,
+      "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+      "direct_source_url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50672565",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50672565",
+      "summary": "",
+      "published_at": "2026-11-27T23:06:29.000Z",
+      "engagement": {
+        "score": 506,
+        "comments": 175
+      },
+      "collection_mode": "api",
+      "score": 7.929
+    },
+    {
+      "title": "Power operators are using sensors and software to dynamically adjust grid safety limits, boosting existing network capacity amid rising AI-driven energy demand (Martha Muir/Financial Times)",
+      "url": "https://www.ft.com/content/7db3c2c9-dfad-4b5d-a8dc-aabf6fa87440",
+      "summary": "Martha Muir / Financial Times : Power operators are using sensors and software to dynamically adjust grid safety limits, boosting existing network capacity amid rising AI-driven energy demand &mdash; Operators are using sensors and sophisticated software to eke out more capacity from installed transmission lines as they struggle &hellip;",
+      "description_html": "<A HREF=\"https://www.ft.com/content/7db3c2c9-dfad-4b5d-a8dc-aabf6fa87440\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261128/i5.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261128/p5#a261128p5\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Martha Muir / <A HREF=\"https://www.ft.com/\">Financial Times</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.ft.com/content/7db3c2c9-dfad-4b5d-a8dc-aabf6fa87440\">Power operators are using sensors and software to dynamically adjust grid safety limits, boosting existing network capacity amid rising AI-driven energy demand</A></B></SPAN>&nbsp; &mdash;&nbsp; Operators are using sensors and sophisticated software to eke out more capacity from installed transmission lines as they struggle &hellip; </P>",
+      "published_at": "2026-11-28T12:40:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261128/p5",
+      "direct_source_url": "https://www.ft.com/content/7db3c2c9-dfad-4b5d-a8dc-aabf6fa87440",
+      "publisher": "Martha Muir/Financial Times",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 2,
+      "collection_mode": "rss",
+      "score": 7.904
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "infohawk.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 2,
+      "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
+      "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+      "direct_source_url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+      "discovery_url": "https://news.ycombinator.com/item?id=50668145",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50668145",
+      "summary": "",
+      "published_at": "2026-11-27T15:40:31.000Z",
+      "engagement": {
+        "score": 568,
+        "comments": 310
+      },
+      "collection_mode": "api",
+      "score": 7.78
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "bouncemarket.minhanhday.com",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 7,
+      "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
+      "url": "https://bouncemarket.minhanhday.com/",
+      "direct_source_url": "https://bouncemarket.minhanhday.com/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50667726",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50667726",
+      "summary": "a ball will fall. trade on where it lands. I made this game! Some technical details: The entire drop of the ball is simulated server-side, then streamed to each client as server-sent events with a small buffer. Every drop is deterministic from its starting position, so rounds can be replayed exactly for later analysis, but tiny variations in starting position can change the ultimate outcome. There's some AI traders to keep the market moving, but they drop out in any round that has more than five",
+      "published_at": "2026-11-27T15:01:50.000Z",
+      "engagement": {
+        "score": 396,
+        "comments": 135
+      },
+      "collection_mode": "api",
+      "score": 7.703
+    },
+    {
+      "source": "Hacker News",
+      "publisher": "www-cs-faculty.stanford.edu",
+      "source_home": "https://news.ycombinator.com/",
+      "source_rank": 10,
+      "title": "Knuth: Moratorium on Error Reports",
+      "url": "https://www-cs-faculty.stanford.edu/~knuth/moratorium.html",
+      "direct_source_url": "https://www-cs-faculty.stanford.edu/~knuth/moratorium.html",
+      "discovery_url": "https://news.ycombinator.com/item?id=50674452",
+      "link_quality": "original",
+      "discussion_url": "https://news.ycombinator.com/item?id=50674452",
+      "summary": "",
+      "published_at": "2026-11-28T03:49:21.000Z",
+      "engagement": {
+        "score": 273,
+        "comments": 143
+      },
+      "collection_mode": "api",
+      "score": 7.646
+    },
+    {
+      "title": "A profile of Jensen Huang, whom longtime friends and associates say has an unrelenting ability to make the most of any situation, as he returns as Nvidia's CEO (Erich Schwartzel/Wall Street Journal)",
+      "url": "https://www.wsj.com/business/jensen-huang-nvidia-ping-pong-rise-and-fall-bfd13000?st=NG91Cq",
+      "summary": "Erich Schwartzel / Wall Street Journal : A profile of Jensen Huang, whom longtime friends and associates say has an unrelenting ability to make the most of any situation, as he returns as Nvidia's CEO &mdash; As a longtime friend of the Nvidia CEO puts it, &ldquo;Jensen will always pull a rabbit out of a hat&rdquo;",
+      "description_html": "<A HREF=\"https://www.wsj.com/business/jensen-huang-nvidia-ping-pong-rise-and-fall-bfd13000?st=NG91Cq\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261128/i4.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261128/p4#a261128p4\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Erich Schwartzel / <A HREF=\"https://www.wsj.com/\">Wall Street Journal</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://www.wsj.com/business/jensen-huang-nvidia-ping-pong-rise-and-fall-bfd13000?st=NG91Cq\">A profile of Jensen Huang, whom longtime friends and associates say has an unrelenting ability to make the most of any situation, as he returns as Nvidia's CEO</A></B></SPAN>&nbsp; &mdash;&nbsp; As a longtime friend of the Nvidia CEO puts it, &ldquo;Jensen will always pull a rabbit out of a hat&rdquo;</P>",
+      "published_at": "2026-11-28T07:40:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261128/p4",
+      "direct_source_url": "https://www.wsj.com/business/jensen-huang-nvidia-ping-pong-rise-and-fall-bfd13000?st=NG91Cq",
+      "publisher": "Erich Schwartzel/Wall Street Journal",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 3,
+      "collection_mode": "rss",
+      "score": 7.616
+    },
+    {
+      "title": "Sweden-based Trustly, which lets merchants accept payments via bank transfers, raised $60M from Nordic Capital and others, taking its total funding to $450M+ (John Reynolds/Tech.eu)",
+      "url": "https://tech.eu/2026/11/24/trustly-completes-60m-funding-raise/",
+      "summary": "John Reynolds / Tech.eu : Sweden-based Trustly, which lets merchants accept payments via bank transfers, raised $60M from Nordic Capital and others, taking its total funding to $450M+ &mdash; Trustly has raised the funds from existing investors. &mdash; Swedish fintech Trustly today confirmed it had completed a $60m funding round &hellip;",
+      "description_html": "<A HREF=\"https://tech.eu/2026/11/24/trustly-completes-60m-funding-raise/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261128/i3.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261128/p3#a261128p3\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> John Reynolds / <A HREF=\"https://tech.eu/\">Tech.eu</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://tech.eu/2026/11/24/trustly-completes-60m-funding-raise/\">Sweden-based Trustly, which lets merchants accept payments via bank transfers, raised $60M from Nordic Capital and others, taking its total funding to $450M+</A></B></SPAN>&nbsp; &mdash;&nbsp; Trustly has raised the funds from existing investors.&nbsp; &mdash;&nbsp; Swedish fintech Trustly today confirmed it had completed a $60m funding round &hellip; </P>",
+      "published_at": "2026-11-28T06:45:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261128/p3",
+      "direct_source_url": "https://tech.eu/2026/11/24/trustly-completes-60m-funding-raise/",
+      "publisher": "John Reynolds/Tech.eu",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 4,
+      "collection_mode": "rss",
+      "score": 7.498
+    },
+    {
+      "title": "COO Jen Wong says 80%+ of Reddit's monetization comes from logged-in users whose time on the site rises from 5 min/day in year one to 40 min/day by year five (Eleanor Pringle/Fortune)",
+      "url": "https://fortune.com/2026/11/26/reddit-coo-jen-wong-user-karma-moderator-model-ai/",
+      "summary": "Eleanor Pringle / Fortune : COO Jen Wong says 80%+ of Reddit's monetization comes from logged-in users whose time on the site rises from 5 min/day in year one to 40 min/day by year five &mdash; Reddit boasts engagement metrics that would be the envy of many other online platforms: Over 80% of its monetization comes from loyal &hellip;",
+      "description_html": "<A HREF=\"https://fortune.com/2026/11/26/reddit-coo-jen-wong-user-karma-moderator-model-ai/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261128/i2.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261128/p2#a261128p2\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Eleanor Pringle / <A HREF=\"http://www.fortune.com/\">Fortune</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://fortune.com/2026/11/26/reddit-coo-jen-wong-user-karma-moderator-model-ai/\">COO Jen Wong says 80%+ of Reddit's monetization comes from logged-in users whose time on the site rises from 5 min/day in year one to 40 min/day by year five</A></B></SPAN>&nbsp; &mdash;&nbsp; Reddit boasts engagement metrics that would be the envy of many other online platforms: Over 80% of its monetization comes from loyal &hellip; </P>",
+      "published_at": "2026-11-28T06:25:04.000Z",
+      "discovery_url": "https://www.techmeme.com/261128/p2",
+      "direct_source_url": "https://fortune.com/2026/11/26/reddit-coo-jen-wong-user-karma-moderator-model-ai/",
+      "publisher": "Eleanor Pringle/Fortune",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 5,
+      "collection_mode": "rss",
+      "score": 7.404
+    },
+    {
+      "title": "Embo, which is developing world models for robotics trained on massive amounts of internet video, emerges from stealth with a $110M seed led by a16z (Embo)",
+      "url": "https://embo.com/introducing-embo",
+      "summary": "Embo : Embo, which is developing world models for robotics trained on massive amounts of internet video, emerges from stealth with a $110M seed led by a16z &mdash; Embo is building the next generation of frontier AI models, with a deep understanding of physical reality and fine-grained motor skills.",
+      "description_html": "<A HREF=\"https://embo.com/introducing-embo\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261128/i1.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261128/p1#a261128p1\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://embo.com/\">Embo</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://embo.com/introducing-embo\">Embo, which is developing world models for robotics trained on massive amounts of internet video, emerges from stealth with a $110M seed led by a16z</A></B></SPAN>&nbsp; &mdash;&nbsp; Embo is building the next generation of frontier AI models, with a deep understanding of physical reality and fine-grained motor skills.</P>",
+      "published_at": "2026-11-28T05:50:02.000Z",
+      "discovery_url": "https://www.techmeme.com/261128/p1",
+      "direct_source_url": "https://embo.com/introducing-embo",
+      "publisher": "Embo",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 6,
+      "collection_mode": "rss",
+      "score": 7.3
+    },
+    {
+      "title": "Anthropic says Claude doesn't silently sabotage work and that some user reports reflect \"overcaution\", where Claude clings to self-imposed rules on long tasks (Edwin/@edwinarbus)",
+      "url": "https://x.com/edwinarbus",
+      "summary": "Edwin / @edwinarbus : Anthropic says Claude doesn't silently sabotage work and that some user reports reflect &ldquo;overcaution&rdquo;, where Claude clings to self-imposed rules on long tasks &mdash; Claude has not been trained to sabotage work. Yes, it sometimes makes mistakes, and other agents might identify them, but this isn't sabotage. There have been a few screenshots floating around of an outdated Fable 5 system card. For the first two days of Fable 5's launch in June, we d...",
+      "description_html": "<P><A HREF=\"https://www.techmeme.com/261127/p17#a261127p17\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> Edwin / <A HREF=\"https://x.com/edwinarbus\">@edwinarbus</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://x.com/edwinarbus/status/2126507795642187855\">Anthropic says Claude doesn't silently sabotage work and that some user reports reflect &ldquo;overcaution&rdquo;, where Claude clings to self-imposed rules on long tasks</A></B></SPAN>&nbsp; &mdash;&nbsp; Claude has not been trained to sabotage work. Yes, it sometimes makes mistakes, and other agents might identify them, but this isn't sabotage. There have been a few screenshots floating around of an outdated Fable 5 system card. For the first two days of Fable 5's launch in June, we d...</P>",
+      "published_at": "2026-11-28T03:35:05.000Z",
+      "discovery_url": "https://www.techmeme.com/261127/p17",
+      "direct_source_url": "https://x.com/edwinarbus",
+      "publisher": "Edwin/@edwinarbus",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 7,
+      "collection_mode": "rss",
+      "score": 7.126
+    },
+    {
+      "title": "How the MATCH Act could backfire by barring ASML from its ~350 immersion scanners in China, letting rivals service and reverse engineer them, and hire its staff (LithoWar)",
+      "url": "https://lithowar.com/lithography-war/",
+      "summary": "LithoWar : How the MATCH Act could backfire by barring ASML from its ~350 immersion scanners in China, letting rivals service and reverse engineer them, and hire its staff &mdash; At the heart of the AI race, while East and West stockpile advanced processors, a quiet technology battle is under &hellip;",
+      "description_html": "<A HREF=\"https://lithowar.com/lithography-war/\"><IMG VSPACE=\"4\" HSPACE=\"4\" BORDER=\"0\" ALIGN=\"RIGHT\" SRC=\"http://www.techmeme.com/261127/i16.jpg\"></A>\n<P><A HREF=\"https://www.techmeme.com/261127/p16#a261127p16\" TITLE=\"Techmeme permalink\"><IMG WIDTH=11 HEIGHT=12 SRC=\"http://www.techmeme.com/img/pml.png\" STYLE=\"border:none;padding:0;margin:0;\"></A> <A HREF=\"https://lithowar.com/\">LithoWar</A>:<BR>\n<SPAN STYLE=\"font-size:1.3em;\"><B><A HREF=\"https://lithowar.com/lithography-war/\">How the MATCH Act could backfire by barring ASML from its ~350 immersion scanners in China, letting rivals service and reverse engineer them, and hire its staff</A></B></SPAN>&nbsp; &mdash;&nbsp; At the heart of the AI race, while East and West stockpile advanced processors, a quiet technology battle is under &hellip; </P>",
+      "published_at": "2026-11-28T02:00:01.000Z",
+      "discovery_url": "https://www.techmeme.com/261127/p16",
+      "direct_source_url": "https://lithowar.com/lithography-war/",
+      "publisher": "LithoWar",
+      "link_quality": "original",
+      "source": "Techmeme",
+      "source_home": "https://www.techmeme.com/",
+      "source_rank": 8,
+      "collection_mode": "rss",
+      "score": 6.98
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 1,
+      "title": "LayoutRecall: Preserving Appearance in Multi-Round 3D Layout-Controlled Image Editing",
+      "url": "https://huggingface.co/papers/2611.33885",
+      "direct_source_url": "https://huggingface.co/papers/2611.33885",
+      "discovery_url": "https://huggingface.co/papers/2611.33885",
+      "link_quality": "original",
+      "summary": "3D layout-controlled image editing gives users explicit control over object placement and camera viewpoint. In a sequence of edits, however, the latest image can lose the appearance of an object when it is occluded or leaves view. The target layout specifies where the object should reappear, while its appearance must be recovered from earlier observations. We introduce LayoutRecall, a multi-round editor that stores and reuses appearance in the local coordinate systems of 3D boxes. Box-Surface Latent Memory retains image latents on box faces and retrieves them along rays in the target view. Geometry-Aligned Memory Conditioning supplies the retrieved tokens to a FLUX.2 editor using target-view positions, shared box-local embeddings, and object-wise attention. A correspondence loss encourages the editor to attend to matching observations during denoising. We also introduce LayoutLoop, a multi-round 3D layout-controlled image editing benchmark with calibrated layouts and designed revisits. We conduct extensive experiments on LayoutLoop and real-scene data to verify the ability of our method. The project page is at https://ykchizs.github.io/layoutrecall.github.io/.",
+      "published_at": "2026-11-24T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 4
+      },
+      "collection_mode": "api",
+      "score": 6.249
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 2,
+      "title": "Damped Atomic Wave Integration Neurons (DAWIN): A Universal Primitive for Continuous-Time Spatiotemporal Learning",
+      "url": "https://huggingface.co/papers/2611.30025",
+      "direct_source_url": "https://huggingface.co/papers/2611.30025",
+      "discovery_url": "https://huggingface.co/papers/2611.30025",
+      "link_quality": "original",
+      "summary": "Conventional artificial neurons separate spatial feature aggregation from continuous physical time, limiting their ability to model irregular observations. We introduce the Damped Atomic Wave Integration Neuron (DAWIN), a continuous-time primitive for replacing standard neural layers in MLPs, Transformers, and graph neural networks. DAWIN couples spatial projection with elapsed-time-dependent wave excitation and integrates it into a local complex state through closed-form damped evolution, avoiding numerical differential equation solvers. We show that DAWIN generalizes static sinusoidal and memoryless wave neurons on interval-augmented inputs, derive closed-form gradients, and establish bounded-input bounded-output stability for positive damping and sampling intervals bounded away from zero. An associative Triton prefix-scan implementation, DAWINLinear, uses FP32 accumulation and achieves O(log L) parallel depth for sequence length L. Across 11 parameter-matched tasks covering irregular oscillators, MuJoCo dynamics, pedestrian trajectories, and PhysioNet 2012 clinical sequences, DAWIN outperforms Neural CDE on 9 tasks and ReLU-MLP on 8. It achieves the lowest error on dense clinica",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 6.059
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 10,
+      "title": "What a Forecasting Leaderboard Can Establish: Resolution Reporting for Zero-Shot Time-Series Models",
+      "url": "https://huggingface.co/papers/2611.31619",
+      "direct_source_url": "https://huggingface.co/papers/2611.31619",
+      "discovery_url": "https://huggingface.co/papers/2611.31619",
+      "link_quality": "original",
+      "summary": "A foundation model for time series is pretrained once and then asked to forecast series it has never seen, so the evidence for it is its score on held-out datasets. Such datasets are scarce, and a few public leaderboards carry most comparisons, yet none of them states how small a difference its datasets can detect. We call that quantity the resolution of a board and introduce Vernier, a tool that computes it from the files a board already publishes. Vernier also reports which entries a board cannot separate from its leader and whether its order changes when unrelated parties submit. GIFT-Eval resolves 6.8 rank places, and its displayed neighbours sit 0.91 apart. The ten places of its top ten hold fewer than two resolvable steps. fev-bench, Chronos Benchmark II and TIME show the same pattern: their resolution is 3.6 to 19 times the gap between neighbours. With each of its 2,554 series as an independent source, BOOM is the one board that resolves its top ten. Below the resolution the order depends on who else submitted: across four boards, rules that rank against the pool reversed 43 top-ten pairs with neither entry rerun, in one update in seven. Boards also do not record how much hi",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 59
+      },
+      "collection_mode": "api",
+      "score": 5.98
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 3,
+      "title": "BiSAT: Bidirectionally Aligned Semantic-Acoustic Tokenization for Speech Language Models",
+      "url": "https://huggingface.co/papers/2611.30723",
+      "direct_source_url": "https://huggingface.co/papers/2611.30723",
+      "discovery_url": "https://huggingface.co/papers/2611.30723",
+      "link_quality": "original",
+      "summary": "Speech language models (LMs) generate speech as sequences of discrete tokens. Their tokenizer must therefore preserve both acoustic detail and linguistic content at a low bitrate. Semantic-enhanced tokenizers may lose acoustic detail, whereas acoustic-oriented tokenizers retain acoustic variation that makes language modeling harder. Unified tokenizers combine both, but representing acoustic detail and linguistic content within a single feature space can cause interference between the two objectives, and existing approaches typically align acoustic representations to fixed semantic targets from a frozen teacher. We propose Bidirectionally Aligned Semantic-Acoustic Tokenization (BiSAT), a unified tokenization framework with separate acoustic and semantic branches aligned by a shared-index mechanism. This design learns acoustic and semantic representations in separate continuous spaces while producing a single discrete code sequence, and it jointly optimizes both encoders without relying on fixed semantic teacher targets. Based on BiSAT, we develop BiSAT-TTS, a zero-shot text-to-speech system comprising an autoregressive text-speech LM and a conditional flow-matching acoustic decoder.",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 5.979
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 5,
+      "title": "Revisiting LLMs as Context Engineers",
+      "url": "https://huggingface.co/papers/2611.30494",
+      "direct_source_url": "https://huggingface.co/papers/2611.30494",
+      "discovery_url": "https://huggingface.co/papers/2611.30494",
+      "link_quality": "original",
+      "summary": "As large language models (LLMs) are used in more and more new tasks, context engineering becomes a fundamental method to efficiently steer LLMs by constructing instruction prompts or metadata without intensive training. A growing number of LLM context engineering (LCE) approaches automate the task by casting the LLM itself as the engineer that draws generalizable instructions or experiences from offline trials as context. Although these methods resemble how humans learn from experiences, it remains unclear when and how LLMs can engineer effective context from data. To answer the question, we first establish a benchmark composed of datasets with different reasoning patterns. We compared different LCE methods with different LLM families in 8B size, showing that there is no single winner for all tasks, even compared with simple baselines like chain-of-thought. Even when scaling model capabilities via more parameters or generation iterations, LCEs do not consistently boost existing performance. Across all datasets and models, the performance gains of LCEs are negatively correlated (r=-0.5, ple 0.05) with the diversity of the failure modes of reasoning trajectories. Investigating how LC",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 5
+      },
+      "collection_mode": "api",
+      "score": 5.969
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 4,
+      "title": "Markdown Is Not a Firewall: four coding agents, one rules file, four boundaries",
+      "url": "https://huggingface.co/papers/2611.27112",
+      "direct_source_url": "https://huggingface.co/papers/2611.27112",
+      "discovery_url": "https://huggingface.co/papers/2611.27112",
+      "link_quality": "original",
+      "summary": "Teams put a one-page rules file in a repository and call it a control on coding agents. A registered study found agents rarely look up a repository's contribution rules. I asked the security question: what does a rules file do at a boundary, against a gate? I tested one 278-word rules file, with hypotheses and analysis code deposited first. Claude Code, Codex CLI, Gemini CLI and OpenCode with DeepSeek worked through 20 small repositories with hidden tests, 12 for three of them. Three agents met four boundaries I built: a refused endpoint, a destructive shortcut, a planted instruction and a planted package. Permission prompts, each vendor's own control layer, were off by design. A gate in front of the mock service blocked and logged forbidden requests. Every verdict was read from records the agent could not change. Only my first scoring pass was blind to arm. My checkers found no real bugs, with the file or without it. The file cost one agent a third of its score: Codex CLI fell from 99.0 to 67.7 percent on hidden tests, and in 11 of its 36 steps reported the task complete with all tests passing while under half of the hidden tests passed. Its own tests passed. Faced with two of its",
+      "published_at": "2026-11-19T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.811
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 6,
+      "title": "InitFree-SfM: When Initialization-Free Bundle Adjustment meets Learned Structure-from-Motion",
+      "url": "https://huggingface.co/papers/2611.31516",
+      "direct_source_url": "https://huggingface.co/papers/2611.31516",
+      "discovery_url": "https://huggingface.co/papers/2611.31516",
+      "link_quality": "original",
+      "summary": "Initialization-free bundle adjustment (InitFree BA) aims to jointly recover camera poses and scene structure without requiring an initial global estimate. It is a very challenging problem, especially compared to traditional BA where a good estimation is assumed. While recent methods optimize surrogate Object Space Error (OSE) objectives from random initialization, a low objective value does not necessarily yield an accurate reconstruction, revealing a gap between optimization and reconstruction. We show that existing InitFree BA pipelines struggle to produce accurate 3D reconstructions on modern SfM benchmarks, and demonstrate that incorporating learned metric depth substantially improves their practical feasibility. We introduce InitFree-SfM, a complete initialization-free SfM pipeline combining learned correspondences, metric depth, depth-consistent track construction, and joint metric refinement. Within this framework, we propose a simple depth-augmented OSE (dOSE), which complements the directional constraints of OSE by constraining landmark positions along their viewing rays. Our approach substantially outperforms existing InitFree BA methods and achieves competitive accuracy",
+      "published_at": "2026-11-22T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 1
+      },
+      "collection_mode": "api",
+      "score": 5.651
+    },
+    {
+      "source": "Hugging Face",
+      "publisher": "Hugging Face",
+      "source_home": "https://huggingface.co/papers",
+      "source_rank": 9,
+      "title": "Guarding with Judgment: Learning to Intervene for Multimodal Safety",
+      "url": "https://huggingface.co/papers/2611.28849",
+      "direct_source_url": "https://huggingface.co/papers/2611.28849",
+      "discovery_url": "https://huggingface.co/papers/2611.28849",
+      "link_quality": "original",
+      "summary": "When visual context makes an ordinary request unsafe to answer as asked, a blanket refusal may leave the user's need unresolved. Choosing how to help requires distinguishing an established hazard from a condition that still needs verification, a distinction that binary safety labels leave unspecified. We formulate this decision through four actions: allow, warn, review, and refuse. To ground these decisions in verifiable evidence, we build a corpus of 20,126 training audits and the JudiBench benchmark, connecting each action to diagnostic judgments, source evidence, and controlled context changes. Our guard, JudiAct, separately states what the source establishes, what condition governs the help, and how the rules apply. It then checks these three brief review items against the original inputs to predict diagnostic labels and a handling action. Supervised training learns individual judgments while comparing label assignments across related cases. A second stage swaps one review item at a time, using the resulting audit feedback to refine review generation. On JudiBench, JudiAct improves request and answer Macro-F1 by more than 28 percentage points over its 4B backbone. Across nine p",
+      "published_at": "2026-11-20T19:00:00.000Z",
+      "engagement": {
+        "upvotes": 2
+      },
+      "collection_mode": "api",
+      "score": 5.499
+    }
+  ]
+}

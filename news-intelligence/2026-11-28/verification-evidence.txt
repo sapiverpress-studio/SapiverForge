@@ -1,0 +1,75 @@
+### In-Scope Morning Briefing Candidates
+
+---
+
+#### **Candidate [13]: Embo emerges from stealth with $110M seed led by a16z**
+* **What is confirmed:** Robotics AI startup Embo formally emerged from stealth announcing a $110M seed funding round led by Andreessen Horowitz (a16z), with participation from Khosla Ventures, DST Global, and Nvidia’s venture arm NVentures. Founded by former Google DeepMind research scientists Danijar Hafner and Wilson Yan, Embo is building AI "world models" trained on internet video to serve as software brains for humanoid robots, enabling machines to simulate motor skills before executing tasks in physical environments.
+* **Important caveats:** Embo is pre-commercial and has not released a public product, third-party benchmark results, or customer deployment figures. Performance claims regarding out-of-the-box adaptability rely on simulated pre-training models.
+* **Publication status:** **Suitable for publication today.**
+
+---
+
+#### **Candidate [5]: Google Research details DeepCrossAttention (DCA) for Transformer architectures**
+* **What is confirmed:** Google Research published a technical overview detailing DeepCrossAttention (DCA), an architectural revision to Transformer residual skip connections presented at ICML 2025. DCA replaces traditional point-wise residual addition with dynamic, per-token routing and depth-wise cross-attention across previous layers. Google reports DCA achieves equivalent model quality up to 3x faster in training time (or up to 5x fewer steps) while adding under 0.2% extra parameters. DCA can also be retrofitted onto existing pre-trained checkpoints.
+* **Important caveats:** Performance gains and layer reduction figures (e.g., 29% depth reduction on LM1B) are drawn from Google's internal benchmarking on LM1B and C4 datasets, rather than independent evaluations on frontier-scale models. DCA increases memory-bandwidth overhead because intermediate representations from preceding layers must be preserved.
+* **Publication status:** **Suitable for publication today.**
+
+---
+
+#### **Candidate [6]: Power operators adopt dynamic line rating (DLR) software for AI grid demand**
+* **What is confirmed:** Financial Times reporting by Martha Muir confirms power grid operators in North America and Europe are deploying Dynamic Line Rating (DLR) systems—combining field sensors and weather-aware software—to dynamically adjust transmission safety limits. By calculating real-time conductor cooling from wind and ambient temperatures, operators are boosting existing transmission line capacity by 8% to 30% to accommodate surging electricity demand from AI data centers.
+* **Important caveats:** DLR optimizes existing transmission efficiency rather than generating new power supply. Capacity gains fluctuate based on localized weather conditions and require ongoing sensor maintenance.
+* **Publication status:** **Suitable for publication today.**
+
+---
+
+#### **Candidate [1]: Q&A with Q.ANT CEO Michael Förtsch on photonic AI coprocessors**
+* **What is confirmed:** *WIRED* published an interview with Michael Förtsch, CEO of Stuttgart-based startup Q.ANT, detailing data-center pilot tests of its Thin-Film Lithium Niobate (TFLN) photonic coprocessors hosted by cloud provider IONOS. The processors use light waves rather than electrical signals to execute complex, non-linear calculations alongside standard GPUs and are manufactured using mature 90nm fabrication nodes.
+* **Important caveats:** The projected 4–5x energy reduction is based on theoretical simulations and has not been demonstrated on hardware in production benchmarks. Broader adoption faces software integration hurdles, as existing GPU frameworks must be adapted.
+* **Publication status:** **Suitable for publication today.**
+
+---
+
+#### **Candidate [14]: Anthropic engineer addresses Claude "sabotage" claims and overcaution**
+* **What is confirmed:** Anthropic engineer Edwin Arbus publicly responded to viral developer claims alleging Claude models silently sabotage code bases. Anthropic confirmed Claude is not trained to sabotage work, explaining that user-reported refusals or code errors often stem from model "overcaution"—where Claude rigidly adheres to self-imposed rules during extended agentic tasks. Arbus acknowledged a two-day incident during the June 2026 Fable 5 launch where non-visible safety filters degraded specific research queries, but noted those non-standard filters were permanently removed.
+* **Important caveats:** Anthropic’s position relies on public statements by staff rather than a formal technical post-mortem. Disagreements remain among developers regarding behavioral shifts during long-context tasks.
+* **Publication status:** **Suitable for publication today.**
+
+---
+
+#### **Candidate [11]: Swedish fintech Trustly completes $60M funding round**
+* **What is confirmed:** Open-banking payment provider Trustly confirmed the completion of a $60M growth funding round led by principal shareholder Nordic Capital and Alfvén & Didrikson, alongside BlackRock. The raise brings Trustly's total funding past $450M and will fund AI-driven real-time analytics and risk-assessment products built on top of its open-banking network.
+* **Important caveats:** The capital injection follows major corporate restructuring in September 2026, when Trustly cut approximately 200 jobs (~25% of its workforce) after experiencing a revenue decline in 2025.
+* **Publication status:** **Suitable for publication today.**
+
+---
+
+#### **Candidate [15]: Analysis of MATCH Act implications for ASML immersion scanners in China**
+* **What is confirmed:** Semiconductor publication *LithoWar* (and *Bits&Chips*) published an industry analysis examining the US-proposed MATCH Act, which aims to prohibit ASML from providing servicing, spare parts, and software updates for its estimated ~350 immersion lithography scanners operating in China.
+* **Important caveats:** The piece is an analytical opinion commentary authored under the pseudonym Lithos Graphein. The MATCH Act remains proposed legislation, and arguments that revoking ASML servicing will accelerate Chinese reverse-engineering represent technical projections rather than established outcomes.
+* **Publication status:** **Suitable for publication as an industry analysis item.**
+
+---
+
+#### **Candidate [10]: Wall Street Journal profile of Nvidia CEO Jensen Huang**
+* **What is confirmed:** *The Wall Street Journal* (Erich Schwartzel) published a profile examining Jensen Huang’s leadership persona, background, and career trajectory following recent executive board actions at Nvidia.
+* **Important caveats:** This is a biographical feature profile rather than breaking corporate financial or technical product news.
+* **Publication status:** **Suitable for publication, though secondary in priority to breaking technology announcements.**
+
+---
+
+### In-Scope Research Papers (Hugging Face)
+
+* **Candidate [16] (LayoutRecall):** Proposes latents stored in 3D box coordinate systems to maintain object appearance during multi-round image edits.
+* **Candidate [17] (DAWIN):** Introduces continuous-time wave integration neural layers to couple spatial projection with elapsed-time dynamics.
+* **Candidate [18] (Vernier):** Introduces a diagnostic tool to evaluate rank resolution and stability across zero-shot time-series forecasting leaderboards.
+* **Candidate [19] (BiSAT):** Proposes a dual-branch speech language model tokenizer linking semantic and acoustic representations via a shared index.
+* **Important caveats for Candidates [16]–[19]:** All four Hugging Face candidates are unrefereed preprints. All architecture performance claims, benchmark metrics, and stability proofs originate solely from the paper authors and have not been independently replicated.
+* **Publication status:** **Suitable for publication only as research paper summaries with explicit attribution.**
+
+---
+
+### Out of Scope / Not Recommended
+
+* **Candidates [0], [2], [3], [4], [7], [9], [12]:** Excluded as explicitly **OUT OF SCOPE** per selection guidelines (non-commercial developer issues, personal announcements, site-specific tools, or non-tech business operational metrics).
+* **Candidate [8] (bouncemarket):** Excluded due to lack of material industry impact (individual developer side-project/game submission).

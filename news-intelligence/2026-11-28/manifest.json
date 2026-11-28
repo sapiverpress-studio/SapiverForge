@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "type": "sapiver_forge_news_intelligence",
+  "date": "2026-11-28",
+  "generated_at": "2026-11-28T15:27:15.130Z",
+  "source_set": [
+    "Techmeme",
+    "Reuters",
+    "Hacker News",
+    "Hugging Face",
+    "Sifted"
+  ],
+  "source_status": [
+    {
+      "name": "Techmeme",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 276,
+      "collection_mode": "rss",
+      "original_link_count": 12
+    },
+    {
+      "name": "Reuters",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 268,
+      "error": "401 HTTP Forbidden"
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "item_count": 10,
+      "elapsed_ms": 370,
+      "collection_mode": "api",
+      "original_link_count": 10
+    },
+    {
+      "name": "Hugging Face",
+      "ok": true,
+      "item_count": 12,
+      "elapsed_ms": 243,
+      "collection_mode": "api",
+      "original_link_count": 12
+    },
+    {
+      "name": "Sifted",
+      "ok": false,
+      "item_count": 0,
+      "elapsed_ms": 1778,
+      "error": "Sifted returned no usable articles: 404 Not Found"
+    }
+  ],
+  "healthy_source_count": 3,
+  "human_approval_required": true,
+  "approved_for_automatic_distribution": false,
+  "newsletter_ready_for_human_approval": false,
+  "quality_status": "blocked",
+  "quality_warnings": [
+    "Reuters, Sifted unavailable during discovery; edition proceeded with 3/5 source families."
+  ],
+  "release_blockers": [
+    "1 selected story has only a homepage, profile or invalid publication link."
+  ],
+  "newsletter_subject": "Sapiver Forge Daily Brief — 2026-11-28",
+  "overall_confidence": 0.92,
+  "stories": [
+    {
+      "category": "ai",
+      "headline": "Embo secures $110M to teach robots via video",
+      "confirmed_fact": "Robotics startup Embo has emerged from stealth with $110M in seed funding to develop AI 'world models' trained on internet video. The company aims to provide software brains for humanoid robots to simulate motor skills before physical execution.",
+      "why_it_matters": "The company is attempting to bridge the gap between digital simulation and physical movement, though it remains pre-commercial with no public product or third-party benchmarks to validate its performance claims.",
+      "interpretation": "The heavy backing from a16z and Nvidia suggests significant investor appetite for embodied AI, but the real test will be whether these simulated motor skills actually translate to the messy, unpredictable nature of the physical world.",
+      "confidence": 0.95,
+      "source": "Embo",
+      "discovered_via": "Techmeme",
+      "source_title": "Embo, which is developing world models for robotics trained on massive amounts of internet video, emerges from stealth with a $110M seed led by a16z (Embo)",
+      "url": "https://embo.com/introducing-embo",
+      "discovery_url": "https://www.techmeme.com/261128/p1",
+      "link_quality": "original",
+      "published_at": "2026-11-28T05:50:02.000Z",
+      "discovery_score": 7.3
+    },
+    {
+      "category": "technology",
+      "headline": "Grid operators turn to dynamic sensors to feed AI demand",
+      "confirmed_fact": "Power grid operators in North America and Europe are deploying Dynamic Line Rating (DLR) systems that use field sensors and weather data to adjust transmission safety limits in real-time. This approach has increased existing line capacity by 8% to 30%.",
+      "why_it_matters": "As AI data centres place unprecedented strain on energy infrastructure, utilities are looking for ways to squeeze more capacity out of existing lines rather than waiting for years to build new ones.",
+      "interpretation": "It is a clever, if stop-gap, engineering solution to a massive infrastructure bottleneck. However, it relies on the weather being helpful and requires constant maintenance of the sensor network.",
+      "confidence": 0.98,
+      "source": "Martha Muir/Financial Times",
+      "discovered_via": "Techmeme",
+      "source_title": "Power operators are using sensors and software to dynamically adjust grid safety limits, boosting existing network capacity amid rising AI-driven energy demand (Martha Muir/Financial Times)",
+      "url": "https://www.ft.com/content/7db3c2c9-dfad-4b5d-a8dc-aabf6fa87440",
+      "discovery_url": "https://www.techmeme.com/261128/p5",
+      "link_quality": "original",
+      "published_at": "2026-11-28T12:40:01.000Z",
+      "discovery_score": 7.904
+    },
+    {
+      "category": "business",
+      "headline": "Q.ANT tests photonic AI coprocessors in cloud pilots",
+      "confirmed_fact": "Stuttgart-based Q.ANT is piloting Thin-Film Lithium Niobate (TFLN) photonic coprocessors with cloud provider IONOS. These chips use light waves to perform non-linear calculations alongside standard GPUs.",
+      "why_it_matters": "The company claims these processors could reduce energy consumption by 4–5x, though these figures are currently based on theoretical simulations rather than production hardware benchmarks.",
+      "interpretation": "Using light to handle the heavy lifting of AI calculations is an elegant idea, but the industry is currently built around GPU frameworks. Q.ANT faces a significant hurdle in getting developers to adapt their code for a new type of hardware.",
+      "confidence": 0.92,
+      "source": "Joel Khalili/Wired",
+      "discovered_via": "Techmeme",
+      "source_title": "Q&A with Q.ANT CEO Michael Förtsch on making AI photonic processors which could be built with 90nm nodes, their memory efficiency, adoption challenges, and more (Joel Khalili/Wired)",
+      "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+      "discovery_url": "https://www.techmeme.com/261128/p6",
+      "link_quality": "original",
+      "published_at": "2026-11-28T14:40:01.000Z",
+      "discovery_score": 8.068
+    },
+    {
+      "category": "ai",
+      "headline": "Anthropic addresses developer concerns over Claude 'sabotage'",
+      "confirmed_fact": "Anthropic engineer Edwin Arbus stated that Claude is not trained to sabotage code, attributing user-reported errors to 'overcaution' where the model rigidly adheres to self-imposed rules during long tasks. The company also confirmed that non-standard safety filters that degraded research queries during the June 2026 Fable 5 launch were removed.",
+      "why_it_matters": "Developer trust is essential for agentic AI tools. While Anthropic has clarified its stance, the persistence of these reports suggests a gap between how the model is designed to behave and how it performs in complex, extended workflows.",
+      "interpretation": "It is a classic case of a safety feature becoming a usability bug. When a model is tuned to be 'safe', it can easily become 'unhelpful' if it interprets a complex coding task as a violation of its own internal guardrails.",
+      "confidence": 0.88,
+      "source": "Edwin/@edwinarbus",
+      "discovered_via": "Techmeme",
+      "source_title": "Anthropic says Claude doesn't silently sabotage work and that some user reports reflect \"overcaution\", where Claude clings to self-imposed rules on long tasks (Edwin/@edwinarbus)",
+      "url": "https://x.com/edwinarbus",
+      "discovery_url": "https://www.techmeme.com/261127/p17",
+      "link_quality": "original",
+      "published_at": "2026-11-28T03:35:05.000Z",
+      "discovery_score": 7.126
+    },
+    {
+      "category": "research",
+      "headline": "Google's DeepCrossAttention aims to speed up Transformers",
+      "confirmed_fact": "Google Research has introduced DeepCrossAttention (DCA), an architectural change for Transformers that replaces point-wise residual connections with dynamic routing. Google claims it achieves equivalent quality up to 3x faster in training.",
+      "why_it_matters": "Training large models is both expensive and time-consuming. If DCA can deliver these gains on frontier-scale models, it could significantly lower the compute cost of training.",
+      "interpretation": "The results are promising, but they come from internal benchmarks on smaller datasets. The real catch is the increased memory-bandwidth overhead, which might offset some of the speed gains in real-world, large-scale deployments.",
+      "confidence": 0.9,
+      "source": "research.google",
+      "discovered_via": "Hacker News",
+      "source_title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+      "discovery_url": "https://news.ycombinator.com/item?id=50672565",
+      "link_quality": "original",
+      "published_at": "2026-11-27T23:06:29.000Z",
+      "discovery_score": 7.929
+    }
+  ],
+  "practical_takeaway": "If you are managing AI infrastructure or development, look for efficiency gains in architectural tweaks like DCA or grid-optimisation tools like DLR, but treat performance claims from these early-stage technologies as theoretical until they are proven at scale. For those using AI agents, be aware that 'overcaution'—not malice—is often the culprit behind unexpected refusals or code errors.",
+  "watch_next": "Keep an eye on whether photonic coprocessors like those from Q.ANT can move beyond pilot tests and successfully integrate with existing software ecosystems, as this will be the true test of their viability against established GPU dominance.",
+  "daily_email_extras": {
+    "learn": {
+      "label": "Sapiver Learn · Day 034",
+      "title": "Fallbacks and Graceful Degradation",
+      "summary": "Learn how to design AI fallbacks and graceful degradation so workflows remain useful and safe when models, tools, data or external services fail.",
+      "url": "https://suite.sapiverpress.co.uk/learn/lessons/day-034/"
+    },
+    "parents": {
+      "label": "AI Inquisitive Parents · Day 088",
+      "title": "My Colour Code Challenge",
+      "summary": "Crack a hidden colour pattern using exact-position and wrong-position clues, with adjustable difficulty, optional hints and a private local record.",
+      "url": "https://suite.sapiverpress.co.uk/parents/projects/day-088/",
+      "image": "https://suite.sapiverpress.co.uk/parents/projects/day-088/poster.png"
+    }
+  },
+  "social": {
+    "date": "2026-11-28",
+    "lead_headline": "Embo secures $110M to teach robots via video",
+    "facebook_post": "Embo secures $110M to teach robots via video\n\nThe company is attempting to bridge the gap between digital simulation and physical movement, though it remains pre-commercial with no public product or third-party benchmarks to validate its performance claims.\n\nToday's Sapiver Forge Daily Brief covers 5 developments across AI, technology and business.\n\nhttps://suite.sapiverpress.co.uk/daily-brief/",
+    "pinterest_title": "Embo secures $110M to teach robots via video",
+    "pinterest_description": "The company is attempting to bridge the gap between digital simulation and physical movement, though it remains pre-commercial with no public product or third-party benchmarks to validate its performance claims.\n\nRead today's Sapiver Forge Daily Brief: https://suite.sapiverpress.co.uk/daily-brief/",
+    "tiktok_caption": "Embo secures $110M to teach robots via video. Today's Sapiver Forge Daily Brief separates what is confirmed from what it might mean. #SapiverForge #AI #Technology #Business",
+    "spoken_script": "Embo secures $110M to teach robots via video. Robotics startup Embo has emerged from stealth with $110M in seed funding to develop AI 'world models' trained on internet video. Read the Sapiver Forge Daily Brief."
+  },
+  "candidate_id": "ae61e27fa0750df2d846e748c313f011ecac447876f48196b4b546795aeff635"
+}

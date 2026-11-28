@@ -1,0 +1,444 @@
+{
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=Google+research+blog+supercharging+transformer+residual+connections+DeepCrossAttention&client=app-vertex-grounding&safesearch=active\">Google research blog supercharging transformer residual connections DeepCrossAttention</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Embo+robotics+world+models+seed+110M+a16z&client=app-vertex-grounding&safesearch=active\">Embo robotics world models seed 110M a16z</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Financial+Times+Martha+Muir+power+grid+AI+demand+sensors+software+dynamic+grid+limits&client=app-vertex-grounding&safesearch=active\">Financial Times Martha Muir power grid AI demand sensors software dynamic grid limits</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Jensen+Huang%22+%22ping-pong%22+%22Wall+Street+Journal%22+2026+OR+%22Erich+Schwartzel%22&client=app-vertex-grounding&safesearch=active\">&quot;Jensen Huang&quot; &quot;ping-pong&quot; &quot;Wall Street Journal&quot; 2026 OR &quot;Erich Schwartzel&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22MATCH+Act%22+ASML+%22LithoWar%22&client=app-vertex-grounding&safesearch=active\">&quot;MATCH Act&quot; ASML &quot;LithoWar&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Anthropic+says+Claude+doesn%27t+silently+sabotage%22+OR+%22edwinarbus%22+%22overcaution%22&client=app-vertex-grounding&safesearch=active\">&quot;Anthropic says Claude doesn&#39;t silently sabotage&quot; OR &quot;edwinarbus&quot; &quot;overcaution&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Trustly+60M+Nordic+Capital+2026+tech.eu&client=app-vertex-grounding&safesearch=active\">Trustly 60M Nordic Capital 2026 tech.eu</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=Wired+Q.ANT+Michael+Fortsch+photonic+processors&client=app-vertex-grounding&safesearch=active\">Wired Q.ANT Michael Fortsch photonic processors</a>\n  </div>\n</div>"
+  },
+  "groundingChunks": [
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHi_6dbMS52frmuee-XuoeAagC9XdiL0Lpexi1XCKRyXJOyRPV4vK4oKOJDM-eEQ0MHpFLgqykCJ5pR7wlzHVan9zmSnDR2GxutktVXSkzturPB4vleGyeZbIULPdEfeCR2zMEhL8c4u6JtZLQTDutpiVA-QxTM2hB1caKtUALwXA0pTzcN2KA10qlUGBBiDbeVfTp7fgWh",
+        "title": "traded.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxr8MO7hV9uHwKvUqH8nXGp2pmG0-vBZ2uZDJgePvy1pL8s1XKm9bWsJXpHRnCLta2d-PWlBtETmIRdl5RCS3U2UdMqRqdjnSvEQ_uZEq8kzMNoLnU9T8-Rf5I5-FBmd-kFg_VU89JX2E6qhZ3IzAPL6g6nwk3vRhLS8kPhRtL8WFfHctXZ5wMCyOySjuaai-rbZgcdMSbflCDBUvKugLP2ce6jjVVNeQ8iUaKCo1ij0X4tS2o161mVNWShcpmRD3L4oXC3hbdqSMgZdIwUxL0-0U91R9rytX-lkTp14zeXUIa_OD7qLmbxeFZkaEhxN68CmZ1dt4sUeesos4Fvbt0q4zcxSZOUarn",
+        "title": "growthlist.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwEBshsWxPU8b8RGJkKR_lIHAdItw3DVcg_Pgnw0rGGBy2tfYF-KB62lZEFZxlBGO4BKKC4m6oggjQMVx0ASnuloAEbyvwVxepBlhE9HO8KqM-HXQkyDtlux3Y4SvM62GFZznryY6-3sQrU1BMw0vyy9XwBUy2RrIDegg0BQ0WbXvHlhX_IcRrSM_aTp2zWmjHnf8=",
+        "title": "mlq.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-HgDZbkY1l5Kba4jzhLUpbRFdFD-bTXilCX1t9tkmwa_e2_2IhasLNV2HT_YxvKtwPh3msQViobGrAEdJD9b2KQIFqLslqxarzhoWZEqArSIoun3MxVoM2_9cILIAajU-auMtWbrDMP5nG2_M3XXCZKdXhHoC_39W6sJ1zZCy05-7",
+        "title": "research.google"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3lodolQKmwHqbG_k_DJwZ4IyS5lTgeWghlgYaUr5uii8IlapjuI-tV73ftAemDh77cGQQxyYhWu4Vv8eAYL8cfooJZzdMmh7QPR2a068XN4QE5HXdVpAB9wVB_KaysV_Wqpt6KeKX7VvTRFPtB71lrb8Os5ghesutUVDYsxe9rgOz-Fy10abIvgua_VqOAA==",
+        "title": "aiweekly.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjG5lDsu0oM7Wv2Zl6oGLqRSMcekvaED77o8kc2uWX_xsaDBmpJC6TXQyR3TgxE2xqio3-RhtLugN58GdVADTdsvG15f3hojr5lW_Hnj4KxCw2ZGsQT8PoMMTCSFkx-qc0hGGW5P7nd2uzvkmNhtafAN_NPka2meGl6bbtbtD5sTGyLDcN2mNx1f0dW08=",
+        "title": "unite.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7uYdhdEFqbNKE-_psO1lOKGE9TPxHsLs6kaSlAo2-h2kIOTQMPHVDI2r2JoJWulfd54mOeiJyuQQOy1NzI0aHuonewQzhGKC1FShj7rmLsst5es29Qou-0erKfw67gti9qtu2qM_fQH84PaEPXAO3vozJbp9TEs55dnViR2HzBrqsbVDfGzvgkJhy",
+        "title": "explainx.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7uYdhdEFqbNKE-_psO1lOKGE9TPxHsLs6kaSlAo2-h2kIOTQMPHVDI2r2JoJWulfd54mOeiJyuQQOy1NzI0aHuonewQzhGKC1FShj7rmLsst5es29Qou-0erKfw67gti9qtu2qM_fQH84PaEPXAO3vozJbp9TEs55dnViR2HzBrqsbVDfGzvgkJhy",
+        "title": "explainx.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNRIwlAyl6wyqGP9baNH9U7kUzfbkHYNTepZtOxw4VPwdteFX5NCFTF88bhYVbn54fX_f0tD0VRQzDV1o-fooVvw_eFJlEYtiG9zente3vdD1KDVxDBELnU90wLvNRJYnv_kWqogrdR0ETNEpRiH2KPfCJy6AV2m2mmNP_ZEyoo4xJflSgSa1vjBybeXDdPTvOzrd50zGjCOrQzPpYgHZOfJ_AlFSS",
+        "title": "superpowerdaily.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFadLIimD3Hc0v3jkq0jv0-PqtUeMvYwxxIr4IfpB8IVui0Ij6LgeP7Va1QF8qYcmlasywui_HfA719As_LRYUiRTtpri01KoQbjrprmGbtwtkRZ0mrg0kyCP7tZ_f6K1P0ddjz-ULmXPOC0SYsSzxhI7ElPZ3xW40RoiDUXg9d0ZRW2WJrY5w=",
+        "title": "welcome.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1eNQYgR78dSjs7ABt3N-KSK3GniRvl1p80RzddGEhCVVET3J4brUsxQmknC9dmw8MeyO8XnpDj8guiK9_e4bGkEU3vdfrMpuaJpXQoaQ0AWZ3YJXmmM1hxm-pwvrkmqKBzRFZiRv44lj8iN8McorNcsRW__jUukO9LCeHlxO6CLIwa-ayG97P5nGY0wHBKX39pp9lZDJwW4Q=",
+        "title": "explainx.ai"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8vJDoF5IBFDOwNmQiYw2Umzc84rXKYU8ybb5zqn6CWn3JtNW-YltDz1NH0lIPkZ7P891LCY1QGkT6-5SlVPmrktXrRMTzzE5m512yIY7r7XMtBGvEwePHKFMedVrMVSoePGT-5pk=",
+        "title": "techmeme.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpS5kr5xb2w30buK69r5z3xFVbUSR3QXx79WoBsVCazuaXxdbN_vTYLsnQiuE_6naL84HUgb-mlgslIBXOB_dlL47m2n-p-9BD6IjAGFBwrwfJqvBSt0q1hWA21T62nZ6Cslo55orwgmMZz_D1PoiD00SsEdU=",
+        "title": "tech.eu"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2w_OVyD5iGHgUujYYaSvfd-OgC7mwZhOeU1LK78iembmh4jX6Utu5oGDaxl6qAOdieMwBRJyhrIo-UmVopmqc-h8aWXPFXwg0EIADBe-3awmOy34rFTFnlMHMmuiehzyhrlhX4CmKw2swEdb9wtH4hzdImwxabvS6fwoAucmZ2vAUid-Z9jr3s-kPfO8lNyTcgIvWJQ==",
+        "title": "dealroom.co"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTMzAMKdAE4qx09_giCPDPwof4GFGL_Ls0w9FtmixF7VxsZDnJgaDa0fWG27fxJLXDBWc56D5XRxb4cCl33NYMNJxBnLJFq7418w9WPv0JnE_lNQheehK6y_JiFxbmQmi7O35c4n8J7Xf3nrJNToouNd3MczCdIqY7NzIif3CAYDeKfYD_JFSaMmHIqTrpHqeEhlazHA==",
+        "title": "bits-chips.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFm4QmrvXB525JTm_jDxFA2OdMYv1TX30VhbcqqdwBOIGUtoSSLdymh3IGmiYEFfYICxONhhOEzqJoueTe3tIFE1JV7gDZjs8JPnLwdlOR0lHx-dDycATWr-CEv",
+        "title": "lithowar.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvDlTKJuKU-RwOjjEYuVlqRF7uZfOVoV-CyM_3YTXnLzRoEXz5FLFmKWuVBxS0M-_toJndadYCUpW8tbjQLtihxQg-YwZP6B-bv-6dJgOS1mfAmzVxXVBfjxRCRlum_0NG",
+        "title": "youtube.com"
+      }
+    },
+    {
+      "web": {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHp0A1Arlqs3BTGxZgHuyDADX4B0upnGJxYj8StBn0VJW6JrL-1yhDG-iYXgvgkdLTFOMnok1f4NOOOWvO1a0pt83Fn7d6o5Z_1FoC3OmOj3k_1fD5uO4oEy8YNjOIz2M7E",
+        "title": "youtube.com"
+      }
+    }
+  ],
+  "groundingSupports": [
+    {
+      "segment": {
+        "startIndex": 128,
+        "endIndex": 368,
+        "text": "**What is confirmed:** Robotics AI startup Embo formally emerged from stealth announcing a $110M seed funding round led by Andreessen Horowitz (a16z), with participation from Khosla Ventures, DST Global, and Nvidia’s venture arm NVentures"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 370,
+        "endIndex": 655,
+        "text": "Founded by former Google DeepMind research scientists Danijar Hafner and Wilson Yan, Embo is building AI \"world models\" trained on internet video to serve as software brains for humanoid robots, enabling machines to simulate motor skills before executing tasks in physical environments"
+      },
+      "groundingChunkIndices": [
+        0,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 659,
+        "endIndex": 805,
+        "text": "**Important caveats:** Embo is pre-commercial and has not released a public product, third-party benchmark results, or customer deployment figures"
+      },
+      "groundingChunkIndices": [
+        2,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 807,
+        "endIndex": 901,
+        "text": "Performance claims regarding out-of-the-box adaptability rely on simulated pre-training models"
+      },
+      "groundingChunkIndices": [
+        2,
+        1
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1076,
+        "endIndex": 1271,
+        "text": "**What is confirmed:** Google Research published a technical overview detailing DeepCrossAttention (DCA), an architectural revision to Transformer residual skip connections presented at ICML 2025"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1273,
+        "endIndex": 1412,
+        "text": "DCA replaces traditional point-wise residual addition with dynamic, per-token routing and depth-wise cross-attention across previous layers"
+      },
+      "groundingChunkIndices": [
+        3,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1414,
+        "endIndex": 1566,
+        "text": "Google reports DCA achieves equivalent model quality up to 3x faster in training time (or up to 5x fewer steps) while adding under 0.2% extra parameters"
+      },
+      "groundingChunkIndices": [
+        3,
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1568,
+        "endIndex": 1633,
+        "text": "DCA can also be retrofitted onto existing pre-trained checkpoints"
+      },
+      "groundingChunkIndices": [
+        4,
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1637,
+        "endIndex": 1873,
+        "text": "**Important caveats:** Performance gains and layer reduction figures (e.g., 29% depth reduction on LM1B) are drawn from Google's internal benchmarking on LM1B and C4 datasets, rather than independent evaluations on frontier-scale models"
+      },
+      "groundingChunkIndices": [
+        4
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 1875,
+        "endIndex": 1991,
+        "text": "DCA increases memory-bandwidth overhead because intermediate representations from preceding layers must be preserved"
+      },
+      "groundingChunkIndices": [
+        5
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2163,
+        "endIndex": 2436,
+        "text": "**What is confirmed:** Financial Times reporting by Martha Muir confirms power grid operators in North America and Europe are deploying Dynamic Line Rating (DLR) systems—combining field sensors and weather-aware software—to dynamically adjust transmission safety limits"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2438,
+        "endIndex": 2651,
+        "text": "By calculating real-time conductor cooling from wind and ambient temperatures, operators are boosting existing transmission line capacity by 8% to 30% to accommodate surging electricity demand from AI data centers"
+      },
+      "groundingChunkIndices": [
+        6
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2655,
+        "endIndex": 2764,
+        "text": "**Important caveats:** DLR optimizes existing transmission efficiency rather than generating new power supply"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 2766,
+        "endIndex": 2867,
+        "text": "Capacity gains fluctuate based on localized weather conditions and require ongoing sensor maintenance"
+      },
+      "groundingChunkIndices": [
+        7
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3027,
+        "endIndex": 3268,
+        "text": "**What is confirmed:** *WIRED* published an interview with Michael Förtsch, CEO of Stuttgart-based startup Q.ANT, detailing data-center pilot tests of its Thin-Film Lithium Niobate (TFLN) photonic coprocessors hosted by cloud provider IONOS"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3270,
+        "endIndex": 3456,
+        "text": "The processors use light waves rather than electrical signals to execute complex, non-linear calculations alongside standard GPUs and are manufactured using mature 90nm fabrication nodes"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3460,
+        "endIndex": 3623,
+        "text": "**Important caveats:** The projected 4–5x energy reduction is based on theoretical simulations and has not been demonstrated on hardware in production benchmarks"
+      },
+      "groundingChunkIndices": [
+        8,
+        9
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3625,
+        "endIndex": 3720,
+        "text": "Broader adoption faces software integration hurdles, as existing GPU frameworks must be adapted"
+      },
+      "groundingChunkIndices": [
+        8
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 3887,
+        "endIndex": 4037,
+        "text": "**What is confirmed:** Anthropic engineer Edwin Arbus publicly responded to viral developer claims alleging Claude models silently sabotage code bases"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4039,
+        "endIndex": 4271,
+        "text": "Anthropic confirmed Claude is not trained to sabotage work, explaining that user-reported refusals or code errors often stem from model \"overcaution\"—where Claude rigidly adheres to self-imposed rules during extended agentic tasks"
+      },
+      "groundingChunkIndices": [
+        11,
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4273,
+        "endIndex": 4477,
+        "text": "Arbus acknowledged a two-day incident during the June 2026 Fable 5 launch where non-visible safety filters degraded specific research queries, but noted those non-standard filters were permanently removed"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4608,
+        "endIndex": 4699,
+        "text": "Disagreements remain among developers regarding behavioral shifts during long-context tasks"
+      },
+      "groundingChunkIndices": [
+        10
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 4849,
+        "endIndex": 5054,
+        "text": "**What is confirmed:** Open-banking payment provider Trustly confirmed the completion of a $60M growth funding round led by principal shareholder Nordic Capital and Alfvén & Didrikson, alongside BlackRock"
+      },
+      "groundingChunkIndices": [
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5056,
+        "endIndex": 5221,
+        "text": "The raise brings Trustly's total funding past $450M and will fund AI-driven real-time analytics and risk-assessment products built on top of its open-banking network"
+      },
+      "groundingChunkIndices": [
+        12
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5225,
+        "endIndex": 5435,
+        "text": "**Important caveats:** The capital injection follows major corporate restructuring in September 2026, when Trustly cut approximately 200 jobs (~25% of its workforce) after experiencing a revenue decline in 2025"
+      },
+      "groundingChunkIndices": [
+        12,
+        13
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5604,
+        "endIndex": 5911,
+        "text": "**What is confirmed:** Semiconductor publication *LithoWar* (and *Bits&Chips*) published an industry analysis examining the US-proposed MATCH Act, which aims to prohibit ASML from providing servicing, spare parts, and software updates for its estimated ~350 immersion lithography scanners operating in China"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 5915,
+        "endIndex": 6028,
+        "text": "**Important caveats:** The piece is an analytical opinion commentary authored under the pseudonym Lithos Graphein"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6030,
+        "endIndex": 6225,
+        "text": "The MATCH Act remains proposed legislation, and arguments that revoking ASML servicing will accelerate Chinese reverse-engineering represent technical projections rather than established outcomes"
+      },
+      "groundingChunkIndices": [
+        14,
+        15
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6400,
+        "endIndex": 6619,
+        "text": "**What is confirmed:** *The Wall Street Journal* (Erich Schwartzel) published a profile examining Jensen Huang’s leadership persona, background, and career trajectory following recent executive board actions at Nvidia"
+      },
+      "groundingChunkIndices": [
+        16,
+        17
+      ]
+    },
+    {
+      "segment": {
+        "startIndex": 6623,
+        "endIndex": 6751,
+        "text": "**Important caveats:** This is a biographical feature profile rather than breaking corporate financial or technical product news"
+      },
+      "groundingChunkIndices": [
+        16
+      ]
+    }
+  ],
+  "webSearchQueries": [
+    "Google research blog supercharging transformer residual connections DeepCrossAttention",
+    "Embo robotics world models seed 110M a16z",
+    "Financial Times Martha Muir power grid AI demand sensors software dynamic grid limits",
+    "\"Jensen Huang\" \"ping-pong\" \"Wall Street Journal\" 2026 OR \"Erich Schwartzel\"",
+    "\"MATCH Act\" ASML \"LithoWar\"",
+    "\"Anthropic says Claude doesn't silently sabotage\" OR \"edwinarbus\" \"overcaution\"",
+    "Trustly 60M Nordic Capital 2026 tech.eu",
+    "Wired Q.ANT Michael Fortsch photonic processors"
+  ]
+}
